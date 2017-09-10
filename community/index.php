@@ -62,8 +62,12 @@
 		<div class="rantlist-bg">
 	    <ul class="rantlist">
 				<?php
+				$files = glob('content/*.{json}', GLOB_BRACE);
+				foreach($files as $file) {
+				  //do your work here
+				  
 				
-				$url = './content/test.json';
+				$url = $file;
 				$content = file_get_contents($url);
 				$json = json_decode($content, true);
 				echo '<li class="rant-comment-row-widget" data-id="829770" data-type="rant"><div class="rantlist-title-text">';
@@ -73,7 +77,8 @@
 				echo ' src="';
 				echo $json{src}; echo '" href="';
 				echo $json{href};
-				echo '" width=100%></ul></div>'
+				echo '" width=100%></ul></div>';
+				}
 				?>
 	    	
 	    	
