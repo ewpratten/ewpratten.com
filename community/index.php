@@ -62,7 +62,16 @@
 		<div class="rantlist-bg">
 	    <ul class="rantlist">
 				<?php
-				$url = './content/test.json';
+				$path = "./content/";
+
+				if ($handle = opendir($path)) {
+  				 while (false !== ($file = readdir($handle))) {
+				        if ('.' === $file) continue;
+				        if ('..' === $file) continue;
+
+				        // do something with the file
+				    
+				$url = $file;
 				$content = file_get_contents($url);
 				$json = json_decode($content, true);
 				echo '<li class="rant-comment-row-widget" data-id="829770" data-type="rant"><div class="rantlist-title-text">';
@@ -72,7 +81,10 @@
 				echo ' src="';
 				echo $json{src}; echo '" href="';
 				echo $json{href};
-				echo '" width=100%></ul></div>'
+				echo '" width=100%></ul></div>';
+  				 }
+				    closedir($handle);
+				}
 				?>
 	    	
 	    	
