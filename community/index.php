@@ -62,8 +62,19 @@
 
 		<div class="rantlist-bg">
 	    <ul class="rantlist">
-		    <?php $url = './content/test.json'; $content = file_get_contents($url); $json = json_decode($content, true); echo $json['src']; echo '<li class="rant-comment-row-widget" data-id="829770" data-type="rant"><div class="rantlist-title-text"> $json{title} </div> <$json{type} src="$json{src}" href="$json{href}" width=100%></ul></div>' ?>
-
+				<?php
+				$url = './content/test.json';
+				$content = file_get_contents($url);
+				$json = json_decode($content, true);
+				echo '<li class="rant-comment-row-widget" data-id="829770" data-type="rant"><div class="rantlist-title-text">';
+				echo $json{title};
+				echo '</div> <';
+				echo $json{type};
+				echo ' src="';
+				echo $json{src}; echo '" href="';
+				echo $json{href};
+				echo '" width=100%></ul></div>'
+				?>
 	    	
 	    	<li class="rant-comment-row-widget" data-id="829770" data-type="rant">
 	    	<div class="rantlist-title-text">The Lost Warrior</div>
