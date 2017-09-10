@@ -76,11 +76,7 @@
 				echo '" width=100%></ul></div>'
 				?>
 	    	
-	    	<li class="rant-comment-row-widget" data-id="829770" data-type="rant">
-	    	<div class="rantlist-title-text">The Lost Warrior</div>
-	    	<img src="http://art.ngfiles.com/images/477000/477954_glitchop_the-lost-warrior-2.png" width="100%" alt="Card image cap">
-	    	</ul>
-	    	</div>
+	    	
     
 </div>
 <div class="clearfix"></div>
