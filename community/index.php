@@ -34,7 +34,6 @@
 	<script src="https://devrant.io/static/devrant/js/js.cookie-2.1.1.min.js"></script>
     <script src="https://devrant.io/static/devrant/js/landing.js?v=5"></script>
     
-    <script src="./json.js"></script>
 </head>
 <body >
 
