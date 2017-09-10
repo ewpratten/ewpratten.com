@@ -77,7 +77,7 @@
 				echo ' src="';
 				echo $json{src}; echo '" href="';
 				echo $json{href};
-				echo '" width=100%></ul></div>';
+				echo '" width=100%></li>';
 				}
 				?>
 	    	
