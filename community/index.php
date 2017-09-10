@@ -72,6 +72,8 @@
 				$json = json_decode($content, true);
 				echo '<li class="rant-comment-row-widget" data-id="829770" data-type="rant"><div class="rantlist-title-text">';
 				echo $json{title};
+				echo " - ";
+				echo $json{author};
 				echo '</div> <';
 				echo $json{type};
 				echo ' src="';
