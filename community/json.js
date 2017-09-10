@@ -8,10 +8,10 @@ xmlhttp.onreadystatechange = function(){
 xmlhttp.open("GET","./content/test.json",false);
 xmlhttp.send();
 console.log(txt)
-var jsona = JSON.parse(txt);
-alert(jsona.src);
+var json = JSON.parse(txt);
+alert(json.src);
 
-if (jsona.type == "img") {
+if (json.type == "img") {
 	var contenttype = "img"
 } else {
 	var contenttype = "iframe"
