@@ -52,7 +52,12 @@
         <div class="interior-content" style="min-height: 804px;">
 
             <div class="body-col1">
+            	<div class="body-col1-content">
                 <h1>RetryLife</h1>
+                <a href="https://twitter.com/retrylife_music" class="twitter-follow-button" data-show-count="false">Follow @retrylife_music</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a href="https://twitter.com/ewpratten" class="twitter-follow-button" data-show-count="false">Follow @ewpratten</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a href="https://twitter.com/nsdesjardins345" class="twitter-follow-button" data-show-count="false">Follow @nsdesjardins345</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
             </div>
 
 <div class="body-col2 page-feed">
@@ -79,7 +84,12 @@
 				echo ' src="';
 				echo $json{src}; echo '" href="';
 				echo $json{href};
-				echo '" width=100%></li>';
+				echo '" width=100%>';
+				echo $json{body};
+				echo '</';
+				echo $json{type};
+				echo '>';
+				echo '</li>';
 				}
 				?>
 	    	
