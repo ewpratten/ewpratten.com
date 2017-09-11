@@ -33,6 +33,7 @@
     <script src="https://devrant.io/static/devrant/js/script.js?v=23"></script>
 	<script src="https://devrant.io/static/devrant/js/js.cookie-2.1.1.min.js"></script>
     <script src="https://devrant.io/static/devrant/js/landing.js?v=5"></script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     
 </head>
 <body >
@@ -55,8 +56,11 @@
             	<div class="body-col1-content">
                 <h1>RetryLife</h1>
                 <a href="https://twitter.com/retrylife_music" class="twitter-follow-button" data-show-count="false">Follow @retrylife_music</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <br>
                 <a href="https://twitter.com/ewpratten" class="twitter-follow-button" data-show-count="false">Follow @ewpratten</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <br>
                 <a href="https://twitter.com/nsdesjardins345" class="twitter-follow-button" data-show-count="false">Follow @nsdesjardins345</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <br>
                 </div>
             </div>
 
