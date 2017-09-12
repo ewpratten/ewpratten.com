@@ -55,7 +55,11 @@
             	<div class="body-col1-content">
             		
             		<div style="background-color:white;padding:15px;border-radius:10px;">
+            			<img src="https://pbs.twimg.com/profile_images/884167837891342336/F8JOfFAf_400x400.jpg">
                 <h1>RetryLife</h1>
+                <p>Canada</p>
+                <br>
+                <br>
                 
                 <div style="padding:6px; background-color:#1ca2f2; border-radius:8px;">
                 <a href="https://twitter.com/retrylife_music" class="twitter-follow-button" data-show-count="false">Follow @retrylife_music</a>
