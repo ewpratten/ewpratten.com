@@ -69,9 +69,7 @@
 
 		<div class="rantlist-bg">
 	    <ul class="rantlist">
-	    	            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%3Aretrylife_music%20OR%20from%3Aewpratten%20OR%20from%3Ansdesjardins" data-widget-id="907392621961674753">Tweets about from:retrylife_music OR from:ewpratten OR from:nsdesjardins</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          
+	    	           
 				<?php
 				$files = glob('content/*.{json}', GLOB_BRACE);
 				foreach($files as $file) {
