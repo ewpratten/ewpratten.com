@@ -100,7 +100,7 @@
 	    	<script>
 function showRSS(str) {
   if (str.length==0) {
-    document.getElementById("rssOutput").innerHTML="";
+    document.getElementById("rssOutput").innerHTML="http://www.rssmix.com/u/8252161/rss.xml";
     return;
   }
   if (window.XMLHttpRequest) {
