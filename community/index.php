@@ -14,6 +14,7 @@
 		padding: 0;
 		background-image: url("../img/Background.png");
 		background-size: 100% 100%;
+		background-attachment: fixed;
 		
 	}
 	.rant-top-bar {
