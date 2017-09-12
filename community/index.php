@@ -56,11 +56,14 @@
             		
             		<div style="background-color:white;padding:2px;border-radius:10px;">
                 <h1>RetryLife</h1>
-                <a href="https://twitter.com/retrylife_music" class="twitter-follow-button" data-show-count="false">Follow @retrylife_music</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                
+                <div style="padding:2px; background-color:#1ca2f2; border-radius:8px;">
+                <a href="https://twitter.com/retrylife_music" class="twitter-follow-button" data-show-count="false">Follow @retrylife_music</a>
+                </div>
                 <br>
-                <a href="https://twitter.com/ewpratten" class="twitter-follow-button" data-show-count="false">Follow @ewpratten</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a href="https://twitter.com/ewpratten" class="twitter-follow-button" data-show-count="false">Follow @ewpratten</a>
                 <br>
-                <a href="https://twitter.com/nsdesjardins345" class="twitter-follow-button" data-show-count="false">Follow @nsdesjardins345</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <a href="https://twitter.com/nsdesjardins345" class="twitter-follow-button" data-show-count="false">Follow @nsdesjardins345</a>
                 <br>
                 
                 </div>
