@@ -97,45 +97,42 @@
 
 		<div class="rantlist-bg">
 	    <ul class="rantlist">
-	    	<?php
+	    	<a class="twitter-timeline"
+  href="https://twitter.com/TwitterDev"
+  data-height="auto"
+  data-chrome="nofooter"
+  data-link-color="#820bbb"
+  data-border-color="#a80000">
+Tweets by @TwitterDev
+</a>
 
-
-  $xml=("http://www.rssmix.com/u/8252161/rss.xml");
-
-$xmlDoc = new DOMDocument();
-$xmlDoc->load($xml);
-
-//get elements from "<channel>"
-$channel=$xmlDoc->getElementsByTagName('channel')->item(0);
-$channel_title = $channel->getElementsByTagName('title')
-->item(0)->childNodes->item(0)->nodeValue;
-$channel_link = $channel->getElementsByTagName('link')
-->item(0)->childNodes->item(0)->nodeValue;
-$channel_desc = $channel->getElementsByTagName('description')
-->item(0)->childNodes->item(0)->nodeValue;
-
-//output elements from "<channel>"
-echo("<p><a href='" . $channel_link
-  . "'>" . $channel_title . "</a>");
-echo("<br>");
-echo($channel_desc . "</p>");
-
-
-//get and output "<item>" elements
-$x=$xmlDoc->getElementsByTagName('item');
-for ($i=0; $i<=2; $i++) {
-  $item_title=$x->item($i)->getElementsByTagName('title')
-  ->item(0)->childNodes->item(0)->nodeValue;
-  $item_link=$x->item($i)->getElementsByTagName('link')
-  ->item(0)->childNodes->item(0)->nodeValue;
-  $item_desc=$x->item($i)->getElementsByTagName('description')
-  ->item(0)->childNodes->item(0)->nodeValue;
-  echo ("<p><a href='" . $item_link
-  . "'>" . $item_title . "</a>");
-  echo ("<br>");
-  echo ($item_desc . "</p>");
-}
-?>
+<?php
+				
+				$files = glob('content/*.{json}', GLOB_BRACE);
+				foreach($files as $file) {
+				  //do your work here
+				  
+				
+				$url = $file;
+				$content = file_get_contents($url);
+				$json = json_decode($content, true);
+				echo '<li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" >';
+				echo $json{title};
+				echo " - ";
+				echo $json{author};
+				echo '</div> <';
+				echo $json{type};
+				echo ' src="';
+				echo $json{src}; echo '" href="';
+				echo $json{href};
+				echo '" width=100%>';
+				echo $json{body};
+				echo '</';
+				echo $json{type};
+				echo '>';
+				echo '</li>';
+				}
+				?>
 
 	    
 </div>
