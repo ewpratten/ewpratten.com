@@ -54,7 +54,7 @@
             <div class="body-col1">
             	<div class="body-col1-content">
             		
-            		<div style="background-color:#243447;padding:15px;border-radius:10px;">
+            		<div style="background-color:#243447;padding:15px;border-radius:10px;color:white;">
             			<img src="https://pbs.twimg.com/profile_images/884167837891342336/F8JOfFAf_400x400.jpg">
                 <h1>RetryLife</h1>
                 <p>Canada</p>
@@ -98,7 +98,7 @@
 				$url = $file;
 				$content = file_get_contents($url);
 				$json = json_decode($content, true);
-				echo '<li class="rant-comment-row-widget" data-id="829770" data-type="rant"><div class="rantlist-title-text" style="background-color:#243447;">';
+				echo '<li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" >';
 				echo $json{title};
 				echo " - ";
 				echo $json{author};
