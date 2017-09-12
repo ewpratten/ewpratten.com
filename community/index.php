@@ -54,7 +54,7 @@
             <div class="body-col1">
             	<div class="body-col1-content">
             		
-            		<div style="background-color:white; height:200;width:80%">
+            		<div style="background-color:white;padding:2px;border-radius:10px;">
                 <h1>RetryLife</h1>
                 <a href="https://twitter.com/retrylife_music" class="twitter-follow-button" data-show-count="false">Follow @retrylife_music</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 <br>
