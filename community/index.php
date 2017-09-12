@@ -30,7 +30,7 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://devrant.io/static/devrant/js/script.js?v=23"></script>
+
 
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     
