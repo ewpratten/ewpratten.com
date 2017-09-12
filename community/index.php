@@ -79,7 +79,7 @@
                 </div>
                 <br>
                 <div style="padding:6px; background-color:#ff0000; border-radius:8px;">
-                <a href="https://www.youtube.com/channel/UCxzARKt0_U0sLHbF4pDN1Pw?sub_confirmation=1">Subscribe to RetryLife Official</a>
+                <a href="https://www.youtube.com/channel/UCxzARKt0_U0sLHbF4pDN1Pw?sub_confirmation=1">Subscribe to Nathan Desjardins</a>
                 </div>
                 <br>
                 
@@ -97,36 +97,30 @@
 
 		<div class="rantlist-bg">
 	    <ul class="rantlist">
-	    	           
-				<?php
-				$files = glob('content/*.{json}', GLOB_BRACE);
-				foreach($files as $file) {
-				  //do your work here
-				  
-				
-				$url = $file;
-				$content = file_get_contents($url);
-				$json = json_decode($content, true);
-				echo '<li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" >';
-				echo $json{title};
-				echo " - ";
-				echo $json{author};
-				echo '</div> <';
-				echo $json{type};
-				echo ' src="';
-				echo $json{src}; echo '" href="';
-				echo $json{href};
-				echo '" width=100%>';
-				echo $json{body};
-				echo '</';
-				echo $json{type};
-				echo '>';
-				echo '</li>';
-				}
-				?>
-	    	
-	    	
-    
+	    	<script>
+function showRSS(str) {
+  if (str.length==0) {
+    document.getElementById("rssOutput").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("rssOutput").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","getrss.php?q="+str,true);
+  xmlhttp.send();
+}
+</script>
+
+	    <div id="rssOutput">RSS-feed will be listed here...</div>
+	    
 </div>
 <div class="clearfix"></div>
 </div>
