@@ -74,6 +74,14 @@
                 <a href="https://twitter.com/nsdesjardins345" class="twitter-follow-button" data-show-count="false">Follow @nsdesjardins345</a>
                 </div>
                 <br>
+                <div style="padding:6px; background-color:#ff0000; border-radius:8px;">
+                <a href="https://www.youtube.com/channel/UCrHT3Lt0Mg90bspbMHJfTcA?sub_confirmation=1">Subscribe to RetryLife Official</a>
+                </div>
+                <br>
+                <div style="padding:6px; background-color:#ff0000; border-radius:8px;">
+                <a href="https://www.youtube.com/channel/UCxzARKt0_U0sLHbF4pDN1Pw?sub_confirmation=1">Subscribe to RetryLife Official</a>
+                </div>
+                <br>
                 
                 </div>
                 
