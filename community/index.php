@@ -54,16 +54,20 @@
             <div class="body-col1">
             	<div class="body-col1-content">
             		
-            		<div style="background-color:white;padding:2px;border-radius:10px;">
+            		<div style="background-color:white;padding:15px;border-radius:10px;">
                 <h1>RetryLife</h1>
                 
-                <div style="padding:2px; background-color:#1ca2f2; border-radius:8px;">
+                <div style="padding:6px; background-color:#1ca2f2; border-radius:8px;">
                 <a href="https://twitter.com/retrylife_music" class="twitter-follow-button" data-show-count="false">Follow @retrylife_music</a>
                 </div>
                 <br>
+                <div style="padding:6px; background-color:#1ca2f2; border-radius:8px;">
                 <a href="https://twitter.com/ewpratten" class="twitter-follow-button" data-show-count="false">Follow @ewpratten</a>
+                </div>
                 <br>
+                <div style="padding:6px; background-color:#1ca2f2; border-radius:8px;">
                 <a href="https://twitter.com/nsdesjardins345" class="twitter-follow-button" data-show-count="false">Follow @nsdesjardins345</a>
+                </div>
                 <br>
                 
                 </div>
