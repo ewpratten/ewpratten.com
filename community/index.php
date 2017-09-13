@@ -97,7 +97,7 @@
 
 		<div class="rantlist-bg">
 	    <ul class="rantlist">
-	    	<iframe src="https://twitter.com/retrylife_music"></iframe>
+	   
 
 <?php
 				
