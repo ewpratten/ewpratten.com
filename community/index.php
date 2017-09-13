@@ -97,14 +97,7 @@
 
 		<div class="rantlist-bg">
 	    <ul class="rantlist">
-	    	<a class="twitter-timeline"
-  href="https://twitter.com/TwitterDev"
-  data-height="auto"
-  data-chrome="nofooter"
-  data-link-color="#820bbb"
-  data-border-color="#a80000">
-Tweets by @TwitterDev
-</a>
+	    	<iframe src="https://twitter.com/retrylife_music"></iframe>
 
 <?php
 				
