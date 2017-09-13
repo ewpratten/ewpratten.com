@@ -98,7 +98,7 @@
 		<div class="rantlist-bg">
 	    <ul class="rantlist">
 	   
-<?php
+<!--
                     function getContent() {
                         //Thanks to https://davidwalsh.name/php-cache-function for cache idea
                         $file = "./feed-cache.txt";
@@ -152,7 +152,7 @@
                         return $html;
                     }
                     print getContent();
-                ?>
+                -->
 
 <?php
 				
