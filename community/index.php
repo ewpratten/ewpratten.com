@@ -129,10 +129,10 @@
                             $html .= '<ul class="rantlist">';
                             foreach($rss->channel->item as$item) {
                                 $count++;
-                                if($count > 7){
+                                if($count > 1000){
                                     break;
                                 }
-                                $html .= '><a href="'.htmlspecialchars($item->link).'"><li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" >'.htmlspecialchars($item->title).'</div> <';
+                                $html .= '><a href="'.htmlspecialchars($item->link).'"><li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" > '.htmlspecialchars($item->description).'</div></li>';
                                 
                             }
                             $html .= '</ul>';
