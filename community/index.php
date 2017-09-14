@@ -96,9 +96,9 @@
     
 
 		<div class="rantlist-bg">
-	    <ul class="rantlist">
+	    
 	   
-<!--
+<?php
                     function getContent() {
                         //Thanks to https://davidwalsh.name/php-cache-function for cache idea
                         $file = "./feed-cache.txt";
@@ -118,41 +118,30 @@
                         $html = "";
                         $newsSource = array(
                             array(
-                                "title" => "RetryLife",
-                                "url" => "https://twitrss.me/twitter_user_to_rss/?user=RetryLife_music"
-                            ),
-                            array(
-                                "title" => "ewpratten",
-                                "url" => "https://twitrss.me/twitter_user_to_rss/?user=Ewpratten"
-                            ),
-                            array(
-                                "title" => "nsdesjardins",
-                                "url" => "https://twitrss.me/twitter_user_to_rss/?user=Nsdesjardins345"
+                                "title" => "RetryLife-all",
+                                "url" => "http://www.rssmix.com/u/8252161/rss.xml"
                             )
                             
                         );
                         function getFeed($url){
                             $rss = simplexml_load_file($url);
                             $count = 0;
-                            $html .= '<ul>';
+                            $html .= '<ul class="rantlist">';
                             foreach($rss->channel->item as$item) {
                                 $count++;
                                 if($count > 7){
                                     break;
                                 }
-                                $html .= '<li><a href="'.htmlspecialchars($item->link).'">'.htmlspecialchars($item->title).'</a></li>';
+                                $html .= '><a href="'.htmlspecialchars($item->link).'"><li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" >'.htmlspecialchars($item->title).'</div> <';
+                                
                             }
                             $html .= '</ul>';
                             return $html;
                         }
-                        foreach($newsSource as $source) {
-                            $html .= '<h2>'.$source["title"].'</h2>';
-                            $html .= getFeed($source["url"]);
-                        }
                         return $html;
                     }
                     print getContent();
-                -->
+                ?>
 
 <?php
 				
