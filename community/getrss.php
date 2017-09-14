@@ -1,39 +1,44 @@
 <?php
-
-
-  $xml=("http://www.rssmix.com/u/8252161/rss.xml");
-
-$xmlDoc = new DOMDocument();
-$xmlDoc->load($xml);
-
-//get elements from "<channel>"
-$channel=$xmlDoc->getElementsByTagName('channel')->item(0);
-$channel_title = $channel->getElementsByTagName('title')
-->item(0)->childNodes->item(0)->nodeValue;
-$channel_link = $channel->getElementsByTagName('link')
-->item(0)->childNodes->item(0)->nodeValue;
-$channel_desc = $channel->getElementsByTagName('description')
-->item(0)->childNodes->item(0)->nodeValue;
-
-//output elements from "<channel>"
-echo("<p><a href='" . $channel_link
-  . "'>" . $channel_title . "</a>");
-echo("<br>");
-echo($channel_desc . "</p>");
-
-
-//get and output "<item>" elements
-$x=$xmlDoc->getElementsByTagName('item');
-for ($i=0; $i<=2; $i++) {
-  $item_title=$x->item($i)->getElementsByTagName('title')
-  ->item(0)->childNodes->item(0)->nodeValue;
-  $item_link=$x->item($i)->getElementsByTagName('link')
-  ->item(0)->childNodes->item(0)->nodeValue;
-  $item_desc=$x->item($i)->getElementsByTagName('description')
-  ->item(0)->childNodes->item(0)->nodeValue;
-  echo ("<p><a href='" . $item_link
-  . "'>" . $item_title . "</a>");
-  echo ("<br>");
-  echo ($item_desc . "</p>");
-}
-?>
+                    function getContent() {
+                        //Thanks to https://davidwalsh.name/php-cache-function for cache idea
+                        $file = "./feed-cache.txt";
+                        $current_time = time();
+                        $expire_time = 5 * 60;
+                        $file_time = filemtime($file);
+                        if(file_exists($file) && ($current_time - $expire_time < $file_time)) {
+                            return file_get_contents($file);
+                        }
+                        else {
+                            $content = getFreshContent();
+                            file_put_contents($file, $content);
+                            return $content;
+                        }
+                    }
+                    function getFreshContent() {
+                        $html = "";
+                        $newsSource = array(
+                            array(
+                                "title" => "RetryLife-all",
+                                "url" => "http://www.rssmix.com/u/8252161/rss.xml"
+                            )
+                            
+                        );
+                        function getFeed($url){
+                            $rss = simplexml_load_file($url);
+                            $count = 0;
+                            $html .= '<ul class="rantlist">';
+                            foreach($rss->channel->item as$item) {
+                                $count++;
+                                if($count > 1000){
+                                    break;
+                                }
+                                $html .= '><a href="'.htmlspecialchars($item->link).'"><li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" > '.htmlspecialchars($item->description).'</div></li>';
+                                
+                            }
+                            $html .= '</ul>';
+                            return $html;
+                        }
+                        return $html;
+                    }
+                    print getContent();
+                ?>
