@@ -96,83 +96,30 @@
     
 
 		<div class="rantlist-bg">
+			<ul class="rantlist">
+				
+				<?php
+				$i = 0; // counter
+$url = "http://www.rssmix.com/u/8252161/rss.xml"; // url to parse
+$rss = simplexml_load_file($url); // XML parser
+
+// RSS items loop
+
+
+
+foreach($rss->channel->item as $item) {
+if ($i < 1000) { // parse only 10 items
+		print '<a href="'.$item->link.'"><li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" > '.$item->description.'</div></li></a>';
+}
+
+$i++;
+}
+?>
 	    
 	   
-<?php
-                    function getContent() {
-                        //Thanks to https://davidwalsh.name/php-cache-function for cache idea
-                        $file = "./feed-cache.txt";
-                        $current_time = time();
-                        $expire_time = 5 * 60;
-                        $file_time = filemtime($file);
-                        if(file_exists($file) && ($current_time - $expire_time < $file_time)) {
-                            return file_get_contents($file);
-                        }
-                        else {
-                            $content = getFreshContent();
-                            file_put_contents($file, $content);
-                            return $content;
-                        }
-                    }
-                    function getFreshContent() {
-                        $html = "";
-                        $newsSource = array(
-                            array(
-                                "title" => "RetryLife-all",
-                                "url" => "http://www.rssmix.com/u/8252161/rss.xml"
-                            )
-                            
-                        );
-                        function getFeed($url){
-                            $rss = simplexml_load_file($url);
-                            $count = 0;
-                            $html .= '<ul class="rantlist">';
-                            foreach($rss->channel->item as$item) {
-                                $count++;
-                                if($count > 1000){
-                                    break;
-                                }
-                                $html .= '><a href="'.htmlspecialchars($item->link).'"><li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" > '.htmlspecialchars($item->description).'</div></li>';
-                                
-                            }
-                            $html .= '</ul>';
-                            return $html;
-                        }
-                        return $html;
-                    }
-                    print getContent();
-                ?>
-
-<?php
-				
-				$files = glob('content/*.{json}', GLOB_BRACE);
-				foreach($files as $file) {
-				  //do your work here
-				  
-				
-				$url = $file;
-				$content = file_get_contents($url);
-				$json = json_decode($content, true);
-				echo '<li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" >';
-				echo $json{title};
-				echo " - ";
-				echo $json{author};
-				echo '</div> <';
-				echo $json{type};
-				echo ' src="';
-				echo $json{src}; echo '" href="';
-				echo $json{href};
-				echo '" width=100%>';
-				echo $json{body};
-				echo '</';
-				echo $json{type};
-				echo '>';
-				echo '</li>';
-				}
-				?>
 
 
-	    
+	    </ul>
 </div>
 <div class="clearfix"></div>
 </div>
