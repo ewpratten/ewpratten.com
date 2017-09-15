@@ -109,7 +109,7 @@ $rss = simplexml_load_file($url); // XML parser
 
 foreach($rss->channel->item as $item) {
 if ($i < 1000) { // parse only 10 items
-		print '<a href="'.$item->link.'"><li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" > '.$item->description.'</div></li></a>';
+		print '<li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" style="color:white;" > '.$item->description.'</div></li>';
 }
 
 $i++;
