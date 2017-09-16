@@ -114,6 +114,32 @@ if ($i < 1000) { // parse only 10 items
 
 $i++;
 }
+$channel_id = 'UCrHT3Lt0Mg90bspbMHJfTcA'; // put the channel id here
+$youtube = file_get_contents('https://www.youtube.com/feeds/videos.xml?channel_id='.$channel_id);
+$xml = simplexml_load_string($youtube, "SimpleXMLElement", LIBXML_NOCDATA);
+$json = json_encode($xml);
+$youtube = json_decode($json, true);
+$yt_vids = array();
+$count = 0;
+foreach ($youtube['entry'] as $k => $v) {
+    $yt_vids[$count]['id'] = str_replace('http://www.youtube.com/watch?v=', '', $v['link']['@attributes']['href']);
+    $yt_vids[$count]['title'] = $v['title'];
+    $count++;
+}
+print_r($yt_vids);
+$channel_id = 'UCxzARKt0_U0sLHbF4pDN1Pw'; // put the channel id here
+$youtube = file_get_contents('https://www.youtube.com/feeds/videos.xml?channel_id='.$channel_id);
+$xml = simplexml_load_string($youtube, "SimpleXMLElement", LIBXML_NOCDATA);
+$json = json_encode($xml);
+$youtube = json_decode($json, true);
+$yt_vids = array();
+$count = 0;
+foreach ($youtube['entry'] as $k => $v) {
+    $yt_vids[$count]['id'] = str_replace('http://www.youtube.com/watch?v=', '', $v['link']['@attributes']['href']);
+    $yt_vids[$count]['title'] = $v['title'];
+    $count++;
+}
+print_r($yt_vids);
 ?>
 	    
 	   
