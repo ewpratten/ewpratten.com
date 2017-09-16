@@ -100,7 +100,7 @@
 				
 				<?php
 				$i = 0; // counter
-$url = "http://www.rssmix.com/u/8252161/rss.xml"; // url to parse
+$url = "http://www.rssmix.com/u/8252682/rss.xml"; // url to parse
 $rss = simplexml_load_file($url); // XML parser
 
 // RSS items loop
