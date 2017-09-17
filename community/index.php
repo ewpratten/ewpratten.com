@@ -97,8 +97,20 @@
 
 		<div class="rantlist-bg">
 			<ul class="rantlist">
+				<li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;">
+					<a class="twitter-timeline" data-dnt="true" data-theme="dark" href="https://twitter.com/RetryLife_Music">Tweets by RetryLife_Music</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</li>
+					
+					<li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;">
+					<a class="twitter-timeline" data-dnt="true" data-theme="dark" href="https://twitter.com/nsdesjardins345">Tweets by RetryLife_Music</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</li>
+					
+					<li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;">
+
+<a class="twitter-timeline" data-dnt="true" data-theme="dark" href="https://twitter.com/ewpratten">Tweets by RetryLife_Music</a> <script async src="Https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</li>
 				
-				<?php
+				<!--
 				$i = 0; // counter
 $url = "http://www.rssmix.com/u/8252682/rss.xml"; // url to parse
 $rss = simplexml_load_file($url); // XML parser
@@ -140,7 +152,7 @@ foreach ($youtube['entry'] as $k => $v) {
     $count++;
 }
 print_r($yt_vids);
-?>
+-->
 	    
 	   
 
