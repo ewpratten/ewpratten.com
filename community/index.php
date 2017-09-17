@@ -172,6 +172,25 @@ else{
 	echo "Photo : <img src='".$data->profile_image_url."'/><br><br>";
 	// echo the logout button
 	echo "<a href='?logout=true'><button>Logout</button></a>";
+	// echo content box if user is approved
+	if($data->screen_name == "ewpratten"){
+	echo '<?php
+  if (!empty($_GET[';
+  echo "'act'";
+  echo '])) {
+    
+    echo "Hello world!"; //Your code here
+  } else {
+?>
+(.. your html ..)
+<form action="index.php" method="get">
+  <input type="hidden" name="act" value="run">
+  <input type="submit" value="Creator Page">
+</form>
+<?php
+  }
+?>';
+	}
 }
                 	?>
                 	</div>
