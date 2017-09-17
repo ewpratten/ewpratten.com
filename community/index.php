@@ -33,7 +33,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
 
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://platform.twitter.com/widgets.js" async></script>
     
 </head>
 <body >
@@ -97,6 +97,7 @@
 
 		<div class="rantlist-bg">
 			<ul class="rantlist">
+				
 				<li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;">
 					<a class="twitter-timeline" data-dnt="true" data-theme="dark" href="https://twitter.com/RetryLife_Music">Tweets by RetryLife_Music</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</li>
@@ -110,52 +111,7 @@
 <a class="twitter-timeline" data-dnt="true" data-theme="dark" href="https://twitter.com/ewpratten">Tweets by RetryLife_Music</a> <script async src="Https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</li>
 				
-				<!--
-				$i = 0; // counter
-$url = "http://www.rssmix.com/u/8252682/rss.xml"; // url to parse
-$rss = simplexml_load_file($url); // XML parser
-
-// RSS items loop
-
-
-
-foreach($rss->channel->item as $item) {
-if ($i < 1000) { // parse only 10 items
-		print '<li class="rant-comment-row-widget" data-id="829770" data-type="rant" style="background-color:#243447;color:white;"><div class="rantlist-title-text" style="color:white;" > '.$item->description.'</div></li>';
-}
-
-$i++;
-}
-$channel_id = 'UCrHT3Lt0Mg90bspbMHJfTcA'; // put the channel id here
-$youtube = file_get_contents('https://www.youtube.com/feeds/videos.xml?channel_id='.$channel_id);
-$xml = simplexml_load_string($youtube, "SimpleXMLElement", LIBXML_NOCDATA);
-$json = json_encode($xml);
-$youtube = json_decode($json, true);
-$yt_vids = array();
-$count = 0;
-foreach ($youtube['entry'] as $k => $v) {
-    $yt_vids[$count]['id'] = str_replace('http://www.youtube.com/watch?v=', '', $v['link']['@attributes']['href']);
-    $yt_vids[$count]['title'] = $v['title'];
-    $count++;
-}
-print_r($yt_vids);
-$channel_id = 'UCxzARKt0_U0sLHbF4pDN1Pw'; // put the channel id here
-$youtube = file_get_contents('https://www.youtube.com/feeds/videos.xml?channel_id='.$channel_id);
-$xml = simplexml_load_string($youtube, "SimpleXMLElement", LIBXML_NOCDATA);
-$json = json_encode($xml);
-$youtube = json_decode($json, true);
-$yt_vids = array();
-$count = 0;
-foreach ($youtube['entry'] as $k => $v) {
-    $yt_vids[$count]['id'] = str_replace('http://www.youtube.com/watch?v=', '', $v['link']['@attributes']['href']);
-    $yt_vids[$count]['title'] = $v['title'];
-    $count++;
-}
-print_r($yt_vids);
--->
-	    
-	   
-
+			
 
 	    </ul>
 </div>
