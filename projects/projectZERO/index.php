@@ -5,6 +5,16 @@
 	<link href="css/hover.css" rel="stylesheet" media="all">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 	<!-- <link href="./css/main.css" rel="stylesheet" media="all"> -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-61008630-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-61008630-1');
+</script>
+
 	<style>
 		#floater {
     float: left;
