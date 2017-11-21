@@ -29,6 +29,17 @@
 
 -->
 
+<!-- php link processing -->
+<?php
+if($_GET['redirect'] == "donate"){
+	echo "<script>window.location = 'http://retrylife.ca/donate';</script>";
+}
+
+// setcookie("name","value",time()+$int);
+
+
+
+?>
 
 <head>
 	<link href="./css/picnic.min.css" rel="stylesheet" media="all">
@@ -194,7 +205,13 @@ setInterval(updateGradient,10);
 <?php
 
 // this is temp
-echo "Project ZERO"
+if($_GET['scoreboard'] == "show"){
+	echo "Your Score: ", $_GET['score'];
+}
+else{
+	echo "Project ZERO";
+}
+
 ?>
 </span>
 </a>
@@ -203,11 +220,11 @@ echo "Project ZERO"
 
   <div class="menu">
   	
-  	<a href="https://twitter.com/ProjectZERO_nr?ref_src=twsrc%5Etfw" align="center" class="twitter-follow-button" data-show-count="false"><button>Twittter</button></a>
   	
-  	<a href="https://www.instagram.com/projectzero_nr/" class="twitter-follow-button" data-show-count="false" align="center"><button>Instagram</button></a>
   	
-	<a href="#office" class="button">Office Space</a>
+	<a href="https://twitter.com/ProjectZERO_nr?ref_src=twsrc%5Etfw" class="button">Twittter</a>
+	<a href="https://www.instagram.com/projectzero_nr/" class="button">Instagram</a>
+	<a href="/#office" class="button">Office Space</a>
 	<a href="#housing" class="button">Housing</a>
 	<a href="#design" class="button">Design</a>
 <?php
@@ -552,7 +569,7 @@ foreach($twitter_feed as $tweet) {
         
 
 <div class="credits" width="100%">
-<p>Project by: <a title="My name is Evan" href="https://github.com/Ewpratten" style="color: white;">ewpratten</a>, Maya, Sarah, Nathan<a class="abc" title="Hey look! You can click me to make a donation!" href="http://retrylife.ca/donate" style="float :right;">Support the developer</a></p>
+<p>Project by: <a title="My name is Evan" href="https://github.com/Ewpratten" style="color: white;">ewpratten</a>, Maya, Sarah, Nathan<a class="abc" title="Hey look! You can click me to make a donation!" href="/?redirect=donate<?php $a = $_GET['score']; $b = $a + 100; echo "&score=", $b; ?>" style="float :right;">Support the developer</a></p>
 </div>
     </div>
 </div>
