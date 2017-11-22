@@ -35,6 +35,12 @@ if($_GET['redirect'] == "donate"){
 	echo "<script>window.location = 'http://retrylife.ca/donate';</script>";
 }
 
+// easter eggs
+
+if($_GET['tgif'] == "true"){
+	$TGIF = 1;
+}
+
 // setcookie("name","value",time()+$int);
 
 
@@ -42,7 +48,7 @@ if($_GET['redirect'] == "donate"){
 ?>
 
 <head>
-	<link href="./css/picnic.min.css" rel="stylesheet" media="all">
+	<link href="./<?php if($_GET['theme'] == "dark"){echo "css/picnic.dark.css";}else{ echo "css/picnic.min.css";} ?>" rel="stylesheet" media="all">
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, inital-scale=1">
 	<link href="css/hover.css" rel="stylesheet" media="all">
@@ -133,9 +139,14 @@ a.abc {
 	height:100%;
 	width:1;
 }
+.aptprice {
+    background-color: #3d414a;
+    color: whitesmoke;
+}
 	</style>
 </head>
 <body>
+
 	<script>
 		var colors = new Array(
   [62,35,255],
@@ -205,12 +216,16 @@ setInterval(updateGradient,10);
 <?php
 
 // this is temp
+if($TGIF == 1){
+	echo "ITS FRIDAY!";
+}
+else{
 if($_GET['scoreboard'] == "show"){
 	echo "Your Score: ", $_GET['score'];
 }
 else{
 	echo "Project ZERO";
-}
+}}
 
 ?>
 </span>
@@ -244,7 +259,11 @@ if($currentPage != "home"){
 <br>
 <br>
 <div style="height:300">
-	<div id="gradient" />
+	<?php
+	if($_GET['lagmode'] != "reduce"){
+	echo '<div id="gradient" />';
+	}
+	?>
 <!-- im a spacer -->
 
 
@@ -287,16 +306,16 @@ for($ix = 0; $ix <= 33; $ix++){
   <p>All housing units can be rented for an affordable price and come outfitted with modern appliences.</p>
   
   <footer>
-    <button>Learn More</button>
+    <a href="#aptprices"><button>Learn More</button></a>
   </footer></article></span></div>
 			<div><span><article class="card"><header>
     	<h3>Unit Styles</h3>
   </header>
   
-  <p>All housing units are modular and come in one and two story sections. They can also be joined with a neighbouring unit for extra space.</p>
+  <p>All housing units are modular and come in two story sections. They can also be joined with a neighbouring unit for extra space.</p>
   
   <footer>
-    <button>Learn More</button>
+    <a href="#design2"><button>Check it out</button></a>
   </footer></article></span></div>
 			<div><span><article class="card"><header>
     	<h3>Corporate Reservations</h3>
@@ -305,7 +324,7 @@ for($ix = 0; $ix <= 33; $ix++){
   <p>We allow any company who is currently renting a modular office space to also rent housing for their employees.</p>
   
   <footer>
-    <button>Learn More</button>
+    <a href="#group"><button>Learn More</button></a>
   </footer></article></span></div>
 		</div>
 </div>
@@ -506,6 +525,75 @@ foreach($twitter_feed as $tweet) {
 
 <div class="flex one-0 three-600 demo" id="design">
   <div class="two-third"><span>
+  	<img src="./img/cross.png" style="width:100%">
+  </span></div>
+  <div><span>
+  	
+  	<article class="card"><header>
+    	<h3>The Ring</h3>
+  </header>
+  
+  <p>This is a cross section of the ring, where residential spaces can be found on the left and shared offices on the right.</p>
+  
+  </article>
+  </span></div>
+  
+</div>
+
+<div class="spacer"></div>
+<!--
+
+max units:20
+10 office
+
+housing
+empty room: $100/ month
+The essentials: $250/ month
+2 rooms + essentials: $450/ month
+
+$200
+electricity
+
+$400
+desk, whiteboard, chairs
+
+$1500
+speakers, 70" 4k tv
+-->
+<div class="grouprent" id="group">
+	
+	<div class="aptprice">
+	<div style="align:center:">
+		<h1 align="center">Company Rented Living Spaces</h1>
+		</div>
+		
+		<div class="flex one three-600 demo">
+			
+				<div style="text-align:center;"><span>
+				
+				
+				
+			</span></div>
+			<div style="text-align:center;"><span>
+				
+				<h3>Any company is allowed to rent up to 10 shared offices spaces and up to 20 living spaces of any tier</h3>
+				</span></div>
+			
+			<div style="text-align:center;"><span>
+				
+				
+				</span></div>
+		</div>
+
+<br>
+<br>
+</div>
+	
+</div>
+
+<div class="spacer"></div>
+<div class="flex one-0 three-600 demo" id="design2">
+  <div class="two-third"><span>
   	<img src="">
   	<h1>(Image of living space)</h1>
   </span></div>
@@ -521,6 +609,41 @@ foreach($twitter_feed as $tweet) {
   
 </div>
 
+<div class="spacer"></div>
+
+<div class="aptprice" id="aptprices">
+	<div style="align:center:">
+		<h1 align="center">Apartment Pricing</h1>
+		</div>
+		
+		<div class="flex one three-600 demo">
+			
+				<div style="text-align:center;"><span>
+				
+				<h1>$350 / Month</h1>
+				<h3>The Minimalist</h3>
+				<h5>An unfurnished room with electricity and water</h5>
+				
+			</span></div>
+			<div style="text-align:center;"><span>
+				
+			<h1>$600 / Month</h1>
+				<h3>The Essentials</h3>
+				<h5>Finished kitchen and living space</h5>
+				</span></div>
+			
+			<div style="text-align:center;"><span>
+				
+				<h1>$1000 / Month</h1>
+				<h3>The Luxurious</h3>
+				<h5>A fully furnished room with everything you need</h5>
+				
+				</span></div>
+		</div>
+
+<br>
+<br>
+</div>
 <div class="spacer"></div>
 
 <div class="flex one-0 three-600 demo">
@@ -541,8 +664,51 @@ foreach($twitter_feed as $tweet) {
   
   
 </div>
+<!--
+$200
+electricity
 
+$400
+desk, whiteboard, chairs
 
+$1500
+speakers, 70" 4k tv
+-->
+<div class="spacer"></div>
+<div class="aptprice" id="officeprices">
+	<div style="align:center:">
+		<h1 align="center">Office Pricing</h1>
+		</div>
+		
+		<div class="flex one three-600 demo">
+			
+				<div style="text-align:center;"><span>
+				
+				<h1>$200 / Month</h1>
+				<h3>The Minimalist</h3>
+				<h5>An unfurnished room with electricity</h5>
+				
+			</span></div>
+			<div style="text-align:center;"><span>
+				
+			<h1>$400 / Month</h1>
+				<h3>The Essentials</h3>
+				<h5>Comes with desks, whiteboard, and chairs</h5>
+				</span></div>
+			
+			<div style="text-align:center;"><span>
+				
+				<h1>$1500 / Month</h1>
+				<h3>The Luxurious</h3>
+				<h5>The previous tiers, with surround sound speakers and a 70" 4k TV</h5>
+				
+				</span></div>
+		</div>
+
+<br>
+<br>
+</div>
+<div class="spacer"></div>
 <footer>
 <div width="100%"  style="background-color: #243447;height:auto;">
 <!-- <h3>Website by: <a href="https://ewpratten.github.io">Ewpratten</a></h3> -->
@@ -569,9 +735,9 @@ foreach($twitter_feed as $tweet) {
         
 
 <div class="credits" width="100%">
-<p>Project by: <a title="My name is Evan" href="https://github.com/Ewpratten" style="color: white;">ewpratten</a>, Maya, Sarah, Nathan<a class="abc" title="Hey look! You can click me to make a donation!" href="/?redirect=donate<?php $a = $_GET['score']; $b = $a + 100; echo "&score=", $b; ?>" style="float :right;">Support the developer</a></p>
+<p>Project by: <a title="My name is Evan" href="https://github.com/Ewpratten" style="color: white;">ewpratten</a>, Maya, Sarah, <a href="http://glitchop.newgrounds.com" style="color:white;" title=" ">Nathan</a><a class="abc" title="Hey look! You can click me to make a donation!" href="/?redirect=donate<?php $a = $_GET['score']; $b = $a + 100; echo "&score=", $b; ?>" style="float :right;">Support the developer</a></p>
 </div>
-    </div>
+</div>
 </div>
 </div>
 </footer>
