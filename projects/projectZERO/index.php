@@ -79,92 +79,95 @@ if($_GET['tgif'] == "true"){
 
 	<style>
 		#floater {
-    float: left;
-    height: 50%;
-    width: 100%;
-    margin-bottom: -110px;
-}
+		    float: left;
+		    height: 50%;
+		    width: 100%;
+		    margin-bottom: -110px;
+		}
+		#child {
+		    clear: both;
+		    height: 100px;
+		    text-align: center
+		}
+		.spacer {
+		    background-color: #2f3136;
+		    width: 100%;
+		    height: 10;
+		}
+		.front {
+		    width: auto;
+		    background-color: rgba(25, 29, 25, 0.7);
+		    color: #fff;
+		}
+		.coverimg {
+		    filter: blur(5px);
+		    // Browser Specific
+		    -webkit-filter: blur(5px);
+		    -moz-filter: blur(5px);
+		    -o-filter: blur(5px);
+		    -ms-filter: blur(5px);
+		}
+		footer {
+		    color: rgb(255, 255, 255);
+		}
+		#gradient {
+		    width: 100%;
+		    height: 100%;
+		    padding: 0px;
+		    margin: 0px;
+		}
+		.border {
+		    border-color: white;
+		    border-style: solid;
+		    width: fit-content;
+		    border-radius: 100%;
+		}
+		.ewp {
+		    border-radius: 100%;
+		}
+		a.button.hvr-bob {
+		    border-radius: 100%;
+		    background-color: rgba(255, 255, 255, 0);
+		}
+		img.dri {
+		    height: 20%;
+		}
+		a.abc {
+		    color: #405c7d;
+		}
+		.line .linev {
+		    background-color: black;
+		}
+		.line {
+		    height: 1;
+		    width: 100%;
+		}
+		.linev {
+		    height: 100%;
+		    width: 1;
+		}
+		.aptprice {
+		    background-color: #3d414a;
+		    color: whitesmoke;
+		}
+		.darkbox {
+		    border-color: white;
+		    border-width: 10px;
+		}
+		.darkbox {
+		    border-radius: .2em;
+		    border: 1px solid rgba(204, 204, 204, 0.14);
+		}
+		a.button {
+		    background-color: #b6bab6;
+		}
+		label.burger.button {
+		    background-color: #b6bab6;
+		}
+		button {
+		    background-color: #b6bab6;
+		}
 
-#child {
-    clear: both;
-    height: 100px;
-    text-align:center
-}
-body {
-	
-}
-.spacer {
-	background-color:#2f3136;
-	width:100%;
-	height:10;
-}
-.front {
-	width:auto;
-    background-color:rgba(25, 29, 25, 0.7);
-    color:#fff;
-}
-.coverimg {
-	filter: blur(5px);
-// Browser Specific
--webkit-filter: blur(5px);
--moz-filter: blur(5px);
--o-filter: blur(5px);
--ms-filter: blur(5px);
-}
-footer {
-	color: rgb(255, 255, 255);
-}
-#gradient
-{
-  width: 100%;
-  height: 100%;
-  padding: 0px;
-  margin: 0px;
-}
-.border {
-    border-color: white;
-    border-style: solid;
-    width: fit-content;
-    border-radius: 100%;
-}
-.ewp {
-    border-radius: 100%;
-}
-
-a.button.hvr-bob {
-    border-radius: 100%;
-    background-color: rgba(255, 255, 255, 0);
-}
-img.dri {
-    height: 20%;
-}
-a.abc {
-    color: #405c7d;
-}
-.line .linev {
-	background-color:black;
-}
-.line {
-	height: 1;
-	width:100%;
-}
-.linev {
-	height:100%;
-	width:1;
-}
-.aptprice {
-    background-color: #3d414a;
-    color: whitesmoke;
-}
-.darkbox {
-    border-color: white;
-    border-width: 10px;
-}
-
-.darkbox {
-    border-radius: .2em;
-    border: 1px solid rgba(204, 204, 204, 0.14);
-}
 	</style>
 </head>
 <body>
@@ -259,7 +262,7 @@ else{
   	
   	
   	
-	<a href="https://twitter.com/ProjectZERO_nr?ref_src=twsrc%5Etfw" class="button">Twittter</a>
+	<a href="https://twitter.com/ProjectZERO_nr?ref_src=twsrc%5Etfw" class="button">Twitter</a>
 	<a href="https://www.instagram.com/projectzero_nr/" class="button">Instagram</a>
 	<a href="/#office" class="button">Office Space</a>
 	<a href="#housing" class="button">Housing</a>
