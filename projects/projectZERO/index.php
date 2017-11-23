@@ -258,37 +258,51 @@ if($currentPage != "home"){
 
 <br>
 <br>
+
+<div class="frontpage" >
+	
+	<img src="./img/cover.png" width="100%">
+</div>
+
+
+<!--
 <div style="height:300">
 	<?php
-	if($_GET['lagmode'] != "reduce"){
-	echo '<div id="gradient" />';
-	}
+//	if($_GET['lagmode'] != "reduce"){
+//	echo '<div id="gradient" />';
+//	}
 	?>
 <!-- im a spacer -->
 
 
-
+<!--
 <div id="floater"></div>
     <div id="child">
     	<div class="front">
 <h1>
+-->
 <?php
-$text = array("P", "r", "o", "j", "e", "c", "t", " ", "Z", "E", "R", "O");
-$text2 = array("A", "n", " ", "a", "d", "v", "a", "n", "c", "e", "d", " ", "c", "o", "m", "m", "u", "n", "i", "t", "y", " ", "l", "i", "v", "i", "n", "g", " ", "s", "p", "a", "c", "e");
 
-for($i = 0; $i <= 12 ; $i++){
-	echo $text[$i];
-}
+//$text = array("P", "r", "o", "j", "e", "c", "t", " ", "Z", "E", "R", "O");
+//$text2 = array("A", "n", " ", "a", "d", "v", "a", "n", "c", "e", "d", " ", "c", "o", "m", "m", "u", "n", "i", "t", "y", " ", "l", "i", "v", "i", "n", "g", " ", "s", "p", "a", "c", "e");
 
-echo "</h1><h1>";
+//for($i = 0; $i <= 12 ; $i++){
+//	echo $text[$i];
+//}
 
-for($ix = 0; $ix <= 33; $ix++){
-	echo $text2[$ix];
-}
+//echo "</h1><h1>";
+
+//for($ix = 0; $ix <= 33; $ix++){
+//	echo $text2[$ix];
+//}
 ?>
+<!--
 </h1>
 </div>
 </div>
+-->
+
+
 </div>
 </div>
 <div class="spacer"></div>
@@ -344,7 +358,7 @@ for($ix = 0; $ix <= 33; $ix++){
   <p>All office units can be rented for an affordable price and can be outfitted with modern appliences, furniture, and a TV.</p>
   
   <footer>
-    <button>Learn More</button>
+    <a href="#officeprices"><button>Learn More</button></a>
   </footer></article></span></div>
 			<div><span><article class="card"><header>
     	<h3>Unit Styles</h3>
@@ -353,7 +367,7 @@ for($ix = 0; $ix <= 33; $ix++){
   <p>All Office units are modular and come in one and two story sections. They can also be joined with a neighbouring unit for extra space.</p>
   
   <footer>
-    <button>Learn More</button>
+    <a href="#officedesign"><button>Check It Out</button></a>
   </footer></article></span></div>
 			<div><span><article class="card"><header>
     	<h3>Food and Conveniences</h3>
@@ -646,7 +660,7 @@ speakers, 70" 4k tv
 </div>
 <div class="spacer"></div>
 
-<div class="flex one-0 three-600 demo">
+<div class="flex one-0 three-600 demo" id="officedesign">
 	<div><span>
   	<article class="card"><header>
     	<h3>Office Spaces</h3>
@@ -658,8 +672,7 @@ speakers, 70" 4k tv
   </span></div>
   
   <div class="two-third"><span>
-  	<img src="">
-  	<h1>(Image of office space)</h1>
+  	<img src="./img/office.png" width="100%">
   </span></div>
   
   
@@ -700,7 +713,7 @@ speakers, 70" 4k tv
 				
 				<h1>$1500 / Month</h1>
 				<h3>The Luxurious</h3>
-				<h5>The previous tiers, with surround sound speakers and a 70" 4k TV</h5>
+				<h5>The previous tiers, with surround sound speakers, 4 desktop computers, and a 70" 4k TV</h5>
 				
 				</span></div>
 		</div>
@@ -709,6 +722,43 @@ speakers, 70" 4k tv
 <br>
 </div>
 <div class="spacer"></div>
+
+<div class="flex one-0 three-600 demo" id="design2">
+  <div class="two-third"><span>
+  	<img src="./img/rec.png" width="100%">
+  </span></div>
+  <div><span>
+  	<article class="card"><header>
+    	<h3>Recteational Space</h3>
+  </header>
+  
+  <p>(add details about the rec space)</p>
+  
+  </article>
+  </span></div>
+  
+</div>
+
+<div class="spacer"></div>
+<div class="flex one-0 three-600 demo" id="officedesign">
+	<div><span>
+  	<article class="card"><header>
+    	<h3>Solar Power</h3>
+  </header>
+  
+  <p>(add details about solar)</p>
+  
+  </article>
+  </span></div>
+  
+  <div class="two-third"><span>
+  	<img src="./img/solar.png" width="100%">
+  </span></div>
+  
+  
+</div>
+
+
 <footer>
 <div width="100%"  style="background-color: #243447;height:auto;">
 <!-- <h3>Website by: <a href="https://ewpratten.github.io">Ewpratten</a></h3> -->
