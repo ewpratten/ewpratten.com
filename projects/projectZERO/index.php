@@ -61,6 +61,8 @@ if($_GET['tgif'] == "true"){
 ?>
 
 <head>
+	<title>ProjectZERO</title>
+	<link rel="icon" type="image/png" href="./img/favicon.ico">
 	<link href="./<?php if($_GET['theme'] == "dark"){echo "css/picnic.dark.css";}else{ echo "css/picnic.min.css";} ?>" rel="stylesheet" media="all">
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, inital-scale=1">
@@ -167,6 +169,7 @@ if($_GET['tgif'] == "true"){
 		button {
 		    background-color: #b6bab6;
 		}
+		
 
 	</style>
 </head>
