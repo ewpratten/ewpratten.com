@@ -570,7 +570,7 @@ foreach($twitter_feed as $tweet) {
   	<img src="./img/cross.png" style="width:100%">
   </span></div>
   <div><span>
-  	
+  	<br>
   	<article class="card"><header>
     	<h3>The Ring</h3>
   </header>
@@ -640,6 +640,7 @@ speakers, 70" 4k tv
   	<h1>(Image of living space)</h1>
   </span></div>
   <div><span>
+  	<br>
   	<article class="card"><header>
     	<h3>Living Spaces</h3>
   </header>
@@ -690,6 +691,7 @@ speakers, 70" 4k tv
 
 <div class="flex one-0 three-600 demo" id="officedesign">
 	<div><span>
+		<br>
   	<article class="card"><header>
     	<h3>Office Spaces</h3>
   </header>
@@ -756,11 +758,13 @@ speakers, 70" 4k tv
   	<img src="./img/rec.png" width="100%">
   </span></div>
   <div><span>
+  	<br>
   	<article class="card"><header>
     	<h3>Recteational Space</h3>
   </header>
   
-  <p>(add details about the rec space)</p>
+  <p>We want to have a happy community, which is why we will invest a lot of money in the REC. center of Project ZERO. A 400m track, as well as a multi-purpose field will occupy a large amount of surface area within the outdoor section of the REC center. There will also be an indoor gym. The rest of the outdoor area will consist of community gardens and parks. The REC. center will be open to anyone withinwithin and outside the community.
+</p>
   
   </article>
   </span></div>
@@ -770,6 +774,7 @@ speakers, 70" 4k tv
 <div class="spacer"></div>
 <div class="flex one-0 three-600 demo" id="officedesign">
 	<div><span>
+		<br>
   	<article class="card"><header>
     	<h3>Solar Power</h3>
   </header>
