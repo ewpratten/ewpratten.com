@@ -345,7 +345,7 @@ if($currentPage != "home"){
     	<h3>Pricing</h3>
   </header>
   
-  <p>All housing units can be rented for an affordable price and come outfitted with modern appliences.</p>
+  <p>All housing units can be rented for an affordable price and come outfitted with modern appliances.</p>
   
   <footer>
     <a href="#aptprices"><button>Learn More</button></a>
@@ -383,7 +383,7 @@ if($currentPage != "home"){
     	<h3>Pricing</h3>
   </header>
   
-  <p>All office units can be rented for an affordable price and can be outfitted with modern appliences, furniture, and a TV.</p>
+  <p>All office units can be rented for an affordable price and can be outfitted with modern appliances, furniture, and a TV.</p>
   
   <footer>
     <a href="#officeprices"><button>Learn More</button></a>
@@ -401,7 +401,7 @@ if($currentPage != "home"){
     	<h3>Food and Conveniences</h3>
   </header>
   
-  <p>All spaces are heated and cooled to keep the temprature allways enjoyable. In the central park, there are places to buy food and eat.</p>
+  <p>All spaces are heated and cooled to keep the temprature always enjoyable. In the central park, there are places to buy food and eat.</p>
   
   <footer>
     <button>Learn More</button>
@@ -575,7 +575,7 @@ foreach($twitter_feed as $tweet) {
     	<h3>The Ring</h3>
   </header>
   
-  <p>This is a cross section of the ring, where residential spaces can be found on the left and shared offices on the right.</p>
+  <p>Project ZERO is designed to be energy efficient and sustainable. This is achieved through the wide use of geothermal heating and cooling throughout the community. Windows will be equipped with a carbon filter. This carbon filter can either reflect light, or keep it trapped within a specific area (emulating a greenhouse). This is a cross section of the ring, where residential spaces can be found on the left and shared offices on the right.</p>
   
   </article>
   </span></div>
