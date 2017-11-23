@@ -516,7 +516,7 @@ speakers, 70" 4k tv
     	<h3>Living Spaces</h3>
   </header>
   
-  <p>(add details about the apartments)</p>
+  <p>(add details about the apartments) </p>
   
   </article>
   </span></div>
@@ -650,7 +650,7 @@ speakers, 70" 4k tv
     	<h3>Solar Power</h3>
   </header>
   
-  <p>(add details about solar)</p>
+  <p>70000 solar cells cover the roof of the ring. This generates about 20,000 volts of electricity that is used to provide power to the community. Excess electricity is stored in large batteries to be used when the electrical grid is under heavy load.</p>
   
   </article>
   </span></div>
