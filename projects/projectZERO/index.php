@@ -156,6 +156,15 @@ a.abc {
     background-color: #3d414a;
     color: whitesmoke;
 }
+.darkbox {
+    border-color: white;
+    border-width: 10px;
+}
+
+.darkbox {
+    border-radius: .2em;
+    border: 1px solid rgba(204, 204, 204, 0.14);
+}
 	</style>
 </head>
 <body>
@@ -645,21 +654,21 @@ speakers, 70" 4k tv
 		
 		<div class="flex one three-600 demo">
 			
-				<div style="text-align:center;"><span>
+				<div style="text-align:center;" class="darkbox"><span>
 				
 				<h1>$350 / Month</h1>
 				<h3>The Minimalist</h3>
 				<h5>An unfurnished room with electricity and water</h5>
 				
 			</span></div>
-			<div style="text-align:center;"><span>
+			<div style="text-align:center;" class="darkbox"><span>
 				
 			<h1>$600 / Month</h1>
 				<h3>The Essentials</h3>
 				<h5>Finished kitchen and living space</h5>
 				</span></div>
 			
-			<div style="text-align:center;"><span>
+			<div style="text-align:center;" class="darkbox"><span>
 				
 				<h1>$1000 / Month</h1>
 				<h3>The Luxurious</h3>
@@ -708,21 +717,21 @@ speakers, 70" 4k tv
 		
 		<div class="flex one three-600 demo">
 			
-				<div style="text-align:center;"><span>
+				<div style="text-align:center;" class="darkbox"><span>
 				
 				<h1>$200 / Month</h1>
 				<h3>The Minimalist</h3>
 				<h5>An unfurnished room with electricity</h5>
 				
 			</span></div>
-			<div style="text-align:center;"><span>
+			<div style="text-align:center;" class="darkbox"><span>
 				
 			<h1>$400 / Month</h1>
 				<h3>The Essentials</h3>
 				<h5>Comes with desks, whiteboard, and chairs</h5>
 				</span></div>
 			
-			<div style="text-align:center;"><span>
+			<div style="text-align:center;" class="darkbox"><span>
 				
 				<h1>$1500 / Month</h1>
 				<h3>The Luxurious</h3>
