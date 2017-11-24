@@ -264,9 +264,11 @@ else{
   <div class="menu">
   	
   	
-  	
+  
 	<a href="https://twitter.com/ProjectZERO_nr?ref_src=twsrc%5Etfw" class="button">Twitter</a>
+	<!--
 	<a href="https://www.instagram.com/projectzero_nr/" class="button">Instagram</a>
+	-->
 	<a href="/#office" class="button">Office Space</a>
 	<a href="#housing" class="button">Housing</a>
 	<a href="#design" class="button">Design</a>
@@ -507,8 +509,7 @@ speakers, 70" 4k tv
 <div class="spacer"></div>
 <div class="flex one-0 three-600 demo" id="design2">
   <div class="two-third"><span>
-  	<img src="">
-  	<h1>(Image of living space)</h1>
+  	<img src="./img/living.png" width="100%">
   </span></div>
   <div><span>
   	<br>
