@@ -152,6 +152,10 @@ if($_GET['tgif'] == "true"){
 		    background-color: #3d414a;
 		    color: whitesmoke;
 		}
+		#ring {
+		    background-color: #3d414a;
+		    color: whitesmoke;
+		}
 		.darkbox {
 		    border-color: white;
 		    border-width: 10px;
@@ -335,6 +339,26 @@ if($currentPage != "home"){
 
 </div>
 </div>
+<div class="spacer"></div>
+
+<div class="flex one-0 three-600 demo" id="ring">
+	<div><span>
+		<br>
+		<div class="darkbox" style="border-radius:15;">
+  	<img src="./img/ring.png" width="100%" style="border-radius:5px;">
+  	</div>
+  </span></div>
+  
+  <div class="two-third" style="text-align:center;border-radius:15;"><span>
+  	<div style="margin-top:auto;margin-bottom:auto">
+  	<h1>Project ZERO</h1>
+  	<h3>An advanced community living space</h3>
+  	</div>
+  </span></div>
+  
+  
+</div>
+
 <div class="spacer"></div>
 
 <div class="housing" id="housing">
