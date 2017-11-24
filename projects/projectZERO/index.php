@@ -592,7 +592,7 @@ speakers, 70" 4k tv
     	<h3>Office Spaces</h3>
   </header>
   
-  <p>The concept sketch of a Luxurious tier office space (left), shows an eight person desk and 70" flatscreen TV. Chairs are not shown for clarity purposes</p></p>
+  <p>The concept sketch of a Luxurious tier office space (right), shows an eight person desk and 70" flatscreen TV. Chairs are not shown for clarity purposes</p></p>
   
   </article>
   </span></div>
