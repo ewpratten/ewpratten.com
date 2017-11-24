@@ -266,9 +266,9 @@ else{
   	
   
 	<a href="https://twitter.com/ProjectZERO_nr?ref_src=twsrc%5Etfw" class="button">Twitter</a>
-	<!--
+	
 	<a href="https://www.instagram.com/projectzero_nr/" class="button">Instagram</a>
-	-->
+	
 	<a href="/#office" class="button">Office Space</a>
 	<a href="#housing" class="button">Housing</a>
 	<a href="#design" class="button">Design</a>
@@ -517,7 +517,7 @@ speakers, 70" 4k tv
     	<h3>Living Spaces</h3>
   </header>
   
-  <p>(add details about the apartments) </p>
+  <p>This sketch of the living spaces shows the form of a room. The rooms have large windows to create a sense of openness and freedom. On the left is a sink and storage unit, and on the right is a ledge where a couch or bed can be installed. The door at the end of the room opens to a glass balcony.</p>
   
   </article>
   </span></div>
@@ -690,7 +690,7 @@ speakers, 70" 4k tv
         
 
 <div class="credits" width="100%">
-<p>Project by: <a title="My name is Evan" href="https://github.com/Ewpratten" style="color: white;">ewpratten</a>, Maya, Sarah, <a href="http://glitchop.newgrounds.com" style="color:white;" title=" ">Nathan</a><a class="abc" title="Hey look! You can click me to make a donation!" href="/?redirect=donate<?php $a = $_GET['score']; $b = $a + 100; echo "&score=", $b; ?>" style="float :right;">Support the developer</a></p>
+<p>Project by: <a title="ewpratten" href="https://github.com/Ewpratten" style="color: white;">Evan</a>, Maya, Sarah, <a href="http://glitchop.newgrounds.com" style="color:white;" title=" ">Nathan</a><a class="abc" title="Hey look! You can click me to make a donation!" href="/?redirect=donate<?php $a = $_GET['score']; $b = $a + 100; echo "&score=", $b; ?>" style="float :right;">Support the developer</a></p>
 </div>
 </div>
 </div>
