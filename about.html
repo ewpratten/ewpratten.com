@@ -1,76 +1,30 @@
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-  <style>
-  	body {
-		font-family: Roboto;
-		margin: 0;
-		padding: 0;
-		background:none transparent;
-	}
-  </style>
-  
+<html><head>
+	<link href="https://unpkg.com/picnic" rel="stylesheet">
+	<title>RetryLife</title>
+	<style>
+		@font-face{
+    font-family: "8-bit";
+    src: url('./font.txt'),
+    url('./font.txt'); /* IE */
+}
+body {
+	font-family: "8-bit";
+}
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<div style="height:100%">
+	<div class="flex one three-600 demo">
+	<div><span></span></div>
+	<div style="text-align:center;" class="lll"><span>
+		<br>
+		<br>
+	<h1>About Me</h1>
+	<p style="text-align:left;font-size:medium;">Hi. I am the human behind this thing called RetryLife. There is a good chance that you have seen me somewhere on the internet. My username is usually <a href="https://twitter.com/ewpratten">@ewpratten</a> but sometimes I prefer to use a diffrent username because, why not? So.. what is RetryLife and why did I decide to invest my time into it? RetryLife is really just a name that I publish my work under. There is no set release schedule, and there is no video series as well. This is because I have to go to school and I also have other side projects that  I work on. RetryL:ife is just a fun thing that I use to publish anything that is music / video related (as well as some code here and there). This is all I have to say here for now, but I will probably change the site soon.</p>
 	
-	<div class="yt" style="width:87%;height:45%;">
-	<div class="card" style="">
-	<div class="card-block">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<iframe id="youtube_video" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-
-<script>
-var channelID = "UCrHT3Lt0Mg90bspbMHJfTcA";
-$.getJSON('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D'+channelID, function(data) {
-   var link = data.items[0].link;
-   var id = link.substr(link.indexOf("=")+1);
-    $("#youtube_video").attr("src","https://youtube.com/embed/"+id + "?controls=0&showinfo=0&rel=0");
-});
-</script>
-	
-	</div>
+	</span></div>
+	<div><span></span></div>
 </div>
-</div>
-	
-	
-	
-	<div style="height:3.2rem;"></div>
-	
-	
 
-	
-
-	
-
-
-
-<div class="about" style=" width:87%;height:20%">
-	<div class="card" >
-  <div class="card-block">
-	<h4 class="card-title">About Us</h4>
-	<p class="card-text">We are a group of young content creators who have joined together to create cool stuff for you guys to enjoy!</p>
-	<a href="people.html" class="btn btn-primary" style="width:10.2rem;">What we do</a>
-	</div>
-	</div>
-	
-	</div>
-	
-
-
-	
-	
-		
-	
-	</div>
-
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  
-</body>
+</body></html>
