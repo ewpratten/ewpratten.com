@@ -1,0 +1,138 @@
+
+canvas {
+    display:block;
+    position: fixed;
+    background-color: rgba(130, 130, 238, 0.299);
+    z-index: -1;
+}
+
+body{
+    margin:0;
+    padding:0;
+    height:100%;
+    
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+}
+
+article {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    -webkit-column-width: 300px;
+       -moz-column-width: 300px;
+            column-width: 300px;
+            position: absolute;
+}
+
+.blank{
+    height:100vh;
+    width:max-content
+}
+
+.about{
+    width:30vw;
+    height:100vh;
+    background-color:#3f32ca;
+    font-family: 'Germania One', cursive;
+    color:white;
+
+    
+}
+
+.name-wrapper{
+    margin:40;
+}
+
+.name{
+    font-size: calc(1vw * 5);
+    font-family: 'Black Ops One', cursive;
+    margin:0;
+    padding:0;
+}
+
+.links{
+    font-size: calc(1vw * 3);
+    margin:0;
+
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+.three-height{
+    height:15vh;
+}
+
+.pgp{
+    position:absolute;
+    bottom:0;
+    text-align:center;
+}
+
+.subtitle{
+    font-size: calc(1vw * 2);
+    color:#6b63ca;
+    margin:0;
+}
+
+a:hover, a:visited, a:link, a:active, a:any-link{
+    text-decoration: none !important;
+    color:#5348ca;
+    margin:40;
+}
+
+/* Set font size for small screen */
+@media only screen and (max-width: 600px) {
+    .name{
+        font-size: calc(1vw * 15);
+    }
+    .about{
+        width:100%;
+        overflow: hidden;
+        position:fixed;
+    }
+    .null{
+        display:none !important;
+        height:0px;
+    }
+    .subtitle{
+        font-size: calc(1vw * 8);
+    }
+    .pgp{
+        display:none;
+    }
+    .links{
+        font-size: calc(1vw * 10);
+    }
+
+}
+
+/* Animations */
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
