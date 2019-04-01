@@ -105,6 +105,7 @@ h1{
 
 .empty{
     width:30vw;
+    height:100vh;
 }
 
 .three-height{
@@ -160,6 +161,7 @@ a:hover, a:visited, a:link, a:active, a:any-link{
     .empty{
         display:none !important;
         width:0px;
+        height:0px;
     }
     .content{
         width:100vw;
