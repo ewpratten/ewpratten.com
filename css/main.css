@@ -2,8 +2,15 @@
 canvas {
     display:block;
     position: fixed;
+    margin:0;
+    padding:0;
     background-color: rgba(130, 130, 238, 0.299);
     z-index: -1;
+    top:0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
@@ -40,6 +47,8 @@ article {
     font-family: 'Germania One', cursive;
     color:white;
 
+    overflow: hidden;
+    position:fixed;
     
 }
 
@@ -65,8 +74,46 @@ article {
             animation: fadein 3s;
 }
 
+.content-box{
+    max-width:60vw;
+    margin:auto;
+    background-color: rgb(233, 233, 255);
+    padding:10px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.content-box-wrapper{
+    max-width:40vw;
+    margin:auto;
+}
+
+p{
+    font-size: calc(1vw * 1);
+    font-family: 'Denk One', sans-serif;
+}
+
+h1{
+   
+    font-size: calc(1vw * 2);
+    font-family: 'Black Ops One', cursive; 
+}
+
+.content{
+    width:100%;
+}
+
+.empty{
+    width:30vw;
+}
+
 .three-height{
     height:15vh;
+}
+
+.full-height{
+    height:100vh;
+    background:none;
 }
 
 .pgp{
@@ -94,8 +141,8 @@ a:hover, a:visited, a:link, a:active, a:any-link{
     }
     .about{
         width:100%;
-        overflow: hidden;
-        position:fixed;
+        overflow: none;
+        position:unset;
     }
     .null{
         display:none !important;
@@ -109,6 +156,32 @@ a:hover, a:visited, a:link, a:active, a:any-link{
     }
     .links{
         font-size: calc(1vw * 10);
+    }
+    .empty{
+        display:none !important;
+        width:0px;
+    }
+    .content{
+        width:100vw;
+        padding:0;
+        margin:0;
+    }
+    .content-box{
+        width:calc(100vw - 20);
+        max-width:unset;
+        border-radius:0px;
+        margin:0;
+    }
+    .content-box-wrapper{
+        max-width:unset;
+        padding:0;
+        margin:0;
+    }
+    h1{
+        font-size: calc(1vw * 7);
+    }
+    p{
+        font-size: calc(1vw * 4);
     }
 
 }
