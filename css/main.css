@@ -133,6 +133,7 @@ a:hover, a:visited, a:link, a:active, a:any-link{
     text-decoration: none !important;
     color:#5348ca;
     margin:40;
+    margin-right:0;
 }
 
 /* Set font size for small screen */
