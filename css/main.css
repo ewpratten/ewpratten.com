@@ -10,13 +10,25 @@ canvas {
 }
 
 html {
+    overflow: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
 
 body{
     margin:0;
     padding:0;
     height:100%;
+
+    background-color: rgba(130, 130, 238, 0.299);
     
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 1s; /* Firefox < 16 */
@@ -52,6 +64,15 @@ article {
     
 }
 
+.back{
+    text-align:left;
+}
+
+.back a:hover, .back a:visited, .back a:link, .back a:active, .back a:any-link{
+    color:rgb(201, 201, 226);
+    margin:0;
+}
+
 .name-wrapper{
     margin:40;
 }
@@ -75,12 +96,19 @@ article {
 }
 
 .content-box{
-    max-width:60vw;
+    max-width:50vw;
     margin:auto;
     background-color: rgb(233, 233, 255);
     padding:10px;
     border-radius:10px;
     text-align:center;
+    border-style: solid;
+    border-color: #3f32ca;
+    border-width: 5px;
+}
+
+dashed{
+    color: #3f32ca;
 }
 
 .content-box-wrapper{
@@ -102,6 +130,9 @@ h1{
 .content{
     width:100%;
 }
+.thin{
+    width:0px !important;
+}
 
 .empty{
     width:30vw;
@@ -110,6 +141,10 @@ h1{
 
 .three-height{
     height:5vh;
+}
+
+.four-height{
+    height:25vh;
 }
 
 .full-height{
@@ -134,6 +169,10 @@ a:hover, a:visited, a:link, a:active, a:any-link{
     color:#5348ca;
     margin:40;
     margin-right:0;
+}
+
+li a:hover{
+    margin:0;
 }
 
 /* Set font size for small screen */
@@ -187,28 +226,4 @@ a:hover, a:visited, a:link, a:active, a:any-link{
         font-size: calc(1vw * 4);
     }
 
-}
-
-/* Animations */
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
 }
