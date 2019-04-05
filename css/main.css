@@ -1,10 +1,20 @@
 
+:root {
+    --main-bg-color: #eadeda;
+    --panel-bg-color: #820263;
+    --panel-link-color: #8d1971;
+    --panel-sub-color: #98307f;
+    --content-text-color: #25283d;
+    --content-accent-color: #d90368;
+    --content-bg-color: #ebebed;
+  }
+
 canvas {
     display:block;
     position: fixed;
     margin:0;
     padding:0;
-    background-color: rgba(130, 130, 238, 0.299);
+    background-color: var(--main-bg-color);
     z-index: -1;
     top:0;
 }
@@ -28,7 +38,7 @@ body{
     padding:0;
     height:100%;
 
-    background-color: rgba(130, 130, 238, 0.299);
+    background-color: var(--main-bg-color);
     
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 1s; /* Firefox < 16 */
@@ -55,7 +65,7 @@ article {
 .about{
     width:30vw;
     height:100vh;
-    background-color:#3f32ca;
+    background-color:var(--panel-bg-color);
     font-family: 'Germania One', cursive;
     color:white;
 
@@ -98,17 +108,18 @@ article {
 .content-box{
     max-width:50vw;
     margin:auto;
-    background-color: rgb(233, 233, 255);
+    background-color: var(--content-bg-color);
+    color: var(--content-text-color);
     padding:10px;
     border-radius:10px;
     text-align:center;
     border-style: solid;
-    border-color: #3f32ca;
+    border-color: var(--content-accent-color);
     border-width: 5px;
 }
 
 dashed{
-    color: #3f32ca;
+    color: var(--content-accent-color);
 }
 
 .content-box-wrapper{
@@ -160,13 +171,13 @@ h1{
 
 .subtitle{
     font-size: calc(1vw * 2);
-    color:#6b63ca;
+    color:var(--panel-sub-color);
     margin:0;
 }
 
 a:hover, a:visited, a:link, a:active, a:any-link{
     text-decoration: none !important;
-    color:#5348ca;
+    color:var(--panel-link-color);
     margin:40;
     margin-right:0;
 }

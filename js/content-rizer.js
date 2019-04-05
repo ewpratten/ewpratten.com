@@ -14,6 +14,7 @@ async function slideup(){
         await sleep(1000);
     }
     blank.style = "display:none!important;overflow: hidden; position:fixed; ";
+    window.location = "#"
 
     console.log("slide");
 
