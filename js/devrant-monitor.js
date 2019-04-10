@@ -6,7 +6,7 @@ async function refreshStats() {
 
     // loop
     while (true) {
-        $.getJSON('https://api.retrylife.ca/devrant/info', function (data) {
+        $.getJSON('https://api.retrylife.ca/devrant/info?api-key=retrylifewebsitedevrantmonitor', function (data) {
             // console.log(data);
             time.innerHTML = data["time_gap"] + "s";
             id.innerHTML = data["newest_id"];
