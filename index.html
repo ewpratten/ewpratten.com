@@ -1,99 +1,44 @@
 <head>
     <title>RetryLife</title>
 
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'>
 
-    <link href="/css/animations.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Denk+One" rel="stylesheet"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
-<body >
-    <div id="particles-js">
-        <article>
-            <!-- About Panel -->
-            <scetion><div class="about" id="about">
+<body>
+    <div style="height:100vh">
+        <div class="infobox">
+            <div id="card" class="md:flex bg-white rounded-lg p-6">
 
-                <!-- Spacer -->
-                <div class="three-height"></div>
+                <!-- Profile photo -->
+                <br>
+                <img class="h-16 `w-16 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6" src="https://avatars0.githubusercontent.com/u/21065412?s=460&v=4">
 
-                <!-- Name -->
-                <div class="name-wrapper">
-                        <h1 class="name">Evan</h1>
-                        <h1 class="name">Pratten</h1>
-                        <p class="subtitle">Programming Student</p>
+                <!-- Text -->
+                <div class="text-center md:text-left">
+                    <h2 class="text-lg">Evan Pratten</h2>
+                    <div class="text-purple-500">Programming Student</div>
+                    <div class="text-gray-600">aka: ewpratten</div>
+                    <div class="text-gray-600">ewpratten@gmail.com</div>
                 </div>
-
-                <!-- External Links -->
-                <div class="links">
-                    <a href="https://github.com/ewpratten">GitHub</a><br>
-                    <a href="https://twitter.com/ewpratten">Twitter</a><br>
-                    <a href="https://devrant.com/users/ewpratten">Devrant</a><br>
-                    <a href="https://github.com/frc5024">Robotics</a><br>
-                    <a href="#content">More</a>
-                </div>
-                
-                <!-- PGP Key -->
-                <div class="pgp">
-                    <p><a href="https://keybase.io/ewpratten/pgp_keys.asc">56F5 A6FB 5A8E EF90</a><a href="/id_rsa.pub">SSH</a></p>
-                </div>
-                
-
-            </div></scetion>
-
-            <!-- Blank Panel -->
-            <scetion class="null"><div class="blank"></div></scetion>
-
-        </article>
-
-        <!-- Blank vertical space -->
-        <div class="full-height"></div>
-
-        <!-- Extra content -->
-        <table class="content">
-            <tr>
-                <td class="empty"></td>
-                <td class="info">
-                    <div class="content-box" id="content">
-                        <div class="content-box-wrapper">
-                            <!-- About Me -->
-                            <h1><dashed>---</dashed> About Me <dashed>---</dashed></h1>
-                            <p>I am a teenager who loves to write code and make stuff. I tend to spend my free time either programming or thinking about programming</p>
-
-                            <!-- Robotics -->
-                            <h1><dashed>---</dashed> Robotics <dashed>---</dashed></h1>
-                            <p>As a part of Raider Robotics (frc5024), I co-lead the programming team and help teach new programmers about programming in compiled languages, interfacing with hardware, and computer vision.</p>
-
-                            <!-- Projects -->
-                            <h1><dashed>---</dashed> Projects <dashed>---</dashed></h1>
-                            <p>Every year, I work on a large number of projects. Some of the interesting ones are listed here:</p>
-
-                            <li><a onclick="transition('https://github.com/frc5024')">Robotics Projects</a></li>
-                            <li><a onclick="transition('/devmon.html')">devRant API Status</a></li>
-                            <li><a onclick="transition('https://api.retrylife.ca/endpoints')">RetryLife API</a></li>
-
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
+            </div>
+            <div class="about">
+                <p class="line text-center">________</p><br>
+                <div class="text-gray-600 text-center">"Computer wizard", student, <a href="https://frc5024.github.io" class="text-purple-500">@frc5024</a> programming team lead, and radio enthusiast.</div>
+            </div>
+        </div>
     </div>
 
-    <!-- JS -->
-    <script src="/js/particles.min.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/console.js"></script>
-    <script src="/js/links.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74118570-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-74118570-2');
-    </script>
+    <div class="navbar">
+        <div class="navbarinner">
+            <ul>
+                    <li><a href="https://github.com/ewpratten" class="text-gray-600">Github</a></li>
+                    <li><a href="https://twitter.com/ewpratten" class="text-gray-600">Twitter</a></li>
+                    <li><a href="https://devrant.com/users/ewpratten" class="text-gray-600">Devrant</a></li>    
+                    <li><a href="/blog" class="text-gray-600">Blog</a></li>                
+            </ul>
+        </div>
+    </div>
 
 </body>
