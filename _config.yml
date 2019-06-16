@@ -1,0 +1,43 @@
+# site settings
+title: Evan Pratten
+subtitle: ewpratten
+email: ewpratten@gmail.com
+description: Computer wizard, student, @frc5024 programming team lead, and radio enthusiast.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: https://retrylife.ca # the base hostname & protocol for your site
+author:
+street_address: 
+city:
+state:
+zip_code:
+country: 
+phone:
+
+# homepage tiles
+tiles-source: posts # accepts "posts" or "pages"
+tiles-count: 6
+
+# social settings
+500px_url:
+facebook_url:
+github_url: https://github.com/ewpratten
+gitlab_url: https://gitlab.com/u/ewpratten
+googleplus_url: 
+instagram_url: 
+linkedin_url: 
+pinterest_url:
+slack_url:
+twitter_url: https://twitter.com/ewpratten
+
+# build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jemoji

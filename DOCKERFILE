@@ -1,5 +1,0 @@
-FROM nginx:alpine
-MAINTAINER Evan Pratten <ewpratten@gmail.com>
-
-COPY . /usr/share/nginx/html
-EXPOSE 80
