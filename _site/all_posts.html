@@ -80,6 +80,68 @@
           
 	  
 	  <header class="major">
+	    <h1>Graphing the relation between wheels and awards for FRC</h1>
+	  </header>
+	  
+	  <p>2019-06-16 11:51:00 -0400</p>
+	  <p><p>I was scrolling through reddit the other day, and came across <a href="https://www.reddit.com/r/FRC/comments/byzv5q/i_know_what_im_doing/">this great post</a> by u/<a href="https://www.reddit.com/user/MasterQuacks/">MasterQuacks</a>.</p>
+
+<p><img src="/assets/images/w2ainspo.jpg" alt="My insporation" /></p>
+
+<p>I thought to myself “ha. Thats funny”, and moved on. But that thought had stuck with me.</p>
+
+<p>So here I am, bored on a sunday afternoon, staring at the matplotlib documentation.</p>
+
+<h2 id="my-creation">My creation</h2>
+<p>In only a few lines of python, I have a program that will (badly) graph the number of awards per wheel for any team, or set of teams.</p>
+
+<p>As always, feel free to tinker with the code. This one is not published anywhere, so if you want to share it, I would appreciate a mention.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="k">class</span> <span class="nc">Team</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">wheels</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wheels</span> <span class="o">=</span> <span class="n">wheels</span> <span class="o">*</span> <span class="mi">2</span>
+
+<span class="c1">### CONFIG ###
+</span>
+<span class="n">teams</span> <span class="o">=</span> <span class="p">[</span><span class="n">Team</span><span class="p">(</span><span class="mi">5024</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">254</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">1114</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">5406</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">2056</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">2019</span>
+
+<span class="c1">##############
+</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">team</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">teams</span><span class="p">):</span>
+    <span class="n">award_data</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"https://www.thebluealliance.com/api/v3/team/frc"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span><span class="p">)</span> <span class="o">+</span> <span class="s">"/awards/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">),</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s">"X-TBA-Auth-Key"</span><span class="p">:</span> <span class="s">"mz0VWTNtXTDV8NNOz3dYg9fHOZw8UYek270gynLQ4v9veaaUJEPvJFCZRmte7AUN"</span><span class="p">})</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="n">awards_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">award_data</span><span class="p">)</span>
+
+    <span class="n">team</span><span class="o">.</span><span class="n">w2a</span> <span class="o">=</span> <span class="n">awards_count</span> <span class="o">/</span> <span class="n">team</span><span class="o">.</span><span class="n">wheels</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span><span class="p">,</span> <span class="n">team</span><span class="o">.</span><span class="n">w2a</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">team</span><span class="o">.</span><span class="n">w2a</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span><span class="p">))</span>
+
+<span class="c1"># Plot
+</span><span class="n">x_lables</span> <span class="o">=</span> <span class="p">[</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span> <span class="k">for</span> <span class="n">team</span> <span class="ow">in</span> <span class="n">teams</span><span class="p">]</span>
+<span class="c1"># plt.set_xticklabels(x_lables)
+</span>
+<span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">xkcd</span><span class="p">():</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Awards per wheel'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<h2 id="the-result">The result</h2>
+<p>Here is the resulting image. From left, to right: 5024, 254, 2224, 5406, 2056</p>
+
+<p><img src="/assets/images/w2a.png" alt="Thr result" /></p>
+</p>
+	  
+          
+	  
+	  <header class="major">
 	    <h1>GitHub's CSS is boring. So I refreshed the design</h1>
 	  </header>
 	  
