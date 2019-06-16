@@ -2,9 +2,9 @@
 title: Evan Pratten
 subtitle: retrylife
 email: ewpratten@gmail.com
-description: Computer wizard, student, @frc5024 programming team lead, and radio enthusiast.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: https://retrylife.ca # the base hostname & protocol for your site
+description: Computer wizard, student, <a href="https://github.com/frc5024">@frc5024</a> programming team lead, and radio enthusiast.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: https://retrylife.ca
 author:
 street_address: 
 city:
