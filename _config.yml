@@ -13,6 +13,9 @@ zip_code:
 country: 
 phone:
 
+# Google analytics
+analytic_track: UA-74118570-2
+
 # homepage tiles
 tiles-source: posts # accepts "posts" or "pages"
 tiles-count: 6
