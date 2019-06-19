@@ -14,5 +14,5 @@ https://lukesmith.xyz/rss.xml
 https://daniellockyer.com/feed.xml
 http://www.windytan.com/rss.xml
 http://psy-lob-saw.blogspot.com/rss.xml
-https://retrylife.ca/rss.xml
+https://retrylife.ca/feed.xml
 ```
