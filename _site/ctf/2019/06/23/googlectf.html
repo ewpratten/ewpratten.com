@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Evan Pratten</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header" >
+        <a href="http://localhost:4000//" class="logo"><strong>Evan Pratten</strong> <span>retrylife</span></a>
+        <nav>
+            <!-- <a href="#menu">Menu</a> -->
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <!-- <nav id="menu">
+	<ul class="links">
+        
+		    
+		
+		    
+		
+		    
+		
+		    
+		        <li><a href="http://localhost:4000//">Home</a></li>
+	    	
+		
+		    
+		
+		    
+		
+		
+		    
+		
+		    
+		
+		    
+		        <li><a href="http://localhost:4000/all_posts.html">All posts</a></li>
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+	</ul>
+	<ul class="actions vertical">
+		<li><a href="#" class="button special fit">Get Started</a></li>
+		<li><a href="#" class="button fit">Log In</a></li>
+	</ul>
+</nav> --> 
+    
+    
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>I gave Google's CTF a short try and learned a thing or two</h1>
+		</header>
+		
+		<p><p>Honestly, I completely forgot that this was the weekend of Google’s online <a href="https://g.co/ctf">CTF Qualifications</a> for 2019 and was late, unprepared, busy, and did not have a team to work with.</p>
+
+<h2 id="what-is-this-event">What is this event?</h2>
+<p>Google hosts a (yearly?) event where hackers from around the world team up and attempt a variety of tasks like: exploiting machines over a network, reversing firmware, pulling passwords from tcp packets, hacking crypto stuff (something I suck at), breaking compilers. and much more. Generally, this event and others like it are really fun.</p>
+
+<h2 id="what-i-learned">What I learned</h2>
+<p>Many questions I worked on involved extracting a key from a binary. I employed two vastly different tools for this job. First, a standard linux tool, <code class="highlighter-rouge">strings</code>. When passed a filename, it will extract and print all human-readable strings it can find to the terminal. The flag is usually in this dump. If not, I use the second tool. <a href="https://www.nsa.gov/resources/everyone/ghidra/">Ghidra</a>, an open-source reverse engineering tool designed by the NSA. I used this tool a fair amount during my quick attempt at GCTF.</p>
+
+<h2 id="will-i-do-this-again">Will I do this again?</h2>
+<p>Yes! The CTF was very fun to try, and I will definitely give it a proper shot next time.</p>
+</p>
+	</div>
+</section>
+
+</div>
+
+    <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <ul class="icons">
+            
+            <li><a href="https://twitter.com/ewpratten" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                  
+            <li><a href="https://gitlab.com/u/ewpratten" class="icon alt fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
+             
+            <li><a href="https://github.com/ewpratten" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+              
+
+            <li><a href="/feed.xml" class="icon alt fa-rss" target="_blank"><span class="label">RSS</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; Evan Pratten retrylife</li>
+            <li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+
+        </ul>
+    </div>
+</footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="http://localhost:4000/assets/js/jquery.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.scrolly.min.js"></script>
+<script src="http://localhost:4000/assets/js/jquery.scrollex.min.js"></script>
+<script src="http://localhost:4000/assets/js/skel.min.js"></script>
+<script src="http://localhost:4000/assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="http://localhost:4000/assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="http://localhost:4000/assets/js/main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74118570-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-74118570-2');
+</script>
+
+</body>
+
+</html>
