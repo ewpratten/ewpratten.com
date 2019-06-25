@@ -18,5 +18,5 @@ We, as a team are looking to bring our programming and robots to the next level 
 It's time for a change, but what do we change to?
 
 ## Part 2
-We are currently doing our evaluation of new programming languages, and an update will be posted to this blog in the near future.
+The followup can be found [HERE](/frc/2019/06/24/LanguageHunt2.html).
 

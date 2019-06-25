@@ -18,15 +18,15 @@
 
       <!-- One -->
       <section id="one">
-	<div class="inner">
+	<div class="inner" style="text-align: center">
           {% for post in site.posts %}
               {% if post.title != 404 %}
-              <header class="major">
-                <h1><a href="{{ post.url | relative_url  }}" class="link">{{ post.title }}</a></h1>
-              </header>
+              <!-- <header class="major"> -->
+                <h1><a href="{{ post.url | relative_url  }}" class="link" title="{{ post.date }}">{{ post.title }}</a></h1>
+              <!-- </header> -->
 
               <!-- Cheaty way to display a description -->
-              <h3>&nbsp;&nbsp;&nbsp;&nbsp;{{ post.description }}</h3>
+              <!-- <p><i>{{ post.date }}</i></p> -->
               <hr>
               <!-- {% if post.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ post.image }}" alt="" /></span>{% endif %}
               {% if post.date %}<p>{{ post.date }}</p>{% endif %}
