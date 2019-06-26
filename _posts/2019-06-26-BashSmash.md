@@ -40,7 +40,7 @@ printf "\150\145\154\154\157" # This will also return hello
 $(printf "\150\145\154\154\157") # This will warn that "hello" is not a valid command
 ```
 
-This has some issues. You may have noticed that letters are required ti spell `printf`, and numbers are needed for the octal escapes. Let's start by fixing the letters problem.
+This has some issues. You may have noticed that letters are required to spell `printf`, and numbers are needed for the octal escapes. Let's start by fixing the letters problem.
 
 Bash allows wildcards. You may have run something like `cp ./foo/* ./bar` before. This uses the wildcard `*`. The `*` wildcard will be auto-evaluated to expand into a list of all files in it's place.
 ```bash
@@ -119,7 +119,7 @@ __() {/???/??n/???n?f ${#}); $(/???/??n/???n?f )
 __() {/???/???/???n?f ${#};}; $(/???/???/???n?f $(/???/???/???n?f "\\\\`__ "" ``__ "" "" "" "" ``__ "" "" "" "" "" `";/???/???/???n?f "\\\\`__ "" ``__ "" "" "" "" ``__ "" "" "" `";/???/???/???n?f "\\\\`__ "" ``__ "" "" "" "" "" ``__ `";/???/???/???n?f "\\\\`__ "" ``__ "" "" "" "" "" ``__ "" "" "" "" "" "" "" `";/???/???/???n?f "\\\\`__ "" "" "" "" ``__ `";/???/???/???n?f "\\\\`__ "" ``__ "" "" "" "" "" ``__ `";/???/???/???n?f "\\\\`__ "" ``__ "" "" "" "" ``__ "" "" "" "" "" `";/???/???/???n?f "\\\\`__ "" ``__ "" "" "" "" "" ``__ "" "" "" "" `";/???/???/???n?f "\\\\`__ "" ``__ "" "" "" "" "" ``__ "" "" "" "" `";/???/???/???n?f "\\\\`__ "" ``__ "" "" "" "" "" ``__ "" "" "" "" "" "" "" `";););
 ```
 
-Thats it!
+Thats it! You do not actually have to worry about this, because BashSmash does it all for you automatically.
 
 ## How do I use the script?
 To use BashSmash, simply make sure both `python3.7` and `python3-pip` are installed on your computer, then run:
