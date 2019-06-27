@@ -1,4 +1,147 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-26T22:13:34-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://github.com/frc5024&quot;&gt;@frc5024&lt;/a&gt; programming team lead, and radio enthusiast.</subtitle><entry><title type="html">BashSmash</title><link href="http://localhost:4000/random/2019/06/26/BashSmash.html" rel="alternate" type="text/html" title="BashSmash" /><published>2019-06-26T11:48:00-04:00</published><updated>2019-06-26T11:48:00-04:00</updated><id>http://localhost:4000/random/2019/06/26/BashSmash</id><content type="html" xml:base="http://localhost:4000/random/2019/06/26/BashSmash.html">&lt;p&gt;I was watching this great &lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=2ahUKEwiOhNze_4fjAhUiB50JHR12D8AQwqsBMAB6BAgJEAQ&amp;amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6D1LnMj0Yt0&amp;amp;usg=AOvVaw2nOgft0SoPZujc9js9Vxhx&quot;&gt;Liveoverflow video&lt;/a&gt; yesterday, and really liked the idea of building escape sequences with strings. So, I built a new tool, &lt;a href=&quot;https://pypi.org/project/bashsmash/&quot;&gt;BashSmash&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-27T17:46:56-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://github.com/frc5024&quot;&gt;@frc5024&lt;/a&gt; programming team lead, and radio enthusiast.</subtitle><entry><title type="html">I had some fun with a router</title><link href="http://localhost:4000/random/2019/06/27/PWNlink.html" rel="alternate" type="text/html" title="I had some fun with a router" /><published>2019-06-27T13:16:00-04:00</published><updated>2019-06-27T13:16:00-04:00</updated><id>http://localhost:4000/random/2019/06/27/PWNlink</id><content type="html" xml:base="http://localhost:4000/random/2019/06/27/PWNlink.html">&lt;p&gt;I was playing around with some D-link routers today and remembered an &lt;a href=&quot;https://www.exploit-db.com/exploits/33520&quot;&gt;ExploitDB Entry&lt;/a&gt; I read a while ago. Many D-link routers have a great feature that allows remote management and configuration queries. Interestingly, this cannot be disabled, and one of the pages contains a cleartext version of the admin password (yay!).&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-get-yourself-an-admin-password&quot;&gt;How to get yourself an admin password&lt;/h2&gt;
+&lt;p&gt;On any supported router, make an HTTP request to &lt;code class=&quot;highlighter-rouge&quot;&gt;http://your.router.ip.addr/tools_admin.asp/&lt;/code&gt;. This will return a pretty large XML file containing information about your router’s hardware and configuration.&lt;/p&gt;
+
+&lt;p&gt;Notice the fact that you did not have to log in. This is due to the fact that this file seems to be used by a remote management service of some sort.&lt;/p&gt;
+
+&lt;p&gt;The important thing to note here is that, when parsed with the regex pattern: &lt;code class=&quot;highlighter-rouge&quot;&gt;name=&quot;user_password_tmp&quot; value=&quot;(.*)&quot;&amp;gt;&lt;/code&gt;, you get a single string. This string is the admin password of the device.&lt;/p&gt;
+
+&lt;h2 id=&quot;supported-routers&quot;&gt;Supported routers&lt;/h2&gt;
+&lt;p&gt;This is supported by many D-link routers. The ones I know about are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;DIR-835&lt;/li&gt;
+  &lt;li&gt;DIR-855L&lt;/li&gt;
+  &lt;li&gt;DGL-5500&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some routers have this XML file, but it is restricted… By a user without a password. These are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;DHP-1565&lt;/li&gt;
+  &lt;li&gt;DIR-652&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pwnlink&quot;&gt;PWNlink&lt;/h2&gt;
+&lt;p&gt;Like everything I play with, I made a script to do this all for me (and spent a large amount of time adding colours to the text).&lt;/p&gt;
+
+&lt;p&gt;My script is called PWNlink (PWN + D-link), It automatically finds a router on your network by looking for a specific DNS entry created by many D-link routers, then checking your gateway. Next, PWNlink reads you router’s &lt;code class=&quot;highlighter-rouge&quot;&gt;hnap1&lt;/code&gt; config to find it’s model number. If supported, the script will read and parse the appropriate configs to give you the admin credentials for your router.&lt;/p&gt;
+
+&lt;p&gt;PWNlink can be installed on any *nix computer that has both &lt;code class=&quot;highlighter-rouge&quot;&gt;python3.7&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;python3-pip&lt;/code&gt; installed. To install PWNlink, run:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip3 install pwnlink
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run the script without any arguments for automatic detection, or pass any IP address to use manual detection.&lt;/p&gt;
+
+&lt;h2 id=&quot;disclamier-thingy&quot;&gt;Disclamier thingy&lt;/h2&gt;
+&lt;p&gt;I don’t see much point to these, but I should probably put one anyways.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t be dumb with this script.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I have only used it on my own (or 5024’s) routers, and did not create PWNlink with any malicious intent.&lt;/p&gt;</content><author><name></name></author><summary type="html">I was playing around with some D-link routers today and remembered an ExploitDB Entry I read a while ago. Many D-link routers have a great feature that allows remote management and configuration queries. Interestingly, this cannot be disabled, and one of the pages contains a cleartext version of the admin password (yay!).</summary></entry><entry><title type="html">Hunting snakes with a shotgun</title><link href="http://localhost:4000/random/2019/06/27/Python.html" rel="alternate" type="text/html" title="Hunting snakes with a shotgun" /><published>2019-06-27T03:00:00-04:00</published><updated>2019-06-27T03:00:00-04:00</updated><id>http://localhost:4000/random/2019/06/27/Python</id><content type="html" xml:base="http://localhost:4000/random/2019/06/27/Python.html">&lt;p&gt;A rather large number of people know me as “the guy who does weird things with python”. I would object to this title, but it is quite accurate. So, here are some of the things I like playing with in python. None of these are actually breaking the language, just little known facts and syntax. At some point I will share about actually breaking the language. For now, enjoy the weird things I have found over the past 6 years.&lt;/p&gt;
+
+&lt;h2 id=&quot;type-hints&quot;&gt;Type hints&lt;/h2&gt;
+&lt;p&gt;A little known feature of python is called “type hinting” (PEP 484). This is actually quite common to see in standard libraries, and has it’s own special syntax:&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Here is a regular function
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;meep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# This function has no real reason to exsist, and is lacking any sort of documentation.
+# Let's add a docstring to explain what it does
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;meep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; This function returns the result of a times b squared &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Ok. The docstring explains the function, but is not too helpful 
+# what are a and b? what does this return? 
+# For all we know, a could actually be a string (in which case, this function would return a string)
+# Let's fix that up with a type hint
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;meep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; This function returns the result of a times b squared &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Thanks to the :int (called a type hint in case you didn't notice that yet), we now know that this function expects two ints.
+# Now, to finish this up with a secondary type hint to specify the return type
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;meep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; This function returns the result of a times b squared &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# There. Now we can clearly see that this function takes too ints, and returns one int. 
+# If only this was a requirement in the language. So many headaches could be solved.
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, keep in mind that this is called a type &lt;em&gt;hint&lt;/em&gt;. The python compiler (yes.. Give me a second for that one) does not actually care if you obey the hint or not. Feel free to send incorrect data into a hinted function and see what you can break. Critical functions should both hint and check the data types being provided.&lt;/p&gt;
+
+&lt;h2 id=&quot;type-declarations&quot;&gt;Type declarations&lt;/h2&gt;
+&lt;p&gt;Just like type hints for functions, python has hints for variables too.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# A regular variable. Must be declared with an initial value
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# my_state is None, as it has not been set, but needs to exist.
+# Let's assume that my_state is to be a state:
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Finally, its time to set the state to something useful
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;my_state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Ok.. I hate this. Let's start by using type declarations first
+# Any variable can be un-initialized and just have a type. Like so:
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;State&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# This works for anything
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_alive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Now, with this new knowledge, let's rewrite State
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# And initialize my_state with slightly different syntax
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I have not found much use for this yet. Hopefully there is something cool to use it for.&lt;/p&gt;
+
+&lt;h2 id=&quot;one-line-functions&quot;&gt;One-line functions&lt;/h2&gt;
+&lt;p&gt;This is more common knowlage. A function can be declared in one line&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Here is an adder function
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;adder1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Here is a one-line adder function
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adder2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# State from above can be compacted further:
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;toggle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ternary-operations&quot;&gt;Ternary operations&lt;/h2&gt;
+&lt;p&gt;On the trend of one-line code, We have the one-line if/else, also known as a Ternary in more sensible languages.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Here is an if/else
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The world has ended&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;All is good&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Here is a smaller if/else
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The world has ended&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;All is good&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;compiled-python&quot;&gt;Compiled python&lt;/h2&gt;
+&lt;p&gt;This one is interesting. Python, like Java, is compiled into bytecode. So yes, it technically is a compiled language. To see said bytecode, take a look at any &lt;code class=&quot;highlighter-rouge&quot;&gt;.pyc&lt;/code&gt; file sitting in your &lt;code class=&quot;highlighter-rouge&quot;&gt;__pycache__&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;blog-formatting-experiments&quot;&gt;Blog formatting experiments&lt;/h2&gt;
+&lt;p&gt;I am still playing with post formats, and various types of content. This is more random than I usually prefer. Let me know your thoughts on the social media platform of your choosing.&lt;/p&gt;</content><author><name></name></author><summary type="html">A rather large number of people know me as “the guy who does weird things with python”. I would object to this title, but it is quite accurate. So, here are some of the things I like playing with in python. None of these are actually breaking the language, just little known facts and syntax. At some point I will share about actually breaking the language. For now, enjoy the weird things I have found over the past 6 years.</summary></entry><entry><title type="html">BashSmash</title><link href="http://localhost:4000/random/2019/06/26/BashSmash.html" rel="alternate" type="text/html" title="BashSmash" /><published>2019-06-26T11:48:00-04:00</published><updated>2019-06-26T11:48:00-04:00</updated><id>http://localhost:4000/random/2019/06/26/BashSmash</id><content type="html" xml:base="http://localhost:4000/random/2019/06/26/BashSmash.html">&lt;p&gt;I was watching this great &lt;a href=&quot;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=2ahUKEwiOhNze_4fjAhUiB50JHR12D8AQwqsBMAB6BAgJEAQ&amp;amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6D1LnMj0Yt0&amp;amp;usg=AOvVaw2nOgft0SoPZujc9js9Vxhx&quot;&gt;Liveoverflow video&lt;/a&gt; yesterday, and really liked the idea of building escape sequences with strings. So, I built a new tool, &lt;a href=&quot;https://pypi.org/project/bashsmash/&quot;&gt;BashSmash&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-goal&quot;&gt;The goal&lt;/h2&gt;
 &lt;p&gt;The goal of BashSmash is very similar to that described in Liveoverflow’s video. Do anything in bash without using any letters or numbers except &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;f&lt;/code&gt; (he used &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;f&lt;/code&gt;). This can both bypass shell injection filters, and generally mess with people.&lt;/p&gt;
@@ -295,44 +438,4 @@ Your browser does not support audio players
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;use-it-yourself&quot;&gt;Use it yourself&lt;/h2&gt;
-&lt;p&gt;I put this theme on userstyles.org. You can download and install it by going to &lt;a href=&quot;https://userstyles.org/styles/172679/ewpratten-s-githubtheme&quot;&gt;my userstyles page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">I have been using GitHub since 2017, and have been getting tired of GitHub’s theme. I didn’t need a huge change, just a small refresh. So, to solve this, I whipped out Stylus and made a nice little CSS file for it.</summary></entry><entry><title type="html">Building a safe and easy system for sending computer vision data from a raspberry pi to a roborio</title><link href="http://localhost:4000/frc/2019/05/27/Building-Safe-Vision-Comms.html" rel="alternate" type="text/html" title="Building a safe and easy system for sending computer vision data from a raspberry pi to a roborio" /><published>2019-05-27T05:22:00-04:00</published><updated>2019-05-27T05:22:00-04:00</updated><id>http://localhost:4000/frc/2019/05/27/Building-Safe-Vision-Comms</id><content type="html" xml:base="http://localhost:4000/frc/2019/05/27/Building-Safe-Vision-Comms.html">&lt;p&gt;Computer vision on an FRC robot has some problems.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;RoboRIO is not powerfull enough&lt;/li&gt;
-  &lt;li&gt;NetworkTables is not fast enough&lt;/li&gt;
-  &lt;li&gt;A TCP connection is great until you lose connection&lt;/li&gt;
-  &lt;li&gt;mDNS discovery is not reliable on the field&lt;/li&gt;
-  &lt;li&gt;UDP can skip frames&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;needs&quot;&gt;Needs&lt;/h2&gt;
-&lt;p&gt;These are the things I need to have.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Send data from any device&lt;/li&gt;
-  &lt;li&gt;Recive data on RoboRIO at any time&lt;/li&gt;
-  &lt;li&gt;Data rate faster than period time&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;wants&quot;&gt;Wants&lt;/h2&gt;
-&lt;p&gt;These are the things I would like to have.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Easy discovery&lt;/li&gt;
-  &lt;li&gt;Threaded&lt;/li&gt;
-  &lt;li&gt;Simple interface for new programmers&lt;/li&gt;
-  &lt;li&gt;Fallback in case of UDP issues&lt;/li&gt;
-  &lt;li&gt;FMS network firewall compliant&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I am currently working on a protocol for solving this problem, nad will post an update here once it has been tested. Feel free to let me know your thoughts and ideas.&lt;/p&gt;</content><author><name></name></author><summary type="html">Computer vision on an FRC robot has some problems. RoboRIO is not powerfull enough NetworkTables is not fast enough A TCP connection is great until you lose connection mDNS discovery is not reliable on the field UDP can skip frames</summary></entry><entry><title type="html">The language hunt</title><link href="http://localhost:4000/frc/2019/04/30/FRC-Languages.html" rel="alternate" type="text/html" title="The language hunt" /><published>2019-04-30T14:32:00-04:00</published><updated>2019-04-30T14:32:00-04:00</updated><id>http://localhost:4000/frc/2019/04/30/FRC-Languages</id><content type="html" xml:base="http://localhost:4000/frc/2019/04/30/FRC-Languages.html">&lt;p&gt;Our programming team is looking to switch languages in the 2020 season. Here is the what, why, and how.&lt;/p&gt;
-
-&lt;h2 id=&quot;our-history&quot;&gt;Our history&lt;/h2&gt;
-&lt;p&gt;We started out as a java team back in 2014 because java was (and still is) the language being taught in our programming classes. Honestly, our code sucked, as many rookie team’s do. There where no fancy features, or sensor-assisted autonomous. Direct input into talons was our way to roll.&lt;/p&gt;
-
-&lt;p&gt;A few years later, we had a change in team organization and switched to C++. Up until the 2019 / 2020 season, this was our language and we where getting pretty good at using it.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-problem&quot;&gt;The Problem&lt;/h2&gt;
-&lt;p&gt;We, as a team are looking to bring our programming and robots to the next level in 2020. Because of this, we ran into a problem. While C++ is an amazing language for embedded and robotics programming, some of it’s “features” where starting to act as a bottleneck to our design. Less time was being spent on polishing our new vision system or autonomous climb, and more on that crazy linker error that came out of nowhere.&lt;/p&gt;
-
-&lt;p&gt;It’s time for a change, but what do we change to?&lt;/p&gt;
-
-&lt;h2 id=&quot;part-2&quot;&gt;Part 2&lt;/h2&gt;
-&lt;p&gt;The followup can be found &lt;a href=&quot;/frc/2019/06/24/LanguageHunt2.html&quot;&gt;HERE&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Our programming team is looking to switch languages in the 2020 season. Here is the what, why, and how.</summary></entry></feed>
+&lt;p&gt;I put this theme on userstyles.org. You can download and install it by going to &lt;a href=&quot;https://userstyles.org/styles/172679/ewpratten-s-githubtheme&quot;&gt;my userstyles page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">I have been using GitHub since 2017, and have been getting tired of GitHub’s theme. I didn’t need a huge change, just a small refresh. So, to solve this, I whipped out Stylus and made a nice little CSS file for it.</summary></entry></feed>

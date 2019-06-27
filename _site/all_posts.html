@@ -82,6 +82,177 @@
           
               
               <!-- <header class="major"> -->
+                <h1><a href="/random/2019/06/27/PWNlink.html" class="link" title="2019-06-27 13:16:00 -0400">I had some fun with a router</a></h1>
+              <!-- </header> -->
+
+              <!-- Cheaty way to display a description -->
+              <!-- <p><i>2019-06-27 13:16:00 -0400</i></p> -->
+              <hr>
+              <!-- 
+              <p>2019-06-27 13:16:00 -0400</p>
+              <p><p>I was playing around with some D-link routers today and remembered an <a href="https://www.exploit-db.com/exploits/33520">ExploitDB Entry</a> I read a while ago. Many D-link routers have a great feature that allows remote management and configuration queries. Interestingly, this cannot be disabled, and one of the pages contains a cleartext version of the admin password (yay!).</p>
+
+<h2 id="how-to-get-yourself-an-admin-password">How to get yourself an admin password</h2>
+<p>On any supported router, make an HTTP request to <code class="highlighter-rouge">http://your.router.ip.addr/tools_admin.asp/</code>. This will return a pretty large XML file containing information about your router’s hardware and configuration.</p>
+
+<p>Notice the fact that you did not have to log in. This is due to the fact that this file seems to be used by a remote management service of some sort.</p>
+
+<p>The important thing to note here is that, when parsed with the regex pattern: <code class="highlighter-rouge">name="user_password_tmp" value="(.*)"&gt;</code>, you get a single string. This string is the admin password of the device.</p>
+
+<h2 id="supported-routers">Supported routers</h2>
+<p>This is supported by many D-link routers. The ones I know about are:</p>
+<ul>
+  <li>DIR-835</li>
+  <li>DIR-855L</li>
+  <li>DGL-5500</li>
+</ul>
+
+<p>Some routers have this XML file, but it is restricted… By a user without a password. These are:</p>
+<ul>
+  <li>DHP-1565</li>
+  <li>DIR-652</li>
+</ul>
+
+<h2 id="pwnlink">PWNlink</h2>
+<p>Like everything I play with, I made a script to do this all for me (and spent a large amount of time adding colours to the text).</p>
+
+<p>My script is called PWNlink (PWN + D-link), It automatically finds a router on your network by looking for a specific DNS entry created by many D-link routers, then checking your gateway. Next, PWNlink reads you router’s <code class="highlighter-rouge">hnap1</code> config to find it’s model number. If supported, the script will read and parse the appropriate configs to give you the admin credentials for your router.</p>
+
+<p>PWNlink can be installed on any *nix computer that has both <code class="highlighter-rouge">python3.7</code> and <code class="highlighter-rouge">python3-pip</code> installed. To install PWNlink, run:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install pwnlink
+</code></pre></div></div>
+
+<p>Run the script without any arguments for automatic detection, or pass any IP address to use manual detection.</p>
+
+<h2 id="disclamier-thingy">Disclamier thingy</h2>
+<p>I don’t see much point to these, but I should probably put one anyways.</p>
+
+<p><strong>Don’t be dumb with this script.</strong></p>
+
+<p>I have only used it on my own (or 5024’s) routers, and did not create PWNlink with any malicious intent.</p>
+</p> -->
+              
+          
+              
+              <!-- <header class="major"> -->
+                <h1><a href="/random/2019/06/27/Python.html" class="link" title="2019-06-27 03:00:00 -0400">Hunting snakes with a shotgun</a></h1>
+              <!-- </header> -->
+
+              <!-- Cheaty way to display a description -->
+              <!-- <p><i>2019-06-27 03:00:00 -0400</i></p> -->
+              <hr>
+              <!-- 
+              <p>2019-06-27 03:00:00 -0400</p>
+              <p><p>A rather large number of people know me as “the guy who does weird things with python”. I would object to this title, but it is quite accurate. So, here are some of the things I like playing with in python. None of these are actually breaking the language, just little known facts and syntax. At some point I will share about actually breaking the language. For now, enjoy the weird things I have found over the past 6 years.</p>
+
+<h2 id="type-hints">Type hints</h2>
+<p>A little known feature of python is called “type hinting” (PEP 484). This is actually quite common to see in standard libraries, and has it’s own special syntax:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Here is a regular function
+</span><span class="k">def</span> <span class="nf">meep</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span>
+
+<span class="c1"># This function has no real reason to exsist, and is lacking any sort of documentation.
+# Let's add a docstring to explain what it does
+</span>
+<span class="k">def</span> <span class="nf">meep</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="s">""" This function returns the result of a times b squared """</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span>
+
+<span class="c1"># Ok. The docstring explains the function, but is not too helpful 
+# what are a and b? what does this return? 
+# For all we know, a could actually be a string (in which case, this function would return a string)
+# Let's fix that up with a type hint
+</span>
+<span class="k">def</span> <span class="nf">meep</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="s">""" This function returns the result of a times b squared """</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span>
+
+<span class="c1"># Thanks to the :int (called a type hint in case you didn't notice that yet), we now know that this function expects two ints.
+# Now, to finish this up with a secondary type hint to specify the return type
+</span><span class="k">def</span> <span class="nf">meep</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="s">""" This function returns the result of a times b squared """</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span>
+
+<span class="c1"># There. Now we can clearly see that this function takes too ints, and returns one int. 
+# If only this was a requirement in the language. So many headaches could be solved.
+</span></code></pre></div></div>
+
+<p>Now, keep in mind that this is called a type <em>hint</em>. The python compiler (yes.. Give me a second for that one) does not actually care if you obey the hint or not. Feel free to send incorrect data into a hinted function and see what you can break. Critical functions should both hint and check the data types being provided.</p>
+
+<h2 id="type-declarations">Type declarations</h2>
+<p>Just like type hints for functions, python has hints for variables too.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># A regular variable. Must be declared with an initial value
+</span><span class="n">my_state</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="c1"># my_state is None, as it has not been set, but needs to exist.
+# Let's assume that my_state is to be a state:
+</span><span class="k">class</span> <span class="nc">State</span><span class="p">:</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">def</span> <span class="nf">toggle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span>
+
+<span class="c1"># Finally, its time to set the state to something useful
+</span><span class="n">my_state</span> <span class="o">=</span> <span class="n">State</span><span class="p">()</span>
+<span class="n">my_state</span><span class="o">.</span><span class="n">toggle</span><span class="p">()</span>
+
+<span class="c1"># Ok.. I hate this. Let's start by using type declarations first
+# Any variable can be un-initialized and just have a type. Like so:
+</span><span class="n">my_state</span><span class="p">:</span> <span class="n">State</span>
+
+<span class="c1"># This works for anything
+</span><span class="n">is_alive</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="n">age</span><span class="p">:</span> <span class="nb">int</span>
+<span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="c1"># Now, with this new knowledge, let's rewrite State
+</span><span class="k">class</span> <span class="nc">State</span><span class="p">:</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="k">def</span> <span class="nf">toggle</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">State</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span>
+
+<span class="c1"># And initialize my_state with slightly different syntax
+</span><span class="n">my_state</span> <span class="o">=</span> <span class="n">State</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>I have not found much use for this yet. Hopefully there is something cool to use it for.</p>
+
+<h2 id="one-line-functions">One-line functions</h2>
+<p>This is more common knowlage. A function can be declared in one line</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Here is an adder function
+</span><span class="k">def</span> <span class="nf">adder1</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="c1"># Here is a one-line adder function
+</span><span class="n">adder2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="p">:</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="c1"># State from above can be compacted further:
+</span><span class="k">class</span> <span class="nc">State</span><span class="p">:</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">toggle</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span>
+</code></pre></div></div>
+
+<h2 id="ternary-operations">Ternary operations</h2>
+<p>On the trend of one-line code, We have the one-line if/else, also known as a Ternary in more sensible languages.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Here is an if/else
+</span><span class="k">if</span> <span class="mi">100</span> <span class="ow">is</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"The world has ended"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"All is good"</span><span class="p">)</span>
+
+<span class="c1"># Here is a smaller if/else
+</span><span class="k">print</span><span class="p">(</span><span class="s">"The world has ended"</span> <span class="k">if</span> <span class="mi">100</span> <span class="ow">is</span> <span class="mi">5</span> <span class="k">else</span> <span class="s">"All is good"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="compiled-python">Compiled python</h2>
+<p>This one is interesting. Python, like Java, is compiled into bytecode. So yes, it technically is a compiled language. To see said bytecode, take a look at any <code class="highlighter-rouge">.pyc</code> file sitting in your <code class="highlighter-rouge">__pycache__</code></p>
+
+<h2 id="blog-formatting-experiments">Blog formatting experiments</h2>
+<p>I am still playing with post formats, and various types of content. This is more random than I usually prefer. Let me know your thoughts on the social media platform of your choosing.</p>
+</p> -->
+              
+          
+              
+              <!-- <header class="major"> -->
                 <h1><a href="/random/2019/06/26/BashSmash.html" class="link" title="2019-06-26 11:48:00 -0400">BashSmash</a></h1>
               <!-- </header> -->
 
