@@ -1,9 +1,12 @@
 ---
 layout: post
 title:  "Using a python script to create devRant posts based on the style and content of another user"
-date:   2018-06-27 18:32:00+0000
-categories: devrant
+description: "if/else ++"
+date:   2018-06-27 18:32:00
+categories: projects
+tag: projects
 ---
+
 
 Ok... The title is slightly wrong. There are actually 2 scripts.. Sorry about that.
 
