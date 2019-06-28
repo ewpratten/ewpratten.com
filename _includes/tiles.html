@@ -66,3 +66,35 @@
   {% endif %}
   {% endfor %}
 </section>
+
+
+<!-- <article>
+<section id="one" class="posts">
+  {% for post in site.posts limit:site.tiles-count %}
+  {% if site.tiles-source == 'posts' %}
+  <article>
+    <header class="">
+      <h3 class="list-post-title"><a href="{{ post.url  | relative_url }}" class="link">{{ post.title }}</a></h3>
+      <p>{{ post.description }}</p>
+    </header>
+  </article>
+  <hr>
+  {% endif %}
+  {% endfor %}
+</section>
+</article> -->
+
+
+<article>
+  <section id="two">
+    <div class="inner">
+        <!-- <header class="major">
+            <h2>Massa libero</h2>
+        </header>
+        <p>{{ content }}</p> -->
+        <ul class="actions">
+            <li><a href="all_posts.html" class="button next">View All</a></li>
+        </ul>
+    </div>
+</section>
+</article>

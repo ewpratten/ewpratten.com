@@ -20,6 +20,8 @@ analytic_track: UA-74118570-2
 tiles-source: posts # accepts "posts" or "pages"
 tiles-count: 10
 
+# permalink: /:title
+
 # social settings
 500px_url:
 facebook_url:
