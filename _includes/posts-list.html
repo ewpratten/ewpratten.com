@@ -1,0 +1,16 @@
+<section id="one">
+    <div class="inner" style="text-align: left">
+        <!-- <h1>All Posts</h1>
+        <hr> -->
+        <ul>
+            {% for post in site.posts %}
+                {% if post.title != 404 %}
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="{{ post.url | relative_url  }}" class="link" title="{{ post.date }}">{{ post.title }}</a></h3></li>
+                    <!-- </header> -->
+      
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>

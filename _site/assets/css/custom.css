@@ -13,3 +13,8 @@
     background-color: #ffffff;
     color:#111111;
 }
+
+.featured-post{
+    border-width:5px ;
+    border-style: solid;
+}

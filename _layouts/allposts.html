@@ -1,45 +1,35 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <!--
-    Forty by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-  -->
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include header.html %} 
-    
-    
+    {% include header.html %}
+
+    <!-- Banner -->
+    <section id="banner" class="major" style="height:40vh">
+        <div class="inner">
+            <header class="major">
+                <h1>{{ page.landing-title }}</h1>
+            </header>
+        </div>
+    </section>
+
     <!-- Main -->
-    <div id="main" class="alt">
-
-      <!-- One -->
-      <section id="one">
-	<div class="inner" style="text-align: center">
-          {% for post in site.posts %}
-              {% if post.title != 404 %}
-              <!-- <header class="major"> -->
-                <h1><a href="{{ post.url | relative_url  }}" class="link" title="{{ post.date }}">{{ post.title }}</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>{{ post.date }}</i></p> -->
-              <hr>
-              <!-- {% if post.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ post.image }}" alt="" /></span>{% endif %}
-              {% if post.date %}<p>{{ post.date }}</p>{% endif %}
-              <p>{{ post.content }}</p> -->
-              {% endif %}
-          {% endfor %}
-	</div>
-      </section>
+    <div id="main">
+        
+        {% include posts-list.html %}
 
     </div>
 
     {% include footer.html %}
 
-  </body>
+</body>
 
 </html>

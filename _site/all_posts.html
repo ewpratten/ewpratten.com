@@ -1,12 +1,12 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <!--
-    Forty by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-  -->
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 
-  <head>
+<head>
     <title>Evan Pratten</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -20,14 +20,14 @@
     <link rel="stylesheet" href="/assets/css/vs.css" />
 </head>
 
-  <body>
+<body>
 
     <!-- Wrapper -->
 <div id="wrapper">
 
     <!-- Header -->
     <header id="header" >
-        <a href="http://localhost:4000//" class="logo"><strong>Evan Pratten</strong> <span>retrylife</span></a>
+        <a href="http://0.0.0.0:4000//" class="logo"><strong>Evan Pratten</strong> <span>retrylife</span></a>
         <nav>
             <!-- <a href="#menu">Menu</a> -->
         </nav>
@@ -44,7 +44,7 @@
 		    
 		
 		    
-		        <li><a href="http://localhost:4000//">Home</a></li>
+		        <li><a href="http://0.0.0.0:4000//">Home</a></li>
 	    	
 		
 		    
@@ -57,7 +57,7 @@
 		    
 		
 		    
-		        <li><a href="http://localhost:4000/all_posts.html">All posts</a></li>
+		        <li><a href="http://0.0.0.0:4000/all_posts.html">All posts</a></li>
 		    
 		
 		    
@@ -71,731 +71,120 @@
 		<li><a href="#" class="button special fit">Get Started</a></li>
 		<li><a href="#" class="button fit">Log In</a></li>
 	</ul>
-</nav> --> 
-    
-    
+</nav> -->
+
+    <!-- Banner -->
+    <section id="banner" class="major" style="height:40vh">
+        <div class="inner">
+            <header class="major">
+                <h1>All posts</h1>
+            </header>
+        </div>
+    </section>
+
     <!-- Main -->
-    <div id="main" class="alt">
-
-      <!-- One -->
-      <section id="one">
-	<div class="inner" style="text-align: center">
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/projects/2019/06/27/PWNlink.html" class="link" title="2019-06-27 13:16:00 -0400">I had some fun with a router</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-06-27 13:16:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-06-27 13:16:00 -0400</p>
-              <p><p>I was playing around with some D-link routers today and remembered an <a href="https://www.exploit-db.com/exploits/33520">ExploitDB Entry</a> I read a while ago. Many D-link routers have a great feature that allows remote management and configuration queries. Interestingly, this cannot be disabled, and one of the pages contains a cleartext version of the admin password (yay!).</p>
-
-<h2 id="how-to-get-yourself-an-admin-password">How to get yourself an admin password</h2>
-<p>On any supported router, make an HTTP request to <code class="highlighter-rouge">http://your.router.ip.addr/tools_admin.asp/</code>. This will return a pretty large XML file containing information about your router’s hardware and configuration.</p>
-
-<p>Notice the fact that you did not have to log in. This is due to the fact that this file seems to be used by a remote management service of some sort.</p>
-
-<p>The important thing to note here is that, when parsed with the regex pattern: <code class="highlighter-rouge">name="user_password_tmp" value="(.*)"&gt;</code>, you get a single string. This string is the admin password of the device.</p>
-
-<h2 id="supported-routers">Supported routers</h2>
-<p>This is supported by many D-link routers. The ones I know about are:</p>
-<ul>
-  <li>DIR-835</li>
-  <li>DIR-855L</li>
-  <li>DGL-5500</li>
-</ul>
-
-<p>Some routers have this XML file, but it is restricted… By a user without a password. These are:</p>
-<ul>
-  <li>DHP-1565</li>
-  <li>DIR-652</li>
-</ul>
-
-<h2 id="pwnlink">PWNlink</h2>
-<p>Like everything I play with, I made a script to do this all for me (and spent a large amount of time adding colours to the text).</p>
-
-<p>My script is called PWNlink (PWN + D-link), It automatically finds a router on your network by looking for a specific DNS entry created by many D-link routers, then checking your gateway. Next, PWNlink reads you router’s <code class="highlighter-rouge">hnap1</code> config to find it’s model number. If supported, the script will read and parse the appropriate configs to give you the admin credentials for your router.</p>
-
-<p>PWNlink can be installed on any *nix computer that has both <code class="highlighter-rouge">python3.7</code> and <code class="highlighter-rouge">python3-pip</code> installed. To install PWNlink, run:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install pwnlink
-</code></pre></div></div>
-
-<p>Run the script without any arguments for automatic detection, or pass any IP address to use manual detection.</p>
-
-<h2 id="disclamier-thingy">Disclamier thingy</h2>
-<p>I don’t see much point to these, but I should probably put one anyways.</p>
-
-<p><strong>Don’t be dumb with this script.</strong></p>
-
-<p>I have only used it on my own (or 5024’s) routers, and did not create PWNlink with any malicious intent.</p>
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/random/2019/06/27/Python.html" class="link" title="2019-06-27 03:00:00 -0400">Hunting snakes with a shotgun</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-06-27 03:00:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-06-27 03:00:00 -0400</p>
-              <p><p>A rather large number of people know me as “the guy who does weird things with python”. I would object to this title, but it is quite accurate. So, here are some of the things I like playing with in python. None of these are actually breaking the language, just little known facts and syntax. At some point I will share about actually breaking the language. For now, enjoy the weird things I have found over the past 6 years.</p>
-
-<h2 id="type-hints">Type hints</h2>
-<p>A little known feature of python is called “type hinting” (PEP 484). This is actually quite common to see in standard libraries, and has it’s own special syntax:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Here is a regular function
-</span><span class="k">def</span> <span class="nf">meep</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span>
-
-<span class="c1"># This function has no real reason to exsist, and is lacking any sort of documentation.
-# Let's add a docstring to explain what it does
-</span>
-<span class="k">def</span> <span class="nf">meep</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="s">""" This function returns the result of a times b squared """</span>
-    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span>
-
-<span class="c1"># Ok. The docstring explains the function, but is not too helpful 
-# what are a and b? what does this return? 
-# For all we know, a could actually be a string (in which case, this function would return a string)
-# Let's fix that up with a type hint
-</span>
-<span class="k">def</span> <span class="nf">meep</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-    <span class="s">""" This function returns the result of a times b squared """</span>
-    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span>
-
-<span class="c1"># Thanks to the :int (called a type hint in case you didn't notice that yet), we now know that this function expects two ints.
-# Now, to finish this up with a secondary type hint to specify the return type
-</span><span class="k">def</span> <span class="nf">meep</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="s">""" This function returns the result of a times b squared """</span>
-    <span class="k">return</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span>
-
-<span class="c1"># There. Now we can clearly see that this function takes too ints, and returns one int. 
-# If only this was a requirement in the language. So many headaches could be solved.
-</span></code></pre></div></div>
-
-<p>Now, keep in mind that this is called a type <em>hint</em>. The python compiler (yes.. Give me a second for that one) does not actually care if you obey the hint or not. Feel free to send incorrect data into a hinted function and see what you can break. Critical functions should both hint and check the data types being provided.</p>
-
-<h2 id="type-declarations">Type declarations</h2>
-<p>Just like type hints for functions, python has hints for variables too.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># A regular variable. Must be declared with an initial value
-</span><span class="n">my_state</span> <span class="o">=</span> <span class="bp">None</span>
-
-<span class="c1"># my_state is None, as it has not been set, but needs to exist.
-# Let's assume that my_state is to be a state:
-</span><span class="k">class</span> <span class="nc">State</span><span class="p">:</span>
-    <span class="n">status</span> <span class="o">=</span> <span class="bp">False</span>
-    <span class="k">def</span> <span class="nf">toggle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span>
-
-<span class="c1"># Finally, its time to set the state to something useful
-</span><span class="n">my_state</span> <span class="o">=</span> <span class="n">State</span><span class="p">()</span>
-<span class="n">my_state</span><span class="o">.</span><span class="n">toggle</span><span class="p">()</span>
-
-<span class="c1"># Ok.. I hate this. Let's start by using type declarations first
-# Any variable can be un-initialized and just have a type. Like so:
-</span><span class="n">my_state</span><span class="p">:</span> <span class="n">State</span>
-
-<span class="c1"># This works for anything
-</span><span class="n">is_alive</span><span class="p">:</span> <span class="nb">bool</span>
-<span class="n">age</span><span class="p">:</span> <span class="nb">int</span>
-<span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-
-<span class="c1"># Now, with this new knowledge, let's rewrite State
-</span><span class="k">class</span> <span class="nc">State</span><span class="p">:</span>
-    <span class="n">status</span><span class="p">:</span> <span class="nb">bool</span>
-    <span class="k">def</span> <span class="nf">toggle</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">State</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span>
-
-<span class="c1"># And initialize my_state with slightly different syntax
-</span><span class="n">my_state</span> <span class="o">=</span> <span class="n">State</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>I have not found much use for this yet. Hopefully there is something cool to use it for.</p>
-
-<h2 id="one-line-functions">One-line functions</h2>
-<p>This is more common knowlage. A function can be declared in one line</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Here is an adder function
-</span><span class="k">def</span> <span class="nf">adder1</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
-
-<span class="c1"># Here is a one-line adder function
-</span><span class="n">adder2</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="p">:</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
-
-<span class="c1"># State from above can be compacted further:
-</span><span class="k">class</span> <span class="nc">State</span><span class="p">:</span>
-    <span class="n">status</span><span class="p">:</span> <span class="nb">bool</span>
-    <span class="n">toggle</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">status</span>
-</code></pre></div></div>
-
-<h2 id="ternary-operations">Ternary operations</h2>
-<p>On the trend of one-line code, We have the one-line if/else, also known as a Ternary in more sensible languages.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Here is an if/else
-</span><span class="k">if</span> <span class="mi">100</span> <span class="ow">is</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"The world has ended"</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"All is good"</span><span class="p">)</span>
-
-<span class="c1"># Here is a smaller if/else
-</span><span class="k">print</span><span class="p">(</span><span class="s">"The world has ended"</span> <span class="k">if</span> <span class="mi">100</span> <span class="ow">is</span> <span class="mi">5</span> <span class="k">else</span> <span class="s">"All is good"</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="compiled-python">Compiled python</h2>
-<p>This one is interesting. Python, like Java, is compiled into bytecode. So yes, it technically is a compiled language. To see said bytecode, take a look at any <code class="highlighter-rouge">.pyc</code> file sitting in your <code class="highlighter-rouge">__pycache__</code></p>
-
-<h2 id="blog-formatting-experiments">Blog formatting experiments</h2>
-<p>I am still playing with post formats, and various types of content. This is more random than I usually prefer. Let me know your thoughts on the social media platform of your choosing.</p>
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/projects/2019/06/26/BashSmash.html" class="link" title="2019-06-26 11:48:00 -0400">BashSmash</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-06-26 11:48:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-06-26 11:48:00 -0400</p>
-              <p><p>I was watching this great <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwiOhNze_4fjAhUiB50JHR12D8AQwqsBMAB6BAgJEAQ&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6D1LnMj0Yt0&amp;usg=AOvVaw2nOgft0SoPZujc9js9Vxhx">Liveoverflow video</a> yesterday, and really liked the idea of building escape sequences with strings. So, I built a new tool, <a href="https://pypi.org/project/bashsmash/">BashSmash</a>.</p>
-
-<h2 id="the-goal">The goal</h2>
-<p>The goal of BashSmash is very similar to that described in Liveoverflow’s video. Do anything in bash without using any letters or numbers except <code class="highlighter-rouge">n</code> and <code class="highlighter-rouge">f</code> (he used <code class="highlighter-rouge">i</code> instead of <code class="highlighter-rouge">f</code>). This can both bypass shell injection filters, and generally mess with people.</p>
-
-<p>Saying “Hey, you should run:”</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>__<span class="o">()</span> <span class="o">{</span>/???/???/???n?f <span class="k">${#}</span><span class="p">;</span><span class="o">}</span><span class="p">;</span> <span class="k">$(</span>/???/???/???n?f <span class="k">$(</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span><span class="k">)</span><span class="p">;</span><span class="k">)</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Instead of:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo rm</span> <span class="nt">-rf</span> <span class="nt">--no-preserve--root</span> /
-</code></pre></div></div>
-
-<p>Can usually get you much farther with your goal of world domination.</p>
-
-<h2 id="how-does-this-work">How does this work?</h2>
-<p>BashSmash abuses bash wildcards, octal escape codes, and a large number of backslashes to obfuscate any valid shell script.</p>
-
-<p>Firstly, it is important to know that <code class="highlighter-rouge">printf</code> will gladly convert any octal to a string, and bash’s eval (<code class="highlighter-rouge">$()</code>) function will gladly run any string as a bash script. (See where this is going?)</p>
-
-<p>Because of these tools, we know that the following is possible:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Printf-ing a string will print the string</span>
-<span class="nb">printf</span> <span class="s2">"hello"</span> <span class="c"># This will return hello</span>
-
-<span class="c"># Printf-ing a sequence of octal escapes will also print a string</span>
-<span class="nb">printf</span> <span class="s2">"</span><span class="se">\1</span><span class="s2">50</span><span class="se">\1</span><span class="s2">45</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">57"</span> <span class="c"># This will also return hello</span>
-
-<span class="c"># Eval-ing a printf of an octal escape sequence will build a string, then run it in bash</span>
-<span class="k">$(</span><span class="nb">printf</span> <span class="s2">"</span><span class="se">\1</span><span class="s2">50</span><span class="se">\1</span><span class="s2">45</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">57"</span><span class="k">)</span> <span class="c"># This will warn that "hello" is not a valid command</span>
-</code></pre></div></div>
-
-<p>This has some issues. You may have noticed that letters are required to spell <code class="highlighter-rouge">printf</code>, and numbers are needed for the octal escapes. Let’s start by fixing the letters problem.</p>
-
-<p>Bash allows wildcards. You may have run something like <code class="highlighter-rouge">cp ./foo/* ./bar</code> before. This uses the wildcard <code class="highlighter-rouge">*</code>. The <code class="highlighter-rouge">*</code> wildcard will be auto-evaluated to expand into a list of all files in it’s place.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Let's assume that ./foo contains the following files:</span>
-<span class="c">#   john.txt</span>
-<span class="c">#   carl.txt</span>
-
-<span class="c"># Running the following:</span>
-<span class="nb">cat</span> ./foo/<span class="k">*</span>
-
-<span class="c"># Will automatically expand to:</span>
-<span class="nb">cat</span> ./foo/john.txt ./foo/carl.txt
-
-<span class="c"># Now, lets assume that ./baz contains a single file:</span>
-<span class="c">#   KillHumans.sh</span>
-
-<span class="c"># Running:</span>
-./baz/<span class="k">*</span>
-
-<span class="c"># Will execute KillHumans.sh</span>
-</code></pre></div></div>
-
-<p>Neat, Right? To take this a step further, you can use the second wildcard, <code class="highlighter-rouge">?</code>, to specify the number of characters you want to look for. Running <code class="highlighter-rouge">./baz/?</code> will not run <code class="highlighter-rouge">KillHumans.sh</code> because <code class="highlighter-rouge">KillHumans.sh</code> is not 1 char long. But <code class="highlighter-rouge">./baz/?????????????</code> will. This is messy, but it works.</p>
-
-<p>Now, back to our problem with <code class="highlighter-rouge">printf</code>. <code class="highlighter-rouge">printf</code> is located in <code class="highlighter-rouge">/usr/bin/printf</code> on all *nix systems. This is handy as, firstly, this can be wildcarded, and secondly, the path contains 2 <code class="highlighter-rouge">n</code>’s and an <code class="highlighter-rouge">f</code> (the two letters we are allowed to use). So, instead of calling <code class="highlighter-rouge">printf</code>, we can call <code class="highlighter-rouge">/???/??n/???n?f</code>.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Now, we can call:</span>
-/???/??n/???n?f <span class="s2">"</span><span class="se">\1</span><span class="s2">50</span><span class="se">\1</span><span class="s2">45</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">57"</span>
-
-<span class="c"># To print "hello". Or:</span>
-<span class="k">$(</span>/???/??n/???n?f <span class="s2">"</span><span class="se">\1</span><span class="s2">50</span><span class="se">\1</span><span class="s2">45</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">57"</span><span class="k">)</span>
-
-<span class="c"># To run "hello" as a program (still gives an error)</span>
-</code></pre></div></div>
-
-<p>Now, our problem with letters is solved, but we are still using numbers.</p>
-
-<p>Bash allows anyone to define functions. These functions can take arguments and call other programs. So, what if we have a function that can take any number of arguments, and return the number of arguments as a number? This will be helpful because an empty argument can be added with <code class="highlighter-rouge">""</code> (not a number or letter), and this will replace the need for numbers in our code. On a side note, bash allows <code class="highlighter-rouge">__</code> as a function name, so that’s cool.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Our function needs to do the following:</span>
-<span class="c">#   - Take any number of arguments</span>
-<span class="c">#   - Turn the number to a string</span>
-<span class="c">#   - Print the string so it can be evaluated back to a number with $()</span>
-
-<span class="c"># First, we start with an empty function, named __ (two underscores)</span>
-__<span class="o">()</span> <span class="o">{}</span><span class="p">;</span>
-
-<span class="c"># Easy. Next, we use a built-in feature of bash to count the number of arguments passed</span>
-__<span class="o">()</span> <span class="o">{</span> <span class="k">${#}</span> <span class="o">}</span><span class="p">;</span>
-
-<span class="c"># With the ${#} feature in bash, giving this function 3 arguments will return a 3</span>
-<span class="c"># Next, we need to print this number to stdout </span>
-<span class="c"># This can be done with printf</span>
-<span class="c"># We still do not want to use any letters or numbers, so we must use our string of wildcards</span>
-/???/??n/???n?f
-
-<span class="c"># So, we just plug this into our function</span>
-__<span class="o">()</span> <span class="o">{</span>/???/??n/???n?f <span class="k">${#}</span><span class="o">}</span><span class="p">;</span>
-
-<span class="c"># Now, calling our function with three arguments</span>
-__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span>
-<span class="c"># Will print:</span>
-3
-</code></pre></div></div>
-
-<p>Let’s put this together. First, we must tell bash that our <code class="highlighter-rouge">__</code> function exists.</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># We do this by starting our new script with: </span>
-__<span class="o">()</span> <span class="o">{</span>/???/??n/???n?f <span class="k">${#}</span><span class="o">}</span><span class="p">;</span>
-
-<span class="c"># Next, an eval to actually run our constructed string. Together it now looks like this:</span>
-__<span class="o">()</span> <span class="o">{</span>/???/??n/???n?f <span class="k">${#}</span><span class="o">)</span><span class="p">;</span> <span class="k">$(</span>/???/??n/???n?f <span class="k">)</span>
-
-<span class="c"># Now, we construct a string using the __ function over and over again. "echo hello" looks like:</span>
-__<span class="o">()</span> <span class="o">{</span>/???/???/???n?f <span class="k">${#}</span><span class="p">;</span><span class="o">}</span><span class="p">;</span> <span class="k">$(</span>/???/???/???n?f <span class="k">$(</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span><span class="k">)</span><span class="p">;</span><span class="k">)</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Thats it! You do not actually have to worry about this, because BashSmash does it all for you automatically.</p>
-
-<h2 id="how-do-i-use-the-script">How do I use the script?</h2>
-<p>To use BashSmash, simply make sure both <code class="highlighter-rouge">python3.7</code> and <code class="highlighter-rouge">python3-pip</code> are installed on your computer, then run:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install bashsmash
-</code></pre></div></div>
-
-<p>For more info, see the <a href="https://pypi.org/project/bashsmash/">PYPI Page</a>.</p>
-
-<h2 id="why-do-you-have-a-desire-to-break-things-with-python">Why do you have a desire to break things with python</h2>
-<p>Because it is fun. Give it a try!</p>
-
-<p>I will have a post here at some point about the weird things I do in my python code and why I do them.</p>
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/frc/2019/06/24/LanguageHunt2.html" class="link" title="2019-06-24 17:36:00 -0400">The language hunt: Part 2</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-06-24 17:36:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-06-24 17:36:00 -0400</p>
-              <p><p>This is a very short post, just to explain the result of <a href="/frc/2019/04/30/FRC-Languages.html">The language Hunt</a>.</p>
-
-<h2 id="our-choice">Our choice</h2>
-<p>For our upcoming 2020 season and for the forseeable future, we have chosen Java as our programming language for direct hardware interfacing, and Python for networking, vision, and other smaller tasks.</p>
-
-<h2 id="what-does-this-mean-for-the-team">What does this mean for the team?</h2>
-<p>Not too much. Aside from learning new syntax, tools, and no longer worrying about linker errors, Java and C++ have no real difference. Most of the reason Java was chosen was based on support instead of functionality. Java is much better supported by FIRST, WPILib, and other vendors. Java is also taught in the school 5024 is based from. For a more detailed explanation of the benefits of each language, take a look at Chief Delphi. There are plenty of posts there explaining the choices of many teams and their reasoning.</p>
-
-<h2 id="side-note">Side note</h2>
-<p>I am experimenting with various post formats (This being a short post). Let me know which you prefer via the social platform of your choice.</p>
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/ctf/2019/06/23/googlectf.html" class="link" title="2019-06-23 18:04:00 -0400">I gave Google's CTF a short try and learned a thing or two</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-06-23 18:04:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-06-23 18:04:00 -0400</p>
-              <p><p>Honestly, I completely forgot that this was the weekend of Google’s online <a href="https://g.co/ctf">CTF Qualifications</a> for 2019 and was late, unprepared, busy, and did not have a team to work with.</p>
-
-<h2 id="what-is-this-event">What is this event?</h2>
-<p>Google hosts a (yearly?) event where hackers from around the world team up and attempt a variety of tasks like: exploiting machines over a network, reversing firmware, pulling passwords from tcp packets, hacking crypto stuff (something I suck at), breaking compilers. and much more. Generally, this event and others like it are really fun.</p>
-
-<h2 id="what-i-learned">What I learned</h2>
-<p>Many questions I worked on involved extracting a key from a binary. I employed two vastly different tools for this job. First, a standard linux tool, <code class="highlighter-rouge">strings</code>. When passed a filename, it will extract and print all human-readable strings it can find to the terminal. The flag is usually in this dump. If not, I use the second tool. <a href="https://www.nsa.gov/resources/everyone/ghidra/">Ghidra</a>, an open-source reverse engineering tool designed by the NSA. I used this tool a fair amount during my quick attempt at GCTF.</p>
-
-<h2 id="will-i-do-this-again">Will I do this again?</h2>
-<p>Yes! The CTF was very fun to try, and I will definitely give it a proper shot next time.</p>
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/frc/2019/06/21/Robot-Experiences.html" class="link" title="2019-06-21 11:14:00 -0400">What I have learned from 2 years of FRC programming</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-06-21 11:14:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-06-21 11:14:00 -0400</p>
-              <p><p>Over the past two years (2018 / 2019), I have been a member of my school’s <a href="https://www.firstinspires.org/robotics/frc">FRC</a> team, <a href="frc5024.github.io">Raider Robotics</a>. Specifically, a programmer.</p>
-
-<h2 id="my-roles">My roles</h2>
-<p>In my first year, I joined the team as a programmer and had a fun time learning about embedded programming and development with hardware. Then, in my second year, I was promoted to programming co-lead along with <a href="https://github.com/slownie">@slownie</a>. I much preferred my second season because I had a better understanding of the technology I was working with, and we got to play with some cool tools throughout the season.</p>
-
-<h2 id="what-i-have-learned">What I have learned</h2>
-<p>Starting with our 2018 season, PowerUP. We learned early on that there is a practical limit to the number of programmers that 5024 can handle. That year, we had too many, and our situation was not helped by the fact that some members preferred scrolling through Instagram over writing code. This issue was almost entirely fixed by the introduction of a mandatory skill exam at the start of the season. Sam and I did not really care about the scores of the exam because, from reading the results, we could see who was actually motivated to join the team. Thanks to the test, we entered the season with seven excited programmers.</p>
-
-<p>During the PowerUP season, I also learned the importance of student involvement. Most of the code from the season was written by mentors with the students just watching on a projecter. After talking with other team members, I learned that none of them through this was a good method of teaching, and many felt powerless. In the 2019 season, I completely reversed this. All students worked together on the codebase, and the mentors worked on other projects and provided input where needed.</p>
-
-<h3 id="version-control">Version Control</h3>
-<p>During the 2018 season, code was shared around by USB. This lead to crazy conflicts, confusion over what was running on the robot, and general frustration during competitions. In 2019, I moved the team over to a <a href="https://github.com">GitHub</a> organization account and sent an email to support to get us unlimited private repos (thanks GitHub!). For the team members that where not comfortable in the terminal, I set them up with <a href="https://www.gitkraken.com/">GitKracken PRO</a> accounts, and they enjoyed using the program. The rest of us stuck with GIT cli, or various plugins for VSCode.</p>
-
-<h3 id="alpha-test">Alpha test</h3>
-<p>I got our team on board with the 2019 toolchain alpha test the week it was released in order to get everyone used to the new tools before the season (and help find bugs for the WPILib team). The new buildsystem, Gradle, worked great and I could even run it on the chromebook I was using for development at the time! To further assist the team, I set up a CI pipeline for automatic testing and code reviews of Pull Requests, and a doxygen + GitHub pages CD pipeline for our new documentation webpage.</p>
-
-<h3 id="webdocs">Webdocs</h3>
-<p>A significant amount of my time was spent answering repetitive questions from the team. I enjoy helping people out, but explaining the same things over and over was starting to frustrate me. This was caused by a lack of documentation or bits of documentation spread over multiple websites. To solve this problem, I started the <a href="https://frc5024.github.io/webdocs/#/">Webdocs Page</a>. This website is designed to house a mix of team-specific notes, guides, low-level documentation, and documentation from all FRC vendors. This site was published after the season, so I will find out how usefull it really is during the 2020 season.</p>
-
-<h3 id="command-base">Command base</h3>
-<p>“Command based programming is great. But…” is probably the best way to describe my suggested changes for 2020.</p>
-
-<p>I have been learning from other teams, and from mentors about better ways to control our robot. During the offseason, I am playing with new ways to write robot code. Here are some of my changes:</p>
-<ul>
-  <li>Use a custom replacement for WPILib’s <a href="https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/command/Subsystem.html">Subsystem</a> that buffers it’s inputs and outputs
-    <ul>
-      <li>This reduces load on our CAN and Ethernet networks</li>
-    </ul>
-  </li>
-  <li>Offload all camera and vision work to a Raspberry PI</li>
-  <li>Every subsystem must push telemetry data to NetworkTables for easy debugging and detailed logs</li>
-  <li>Use a custom logging system that buffers writes to stdout. This reduces network strain</li>
-</ul>
-
-<p>I am working on many other changes over on the <a href="https://github.com/frc5024/MiniBot">MiniBot</a> codebase.</p>
-
-<h2 id="my-plans-for-2020">My plans for 2020</h2>
-<p>I have been re-selected to be the sole lead of the 5024 programming team for 2020. Here are my goals:</p>
-<ul>
-  <li>Switch the team from C++ to Java
-    <ul>
-      <li>Easier for prototyping</li>
-      <li>Better memory management for high-level programmers</li>
-      <li>Better documentation from vendors</li>
-      <li>It is taught in our school’s compsci classes</li>
-    </ul>
-  </li>
-  <li>Remove the skills exam in favour of weekly homework for the first 8 weeks</li>
-  <li>Provide writeups of lessons</li>
-  <li>Have mentors do “guest presentations”</li>
-  <li>Dedicate a day to robot driving lessons</li>
-  <li>Use a custom library with wrappers and tools built by me to provide easy interfaces for new programmers</li>
-</ul>
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/random/2019/06/18/Blogs-I-Read.html" class="link" title="2019-06-18 09:18:00 -0400">Blogs I Read</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-06-18 09:18:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-06-18 09:18:00 -0400</p>
-              <p><p>This is a copy-pastable list of rss feeds I subscribe to:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://www.firstinspires.org/robotics/frc/blog-rss
-https://lukesmith.xyz/rss.xml
-https://daniellockyer.com/feed.xml
-http://www.windytan.com/rss.xml
-http://psy-lob-saw.blogspot.com/rss.xml
-https://retrylife.ca/feed.xml
-</code></pre></div></div>
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/music/2019/06/17/AMM2M1-release.html" class="link" title="2019-06-17 06:20:00 -0400">I made a new song!</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-06-17 06:20:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-06-17 06:20:00 -0400</p>
-              <p><p>I am currently taking a class in school called <a href="https://www.facebook.com/studio225beal/">Music and computers (AMM2M)</a>, where as part of the class, whe get together into bands, and produce a song. After taking a break from music production for over a year, we have released our song for the class (we do two songs, but the second is not finished yet).</p>
-
-<h2 id="my-contribution">My contribution</h2>
-<p>My main contribution to the project was a mix of live drumming, and most of the song’s MIDI work. The song is far from perfect, but pretty good for the time we had to produce it.</p>
-
-<h2 id="just-give-me-the-song">Just give me the song!</h2>
-<p>Ok. Ok. Here is the song:</p>
-
-<audio controls="">
-<source src="/assets/audio/SpamPhoneCalls.mp3" type="audio/mpeg" />
-Your browser does not support audio players
-</audio>
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/frc/2019/06/16/Graphing-w2a.html" class="link" title="2019-06-16 11:51:00 -0400">Graphing the relation between wheels and awards for FRC</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-06-16 11:51:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-06-16 11:51:00 -0400</p>
-              <p><p>I was scrolling through reddit the other day, and came across <a href="https://www.reddit.com/r/FRC/comments/byzv5q/i_know_what_im_doing/">this great post</a> by u/<a href="https://www.reddit.com/user/MasterQuacks/">MasterQuacks</a>.</p>
-
-<p><img src="/assets/images/w2ainspo.jpg" alt="My insporation" /></p>
-
-<p>I thought to myself “ha. Thats funny”, and moved on. But that thought had stuck with me.</p>
-
-<p>So here I am, bored on a sunday afternoon, staring at the matplotlib documentation.</p>
-
-<h2 id="my-creation">My creation</h2>
-<p>In only a few lines of python, I have a program that will (badly) graph the number of awards per wheel for any team, or set of teams.</p>
-
-<p>As always, feel free to tinker with the code. This one is not published anywhere, so if you want to share it, I would appreciate a mention.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-
-<span class="k">class</span> <span class="nc">Team</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">wheels</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">wheels</span> <span class="o">=</span> <span class="n">wheels</span> <span class="o">*</span> <span class="mi">2</span>
-
-<span class="c1">### CONFIG ###
-</span>
-<span class="n">teams</span> <span class="o">=</span> <span class="p">[</span><span class="n">Team</span><span class="p">(</span><span class="mi">5024</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">254</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">1114</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">5406</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">2056</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
-<span class="n">year</span> <span class="o">=</span> <span class="mi">2019</span>
-
-<span class="c1">##############
-</span>
-
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">team</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">teams</span><span class="p">):</span>
-    <span class="n">award_data</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"https://www.thebluealliance.com/api/v3/team/frc"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span><span class="p">)</span> <span class="o">+</span> <span class="s">"/awards/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">),</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s">"X-TBA-Auth-Key"</span><span class="p">:</span> <span class="s">"mz0VWTNtXTDV8NNOz3dYg9fHOZw8UYek270gynLQ4v9veaaUJEPvJFCZRmte7AUN"</span><span class="p">})</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-
-    <span class="n">awards_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">award_data</span><span class="p">)</span>
-
-    <span class="n">team</span><span class="o">.</span><span class="n">w2a</span> <span class="o">=</span> <span class="n">awards_count</span> <span class="o">/</span> <span class="n">team</span><span class="o">.</span><span class="n">wheels</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span><span class="p">,</span> <span class="n">team</span><span class="o">.</span><span class="n">w2a</span><span class="p">)</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">team</span><span class="o">.</span><span class="n">w2a</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span><span class="p">))</span>
-
-<span class="c1"># Plot
-</span><span class="n">x_lables</span> <span class="o">=</span> <span class="p">[</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span> <span class="k">for</span> <span class="n">team</span> <span class="ow">in</span> <span class="n">teams</span><span class="p">]</span>
-<span class="c1"># plt.set_xticklabels(x_lables)
-</span>
-<span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">xkcd</span><span class="p">():</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Awards per wheel'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-</code></pre></div></div>
-
-<h2 id="the-result">The result</h2>
-<p>Here is the resulting image. From left, to right: 5024, 254, 2224, 5406, 2056</p>
-
-<p><img src="/assets/images/w2a.png" alt="Thr result" /></p>
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/projects/2019/06/12/Styiling-GitHub.html" class="link" title="2019-06-12 09:09:00 -0400">GitHub's CSS is boring. So I refreshed the design</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-06-12 09:09:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-06-12 09:09:00 -0400</p>
-              <p><p>I have been using GitHub since 2017, and have been getting tired of GitHub’s theme. I didn’t need a huge change, just a small refresh. So, to solve this, I whipped out <a href="https://addons.mozilla.org/en-CA/firefox/addon/styl-us/">Stylus</a> and made a nice little CSS file for it.</p>
-
-<h2 id="the-css">The CSS</h2>
-<p>Here is the CSS. Feel free to play with it.</p>
-
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@-moz-document</span> <span class="n">url-prefix</span><span class="p">(</span><span class="s1">"https://github.com/"</span><span class="p">)</span> <span class="p">{</span>
-<span class="nc">.Header</span> <span class="p">{</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#1a3652</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.repohead.experiment-repo-nav</span> <span class="p">{</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.reponav-item.selected</span> <span class="p">{</span>
-    <span class="nl">border-color</span><span class="p">:</span> <span class="m">#fff</span> <span class="m">#fff</span> <span class="m">#4a79a8</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.btn.hover</span><span class="o">,</span>
-<span class="nc">.btn</span><span class="nd">:hover</span><span class="o">,</span>
-<span class="nc">.btn</span><span class="o">,</span>
-<span class="nc">.btn</span> <span class="p">{</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#fafafa</span><span class="p">;</span>
-    <span class="nl">background-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="m">-180deg</span><span class="p">,</span> <span class="m">#fafafa</span><span class="p">,</span> <span class="m">#fafafa</span> <span class="m">90%</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nc">.btn-primary.hover</span><span class="o">,</span>
-<span class="nc">.btn-primary</span><span class="nd">:hover</span><span class="o">,</span>
-<span class="nc">.btn-primary</span><span class="o">,</span>
-<span class="nc">.btn-primary</span> <span class="p">{</span>
-    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#1aaa55</span><span class="p">;</span>
-    <span class="nl">background-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="m">-180deg</span><span class="p">,</span> <span class="m">#1aaa55</span><span class="p">,</span> <span class="m">#1aaa55</span> <span class="m">90%</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nc">.overall-summary</span> <span class="p">{}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="use-it-yourself">Use it yourself</h2>
-<p>I put this theme on userstyles.org. You can download and install it by going to <a href="https://userstyles.org/styles/172679/ewpratten-s-githubtheme">my userstyles page</a>.</p>
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/frc/2019/05/27/Building-Safe-Vision-Comms.html" class="link" title="2019-05-27 05:22:00 -0400">Building a safe and easy system for sending computer vision data from a raspberry pi to a roborio</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-05-27 05:22:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-05-27 05:22:00 -0400</p>
-              <p><p>Computer vision on an FRC robot has some problems.</p>
-<ul>
-  <li>RoboRIO is not powerfull enough</li>
-  <li>NetworkTables is not fast enough</li>
-  <li>A TCP connection is great until you lose connection</li>
-  <li>mDNS discovery is not reliable on the field</li>
-  <li>UDP can skip frames</li>
-</ul>
-
-<h2 id="needs">Needs</h2>
-<p>These are the things I need to have.</p>
-<ul>
-  <li>Send data from any device</li>
-  <li>Recive data on RoboRIO at any time</li>
-  <li>Data rate faster than period time</li>
-</ul>
-
-<h2 id="wants">Wants</h2>
-<p>These are the things I would like to have.</p>
-<ul>
-  <li>Easy discovery</li>
-  <li>Threaded</li>
-  <li>Simple interface for new programmers</li>
-  <li>Fallback in case of UDP issues</li>
-  <li>FMS network firewall compliant</li>
-</ul>
-
-<p>I am currently working on a protocol for solving this problem, nad will post an update here once it has been tested. Feel free to let me know your thoughts and ideas.</p>
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/frc/2019/04/30/FRC-Languages.html" class="link" title="2019-04-30 14:32:00 -0400">The language hunt</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2019-04-30 14:32:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2019-04-30 14:32:00 -0400</p>
-              <p><p>Our programming team is looking to switch languages in the 2020 season. Here is the what, why, and how.</p>
-
-<h2 id="our-history">Our history</h2>
-<p>We started out as a java team back in 2014 because java was (and still is) the language being taught in our programming classes. Honestly, our code sucked, as many rookie team’s do. There where no fancy features, or sensor-assisted autonomous. Direct input into talons was our way to roll.</p>
-
-<p>A few years later, we had a change in team organization and switched to C++. Up until the 2019 / 2020 season, this was our language and we where getting pretty good at using it.</p>
-
-<h2 id="the-problem">The Problem</h2>
-<p>We, as a team are looking to bring our programming and robots to the next level in 2020. Because of this, we ran into a problem. While C++ is an amazing language for embedded and robotics programming, some of it’s “features” where starting to act as a bottleneck to our design. Less time was being spent on polishing our new vision system or autonomous climb, and more on that crazy linker error that came out of nowhere.</p>
-
-<p>It’s time for a change, but what do we change to?</p>
-
-<h2 id="part-2">Part 2</h2>
-<p>The followup can be found <a href="/frc/2019/06/24/LanguageHunt2.html">HERE</a>.</p>
-
-</p> -->
-              
-          
-              
-              <!-- <header class="major"> -->
-                <h1><a href="/projects/2018/06/27/BecomeRanter.html" class="link" title="2018-06-27 14:32:00 -0400">Using a python script to create devRant posts based on the style and content of another user</a></h1>
-              <!-- </header> -->
-
-              <!-- Cheaty way to display a description -->
-              <!-- <p><i>2018-06-27 14:32:00 -0400</i></p> -->
-              <hr>
-              <!-- 
-              <p>2018-06-27 14:32:00 -0400</p>
-              <p><p>Ok… The title is slightly wrong. There are actually 2 scripts.. Sorry about that.</p>
-
-<p>This is a guide on installing and using the <a href="https://github.com/Ewpratten/BecomeRanter">BecomeRanter</a> script.</p>
-
-<h2 id="getting-dependancies">Getting dependancies</h2>
-<p>The scripts use Google’s tensorflow library to do its “magic”. So first, we should install Tensorflow’s dependencies.</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install python3 python3-pip #change this command to fit your distro
-pip3 install numpy
-</code></pre></div></div>
-<p>Then install Tensorflow</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install tensorflow #for cpu processing
-pip3 install tensorflow-gpu #for gpu processing
-</code></pre></div></div>
-
-<p>Next up, install the rest of the stuff:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install textgenrnn pandas keras
-</code></pre></div></div>
-
-<h2 id="clone-the-repo">Clone the repo</h2>
-<p>This is pretty simple. just make sure you have <code class="highlighter-rouge">git</code> installed and run</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/Ewpratten/BecomeRanter.git
-</code></pre></div></div>
-
-<h2 id="generate-some-rants-with-a-hdf5-file">Generate some rants with a .hdf5 file</h2>
-<p>As of the time of writing this, I have pre-generated some files for the two most popular ranters. These files can be found in <code class="highlighter-rouge">BecomeRanter/Checkpoint\ Files</code>.</p>
-
-<p>Higher epoch numbers mean that they have had more time to train. The files with lower numbers are generally funnier.</p>
-
-<p>To change the .hdf5 file you would like to use, open the file called <code class="highlighter-rouge">createsomerants.py</code> and change the variable called <code class="highlighter-rouge">input_file</code> to the path of your file. By default, the script generates from the <code class="highlighter-rouge">Linuxxx-epoch-90.hdf5</code> file.</p>
-
-<p>Next, save that file and run the following in your terminal:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 createsomerants.py &gt;&gt; output.txt
-</code></pre></div></div>
-<p>It will not print the results out to the screen and put them in the file instead.</p>
-
-<p>To stop the script, press CTRL + C</p>
-
-<h2 id="create-your-own-hdf5-file">Create your own .hdf5 file</h2>
-<p>If you want to make your own hdf5 file, you just have to use the other script in the repo.</p>
-
-<p>By default, you can just put all your text to train on in the <code class="highlighter-rouge">input.txt</code> file.</p>
-
-<p>If you want to use a different file, or change the number of epochs, those variables can be found at the top of the <code class="highlighter-rouge">createhfd5frominput.py</code> file.</p>
-
-<p>To start training, run:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 createhfd5frominput.py
-</code></pre></div></div>
-
-<p>A new hdf5 file will be generated in the same folder as the script</p>
-
-</p> -->
-              
-          
-	</div>
-      </section>
+    <div id="main">
+        
+        <section id="one">
+    <div class="inner" style="text-align: left">
+        <!-- <h1>All Posts</h1>
+        <hr> -->
+        <ul>
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/projects/2019/06/27/PWNlink.html" class="link" title="2019-06-27 13:16:00 -0400">I had some fun with a router</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/random/2019/06/27/Python.html" class="link" title="2019-06-27 03:00:00 -0400">Hunting snakes with a shotgun</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/projects/2019/06/26/BashSmash.html" class="link" title="2019-06-26 11:48:00 -0400">BashSmash</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/frc/2019/06/24/LanguageHunt2.html" class="link" title="2019-06-24 17:36:00 -0400">The language hunt: Part 2</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/ctf/2019/06/23/googlectf.html" class="link" title="2019-06-23 18:04:00 -0400">I gave Google's CTF a short try and learned a thing or two</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/frc/2019/06/21/Robot-Experiences.html" class="link" title="2019-06-21 11:14:00 -0400">What I have learned from 2 years of FRC programming</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/random/2019/06/18/Blogs-I-Read.html" class="link" title="2019-06-18 09:18:00 -0400">Blogs I Read</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/music/2019/06/17/AMM2M1-release.html" class="link" title="2019-06-17 06:20:00 -0400">I made a new song!</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/frc/2019/06/16/Graphing-w2a.html" class="link" title="2019-06-16 11:51:00 -0400">Graphing the relation between wheels and awards for FRC</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/projects/2019/06/12/Styiling-GitHub.html" class="link" title="2019-06-12 09:09:00 -0400">GitHub's CSS is boring. So I refreshed the design</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/frc/2019/05/27/Building-Safe-Vision-Comms.html" class="link" title="2019-05-27 05:22:00 -0400">Building a safe and easy system for sending computer vision data from a raspberry pi to a roborio</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/frc/2019/04/30/FRC-Languages.html" class="link" title="2019-04-30 14:32:00 -0400">The language hunt</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+                
+                    <!-- <header class="major"> -->
+                      <li><h3><a href="/projects/2018/06/27/BecomeRanter.html" class="link" title="2018-06-27 14:32:00 -0400">Using a python script to create devRant posts based on the style and content of another user</a></h3></li>
+                    <!-- </header> -->
+      
+                
+            
+        </ul>
+    </div>
+</section>
 
     </div>
 
@@ -824,13 +213,13 @@ pip3 install tensorflow-gpu #for gpu processing
 </div>
 
 <!-- Scripts -->
-<script src="http://localhost:4000/assets/js/jquery.min.js"></script>
-<script src="http://localhost:4000/assets/js/jquery.scrolly.min.js"></script>
-<script src="http://localhost:4000/assets/js/jquery.scrollex.min.js"></script>
-<script src="http://localhost:4000/assets/js/skel.min.js"></script>
-<script src="http://localhost:4000/assets/js/util.js"></script>
-<!--[if lte IE 8]><script src="http://localhost:4000/assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="http://localhost:4000/assets/js/main.js"></script>
+<script src="http://0.0.0.0:4000/assets/js/jquery.min.js"></script>
+<script src="http://0.0.0.0:4000/assets/js/jquery.scrolly.min.js"></script>
+<script src="http://0.0.0.0:4000/assets/js/jquery.scrollex.min.js"></script>
+<script src="http://0.0.0.0:4000/assets/js/skel.min.js"></script>
+<script src="http://0.0.0.0:4000/assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="http://0.0.0.0:4000/assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="http://0.0.0.0:4000/assets/js/main.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74118570-2"></script>
@@ -845,6 +234,6 @@ pip3 install tensorflow-gpu #for gpu processing
     gtag('config', 'UA-74118570-2');
 </script>
 
-  </body>
+</body>
 
 </html>

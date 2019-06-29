@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 {% include head.html %}
@@ -20,9 +15,6 @@
             </header>
             <div class="content">
                 <p >{{ site.description }}</p>
-                <!-- <ul class="actions">
-                    <li><a href="#one" class="button next scrolly">Get Started</a></li>
-                </ul> -->
             </div>
         </div>
     </section>
@@ -30,36 +22,37 @@
     <!-- Main -->
     <div id="main">
 
-        <!-- <section id="two">
-            <div class="inner">
-                <header class="major">
-                    <h2>Projects</h2>
-                </header>
-            </div>
-        </section>
-
-        {% include projects.html %}
+        <section id="two">
+                <div class="inner">
+                    <header class="major">
+                        <h2>About Me</h2>
+                    </header>
+                    <p>{{site.about}}</p>
+                    
+                </div>
+            </section>
 
         <section id="two">
-            <div class="inner">
-                <header class="major">
-                    <h2>Posts</h2>
-                </header>
-            </div>
-        </section> -->
+                <div class="inner">
+                    <header class="major">
+                        <h3>Blog</h3>
+                        <p>Here are my three most recent posts</p>
+                    </header>
 
-        {% include tiles.html %}
+                    <ul>
+                    {% for post in site.posts limit:3 %}
+                        <li><h3><a href="{{ post.url | relative_url  }}" class="link" title="{{ post.date }}">{{ post.title }}</a></h3></li>
+                    {% endfor %}
+                    </ul>
+                    <a href="all_posts.html" class="button next">View All</a>
 
-        <!-- Two -->
-        <!-- <section id="two">
-            <div class="inner">
-                <ul class="actions">
-                    <li><a href="all_posts.html" class="button next">View All</a></li>
-                </ul>
-            </div>
-        </section> -->
+                </div>
+            </section>
 
+            <br><br>
     </div>
+
+    
 
     {% include footer.html %}
 

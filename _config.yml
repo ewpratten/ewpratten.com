@@ -13,6 +13,10 @@ zip_code:
 country: 
 phone:
 
+about: >-
+  I am a 16 year old programming student. I enjoy learning new concepts, building projects out of random ideas and obscure technologies, and working with new tools. 
+  My projects range from building tools to help me with school work, and robotics, to radios and video production.
+
 # Google analytics
 analytic_track: UA-74118570-2
 
