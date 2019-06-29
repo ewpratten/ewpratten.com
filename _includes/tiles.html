@@ -1,60 +1,8 @@
-<!-- <section id="two">
-  <div class="inner">
-      <header class="major">
-          <h2>Projects</h2>
-      </header>
-  </div>
-</section>
-<section id="one" class="tiles">
-  {% for post in site.posts limit:site.tiles-count %}
-  {% if site.tiles-source == 'posts'%} {% if post.tag == 'projects'%}
-  <article>
-    <span class="image">
-      <img src="{{ post.image }}" alt="" />
-    </span>
-    <header class="major">
-      <h3><a href="{{ post.url  | relative_url }}" class="link">{{ post.title }}</a></h3>
-      <p>{{ post.description }}</p>
-    </header>
-  </article>
-  {% endif %}{% endif %}
-  {% endfor %}
-</section>
 
-<section id="two">
-  <div class="inner">
-      <header class="major">
-          <h2>Robotics</h2>
-      </header>
-  </div>
-</section>
-<section id="one" class="tiles">
-  {% for post in site.posts limit:site.tiles-count %}
-  {% if site.tiles-source == 'posts'%} {% if post.tag == 'frc'%}
-  <article>
-    <span class="image">
-      <img src="{{ post.image }}" alt="" />
-    </span>
-    <header class="major">
-      <h3><a href="{{ post.url  | relative_url }}" class="link">{{ post.title }}</a></h3>
-      <p>{{ post.description }}</p>
-    </header>
-  </article>
-  {% endif %}{% endif %}
-  {% endfor %}
-</section>
-
-<section id="two">
-  <div class="inner">
-      <header class="major">
-          <h2>Other</h2>
-      </header>
-  </div>
-</section> -->
 <section id="one" class="tiles">
   {% for post in site.posts limit:site.tiles-count %}
   {% if site.tiles-source == 'posts' %}
-  <article>
+  <article class="tile">
     <span class="image">
       <img src="{{ post.image }}" alt="" />
     </span>
@@ -66,23 +14,6 @@
   {% endif %}
   {% endfor %}
 </section>
-
-
-<!-- <article>
-<section id="one" class="posts">
-  {% for post in site.posts limit:site.tiles-count %}
-  {% if site.tiles-source == 'posts' %}
-  <article>
-    <header class="">
-      <h3 class="list-post-title"><a href="{{ post.url  | relative_url }}" class="link">{{ post.title }}</a></h3>
-      <p>{{ post.description }}</p>
-    </header>
-  </article>
-  <hr>
-  {% endif %}
-  {% endfor %}
-</section>
-</article> -->
 
 
 <article>
@@ -92,9 +23,12 @@
             <h2>Massa libero</h2>
         </header>
         <p>{{ content }}</p> -->
-        <ul class="actions">
+        <!-- <ul class="actions">
             <li><a href="all_posts.html" class="button next">View All</a></li>
-        </ul>
+        </ul> -->
+        <br>
+        <a href="all_posts.html" class="button next" style="left:10%; margin:auto">View All</a>
+        <br><br>
     </div>
 </section>
 </article>
