@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-06-29T16:41:32-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://github.com/frc5024&quot;&gt;@frc5024&lt;/a&gt; programming team lead, and radio enthusiast.</subtitle><entry><title type="html">I had some fun with a router</title><link href="http://0.0.0.0:4000/projects/2019/06/27/PWNlink.html" rel="alternate" type="text/html" title="I had some fun with a router" /><published>2019-06-27T13:16:00-04:00</published><updated>2019-06-27T13:16:00-04:00</updated><id>http://0.0.0.0:4000/projects/2019/06/27/PWNlink</id><content type="html" xml:base="http://0.0.0.0:4000/projects/2019/06/27/PWNlink.html">&lt;p&gt;I was playing around with some D-link routers today and remembered an &lt;a href=&quot;https://www.exploit-db.com/exploits/33520&quot;&gt;ExploitDB Entry&lt;/a&gt; I read a while ago. Many D-link routers have a great feature that allows remote management and configuration queries. Interestingly, this cannot be disabled, and one of the pages contains a cleartext version of the admin password (yay!).&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-07-01T22:38:02-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://github.com/frc5024&quot;&gt;@frc5024&lt;/a&gt; programming team lead, and radio enthusiast.</subtitle><entry><title type="html">devDNS</title><link href="http://0.0.0.0:4000/projects/2019/07/01/devDNS.html" rel="alternate" type="text/html" title="devDNS" /><published>2019-07-01T18:13:00-04:00</published><updated>2019-07-01T18:13:00-04:00</updated><id>http://0.0.0.0:4000/projects/2019/07/01/devDNS</id><content type="html" xml:base="http://0.0.0.0:4000/projects/2019/07/01/devDNS.html">&lt;p&gt;Over the past year and a half, I have been hacking my way around the undocumented &lt;a href=&quot;https://devrant.com&quot;&gt;devRant&lt;/a&gt; auth/write API. At the request of devRant’s creators, this API must not be documented due to the way logins work on the platform. That is besides the point. I have been working on a little project called &lt;a href=&quot;https://devrant.com/collabs/2163502&quot;&gt;devDNS&lt;/a&gt; over the past few days that uses this undocumented API. Why must I be so bad at writing intros?&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-devdns&quot;&gt;What is devDNS&lt;/h2&gt;
+&lt;p&gt;devDNS is a devRant bot written in python. It will serve any valid DNS query from any user on the platform. A query is just a comment in one of the following forms:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@devDNS example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@devDNS MX example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Of course, &lt;code class=&quot;highlighter-rouge&quot;&gt;MX&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;example.com&lt;/code&gt; are to be replaced with the domain and entry of your choosing.&lt;/p&gt;
+
+&lt;p&gt;devDNS was inspired by &lt;a href=&quot;https://twitter.com/1111resolver&quot;&gt;@1111Resolver&lt;/a&gt;, and the source is available on &lt;a href=&quot;https://github.com/Ewpratten/devDNS&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
+&lt;p&gt;The Python script behind devDNS is very simple. devDNS does the following every 10 seconds:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Fetch all new notifs&lt;/li&gt;
+  &lt;li&gt;Find only mentions&lt;/li&gt;
+  &lt;li&gt;Spin off a thread for each mention that passes a basic parser (Is the message 2 or 3 words long)&lt;/li&gt;
+  &lt;li&gt;In the thread, check if the message is a control message (allows me to view the status of the bot via devRant)&lt;/li&gt;
+  &lt;li&gt;Check if the request matches a required pattern&lt;/li&gt;
+  &lt;li&gt;Call &lt;code class=&quot;highlighter-rouge&quot;&gt;dnspython&lt;/code&gt; with requested record and domain&lt;/li&gt;
+  &lt;li&gt;Receive answer from a custom &lt;a href=&quot;https://pi-hole.net/&quot;&gt;PIHole&lt;/a&gt; server with caching and super low latency&lt;/li&gt;
+  &lt;li&gt;Send a comment with the results to the requester&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thats it! Super simple, and only two days from concept to reality.&lt;/p&gt;
+
+&lt;h2 id=&quot;where-is-this-hosted&quot;&gt;Where is this hosted?&lt;/h2&gt;
+&lt;p&gt;This program is hosted on a raspberry pi laying in my room running docker. I also have &lt;a href=&quot;https://www.portainer.io/&quot;&gt;Portainer&lt;/a&gt; set up so I can easily monitor the bot from my phone over my VPN.&lt;/p&gt;</content><author><name></name></author><summary type="html">Over the past year and a half, I have been hacking my way around the undocumented devRant auth/write API. At the request of devRant’s creators, this API must not be documented due to the way logins work on the platform. That is besides the point. I have been working on a little project called devDNS over the past few days that uses this undocumented API. Why must I be so bad at writing intros?</summary></entry><entry><title type="html">I had some fun with a router</title><link href="http://0.0.0.0:4000/projects/2019/06/27/PWNlink.html" rel="alternate" type="text/html" title="I had some fun with a router" /><published>2019-06-27T13:16:00-04:00</published><updated>2019-06-27T13:16:00-04:00</updated><id>http://0.0.0.0:4000/projects/2019/06/27/PWNlink</id><content type="html" xml:base="http://0.0.0.0:4000/projects/2019/06/27/PWNlink.html">&lt;p&gt;I was playing around with some D-link routers today and remembered an &lt;a href=&quot;https://www.exploit-db.com/exploits/33520&quot;&gt;ExploitDB Entry&lt;/a&gt; I read a while ago. Many D-link routers have a great feature that allows remote management and configuration queries. Interestingly, this cannot be disabled, and one of the pages contains a cleartext version of the admin password (yay!).&lt;/p&gt;
 
 &lt;h2 id=&quot;how-to-get-yourself-an-admin-password&quot;&gt;How to get yourself an admin password&lt;/h2&gt;
 &lt;p&gt;On any supported router, make an HTTP request to &lt;code class=&quot;highlighter-rouge&quot;&gt;http://your.router.ip.addr/tools_admin.asp/&lt;/code&gt;. This will return a pretty large XML file containing information about your router’s hardware and configuration.&lt;/p&gt;
@@ -400,42 +429,4 @@ Your browser does not support audio players
 &lt;h2 id=&quot;the-result&quot;&gt;The result&lt;/h2&gt;
 &lt;p&gt;Here is the resulting image. From left, to right: 5024, 254, 2224, 5406, 2056&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/w2a.png&quot; alt=&quot;Thr result&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I was scrolling through reddit the other day, and came across this great post by u/MasterQuacks.</summary></entry><entry><title type="html">GitHub’s CSS is boring. So I refreshed the design</title><link href="http://0.0.0.0:4000/projects/2019/06/12/Styiling-GitHub.html" rel="alternate" type="text/html" title="GitHub's CSS is boring. So I refreshed the design" /><published>2019-06-12T09:09:00-04:00</published><updated>2019-06-12T09:09:00-04:00</updated><id>http://0.0.0.0:4000/projects/2019/06/12/Styiling-GitHub</id><content type="html" xml:base="http://0.0.0.0:4000/projects/2019/06/12/Styiling-GitHub.html">&lt;p&gt;I have been using GitHub since 2017, and have been getting tired of GitHub’s theme. I didn’t need a huge change, just a small refresh. So, to solve this, I whipped out &lt;a href=&quot;https://addons.mozilla.org/en-CA/firefox/addon/styl-us/&quot;&gt;Stylus&lt;/a&gt; and made a nice little CSS file for it.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-css&quot;&gt;The CSS&lt;/h2&gt;
-&lt;p&gt;Here is the CSS. Feel free to play with it.&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;@-moz-document&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url-prefix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;https://github.com/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;.Header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#1a3652&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nc&quot;&gt;.repohead.experiment-repo-nav&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;.reponav-item.selected&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;border-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#4a79a8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nc&quot;&gt;.btn.hover&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;.btn&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;.btn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;.btn&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fafafa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;background-image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear-gradient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-180deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fafafa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fafafa&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;90%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nc&quot;&gt;.btn-primary.hover&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;.btn-primary&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;.btn-primary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nc&quot;&gt;.btn-primary&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#1aaa55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nl&quot;&gt;background-image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linear-gradient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;-180deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#1aaa55&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#1aaa55&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;90%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nc&quot;&gt;.overall-summary&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;use-it-yourself&quot;&gt;Use it yourself&lt;/h2&gt;
-&lt;p&gt;I put this theme on userstyles.org. You can download and install it by going to &lt;a href=&quot;https://userstyles.org/styles/172679/ewpratten-s-githubtheme&quot;&gt;my userstyles page&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="projects" /><summary type="html">I have been using GitHub since 2017, and have been getting tired of GitHub’s theme. I didn’t need a huge change, just a small refresh. So, to solve this, I whipped out Stylus and made a nice little CSS file for it.</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/w2a.png&quot; alt=&quot;Thr result&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">I was scrolling through reddit the other day, and came across this great post by u/MasterQuacks.</summary></entry></feed>
