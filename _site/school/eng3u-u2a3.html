@@ -75,10 +75,10 @@
 	<section id="banner" class="major" style="height:40vh">
 			<div class="inner">
 				<header class="major">
-					<h1>Using a python script to create devRant posts based on the style and content of another user</h1>
+					<h1>Analysis of different mediums</h1>
 				</header>
 				<div class="content">
-						<p >if/else ++</p>
+						<p >An ENG3U Assignment</p>
 						
 					</div>
 			</div>
@@ -92,57 +92,25 @@
 <section id="one">
 	<div class="inner">
 		
-		<p><p>Ok… The title is slightly wrong. There are actually 2 scripts.. Sorry about that.</p>
+		<p><p>In this post, I explore the way a change in medium effects the reception of a story. This post is focused around the story of <a href="https://en.wikipedia.org/wiki/Chanie_Wenjack">Chanie Wenjack</a>.</p>
 
-<p>This is a guide on installing and using the <a href="https://github.com/Ewpratten/BecomeRanter">BecomeRanter</a> script.</p>
+<h2 id="content-vs-perception">Content vs Perception</h2>
+<p>A story can be told may ways, commonly: film, comics, novels, and articles. These different mediums allow for changes in the way a story is received, while keeping the actual content the same.</p>
 
-<h2 id="getting-dependancies">Getting dependancies</h2>
-<p>The scripts use Google’s tensorflow library to do its “magic”. So first, we should install Tensorflow’s dependencies.</p>
+<p>Many people do not like watching a movie based off a book because the director’s representation of places and people “ruin” what the viewer had believed from reading the original book. This makes total sense, as a book requires the reader’s imagination to build a virtual world in order to understand distances, directions, and locations. Whereas, due to the nature of a film, everything is represented via visuals which override the world and images left to imagine by a book.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install python3 python3-pip #change this command to fit your distro
-pip3 install numpy
-</code></pre></div></div>
-<p>Then install Tensorflow</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install tensorflow #for cpu processing
-pip3 install tensorflow-gpu #for gpu processing
-</code></pre></div></div>
+<p>Aside from condensation of a book to fit the story into movie format, the actual content stays the same. When done well, any format change does not change the content to fit the new format, but instead makes use of the resources unique to that format to tell or show details that may me difficult to convert. For example, a narrator’s opinion stated in a book could be integrated into a flashback in a movie or comic.</p>
 
-<p>Next up, install the rest of the stuff:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install textgenrnn pandas keras
-</code></pre></div></div>
+<p>##</p>
 
-<h2 id="clone-the-repo">Clone the repo</h2>
-<p>This is pretty simple. just make sure you have <code class="highlighter-rouge">git</code> installed and run</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/Ewpratten/BecomeRanter.git
-</code></pre></div></div>
+<p>##</p>
 
-<h2 id="generate-some-rants-with-a-hdf5-file">Generate some rants with a .hdf5 file</h2>
-<p>As of the time of writing this, I have pre-generated some files for the two most popular ranters. These files can be found in <code class="highlighter-rouge">BecomeRanter/Checkpoint\ Files</code>.</p>
+<p>##</p>
 
-<p>Higher epoch numbers mean that they have had more time to train. The files with lower numbers are generally funnier.</p>
+<hr />
 
-<p>To change the .hdf5 file you would like to use, open the file called <code class="highlighter-rouge">createsomerants.py</code> and change the variable called <code class="highlighter-rouge">input_file</code> to the path of your file. By default, the script generates from the <code class="highlighter-rouge">Linuxxx-epoch-90.hdf5</code> file.</p>
-
-<p>Next, save that file and run the following in your terminal:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 createsomerants.py &gt;&gt; output.txt
-</code></pre></div></div>
-<p>It will not print the results out to the screen and put them in the file instead.</p>
-
-<p>To stop the script, press CTRL + C</p>
-
-<h2 id="create-your-own-hdf5-file">Create your own .hdf5 file</h2>
-<p>If you want to make your own hdf5 file, you just have to use the other script in the repo.</p>
-
-<p>By default, you can just put all your text to train on in the <code class="highlighter-rouge">input.txt</code> file.</p>
-
-<p>If you want to use a different file, or change the number of epochs, those variables can be found at the top of the <code class="highlighter-rouge">createhfd5frominput.py</code> file.</p>
-
-<p>To start training, run:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 createhfd5frominput.py
-</code></pre></div></div>
-
-<p>A new hdf5 file will be generated in the same folder as the script</p>
-
+<h3 id="sources">Sources</h3>
+<p>“Chanie Wenjack.” Wikipedia, Wikimedia Foundation, 26 Apr. 2019, en.wikipedia.org/wiki/Chanie_Wenjack.</p>
 </p>
 	</div>
 </section>
