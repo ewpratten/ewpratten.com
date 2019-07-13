@@ -17,11 +17,11 @@
 
 <body>
 
-    <!-- Wrapper -->
+	<!-- Wrapper -->
 <div id="wrapper">
 
     <!-- Header -->
-    <header id="header"  class="alt" >
+    <header id="header" >
         <a href="http://0.0.0.0:4000//" class="logo"><strong>Evan Pratten</strong> <span>retrylife</span></a>
         <nav>
             <!-- <a href="#menu">Menu</a> -->
@@ -70,78 +70,56 @@
 		<li><a href="#" class="button special fit">Get Started</a></li>
 		<li><a href="#" class="button fit">Log In</a></li>
 	</ul>
-</nav> -->
-
-    <!-- Banner -->
-    <section id="banner" class="major" style="height:90vh">
-        <div class="inner">
-            <header class="major">
-                <h1>Hi, I am Evan Pratten</h1>
-            </header>
-            <div class="content">
-                <p >Computer wizard, student, <a href="https://github.com/frc5024">@frc5024</a> programming team lead, and radio enthusiast.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main -->
-    <div id="main">
-
-        <section id="two" style="background-color:#586e75">
-                <div class="inner">
-                    <header class="major">
-                        <h2>About Me</h2>
-                    </header>
-                    <p>I am a 16 year old programming student. I enjoy learning new concepts, building projects out of random ideas and obscure technologies, and working with new tools.  My projects range from building tools to help me with school work, and robotics, to radios and video production.</p>
-                    
-                </div>
-            </section>
-
-            <section id="two">
-                    <div class="inner">
-                        <header class="major">
-                            <h3>Featured Projects</h3>
-                            <p>My favorite projects</p>
-                        </header>
+</nav> --> 
+	
+	<section id="banner" class="major" style="height:40vh">
+			<div class="inner">
+				<header class="major">
+					<h1>Taking a look back at GMAD</h1>
+				</header>
+				<div class="content">
+						<p >Fun, Simple, and Quick</p>
+						
+					</div>
+			</div>
+		</section>
     
-                        <ul>
-                        
-                            <li><h3><a href="/my-projects/ThriftyField" class="link" >ThriftyField [PI3D]</a></h3></li>
-                        
-                            <li><h3><a href="/my-projects/DevDNS" class="link" >DevDNS [PI3D]</a></h3></li>
-                        
-                            <li><h3><a href="/my-projects/DeepSpace" class="link" >DeepSpace </a></h3></li>
-                        
-                        </ul>
     
-                    </div>
-                </section>
+<!-- Main -->
+<div id="main" class="alt">
 
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		
+		<p><p>One day, back in June of 2018, I was both looking for a new project to work on, and trying to decide which Linux distro to install on one of my computers. From this, a little project was born. <a href="/gmad">Give Me a Distro</a> (or, GMAD, as I like to call it) is a little website that chooses a random distribution of Linux and shows a description of what you are about to get yourself into, and a download link for the latest ISO.</p>
 
-        <section id="two" style="background-color:#657b83">
-                <div class="inner">
-                    <header class="major">
-                        <h3>Blog</h3>
-                        <p>Here are my three most recent posts</p>
-                    </header>
+<h2 id="backend-tech">Backend tech</h2>
+<p>This is one of the simplest projects I have ever made. All the backend does is:</p>
+<ul>
+  <li>Select a random number (n)</li>
+  <li>Fetch the nth item from a list of distros</li>
+  <li>Push the selected data to the user via DOM</li>
+</ul>
 
-                    <ul>
-                    
-                        <li><h3><a href="/projects/2019/07/13/Lookback-GMAD.html" class="link" title="2019-07-13 10:43:00 -0400">Taking a look back at GMAD</a></h3></li>
-                    
-                        <li><h3><a href="/frc/2019/07/06/ScrapingFRCGithub.html" class="link" title="2019-07-06 11:08:00 -0400">Scraping FRC team's GitHub accounts to gather large amounts of data</a></h3></li>
-                    
-                        <li><h3><a href="/projects/2019/07/01/devDNS.html" class="link" title="2019-07-01 18:13:00 -0400">devDNS</a></h3></li>
-                    
-                    </ul>
-                    <a href="all_posts.html" class="button next">View All</a>
+<h2 id="frontend">Frontend</h2>
+<p>This website is just plain HTML and CSS3, built without any CSS framework.</p>
 
-                </div>
-            </section>
+<h2 id="my-regrets">My regrets</h2>
+<p>There are two things I do not like about this project. Firstly, on load, the site breifly suggests Arch Linux before flashing to the random selection. This is due to the fact that Arch is the default for people with Javascript disabled. Some kind of loading animation would fix this.</p>
 
-    </div>
+<p>Secondly, the version of the site hosted on <a href="https://retrylife.ca/gmad">retrylife.ca</a> is actually just an iframe to <a href="https://ewpratten.github.io/GiveMeADistro">ewpratten.github.io</a> due to some CNAME issues.</p>
 
-    
+<h2 id="contributing">Contributing</h2>
+<p>If you would like to add a distro or three to the website, feel free to make a pull request over on <a href="https://github.com/Ewpratten/GiveMeADistro">GitHub</a>.</p>
+
+<h2 id="why-make-a-post-about-it-a-year-later">Why make a post about it a year later?</h2>
+<p>I just really enjoyed working with the project and sharing it with friends, so I figured I should mention it here too. Maybe it will inspire someone to make something cool!</p>
+</p>
+	</div>
+</section>
+
+</div>
 
     <!-- Footer -->
 <footer id="footer">
