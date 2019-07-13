@@ -38,6 +38,12 @@ pinterest_url:
 slack_url:
 twitter_url: https://twitter.com/ewpratten
 
+# Collections data
+collections:
+  my_projects:
+    output: true
+    permalink: /my-projects/:title
+
 # build settings
 markdown: kramdown
 kramdown:

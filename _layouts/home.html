@@ -40,8 +40,8 @@
                         </header>
     
                         <ul>
-                        {% for project in site.data.projects %}
-                            <li><h3><a href="{{ project.url | relative_url  }}" class="link" >{{ project.name }} {% if project.pi3d %} [PI3D] {% endif %}</a></h3></li>
+                        {% for project in site.my_projects limit:3%}
+                            <li><h3><a href="/my-projects/{{ project.slug }}" class="link" >{{ project.slug }} {{ project.tag }}</a></h3></li>
                         {% endfor %}
                         </ul>
     
