@@ -41,7 +41,7 @@
     
                         <ul>
                         {% for project in site.my_projects limit:3%}
-                            <li><h3><a href="/my-projects/{{ project.slug }}" class="link" >{{ project.slug }} {{ project.tag }}</a></h3></li>
+                            <li><h3><a href="{{ project.url | relative_url }}" class="link" >{{ project.slug }} {{ project.tag }}</a></h3></li>
                         {% endfor %}
                         </ul>
     

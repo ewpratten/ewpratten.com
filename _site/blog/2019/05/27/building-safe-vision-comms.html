@@ -75,7 +75,7 @@
 	<section id="banner" class="major" style="height:40vh">
 			<div class="inner">
 				<header class="major">
-					<h1>404</h1>
+					<h1>Building a safe and easy system for sending computer vision data from a raspberry pi to a roborio</h1>
 				</header>
 				<div class="content">
 						<p ></p>
@@ -92,7 +92,34 @@
 <section id="one">
 	<div class="inner">
 		
-		<p><p>Page not found! :(</p>
+		<p><p>Computer vision on an FRC robot has some problems.</p>
+<ul>
+  <li>RoboRIO is not powerfull enough</li>
+  <li>NetworkTables is not fast enough</li>
+  <li>A TCP connection is great until you lose connection</li>
+  <li>mDNS discovery is not reliable on the field</li>
+  <li>UDP can skip frames</li>
+</ul>
+
+<h2 id="needs">Needs</h2>
+<p>These are the things I need to have.</p>
+<ul>
+  <li>Send data from any device</li>
+  <li>Recive data on RoboRIO at any time</li>
+  <li>Data rate faster than period time</li>
+</ul>
+
+<h2 id="wants">Wants</h2>
+<p>These are the things I would like to have.</p>
+<ul>
+  <li>Easy discovery</li>
+  <li>Threaded</li>
+  <li>Simple interface for new programmers</li>
+  <li>Fallback in case of UDP issues</li>
+  <li>FMS network firewall compliant</li>
+</ul>
+
+<p>I am currently working on a protocol for solving this problem, nad will post an update here once it has been tested. Feel free to let me know your thoughts and ideas.</p>
 </p>
 	</div>
 </section>

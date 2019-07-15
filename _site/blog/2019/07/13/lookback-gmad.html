@@ -75,10 +75,10 @@
 	<section id="banner" class="major" style="height:40vh">
 			<div class="inner">
 				<header class="major">
-					<h1>404</h1>
+					<h1>Taking a look back at GMAD</h1>
 				</header>
 				<div class="content">
-						<p ></p>
+						<p >Fun, Simple, and Quick</p>
 						
 					</div>
 			</div>
@@ -92,7 +92,29 @@
 <section id="one">
 	<div class="inner">
 		
-		<p><p>Page not found! :(</p>
+		<p><p>One day, back in June of 2018, I was both looking for a new project to work on, and trying to decide which Linux distro to install on one of my computers. From this, a little project was born. <a href="/gmad">Give Me a Distro</a> (or, GMAD, as I like to call it) is a little website that chooses a random distribution of Linux and shows a description of what you are about to get yourself into, and a download link for the latest ISO.</p>
+
+<h2 id="backend-tech">Backend tech</h2>
+<p>This is one of the simplest projects I have ever made. All the backend does is:</p>
+<ul>
+  <li>Select a random number (n)</li>
+  <li>Fetch the nth item from a list of distros</li>
+  <li>Push the selected data to the user via DOM</li>
+</ul>
+
+<h2 id="frontend">Frontend</h2>
+<p>This website is just plain HTML and CSS3, built without any CSS framework.</p>
+
+<h2 id="my-regrets">My regrets</h2>
+<p>There are two things I do not like about this project. Firstly, on load, the site breifly suggests Arch Linux before flashing to the random selection. This is due to the fact that Arch is the default for people with Javascript disabled. Some kind of loading animation would fix this.</p>
+
+<p>Secondly, the version of the site hosted on <a href="https://retrylife.ca/gmad">retrylife.ca</a> is actually just an iframe to <a href="https://ewpratten.github.io/GiveMeADistro">ewpratten.github.io</a> due to some CNAME issues.</p>
+
+<h2 id="contributing">Contributing</h2>
+<p>If you would like to add a distro or three to the website, feel free to make a pull request over on <a href="https://github.com/Ewpratten/GiveMeADistro">GitHub</a>.</p>
+
+<h2 id="why-make-a-post-about-it-a-year-later">Why make a post about it a year later?</h2>
+<p>I just really enjoyed working with the project and sharing it with friends, so I figured I should mention it here too. Maybe it will inspire someone to make something cool!</p>
 </p>
 	</div>
 </section>

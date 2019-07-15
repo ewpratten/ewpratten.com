@@ -75,7 +75,7 @@
 	<section id="banner" class="major" style="height:40vh">
 			<div class="inner">
 				<header class="major">
-					<h1>404</h1>
+					<h1>GitHub's CSS is boring. So I refreshed the design</h1>
 				</header>
 				<div class="content">
 						<p ></p>
@@ -92,7 +92,45 @@
 <section id="one">
 	<div class="inner">
 		
-		<p><p>Page not found! :(</p>
+		<p><p>I have been using GitHub since 2017, and have been getting tired of GitHub’s theme. I didn’t need a huge change, just a small refresh. So, to solve this, I whipped out <a href="https://addons.mozilla.org/en-CA/firefox/addon/styl-us/">Stylus</a> and made a nice little CSS file for it.</p>
+
+<h2 id="the-css">The CSS</h2>
+<p>Here is the CSS. Feel free to play with it.</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@-moz-document</span> <span class="n">url-prefix</span><span class="p">(</span><span class="s1">"https://github.com/"</span><span class="p">)</span> <span class="p">{</span>
+<span class="nc">.Header</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#1a3652</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.repohead.experiment-repo-nav</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.reponav-item.selected</span> <span class="p">{</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="m">#fff</span> <span class="m">#fff</span> <span class="m">#4a79a8</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.btn.hover</span><span class="o">,</span>
+<span class="nc">.btn</span><span class="nd">:hover</span><span class="o">,</span>
+<span class="nc">.btn</span><span class="o">,</span>
+<span class="nc">.btn</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#fafafa</span><span class="p">;</span>
+    <span class="nl">background-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="m">-180deg</span><span class="p">,</span> <span class="m">#fafafa</span><span class="p">,</span> <span class="m">#fafafa</span> <span class="m">90%</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-primary.hover</span><span class="o">,</span>
+<span class="nc">.btn-primary</span><span class="nd">:hover</span><span class="o">,</span>
+<span class="nc">.btn-primary</span><span class="o">,</span>
+<span class="nc">.btn-primary</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#1aaa55</span><span class="p">;</span>
+    <span class="nl">background-image</span><span class="p">:</span> <span class="n">linear-gradient</span><span class="p">(</span><span class="m">-180deg</span><span class="p">,</span> <span class="m">#1aaa55</span><span class="p">,</span> <span class="m">#1aaa55</span> <span class="m">90%</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.overall-summary</span> <span class="p">{}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="use-it-yourself">Use it yourself</h2>
+<p>I put this theme on userstyles.org. You can download and install it by going to <a href="https://userstyles.org/styles/172679/ewpratten-s-githubtheme">my userstyles page</a>.</p>
 </p>
 	</div>
 </section>

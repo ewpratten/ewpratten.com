@@ -24,7 +24,7 @@ analytic_track: UA-74118570-2
 tiles-source: posts # accepts "posts" or "pages"
 tiles-count: 10
 
-# permalink: /:title
+permalink: /blog/:year/:month/:day/:slug
 
 # social settings
 500px_url:
@@ -42,7 +42,7 @@ twitter_url: https://twitter.com/ewpratten
 collections:
   my_projects:
     output: true
-    permalink: /my-projects/:title
+    permalink: /projects/:title
 
 # build settings
 markdown: kramdown

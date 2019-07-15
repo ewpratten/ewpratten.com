@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Evan Pratten</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <!-- <link rel="stylesheet" href="/assets/css/custom.css" /> -->
+    <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+
+    <!-- Syntax highlight -->
+    <link rel="stylesheet" href="/assets/css/vs.css" />
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header" >
+        <a href="http://0.0.0.0:4000//" class="logo"><strong>Evan Pratten</strong> <span>retrylife</span></a>
+        <nav>
+            <!-- <a href="#menu">Menu</a> -->
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <!-- <nav id="menu">
+	<ul class="links">
+        
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		        <li><a href="http://0.0.0.0:4000//">Home</a></li>
+	    	
+		
+		    
+		
+		    
+		
+		
+		    
+		
+		    
+		
+		    
+		        <li><a href="http://0.0.0.0:4000/all_posts">All posts</a></li>
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+	</ul>
+	<ul class="actions vertical">
+		<li><a href="#" class="button special fit">Get Started</a></li>
+		<li><a href="#" class="button fit">Log In</a></li>
+	</ul>
+</nav> --> 
+	
+	<section id="banner" class="major" style="height:40vh">
+			<div class="inner">
+				<header class="major">
+					<h1>Graphing the relation between wheels and awards for FRC</h1>
+				</header>
+				<div class="content">
+						<p >AKA. Why programmer + reddit + matplotlib is a bad idea.</p>
+						
+					</div>
+			</div>
+		</section>
+    
+    
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		
+		<p><p>I was scrolling through reddit the other day, and came across <a href="https://www.reddit.com/r/FRC/comments/byzv5q/i_know_what_im_doing/">this great post</a> by u/<a href="https://www.reddit.com/user/MasterQuacks/">MasterQuacks</a>.</p>
+
+<p><img src="/assets/images/w2ainspo.jpg" alt="My insporation" /></p>
+
+<p>I thought to myself “ha. Thats funny”, and moved on. But that thought had stuck with me.</p>
+
+<p>So here I am, bored on a sunday afternoon, staring at the matplotlib documentation.</p>
+
+<h2 id="my-creation">My creation</h2>
+<p>In only a few lines of python, I have a program that will (badly) graph the number of awards per wheel for any team, or set of teams.</p>
+
+<p>As always, feel free to tinker with the code. This one is not published anywhere, so if you want to share it, I would appreciate a mention.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="k">class</span> <span class="nc">Team</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">wheels</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wheels</span> <span class="o">=</span> <span class="n">wheels</span> <span class="o">*</span> <span class="mi">2</span>
+
+<span class="c1">### CONFIG ###
+</span>
+<span class="n">teams</span> <span class="o">=</span> <span class="p">[</span><span class="n">Team</span><span class="p">(</span><span class="mi">5024</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">254</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">1114</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">5406</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">Team</span><span class="p">(</span><span class="mi">2056</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">2019</span>
+
+<span class="c1">##############
+</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">team</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">teams</span><span class="p">):</span>
+    <span class="n">award_data</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"https://www.thebluealliance.com/api/v3/team/frc"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span><span class="p">)</span> <span class="o">+</span> <span class="s">"/awards/"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">),</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s">"X-TBA-Auth-Key"</span><span class="p">:</span> <span class="s">"mz0VWTNtXTDV8NNOz3dYg9fHOZw8UYek270gynLQ4v9veaaUJEPvJFCZRmte7AUN"</span><span class="p">})</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="n">awards_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">award_data</span><span class="p">)</span>
+
+    <span class="n">team</span><span class="o">.</span><span class="n">w2a</span> <span class="o">=</span> <span class="n">awards_count</span> <span class="o">/</span> <span class="n">team</span><span class="o">.</span><span class="n">wheels</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span><span class="p">,</span> <span class="n">team</span><span class="o">.</span><span class="n">w2a</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">team</span><span class="o">.</span><span class="n">w2a</span><span class="p">,</span> <span class="n">tick_label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span><span class="p">))</span>
+
+<span class="c1"># Plot
+</span><span class="n">x_lables</span> <span class="o">=</span> <span class="p">[</span><span class="n">team</span><span class="o">.</span><span class="nb">id</span> <span class="k">for</span> <span class="n">team</span> <span class="ow">in</span> <span class="n">teams</span><span class="p">]</span>
+<span class="c1"># plt.set_xticklabels(x_lables)
+</span>
+<span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">xkcd</span><span class="p">():</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Awards per wheel'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<h2 id="the-result">The result</h2>
+<p>Here is the resulting image. From left, to right: 5024, 254, 2224, 5406, 2056</p>
+
+<p><img src="/assets/images/w2a.png" alt="Thr result" /></p>
+</p>
+	</div>
+</section>
+
+</div>
+
+    <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <ul class="icons">
+            
+            <li><a href="https://twitter.com/ewpratten" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                  
+            <li><a href="https://gitlab.com/u/ewpratten" class="icon alt fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
+             
+            <li><a href="https://github.com/ewpratten" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+              
+
+            <li><a href="/feed.xml" class="icon alt fa-rss" target="_blank"><span class="label">RSS</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; Evan Pratten</li>
+            <li>Design based from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+
+        </ul>
+    </div>
+</footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="http://0.0.0.0:4000/assets/js/jquery.min.js"></script>
+<script src="http://0.0.0.0:4000/assets/js/jquery.scrolly.min.js"></script>
+<script src="http://0.0.0.0:4000/assets/js/jquery.scrollex.min.js"></script>
+<script src="http://0.0.0.0:4000/assets/js/skel.min.js"></script>
+<script src="http://0.0.0.0:4000/assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="http://0.0.0.0:4000/assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="http://0.0.0.0:4000/assets/js/main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74118570-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-74118570-2');
+</script>
+
+</body>
+
+</html>
