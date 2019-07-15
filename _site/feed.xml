@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-07-15T11:11:19-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://github.com/frc5024&quot;&gt;@frc5024&lt;/a&gt; programming team lead, and radio enthusiast.</subtitle><entry><title type="html">Taking a look back at GMAD</title><link href="http://0.0.0.0:4000/blog/2019/07/13/lookback-gmad" rel="alternate" type="text/html" title="Taking a look back at GMAD" /><published>2019-07-13T10:43:00-04:00</published><updated>2019-07-13T10:43:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/07/13/Lookback-GMAD</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/07/13/lookback-gmad">&lt;p&gt;One day, back in June of 2018, I was both looking for a new project to work on, and trying to decide which Linux distro to install on one of my computers. From this, a little project was born. &lt;a href=&quot;/gmad&quot;&gt;Give Me a Distro&lt;/a&gt; (or, GMAD, as I like to call it) is a little website that chooses a random distribution of Linux and shows a description of what you are about to get yourself into, and a download link for the latest ISO.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-07-15T19:01:28-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://github.com/frc5024&quot;&gt;@frc5024&lt;/a&gt; programming team lead, and radio enthusiast.</subtitle><entry><title type="html">Mind map generation with Python</title><link href="http://0.0.0.0:4000/blog/2019/07/15/mindmap" rel="alternate" type="text/html" title="Mind map generation with Python" /><published>2019-07-15T14:38:00-04:00</published><updated>2019-07-15T14:38:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/07/15/MindMap</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/07/15/mindmap">&lt;p&gt;While working on an assignment with &lt;a href=&quot;https://coggle.it&quot;&gt;Coggle&lt;/a&gt; today, I noticed an interesting option in the save menu. &lt;em&gt;Download as .mm file&lt;/em&gt;. Having rarely worked with mind maps before, and only doing it online, it never occured to me that someone would have a file format for it. So I took a look.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-mm-file&quot;&gt;What is a .mm file?&lt;/h2&gt;
+&lt;p&gt;It turns out, a &lt;code class=&quot;highlighter-rouge&quot;&gt;.mm&lt;/code&gt; file is just some XML describing the mind map. Here is a simple mind map:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/mindmap-simple.png&quot; alt=&quot;Simple Mind Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And again as a &lt;code class=&quot;highlighter-rouge&quot;&gt;.mm&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;map&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;version=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0.9.0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;node&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;TEXT=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Master Node&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;FOLDED=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;POSITION=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;right&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ID=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5d2d02b1a315dd0879f48c1c&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;X_COGGLE_POSX=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;X_COGGLE_POSY=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;edge&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;COLOR=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#b4b4b4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;font&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;NAME=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Helvetica&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;SIZE=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;17&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;node&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;TEXT=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Child branch&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;FOLDED=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;POSITION=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;right&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ID=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;f72704969525d2a0333dd635&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;edge&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;COLOR=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#7aa3e5&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;font&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;NAME=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Helvetica&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;SIZE=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;15&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;node&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;TEXT=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Children 1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;FOLDED=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;POSITION=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;right&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ID=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;c83826af506cae6e55761d5c&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;edge&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;COLOR=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#7ea7e5&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;font&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;NAME=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Helvetica&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;SIZE=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;13&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/node&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;node&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;TEXT=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Children 2&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;FOLDED=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;POSITION=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;right&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ID=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;47723a4d0fb766863f70d204&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;edge&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;COLOR=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#82aae7&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;font&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;NAME=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Helvetica&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;SIZE=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;13&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/node&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/node&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/node&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/map&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Neat, right?&lt;/p&gt;
+
+&lt;h2 id=&quot;what-can-we-do-with-it&quot;&gt;What can we do with it?&lt;/h2&gt;
+&lt;p&gt;I have not done much research about this because I wanted to work all of this out on my own. But I know one thing as a fact: working with XML sucks (especially in Python). I decided that this would be much better if I could load &lt;code class=&quot;highlighter-rouge&quot;&gt;.mm&lt;/code&gt; files as JSON. This would allow easy manipulation and some cool projects.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-script&quot;&gt;My script&lt;/h2&gt;
+&lt;p&gt;Like everything I do, I made a script to play with these files.&lt;/p&gt;
+
+&lt;p&gt;It’s pretty simple. First, It loads a &lt;code class=&quot;highlighter-rouge&quot;&gt;.mm&lt;/code&gt; file, then parses it into a &lt;code class=&quot;highlighter-rouge&quot;&gt;list&lt;/code&gt; of &lt;code class=&quot;highlighter-rouge&quot;&gt;xml.etree.ElementTree.Element&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;raw_mm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;raw_mm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ET&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fromstring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;raw_mm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The parsed &lt;code class=&quot;highlighter-rouge&quot;&gt;list&lt;/code&gt; is then passed into a recursive function that constructs a &lt;code class=&quot;highlighter-rouge&quot;&gt;dict&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;xmlToDict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;TEXT&quot;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attrib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
+        
+        &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attrib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'TEXT'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;json_element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;            
+            &lt;span class=&quot;n&quot;&gt;json_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;children&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xmlToDict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
+        
+        &lt;span class=&quot;c1&quot;&gt;# Detect node type
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;children&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;json_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;branch&quot;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;json_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;leaf&quot;&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;del&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;children&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        
+        &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json_element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, the &lt;code class=&quot;highlighter-rouge&quot;&gt;dict&lt;/code&gt; is written to a file with &lt;code class=&quot;highlighter-rouge&quot;&gt;json.dump&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dump&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mind_map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;.json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;w&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The whole script (with comments) can be found on my &lt;a href=&quot;https://gist.github.com/Ewpratten/0d8f7c7371380c9ca8adcfc6502ccf84#file-parser-py&quot;&gt;GitHub account&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-output&quot;&gt;The output&lt;/h2&gt;
+&lt;p&gt;Running the &lt;code class=&quot;highlighter-rouge&quot;&gt;.mm&lt;/code&gt; file from above through the script gives:&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Master Node&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;children&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Child branch&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;children&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Children 1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;leaf&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Children 2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;leaf&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;branch&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;branch&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-next-step&quot;&gt;The next step&lt;/h2&gt;
+&lt;p&gt;This script just translates a &lt;code class=&quot;highlighter-rouge&quot;&gt;.mm&lt;/code&gt; file to JSON. Nothing else. Next, I want to convert this to a library, and add a JSON to &lt;code class=&quot;highlighter-rouge&quot;&gt;.mm&lt;/code&gt; function as well. This leads into my ultimate goal for this project.&lt;/p&gt;
+
+&lt;p&gt;I want a script that I can drop in the root of any project to build a &lt;a href=&quot;https://gource.io/&quot;&gt;Gource&lt;/a&gt;-style visualization of the folder structure. This will give me a way to make cool visualizations for lessons on the robotics team.&lt;/p&gt;</content><author><name></name></author><summary type="html">While working on an assignment with Coggle today, I noticed an interesting option in the save menu. Download as .mm file. Having rarely worked with mind maps before, and only doing it online, it never occured to me that someone would have a file format for it. So I took a look.</summary></entry><entry><title type="html">Taking a look back at GMAD</title><link href="http://0.0.0.0:4000/blog/2019/07/13/lookback-gmad" rel="alternate" type="text/html" title="Taking a look back at GMAD" /><published>2019-07-13T10:43:00-04:00</published><updated>2019-07-13T10:43:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/07/13/Lookback-GMAD</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/07/13/lookback-gmad">&lt;p&gt;One day, back in June of 2018, I was both looking for a new project to work on, and trying to decide which Linux distro to install on one of my computers. From this, a little project was born. &lt;a href=&quot;/gmad&quot;&gt;Give Me a Distro&lt;/a&gt; (or, GMAD, as I like to call it) is a little website that chooses a random distribution of Linux and shows a description of what you are about to get yourself into, and a download link for the latest ISO.&lt;/p&gt;
 
 &lt;h2 id=&quot;backend-tech&quot;&gt;Backend tech&lt;/h2&gt;
 &lt;p&gt;This is one of the simplest projects I have ever made. All the backend does is:&lt;/p&gt;
@@ -481,15 +595,4 @@ __&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&g
   &lt;li&gt;Have mentors do “guest presentations”&lt;/li&gt;
   &lt;li&gt;Dedicate a day to robot driving lessons&lt;/li&gt;
   &lt;li&gt;Use a custom library with wrappers and tools built by me to provide easy interfaces for new programmers&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Over the past two years (2018 / 2019), I have been a member of my school’s FRC team, Raider Robotics. Specifically, a programmer.</summary></entry><entry><title type="html">I made a new song!</title><link href="http://0.0.0.0:4000/blog/2019/06/17/amm2m1-release" rel="alternate" type="text/html" title="I made a new song!" /><published>2019-06-17T06:20:00-04:00</published><updated>2019-06-17T06:20:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/06/17/AMM2M1-release</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/06/17/amm2m1-release">&lt;p&gt;I am currently taking a class in school called &lt;a href=&quot;https://www.facebook.com/studio225beal/&quot;&gt;Music and computers (AMM2M)&lt;/a&gt;, where as part of the class, whe get together into bands, and produce a song. After taking a break from music production for over a year, we have released our song for the class (we do two songs, but the second is not finished yet).&lt;/p&gt;
-
-&lt;h2 id=&quot;my-contribution&quot;&gt;My contribution&lt;/h2&gt;
-&lt;p&gt;My main contribution to the project was a mix of live drumming, and most of the song’s MIDI work. The song is far from perfect, but pretty good for the time we had to produce it.&lt;/p&gt;
-
-&lt;h2 id=&quot;just-give-me-the-song&quot;&gt;Just give me the song!&lt;/h2&gt;
-&lt;p&gt;Ok. Ok. Here is the song:&lt;/p&gt;
-
-&lt;audio controls=&quot;&quot;&gt;
-&lt;source src=&quot;/assets/audio/SpamPhoneCalls.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
-Your browser does not support audio players
-&lt;/audio&gt;</content><author><name></name></author><summary type="html">I am currently taking a class in school called Music and computers (AMM2M), where as part of the class, whe get together into bands, and produce a song. After taking a break from music production for over a year, we have released our song for the class (we do two songs, but the second is not finished yet).</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Over the past two years (2018 / 2019), I have been a member of my school’s FRC team, Raider Robotics. Specifically, a programmer.</summary></entry></feed>
