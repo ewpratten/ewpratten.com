@@ -1,77 +1,69 @@
-<!DOCTYPE html>
-<html>
-
 {% include head.html %}
 
 <body>
 
-    {% include header.html %}
+    <div class="site-ctr">
+        <!-- Navbar -->
+        {% include nav.html %}
 
-    <!-- Banner -->
-    <section id="banner" class="major" style="height:90vh">
-        <div class="inner">
-            <header class="major">
-                <h1>{{ page.landing-title }}</h1>
-            </header>
-            <div class="content">
-                <p >{{ site.description }}</p>
+        <!-- Header -->
+        <div class="header" style="height:50vh">
+            <div class="home-header">
             </div>
         </div>
-    </section>
 
-    <!-- Main -->
-    <div id="main">
-
-        <section id="two" style="background-color:#586e75">
-                <div class="inner">
-                    <header class="major">
-                        <h2>About Me</h2>
-                    </header>
-                    <p>{{site.about}}</p>
-                    
+        <div class="reactive-bg">
+            <div class="home container">
+                <div class="profile">
+                    <img src="{{site.baseurl}}/assets/images/profile_pic.jpg">
                 </div>
-            </section>
 
-            <section id="two">
-                    <div class="inner">
-                        <header class="major">
-                            <h3>Featured Projects</h3>
-                            <p>My favorite projects</p>
-                        </header>
-    
-                        <ul>
-                        {% for project in site.my_projects limit:3%}
-                            <li><h3><a href="{{ project.url | relative_url }}" class="link" >{{ project.slug }} {{ project.tag }}</a></h3></li>
-                        {% endfor %}
-                        </ul>
-    
+
+                <div class="info">
+                    <h1>{{site.title}}</h1>
+                    <hr>
+                    <div class="tagline">
+                        <br><br>
+                        <h2>Who am I?</h2>
+                        <p>{{site.about}}</p>
+
+                        <br><br>
+                        <h2>Languages</h2>
+
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="15"
+                                aria-valuemin="0" aria-valuemax="100">Python</div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 30%"
+                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Java</div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 10%" aria-valuenow="20"
+                                aria-valuemin="0" aria-valuemax="100">C</div>
+                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 20%"
+                                aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Other</div>
+                        </div>
+
+                        <br>
+                        <p>I have been programming since 2013, and started learning with Python3.<br>
+                            Since then, I have picked up many other languages, and am currently mainly using Python,
+                            Java, and C.<br>
+                            I am working on learning a few new languages, including Ruby at the moment.</p>
+
+                        <br><br>
+                        <h2>Projects</h2>
+
+                        <p>
+                            To learn more about the projects I work on, check out my Projects page
+                        </p>
+
+                        <a href="{{site.baseurl}}/projects">
+                            <button type="button" class="btn btn-success">View Page</button>
+                        </a>
                     </div>
-                </section>
-
-
-        <section id="two" style="background-color:#657b83">
-                <div class="inner">
-                    <header class="major">
-                        <h3>Blog</h3>
-                        <p>Here are my three most recent posts</p>
-                    </header>
-
-                    <ul>
-                    {% for post in site.posts limit:3 %}
-                        <li><h3><a href="{{ post.url | relative_url  }}" class="link" title="{{ post.date }}">{{ post.title }}</a></h3></li>
-                    {% endfor %}
-                    </ul>
-                    <a href="all_posts.html" class="button next">View All</a>
 
                 </div>
-            </section>
+            </div>
+        </div>
 
     </div>
-
-    
-
     {% include footer.html %}
 
 </body>
-
-</html>

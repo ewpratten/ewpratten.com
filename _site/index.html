@@ -1,199 +1,121 @@
-<!DOCTYPE html>
-<html>
-
 <head>
     <title>Evan Pratten</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <!-- <link rel="stylesheet" href="/assets/css/custom.css" /> -->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
 
-    <!-- Syntax highlight -->
-    <link rel="stylesheet" href="/assets/css/vs.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/github-syntax.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Wrapper -->
-<div id="wrapper">
-
-    <!-- Header -->
-    <header id="header" style="filter:blur" class="alt">
-        <a href="/" class="logo"><strong>Evan Pratten</strong> <span>retrylife</span></a>
-        <nav>
-            <!-- <a href="#menu">Menu</a> -->
-        </nav>
-    </header>
-
-    <!-- Menu -->
-    <!-- <nav id="menu">
-	<ul class="links">
-        
-		    
-		
-		    
-		
-		    
-		
-		    
-		
-		    
-		        <li><a href="http://0.0.0.0:4000//">Home</a></li>
-	    	
-		
-		    
-		
-		    
-		
-		    
-		
-		
-		    
-		
-		    
-		
-		    
-		        <li><a href="http://0.0.0.0:4000/all_posts">All posts</a></li>
-		    
-		
-		    
-		
-		    
-		
-		    
-		
-		    
-		
-		    
-		
-	</ul>
-	<ul class="actions vertical">
-		<li><a href="#" class="button special fit">Get Started</a></li>
-		<li><a href="#" class="button fit">Log In</a></li>
-	</ul>
-</nav> -->
-
-    <!-- Banner -->
-    <section id="banner" class="major" style="height:90vh">
-        <div class="inner">
-            <header class="major">
-                <h1>Hi, I am Evan Pratten</h1>
-            </header>
-            <div class="content">
-                <p>Computer wizard, student, <a href="https://github.com/frc5024">@frc5024</a> programming team lead, and radio enthusiast.</p>
+    <div class="site-ctr">
+        <!-- Navbar -->
+        <nav class="navbar navbar-dark sticky-top bg-dark navbar-expand-lg">
+    <!-- Navbar content -->
+    <div class="container">
+        <a class="navbar-brand" href="/">Evan Pratten</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/blog">Blog</a>
+                <a class="nav-item nav-link" href="/projects">Projects</a>
+                <a class="nav-item nav-link" href="/about">About</a>
             </div>
         </div>
-    </section>
+    </div>
+</nav>
 
-    <!-- Main -->
-    <div id="main">
+        <!-- Header -->
+        <div class="header" style="height:50vh">
+            <div class="home-header">
+            </div>
+        </div>
 
-        <section id="two" style="background-color:#586e75">
-                <div class="inner">
-                    <header class="major">
-                        <h2>About Me</h2>
-                    </header>
-                    <p>I am a 16 year old programming student. I enjoy learning new concepts, building projects out of random ideas and obscure technologies, and working with new tools.  My projects range from building tools to help me with school work, and robotics, to radios and video production.</p>
-                    
+        <div class="reactive-bg">
+            <div class="home container">
+                <div class="profile">
+                    <img src="/assets/images/profile_pic.jpg">
                 </div>
-            </section>
 
-            <section id="two">
-                    <div class="inner">
-                        <header class="major">
-                            <h3>Featured Projects</h3>
-                            <p>My favorite projects</p>
-                        </header>
-    
-                        <ul>
-                        
-                            <li><h3><a href="/projects/ThriftyField" class="link">ThriftyField [PI3D]</a></h3></li>
-                        
-                            <li><h3><a href="/projects/DevDNS" class="link">DevDNS [PI3D]</a></h3></li>
-                        
-                            <li><h3><a href="/projects/DeepSpace" class="link">DeepSpace </a></h3></li>
-                        
-                        </ul>
-    
+
+                <div class="info">
+                    <h1>Evan Pratten</h1>
+                    <hr>
+                    <div class="tagline">
+                        <br><br>
+                        <h2>Who am I?</h2>
+                        <p>I am a 16 year old programming student. I enjoy learning new concepts,  building projects out of random ideas and obscure technologies, and working with new tools.  My projects range from building tools to help me with school work, and robotics, to radios  and video production.</p>
+
+                        <br><br>
+                        <h2>Languages</h2>
+
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="15"
+                                aria-valuemin="0" aria-valuemax="100">Python</div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 30%"
+                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Java</div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 10%" aria-valuenow="20"
+                                aria-valuemin="0" aria-valuemax="100">C</div>
+                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 20%"
+                                aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Other</div>
+                        </div>
+
+                        <br>
+                        <p>I have been programming since 2013, and started learning with Python3.<br>
+                            Since then, I have picked up many other languages, and am currently mainly using Python,
+                            Java, and C.<br>
+                            I am working on learning a few new languages, including Ruby at the moment.</p>
+
+                        <br><br>
+                        <h2>Projects</h2>
+
+                        <p>
+                            To learn more about the projects I work on, check out my Projects page
+                        </p>
+
+                        <a href="/projects">
+                            <button type="button" class="btn btn-success">View Page</button>
+                        </a>
                     </div>
-                </section>
-
-
-        <section id="two" style="background-color:#657b83">
-                <div class="inner">
-                    <header class="major">
-                        <h3>Blog</h3>
-                        <p>Here are my three most recent posts</p>
-                    </header>
-
-                    <ul>
-                    
-                        <li><h3><a href="/blog/2019/07/15/mindmap" class="link" title="2019-07-15 14:38:00 -0400">Mind map generation with Python</a></h3></li>
-                    
-                        <li><h3><a href="/blog/2019/07/13/lookback-gmad" class="link" title="2019-07-13 10:43:00 -0400">Taking a look back at GMAD</a></h3></li>
-                    
-                        <li><h3><a href="/blog/2019/07/06/scrapingfrcgithub" class="link" title="2019-07-06 11:08:00 -0400">Scraping FRC team's GitHub accounts to gather large amounts of data</a></h3></li>
-                    
-                    </ul>
-                    <a href="all_posts.html" class="button next">View All</a>
 
                 </div>
-            </section>
+            </div>
+        </div>
 
     </div>
-
-    
-
-    <!-- Footer -->
-<footer id="footer">
-    <div class="inner">
-        <ul class="icons">
-            
-            <li><a href="https://twitter.com/ewpratten" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-                  
-            <li><a href="https://gitlab.com/u/ewpratten" class="icon alt fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
-             
-            <li><a href="https://github.com/ewpratten" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-              
-
-            <li><a href="/feed.xml" class="icon alt fa-rss" target="_blank"><span class="label">RSS</span></a></li>
-        </ul>
-        <ul class="copyright">
-            <li>© Evan Pratten</li>
-            <li>Design based from: <a href="https://html5up.net" target="_blank">HTML5 UP</a>
-</li>
-
-        </ul>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <!-- Navbar content -->
+    <div class="container">
+        <span class="navbar-text">
+            Site design by: <a href="https://retrylife.ca">Evan Pratten</a>
+        </span>
     </div>
-</footer>
+</nav>
 
-</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
-<!-- Scripts -->
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/jquery.scrolly.min.js"></script>
-<script src="/assets/js/jquery.scrollex.min.js"></script>
-<script src="/assets/js/skel.min.js"></script>
-<script src="/assets/js/util.js"></script>
-<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="/assets/js/main.js"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74118570-2"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-74118570-2');
-</script>
+<svg class="ffhidden">
+    <filter id='sharpBlur'>
+        <feGaussianBlur stdDeviation='2'></feGaussianBlur>
+        <feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0'></feColorMatrix>
+        <feComposite in2='SourceGraphic' operator='in'></feComposite>
+    </filter>
+</svg>
 
 </body>
-
-</html>

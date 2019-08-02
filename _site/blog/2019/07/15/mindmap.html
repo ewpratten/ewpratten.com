@@ -1,102 +1,61 @@
-<!DOCTYPE html>
-<html>
-
 <head>
     <title>Evan Pratten</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <!-- <link rel="stylesheet" href="/assets/css/custom.css" /> -->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
 
-    <!-- Syntax highlight -->
-    <link rel="stylesheet" href="/assets/css/vs.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/github-syntax.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-	<!-- Wrapper -->
-<div id="wrapper">
+    <div class="site-ctr">
+        <!-- Navbar -->
+        <nav class="navbar navbar-dark sticky-top bg-dark navbar-expand-lg">
+    <!-- Navbar content -->
+    <div class="container">
+        <a class="navbar-brand" href="/">Evan Pratten</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/blog">Blog</a>
+                <a class="nav-item nav-link" href="/projects">Projects</a>
+                <a class="nav-item nav-link" href="/about">About</a>
+            </div>
+        </div>
+    </div>
+</nav>
 
-    <!-- Header -->
-    <header id="header" style="filter:blur" >
-        <a href="/" class="logo"><strong>Evan Pratten</strong> <span>retrylife</span></a>
-        <nav>
-            <!-- <a href="#menu">Menu</a> -->
-        </nav>
-    </header>
+        <!-- Header -->
+        <div class="header">
+            <div class="container">
+                <div class="content">
+                    <!-- <h1>Mind map generation with Python</h1>
+                    <h3>Step 1</h3>
+                    <br>
+                    <p>2019-07-15 14:38:00 -0400</p> -->
+                </div>
+            </div>
+            <div class="header-gap"></div>
+        </div>
 
-    <!-- Menu -->
-    <!-- <nav id="menu">
-	<ul class="links">
-        
-		    
-		
-		    
-		
-		    
-		
-		    
-		
-		    
-		        <li><a href="http://0.0.0.0:4000//">Home</a></li>
-	    	
-		
-		    
-		
-		    
-		
-		    
-		
-		
-		    
-		
-		    
-		
-		    
-		        <li><a href="http://0.0.0.0:4000/all_posts">All posts</a></li>
-		    
-		
-		    
-		
-		    
-		
-		    
-		
-		    
-		
-		    
-		
-	</ul>
-	<ul class="actions vertical">
-		<li><a href="#" class="button special fit">Get Started</a></li>
-		<li><a href="#" class="button fit">Log In</a></li>
-	</ul>
-</nav> --> 
-	
-	<section id="banner" class="major" style="height:40vh">
-			<div class="inner">
-				<header class="major">
-					<h1>Mind map generation with Python</h1>
-				</header>
-				<div class="content">
-						<p >Step 1</p>
-						
-					</div>
-			</div>
-		</section>
-    
-    
-<!-- Main -->
-<div id="main" class="alt">
+        <div class="reactive-bg">
+            <div class="post container">
+                <h1>Mind map generation with Python</h1>
+                <h4>Step 1</h4>
+                <hr>
+                <p><em>2019-07-15 14:38:00 -0400</em></p>
 
-<!-- One -->
-<section id="one">
-	<div class="inner">
-		
-		<p><p>While working on an assignment with <a href="https://coggle.it">Coggle</a> today, I noticed an interesting option in the save menu. <em>Download as .mm file</em>. Having rarely worked with mind maps before, and only doing it online, it never occured to me that someone would have a file format for it. So I took a look.</p>
+                <br>
+                
+                <p>While working on an assignment with <a href="https://coggle.it">Coggle</a> today, I noticed an interesting option in the save menu. <em>Download as .mm file</em>. Having rarely worked with mind maps before, and only doing it online, it never occured to me that someone would have a file format for it. So I took a look.</p>
 
 <h2 id="what-is-a-mm-file">What is a .mm file?</h2>
 <p>It turns out, a <code class="highlighter-rouge">.mm</code> file is just some XML describing the mind map. Here is a simple mind map:</p>
@@ -211,58 +170,36 @@
 <p>This script just translates a <code class="highlighter-rouge">.mm</code> file to JSON. Nothing else. Next, I want to convert this to a library, and add a JSON to <code class="highlighter-rouge">.mm</code> function as well. This leads into my ultimate goal for this project.</p>
 
 <p>I want a script that I can drop in the root of any project to build a <a href="https://gource.io/">Gource</a>-style visualization of the folder structure. This will give me a way to make cool visualizations for lessons on the robotics team.</p>
-</p>
-	</div>
-</section>
 
-</div>
+            </div>
+        </div>
 
-    <!-- Footer -->
-<footer id="footer">
-    <div class="inner">
-        <ul class="icons">
-            
-            <li><a href="https://twitter.com/ewpratten" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-                  
-            <li><a href="https://gitlab.com/u/ewpratten" class="icon alt fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
-             
-            <li><a href="https://github.com/ewpratten" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-              
-
-            <li><a href="/feed.xml" class="icon alt fa-rss" target="_blank"><span class="label">RSS</span></a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; Evan Pratten</li>
-            <li>Design based from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
-
-        </ul>
     </div>
-</footer>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <!-- Navbar content -->
+    <div class="container">
+        <span class="navbar-text">
+            Site design by: <a href="https://retrylife.ca">Evan Pratten</a>
+        </span>
+    </div>
+</nav>
 
-</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
-<!-- Scripts -->
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/jquery.scrolly.min.js"></script>
-<script src="/assets/js/jquery.scrollex.min.js"></script>
-<script src="/assets/js/skel.min.js"></script>
-<script src="/assets/js/util.js"></script>
-<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="/assets/js/main.js"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74118570-2"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-74118570-2');
-</script>
+<svg class="ffhidden">
+    <filter id='sharpBlur'>
+        <feGaussianBlur stdDeviation='2'></feGaussianBlur>
+        <feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0'></feColorMatrix>
+        <feComposite in2='SourceGraphic' operator='in'></feComposite>
+    </filter>
+</svg>
 
 </body>
-
-</html>

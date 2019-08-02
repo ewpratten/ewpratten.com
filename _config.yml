@@ -1,50 +1,27 @@
-# site settings
 title: Evan Pratten
-subtitle: retrylife
-email: ewpratten@gmail.com
-description: Computer wizard, student, <a href="https://github.com/frc5024">@frc5024</a> programming team lead, and radio enthusiast.
+description: >- # this means to ignore newlines until "baseurl:"
+  Computer wizard, student, <a href="https://frc5024.github.io">@frc5024</a> 
+  programming team lead, and radio enthusiast.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://retrylife.ca
-author:
-street_address: 
-city:
-state:
-zip_code:
-country: 
-phone:
+url: "https://retrylife.ca" # the base hostname & protocol for your site, e.g. http://example.com
 
 about: >-
-  I am a 16 year old programming student. I enjoy learning new concepts, building projects out of random ideas and obscure technologies, and working with new tools. 
-  My projects range from building tools to help me with school work, and robotics, to radios and video production.
-
-# Google analytics
-analytic_track: UA-74118570-2
-
-# homepage tiles
-tiles-source: posts # accepts "posts" or "pages"
-tiles-count: 10
+  I am a 16 year old programming student. I enjoy learning new concepts, 
+  building projects out of random ideas and obscure technologies, and working with new tools. 
+  My projects range from building tools to help me with school work, and robotics, to radios 
+  and video production.
 
 permalink: /blog/:year/:month/:day/:slug
 
-# social settings
-500px_url:
-facebook_url:
-github_url: https://github.com/ewpratten
-gitlab_url: https://gitlab.com/u/ewpratten
-googleplus_url: 
-instagram_url: 
-linkedin_url: 
-pinterest_url:
-slack_url:
-twitter_url: https://twitter.com/ewpratten
+# Social
+twitter_username: ewpratten
+github_username:  ewpratten
+devrant_username: ewpratten
+gitlab_username: ewpratten
+rtlgit_username: ewpratten
+keybase_username: ewpratten
 
-# Collections data
-collections:
-  my_projects:
-    output: true
-    permalink: /projects/:title
-
-# build settings
+# Build settings
 markdown: kramdown
 kramdown:
   input: GFM
@@ -52,12 +29,22 @@ kramdown:
 
 highlighter: rouge
 
-sass:
-  style: compressed
-
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-redirect-from # https://github.com/jekyll/jekyll-redirect-from
   - jemoji
   - jekyll-mentions
   - jekyll-seo-tag
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

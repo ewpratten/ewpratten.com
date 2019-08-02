@@ -1,59 +1,26 @@
-<!-- Footer -->
-<footer id="footer">
-    <div class="inner">
-        <ul class="icons">
-            {% if site.twitter_url %}
-            <li><a href="{{ site.twitter_url }}" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-            {% endif %} {% if site.googleplus_url %}
-            <li><a href="{{ site.googleplus_url }}" class="icon alt fa-google-plus" target="_blank"><span class="label">Google+</span></a></li>
-            {% endif %} {% if site.facebook_url %}
-            <li><a href="{{ site.facebook_url }}" class="icon alt fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-            {% endif %} {% if site.instagram_url %}
-            <li><a href="{{ site.instagram_url }}" class="icon alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-            {% endif %} {% if site.pinterest_url %}
-            <li><a href="{{ site.pinterest_url }}" class="icon alt fa-pinterest" target="_blank"><span class="label">Pinterest</span></a></li>
-            {% endif %} {% if site.500px_url %}
-            <li><a href="{{ site.500px_url }}" class="icon alt fa-500px" target="_blank"><span class="label">500px</span></a></li>
-            {% endif %} {% if site.gitlab_url %}
-            <li><a href="{{ site.gitlab_url }}" class="icon alt fa-gitlab" target="_blank"><span class="label">GitLab</span></a></li>
-            {% endif %} {% if site.github_url %}
-            <li><a href="{{ site.github_url }}" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-            {% endif %} {% if site.slack_url %}
-            <li><a href="{{ site.slack_url }}" class="icon alt fa-slack" target="_blank"><span class="label">Slack</span></a></li>
-            {% endif %} {% if site.linkedin_url %}
-            <li><a href="{{ site.linkedin_url }}" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-            {% endif %}
-
-            <li><a href="/feed.xml" class="icon alt fa-rss" target="_blank"><span class="label">RSS</span></a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; {{ site.title }}</li>
-            <li>Design based from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
-
-        </ul>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <!-- Navbar content -->
+    <div class="container">
+        <span class="navbar-text">
+            Site design by: <a href="https://retrylife.ca">Evan Pratten</a>
+        </span>
     </div>
-</footer>
+</nav>
 
-</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
-<!-- Scripts -->
-<script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/jquery.scrolly.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/jquery.scrollex.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/skel.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/util.js"></script>
-<!--[if lte IE 8]><script src="{{site.baseurl}}/assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="{{site.baseurl}}/assets/js/main.js"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytic_track }}"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', '{{ site.analytic_track }}');
-</script>
+<svg class="ffhidden">
+    <filter id='sharpBlur'>
+        <feGaussianBlur stdDeviation='2'></feGaussianBlur>
+        <feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 9 0'></feColorMatrix>
+        <feComposite in2='SourceGraphic' operator='in'></feComposite>
+    </filter>
+</svg>

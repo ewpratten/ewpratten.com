@@ -33,13 +33,10 @@
 </nav>
 
         <!-- Header -->
-        <div class="header">
+        <div class="header" style="height:35%">
             <div class="container">
                 <div class="content">
-                    <!-- <h1>devDNS</h1>
-                    <h3>The DNS over devRant service</h3>
-                    <br>
-                    <p>2019-07-01 18:13:00 -0400</p> -->
+                    <!-- <h1>My Projects</h1> -->
                 </div>
             </div>
             <div class="header-gap"></div>
@@ -47,47 +44,62 @@
 
         <div class="reactive-bg">
             <div class="post container">
-                <h1>devDNS</h1>
-                <h4>The DNS over devRant service</h4>
+                <h1>My Projects</h1>
                 <hr>
-                <p><em>2019-07-01 18:13:00 -0400</em></p>
 
-                <br>
                 
-                <p>Over the past year and a half, I have been hacking my way around the undocumented <a href="https://devrant.com">devRant</a> auth/write API. At the request of devRant’s creators, this API must not be documented due to the way logins work on the platform. That is besides the point. I have been working on a little project called <a href="https://devrant.com/collabs/2163502">devDNS</a> over the past few days that uses this undocumented API. Why must I be so bad at writing intros?</p>
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="https://i.ytimg.com/vi/aifZLWQ_N7U/maxresdefault.jpg" class="card-img" alt="Project image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">DeepSpace Offseason Codebase</h5>
+                                <p class="card-text">This is the code behind <a href="https://frc5024.github.io">@frc5024</a>'s robot for the 2019 offseason. I have spent a large amount of my free time adding every feature that I wished we had during the season as a way to familiarize myself with the WPIlib Java API.</p>
+                                <a href="https://github.com/frc5024/DeepSpace-SWI">
+                                    <button type="button" class="btn btn-info">View Project</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<h2 id="what-is-devdns">What is devDNS</h2>
-<p>devDNS is a devRant bot written in python. It will serve any valid DNS query from any user on the platform. A query is just a comment in one of the following forms:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@devDNS example.com
-</code></pre></div></div>
-<p>or</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@devDNS MX example.com
-</code></pre></div></div>
-<p>Of course, <code class="highlighter-rouge">MX</code> and <code class="highlighter-rouge">example.com</code> are to be replaced with the domain and entry of your choosing.</p>
+                <br><br>
 
-<p>devDNS was inspired by <a href="https://twitter.com/1111resolver">@1111Resolver</a>, and the source is available on <a href="https://github.com/Ewpratten/devDNS">GitHub</a>.</p>
+                <div class="card-deck">
+                    
+                    <div class="card">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">ThriftyField</h5>
+                            <p class="card-text">ThriftyField is an open source replacement for the FIRST FMS software. This tool allows mass control over robots, along with real-time scoring and an audience display.</p>
+                            <a href="https://github.com/frc5024/ThriftyField">
+                                <button type="button" class="btn btn-info">View Project</button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">DevDNS</h5>
+                            <p class="card-text">DevDNS is a <a href="https://devrant.com/">devRant</a> bot for resolving DNS queries send via devRant’s comments system.</p>
+                            <a href="https://github.com/Ewpratten/devDNS">
+                                <button type="button" class="btn btn-info">View Project</button>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
 
-<h2 id="how-it-works">How it works</h2>
-<p>The Python script behind devDNS is very simple. devDNS does the following every 10 seconds:</p>
-<ul>
-  <li>Fetch all new notifs</li>
-  <li>Find only mentions</li>
-  <li>Spin off a thread for each mention that passes a basic parser (Is the message 2 or 3 words long)</li>
-  <li>In the thread, check if the message is a control message (allows me to view the status of the bot via devRant)</li>
-  <li>Check if the request matches a required pattern</li>
-  <li>Call <code class="highlighter-rouge">dnspython</code> with requested record and domain</li>
-  <li>Receive answer from a custom <a href="https://pi-hole.net/">PIHole</a> server with caching and super low latency</li>
-  <li>Send a comment with the results to the requester</li>
-</ul>
-
-<p>Thats it! Super simple, and only two days from concept to reality.</p>
-
-<h2 id="where-is-this-hosted">Where is this hosted?</h2>
-<p>This program is hosted on a raspberry pi laying in my room running docker. I also have <a href="https://www.portainer.io/">Portainer</a> set up so I can easily monitor the bot from my phone over my VPN.</p>
+                <br><br>
+                <div class="centre">
+                    <p>This site is still under development. More projects will be listed soon.</p>
+                </div>
 
             </div>
         </div>
-
     </div>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
     <!-- Navbar content -->
@@ -109,5 +121,6 @@
         <fecomposite in2="SourceGraphic" operator="in"></fecomposite>
     </filter>
 </svg>
+
 
 </body>

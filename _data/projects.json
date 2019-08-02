@@ -1,0 +1,22 @@
+{
+    "featured":{
+        "name":"DeepSpace Offseason Codebase",
+        "description":"This is the code behind <a href='https://frc5024.github.io'>@frc5024</a>'s robot for the 2019 offseason. I have spent a large amount of my free time adding every feature that I wished we had during the season as a way to familiarize myself with the WPIlib Java API.",
+        "url":"https://github.com/frc5024/DeepSpace-SWI",
+        "image":"https://i.ytimg.com/vi/aifZLWQ_N7U/maxresdefault.jpg"
+    },
+    "other":[
+        {
+            "name":"ThriftyField",
+            "description":"ThriftyField is an open source replacement for the FIRST FMS software. This tool allows mass control over robots, along with real-time scoring and an audience display.",
+            "url":"https://github.com/frc5024/ThriftyField",
+            "image":""
+        },
+        {
+            "name":"DevDNS",
+            "description":"DevDNS is a <a href='https://devrant.com/'>devRant</a> bot for resolving DNS queries send via devRant’s comments system.",
+            "url":"https://github.com/Ewpratten/devDNS",
+            "image":""
+        }
+    ]
+}
