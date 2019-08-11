@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
 
 This file contains the timestamp of the *Signed* update to this website along 
 with a listing of all hosted files for that release. This allows you to verify
@@ -6,7 +9,7 @@ posted on this site via stolen credentials or forcefully by another person,
 that change will not be listed here. 
 
 
--------- BEGIN LISTINGS --------
+- -------- BEGIN LISTINGS --------
 ################################
 TIMESTAMP: 2019-08-10 21:24:00 +0000
 UPDATE BY: Evan Pratten
@@ -31,4 +34,15 @@ Added signing
 ################################
 
 
---------- END LISTINGS ---------
+- --------- END LISTINGS ---------
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCgAdFiEEclMG7LWwKSk5GlFuk6x7PQcTVtMFAl1Pbt8ACgkQk6x7PQcT
+VtOkvAf8DYm9v0D4JgX16+mrksUqBHcvMCtpQEo1+Y4nRi0f3SAVjjkUBqcyCY3m
+syjsjJcvZN5ztu3QNlNzy3FB9OKdUXKSTKbjfGFHZXC+cLrioUwu6HiNEaCl3ssi
+IoN29pK2Ffdlh4UK01xisMJpWXLA0edSeEpg2G2GnjKq54GbvfeL22OKhAea0A+p
+vasWUi64OnqmA1Pz6HetSWHpW/39biJxHDPCvWEFr9HVcCl11V8tcoYxuPrYXDO7
+uaS6no2hzppmyKBOR2IvQoQAUScp9AWzE5Le+1kU+cA8Q89uzKtecZRc8Jl7BvPr
+cNLwDOp+yXyBDgaWIPa2VdUDOjKibw==
+=KBBu
+-----END PGP SIGNATURE-----

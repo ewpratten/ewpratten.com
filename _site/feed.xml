@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-08-10T17:12:51-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://frc5024.github.io&quot;&gt;@frc5024&lt;/a&gt;  programming team lead, and radio enthusiast.</subtitle><entry><title type="html">Mind map generation with Python</title><link href="http://0.0.0.0:4000/blog/2019/07/15/mindmap" rel="alternate" type="text/html" title="Mind map generation with Python" /><published>2019-07-15T14:38:00-04:00</published><updated>2019-07-15T14:38:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/07/15/MindMap</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/07/15/mindmap">&lt;p&gt;While working on an assignment with &lt;a href=&quot;https://coggle.it&quot;&gt;Coggle&lt;/a&gt; today, I noticed an interesting option in the save menu. &lt;em&gt;Download as .mm file&lt;/em&gt;. Having rarely worked with mind maps before, and only doing it online, it never occured to me that someone would have a file format for it. So I took a look.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-08-10T21:26:56-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://frc5024.github.io&quot;&gt;@frc5024&lt;/a&gt;  programming team lead, and radio enthusiast.</subtitle><entry><title type="html">My weird piece of EDC</title><link href="http://0.0.0.0:4000/blog/2019/08/10/why-i-carry-nfc" rel="alternate" type="text/html" title="My weird piece of EDC" /><published>2019-08-10T16:57:00-04:00</published><updated>2019-08-10T16:57:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/08/10/Why-I-Carry-NFC</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/08/10/why-i-carry-nfc">&lt;p&gt;Im back with a quick little post about something I cary with me everywhere I go, EDC (Every-Day Carry) if you will.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-this-started&quot;&gt;How this started&lt;/h2&gt;
+&lt;p&gt;Earlier this year, my friend @retrax24 showed me a piece of “fake ID” he was given as a joke. After some experimentation, he noticed that, upon tapping it to his phone, he would get an error message about an un-formatted card.&lt;/p&gt;
+
+&lt;p&gt;After hearing of this, I opened up &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.wakdev.nfctools.pro&quot;&gt;NFC Tools&lt;/a&gt; on my phone and started playing. We had quite some fun with &lt;a href=&quot;#shenanigans&quot;&gt;various settings and data&lt;/a&gt;, and I decided that I wanted a card too. I send a message to someone that I knew worked with these, and got myself 4 to play with.&lt;/p&gt;
+
+&lt;h2 id=&quot;shenanigans&quot;&gt;Shenanigans&lt;/h2&gt;
+&lt;p&gt;Upon figuring out how to write to @retrax24’s card, we started out simple. We sent bits of text to eachother, and I eventually sent him a copy of my contact information, and bitcoin address. Then, came the real fun..&lt;/p&gt;
+
+&lt;p&gt;By setting the data type to &lt;code class=&quot;highlighter-rouge&quot;&gt;external link&lt;/code&gt;, and the content to &lt;a href=&quot;https://www.youtube.com/watch?v=dQw4w9WgXcQ&quot;&gt;this totally not suspicious URL&lt;/a&gt;, we now had the perfect tool for derailing a lesson. An automatic &lt;a href=&quot;https://en.wikipedia.org/wiki/Rickrolling&quot;&gt;Rick Roll&lt;/a&gt; card. Upon tapping this card to a phone, the youtube app would auto-play &lt;em&gt;Rick Astley’s Never Gonna Give You Up&lt;/em&gt;. After this discovery, people started asking to buy pre-configured cards from me :laughing:.&lt;/p&gt;
+
+&lt;p&gt;After this came even more fun ideas:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Enabling flashlights&lt;/li&gt;
+  &lt;li&gt;Rebooting phones&lt;/li&gt;
+  &lt;li&gt;Calling phone numbers&lt;/li&gt;
+  &lt;li&gt;Sending texts&lt;/li&gt;
+  &lt;li&gt;Filling phones with fake contacts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;practical-use&quot;&gt;Practical use&lt;/h2&gt;
+&lt;p&gt;I don’t actually carry my cards around for messing with people but instead, use them for things like:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cloning hotel access cards (being in a room of 4 with only 2 cards)&lt;/li&gt;
+  &lt;li&gt;Creating login cards for school printers (so I don’t have to log in manually)&lt;/li&gt;
+  &lt;li&gt;Sharing small amounts of data and links between phones&lt;/li&gt;
+  &lt;li&gt;Giving my contact info to people&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks to the NFC Tools app, pretty much everything is 3 taps and a swipe away. I strongly recommend picking up some cards for yourself if wou work with a large number of NFC-compatible systems.&lt;/p&gt;
+
+&lt;h2 id=&quot;an&quot;&gt;A/N&lt;/h2&gt;
+&lt;p&gt;Occasionally, I either have nothing in the works, or am working on some very boring and technical projects, so I look to post some fun content like this. Currently the latter of the options is true, and I wanted a quick break from writing networking code.&lt;/p&gt;
+
+&lt;p&gt;Let me know what you think of this type of content!&lt;/p&gt;</content><author><name></name></author><summary type="html">Im back with a quick little post about something I cary with me everywhere I go, EDC (Every-Day Carry) if you will.</summary></entry><entry><title type="html">Mind map generation with Python</title><link href="http://0.0.0.0:4000/blog/2019/07/15/mindmap" rel="alternate" type="text/html" title="Mind map generation with Python" /><published>2019-07-15T14:38:00-04:00</published><updated>2019-07-15T14:38:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/07/15/MindMap</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/07/15/mindmap">&lt;p&gt;While working on an assignment with &lt;a href=&quot;https://coggle.it&quot;&gt;Coggle&lt;/a&gt; today, I noticed an interesting option in the save menu. &lt;em&gt;Download as .mm file&lt;/em&gt;. Having rarely worked with mind maps before, and only doing it online, it never occured to me that someone would have a file format for it. So I took a look.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-is-a-mm-file&quot;&gt;What is a .mm file?&lt;/h2&gt;
 &lt;p&gt;It turns out, a &lt;code class=&quot;highlighter-rouge&quot;&gt;.mm&lt;/code&gt; file is just some XML describing the mind map. Here is a simple mind map:&lt;/p&gt;
@@ -543,56 +578,4 @@ __&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&g
 &lt;p&gt;Many questions I worked on involved extracting a key from a binary. I employed two vastly different tools for this job. First, a standard linux tool, &lt;code class=&quot;highlighter-rouge&quot;&gt;strings&lt;/code&gt;. When passed a filename, it will extract and print all human-readable strings it can find to the terminal. The flag is usually in this dump. If not, I use the second tool. &lt;a href=&quot;https://www.nsa.gov/resources/everyone/ghidra/&quot;&gt;Ghidra&lt;/a&gt;, an open-source reverse engineering tool designed by the NSA. I used this tool a fair amount during my quick attempt at GCTF.&lt;/p&gt;
 
 &lt;h2 id=&quot;will-i-do-this-again&quot;&gt;Will I do this again?&lt;/h2&gt;
-&lt;p&gt;Yes! The CTF was very fun to try, and I will definitely give it a proper shot next time.&lt;/p&gt;</content><author><name></name></author><summary type="html">Honestly, I completely forgot that this was the weekend of Google’s online CTF Qualifications for 2019 and was late, unprepared, busy, and did not have a team to work with.</summary></entry><entry><title type="html">What I have learned from 2 years of FRC programming</title><link href="http://0.0.0.0:4000/blog/2019/06/21/robot-experiences" rel="alternate" type="text/html" title="What I have learned from 2 years of FRC programming" /><published>2019-06-21T11:14:00-04:00</published><updated>2019-06-21T11:14:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/06/21/Robot-Experiences</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/06/21/robot-experiences">&lt;p&gt;Over the past two years (2018 / 2019), I have been a member of my school’s &lt;a href=&quot;https://www.firstinspires.org/robotics/frc&quot;&gt;FRC&lt;/a&gt; team, &lt;a href=&quot;frc5024.github.io&quot;&gt;Raider Robotics&lt;/a&gt;. Specifically, a programmer.&lt;/p&gt;
-
-&lt;h2 id=&quot;my-roles&quot;&gt;My roles&lt;/h2&gt;
-&lt;p&gt;In my first year, I joined the team as a programmer and had a fun time learning about embedded programming and development with hardware. Then, in my second year, I was promoted to programming co-lead along with &lt;a href=&quot;https://github.com/slownie&quot;&gt;@slownie&lt;/a&gt;. I much preferred my second season because I had a better understanding of the technology I was working with, and we got to play with some cool tools throughout the season.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-i-have-learned&quot;&gt;What I have learned&lt;/h2&gt;
-&lt;p&gt;Starting with our 2018 season, PowerUP. We learned early on that there is a practical limit to the number of programmers that 5024 can handle. That year, we had too many, and our situation was not helped by the fact that some members preferred scrolling through Instagram over writing code. This issue was almost entirely fixed by the introduction of a mandatory skill exam at the start of the season. Sam and I did not really care about the scores of the exam because, from reading the results, we could see who was actually motivated to join the team. Thanks to the test, we entered the season with seven excited programmers.&lt;/p&gt;
-
-&lt;p&gt;During the PowerUP season, I also learned the importance of student involvement. Most of the code from the season was written by mentors with the students just watching on a projecter. After talking with other team members, I learned that none of them through this was a good method of teaching, and many felt powerless. In the 2019 season, I completely reversed this. All students worked together on the codebase, and the mentors worked on other projects and provided input where needed.&lt;/p&gt;
-
-&lt;h3 id=&quot;version-control&quot;&gt;Version Control&lt;/h3&gt;
-&lt;p&gt;During the 2018 season, code was shared around by USB. This lead to crazy conflicts, confusion over what was running on the robot, and general frustration during competitions. In 2019, I moved the team over to a &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt; organization account and sent an email to support to get us unlimited private repos (thanks GitHub!). For the team members that where not comfortable in the terminal, I set them up with &lt;a href=&quot;https://www.gitkraken.com/&quot;&gt;GitKracken PRO&lt;/a&gt; accounts, and they enjoyed using the program. The rest of us stuck with GIT cli, or various plugins for VSCode.&lt;/p&gt;
-
-&lt;h3 id=&quot;alpha-test&quot;&gt;Alpha test&lt;/h3&gt;
-&lt;p&gt;I got our team on board with the 2019 toolchain alpha test the week it was released in order to get everyone used to the new tools before the season (and help find bugs for the WPILib team). The new buildsystem, Gradle, worked great and I could even run it on the chromebook I was using for development at the time! To further assist the team, I set up a CI pipeline for automatic testing and code reviews of Pull Requests, and a doxygen + GitHub pages CD pipeline for our new documentation webpage.&lt;/p&gt;
-
-&lt;h3 id=&quot;webdocs&quot;&gt;Webdocs&lt;/h3&gt;
-&lt;p&gt;A significant amount of my time was spent answering repetitive questions from the team. I enjoy helping people out, but explaining the same things over and over was starting to frustrate me. This was caused by a lack of documentation or bits of documentation spread over multiple websites. To solve this problem, I started the &lt;a href=&quot;https://frc5024.github.io/webdocs/#/&quot;&gt;Webdocs Page&lt;/a&gt;. This website is designed to house a mix of team-specific notes, guides, low-level documentation, and documentation from all FRC vendors. This site was published after the season, so I will find out how usefull it really is during the 2020 season.&lt;/p&gt;
-
-&lt;h3 id=&quot;command-base&quot;&gt;Command base&lt;/h3&gt;
-&lt;p&gt;“Command based programming is great. But…” is probably the best way to describe my suggested changes for 2020.&lt;/p&gt;
-
-&lt;p&gt;I have been learning from other teams, and from mentors about better ways to control our robot. During the offseason, I am playing with new ways to write robot code. Here are some of my changes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use a custom replacement for WPILib’s &lt;a href=&quot;https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/command/Subsystem.html&quot;&gt;Subsystem&lt;/a&gt; that buffers it’s inputs and outputs
-    &lt;ul&gt;
-      &lt;li&gt;This reduces load on our CAN and Ethernet networks&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Offload all camera and vision work to a Raspberry PI&lt;/li&gt;
-  &lt;li&gt;Every subsystem must push telemetry data to NetworkTables for easy debugging and detailed logs&lt;/li&gt;
-  &lt;li&gt;Use a custom logging system that buffers writes to stdout. This reduces network strain&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I am working on many other changes over on the &lt;a href=&quot;https://github.com/frc5024/MiniBot&quot;&gt;MiniBot&lt;/a&gt; codebase.&lt;/p&gt;
-
-&lt;h2 id=&quot;my-plans-for-2020&quot;&gt;My plans for 2020&lt;/h2&gt;
-&lt;p&gt;I have been re-selected to be the sole lead of the 5024 programming team for 2020. Here are my goals:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Switch the team from C++ to Java
-    &lt;ul&gt;
-      &lt;li&gt;Easier for prototyping&lt;/li&gt;
-      &lt;li&gt;Better memory management for high-level programmers&lt;/li&gt;
-      &lt;li&gt;Better documentation from vendors&lt;/li&gt;
-      &lt;li&gt;It is taught in our school’s compsci classes&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Remove the skills exam in favour of weekly homework for the first 8 weeks&lt;/li&gt;
-  &lt;li&gt;Provide writeups of lessons&lt;/li&gt;
-  &lt;li&gt;Have mentors do “guest presentations”&lt;/li&gt;
-  &lt;li&gt;Dedicate a day to robot driving lessons&lt;/li&gt;
-  &lt;li&gt;Use a custom library with wrappers and tools built by me to provide easy interfaces for new programmers&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">Over the past two years (2018 / 2019), I have been a member of my school’s FRC team, Raider Robotics. Specifically, a programmer.</summary></entry></feed>
+&lt;p&gt;Yes! The CTF was very fun to try, and I will definitely give it a proper shot next time.&lt;/p&gt;</content><author><name></name></author><summary type="html">Honestly, I completely forgot that this was the weekend of Google’s online CTF Qualifications for 2019 and was late, unprepared, busy, and did not have a team to work with.</summary></entry></feed>
