@@ -26,6 +26,37 @@ body{
 
 }
 
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+}
+
+table th,
+table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+table tbody {
+    vertical-align: inherit;
+}
+
+table td {
+    border-bottom: 1px solid #dee2e6;
+}
+
+thead th {
+    color: #495057;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .header .container {
     height: 100%;
     display: flex;
@@ -57,8 +88,8 @@ a h5 {
     padding: 20px;
     font-family: 'IBM Plex Sans', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 15px;
-    transform: translateY(-30px);
+    /* border-radius: 15px;
+    transform: translateY(-30px); */
     background-color: #fff;
 
 }
