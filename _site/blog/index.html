@@ -42,7 +42,7 @@
             </div>
             <div class="header-gap"></div>
         </div> -->
-
+        
         <div class="reactive-bg">
             <div class="post container" >
                 <h1>Blog Posts</h1>
@@ -58,15 +58,30 @@
                             Featured Post
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">My weird piece of EDC</h5>
-                            <p class="card-text">Reasons why I always carry NFC cards with me</p>
-                            <a href="/blog/2019/08/10/why-i-carry-nfc" class="btn btn-primary">View</a>
+                            <h5 class="card-title">How I set up ひらがな input on my laptop</h5>
+                            <p class="card-text">I3wm makes everything 10x harder than it should be</p>
+                            <a href="/blog/2019/08/12/setting-up-ja" class="btn btn-primary">View</a>
                         </div>
                     </div>
                 </div>
                 <div style="height:50px"></div>
                 <div class="list-group" id="posts">
                     <a href="#posts" class="list-group-item list-group-item-action list-group-item-dark">Other Posts</a>
+                    
+                    
+                    
+
+                
+
+
+                    <a href="/blog/2019/08/10/why-i-carry-nfc" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">My weird piece of EDC</h5>
+                            <!-- <small>2019-08-10 16:57:00 -0400</small> -->
+                        </div>
+                        <p class="card-text">Reasons why I always carry NFC cards with me</p>
+                    </a>
+
                     
                     
                     
@@ -315,20 +330,20 @@
         </div>
     </div>
     <div class="container">
-        <hr>
+    <hr>
 </div>
-    <nav class="navbar  navbar-expand-lg ">
+<nav class="navbar  navbar-expand-lg ">
 
-        <!-- Navbar content -->
-        <div class="container">
-            
-            <span class="navbar-text">
-                Site design by: <a href="https://retrylife.ca">Evan Pratten</a> |
-                
-                This site was last updated at: 2019-08-11 14:41:50 -0400
-            </span>
-        </div>
-    </nav>
+    <!-- Navbar content -->
+    <div class="container">
+
+        <span class="navbar-text">
+            Site design by: <a href="https://retrylife.ca">Evan Pratten</a> |
+
+            This site was last updated at: 2019-08-12 19:42:30 -0400
+        </span>
+    </div>
+</nav>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -340,6 +355,28 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+<!-- Offsets for links -->
+<script>
+    (function ($, window) {
+        var adjustAnchor = function () {
+
+            var $anchor = $(':target'),
+                fixedElementHeight = 100;
+
+            if ($anchor.length > 0) {
+
+                window.scrollTo(0, $anchor.offset().top - fixedElementHeight);
+            }
+
+        };
+
+        $(window).on('hashchange load', function () {
+            adjustAnchor();
+        });
+
+    })(jQuery, window);
+</script>
 
 
 </body>

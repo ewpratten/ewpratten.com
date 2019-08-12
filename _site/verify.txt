@@ -8,6 +8,13 @@ that change will not be listed here.
 
 -------- BEGIN LISTINGS --------
 ################################
+TIMESTAMP: 2019-08-12 19:40:00
+UPDATE BY: Evan Pratten
+
+NOTABLE CHANGES:
+Languages blog post
+
+################################
 TIMESTAMP: 2019-08-10 21:24:00 +0000
 UPDATE BY: Evan Pratten
 

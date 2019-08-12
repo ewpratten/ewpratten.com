@@ -11,6 +11,13 @@ that change will not be listed here.
 
 - -------- BEGIN LISTINGS --------
 ################################
+TIMESTAMP: 2019-08-12 19:40:00
+UPDATE BY: Evan Pratten
+
+NOTABLE CHANGES:
+Languages blog post
+
+################################
 TIMESTAMP: 2019-08-10 21:24:00 +0000
 UPDATE BY: Evan Pratten
 
@@ -37,12 +44,12 @@ Added signing
 - --------- END LISTINGS ---------
 -----BEGIN PGP SIGNATURE-----
 
-iQEzBAEBCgAdFiEEclMG7LWwKSk5GlFuk6x7PQcTVtMFAl1QYWYACgkQk6x7PQcT
-VtN+sAf+MsRWY9Ra/HFsAQP8L/9oxAZYwJcpG+Ez8YndJfzF6H5T/uV2EWLhifCz
-4YZIpTH6/lOWwi+eUE7kGgfTURz+Uqr9g4P0S5bRPeKWN7J+IdgCeP30eie+Ca2Y
-z/Wrz/4Dcy11IoerSEfqcze9VMJGLfrGc59Z5Ci/rGVu153l0w7SFshnvDcxEp42
-uZY6ItTOavt1Yl+C3A6BazJh9ZtE0yGFTZbiq1pXJ4AoHnJQx/lBdMD4/ujtrSck
-Kn36yTi7iFoJEt0gSlGb4IgIjjNrgqnqakkJf/eupFUFxYygABXFCoZjrVupHkll
-YusiBE5oFqOzUaHyTcEGd3MFH9ny/Q==
-=Z/lI
+iQEzBAEBCgAdFiEEclMG7LWwKSk5GlFuk6x7PQcTVtMFAl1R+V4ACgkQk6x7PQcT
+VtNbnQf8DRYU8sUePjkJ1hag+uvXJZ/Rm5i9SYR3u2yS2tQ9uTSTGmETtc4fYyCg
+Y15x+w0OqTFZTw0Psu+HvU2Vg2u8ab05Ru/SL+QgAD268rRoyPXzsIF6jpeIF4RT
+BkxrAgJ0OycyuLSfPlvn+2xTw3FkTiriAFhao/QPrKmCagvtU37Y/phxnN8YTKYQ
+MinKMsSz16m3osdKAD++D4MmAIV9bfmh/+DI1y4bMhDGHsUrcdYV3CCIEVYyGneb
+0y6anFK+7QKngFPfyBdutTksVL0+Y79ppjI40u6Icollvl6hRwGLeHzN3Aja0xWN
+2o3oeUUX7imTtapnVC1DtQ6eYpZ7Bw==
+=iWv1
 -----END PGP SIGNATURE-----

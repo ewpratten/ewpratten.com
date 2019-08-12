@@ -81,20 +81,20 @@
 
     </div>
     <div class="container">
-        <hr>
+    <hr>
 </div>
-    <nav class="navbar  navbar-expand-lg ">
+<nav class="navbar  navbar-expand-lg ">
 
-        <!-- Navbar content -->
-        <div class="container">
-            
-            <span class="navbar-text">
-                Site design by: <a href="https://retrylife.ca">Evan Pratten</a> |
-                
-                This site was last updated at: 2019-08-11 14:41:50 -0400
-            </span>
-        </div>
-    </nav>
+    <!-- Navbar content -->
+    <div class="container">
+
+        <span class="navbar-text">
+            Site design by: <a href="https://retrylife.ca">Evan Pratten</a> |
+
+            This site was last updated at: 2019-08-12 19:42:30 -0400
+        </span>
+    </div>
+</nav>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -106,5 +106,27 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+<!-- Offsets for links -->
+<script>
+    (function ($, window) {
+        var adjustAnchor = function () {
+
+            var $anchor = $(':target'),
+                fixedElementHeight = 100;
+
+            if ($anchor.length > 0) {
+
+                window.scrollTo(0, $anchor.offset().top - fixedElementHeight);
+            }
+
+        };
+
+        $(window).on('hashchange load', function () {
+            adjustAnchor();
+        });
+
+    })(jQuery, window);
+</script>
 
 </body>
