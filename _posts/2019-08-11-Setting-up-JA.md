@@ -72,7 +72,7 @@ export QT_IM_MODULE=ibus
 ibus-daemon -d -x
 ```
 
-It turns out that this [causes issues with some browsers](https://github.com/ibus/ibus/issues/2020), so I actually put this in my `~/.profile` instead:
+It turns out that this [causes issues with some browsers](https://github.com/ibus/ibus/issues/2020), so I actually put *this* in my `~/.profile` instead:
 ```bash
 # Language support
 export GTK_IM_MODULE=xim
