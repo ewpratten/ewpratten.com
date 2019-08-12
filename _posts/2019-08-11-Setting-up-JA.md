@@ -62,7 +62,7 @@ Now, go to the *Input Method* settings.
 From here, press the `+`, and add your language(s).
 
 
-## Configuring profile
+## Configuring .profile
 According to the Wiki page, I needed to add the following to my `~/.profile`:
 ```bash
 # Language support
