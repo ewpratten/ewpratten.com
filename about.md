@@ -25,11 +25,14 @@ sub   rsa4096/0xA61A2F1676E35144 2019-08-11 [] [expires: 2025-08-09]
 
 The following is my key history:
 
+<div class="table-fix" markdown="1">
+
 | Fingerprint | Sign date | Expiration | Links |
 |--|--|--|--|
-| 3D98479ADE4285A321F66DE4DAB279176352D880 | 2019-08-10 | When Revoked | [MIT](http://pgp.mit.edu/pks/lookup?search=0xDAB279176352D880&op=index) \| [Ubuntu Keyserver](http://keyserver.ubuntu.com/pks/lookup?search=0xDAB279176352D880&fingerprint=on&op=index) |
-| DD15BE72F652984AED9EC03356F5A6FB5A8EEF90 | 2017-12-08 | Revoked | [OpenPGP.org](https://keys.openpgp.org/search?q=0x56F5A6FB5A8EEF90) \| [Ubuntu Keyserver](http://keyserver.ubuntu.com/pks/lookup?search=0x56F5A6FB5A8EEF90&fingerprint=on&op=index) | 
+| 3D98 479A DE42 85A3 21F6 6DE4 DAB2 7917 6352 D880 | 2019-08-10 | When Revoked | [MIT](http://pgp.mit.edu/pks/lookup?search=0xDAB279176352D880&op=index) <br> [Ubuntu Keyserver](http://keyserver.ubuntu.com/pks/lookup?search=0xDAB279176352D880&fingerprint=on&op=index) |
+| DD15 BE72 F652 984A ED9E C033 56F5 A6FB 5A8E EF90 | 2017-12-08 | Revoked | [OpenPGP.org](https://keys.openpgp.org/search?q=0x56F5A6FB5A8EEF90) <br> [Ubuntu Keyserver](http://keyserver.ubuntu.com/pks/lookup?search=0x56F5A6FB5A8EEF90&fingerprint=on&op=index) | 
 
+</div>
 
 ## My social
 I exist in various places around the internet. Mainly:
