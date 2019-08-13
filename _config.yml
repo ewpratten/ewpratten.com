@@ -13,6 +13,8 @@ about: >-
 
 permalink: /blog/:year/:month/:day/:slug
 
+ga_analytics: UA-74118570-2
+
 # Social
 twitter_username: ewpratten
 github_username:  ewpratten
