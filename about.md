@@ -35,10 +35,54 @@ The following is my key history:
 I exist in various places around the internet. Mainly:
 
  - [Twitter](https://twitter.com/{{site.twitter_username}})
- - [Devrant](https://devrant.com/users/{{site.devrant_username}})
+ - <a data-toggle="modal" data-target="#devrant-disclaimer" href="">devRant</a>
  - [GitHub](https://github.com/{{site.github_username}})
  - [GitLab](https://gitlab.com/{{site.gitlab_username}})
  - [RetryLife Git](https://git.retrylife.ca/{{site.rtlgit_username}})
  - [Keybase](https://keybase.com/{{site.keybase_username}})
- - Snapchat (available upon request)
+ - <a data-toggle="modal" data-target="#snapcode" href="">Snapchat</a>
 
+
+
+<!-- devRant disclaimer -->
+<div class="modal fade" id="devrant-disclaimer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Disclaimer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        devRant is a community specifically designed for people to anonymously rant and complain about anything from jobs, to life in general.
+        <br><br>
+        I choose not to keep myself anonymous on the platform, but this does not mean that I treat it as a professional social media account. Being in the <a href="https://alicepeters.de/devrant/">top 20 users</a>, I get a reasonable amount of attention on the platform, and sometimes exaggerate opinions, join trends, make obscure jokes, and generally have fun with my account. If you are looking for a higher level or professionalism from my posts, take a look at my <a href="https://twitter.com/{{site.twitter_username}}">Twitter account</a>. 
+        <br><br>
+        If you are ok with this type of content, feel free to take a look at my posts, and join the conversations!
+      </div>
+      <div class="modal-footer">
+        <a href="https://devrant.com/users/{{site.devrant_username}}"><button type="button" class="btn btn-primary">Sounds Good!</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- snapcode -->
+<div class="modal fade" id="snapcode" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Snapchat</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="align-contents:center; text-align: center">
+      <!-- Snapcode -->
+        <img src="/assets/images/snapcode-full.png" style="margin:auto;">
+        <h4><em>slabs5225</em></h4>
+      </div>
+    </div>
+  </div>
+</div>
