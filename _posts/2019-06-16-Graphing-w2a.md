@@ -57,6 +57,6 @@ with plt.xkcd():
 ```
 
 ## The result
-Here is the resulting image. From left, to right: 5024, 254, 2224, 5406, 2056
+Here is the resulting image. From left, to right: 5024, 254, 1114, 5406, 2056
 
 ![Thr result](/assets/images/w2a.png)
