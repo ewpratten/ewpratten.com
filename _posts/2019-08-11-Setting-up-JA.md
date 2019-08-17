@@ -19,7 +19,9 @@ Im not sure if this matters, but I have seen other people do it, so why not be s
 
 I am currently running a stock Ubuntu [18.04]() base, which means that everything is pre-configured for Gnome. To set language support in Gnome, pull up the settings panel:
 ```bash
-# This line fixes some compatibility issues between Gnome and I3 when launching the settings menu. I recommend aliasing it.
+# This line fixes some compatibility issues between 
+# Gnome and I3 when launching the settings menu. 
+# I recommend aliasing it.
 env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
 ```
 
