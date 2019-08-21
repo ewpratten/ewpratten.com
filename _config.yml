@@ -29,10 +29,11 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-collections_dir: collections
-collections:
-  docs:
-    output: true
+# THIS BREAKS THE SITE!!
+# collections_dir: collections
+# collections:
+#   docs:
+#     output: true
 
 highlighter: rouge
 

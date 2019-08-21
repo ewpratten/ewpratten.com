@@ -33,16 +33,70 @@
         <!-- </div> -->
     </div>
 </nav>
+        <!-- <div style="height:5vh"></div> -->
 
-        <div class="reactive-bg">
-            <div class="post container" style="min-height:100vh">
-                <div class="list-group" id="posts">
-                    <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Documentation</a>
-
-                    
+        <!-- Header -->
+        <!-- <div class="header">
+            <div class="container">
+                <div class="content">
                 </div>
             </div>
+            <div class="header-gap"></div>
+        </div> -->
+
+        <div class="reactive-bg">
+            <div class="post container">
+                <h1>I had some fun with a router</h1>
+                <h4>cleartext passwords + external management = death wish</h4>
+                <hr>
+                <p><em>2019-06-27 13:16:00 -0400</em></p>
+
+                <br>
+
+                <p>I was playing around with some D-link routers today and remembered an <a href="https://www.exploit-db.com/exploits/33520">ExploitDB Entry</a> I read a while ago. Many D-link routers have a great feature that allows remote management and configuration queries. Interestingly, this cannot be disabled, and one of the pages contains a cleartext version of the admin password (yay!).</p>
+
+<h2 id="how-to-get-yourself-an-admin-password">How to get yourself an admin password</h2>
+<p>On any supported router, make an HTTP request to <code class="highlighter-rouge">http://your.router.ip.addr/tools_admin.asp/</code>. This will return a pretty large XML file containing information about your router’s hardware and configuration.</p>
+
+<p>Notice the fact that you did not have to log in. This is due to the fact that this file seems to be used by a remote management service of some sort.</p>
+
+<p>The important thing to note here is that, when parsed with the regex pattern: <code class="highlighter-rouge">name="user_password_tmp" value="(.*)"&gt;</code>, you get a single string. This string is the admin password of the device.</p>
+
+<h2 id="supported-routers">Supported routers</h2>
+<p>This is supported by many D-link routers. The ones I know about are:</p>
+<ul>
+  <li>DIR-835</li>
+  <li>DIR-855L</li>
+  <li>DGL-5500</li>
+</ul>
+
+<p>Some routers have this XML file, but it is restricted… By a user without a password. These are:</p>
+<ul>
+  <li>DHP-1565</li>
+  <li>DIR-652</li>
+</ul>
+
+<h2 id="pwnlink">PWNlink</h2>
+<p>Like everything I play with, I made a script to do this all for me (and spent a large amount of time adding colours to the text).</p>
+
+<p>My script is called PWNlink (PWN + D-link), It automatically finds a router on your network by looking for a specific DNS entry created by many D-link routers, then checking your gateway. Next, PWNlink reads you router’s <code class="highlighter-rouge">hnap1</code> config to find it’s model number. If supported, the script will read and parse the appropriate configs to give you the admin credentials for your router.</p>
+
+<p>PWNlink can be installed on any *nix computer that has both <code class="highlighter-rouge">python3.7</code> and <code class="highlighter-rouge">python3-pip</code> installed. To install PWNlink, run:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install pwnlink
+</code></pre></div></div>
+
+<p>Run the script without any arguments for automatic detection, or pass any IP address to use manual detection.</p>
+
+<h2 id="disclamier-thingy">Disclamier thingy</h2>
+<p>I don’t see much point to these, but I should probably put one anyways.</p>
+
+<p><strong>Don’t be dumb with this script.</strong></p>
+
+<p>I have only used it on my own (or 5024’s) routers, and did not create PWNlink with any malicious intent.</p>
+
+            </div>
         </div>
+
     </div>
     <div class="container">
     <hr>
@@ -111,6 +165,5 @@
         console.log('callback - particles.js config loaded');
     });
 </script>
-
 
 </body>

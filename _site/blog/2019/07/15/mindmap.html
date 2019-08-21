@@ -1,0 +1,244 @@
+<head>
+    <title>Evan Pratten</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/github-syntax.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="site-ctr">
+        <!-- Navbar -->
+        <nav class="navbar navbar-dark sticky-top bg-dark navbar-expand-lg">
+    <!-- Navbar content -->
+    <!-- <div class="container"> -->
+    <a class="navbar-brand" href="/">Evan Pratten</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="/blog">Blog</a>
+            <a class="nav-item nav-link" href="/projects">Projects</a>
+            <!-- <a class="nav-item nav-link" href="/documentation">Documentation</a> -->
+            <a class="nav-item nav-link" href="/about">About</a>
+        </div>
+        <!-- </div> -->
+    </div>
+</nav>
+        <!-- <div style="height:5vh"></div> -->
+
+        <!-- Header -->
+        <!-- <div class="header">
+            <div class="container">
+                <div class="content">
+                </div>
+            </div>
+            <div class="header-gap"></div>
+        </div> -->
+
+        <div class="reactive-bg">
+            <div class="post container">
+                <h1>Mind map generation with Python</h1>
+                <h4>Step 1</h4>
+                <hr>
+                <p><em>2019-07-15 14:38:00 -0400</em></p>
+
+                <br>
+
+                <p>While working on an assignment with <a href="https://coggle.it">Coggle</a> today, I noticed an interesting option in the save menu. <em>Download as .mm file</em>. Having rarely worked with mind maps before, and only doing it online, it never occured to me that someone would have a file format for it. So I took a look.</p>
+
+<h2 id="what-is-a-mm-file">What is a .mm file?</h2>
+<p>It turns out, a <code class="highlighter-rouge">.mm</code> file is just some XML describing the mind map. Here is a simple mind map:</p>
+
+<p><img src="/assets/images/mindmap-simple.png" alt="Simple Mind Map" /></p>
+
+<p>And again as a <code class="highlighter-rouge">.mm</code> file:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;map</span> <span class="na">version=</span><span class="s">"0.9.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;node</span> <span class="na">TEXT=</span><span class="s">"Master Node"</span> <span class="na">FOLDED=</span><span class="s">"false"</span> <span class="na">POSITION=</span><span class="s">"right"</span> <span class="na">ID=</span><span class="s">"5d2d02b1a315dd0879f48c1c"</span> <span class="na">X_COGGLE_POSX=</span><span class="s">"0"</span> <span class="na">X_COGGLE_POSY=</span><span class="s">"0"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;edge</span> <span class="na">COLOR=</span><span class="s">"#b4b4b4"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;font</span> <span class="na">NAME=</span><span class="s">"Helvetica"</span> <span class="na">SIZE=</span><span class="s">"17"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;node</span> <span class="na">TEXT=</span><span class="s">"Child branch"</span> <span class="na">FOLDED=</span><span class="s">"false"</span> <span class="na">POSITION=</span><span class="s">"right"</span> <span class="na">ID=</span><span class="s">"f72704969525d2a0333dd635"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;edge</span> <span class="na">COLOR=</span><span class="s">"#7aa3e5"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;font</span> <span class="na">NAME=</span><span class="s">"Helvetica"</span> <span class="na">SIZE=</span><span class="s">"15"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;node</span> <span class="na">TEXT=</span><span class="s">"Children 1"</span> <span class="na">FOLDED=</span><span class="s">"false"</span> <span class="na">POSITION=</span><span class="s">"right"</span> <span class="na">ID=</span><span class="s">"c83826af506cae6e55761d5c"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;edge</span> <span class="na">COLOR=</span><span class="s">"#7ea7e5"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;font</span> <span class="na">NAME=</span><span class="s">"Helvetica"</span> <span class="na">SIZE=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/node&gt;</span>
+            <span class="nt">&lt;node</span> <span class="na">TEXT=</span><span class="s">"Children 2"</span> <span class="na">FOLDED=</span><span class="s">"false"</span> <span class="na">POSITION=</span><span class="s">"right"</span> <span class="na">ID=</span><span class="s">"47723a4d0fb766863f70d204"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;edge</span> <span class="na">COLOR=</span><span class="s">"#82aae7"</span><span class="nt">/&gt;</span>
+                <span class="nt">&lt;font</span> <span class="na">NAME=</span><span class="s">"Helvetica"</span> <span class="na">SIZE=</span><span class="s">"13"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/node&gt;</span>
+        <span class="nt">&lt;/node&gt;</span>
+    <span class="nt">&lt;/node&gt;</span>
+<span class="nt">&lt;/map&gt;</span>
+</code></pre></div></div>
+
+<p>Neat, right?</p>
+
+<h2 id="what-can-we-do-with-it">What can we do with it?</h2>
+<p>I have not done much research about this because I wanted to work all of this out on my own. But I know one thing as a fact: working with XML sucks (especially in Python). I decided that this would be much better if I could load <code class="highlighter-rouge">.mm</code> files as JSON. This would allow easy manipulation and some cool projects.</p>
+
+<h2 id="my-script">My script</h2>
+<p>Like everything I do, I made a script to play with these files.</p>
+
+<p>It’s pretty simple. First, It loads a <code class="highlighter-rouge">.mm</code> file, then parses it into a <code class="highlighter-rouge">list</code> of <code class="highlighter-rouge">xml.etree.ElementTree.Element</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">raw_mm</span> <span class="o">=</span> <span class="s">""</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="nb">file</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="n">raw_mm</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">fp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">xml</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">raw_mm</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The parsed <code class="highlighter-rouge">list</code> is then passed into a recursive function that constructs a <code class="highlighter-rouge">dict</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">xmlToDict</span><span class="p">(</span><span class="n">xml</span><span class="p">):</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">xml</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="s">"TEXT"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">:</span>
+            <span class="k">continue</span>
+        
+        <span class="n">name</span> <span class="o">=</span> <span class="n">elem</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s">'TEXT'</span><span class="p">]</span>
+        <span class="n">json_element</span> <span class="o">=</span> <span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="n">name</span><span class="p">}</span>
+
+        <span class="k">try</span><span class="p">:</span>            
+            <span class="n">json_element</span><span class="p">[</span><span class="s">"children"</span><span class="p">]</span> <span class="o">=</span> <span class="n">xmlToDict</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">continue</span>
+        
+        <span class="c1"># Detect node type
+</span>        <span class="k">if</span> <span class="n">json_element</span><span class="p">[</span><span class="s">"children"</span><span class="p">]:</span>
+            <span class="n">json_element</span><span class="p">[</span><span class="s">"type"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"branch"</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">json_element</span><span class="p">[</span><span class="s">"type"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"leaf"</span>
+            <span class="k">del</span> <span class="n">json_element</span><span class="p">[</span><span class="s">"children"</span><span class="p">]</span>
+        
+        <span class="n">output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">json_element</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">output</span>
+</code></pre></div></div>
+
+<p>Finally, the <code class="highlighter-rouge">dict</code> is written to a file with <code class="highlighter-rouge">json.dump</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">mind_map</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="nb">file</span> <span class="o">+</span> <span class="s">".json"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>The whole script (with comments) can be found on my <a href="https://gist.github.com/Ewpratten/0d8f7c7371380c9ca8adcfc6502ccf84#file-parser-py">GitHub account</a>.</p>
+
+<h2 id="the-output">The output</h2>
+<p>Running the <code class="highlighter-rouge">.mm</code> file from above through the script gives:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"Master Node"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"children"</span><span class="p">:[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"Child branch"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"children"</span><span class="p">:[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"Children 1"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"leaf"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"Children 2"</span><span class="p">,</span><span class="w">
+                        </span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"leaf"</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"branch"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"branch"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="the-next-step">The next step</h2>
+<p>This script just translates a <code class="highlighter-rouge">.mm</code> file to JSON. Nothing else. Next, I want to convert this to a library, and add a JSON to <code class="highlighter-rouge">.mm</code> function as well. This leads into my ultimate goal for this project.</p>
+
+<p>I want a script that I can drop in the root of any project to build a <a href="https://gource.io/">Gource</a>-style visualization of the folder structure. This will give me a way to make cool visualizations for lessons on the robotics team.</p>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+    <hr>
+</div>
+<nav class="navbar  navbar-expand-lg ">
+
+    <!-- Navbar content -->
+    <div class="container">
+
+        <span class="navbar-text">
+            Site design by: <a href="https://retrylife.ca">Evan Pratten</a> |
+
+            This site was last updated at: 2019-08-21 12:48:55 -0400
+        </span>
+    </div>
+</nav>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+<!-- Offsets for links -->
+<script>
+    (function ($, window) {
+        var adjustAnchor = function () {
+
+            var $anchor = $(':target'),
+                fixedElementHeight = 100;
+
+            if ($anchor.length > 0) {
+
+                window.scrollTo(0, $anchor.offset().top - fixedElementHeight);
+            }
+
+        };
+
+        $(window).on('hashchange load', function () {
+            adjustAnchor();
+        });
+
+    })(jQuery, window);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74118570-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-74118570-2');
+</script>
+
+
+<!-- particles -->
+<script src="/assets/js/particles.min.js"></script>
+<script>
+    particlesJS.load('particles-js', '/assets/js/particles.json', function () {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
+
+</body>

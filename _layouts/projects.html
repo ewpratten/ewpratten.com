@@ -41,30 +41,36 @@
 
                 <br><br>
 
+
+                {% for row in site.data.projects["other"]["rows"] %}
                 <div class="card-deck">
-                    {% for project in site.data.projects["other"] %}
-                    <div class="card">
-                        {% if project.image != "" %}
-                        <img src="{{project.image}}" class="card-img-top" alt="Project image">
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title">{{project.name}}</h5>
-                            <p class="card-text">{{project.description}}</p>
-                            <a href="{{project.url}}">
-                                <button type="button" class="btn btn-info">View Project</button>
-                            </a>
-                        </div>
+                {% for project in row %}
+                <div class="card">
+                    {% if project.image != "" %}
+                    <img src="{{project.image}}" class="card-img-top" alt="Project image">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{project.name}}</h5>
+                        <p class="card-text">{{project.description}}</p>
+                        <a href="{{project.url}}">
+                            <button type="button" class="btn btn-info">View Project</button>
+                        </a>
                     </div>
-                    {% endfor %}
                 </div>
-
-                <br><br>
-                <div class="centre">
-                    <p>This site is still under development. More projects will be listed soon.</p>
-                </div>
-
+                
+                {% endfor %}
             </div>
+            <br><br>
+            {% endfor %}
+
+
+            <br><br>
+            <div class="centre">
+                <p>This site is still under development. More projects will be listed soon.</p>
+            </div>
+
         </div>
+    </div>
     </div>
     {% include footer.html %}
 

@@ -46,29 +46,64 @@
 
         <div class="reactive-bg">
             <div class="post container">
-                <h1>FOSS/L RSS Feeds</h1>
-                <h4>RSS feeds from our blogs</h4>
+                <h1>Using a python script to create devRant posts based on the style and content of another user</h1>
+                <h4>if/else ++</h4>
                 <hr>
-                <p><em></em></p>
+                <p><em>2018-06-27 14:32:00 -0400</em></p>
 
                 <br>
 
-                <h2 id="rss-feed-list">RSS feed list</h2>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://retrylife.ca/feed.xml
-https://blog.mrtnrdl.de/feed.xml
+                <p>Ok… The title is slightly wrong. There are actually 2 scripts.. Sorry about that.</p>
 
+<p>This is a guide on installing and using the <a href="https://github.com/Ewpratten/BecomeRanter">BecomeRanter</a> script.</p>
+
+<h2 id="getting-dependancies">Getting dependancies</h2>
+<p>The scripts use Google’s tensorflow library to do its “magic”. So first, we should install Tensorflow’s dependencies.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install python3 python3-pip #change this command to fit your distro
+pip3 install numpy
+</code></pre></div></div>
+<p>Then install Tensorflow</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install tensorflow #for cpu processing
+pip3 install tensorflow-gpu #for gpu processing
 </code></pre></div></div>
 
-<h2 id="websites">Websites</h2>
+<p>Next up, install the rest of the stuff:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install textgenrnn pandas keras
+</code></pre></div></div>
 
-<ul>
-  <li><a href="https://retrylife.ca">RetryLife.ca</a></li>
-  <li><a href="https://blog.mrtnrdl.de">blog.mrtnrdl.de</a></li>
-  <li><a href="https://artemix.org/">Aretmix.org</a></li>
-  <li><a href="https://eldin.dev">Eldin.dev</a></li>
-  <li><a href="https://much-security.nl/">much-security</a></li>
-  <li><a href="https://hyperlisk.xyz/">Hyperlisk.xyz</a></li>
-</ul>
+<h2 id="clone-the-repo">Clone the repo</h2>
+<p>This is pretty simple. just make sure you have <code class="highlighter-rouge">git</code> installed and run</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/Ewpratten/BecomeRanter.git
+</code></pre></div></div>
+
+<h2 id="generate-some-rants-with-a-hdf5-file">Generate some rants with a .hdf5 file</h2>
+<p>As of the time of writing this, I have pre-generated some files for the two most popular ranters. These files can be found in <code class="highlighter-rouge">BecomeRanter/Checkpoint\ Files</code>.</p>
+
+<p>Higher epoch numbers mean that they have had more time to train. The files with lower numbers are generally funnier.</p>
+
+<p>To change the .hdf5 file you would like to use, open the file called <code class="highlighter-rouge">createsomerants.py</code> and change the variable called <code class="highlighter-rouge">input_file</code> to the path of your file. By default, the script generates from the <code class="highlighter-rouge">Linuxxx-epoch-90.hdf5</code> file.</p>
+
+<p>Next, save that file and run the following in your terminal:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 createsomerants.py &gt;&gt; output.txt
+</code></pre></div></div>
+<p>It will not print the results out to the screen and put them in the file instead.</p>
+
+<p>To stop the script, press CTRL + C</p>
+
+<h2 id="create-your-own-hdf5-file">Create your own .hdf5 file</h2>
+<p>If you want to make your own hdf5 file, you just have to use the other script in the repo.</p>
+
+<p>By default, you can just put all your text to train on in the <code class="highlighter-rouge">input.txt</code> file.</p>
+
+<p>If you want to use a different file, or change the number of epochs, those variables can be found at the top of the <code class="highlighter-rouge">createhfd5frominput.py</code> file.</p>
+
+<p>To start training, run:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 createhfd5frominput.py
+</code></pre></div></div>
+
+<p>A new hdf5 file will be generated in the same folder as the script</p>
+
 
             </div>
         </div>

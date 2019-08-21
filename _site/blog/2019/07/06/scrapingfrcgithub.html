@@ -1,0 +1,231 @@
+<head>
+    <title>Evan Pratten</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/github-syntax.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="site-ctr">
+        <!-- Navbar -->
+        <nav class="navbar navbar-dark sticky-top bg-dark navbar-expand-lg">
+    <!-- Navbar content -->
+    <!-- <div class="container"> -->
+    <a class="navbar-brand" href="/">Evan Pratten</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="/blog">Blog</a>
+            <a class="nav-item nav-link" href="/projects">Projects</a>
+            <!-- <a class="nav-item nav-link" href="/documentation">Documentation</a> -->
+            <a class="nav-item nav-link" href="/about">About</a>
+        </div>
+        <!-- </div> -->
+    </div>
+</nav>
+        <!-- <div style="height:5vh"></div> -->
+
+        <!-- Header -->
+        <!-- <div class="header">
+            <div class="container">
+                <div class="content">
+                </div>
+            </div>
+            <div class="header-gap"></div>
+        </div> -->
+
+        <div class="reactive-bg">
+            <div class="post container">
+                <h1>Scraping FRC team's GitHub accounts to gather large amounts of data</h1>
+                <h4>There are a lot of teams...</h4>
+                <hr>
+                <p><em>2019-07-06 11:08:00 -0400</em></p>
+
+                <br>
+
+                <p>I was curious about the most used languages for FRC, so I build a Python script to find out what they where.</p>
+
+<h2 id="some-basic-data">Some basic data</h2>
+<p>Before we get to the heavy work done by my script, let’s start with some general data.</p>
+
+<p>Thanks to the <a href="https://www.thebluealliance.com/apidocs/v3">TBA API</a>, I know that there are 6917 registered teams. 492 of them have registered at least one account on GitHub.</p>
+
+<h2 id="how-the-script-works">How the script works</h2>
+<p>The script is split into steps:</p>
+<ul>
+  <li>Get a list of every registered team</li>
+  <li>Check for a github account attached to every registered team
+    <ul>
+      <li>If a team has an account, it is added to the dataset</li>
+    </ul>
+  </li>
+  <li>Load each github profile
+    <ul>
+      <li>If it is a private account, move on</li>
+      <li>Use Regex to find all languages used</li>
+    </ul>
+  </li>
+  <li>Compile data and sort</li>
+</ul>
+
+<h3 id="getting-a-list-of-accounts">Getting a list of accounts</h3>
+<p>This is probably the simplest step in the whole process. I used the auto-generated <a href="https://github.com/TBA-API/tba-api-client-python">tbaapiv3client</a> python library’s <code class="highlighter-rouge">get_teams_keys(key)</code> function, and kept incrementing <code class="highlighter-rouge">key</code> until I got an empty array. All returned data was then added together into a big list of team keys.</p>
+
+<h3 id="checking-for-a-teams-github-account">Checking for a team’s github account</h3>
+<p>The <a href="https://www.thebluealliance.com/apidocs/v3">TBA API</a> helpfully provides a <code class="highlighter-rouge">/api/v3/team/&lt;number&gt;/social_media</code> API endpoint that will give the GitHub username for any team you request. (or nothing if they don’t use github)</p>
+
+<p>A <code class="highlighter-rouge">for</code> loop on this with a list of every team number did the trick for finding accounts.</p>
+
+<h3 id="fetching-language-info">Fetching language info</h3>
+<p>To remove the need for an Oauth login to use the script, GitHub data is retrieved using standard HTTPS requests instead of AJAX requests to the API. This gets around the tiny rate limit, but takes a bit longer to complete.</p>
+
+<p>To check for language usage, a simple Regex pattern can be used: <code class="highlighter-rouge">/programmingLanguage"\&gt;(.*)\&lt;/gm</code></p>
+
+<p>When combined with an <code class="highlighter-rouge">re.findall()</code>, this pattern will return a list of all recent languages used by a team.</p>
+
+<h3 id="data-saves--backup-solution">Data saves / backup solution</h3>
+<p>To deal with the fact that large amounts of data are being requested, and people might want to pause the script, I have created a system to allow for “savestates”.</p>
+
+<p>On launch of the script, it will check for a <code class="highlighter-rouge">./data.json</code> file. If this does not exist, one will be created. Otherwise, the contents will be read. This file contains both all the saved data, and some counters.</p>
+
+<p>Each stage of the script contains a counter, and will increment the counter every time a team has been processed. This way, if the script is stopped and restarted, the parsers will just keep working from where they left off. This was very helpful when writing the script as, I needed to stop and start it every time I needed to implement a new feature.</p>
+
+<p>All parsing data is saved to the json file every time the script completes, or it detects a <code class="highlighter-rouge">SIGKILL</code>.</p>
+
+<h2 id="what-i-learned">What I learned</h2>
+<p>After letting the script run for about an hour, I got a bunch of data from every registered team.</p>
+
+<p>This data includes every project (both on and offseason) from each team, so teams that build t-shirt cannons using the CTRE HERO, would have C# in their list of languages. Things like that.</p>
+
+<p>Unsurprisingly, by far the most popular programming language is Java, with 3232 projects. These projects where all mostly, or entirely written in Java. Next up, we have C++ with 725 projects, and Python with 468 projects.</p>
+
+<p>After Java, C++, and Python, we start running in to languages used for dashboards, design, lessons, and offseason projects. Before I get to everything else, here is the usage of the rest of the valid languages for FRC robots:</p>
+<ul>
+  <li>C (128)</li>
+  <li>LabView (153)</li>
+  <li>Kotlin (96)</li>
+  <li>Rust (4)</li>
+</ul>
+
+<p>Now, the rest of the languages below Python:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>295 occurrences of JavaScript
+153 occurrences of LabVIEW
+128 occurrences of C
+96 occurrences of Kotlin
+72 occurrences of Arduino
+71 occurrences of C#
+69 occurrences of CSS
+54 occurrences of PHP
+40 occurrences of Shell
+34 occurrences of Ruby
+16 occurrences of Swift
+16 occurrences of Jupyter Notebook
+15 occurrences of Scala
+12 occurrences of D
+12 occurrences of TypeScript
+9 occurrences of Dart
+8 occurrences of Processing
+7 occurrences of CoffeeScript
+6 occurrences of Go
+6 occurrences of Groovy
+6 occurrences of Objective-C
+4 occurrences of Rust
+3 occurrences of MATLAB
+3 occurrences of R
+1 occurrences of Visual Basic
+1 occurrences of Clojure
+1 occurrences of Cuda
+</code></pre></div></div>
+
+<p>I have removed markup and shell languages from that list because most of them are probably auto-generated.</p>
+
+<p>In terms of github account names, 133 teams follow FRC convention and use a username starting with <code class="highlighter-rouge">frc</code>, followed by their team number, 95 teams use <code class="highlighter-rouge">team</code> then their number, and 264 teams use something else.</p>
+
+<h2 id="using-the-script">Using the script</h2>
+<p>This script is not on PYPI this time. You can obtain a copy from my GitHub repo: <a href="https://github.com/Ewpratten/frc-code-stats">https://github.com/Ewpratten/frc-code-stats</a></p>
+
+<p>First, make sure both <code class="highlighter-rouge">python3.7</code> and <code class="highlighter-rouge">python3-pip</code> are installed on your computer. Next, delete the <code class="highlighter-rouge">data.json</code> file. Then, install the requirements with <code class="highlighter-rouge">pip3 install -r requirements.txt</code>. Finally, run with <code class="highlighter-rouge">python3 main.py</code> to start the script. Now, go outside and enjoy nature for about an hour, and your data should be loaded!.</p>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+    <hr>
+</div>
+<nav class="navbar  navbar-expand-lg ">
+
+    <!-- Navbar content -->
+    <div class="container">
+
+        <span class="navbar-text">
+            Site design by: <a href="https://retrylife.ca">Evan Pratten</a> |
+
+            This site was last updated at: 2019-08-21 12:48:55 -0400
+        </span>
+    </div>
+</nav>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+<!-- Offsets for links -->
+<script>
+    (function ($, window) {
+        var adjustAnchor = function () {
+
+            var $anchor = $(':target'),
+                fixedElementHeight = 100;
+
+            if ($anchor.length > 0) {
+
+                window.scrollTo(0, $anchor.offset().top - fixedElementHeight);
+            }
+
+        };
+
+        $(window).on('hashchange load', function () {
+            adjustAnchor();
+        });
+
+    })(jQuery, window);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74118570-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-74118570-2');
+</script>
+
+
+<!-- particles -->
+<script src="/assets/js/particles.min.js"></script>
+<script>
+    particlesJS.load('particles-js', '/assets/js/particles.json', function () {
+        console.log('callback - particles.js config loaded');
+    });
+</script>
+
+</body>
