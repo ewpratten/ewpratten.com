@@ -1,18 +1,14 @@
-<div class="container">
-    <hr>
+<!-- <div id="particles-js"></div> -->
+
+<div class="container foot" style="text-align:center;">
+    <br>
+    <span class="site-info">
+        Site design by: <a href="https://retrylife.ca">Evan Pratten</a> |
+
+        This site was last updated at: {{site.time}}
+    </span>
 </div>
-<nav class="navbar  navbar-expand-lg ">
 
-    <!-- Navbar content -->
-    <div class="container">
-
-        <span class="navbar-text">
-            Site design by: <a href="https://retrylife.ca">Evan Pratten</a> |
-
-            This site was last updated at: {{site.time}}
-        </span>
-    </div>
-</nav>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -59,6 +55,15 @@
 
 
 <!-- particles -->
+<script>
+    var body = document.body
+
+    var particles = document.getElementById("particles-js")
+
+    particles.style.height  = body.scrollHeight + "px"
+
+    console.log(body.scrollHeight)
+</script>
 <script src="/assets/js/particles.min.js"></script>
 <script>
     particlesJS.load('particles-js', '/assets/js/particles.json', function () {

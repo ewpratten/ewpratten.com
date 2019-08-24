@@ -45,6 +45,18 @@ I exist in various places around the internet. Mainly:
  - [Keybase](https://keybase.com/{{site.keybase_username}})
  - <a data-toggle="modal" data-target="#snapcode" href="">Snapchat</a>
 
+## My gear
+Currently, I use the following hardware:
+
+ - Lenovo T480
+   - 16GB of RAM
+   - 500GB Crucial SSD
+   - 1080p display
+   - Ubuntu 18.04 minimal
+ - Google Pixel 3a XL
+   - Stock android
+ - HP 27es monitor
+
 
 
 <!-- devRant disclaimer -->

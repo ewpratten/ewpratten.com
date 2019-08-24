@@ -10,6 +10,15 @@ body{
 
 }
 
+.foot{
+    
+}
+
+.site-info{
+    color:rgb(199, 195, 195);
+    background-color: #FFF;
+}
+
 .header-gap{
     /* height: 30px;
     background-color: #ebeef1; */
@@ -147,4 +156,31 @@ a h5 {
 .info h1 {
     /* padding: 20px; */
     text-align: left;
+}
+
+/* #particles-js{
+    position: absolute;
+} */
+/* 
+.reactive-bg{
+    position:relative
+} */
+
+#particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+    transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+    width: 100%;
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0
 }
