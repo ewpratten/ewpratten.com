@@ -34,64 +34,71 @@
         <!-- </div> -->
     </div>
 </nav>
+        <!-- <div style="height:5vh"></div> -->
 
         <!-- Header -->
-        <div class="header" style="height:30vh">
-            <div class="home-header">
+        <!-- <div class="header">
+            <div class="container">
+                <div class="content">
+                </div>
             </div>
-        </div>
+            <div class="header-gap"></div>
+        </div> -->
 
         <div class="reactive-bg">
-            <div class="home container">
-                <div class="profile">
-                    <img src="/assets/images/human-profile.jpg">
-                </div>
+            <div class="post container">
+                <h1>I did some cleaning
 
+                </h1>
+                <h4>Spring cleaning is fun when it isn't spring, and a computer does all the work
 
-                <div class="info">
-                    <h1>Evan Pratten</h1>
-                    <hr>
-                    <div class="tagline">
-                        <br><br>
-                        <h2>Who am I?</h2>
-                        <p>I am a 16 year old programming student. I enjoy learning new concepts,  building projects out of random ideas and obscure technologies, and working with new tools.  My projects range from building tools to help me with school work, and robotics, to radios  and video production.</p>
+                </h4>
+                <hr>
+                <p><em>2019-08-27 08:37:00 -0400
+                        
+                    </em></p>
 
-                        <br><br>
-                        <h2>Languages</h2>
+                <br>
 
-                        <div class="progress" style="height:30px">
-                            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="15"
-                                aria-valuemin="0" aria-valuemax="100">Python</div>
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 30%"
-                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Java</div>
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 10%" aria-valuenow="20"
-                                aria-valuemin="0" aria-valuemax="100">C</div>
-                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 20%"
-                                aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Other</div>
-                        </div>
+                <p>As I am continuing to check items off my TODO list before school starts, I have come to an item I have been putting off for a while. <strong>Clean up GitHub Account</strong>. Luckily, I discovered a little trick to make the process of deleting unused repos a little easier!</p>
 
-                        <br>
-                        <p>I have been programming since 2013, and started learning with Python3.<br>
-                            Since then, I have picked up many other languages, and am currently mainly using Python,
-                            Java, and C.<br>
-                            I am working on learning a few new languages, including Ruby at the moment.</p>
+<h2 id="getting-a-list-of-repos-to-delete">Getting a list of repos to delete</h2>
+<p>I could have automated this, but I prefer a little control. To get the list, start by opening up a new Firefox window with a single tab. In this tab, open your GitHub profile to the list of repos.
+Starting from the top, scroll through, and middle click on anything you want to delete. This opens it in a new tab.</p>
 
-                        <br><br>
-                        <h2>Projects</h2>
+<p>Once you have a bunch of tabs open with repos to remove, use <a href="https://addons.mozilla.org/en-US/firefox/addon/urls-list/">this Firefox plugin</a> to create a plaintext list of every link you opened, and paste the list of links into VS-code.</p>
 
-                        <p>
-                            To learn more about the projects I work on, check out my Projects page
-                        </p>
+<h2 id="getting-an-api-token">Getting an API token</h2>
+<p>Next, an API token is needed. Go to GitHub’s <a href="https://github.com/settings/tokens">token settings</a>, and generate a new one (make sure to enable repository deletion).</p>
 
-                        <a href="/projects">
-                            <button type="button" class="btn btn-success">View Page</button>
-                        </a>
-                    </div>
+<h2 id="parsing-the-links">“Parsing” the links</h2>
+<p>With our new token, and out VS-code file, we can start “parsing” the data.</p>
 
-                </div>
+<p>Pressing <code class="highlighter-rouge">CTRL + F</code> brings up the Find/Search toolbar. In the text box, there are a few icons. Pressing the one farthest to the right will enable <a href="https://en.wikipedia.org/wiki/Regular_expression">Regex</a> mode. With this set, paste the following:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://github.com/
+</code></pre></div></div>
+
+<p>Now, click the arrow on the left to enable <em>replace mode</em>, and put this in the new box:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -XDELETE -H 'Authorization: token &lt;API token from above&gt;' "https://api.github.com/repos/
+</code></pre></div></div>
+
+<p>Then press <em>replace all</em>.</p>
+
+<p>Finally, replace the contents of the first box with:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\n
+</code></pre></div></div>
+
+<p>and the second with:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"\n
+</code></pre></div></div>
+
+<p>and <em>replace all</em> again.</p>
+
+<h2 id="deleting-the-repos">Deleting the repos</h2>
+<p>Simply copy the entire text file that was made, and paste it in a terminal, then press &lt;enter&gt; (this will take a while)</p>
+
             </div>
         </div>
-
 
     </div>
     <!-- <div id="particles-js"></div> -->
@@ -166,5 +173,6 @@
         console.log('callback - particles.js config loaded');
     });
 </script>
+    
 
 </body>
