@@ -153,4 +153,7 @@ def doShiftDemo(_):
 
 
 document["shift-button"].bind("click", doShiftDemo)
+
+# Set the button
 document["shift-button"].innerHTML = "Run Shift2"
+document["shift-button"].disabled = False
