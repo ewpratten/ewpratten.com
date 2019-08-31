@@ -101,10 +101,30 @@ pip3 <span class="nb">install </span>shift-tool
 shift2 <span class="nt">-h</span>
 </code></pre></div></div>
 
+<div id="demo">
+  <h3 id="web-demo">Web demo</h3>
+  <p>I have ported the core code from shift2 over to <a href="http://www.brython.info/index.html">brython</a> to create this demo:</p>
+
+  <p><input type="radio" id="encode" name="shift-action" value="encode" checked>
+<label for="encode">Encode</label>
+<input type="radio" id="decode" name="shift-action" value="decode">
+<label for="decode">Decode</label></p>
+
+  <p><input type="text" id="key" name="key" placeholder="Encoding key" required=""><br>
+<input type="text" id="msg" name="msg" placeholder="Message" required="" size="30"></p>
+
+  <p><button type="button" class="btn btn-primary" id="shift-button">shift2 demo is loading…</button></p>
+
+</div>
+
 <h3 id="future-plans">Future plans</h3>
 <p>Due to the fact that shift2 can also be used as a library (as outlined in the <a href="https://github.com/Ewpratten/shift/blob/master/README.md">README</a>), I would like to write a program that allows users to talk to eachother IRC style over a TCP port. This program would use either a pre-shared, or generated key to encode / decode messages on the fly.</p>
 
 <p>If you are interested in helping out, or taking on this idea for yourself, send me an email.</p>
+
+<!-- Python code -->
+<script type="text/python" src="/assets/python/shift2demo.py"></script>
+
 
             </div>
         </div>
@@ -117,10 +137,23 @@ shift2 <span class="nt">-h</span>
     <span class="site-info">
         Site design by: <a href="https://retrylife.ca">Evan Pratten</a> |
 
-        This site was last updated at: 2019-08-27 12:52:06 -0400
+        This site was last updated at: 2019-08-31 14:25:59 -0400
     </span>
 </div>
 
+<!-- Brython -->
+<script src="/assets/js/brython.js"></script>
+<script src="/assets/js/brython_stdlib.js"></script>
+
+<script>
+    function startPY(){
+        
+        brython();
+        console.log("Started Python")
+    }
+
+    window.onload = startPY;
+</script>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

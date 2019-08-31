@@ -9,6 +9,19 @@
     </span>
 </div>
 
+<!-- Brython -->
+<script src="/assets/js/brython.js"></script>
+<script src="/assets/js/brython_stdlib.js"></script>
+
+<script>
+    function startPY(){
+        
+        brython();
+        console.log("Started Python")
+    }
+
+    window.onload = startPY;
+</script>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
