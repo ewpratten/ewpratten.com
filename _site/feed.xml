@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-08-31T14:36:54-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://frc5024.github.io&quot;&gt;@frc5024&lt;/a&gt;  programming team lead, and radio enthusiast.</subtitle><entry><title type="html">I did some cleaning</title><link href="http://0.0.0.0:4000/blog/2019/08/27/github-cleanup" rel="alternate" type="text/html" title="I did some cleaning" /><published>2019-08-27T08:37:00-04:00</published><updated>2019-08-27T08:37:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/08/27/GitHub-cleanup</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/08/27/github-cleanup">&lt;p&gt;As I am continuing to check items off my TODO list before school starts, I have come to an item I have been putting off for a while. &lt;strong&gt;Clean up GitHub Account&lt;/strong&gt;. Luckily, I discovered a little trick to make the process of deleting unused repos a little easier!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-08-31T14:39:01-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://frc5024.github.io&quot;&gt;@frc5024&lt;/a&gt;  programming team lead, and radio enthusiast.</subtitle><entry><title type="html">I did some cleaning</title><link href="http://0.0.0.0:4000/blog/2019/08/27/github-cleanup" rel="alternate" type="text/html" title="I did some cleaning" /><published>2019-08-27T08:37:00-04:00</published><updated>2019-08-27T08:37:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/08/27/GitHub-cleanup</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/08/27/github-cleanup">&lt;p&gt;As I am continuing to check items off my TODO list before school starts, I have come to an item I have been putting off for a while. &lt;strong&gt;Clean up GitHub Account&lt;/strong&gt;. Luckily, I discovered a little trick to make the process of deleting unused repos a little easier!&lt;/p&gt;
 
 &lt;h2 id=&quot;getting-a-list-of-repos-to-delete&quot;&gt;Getting a list of repos to delete&lt;/h2&gt;
 &lt;p&gt;I could have automated this, but I prefer a little control. To get the list, start by opening up a new Firefox window with a single tab. In this tab, open your GitHub profile to the list of repos.
@@ -66,7 +66,7 @@ Starting from the top, scroll through, and middle click on anything you want to 
 
 &lt;p&gt;This is for a few reasons. Firstly, as mentioned above, shift2 uses base85 &lt;strong&gt;twice&lt;/strong&gt;. Once before, and once after XOR encryption. Secondly, a file header is prepended to the output to help the decoder read the file. This header contains version info, the file length, and the encoding type.&lt;/p&gt;
 
-&lt;h3 id=&quot;try-it-yourself&quot;&gt;Try it yourself&lt;/h3&gt;
+&lt;h3 id=&quot;try-it-yourself-with-pip&quot;&gt;Try it yourself with PIP&lt;/h3&gt;
 &lt;p&gt;I have published shift2 on &lt;a href=&quot;https://pypi.org/project/shift-tool/&quot;&gt;pypi.org&lt;/a&gt; for use with PIP. To install shift2, ensure both &lt;code class=&quot;highlighter-rouge&quot;&gt;python3&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;python3-pip&lt;/code&gt; are installed on your computer, then run:&lt;/p&gt;
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Install shift2&lt;/span&gt;
 pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;shift-tool
@@ -76,8 +76,8 @@ shift2 &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div id=&quot;demo&quot;&gt;
-  &lt;h3 id=&quot;web-demo&quot;&gt;Web demo&lt;/h3&gt;
-  &lt;p&gt;I have ported the core code from shift2 over to &lt;a href=&quot;http://www.brython.info/index.html&quot;&gt;brython&lt;/a&gt; to create this demo:&lt;/p&gt;
+  &lt;h3 id=&quot;try-it-in-the-browser&quot;&gt;Try it in the browser&lt;/h3&gt;
+  &lt;p&gt;I have ported the core code from shift2 to &lt;a href=&quot;http://www.brython.info/index.html&quot;&gt;run in the browser&lt;/a&gt;. This demo is entirely client-side, and may take a few seconds to load depending on your device.&lt;/p&gt;
 
   &lt;p&gt;&lt;input type=&quot;radio&quot; id=&quot;encode&quot; name=&quot;shift-action&quot; value=&quot;encode&quot; checked=&quot;&quot; /&gt;
 &lt;label for=&quot;encode&quot;&gt;Encode&lt;/label&gt;

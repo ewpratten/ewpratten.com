@@ -92,7 +92,7 @@
 
 <p>This is for a few reasons. Firstly, as mentioned above, shift2 uses base85 <strong>twice</strong>. Once before, and once after XOR encryption. Secondly, a file header is prepended to the output to help the decoder read the file. This header contains version info, the file length, and the encoding type.</p>
 
-<h3 id="try-it-yourself">Try it yourself</h3>
+<h3 id="try-it-yourself-with-pip">Try it yourself with PIP</h3>
 <p>I have published shift2 on <a href="https://pypi.org/project/shift-tool/">pypi.org</a> for use with PIP. To install shift2, ensure both <code class="highlighter-rouge">python3</code> and <code class="highlighter-rouge">python3-pip</code> are installed on your computer, then run:</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install shift2</span>
 pip3 <span class="nb">install </span>shift-tool
@@ -102,8 +102,8 @@ shift2 <span class="nt">-h</span>
 </code></pre></div></div>
 
 <div id="demo">
-  <h3 id="web-demo">Web demo</h3>
-  <p>I have ported the core code from shift2 over to <a href="http://www.brython.info/index.html">brython</a> to create this demo:</p>
+  <h3 id="try-it-in-the-browser">Try it in the browser</h3>
+  <p>I have ported the core code from shift2 to <a href="http://www.brython.info/index.html">run in the browser</a>. This demo is entirely client-side, and may take a few seconds to load depending on your device.</p>
 
   <p><input type="radio" id="encode" name="shift-action" value="encode" checked>
 <label for="encode">Encode</label>
@@ -137,7 +137,7 @@ shift2 <span class="nt">-h</span>
     <span class="site-info">
         Site design by: <a href="https://retrylife.ca">Evan Pratten</a> |
 
-        This site was last updated at: 2019-08-31 14:36:54 -0400
+        This site was last updated at: 2019-08-31 14:39:01 -0400
     </span>
 </div>
 
