@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-09-02T13:18:26-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://frc5024.github.io&quot;&gt;@frc5024&lt;/a&gt;  programming team lead, and radio enthusiast.</subtitle><entry><title type="html">I did some cleaning</title><link href="http://0.0.0.0:4000/blog/2019/08/27/github-cleanup" rel="alternate" type="text/html" title="I did some cleaning" /><published>2019-08-27T08:37:00-04:00</published><updated>2019-08-27T08:37:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/08/27/GitHub-cleanup</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/08/27/github-cleanup">&lt;p&gt;As I am continuing to check items off my TODO list before school starts, I have come to an item I have been putting off for a while. &lt;strong&gt;Clean up GitHub Account&lt;/strong&gt;. Luckily, I discovered a little trick to make the process of deleting unused repos a little easier!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-09-07T13:12:56-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://frc5024.github.io&quot;&gt;@frc5024&lt;/a&gt;  programming team lead, and radio enthusiast.</subtitle><entry><title type="html">Doing Python the wrong way</title><link href="http://0.0.0.0:4000/blog/2019/09/07/wrong-python" rel="alternate" type="text/html" title="Doing Python the wrong way" /><published>2019-09-07T09:13:00-04:00</published><updated>2019-09-07T09:13:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/09/07/wrong-python</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/09/07/wrong-python">&lt;p&gt;If you know me, you probably know of the many weird things I do with python. Most recent of which being this &lt;a href=&quot;https://en.wikipedia.org/wiki/Fizz_buzz&quot;&gt;FizzBuzz&lt;/a&gt; implementation in one line of python code:&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;FizzBuzz&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This installment of “weird things I do with python” will not focus on one-liners (that’s going on my todo list though). But instead, playing with Python’s classes and object system.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-quick-introduction-to-classes&quot;&gt;A quick introduction to classes&lt;/h2&gt;
+&lt;p&gt;Im going to assume that you, the reader, have some reasonable knowledge of how computers work, and OOP concepts. If you do not, there are &lt;a href=&quot;https://medium.com/swlh/5-free-object-oriented-programming-online-courses-for-programmers-156afd0a3a73&quot;&gt;many great online resources&lt;/a&gt; to help you out.&lt;/p&gt;
+
+&lt;p&gt;As a quick refresher, this is the Python syntax for a basic class:&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;# This is the constructor. __init__ is an overridable python built-in
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;# Here we set the class' scoped my_number to arg1
+&lt;/span&gt;        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg1&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printMyNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is really just a fancy setter and getter. Here is some example usage:&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;my_object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MyClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;my_object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;printMyNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Prints 10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;noticing-something-odd&quot;&gt;Noticing something odd&lt;/h2&gt;
+&lt;p&gt;Before reading the following, keep in mind that (as of now) I have not actually looked at the Python interpreter’s source code enough to know about their memory system. The following is just an educated guess.&lt;/p&gt;
+
+&lt;p&gt;Looking at any python class, you may notice that &lt;strong&gt;at least&lt;/strong&gt; 1 argument is required. &lt;code class=&quot;highlighter-rouge&quot;&gt;self&lt;/code&gt; is used to access the class’ data from itself. This is not present in most other languages I know, which means there might be something interesting happening behind the scenes. Here is a re-implementation of &lt;code class=&quot;highlighter-rouge&quot;&gt;MyClass&lt;/code&gt; from above in java:&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyClass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;my_int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;MyClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;my_int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;printMyNumber&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice the fact that there is no &lt;code class=&quot;highlighter-rouge&quot;&gt;self&lt;/code&gt;? Yet Java methods can still access class data.&lt;/p&gt;
+
+&lt;h2 id=&quot;implementing-objects-in-a-non-object-oriented-language&quot;&gt;Implementing objects in a non-object oriented language&lt;/h2&gt;
+&lt;p&gt;In a non-OOP language (like C), objects can be faked by creating &lt;a href=&quot;https://en.wikipedia.org/wiki/Struct_(C_programming_language)&quot;&gt;structures&lt;/a&gt; and some standard functions. These functions then take a pointer to their “parent” structure. Confusing? yes. But it works, and I see it used all over the place. Here a pseudocode example:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;struct MyClass {
+    int my_int; // Scpoed int
+}
+
+fn printMyNumber(MyClass* self){
+    print(self.my_int);
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;printMyNumber&lt;/code&gt; takes a pointer to it’s “parent class”, called &lt;code class=&quot;highlighter-rouge&quot;&gt;self&lt;/code&gt;. Look familiar? This is how Python works.&lt;/p&gt;
+
+&lt;h2 id=&quot;lets-do-some-python&quot;&gt;Let’s do some Python&lt;/h2&gt;
+&lt;p&gt;Alright.. Time for some “broken” Python. Here is yet another implementation of &lt;code class=&quot;highlighter-rouge&quot;&gt;MyClass&lt;/code&gt;, except this time, each function is globally scoped:&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c1&quot;&gt;# Private, globally scoped functions
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;_init_myclass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arg1&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;_myclass_printMyNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;c1&quot;&gt;# struct-like class containing function pointers
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;__init__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_init_myclass&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;printMyNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_myclass_printMyNumber&lt;/span&gt;
+    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This code will still function like a normal class. Unlike a regular class definition, the above code defines the constructor and &lt;code class=&quot;highlighter-rouge&quot;&gt;printMyNumber&lt;/code&gt; methods in the global scope (marked as private with an underscore). A class is then created with function pointers to each of the global functions. This means that calling &lt;code class=&quot;highlighter-rouge&quot;&gt;MyClass.printMyNumber&lt;/code&gt; will point to, and execute &lt;code class=&quot;highlighter-rouge&quot;&gt;_myclass_printMyNumber&lt;/code&gt;. The interpreter still treats the underscore functions as members of &lt;code class=&quot;highlighter-rouge&quot;&gt;MyClass&lt;/code&gt;, and passes the &lt;code class=&quot;highlighter-rouge&quot;&gt;self&lt;/code&gt; argument along to them.&lt;/p&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;Why?&lt;/h2&gt;
+&lt;p&gt;I have absolutely no idea why this would ever be useful. If you think you should start doing this in your code, &lt;strong&gt;don’t&lt;/strong&gt;. It leads to very messy and confusing code, and is bad practice in just about every way.&lt;/p&gt;
+
+&lt;p&gt;The point of this post is to show yet another instance of the Python interpreter saying “&lt;a href=&quot;https://www.urbandictionary.com/define.php?term=idgaf&quot;&gt;idgaf&lt;/a&gt;”, and letting us have a little fun.&lt;/p&gt;</content><author><name></name></author><summary type="html">If you know me, you probably know of the many weird things I do with python. Most recent of which being this FizzBuzz implementation in one line of python code: _=[print(&quot;FizzBuzz&quot;[_*_%3*4:8--_**4%5] or _) for _ in range(101)]</summary></entry><entry><title type="html">I did some cleaning</title><link href="http://0.0.0.0:4000/blog/2019/08/27/github-cleanup" rel="alternate" type="text/html" title="I did some cleaning" /><published>2019-08-27T08:37:00-04:00</published><updated>2019-08-27T08:37:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/08/27/GitHub-cleanup</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/08/27/github-cleanup">&lt;p&gt;As I am continuing to check items off my TODO list before school starts, I have come to an item I have been putting off for a while. &lt;strong&gt;Clean up GitHub Account&lt;/strong&gt;. Luckily, I discovered a little trick to make the process of deleting unused repos a little easier!&lt;/p&gt;
 
 &lt;h2 id=&quot;getting-a-list-of-repos-to-delete&quot;&gt;Getting a list of repos to delete&lt;/h2&gt;
 &lt;p&gt;I could have automated this, but I prefer a little control. To get the list, start by opening up a new Firefox window with a single tab. In this tab, open your GitHub profile to the list of repos.
@@ -517,108 +601,4 @@ ibus-daemon &lt;span class=&quot;nt&quot;&gt;-drx&lt;/span&gt;
 
 &lt;p&gt;&lt;strong&gt;Don’t be dumb with this script.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;I have only used it on my own (or 5024’s) routers, and did not create PWNlink with any malicious intent.&lt;/p&gt;</content><author><name></name></author><category term="projects" /><summary type="html">I was playing around with some D-link routers today and remembered an ExploitDB Entry I read a while ago. Many D-link routers have a great feature that allows remote management and configuration queries. Interestingly, this cannot be disabled, and one of the pages contains a cleartext version of the admin password (yay!).</summary></entry><entry><title type="html">Hunting snakes with a shotgun</title><link href="http://0.0.0.0:4000/blog/2019/06/27/python" rel="alternate" type="text/html" title="Hunting snakes with a shotgun" /><published>2019-06-27T03:00:00-04:00</published><updated>2019-06-27T03:00:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/06/27/Python</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/06/27/python">&lt;p&gt;A rather large number of people know me as “the guy who does weird things with python”. I would object to this title, but it is quite accurate. So, here are some of the things I like playing with in python. None of these are actually breaking the language, just little known facts and syntax. At some point I will share about actually breaking the language. For now, enjoy the weird things I have found over the past 6 years.&lt;/p&gt;
-
-&lt;h2 id=&quot;type-hints&quot;&gt;Type hints&lt;/h2&gt;
-&lt;p&gt;A little known feature of python is called “type hinting” (PEP 484). This is actually quite common to see in standard libraries, and has it’s own special syntax:&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Here is a regular function
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;meep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# This function has no real reason to exsist, and is lacking any sort of documentation.
-# Let's add a docstring to explain what it does
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;meep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; This function returns the result of a times b squared &quot;&quot;&quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Ok. The docstring explains the function, but is not too helpful 
-# what are a and b? what does this return? 
-# For all we know, a could actually be a string (in which case, this function would return a string)
-# Let's fix that up with a type hint
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;meep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; This function returns the result of a times b squared &quot;&quot;&quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Thanks to the :int (called a type hint in case you didn't notice that yet), we now know that this function expects two ints.
-# Now, to finish this up with a secondary type hint to specify the return type
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;meep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; This function returns the result of a times b squared &quot;&quot;&quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# There. Now we can clearly see that this function takes too ints, and returns one int. 
-# If only this was a requirement in the language. So many headaches could be solved.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, keep in mind that this is called a type &lt;em&gt;hint&lt;/em&gt;. The python compiler (yes.. Give me a second for that one) does not actually care if you obey the hint or not. Feel free to send incorrect data into a hinted function and see what you can break. Critical functions should both hint and check the data types being provided.&lt;/p&gt;
-
-&lt;h2 id=&quot;type-declarations&quot;&gt;Type declarations&lt;/h2&gt;
-&lt;p&gt;Just like type hints for functions, python has hints for variables too.&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# A regular variable. Must be declared with an initial value
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# my_state is None, as it has not been set, but needs to exist.
-# Let's assume that my_state is to be a state:
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Finally, its time to set the state to something useful
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;my_state&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Ok.. I hate this. Let's start by using type declarations first
-# Any variable can be un-initialized and just have a type. Like so:
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;State&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# This works for anything
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_alive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Now, with this new knowledge, let's rewrite State
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# And initialize my_state with slightly different syntax
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;my_state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I have not found much use for this yet. Hopefully there is something cool to use it for.&lt;/p&gt;
-
-&lt;h2 id=&quot;one-line-functions&quot;&gt;One-line functions&lt;/h2&gt;
-&lt;p&gt;This is more common knowlage. A function can be declared in one line&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Here is an adder function
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;adder1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Here is a one-line adder function
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adder2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# State from above can be compacted further:
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;State&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bool&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;toggle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;ternary-operations&quot;&gt;Ternary operations&lt;/h2&gt;
-&lt;p&gt;On the trend of one-line code, We have the one-line if/else, also known as a Ternary in more sensible languages.&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Here is an if/else
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The world has ended&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;All is good&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Here is a smaller if/else
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The world has ended&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;All is good&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;compiled-python&quot;&gt;Compiled python&lt;/h2&gt;
-&lt;p&gt;This one is interesting. Python, like Java, is compiled into bytecode. So yes, it technically is a compiled language. To see said bytecode, take a look at any &lt;code class=&quot;highlighter-rouge&quot;&gt;.pyc&lt;/code&gt; file sitting in your &lt;code class=&quot;highlighter-rouge&quot;&gt;__pycache__&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;blog-formatting-experiments&quot;&gt;Blog formatting experiments&lt;/h2&gt;
-&lt;p&gt;I am still playing with post formats, and various types of content. This is more random than I usually prefer. Let me know your thoughts on the social media platform of your choosing.&lt;/p&gt;</content><author><name></name></author><summary type="html">A rather large number of people know me as “the guy who does weird things with python”. I would object to this title, but it is quite accurate. So, here are some of the things I like playing with in python. None of these are actually breaking the language, just little known facts and syntax. At some point I will share about actually breaking the language. For now, enjoy the weird things I have found over the past 6 years.</summary></entry></feed>
+&lt;p&gt;I have only used it on my own (or 5024’s) routers, and did not create PWNlink with any malicious intent.&lt;/p&gt;</content><author><name></name></author><category term="projects" /><summary type="html">I was playing around with some D-link routers today and remembered an ExploitDB Entry I read a while ago. Many D-link routers have a great feature that allows remote management and configuration queries. Interestingly, this cannot be disabled, and one of the pages contains a cleartext version of the admin password (yay!).</summary></entry></feed>
