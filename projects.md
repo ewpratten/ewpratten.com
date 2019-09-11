@@ -37,7 +37,7 @@ These projects range from unfinished ideas, to codebases that took months to dev
  - [retrylife.ca](https://retrylife.ca) - My personal website and blog
  - [frc5024.github.io](https://frc5024.github.io) - The 5024 programming team's website
  - [webdocs](https://frc5024.github.io/webdocs) - The 5024 programming team's documentation centre
- - [hyperlisk.xyz](https://hyperlisk.xyz) - @retrax24's personal website and blog
+ - [hyperlisk.xyz](https://hyperlisk.xyz) - @hyperliskdev's personal website and blog
  - [GiveMeADistro](https://github.com/Ewpratten/GiveMeADistro) - A website to help people decide which Linux distro to try
 
 ## Libraries
@@ -104,7 +104,7 @@ Dirobium was the first "fantasy emulator" I built. It emulates a CPU architectur
  - [Graphite](https://github.com/Ewpratten/Graphite) - The dirobium graphics emulator
 
 ## Games
- - [FlippyCat](https://github.com/Ewpratten/FlippyCat) - A flappy bird clone I built with @retrax24 for computer science class
+ - [FlippyCat](https://github.com/Ewpratten/FlippyCat) - A flappy bird clone I built with @hyperliskdev for computer science class
  - [Raycasting-Demo](https://github.com/Ewpratten/raycasting-demo) - A 2D raycasting demonstration
  - [DockerCraft](https://github.com/Ewpratten/dockercraft) - Run Minecraft Bedrock in a docker container
  - [learn-kana](https://github.com/Ewpratten/learn-kana) - A CLI game I built to help myself learn hiragana

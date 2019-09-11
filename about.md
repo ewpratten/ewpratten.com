@@ -57,7 +57,17 @@ Currently, I use the following hardware:
    - Stock android
  - HP 27es monitor
 
+## My crypto addresses
 
+<div class="table-fix" markdown="1">
+These are my wallet addresses for various cryptocurrencies:
+
+| Currency | Address |
+| -- | -- |
+| Stellar | `ewpratten*keybase.io` |
+| Bitcoin | `1BorqYNm54SkyxsPGfpzKKoc9ameU1JEM2` |
+
+</div>
 
 <!-- devRant disclaimer -->
 <div class="modal fade" id="devrant-disclaimer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
