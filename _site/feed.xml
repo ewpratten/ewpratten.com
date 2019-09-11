@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-09-11T11:41:26-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://frc5024.github.io&quot;&gt;@frc5024&lt;/a&gt;  programming team lead, and radio enthusiast.</subtitle><entry><title type="html">Doing Python OOP the wrong way</title><link href="http://0.0.0.0:4000/blog/2019/09/07/wrong-python" rel="alternate" type="text/html" title="Doing Python OOP the wrong way" /><published>2019-09-07T09:13:00-04:00</published><updated>2019-09-07T09:13:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/09/07/wrong-python</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/09/07/wrong-python">&lt;p&gt;If you know me, you probably know of the many weird things I do with python. Most recent of which being this &lt;a href=&quot;https://en.wikipedia.org/wiki/Fizz_buzz&quot;&gt;FizzBuzz&lt;/a&gt; implementation in one line of python code:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-09-11T17:12:28-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://frc5024.github.io&quot;&gt;@frc5024&lt;/a&gt;  programming team lead, and radio enthusiast.</subtitle><entry><title type="html">Building images from binary data</title><link href="http://0.0.0.0:4000/blog/2019/09/11/buildingimgfrombin" rel="alternate" type="text/html" title="Building images from binary data" /><published>2019-09-11T08:41:00-04:00</published><updated>2019-09-11T08:41:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/09/11/Buildingimgfrombin</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/09/11/buildingimgfrombin">&lt;p&gt;During a computer science class today, we were talking about embedding code and metadata in &lt;em&gt;jpg&lt;/em&gt; and &lt;em&gt;bmp&lt;/em&gt; files. @SilasBartha was showing off a program he wrote that watched a directory for new image files, and would display them on a canvas. He then showed us a special image. In this image, he had injected some metadata into the last few pixels, which were not rendered, but told his program where to position the image on the canvas, and it’s size.&lt;/p&gt;
+
+&lt;p&gt;This demo got @hyperliskdev and I thinking about what else we can do with image data. After some talk, the idea of converting application binaries to images came up. I had seen a blog post about visually decoding &lt;a href=&quot;https://en.wikipedia.org/wiki/On%E2%80%93off_keying&quot;&gt;OOK data&lt;/a&gt; by converting an &lt;a href=&quot;http://www.ni.com/tutorial/4805/en/&quot;&gt;IQ capture&lt;/a&gt; to an image. With a little adaptation, I did the same for a few binaries on my laptop.&lt;/p&gt;
+
+&lt;!-- Tweet embed --&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;I present: &amp;quot;Parts of &lt;a href=&quot;https://twitter.com/GIMP_Official?ref_src=twsrc%5Etfw&quot;&gt;@GIMP_Official&lt;/a&gt;&amp;#39;s binary, represented as a bitmap&amp;quot; &lt;a href=&quot;https://t.co/iLljdE4nlK&quot;&gt;pic.twitter.com/iLljdE4nlK&lt;/a&gt;&lt;/p&gt;&amp;mdash; Evan Pratten (@ewpratten) &lt;a href=&quot;https://twitter.com/ewpratten/status/1171801959197794304?ref_src=twsrc%5Etfw&quot;&gt;September 11, 2019&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;program-design&quot;&gt;Program design&lt;/h2&gt;
+&lt;p&gt;Like all ideas I have, I wrote some code to test this idea out. Above is a small sample of the interesting designs found in the &lt;a href=&quot;&quot;&gt;gimp&lt;/a&gt; binary. The goals for this script were to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Accept any file of any type or size&lt;/li&gt;
+  &lt;li&gt;Allow the user to select the file dimensions&lt;/li&gt;
+  &lt;li&gt;Generate an image&lt;/li&gt;
+  &lt;li&gt;Write the data in a common image format&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you would like to see how the code works, read “&lt;em&gt;check out the script&lt;/em&gt;”.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-note-on-data-wrapping&quot;&gt;A note on data wrapping&lt;/h2&gt;
+&lt;p&gt;By using a &lt;a href=&quot;https://wiki.python.org/moin/Generators&quot;&gt;generator&lt;/a&gt;, and the &lt;a href=&quot;https://docs.python.org/3/library/functions.html#func-range&quot;&gt;range function&lt;/a&gt;’s 3rd argument, any list can be easily split into a 2d list at a set interval.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Assuming l is a list of data, and n is an int that denotes the desired split location
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;binaries-have-a-habit-of-not-being-rectangular&quot;&gt;Binaries have a habit of not being rectangular&lt;/h3&gt;
+&lt;p&gt;Unlike photos, binaries are not generated from rectangular image sensors, but instead from compilers and assemblers (and sometimes hand-written binary). These do not generate perfect rectangles. Due to this, my script simply removes the last line from the image to “reshape” it. I may end up adding a small piece of code to pad the final line instead of stripping it in the future.&lt;/p&gt;
+
+&lt;h2 id=&quot;other-file-types&quot;&gt;Other file types&lt;/h2&gt;
+&lt;p&gt;I also looked at other file types. Binaries are very interesting because they follow very strict ordering rules. I was hoping that a &lt;code class=&quot;highlighter-rouge&quot;&gt;wav&lt;/code&gt; file would do something similar, but that does not appear to be the case. This is the most interesting pattern I could find in a &lt;code class=&quot;highlighter-rouge&quot;&gt;wav&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Following up my previous post with a tiny segment of an audio file. This one is little less interesting &lt;a href=&quot;https://t.co/u9EFloxnK5&quot;&gt;pic.twitter.com/u9EFloxnK5&lt;/a&gt;&lt;/p&gt;&amp;mdash; Evan Pratten (@ewpratten) &lt;a href=&quot;https://twitter.com/ewpratten/status/1171883910827040774?ref_src=twsrc%5Etfw&quot;&gt;September 11, 2019&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Back to executable data, these are small segments of a &lt;code class=&quot;highlighter-rouge&quot;&gt;dll&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/dll.png&quot; alt=&quot;Segment 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/dll2.png&quot; alt=&quot;Segment 2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;check-out-the-script&quot;&gt;Check out the script&lt;/h2&gt;
+&lt;p&gt;This script is hosted &lt;a href=&quot;https://github.com/Ewpratten/binmap&quot;&gt;on my GitHub account&lt;/a&gt; as a standalone file. Any version of python3 should work, but the following libraries are needed:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Pillow&lt;/li&gt;
+  &lt;li&gt;Numpy&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">During a computer science class today, we were talking about embedding code and metadata in jpg and bmp files. @SilasBartha was showing off a program he wrote that watched a directory for new image files, and would display them on a canvas. He then showed us a special image. In this image, he had injected some metadata into the last few pixels, which were not rendered, but told his program where to position the image on the canvas, and it’s size.</summary></entry><entry><title type="html">Doing Python OOP the wrong way</title><link href="http://0.0.0.0:4000/blog/2019/09/07/wrong-python" rel="alternate" type="text/html" title="Doing Python OOP the wrong way" /><published>2019-09-07T09:13:00-04:00</published><updated>2019-09-07T09:13:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/09/07/wrong-python</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/09/07/wrong-python">&lt;p&gt;If you know me, you probably know of the many weird things I do with python. Most recent of which being this &lt;a href=&quot;https://en.wikipedia.org/wiki/Fizz_buzz&quot;&gt;FizzBuzz&lt;/a&gt; implementation in one line of python code:&lt;/p&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;FizzBuzz&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -562,43 +609,4 @@ ibus-daemon &lt;span class=&quot;nt&quot;&gt;-drx&lt;/span&gt;
 &lt;p&gt;Thats it! Super simple, and only two days from concept to reality.&lt;/p&gt;
 
 &lt;h2 id=&quot;where-is-this-hosted&quot;&gt;Where is this hosted?&lt;/h2&gt;
-&lt;p&gt;This program is hosted on a raspberry pi laying in my room running docker. I also have &lt;a href=&quot;https://www.portainer.io/&quot;&gt;Portainer&lt;/a&gt; set up so I can easily monitor the bot from my phone over my VPN.&lt;/p&gt;</content><author><name></name></author><summary type="html">Over the past year and a half, I have been hacking my way around the undocumented devRant auth/write API. At the request of devRant’s creators, this API must not be documented due to the way logins work on the platform. That is besides the point. I have been working on a little project called devDNS over the past few days that uses this undocumented API. Why must I be so bad at writing intros?</summary></entry><entry><title type="html">I had some fun with a router</title><link href="http://0.0.0.0:4000/blog/2019/06/27/pwnlink" rel="alternate" type="text/html" title="I had some fun with a router" /><published>2019-06-27T13:16:00-04:00</published><updated>2019-06-27T13:16:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/06/27/PWNlink</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/06/27/pwnlink">&lt;p&gt;I was playing around with some D-link routers today and remembered an &lt;a href=&quot;https://www.exploit-db.com/exploits/33520&quot;&gt;ExploitDB Entry&lt;/a&gt; I read a while ago. Many D-link routers have a great feature that allows remote management and configuration queries. Interestingly, this cannot be disabled, and one of the pages contains a cleartext version of the admin password (yay!).&lt;/p&gt;
-
-&lt;h2 id=&quot;how-to-get-yourself-an-admin-password&quot;&gt;How to get yourself an admin password&lt;/h2&gt;
-&lt;p&gt;On any supported router, make an HTTP request to &lt;code class=&quot;highlighter-rouge&quot;&gt;http://your.router.ip.addr/tools_admin.asp/&lt;/code&gt;. This will return a pretty large XML file containing information about your router’s hardware and configuration.&lt;/p&gt;
-
-&lt;p&gt;Notice the fact that you did not have to log in. This is due to the fact that this file seems to be used by a remote management service of some sort.&lt;/p&gt;
-
-&lt;p&gt;The important thing to note here is that, when parsed with the regex pattern: &lt;code class=&quot;highlighter-rouge&quot;&gt;name=&quot;user_password_tmp&quot; value=&quot;(.*)&quot;&amp;gt;&lt;/code&gt;, you get a single string. This string is the admin password of the device.&lt;/p&gt;
-
-&lt;h2 id=&quot;supported-routers&quot;&gt;Supported routers&lt;/h2&gt;
-&lt;p&gt;This is supported by many D-link routers. The ones I know about are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;DIR-835&lt;/li&gt;
-  &lt;li&gt;DIR-855L&lt;/li&gt;
-  &lt;li&gt;DGL-5500&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Some routers have this XML file, but it is restricted… By a user without a password. These are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;DHP-1565&lt;/li&gt;
-  &lt;li&gt;DIR-652&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;pwnlink&quot;&gt;PWNlink&lt;/h2&gt;
-&lt;p&gt;Like everything I play with, I made a script to do this all for me (and spent a large amount of time adding colours to the text).&lt;/p&gt;
-
-&lt;p&gt;My script is called PWNlink (PWN + D-link), It automatically finds a router on your network by looking for a specific DNS entry created by many D-link routers, then checking your gateway. Next, PWNlink reads you router’s &lt;code class=&quot;highlighter-rouge&quot;&gt;hnap1&lt;/code&gt; config to find it’s model number. If supported, the script will read and parse the appropriate configs to give you the admin credentials for your router.&lt;/p&gt;
-
-&lt;p&gt;PWNlink can be installed on any *nix computer that has both &lt;code class=&quot;highlighter-rouge&quot;&gt;python3.7&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;python3-pip&lt;/code&gt; installed. To install PWNlink, run:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip3 install pwnlink
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Run the script without any arguments for automatic detection, or pass any IP address to use manual detection.&lt;/p&gt;
-
-&lt;h2 id=&quot;disclamier-thingy&quot;&gt;Disclamier thingy&lt;/h2&gt;
-&lt;p&gt;I don’t see much point to these, but I should probably put one anyways.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Don’t be dumb with this script.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I have only used it on my own (or 5024’s) routers, and did not create PWNlink with any malicious intent.&lt;/p&gt;</content><author><name></name></author><category term="projects" /><summary type="html">I was playing around with some D-link routers today and remembered an ExploitDB Entry I read a while ago. Many D-link routers have a great feature that allows remote management and configuration queries. Interestingly, this cannot be disabled, and one of the pages contains a cleartext version of the admin password (yay!).</summary></entry></feed>
+&lt;p&gt;This program is hosted on a raspberry pi laying in my room running docker. I also have &lt;a href=&quot;https://www.portainer.io/&quot;&gt;Portainer&lt;/a&gt; set up so I can easily monitor the bot from my phone over my VPN.&lt;/p&gt;</content><author><name></name></author><summary type="html">Over the past year and a half, I have been hacking my way around the undocumented devRant auth/write API. At the request of devRant’s creators, this API must not be documented due to the way logins work on the platform. That is besides the point. I have been working on a little project called devDNS over the past few days that uses this undocumented API. Why must I be so bad at writing intros?</summary></entry></feed>
