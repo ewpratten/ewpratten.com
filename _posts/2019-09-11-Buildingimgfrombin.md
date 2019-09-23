@@ -9,7 +9,7 @@ redirect_from:
  - /ef7b3166/
 ---
 
-During a computer science class today, we were talking about embedding code and metadata in *jpg* and *bmp* files. @SilasBartha was showing off a program he wrote that watched a directory for new image files, and would display them on a canvas. He then showed us a special image. In this image, he had injected some metadata into the last few pixels, which were not rendered, but told his program where to position the image on the canvas, and it's size.
+During a computer science class today, we were talking about embedding code and metadata in *jpg* and *bmp* files. @exvacuum was showing off a program he wrote that watched a directory for new image files, and would display them on a canvas. He then showed us a special image. In this image, he had injected some metadata into the last few pixels, which were not rendered, but told his program where to position the image on the canvas, and it's size.
 
 This demo got @hyperliskdev and I thinking about what else we can do with image data. After some talk, the idea of converting application binaries to images came up. I had seen a blog post about visually decoding [OOK data](https://en.wikipedia.org/wiki/On%E2%80%93off_keying) by converting an [IQ capture](http://www.ni.com/tutorial/4805/en/) to an image. With a little adaptation, I did the same for a few binaries on my laptop.
 
