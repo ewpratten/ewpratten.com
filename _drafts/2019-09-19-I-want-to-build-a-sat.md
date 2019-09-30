@@ -38,7 +38,7 @@ Currently, My testing setup consists of the following components that I had lyin
 
 ![Current Test Board](/assets/images/satv1.jpg)
 
-The board has been "transmitting" telemetry data for over 24 hours now.
+The board has been "transmitting" telemetry data for over a week now, and is operating as expected.
 
 ### Telemetry
 
