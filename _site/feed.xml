@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-09-30T09:35:47-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://frc5024.github.io&quot;&gt;@frc5024&lt;/a&gt;  programming team lead, and radio enthusiast.</subtitle><entry><title type="html">Building images from binary data</title><link href="http://0.0.0.0:4000/blog/2019/09/11/buildingimgfrombin" rel="alternate" type="text/html" title="Building images from binary data" /><published>2019-09-11T08:41:00-04:00</published><updated>2019-09-11T08:41:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/09/11/Buildingimgfrombin</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/09/11/buildingimgfrombin">&lt;p&gt;During a computer science class today, we were talking about embedding code and metadata in &lt;em&gt;jpg&lt;/em&gt; and &lt;em&gt;bmp&lt;/em&gt; files. @exvacuum was showing off a program he wrote that watched a directory for new image files, and would display them on a canvas. He then showed us a special image. In this image, he had injected some metadata into the last few pixels, which were not rendered, but told his program where to position the image on the canvas, and it’s size.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-10-09T08:34:03-04:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Evan Pratten</title><subtitle>Computer wizard, student, &lt;a href=&quot;https://frc5024.github.io&quot;&gt;@frc5024&lt;/a&gt;  programming team lead, and radio enthusiast.</subtitle><entry><title type="html">Using an RNN to generate Bill Wurtz notes</title><link href="http://0.0.0.0:4000/blog/2019/10/05/billwurtz" rel="alternate" type="text/html" title="Using an RNN to generate Bill Wurtz notes" /><published>2019-10-05T14:54:00-04:00</published><updated>2019-10-05T14:54:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/10/05/BillWurtz</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/10/05/billwurtz">&lt;p&gt;&lt;a href=&quot;https://billwurtz.com/&quot;&gt;Bill Wurtz&lt;/a&gt; is an American musician who became &lt;a href=&quot;https://socialblade.com/youtube/user/billwurtz/realtime&quot;&gt;reasonably famous&lt;/a&gt; through short musical videos posted to Vine and YouTube. I was searching through his website the other day, and stumbled upon a page labeled &lt;a href=&quot;https://billwurtz.com/notebook.html&quot;&gt;&lt;em&gt;notebook&lt;/em&gt;&lt;/a&gt;, and thought I should check it out.&lt;/p&gt;
+
+&lt;p&gt;Bill’s notebook is a large (about 580 posts) collection of random thoughts, ideas, and sometimes just collections of words. A prime source of entertainment, and neural network inputs..&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“If you are looking to burn something, fire may be just the ticket”&lt;/em&gt; - Bill Wurtz&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;choosing-the-right-tool-for-the-job&quot;&gt;Choosing the right tool for the job&lt;/h2&gt;
+&lt;p&gt;If you haven’t noticed yet, Im building a neural net to generate notes based on his writing style and content. Anyone who has read &lt;a href=&quot;/blog/2018/06/27/becomeranter&quot;&gt;my first post&lt;/a&gt; will know that I have already done a similar project in the past. This means &lt;em&gt;time to reuse come code&lt;/em&gt;!&lt;/p&gt;
+
+&lt;p&gt;For this project, I decided to use an amazing library by @minimaxir called &lt;a href=&quot;https://github.com/minimaxir/textgenrnn&quot;&gt;textgenrnn&lt;/a&gt;. This Python library will handle all of the heavy (and light) work of training an RNN on a text dataset, then generating new text.&lt;/p&gt;
+
+&lt;h2 id=&quot;building-a-dataset&quot;&gt;Building a dataset&lt;/h2&gt;
+&lt;p&gt;This project was a joke, so I didn’t bother with properly grabbing each post, categorizing them, and parsing them. Instead, I build a little script to pull every HTML file from Bill’s website, and regex out the body. This ended up leaving some artifacts in the output, but I don’t really mind.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;requests&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loadAllUrls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://billwurtz.com/notebook.html&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;links&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r&quot;HREF=\&quot;(.*)\&quot;style&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;links&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;dumpEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://billwurtz.com/{url}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;/br&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&amp;lt;br&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r&quot;&amp;lt;/head&amp;gt;(.*)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MULTILINE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;# ensure data
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loadAllUrls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Loaded {len(urls)} pages&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dumpEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;urls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This script will print each of Bill’s notes to the console (on it’s own line). I used a simple redirect to write this to a file.&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python3 scrape.py &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; posts.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;training&quot;&gt;Training&lt;/h2&gt;
+&lt;p&gt;To train the RNN, I just used some of textgenrnn’s example code to read the posts file, and build an &lt;a href=&quot;https://en.wikipedia.org/wiki/Hierarchical_Data_Format&quot;&gt;HDF5&lt;/a&gt; file to store the RNN’s neurons.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;textgenrnn&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;textgenrnn&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;generator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;textgenrnn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;generator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train_from_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/path/to/posts.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num_epochs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This takes quite a while to run, so I offloaded it to a &lt;a href=&quot;https://www.digitalocean.com/products/droplets/&quot;&gt;Droplet&lt;/a&gt;, and left it running overnight.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-results&quot;&gt;The results&lt;/h2&gt;
+&lt;p&gt;Here are some of my favorite generated notes:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“note: do not feel better”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“hi  I am a car.”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“i am stuff and think about this before . this is it, the pond. how do they make me feel better?”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“i am still about the floor”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Not perfect, but it is readable english, so i call it a win!&lt;/p&gt;
+
+&lt;h2 id=&quot;play-with-the-code&quot;&gt;Play with the code&lt;/h2&gt;
+&lt;p&gt;I have uploaded the basic code, the scraped posts, and a partial hdf5 file &lt;a href=&quot;https://github.com/Ewpratten/be-bill&quot;&gt;to GitHub&lt;/a&gt; for anyone to play with. Maybe make a twitter bot out of this?&lt;/p&gt;</content><author><name></name></author><summary type="html">Bill Wurtz is an American musician who became reasonably famous through short musical videos posted to Vine and YouTube. I was searching through his website the other day, and stumbled upon a page labeled notebook, and thought I should check it out.</summary></entry><entry><title type="html">Building images from binary data</title><link href="http://0.0.0.0:4000/blog/2019/09/11/buildingimgfrombin" rel="alternate" type="text/html" title="Building images from binary data" /><published>2019-09-11T08:41:00-04:00</published><updated>2019-09-11T08:41:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/09/11/Buildingimgfrombin</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/09/11/buildingimgfrombin">&lt;p&gt;During a computer science class today, we were talking about embedding code and metadata in &lt;em&gt;jpg&lt;/em&gt; and &lt;em&gt;bmp&lt;/em&gt; files. @exvacuum was showing off a program he wrote that watched a directory for new image files, and would display them on a canvas. He then showed us a special image. In this image, he had injected some metadata into the last few pixels, which were not rendered, but told his program where to position the image on the canvas, and it’s size.&lt;/p&gt;
 
 &lt;p&gt;This demo got @hyperliskdev and I thinking about what else we can do with image data. After some talk, the idea of converting application binaries to images came up. I had seen a blog post about visually decoding &lt;a href=&quot;https://en.wikipedia.org/wiki/On%E2%80%93off_keying&quot;&gt;OOK data&lt;/a&gt; by converting an &lt;a href=&quot;http://www.ni.com/tutorial/4805/en/&quot;&gt;IQ capture&lt;/a&gt; to an image. With a little adaptation, I did the same for a few binaries on my laptop.&lt;/p&gt;
 
@@ -583,33 +669,4 @@ ibus-daemon &lt;span class=&quot;nt&quot;&gt;-drx&lt;/span&gt;
 &lt;h2 id=&quot;using-the-script&quot;&gt;Using the script&lt;/h2&gt;
 &lt;p&gt;This script is not on PYPI this time. You can obtain a copy from my GitHub repo: &lt;a href=&quot;https://github.com/Ewpratten/frc-code-stats&quot;&gt;https://github.com/Ewpratten/frc-code-stats&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;First, make sure both &lt;code class=&quot;highlighter-rouge&quot;&gt;python3.7&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;python3-pip&lt;/code&gt; are installed on your computer. Next, delete the &lt;code class=&quot;highlighter-rouge&quot;&gt;data.json&lt;/code&gt; file. Then, install the requirements with &lt;code class=&quot;highlighter-rouge&quot;&gt;pip3 install -r requirements.txt&lt;/code&gt;. Finally, run with &lt;code class=&quot;highlighter-rouge&quot;&gt;python3 main.py&lt;/code&gt; to start the script. Now, go outside and enjoy nature for about an hour, and your data should be loaded!.&lt;/p&gt;</content><author><name></name></author><summary type="html">I was curious about the most used languages for FRC, so I build a Python script to find out what they where.</summary></entry><entry><title type="html">devDNS</title><link href="http://0.0.0.0:4000/blog/2019/07/01/devdns" rel="alternate" type="text/html" title="devDNS" /><published>2019-07-01T18:13:00-04:00</published><updated>2019-07-01T18:13:00-04:00</updated><id>http://0.0.0.0:4000/blog/2019/07/01/devDNS</id><content type="html" xml:base="http://0.0.0.0:4000/blog/2019/07/01/devdns">&lt;p&gt;Over the past year and a half, I have been hacking my way around the undocumented &lt;a href=&quot;https://devrant.com&quot;&gt;devRant&lt;/a&gt; auth/write API. At the request of devRant’s creators, this API must not be documented due to the way logins work on the platform. That is besides the point. I have been working on a little project called &lt;a href=&quot;https://devrant.com/collabs/2163502&quot;&gt;devDNS&lt;/a&gt; over the past few days that uses this undocumented API. Why must I be so bad at writing intros?&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-devdns&quot;&gt;What is devDNS&lt;/h2&gt;
-&lt;p&gt;devDNS is a devRant bot written in python. It will serve any valid DNS query from any user on the platform. A query is just a comment in one of the following forms:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@devDNS example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;or&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@devDNS MX example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Of course, &lt;code class=&quot;highlighter-rouge&quot;&gt;MX&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;example.com&lt;/code&gt; are to be replaced with the domain and entry of your choosing.&lt;/p&gt;
-
-&lt;p&gt;devDNS was inspired by &lt;a href=&quot;https://twitter.com/1111resolver&quot;&gt;@1111Resolver&lt;/a&gt;, and the source is available on &lt;a href=&quot;https://github.com/Ewpratten/devDNS&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
-&lt;p&gt;The Python script behind devDNS is very simple. devDNS does the following every 10 seconds:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Fetch all new notifs&lt;/li&gt;
-  &lt;li&gt;Find only mentions&lt;/li&gt;
-  &lt;li&gt;Spin off a thread for each mention that passes a basic parser (Is the message 2 or 3 words long)&lt;/li&gt;
-  &lt;li&gt;In the thread, check if the message is a control message (allows me to view the status of the bot via devRant)&lt;/li&gt;
-  &lt;li&gt;Check if the request matches a required pattern&lt;/li&gt;
-  &lt;li&gt;Call &lt;code class=&quot;highlighter-rouge&quot;&gt;dnspython&lt;/code&gt; with requested record and domain&lt;/li&gt;
-  &lt;li&gt;Receive answer from a custom &lt;a href=&quot;https://pi-hole.net/&quot;&gt;PIHole&lt;/a&gt; server with caching and super low latency&lt;/li&gt;
-  &lt;li&gt;Send a comment with the results to the requester&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thats it! Super simple, and only two days from concept to reality.&lt;/p&gt;
-
-&lt;h2 id=&quot;where-is-this-hosted&quot;&gt;Where is this hosted?&lt;/h2&gt;
-&lt;p&gt;This program is hosted on a raspberry pi laying in my room running docker. I also have &lt;a href=&quot;https://www.portainer.io/&quot;&gt;Portainer&lt;/a&gt; set up so I can easily monitor the bot from my phone over my VPN.&lt;/p&gt;</content><author><name></name></author><summary type="html">Over the past year and a half, I have been hacking my way around the undocumented devRant auth/write API. At the request of devRant’s creators, this API must not be documented due to the way logins work on the platform. That is besides the point. I have been working on a little project called devDNS over the past few days that uses this undocumented API. Why must I be so bad at writing intros?</summary></entry></feed>
+&lt;p&gt;First, make sure both &lt;code class=&quot;highlighter-rouge&quot;&gt;python3.7&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;python3-pip&lt;/code&gt; are installed on your computer. Next, delete the &lt;code class=&quot;highlighter-rouge&quot;&gt;data.json&lt;/code&gt; file. Then, install the requirements with &lt;code class=&quot;highlighter-rouge&quot;&gt;pip3 install -r requirements.txt&lt;/code&gt;. Finally, run with &lt;code class=&quot;highlighter-rouge&quot;&gt;python3 main.py&lt;/code&gt; to start the script. Now, go outside and enjoy nature for about an hour, and your data should be loaded!.&lt;/p&gt;</content><author><name></name></author><summary type="html">I was curious about the most used languages for FRC, so I build a Python script to find out what they where.</summary></entry></feed>
