@@ -40,8 +40,5 @@ Currently, My testing setup consists of the following components that I had lyin
 
 The board has been "transmitting" telemetry data for over a week now, and is operating as expected.
 
-### Telemetry
-
-
-## Useful resources
- - https://makezine.com/2014/04/11/your-own-satellite-7-things-to-know-before-you-go/
+## Project on hold
+I am currently waiting for [SparkFun](https://www.sparkfun.com/) to send me some new components to work with.. A new post will come eventually.
