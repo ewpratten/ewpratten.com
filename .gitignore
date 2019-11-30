@@ -1,3 +1,4 @@
 _site/*
 .kotlin-for-frc/*
 .sass-cache/*
+.jekyll-cache/*
