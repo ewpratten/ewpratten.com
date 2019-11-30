@@ -38,7 +38,6 @@ kramdown:
 
 highlighter: rouge
 
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-redirect-from # https://github.com/jekyll/jekyll-redirect-from
