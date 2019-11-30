@@ -35,6 +35,10 @@ kramdown:
 #   docs:
 #     output: true
 
+collections:
+  notes:
+    output: true
+
 
 highlighter: rouge
 
