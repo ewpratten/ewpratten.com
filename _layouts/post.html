@@ -25,11 +25,23 @@
 
                 </h4>
                 <hr>
-                <p><em>{{page.date}}
+                <p>
+                    <em>
+                        <!-- Date -->
+                        {{page.date}}
+
+                        <!-- Mini post -->
                         {% if page.is_short %}
                         <span class="badge badge-secondary">Mini Post</span>
                         {% endif %}
-                    </em></p>
+
+                        <!-- Permalink -->
+                        {% if page.redirect_from %}
+                        <a href="{{site.baseurl}}{{page.redirect_from[0]}}"><i class="fas fa-link"></i></a>
+                        {% endif %}
+                    </em>
+
+                </p>
 
                 <br>
 
@@ -39,6 +51,6 @@
 
     </div>
     {% include footer.html %}
-    
+
 
 </body>

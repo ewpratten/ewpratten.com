@@ -37,7 +37,6 @@ These projects range from unfinished ideas, to codebases that took months to dev
  - [retrylife.ca](https://retrylife.ca) - My personal website and blog
  - [frc5024.github.io](https://frc5024.github.io) - The 5024 programming team's website
  - [frc5024 Webdocs](https://frc5024.github.io/webdocs) - The 5024 programming team's internal documentation website
- - [webdocs](https://frc5024.github.io/webdocs) - The 5024 programming team's documentation centre
  - [hyperlisk.dev](https://hyperlisk.dev) - @hyperliskdev's personal website and blog
  - [GiveMeADistro](https://github.com/Ewpratten/GiveMeADistro) - A website to help people decide which Linux distro to try
 
