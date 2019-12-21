@@ -3,6 +3,8 @@ title: My Projects
 layout: page
 ---
 
+Here is a list of projects and programs I have build, and / or contributed to.
+
 These projects range from unfinished ideas, to codebases that took months to develop. I cannot guarantee that the link you click will bring you to a finished project. If you see a project here that you would like to improve upon, open a Pull Request. If you would like to adopt a project, send me an email.
 
 ## Table of contents
@@ -91,6 +93,7 @@ These projects range from unfinished ideas, to codebases that took months to dev
  - [BecomeRanter](https://github.com/Ewpratten/BecomeRanter) - An LSTM-based tool for generating devRant posts
  - [ISS](https://github.com/Ewpratten/ISS) - Find out where the ISS is from your terminal
  - [LaunchDraw](https://github.com/Ewpratten/LaunchDraw) - Use a Novation Launchpad as a canvas with the pygame MIDI library
+ - [Social Mapper](https://github.com/Greenwolf/social_mapper) - A Social Media Enumeration & Correlation Tool by @Greenwolf
 
 ## Server Tools
  - [REmail](https://github.com/Ewpratten/REmail) - An email relay
