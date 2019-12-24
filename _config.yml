@@ -29,15 +29,15 @@ kramdown:
   # input: GFM
   syntax_highlighter: rouge
 
-# THIS BREAKS THE SITE!!
-# collections_dir: collections
-# collections:
-#   docs:
-#     output: true
-
 collections:
   notes:
     output: true
+  music:
+    output: true
+    order:
+      - retroactive.md
+      - spamcalls.md
+      - imagined.md
 
 
 highlighter: rouge
