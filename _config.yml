@@ -17,6 +17,7 @@ ga_analytics: UA-74118570-2
 
 # Social
 twitter_username: ewpratten
+insta_username: evanpratten
 github_username:  ewpratten
 devrant_username: ewpratten
 gitlab_username: ewpratten
@@ -41,6 +42,9 @@ collections:
 
 
 highlighter: rouge
+
+sass:
+    sass_dir: _sass
 
 plugins:
   - jekyll-feed
