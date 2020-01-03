@@ -38,12 +38,12 @@ The following is my key history:
 I exist in various places around the internet. Mainly:
 
  - [Twitter](https://twitter.com/{{site.twitter_username}})
+ - [Instagram](https://www.instagram.com/((site.insta_username)))
+ - <a data-toggle="modal" data-target="#snapcode" href="">Snapchat</a>
  - <a data-toggle="modal" data-target="#devrant-disclaimer" href="">devRant</a>
  - [GitHub](https://github.com/{{site.github_username}})
  - [GitLab](https://gitlab.com/{{site.gitlab_username}})
- - [RetryLife Git](https://git.retrylife.ca/{{site.rtlgit_username}})
  - [Keybase](https://keybase.com/{{site.keybase_username}})
- - <a data-toggle="modal" data-target="#snapcode" href="">Snapchat</a>
 
 ## My gear
 Currently, I use the following hardware:
