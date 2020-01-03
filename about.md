@@ -38,7 +38,7 @@ The following is my key history:
 I exist in various places around the internet. Mainly:
 
  - [Twitter](https://twitter.com/{{site.twitter_username}})
- - [Instagram](https://www.instagram.com/((site.insta_username)))
+ - [Instagram](https://www.instagram.com/{{site.insta_username}})
  - <a data-toggle="modal" data-target="#snapcode" href="">Snapchat</a>
  - <a data-toggle="modal" data-target="#devrant-disclaimer" href="">devRant</a>
  - [GitHub](https://github.com/{{site.github_username}})
