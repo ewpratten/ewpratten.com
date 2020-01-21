@@ -97,6 +97,18 @@ a h5 {
     background-color: #fff;
 }
 
+#advert{
+    /* background-color: #343a40; */
+    /* color:#fff; */
+    text-align:center;
+    /* padding:5; */
+}
+
+#advert p{
+    padding:0;
+    margin:0;
+}
+
 .home.container {
     padding: 20px;
     font-family: 'Noto Sans TC', sans-serif;
