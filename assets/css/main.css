@@ -6,7 +6,7 @@ body {
     background-color: #343a40;
 }
 
-.foot {}
+
 
 .site-info {
     color: rgb(199, 195, 195);
@@ -16,6 +16,16 @@ body {
 .header-gap {
     /* height: 30px;
     background-color: #ebeef1; */
+}
+
+.invert{
+    background-color: #343a40;
+    color: #fff;
+    font-weight: bolder;
+    width: max-content;
+    padding-left: 5;
+    padding-right: 5;
+
 }
 
 .header {
@@ -84,6 +94,10 @@ img {
 
 .centre {
     text-align: center;
+}
+
+h1 {
+    font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
