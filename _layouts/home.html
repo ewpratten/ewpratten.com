@@ -13,40 +13,68 @@
 
             <div style="height:20vh;"></div>
             <div class="nudge-right">
-                <h1 id="name-landing">Evan Pratten</h1>
+                <h1 id="name-landing">{{site.title}}</h1>
                 <h3 id="me-landing">Programmer</h3>
             </div>
 
         </div>
         <div class="landing-more container">
-            <h5><a href="/blog">Blog</a> <a href="/projects">Projects</a> <a href="#main-start">More</a></h5>
+            <h5><a href="/blog">Blog</a> <a href="/projects">Projects</a> <a href="#whoami">More</a></h5>
         </div>
 
-        <!-- Header -->
-        <div class="header container" style="height:30vh" id="main-start">
-            <div class="home-header">
-            </div>
-        </div>
 
         <div class="reactive-bg">
             <div class="home container">
 
 
-                <div class="profile">
+                <!-- <div class="profile">
                     <img src="{{site.baseurl}}/assets/images/human-profile.jpg">
-                </div>
+                </div> -->
 
 
                 <div class="info">
-                    <h1>{{site.title}}</h1>
-                    <hr>
-                    <div class="tagline">
-                        <br><br><br>
-                        <h2>Who am I?</h2>
-                        <p>{{site.about}}</p>
+                    <div id="mobile-title">
+                        <div style="height:25vh;"></div>
+                        <h1 class="blocky">{{site.title}}</h1>
+                        <h3 id="me-landing" style="text-align:center">Programmer</h3>
+                    </div>
 
-                        <br><br>
-                        <h2>Languages</h2>
+                    <!-- <hr> -->
+                    <div>
+                        <!-- class="tagline"> -->
+                        <br><br><br><br><br>
+                        <!-- <div style="height:20vh;"></div> -->
+
+                        <div id="whoami">
+                            <h2 class="blocky">WHOAMI</h2>
+                            <p>{{site.about}}</p>
+                        </div>
+
+                        <br><br><br><br><br>
+                        <!-- <div style="height:20vh;"></div> -->
+
+                        <div id="languages">
+                            <h2 class="blocky">Programming</h2>
+
+                            <p>I have been programming since 2013, and started learning with Python3.
+                                Since then, I have picked up many other languages, and am currently mainly using Python,
+                                Java, and C.
+                                I am also working on learning a few new languages, including Ruby at the moment.</p>
+                        </div>
+
+
+                        <br><br><br><br><br>
+                        <!-- <div style="height:20vh;"></div> -->
+
+                        <div id="whoami">
+                            <h2 class="blocky">Projects</h2>
+                            <p>In my <a href="/projects">Projects page</a>, I have a list of projects I have worked on,
+                                ranging from unfinished
+                                ideas, to codebases that took months to develop. Feel free to check them out, and let me
+                                know what you think!</p>
+                        </div>
+
+                        <!-- <h2>Languages</h2>
 
                         <div class="progress" style="height:30px">
                             <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="15"
@@ -63,10 +91,10 @@
                         <p>I have been programming since 2013, and started learning with Python3.<br>
                             Since then, I have picked up many other languages, and am currently mainly using Python,
                             Java, and C.<br>
-                            I am working on learning a few new languages, including Ruby at the moment.</p>
+                            I am working on learning a few new languages, including Ruby at the moment.</p> -->
 
 
-                        <br><br>
+                        <!-- <br><br>
                         <h2>Projects</h2>
 
                         <p>
@@ -75,7 +103,7 @@
 
                         <a href="{{site.baseurl}}/projects">
                             <button type="button" class="btn btn-success">View Page</button>
-                        </a>
+                        </a> -->
                     </div>
 
                 </div>
