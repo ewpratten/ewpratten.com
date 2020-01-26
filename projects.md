@@ -22,6 +22,7 @@ These projects range from unfinished ideas, to codebases that took months to dev
 
 ## Robotics
  - Robots
+   - [InfiniteRecharge](https://github.com/frc5024/InfiniteRecharge) - 5024's 2020 competition codebase
    - [MiniBot](https://github.com/frc5024/MiniBot) - 5024's 2019-2020 Minibot codebase
    - [DeepSpace-SWI](https://github.com/frc5024/DeepSpace-SWI) - 5024's 2019-2020 offseason codebase
    - [DeepSpace](https://github.com/frc5024/DeepSpace) - 5024's 2019 competition codebase
