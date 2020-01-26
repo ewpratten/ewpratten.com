@@ -10,7 +10,7 @@
     "javaDependencies": [
         {
             "groupId": "ca.retrylife.frc",
-            "artifactId": "Limelihgt-java",
+            "artifactId": "Limelight-java",
             "version": "2020.r1"
         }
     ],
