@@ -41,7 +41,7 @@ These projects range from unfinished ideas, to codebases that took months to dev
  - [frc5024.github.io](https://frc5024.github.io) - The 5024 programming team's website
  - [frc5024 Webdocs](https://frc5024.github.io/webdocs) - The 5024 programming team's internal documentation website
  - [hyperlisk.dev](https://hyperlisk.dev) - @hyperliskdev's personal website and blog
- - [GiveMeADistro](https://github.com/Ewpratten/GiveMeADistro) - A website to help people decide which Linux distro to try
+ - [GiveMeADistro](https://ewpratten.github.io/GiveMeADistro/) - A website to help people decide which Linux distro to try
 
 ## Libraries
  - [shift2](https://github.com/Ewpratten/shift) - My own encoding library
