@@ -1,5 +1,6 @@
 ---
-layout: about
+title: About Me
+layout: page
 permalink: /about/
 ---
 {{site.about}}

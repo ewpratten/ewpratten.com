@@ -280,6 +280,22 @@ a h5 {
     background-color: #fff;
 }
 
+.title.container{
+    text-align:center;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    /* transform: translateY(-30px); */
+    background-color: #fff;
+}
+
+.post-date{
+    color:rgba(182, 182, 182, 0.602);
+}
+
 #advert {
     /* background-color: #343a40; */
     /* color:#fff; */
