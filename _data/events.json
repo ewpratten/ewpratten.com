@@ -1,0 +1,184 @@
+[
+    {
+        "name": "Ludum Dare 46",
+        "upcoming":false,
+        "date": {
+            "start": "2020-04-17",
+            "end": "2020-04-20"
+        },
+        "team": {
+            "yes": true,
+            "url":"https://github.com/rsninja722/LudumDare46"
+        },
+        "url":"https://ldjam.com/events/ludum-dare/46",
+        "info":"Participant"
+    },
+    {
+        "name": "FRC Humber Collage District Event",
+        "upcoming":false,
+        "date": {
+            "start": "2020-03-06",
+            "end": "2020-03-08"
+        },
+        "team": {
+            "yes": true,
+            "url":"http://raiderrobotics.org"
+        },
+        "url":"https://www.thebluealliance.com/event/2020onto3",
+        "info":"Finalists & Award winners"
+    },
+    {
+        "name": "Canadian Computing Competition 2020",
+        "upcoming":false,
+        "date": {
+            "start": "2020-02-20",
+            "end": "2020-02-20"
+        },
+        "team": {
+            "yes": false,
+            "url":""
+        },
+        "url":"https://www.cemc.uwaterloo.ca/contests/computing.html",
+        "info":"Participant"
+    },
+    {
+        "name": "Google CTF 2019",
+        "upcoming":false,
+        "date": {
+            "start": "2019-06-22",
+            "end": "2019-06-23"
+        },
+        "team": {
+            "yes": false,
+            "url":""
+        },
+        "url":"https://capturetheflag.withgoogle.com",
+        "info":"Participant"
+    },
+    {
+        "name": "FRC District Championship 2019",
+        "upcoming":false,
+        "date": {
+            "start": "2019-04-10",
+            "end": "2019-04-13"
+        },
+        "team": {
+            "yes": true,
+            "url":"http://raiderrobotics.org"
+        },
+        "url":"https://www.thebluealliance.com/event/2019oncmp1",
+        "info":"Quarter-finalists & Award winners"
+    },
+    {
+        "name": "FRC Western University District Event",
+        "upcoming":false,
+        "date": {
+            "start": "2019-04-05",
+            "end": "2019-04-06"
+        },
+        "team": {
+            "yes": true,
+            "url":"http://raiderrobotics.org"
+        },
+        "url":"https://www.thebluealliance.com/event/2019onlon",
+        "info":"Semi-finalists & Award winners"
+    },
+    {
+        "name": "ECOO Programming Contest 2019",
+        "upcoming":false,
+        "date": {
+            "start": "2019-03-26",
+            "end": "2019-03-26"
+        },
+        "team": {
+            "yes": false,
+            "url":""
+        },
+        "url":"https://ecoocs.org/",
+        "info":"Participant"
+    },
+    {
+        "name": "FRC Ryerson University District Event",
+        "upcoming":false,
+        "date": {
+            "start": "2019-03-14",
+            "end": "2019-03-16"
+        },
+        "team": {
+            "yes": true,
+            "url":"http://raiderrobotics.org"
+        },
+        "url":"https://www.thebluealliance.com/event/2019onto1",
+        "info":"Quarter-finalists & Award winners"
+    },
+    {
+        "name": "Canadian Computing Competition 2019",
+        "upcoming":false,
+        "date": {
+            "start": "2019-02-20",
+            "end": "2019-02-20"
+        },
+        "team": {
+            "yes": false,
+            "url":""
+        },
+        "url":"https://www.cemc.uwaterloo.ca/contests/computing.html",
+        "info":"Participant"
+    },
+    {
+        "name": "Google Foobar",
+        "upcoming":false,
+        "date": {
+            "start": "2018-09-09",
+            "end": "2018-09-11"
+        },
+        "team": {
+            "yes": false,
+            "url":""
+        },
+        "url":"https://foobar.withgoogle.com/",
+        "info":"Completed all challenges"
+    },
+    {
+        "name": "ECOO Programming Contest 2018",
+        "upcoming":false,
+        "date": {
+            "start": "2018-04-28",
+            "end": "2018-04-28"
+        },
+        "team": {
+            "yes": false,
+            "url":""
+        },
+        "url":"https://ecoocs.org/",
+        "info":"Participant"
+    },
+    {
+        "name": "FRC University of Waterloo District Event",
+        "upcoming":false,
+        "date": {
+            "start": "2018-03-22",
+            "end": "2018-03-24"
+        },
+        "team": {
+            "yes": true,
+            "url":"http://raiderrobotics.org"
+        },
+        "url":"https://www.thebluealliance.com/event/2018onwat",
+        "info":"Quarter-finalists & Award winners"
+    },
+    {
+        "name": "FRC Georgian College District Event",
+        "upcoming":false,
+        "date": {
+            "start": "2018-03-02",
+            "end": "2018-03-04"
+        },
+        "team": {
+            "yes": true,
+            "url":"http://raiderrobotics.org"
+        },
+        "url":"https://www.thebluealliance.com/event/2018onbar",
+        "info":"Quarter-finalists & Award winners"
+    }
+]

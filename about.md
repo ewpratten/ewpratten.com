@@ -7,7 +7,7 @@ permalink: /about/
 ## Chat with me
 If you want to contact me, you can do so via email (ewpratten @ \<this website's domain name\>). 
 
-I use PGP keys (mt keys and history are listed below), so feel free to contact me securely via GPG. If you don't trust Microsoft (owns GitHub, who hosts this site) to serve you the correct file, you can find my key on []() and []().
+I use PGP keys (mt keys and history are listed below), so feel free to contact me securely via GPG.
 
 My current PGP key fingerprint is: `3D98 479A DE42 85A3 21F6 6DE4 DAB2 7917 6352 D880`.
 ```
@@ -34,7 +34,7 @@ The following is my key history:
 
 </div>
 
-## My social
+## My socials
 I exist in various places around the internet. Mainly:
 
  - [Twitter](https://twitter.com/{{site.twitter_username}})
@@ -51,11 +51,9 @@ Currently, I use the following hardware:
  - Lenovo T480
    - 16GB of RAM
    - 500GB Crucial SSD
-   - 1080p display
    - Ubuntu 18.04 minimal
  - Google Pixel 3a XL
    - Stock android
- - HP 27es monitor
 
 ## My crypto addresses
 
