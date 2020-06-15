@@ -280,10 +280,10 @@ a h5 {
     background-color: #fff;
 }
 
-.title.container{
-    text-align:center;
-    padding-top:15px;
-    padding-bottom:15px;
+.title.container {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 20px;
     font-family: 'IBM Plex Sans', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -292,8 +292,8 @@ a h5 {
     background-color: #fff;
 }
 
-.post-date{
-    color:rgba(182, 182, 182, 0.602);
+.post-date {
+    color: rgba(182, 182, 182, 0.602);
 }
 
 #advert {
@@ -516,4 +516,13 @@ pre {
     display: block;
     height: 40px;
     margin-top: -40px;
+}
+
+code.highlighter-rouge {
+    padding-left: 6px;
+    padding-right: 6px;
+    overflow: auto;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    color: #212529;
 }
