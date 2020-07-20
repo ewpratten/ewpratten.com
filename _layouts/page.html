@@ -1,5 +1,6 @@
 {% include head.html %}
 
+
 <body>
 
     <div class="site-ctr">
@@ -8,17 +9,65 @@
 
         <div class="reactive-bg">
 
-            <div class="title container">
-                <h1>{{page.title}}</h1>
-            </div><br>
+            <div class="color-space" id="color-space"></div>
 
-            <div class="post container">
-                {{content}}
+            <div class="content-container">
+
+                <div class="title-container container">
+                    <h1>{{page.title}}</h1>
+                    <h4>{{page.description}}</h4>
+                </div><br>
+
+
+
+                <!-- {% if page.dhow_date %}
+                <p class="post-date">
+                    <em>
+                        {{page.date}}
+                    </em>
+
+                </p>
+                {% endif %} -->
+
+                <div class="inner-content-container container">
+                    {{content}}
+                </div>
+
             </div>
         </div>
 
     </div>
     {% include footer.html %}
 
+    <!-- A little script to set the header and nav color based on page type -->
+    <!-- <script>
+
+        // Read from liquid
+        var page_type = "{{page.type}}";
+
+        // Selectors
+        var color_space = document.getElementById("color-space");
+        var navbar = document.getElementById("navbar");
+
+        // Colors
+        var red = getComputedStyle(document.documentElement)
+            .getPropertyValue('--color-red');
+        var purple = getComputedStyle(document.documentElement)
+            .getPropertyValue('--color-purple');
+
+        // DEBUG
+        console.log(red);
+        console.log(purple);
+
+        // Set color
+        if (page_type == "post") {
+            color_space.setAttribute("background-color", red, "!important");
+            navbar.setAttribute("background-color", red, "!important");
+        } else {
+            color_space.setAttribute("background-color", purple, "!important");
+            navbar.setAttribute("background-color", purple, "!important");
+        }
+
+    </script> -->
 
 </body>

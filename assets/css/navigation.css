@@ -1,0 +1,21 @@
+---
+---
+
+.custom-navbar {
+    {% if header_red %}
+    background-color: var(--color-red)!important;
+    {% else %}
+    background-color: var(--color-purple)!important;
+    {% endif %}
+    /* background-color: unset!important;
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
+    /* box-shadow: 0px 10px 3px var(--color-purple); */
+    width: 101%;
+    overflow: hidden;
+}
+
+.custom-navbar img{
+    height: 40px;
+}

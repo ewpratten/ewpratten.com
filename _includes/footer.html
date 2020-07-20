@@ -1,37 +1,5 @@
-<!-- <div id="particles-js"></div> -->
 
 <br><br>
-
-
-<!-- Brython -->
-<script src="/assets/js/brython.js"></script>
-<script src="/assets/js/brython_stdlib.js"></script>
-
-<script>
-    function startPY() {
-
-        brython();
-        console.log("Started Python")
-    }
-
-    window.onload = startPY;
-</script>
-
-<!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
-<script>
-    (function (f, a, t, h, o, m) {
-        a[h] = a[h] || function () {
-            (a[h].q = a[h].q || []).push(arguments)
-        };
-        o = f.createElement('script'),
-            m = f.getElementsByTagName('script')[0];
-        o.async = 1; o.src = t; o.id = 'fathom-script';
-        m.parentNode.insertBefore(o, m)
-    })(document, window, '//a.rtlroute.cc/tracker.js', 'fathom');
-    fathom('set', 'siteId', 'WOCXR');
-    fathom('trackPageview');
-</script>
-<!-- / Fathom -->
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -77,25 +45,14 @@
 </script>
 
 
-<!-- particles -->
-<script>
-    var body = document.body
-
-    var particles = document.getElementById("particles-js")
-
-    particles.style.height = body.scrollHeight + "px"
-
-    console.log(body.scrollHeight)
-</script>
-<script src="/assets/js/particles.min.js"></script>
-<script>
-    particlesJS.load('particles-js', '/assets/js/particles.json', function () {
-        console.log('callback - particles.js config loaded');
-    });
-</script>
-
+{% if page.requires_twitter %}
 <!-- Twitter embeds -->
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endif %}
 
+
+{% if page.requires_graphs %}
 <!-- Roughviz -->
-<script src="https://unpkg.com/rough-viz@1.0.5"></script>
+<script src="https://unpkg.com/rough-viz@1.0.5"></script
+{% endif %}
+>
