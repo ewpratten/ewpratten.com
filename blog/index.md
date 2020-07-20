@@ -4,10 +4,12 @@ layout: page
 header_red: true
 ---
 
+Here is a list of things I find interesting, and writeups of projects I have worked on.
+
 <div class="list-group" id="posts">
-    <a href="#posts"
+    <!-- <a href="#posts"
         class="feature list-group-item list-group-item-action list-group-item-dark ">Featured
-        Post</a>
+        Post</a> -->
 
     {% assign i = 0 %}
     {% for post in site.posts %}
