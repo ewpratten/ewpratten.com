@@ -1,6 +1,7 @@
 ---
 title: Blog Posts
 layout: page
+header_red: true
 ---
 
 <div class="list-group" id="posts">

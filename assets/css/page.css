@@ -4,7 +4,7 @@
 .color-space{
     height:40vh;
 
-    {% if header_red %}
+    {% if page.header_red %}
     background-color: var(--color-red)!important;
     {% else %}
     background-color: var(--color-purple)!important;
