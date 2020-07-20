@@ -1,0 +1,24 @@
+.color-hero{
+    height:108vh;
+
+    background-color: var(--color-purple)!important;
+}
+
+.color-hero .hello{
+    padding-top: 30vh;
+    color:white;
+}
+
+.home-secondary-panel{
+    transform: translateY(-50px);
+    background-color:white;
+    min-height: 500px;
+}
+
+.home-content{
+    padding-top: 6rem;
+}
+
+.header-space{
+    padding-top: 6rem;
+}
