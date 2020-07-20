@@ -2,7 +2,7 @@
 ---
 
 .color-space{
-    height:40vh;
+    height:25vh;
 
     {% if page.header_red %}
     background-color: var(--color-red)!important;
@@ -25,4 +25,8 @@
     border-radius:5px;
     padding: 3px;
     margin-bottom:0;
+}
+
+img{
+    max-width:100%;
 }
