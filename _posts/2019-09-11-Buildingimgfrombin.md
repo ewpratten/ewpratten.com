@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "Building images from binary data"
 description: "Simple, yet fun"
 date:   2019-09-11 12:41:00

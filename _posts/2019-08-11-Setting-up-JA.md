@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "How I set up ひらがな input on my laptop"
 description: "I3wm makes everything 10x harder than it should be"
 date:   2019-08-12 19:40:00

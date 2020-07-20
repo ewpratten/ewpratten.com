@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "The language hunt"
 date:   2019-04-30 18:32:00+0000
 categories: frc
