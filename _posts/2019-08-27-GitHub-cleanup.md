@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "I did some cleaning"
 description: "Spring cleaning is fun when it isn't spring, and a computer does all the work"
 date:   2019-08-27 12:37:00

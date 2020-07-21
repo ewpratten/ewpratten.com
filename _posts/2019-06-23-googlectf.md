@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "I gave Google's CTF a short try and learned a thing or two"
 description: "But exams got in the way and took all the fun"
 date:   2019-06-23 22:04:00

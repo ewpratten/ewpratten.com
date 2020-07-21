@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "Graphing the relation between wheels and awards for FRC"
 description: "AKA. Why programmer + reddit + matplotlib is a bad idea."
 date:   2019-06-16 15:51:00

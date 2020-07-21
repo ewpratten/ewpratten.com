@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "Scraping FRC team's GitHub accounts to gather large amounts of data"
 description: "There are a lot of teams..."
 date:   2019-07-06 15:08:00

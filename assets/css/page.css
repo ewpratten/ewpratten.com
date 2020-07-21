@@ -1,0 +1,29 @@
+---
+---
+
+.color-space{
+    height:25vh;
+
+    {% if page.header_red %}
+    background-color: var(--color-red)!important;
+    {% else %}
+    background-color: var(--color-purple)!important;
+    {% endif %}
+}
+
+.title-container{
+    margin-top: 6rem;
+
+}
+
+
+.highlight{
+    background-color: var(--light-gray);
+    border-radius:5px;
+    padding: 3px;
+    margin-bottom:0;
+}
+
+img{
+    max-width:100%;
+}

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "Using a python script to create devRant posts based on the style and content of another user"
 description: "if/else ++"
 date:   2018-06-27 18:32:00

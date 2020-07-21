@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "The language hunt: Part 2"
 description: "A quick followup"
 date:   2019-06-24 21:36:00
