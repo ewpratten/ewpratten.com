@@ -27,3 +27,11 @@
 img{
     max-width:100%;
 }
+
+.center{
+    text-align: center;
+}
+
+.foot-info a {
+    color: var(--color-dark-purple);
+}
