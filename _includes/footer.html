@@ -1,10 +1,11 @@
-
 <br><br>
 
 <div class="foot-info center">
     Made by Evan Pratten | <a href="/feed.xml">RSS</a> | <a href="https://status.retrylife.ca">API Status</a>
 </div>
 
+
+<!-- Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -14,6 +15,26 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+<!-- Load KaTeX -->
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+
+
+<!-- Parse the Latex divs with Katex-->
+<script type="text/javascript">
+    $("script[type='math/tex']").replaceWith(
+        function () {
+            var tex = $(this).text();
+            return katex.renderToString(tex, { displayMode: false });
+        });
+
+    $("script[type='math/tex; mode=display']").replaceWith(
+        function () {
+            var tex = $(this).text();
+            return katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+        });
+    $("span[class='katex-html']").replaceWith("")
+</script>
 
 <!-- Tracking API -->
 <script src="https://api.retrylife.ca/tracking/external/retrylife.ca"></script>

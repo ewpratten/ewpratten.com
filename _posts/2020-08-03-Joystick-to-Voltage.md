@@ -13,9 +13,9 @@ I am starting a new little series here called "Notes from FRC". The idea is that
 
 Today's topic is quite simple, yet almost nobody has written anything about it. One of the very first problems presented to you when working with an FRC robot is: *"I have a robot, and I have a controller.. How do I make this thing move?"*. When I first started as a software developer at *Raider Robotics*, I decided to do some Googling, as I was sure someone would have at least written about this from the video-game industry.. Nope.
 
-Let's lay out the problem. We have an application that needs to run some motors from a joystick input. Periodically, we are fed a vector of joystick data, ![`[T, S]`](https://latex.codecogs.com/svg.latex?[T,%20S]), where ![`[-1.0, -1.0] <= [T, S] <= [1.0, 1.0]`](https://latex.codecogs.com/svg.latex?[-1.0,%20-1.0]%20%3C=%20[T,%20S]%20%3C=%20[1.0,%201.0]). ![`T`](https://latex.codecogs.com/svg.latex?T) denotes our *throttle* input, and ![`S`](https://latex.codecogs.com/svg.latex?S) denotes something we at Raider Robotics call *"rotation"*. As you will see later on, rotation is not quite the correct word, but none of us can come up with anything better. Some teams, who use a steering wheel as input instead of a joystick, call this number *wheel*, which makes sense in their context. For every time an input is received, we must also produce an output, ![`[L, R]`](https://latex.codecogs.com/svg.latex?[L,%20R]), where ![`[-12.0, -12.0] <= [L, R] <= [12.0, 12.0]`](https://latex.codecogs.com/svg.latex?[-12.0,%20-12.0]%20%3C=%20[L,%20R]%20%3C=%20[12.0,%2012.0]). ![`[L, R]`](https://latex.codecogs.com/svg.latex?[L,%20R]) is a vector containing *left* and *right* side motor output voltages respectively. Since we build [tank-drive](https://en.wikipedia.org/wiki/Tank_steering_systems)-style robots, when ![`[L, R] = [12, 12]`](https://latex.codecogs.com/svg.latex?[L,%20R]%20=%20[12,%2012]), the robot would be moving forward at full speed, and when ![`[L, R] = [12, 0]`](https://latex.codecogs.com/svg.latex?[L,%20R]%20=%20[12,%200]), the robot would be pivoting right around the centre of its right track at full speed. The simplest way to convert a throttle and rotation input to left and right voltages is as follows:
+Let's lay out the problem. We have an application that needs to run some motors from a joystick input. Periodically, we are fed a vector of joystick data, $$\lbrack\begin{smallmatrix}T\\S\end{smallmatrix}\rbrack$$, where the values follow $$-1\leq \lbrack\begin{smallmatrix}T\\S\end{smallmatrix}\rbrack \leq 1$$. $$T$$ denotes our *throttle* input, and $$S$$ denotes something we at Raider Robotics call *"rotation"*. As you will see later on, rotation is not quite the correct word, but none of us can come up with anything better. Some teams, who use a steering wheel as input instead of a joystick, call this number *wheel*, which makes sense in their context. For every time an input is received, we must also produce an output, $$\lbrack\begin{smallmatrix}L\\R\end{smallmatrix}\rbrack$$, where the values follow $$-12\leq \lbrack\begin{smallmatrix}L\\R\end{smallmatrix}\rbrack \leq 12$$. $$\lbrack\begin{smallmatrix}L\\R\end{smallmatrix}\rbrack$$ is a vector containing *left* and *right* side motor output voltages respectively. Since we build [tank-drive](https://en.wikipedia.org/wiki/Tank_steering_systems)-style robots, when $$\lbrack\begin{smallmatrix}L\\R\end{smallmatrix}\rbrack = \lbrack\begin{smallmatrix}12\\12\end{smallmatrix}\rbrack$$, the robot would be moving forward at full speed, and when $$\lbrack\begin{smallmatrix}L\\R\end{smallmatrix}\rbrack = \lbrack\begin{smallmatrix}12\\0\end{smallmatrix}\rbrack$$, the robot would be pivoting right around the centre of its right track at full speed. The simplest way to convert a throttle and rotation input to left and right voltages is as follows:
 
-![`[L, R] = 12[T + S, T - S]`](https://latex.codecogs.com/svg.latex?[L, R] = 12.0[T+S, T-S])
+$$ output = 12\cdot\begin{bmatrix}T + S \\ T - S\end{bmatrix} $$
 
 This can be expressed in Python as:
 
@@ -24,7 +24,7 @@ def computeMotorOutputs(T: float, S: float) -> Tuple[float, float]:
     return (12 * (T + S), 12 * (T - S))
 ```
 
-In FRC, we call this method "arcade drive", since the controls feel like you are driving a tank in an arcade game. Although this is very simple, there is a big drawback. At high values of ![`T`](https://latex.codecogs.com/svg.latex?T) and ![`S`](https://latex.codecogs.com/svg.latex?S), precision is lost. The best solution I have seen to this problem is to divide both ![`L`](https://latex.codecogs.com/svg.latex?L) and ![`R`](https://latex.codecogs.com/svg.latex?R) by the result of ![`max(abs(T), abs(S))`](https://latex.codecogs.com/svg.latex?max(abs(T), abs(S))) if the resulting value is greater than ![`1.0`](https://latex.codecogs.com/svg.latex?1.0). With this addition, the compute function now looks like this:
+In FRC, we call this method "arcade drive", since the controls feel like you are driving a tank in an arcade game. Although this is very simple, there is a big drawback. At high values of $$T$$ and $$S$$, precision is lost. The best solution I have seen to this problem is to divide both $$L$$ and $$R$$ by the result of $$\max(abs(T), abs(S))$$ if the resulting value is greater than $$1.0$$. With this addition, the compute function now looks like this:
 
 ```python
 def computeMotorOutputs(T: float, S: float) -> Tuple[float, float]: 
@@ -49,7 +49,7 @@ Of course, I'm not stopping here. Although arcade drive works, the result is not
 
 FRC teams like [254](https://www.team254.com/) and [971](https://frc971.org/) use variations of this calculation method called *"constant curvature drive"*. Curvature drive is only slightly different from arcade drive. Here is the new formula:
 
-![`[L, R] = 12[T + abs(T) * S, T - abs(T) * S]`](https://latex.codecogs.com/svg.latex?[L, R] = 12[T + abs(T)(S), T - abs(T)(S)])
+$$output = 12\cdot\begin{bmatrix}T + abs(T) \cdot S \\ T - abs(T) \cdot S\end{bmatrix}$$
 
 If we also add the speed scaling from arcade drive, we are left with the following Python code:
 
@@ -71,11 +71,11 @@ def computeMotorOutputs(T: float, S: float) -> Tuple[float, float]:
 
 ```
 
-The ![`S`](https://latex.codecogs.com/svg.latex?S) component now changes the curvature of the robot's path, rather than the heading's rate of change. This makes the robot much more controllable at high speeds. There is one downside to this method though. As a tradeoff to making high-speed driving much more controllable, we have completely removed the robot's ability to turn when stopped. 
+The $$S$$ component now changes the curvature of the robot's path, rather than the heading's rate of change. This makes the robot much more controllable at high speeds. There is one downside to this method though. As a tradeoff to making high-speed driving much more controllable, we have completely removed the robot's ability to turn when stopped. 
 
 This is where the final drive method comes in to play. At Raider Robotics, we call it *"semi-constant curvature drive"*, and have been using it in gameplay with great success since 2019. Since we want to take the best parts of arcade drive and constant curvature drive, we came to the simple conclusion that we should just average the two methods. Doing this results in this new formula:
 
-![`[L, R] = 12[((T + abs(T) * S) + (T + S)) / 2, ((T - abs(T) * S) + (T - S)) / 2]`](https://latex.codecogs.com/svg.latex?[L, R] = 12[((T + abs(T) * S) + (T + S)) / 2, ((T - abs(T) * S) + (T - S)) / 2])
+$$output = 12\cdot\begin{bmatrix}\frac{(T + abs(T) * S) + (T + S)}{2} \\ \frac{(T - abs(T) * S) + (T - S)}{2}\end{bmatrix}$$
 
 And here is the associated Python code:
 
