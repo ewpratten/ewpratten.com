@@ -12,7 +12,7 @@
     -moz-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px); */
     /* box-shadow: 0px 10px 3px var(--color-purple); */
-    width: 101%;
+    /* width: 101%; */
     overflow: hidden;
 }
 
