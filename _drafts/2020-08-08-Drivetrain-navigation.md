@@ -76,7 +76,7 @@ $$
 
 For even more controllability, Raider Robotics passes $$\Delta d$$ through a [PD](https://en.wikipedia.org/wiki/PID_controller#Selective_use_of_control_terms) controller, and $$\Delta\theta$$ through a [PI](https://en.wikipedia.org/wiki/PID_controller#PI_controller) controller before converting them to motor values... and that is it! With just a couple formulæ, we have a fully functional autonomous point-to-point locomotion system. 
 
-For a real-world example of this method in use, check out 5024's robot in the bottom right corner of this video for the first 15 seconds:
+For a real-world example of this method in use, check out 5024's robot (bottom right) and 1114's robot (bottom left). Both teams were running nearly the same implementation. We were both running autonomously for the first 15 seconds of the game:
 
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/5Q39LIVcXSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
