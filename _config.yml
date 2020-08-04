@@ -32,6 +32,8 @@ kramdown:
   math_engine: mathjax
 
 collections:
+  drafts:
+    output: true
   notes:
     output: true
   music:
