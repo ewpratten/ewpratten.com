@@ -17,8 +17,9 @@
     crossorigin="anonymous"></script>
 
 <!-- Load KaTeX -->
-<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0-rc.1/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
 
 <!-- Parse the Latex divs with Katex-->
 <script type="text/javascript">
@@ -33,7 +34,7 @@
             var tex = $(this).text();
             return katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
         });
-    $("span[class='katex-html']").replaceWith("")
+    // $("span[class='katex-html']").replaceWith("")
 </script>
 
 <!-- Tracking API -->
