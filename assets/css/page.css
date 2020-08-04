@@ -30,7 +30,11 @@ body{
 }
 
 img{
-    max-width:100%;
+    max-width:99%;
+}
+
+iframe{
+    max-width:99%;
 }
 
 .center{
