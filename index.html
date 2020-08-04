@@ -1,0 +1,178 @@
+---
+title: Home
+---
+
+{% include head.html %}
+
+<body>
+
+    <div class="site-ctr">
+        <!-- Navbar -->
+        {% include nav.html %}
+
+        <div class="color-hero">
+            <div class="hello container">
+                <h1>Hi,</h1>
+                <h1>I am Evan&nbsp;Pratten</h1>
+            </div>
+        </div>
+
+        <div class="home-secondary-panel edge--top">
+            <div class="inner-content-container home-content container">
+                <h1>Who I am</h1>
+
+                <h3>I am a senior-year Highschool student who studies computer science, an intern Technical Director
+                    at <a href="https://industrialbrothers.com">Industrial Brothers</a> and one of the primary software
+                    developers
+                    writing the code that powers competition-ready robots at <a href="https://github.com/frc5024">Raider
+                        Robotics</a>.</h3>
+
+                <div class="header-space"></div>
+
+                <!-- <h1>What I do</h1>
+
+                <h3> I am a software developer, and photographer. I use this website to host
+                    <a href="/blog">blog posts</a>
+                    about my learnings as a programmer, and to share the best of my
+                    <a href=" /photography">photos</a></h3>
+
+
+                <div style="padding-top:3rem;"></div>
+                <hr>
+                <div style="padding-top:3rem;"></div> -->
+
+                <h1>My notable projects</h1>
+
+                <h3>I develop and provide many web and desktop applications for public use. I host them all on my
+                    private backend infrastructure. The network of servers that powers these applications was originally
+                    set up to help me learn server management and distributed application development.</h3>
+
+
+                <div style="padding-top:3rem;"></div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card home-project">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Student Portal</strong></h5>
+                                <p class="card-text">This is a free-to-use webapp that acts as a new frontend to the
+                                    <a href="https://schoolapps2.tvdsb.ca/students/student_login/lgn.aspx">
+                                        TVDSB Student Portal
+                                    </a>
+                                    website. This webapp also includes some extra data and graphs of each student's
+                                    progress through highschool.</p>
+                                <a href="https://studentportal.retrylife.ca" class="btn btn-primary">Open App</a>
+                                <a href="https://github.com/Ewpratten/student_portal" class="btn btn-dark"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card home-project">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>RetryLife API</strong></h5>
+                                <p class="card-text">If you are looking to build an application that hooks into the
+                                    backend of any one of my services, take a look at the RetryLife API. My backend API
+                                    is edge-cached and CORS-ready for use in any application at any load.</p>
+                                <a href="https://api.retrylife.ca/apidocs" class="btn btn-primary">View
+                                    Documentation</a>
+                                <a href="https://status.retrylife.ca" class="btn btn-dark"><i
+                                        class="fas fa-info-circle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card home-project">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Lib5K</strong></h5>
+                                <p class="card-text">Lib5K is the core software library that powers all of Raider
+                                    Robotics' robots. It started as a summer project of mine, and has now been used to
+                                    build high-performance competitive robots, and win some awards along the way.</p>
+                                <a href="https://github.com/frc5024/lib5k" class="btn btn-dark"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="https://frc5024.github.io/lib5k" class="btn btn-dark"><i
+                                        class="fas fa-book"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card home-project">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>GitHub Actions for FRC</strong></h5>
+                                <p class="card-text">A GitHub CI action specifically built for FRC/GradleRIO codebases.
+                                    This has been used in production by multiple FRC teams, and has become a core tool
+                                    in the Raider Robotics software development pipeline.</p>
+                                <a href="https://github.com/marketplace/actions/frc-build-test"
+                                    class="btn btn-primary">GitHub Marketplace</a>
+                                <a href="https://github.com/Ewpratten/FRC-actions" class="btn btn-dark"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card home-project">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Remains.xyz</strong></h5>
+                                <p class="card-text">Remains is my first ever web-based multiplayer game. During the
+                                    development process, I learned how to work with Node.js, design load balancers, and
+                                    write algorithms that can handle multiplayer network latency.</p>
+                                <a href="https://remains.xyz" class="btn btn-primary">Play game</a>
+                                <a href="https://github.com/Ewpratten/remains.xyz" class="btn btn-dark"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card home-project">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Shift</strong></h5>
+                                <p class="card-text">Shift is a rotating-key, XOR-based data encryption tool that I
+                                    built to learn about the inner workings of simple encryption tools. This tool is
+                                    used to obfuscate program data in some of my other applications.</p>
+                                <a href="/blog/2019/08/24/shift2" class="btn btn-primary">Blog Post</a>
+                                <a href="https://github.com/Ewpratten/shift" class="btn btn-dark"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card home-project">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Rayzor</strong></h5>
+                                <p class="card-text">Rayzor is my final project from my ICS4U computer science class.
+                                    This is a 3D raytracer that can generate still images from a scene definition file.
+                                    Take a look at the project's README file for some examples.</p>
+                                <a href="https://github.com/Ewpratten/Rayzor" class="btn btn-dark"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card home-project">
+                            <div class="card-body">
+                                <h5 class="card-title"><strong>Pi-hole API</strong></h5>
+                                <p class="card-text">This is an old project of mine that is used in some of my backend
+                                    server management tools, and by many other people in personal projects. Pi-hole API
+                                    is a Python3 wrapper around the <a href="https://pi-hole.net/">Pi-hole</a> admin
+                                    interface.</p>
+                                <a href="https://github.com/Ewpratten/pihole-api" class="btn btn-dark"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <div class="home-third-panel">
+            <div class="inner-content-container home-content container">
+                
+            </div>
+        </div> -->
+
+
+    </div>
+    {% include footer.html %}
+
+</body>

@@ -1,24 +1,40 @@
-.color-hero{
-    height:108vh;
-
+.color-hero {
+    height: 108vh;
     background-color: var(--color-purple)!important;
 }
 
-.color-hero .hello{
+.color-hero .hello {
     padding-top: 30vh;
-    color:white;
+    color: white;
 }
 
-.home-secondary-panel{
+.home-secondary-panel {
     transform: translateY(-50px);
-    background-color:white;
+    background-color: white;
+    min-height: 800;
+}
+
+.home-third-panel {
+    transform: translateY(-50px);
+    background-color: var(--color-dark-blue)!important;
     min-height: 500px;
+    color: white;
 }
 
-.home-content{
+.home-third-panel a {
+    color: var(--color-blue)!important;
+}
+
+.home-content {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.header-space {
     padding-top: 6rem;
 }
 
-.header-space{
-    padding-top: 6rem;
+.home-project {
+    /* min-height: 310px; */
+    margin-top:1rem;
 }
