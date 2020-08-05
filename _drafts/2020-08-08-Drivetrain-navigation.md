@@ -47,7 +47,7 @@ $$
 This raises an interesting problem. Our *goal pose* is directly to the left of our *current pose*, and tanks cannot strafe (travel in the $$y$$ axis without turning). Luckily, to solve this problem we just need to know our error from the goal pose as a distance ($$\Delta d$$), and a heading ($$\Delta\theta$$):
 
 $$
-\Delta d = \sqrt(\Delta x^2 + \Delta y^2)
+\Delta d = \sqrt{\Delta x^2 + \Delta y^2}
 $$
 
 $$
