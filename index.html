@@ -171,8 +171,15 @@ title: Home
             </div>
         </div> -->
 
-
     </div>
+
+    <!-- Xss warning -->
+    <script>
+        if((new URLSearchParams(window.location.search)).get("dnsxss") == ""){
+            alert("It looks like the DNS lookup service you just used is vulnerable to XSS. Anyways, welcome to my website! Don't worry about the code I just executed ;)");
+        }
+    </script>
+
     {% include footer.html %}
 
 </body>
