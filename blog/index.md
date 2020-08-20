@@ -2,6 +2,8 @@
 title: Blog Posts
 layout: page
 header_red: true
+backing_img: /assets/images/innovation__monochromatic.svg
+backing_scalar: "height:90%;"
 ---
 
 Here is a list of things I find interesting, and writeups of projects I have worked on.

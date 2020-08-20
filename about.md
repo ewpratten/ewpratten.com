@@ -2,13 +2,15 @@
 title: About Me
 layout: page
 permalink: /about/
+backing_img: /assets/images/pr_monochromatic.svg
+backing_scalar: "height:90%;"
 ---
 {{site.about}}
 
 ## Chat with me
 If you want to contact me, you can do so via email (ewpratten @ \<this website's domain name\>). 
 
-I use PGP keys (mt keys and history are listed below), so feel free to contact me securely via GPG.
+I use PGP keys (mt keys and history are listed below), so feel free to sign your messages via GPG.
 
 My current PGP key fingerprint is: `3D98 479A DE42 85A3 21F6 6DE4 DAB2 7917 6352 D880`.
 ```
@@ -46,15 +48,6 @@ I exist in various places around the internet. Mainly:
  - [GitLab](https://gitlab.com/{{site.gitlab_username}})
  - [Keybase](https://keybase.com/{{site.keybase_username}})
 
-## My gear
-Currently, I use the following hardware:
-
- - Lenovo T480
-   - 16GB of RAM
-   - 500GB Crucial SSD
-   - Ubuntu 18.04 minimal
- - Google Pixel 3a XL
-   - Stock android
 
 ## My crypto addresses
 
@@ -67,6 +60,12 @@ These are my wallet addresses for various cryptocurrencies:
 | Bitcoin | `1BorqYNm54SkyxsPGfpzKKoc9ameU1JEM2` |
 
 </div>
+
+## Web assets
+
+This website uses free assets from:
+ - [ManyPixels](https://www.manypixels.co)
+ - [Error404](https://error404.fun/)
 
 <!-- devRant disclaimer -->
 <div class="modal fade" id="devrant-disclaimer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

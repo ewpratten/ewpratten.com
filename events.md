@@ -2,6 +2,8 @@
 title: Events
 description: Notable events I am attending / have attended
 layout: page
+backing_img: /assets/images/convention_monochromatic.svg
+backing_scalar: "height:100%;"
 ---
 
 <div class="list-group" id="posts">
