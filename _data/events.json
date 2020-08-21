@@ -1,17 +1,17 @@
 [
     {
         "name": "Google CTF 2020",
-        "upcoming":true,
+        "upcoming":false,
         "date": {
             "start": "2020-08-22",
             "end": "2020-08-23"
         },
         "team": {
-            "yes": false,
-            "url":""
+            "yes": true,
+            "url":"https://capturetheflag.withgoogle.com"
         },
         "url":"https://capturetheflag.withgoogle.com",
-        "info":""
+        "info":"In progress"
     },
     {
         "name": "Ludum Dare 46",
