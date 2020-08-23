@@ -8,11 +8,9 @@ backing_scalar: "height:90%;"
 {{site.about}}
 
 ## Chat with me
-If you want to contact me, you can do so via email (ewpratten @ \<this website's domain name\>). 
+If you want to contact me, you can do so via email to `ewpratten@<this_domain>`. 
 
-I use PGP keys (mt keys and history are listed below), so feel free to sign your messages via GPG.
-
-My current PGP key fingerprint is: `3D98 479A DE42 85A3 21F6 6DE4 DAB2 7917 6352 D880`.
+I use PGP keys (mt keys and history are listed below), so feel free to sign your messages via GPG. My current PGP key fingerprint is: `3D98 479A DE42 85A3 21F6 6DE4 DAB2 7917 6352 D880`.
 ```
 pub   rsa4096/0xDAB279176352D880 2019-08-10 [SC]
       Key fingerprint = 3D98 479A DE42 85A3 21F6  6DE4 DAB2 7917 6352 D880
