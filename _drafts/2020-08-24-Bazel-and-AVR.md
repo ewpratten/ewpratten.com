@@ -9,6 +9,8 @@ redirect_from:
  - /68dk02l4/
 ---
 
+*The GitHub repository for everything in this post can be found [here](https://github.com/Ewpratten/avr-for-bazel-demo)*
+
 When writing software for an Arduino, or any other [AVR](https://en.wikipedia.org/wiki/AVR_microcontrollers)-based device, there are generally three main options. You can use the [Arduino IDE](https://www.arduino.cc/en/main/software) with [arduino-cli](https://github.com/arduino/arduino-cli), which is in my opinion, a clunky system that is great for high levels of abstraction and teaching people how to program, but lacks any kind of easy customization I am interested in. If you are looking for something more advanced (and works in your favorite IDE), you might look at [PlatformIO](https://platformio.org/). Finally, you can just program without any Hardware Abstraction Library at all, and use [avr-libc](https://www.nongnu.org/avr-libc/) along with [avr-gcc](https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers) and [avrdude](https://www.nongnu.org/avrdude/). 
 
 This final option is my favorite by far, as it both forces me to think about how the system I am building is actually working "behind the scenes", and lets me do everything exactly the way I want. Unfortunately, when working directly with the AVR system libraries, the only buildsystem / tool that is available (without a lot of extra work) is [Make](https://en.wikipedia.org/wiki/Make_(software)). As somebody who spends 90% of his time working with higher-level buildsystems like [Gradle](https://gradle.org/) and [Bazel](https://bazel.build), I don't really like needing to deal with Makefiles, and manually handle dependency loading. This got me thinking. I have spent a lot of time working in Bazel, and cross-compiling for the armv7l platform via the [FRC Toolchain](https://launchpad.net/~wpilib/+archive/ubuntu/toolchain/). How hard can it be to add AVR Toolchain support to Bazel?
@@ -233,6 +235,6 @@ cc_binary(
 )
 ```
 
-This can be compiled with `bazel build //example`, and the output binary will be in the `bazel-bin` directory. You can run `avr-objcopy` and `avrdude` manually just like with a normal program.
+This can be compiled with `bazel build //example --config=avr_config`, and the output binary will be in the `bazel-bin` directory. You can run `avr-objcopy` and `avrdude` manually just like with a normal program.
 
-Importantly, every normal Bazel function will still work. Want to include [Eigen](https://github.com/vancegroup/EigenArduino) in your project? Just import the [`rules_foreign_cc`](https://github.com/bazelbuild/rules_foreign_cc) ruleset and load the Eigen library like normal. You can also run unit tests through Bazel's regular [testing rules](https://docs.bazel.build/versions/master/be/c-cpp.html#cc_test). If you are a masochist, you could even try loading the [pybind11 rules](https://github.com/pybind/pybind11_bazel) and embedding a Python interpreter in your code.
+Importantly, every normal Bazel function will still work. Want to include [EigenArduino](https://github.com/vancegroup/EigenArduino) in your project? Just import the [`rules_foreign_cc`](https://github.com/bazelbuild/rules_foreign_cc) ruleset and load the Eigen library like normal. You can also run unit tests through Bazel's regular [testing rules](https://docs.bazel.build/versions/master/be/c-cpp.html#cc_test). If you are a masochist, you could even try loading the [pybind11 rules](https://github.com/pybind/pybind11_bazel) and embedding a Python interpreter in your code.
