@@ -9,6 +9,8 @@ redirect_from:
  - /68df02l4/
 ---
 
+*You can view my public demo for this post [here](https://github.com/Ewpratten/school-notes-demo)*
+
 Recently, I have been on a bit of a mission to improve my school workflow with software. Over the past month, I have built a cleaner [student portal](https://github.com/Ewpratten/student_portal#unofficial-tvdsb-student-portal-webapp) for my school and [written a tool](https://github.com/Ewpratten/timeandplace-api#timeandplace-api--cli-application) for automating in-class attendance. Alongside working on these projects, I have also been refining my notetaking system for school.
 
 Since 9th grade, I have been taking notes in a private GitHub repository in markdown, and have been compiling them to HTML using a makefile for each course. While this system has worked ok, It has been far from perfect. Recently, I have been working very hard to give this system a much-needed upgrade. Here is the new tech stack:
