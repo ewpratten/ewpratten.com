@@ -98,6 +98,20 @@ title: Home
                     <div class="col-sm-4">
                         <div class="card home-project">
                             <div class="card-body">
+                                <h5 class="card-title"><strong>MCInfo</strong></h5>
+                                <p class="card-text">MCInfo is a simple web app for viewing information about any public
+                                    Minecraft server or user. The site is powered by the RetryLife API, and communicates
+                                    to servers via TCP connections using <a
+                                        href="https://github.com/dinnerbone">Dinnerbone</a>'s Python library.</p>
+                                <a href="https://mcinfo.retrylife.ca/" class="btn btn-primary">Open App</a>
+                                <a href="https://github.com/Ewpratten/mcinfo" class="btn btn-dark"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card home-project">
+                            <div class="card-body">
                                 <h5 class="card-title"><strong>GitHub Actions for FRC</strong></h5>
                                 <p class="card-text">A GitHub CI action specifically built for FRC/GradleRIO codebases.
                                     This has been used in production by multiple FRC teams, and has become a core tool
@@ -175,7 +189,7 @@ title: Home
 
     <!-- Xss warning -->
     <script>
-        if((new URLSearchParams(window.location.search)).get("dnsxss") == ""){
+        if ((new URLSearchParams(window.location.search)).get("dnsxss") == "") {
             alert("It looks like the DNS lookup service you just used is vulnerable to XSS. Anyways, welcome to my website! Don't worry about the code I just executed ;)");
         }
     </script>
