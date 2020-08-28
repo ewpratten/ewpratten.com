@@ -15,25 +15,9 @@ Here is a list of things I find interesting, and writeups of projects I have wor
 
     {% assign i = 0 %}
     {% for post in site.posts %}
+    {% assign the_date = post.date | split: " " %}
 
     {% if i == 0 %}
-    <!-- <div class="post-preview">
-        <div class="card">
-            <div class="card-header">
-                Featured Post
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">{{post.title}}
-                    {% if post.is_short %}
-                    <span class="badge badge-secondary">Mini Post</span>
-                    {% endif %}
-                </h5>
-                <p class="card-text">{{post.description}}</p>
-                <a href="{{post.url}}" class="btn btn-primary">View</a>
-            </div>
-        </div>
-    </div> -->
-
     <a href="{{post.url}}" class="list-group-item list-group-item-action">
         <div class="d-flex w-100 justify-content-between">
             <div class="card-body">
@@ -44,6 +28,7 @@ Here is a list of things I find interesting, and writeups of projects I have wor
                 </h5>
                 <p class="card-text">{{post.description}}</p>
             </div>
+            <small style="color:gray;">{{the_date.first}}</small>
         </div>
     </a>
 
@@ -54,7 +39,7 @@ Here is a list of things I find interesting, and writeups of projects I have wor
     <a href="{{post.url}}" class="list-group-item list-group-item-action">
         <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{post.title}}</h5>
-            <!-- <small>{{post.date}}</small> -->
+            <small style="color:gray;">{{the_date.first}}</small>
         </div>
         <p class="card-text">{{post.description}}</p>
     </a>
