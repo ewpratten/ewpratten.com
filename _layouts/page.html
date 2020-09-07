@@ -21,14 +21,34 @@
 
             <div class="content-container">
 
+
+
                 <div class="title-container container">
                     <h1>{{page.title}}</h1>
                     <h4>{{page.description}}</h4>
                 </div><br>
 
                 <div class="inner-content-container container">
+                    <!-- Main content -->
                     {{content}}
+
+                    {% if page.categories %}
+                    <hr>
+                    <div class="retention">
+                        <p>Thank you for reading this post. If you enjoyed the content, and want to let me know, or want
+                            to
+                            ask any questions, please contact me via one of the methods <a href="/about">listed
+                                here</a>. If
+                            you would like to be notified about future posts, feel free to load <a href="/feed.xml">my
+                                rss
+                                feed</a> into your favorite feed reader, or <a
+                                href="https://twitter.com/ewpratten">follow
+                                me on Twitter</a> for notifications about my work and future posts.</p>
+                    </div>
+                    {% endif %}
                 </div>
+
+
 
             </div>
         </div>
