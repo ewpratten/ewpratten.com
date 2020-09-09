@@ -19,10 +19,17 @@
 <!-- Masonry for card grids -->
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
+<!-- QR Codes -->
+<script src="/assets/js/qrcode.min.js"></script>
+<script type="text/javascript">
+    new QRCode(document.getElementById("btcqr"), "bitcoin://{{site.btc_address}}");
+    new QRCode(document.getElementById("stlrqr"), "web+stellar:pay?destination={{site.stellar_address}}");
+</script>
+
 <!-- Load KaTeX -->
 <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
+    onload="renderMathInElement(document.body);"></script>
 
 <!-- Parse the Latex divs with Katex-->
 <script type="text/javascript">

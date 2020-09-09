@@ -24,6 +24,11 @@ gitlab_username: ewpratten
 rtlgit_username: ewpratten
 keybase_username: ewpratten
 
+# Payments
+paypal_username: ewpratten
+btc_address: 17H1ad7t1h5bFcxhyL8naZJhY5E2iiW7yk
+stellar_address: GBBUKCQQULS3TLGPKLHIFN2YZUAOTCZHW7ON7CFFJIY5QPFBWGYVA2YQ
+
 # Build settings
 markdown: kramdown
 kramdown:

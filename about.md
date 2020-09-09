@@ -7,10 +7,25 @@ backing_scalar: "height:90%;"
 ---
 {{site.about}}
 
-## Chat with me
-If you want to contact me, you can do so via email to `ewpratten@<this_domain>`. 
+## My socials
+I exist in various places around the internet. Mainly:
 
-I use PGP keys (mt keys and history are listed below), so feel free to sign your messages via GPG. My current PGP key fingerprint is: `3D98 479A DE42 85A3 21F6 6DE4 DAB2 7917 6352 D880`.
+ - Email: `ewpratten@<this_domain>`
+ - [Twitter](https://twitter.com/{{site.twitter_username}})
+ - [Instagram](https://www.instagram.com/{{site.insta_username}})
+ - <a data-toggle="modal" data-target="#snapcode" href="">Snapchat</a>
+ - <a data-toggle="modal" data-target="#devrant-disclaimer" href="">devRant</a>
+ - [GitHub](https://github.com/{{site.github_username}})
+ - [GitLab](https://gitlab.com/{{site.gitlab_username}})
+ - [Keybase](https://keybase.com/{{site.keybase_username}})
+
+## Donations
+
+I accept small donations [over here](/donations).
+
+## PGP
+
+I use PGP keys (my keys and history are listed below), so feel free to sign your messages via GPG. My current PGP key fingerprint is: `3D98 479A DE42 85A3 21F6 6DE4 DAB2 7917 6352 D880`.
 ```
 pub   rsa4096/0xDAB279176352D880 2019-08-10 [SC]
       Key fingerprint = 3D98 479A DE42 85A3 21F6  6DE4 DAB2 7917 6352 D880
@@ -28,34 +43,10 @@ The following is my key history:
 
 <div class="table-fix" markdown="1">
 
-| Fingerprint | Sign date | Expiration | Links |
-|--|--|--|--|
+| Fingerprint                                       | Sign date  | Expiration   | Links                                                                                                                                                                                     |
+|---------------------------------------------------|------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 3D98 479A DE42 85A3 21F6 6DE4 DAB2 7917 6352 D880 | 2019-08-10 | When Revoked | [MIT](http://pgp.mit.edu/pks/lookup?search=0xDAB279176352D880&op=index) <br> [Ubuntu Keyserver](http://keyserver.ubuntu.com/pks/lookup?search=0xDAB279176352D880&fingerprint=on&op=index) |
-| DD15 BE72 F652 984A ED9E C033 56F5 A6FB 5A8E EF90 | 2017-12-08 | Revoked | [OpenPGP.org](https://keys.openpgp.org/search?q=0x56F5A6FB5A8EEF90) <br> [Ubuntu Keyserver](http://keyserver.ubuntu.com/pks/lookup?search=0x56F5A6FB5A8EEF90&fingerprint=on&op=index) | 
-
-</div>
-
-## My socials
-I exist in various places around the internet. Mainly:
-
- - [Twitter](https://twitter.com/{{site.twitter_username}})
- - [Instagram](https://www.instagram.com/{{site.insta_username}})
- - <a data-toggle="modal" data-target="#snapcode" href="">Snapchat</a>
- - <a data-toggle="modal" data-target="#devrant-disclaimer" href="">devRant</a>
- - [GitHub](https://github.com/{{site.github_username}})
- - [GitLab](https://gitlab.com/{{site.gitlab_username}})
- - [Keybase](https://keybase.com/{{site.keybase_username}})
-
-
-## My crypto addresses
-
-<div class="table-fix" markdown="1">
-These are my wallet addresses for various cryptocurrencies:
-
-| Currency | Address |
-| -- | -- |
-| Stellar | `ewpratten*keybase.io` |
-| Bitcoin | `1BorqYNm54SkyxsPGfpzKKoc9ameU1JEM2` |
+| DD15 BE72 F652 984A ED9E C033 56F5 A6FB 5A8E EF90 | 2017-12-08 | Revoked      | [OpenPGP.org](https://keys.openpgp.org/search?q=0x56F5A6FB5A8EEF90) <br> [Ubuntu Keyserver](http://keyserver.ubuntu.com/pks/lookup?search=0x56F5A6FB5A8EEF90&fingerprint=on&op=index)     |
 
 </div>
 
