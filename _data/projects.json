@@ -1,0 +1,180 @@
+[
+    {
+        "title": "Student Portal",
+        "description": "This is a free-to-use webapp that acts as a new frontend to the <a href='https://schoolapps2.tvdsb.ca/students/student_login/lgn.aspx'>TVDSB Student Portal</a> website. This webapp also includes some extra data and graphs of each student's progress through highschool.",
+        "text_buttons": [
+            {
+                "text": "Open App",
+                "url": "https://studentportal.retrylife.ca",
+                "color": "primary"
+            }
+        ],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/student_portal"
+            }
+        ],
+        "hero": {
+            "img_src": "https://raw.githubusercontent.com/Ewpratten/student_portal/master/assets/images/homepage.png"
+        }
+    },
+    {
+        "title": "RetryLife API",
+        "description": "If you are looking to build an application that hooks into the backend of any one of my services, take a look at the RetryLife API. My backend API is edge-cached and CORS-ready for use in any application at any load.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fas fa-book",
+                "url": "https://api.retrylife.ca/apidocs"
+            },
+            {
+                "icon": "fas fa-info-circle",
+                "url": "https://status.retrylife.ca"
+            }
+        ]
+    },
+    {
+        "title": "Lib5K",
+        "description": "Lib5K is the core software library that powers all of Raider Robotics' robots. It started as a summer project of mine, and has now been used to build high-performance competitive robots, and win some awards along the way.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/frc5024/lib5k"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://frc5024.github.io/lib5k"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://ultralight.retrylife.ca/?a=lib5k&g=io.github.frc5024"
+            }
+        ],
+        "hero": {
+            "img_src": "https://raw.githubusercontent.com/frc5024/lib5k/master/assets/lib5k.png"
+        }
+    },
+    {
+        "title": "MCInfo",
+        "description": "MCInfo is a simple web app for viewing information about any public Minecraft server or user. The site is powered by the RetryLife API, and communicates to servers via TCP connections using <ahref='https://github.com/dinnerbone'>Dinnerbone</a>'s Python library.",
+        "text_buttons": [
+            {
+                "text": "Open App",
+                "url": "https://mcinfo.retrylife.ca/",
+                "color": "primary"
+            }
+        ],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/mcinfo"
+            }
+        ],
+        "hero": {
+            "img_src": "https://raw.githubusercontent.com/Ewpratten/mcinfo/master/assets/img/mc-search.png"
+        }
+    },
+    {
+        "title": "Easy Pose Notation library",
+        "description": "LibEPN is a Java library I built that provides a common interface for working with the position and orientation of objects in 3-dimensional space by making heavy use of Quaternions.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/libepn"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://ewpratten.retrylife.ca/libepn"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://ultralight.retrylife.ca/?a=libepn&g=ca.retrylife"
+            }
+        ],
+        "hero": {
+            "img_src": "https://raw.githubusercontent.com/Ewpratten/libepn/master/assets/libepn.png"
+        }
+    },
+    {
+        "title": "Ultralight",
+        "description": "Ultralight is a custom maven server that is designed to run on machines with very low resources, and almost no storage. I use Ultralight to host my personal maven repositories, and welcome other people to set up their own instances.",
+        "text_buttons": [
+            {
+                "text": "Demo",
+                "url": "https://ultralight.retrylife.ca",
+                "color": "primary"
+            }
+        ],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/ultralight"
+            }
+        ],
+        "hero": {
+            "img_src": "https://raw.githubusercontent.com/Ewpratten/ultralight/master/assets/ultralight-index.png"
+        }
+    },
+    {
+        "title": "GitHub Actions for FRC",
+        "description": "A GitHub CI action specifically built for FRC/GradleRIO codebases. This has been used in production by multiple FRC teams, and has become a core tool in the Raider Robotics software development pipeline.",
+        "text_buttons": [
+            {
+                "text": "GitHub Marketplace",
+                "url": "https://github.com/marketplace/actions/frc-build-test",
+                "color": "primary"
+            }
+        ],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/FRC-actions"
+            }
+        ]
+    },
+    {
+        "title": "Shift",
+        "description": "Shift is a rotating-key, XOR-based data encryption tool that I built to learn about the inner workings of simple encryption tools. This tool is used to obfuscate program data in some of my other applications.",
+        "text_buttons": [
+            {
+                "text": "Blog Post",
+                "url": "/blog/2019/08/24/shift2",
+                "color": "primary"
+            }
+        ],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/shift"
+            }
+        ]
+    },
+    {
+        "title": "Rayzor",
+        "description": "Rayzor is my final project from my ICS4U computer science class. This is a 3D raytracer that can generate still images from a scene definition file. Take a look at the project's README file for some examples.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/Rayzor"
+            }
+        ],
+        "hero": {
+            "img_src": "https://raw.githubusercontent.com/Ewpratten/Rayzor/master/examples/left-wall-close.png"
+        }
+    },
+    {
+        "title": "Pi-hole API",
+        "description": "This is an old project of mine that is used in some of my backend server management tools, and by many other people in personal projects. Pi-hole API is a Python3 wrapper around the Pi-hole admin interface.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/pihole-api"
+            }
+        ]
+    }
+]
