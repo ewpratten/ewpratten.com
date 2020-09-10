@@ -76,7 +76,15 @@ With this docker container, all we need to do is tell GitHub how to set up a Cod
     "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind" ],
 
     // Any extensions you want can go here
-    "extensions": []
+    "extensions": [
+        // Needed extensions for using WPILib
+        "redhat.java",
+        "ms-vscode.cpptools",
+        "vscjava.vscode-java-pack",
+
+        // The WPILib extension itself
+        "wpilibsuite.vscode-wpilib"
+    ]
 }
 ```
 
