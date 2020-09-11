@@ -60,7 +60,7 @@ uses:
                     <div class="col-sm-4 project-item">
                         <div class="card home-project">
                             {% if project.hero %}
-                            <img src="{{project.hero.img_src}}" class="card-img-top" alt="" loading="lazy">
+                            <img src="{{project.hero.img_src}}" class="card-img-top" alt="" loading="auto">
                             {% endif %}
                             <div class="card-body">
                                 <h5 class="card-title"><strong>{{project.title}}</strong></h5>
@@ -110,7 +110,9 @@ uses:
         orderProjectGrid();
 
         // re-order in 2 seconds in case anything was still lazy-loading
+        setTimeout(orderProjectGrid, 1500);
         setTimeout(orderProjectGrid, 2000);
+        setTimeout(orderProjectGrid, 5000);
     </script>
 
 </body>
