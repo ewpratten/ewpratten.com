@@ -34,3 +34,4 @@ gem 'jekyll-redirect-from'
 gem 'jemoji'
 gem 'jekyll-mentions'
 gem 'jekyll-seo-tag'
+gem "jekyll-github-metadata"

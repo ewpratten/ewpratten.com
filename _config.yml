@@ -61,6 +61,7 @@ plugins:
   - jemoji
   - jekyll-mentions
   - jekyll-seo-tag
+  - jekyll-github-metadata
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
