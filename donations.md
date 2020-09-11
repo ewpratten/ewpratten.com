@@ -4,6 +4,8 @@ description: Looking to make a donation?
 layout: page
 backing_img: /assets/images/money_transfer__monochromatic.svg
 backing_scalar: "height:90%;"
+uses:
+ - qrcodes
 ---
 
 You probably ended up here from my GitHub page. Since I still am not 18, I can't finish signing up to [GitHub Sponsors](). Due to this, I had to get a little creative with my donations setup.

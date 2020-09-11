@@ -16,16 +16,21 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+{% if page.uses contains "masonry" %}
 <!-- Masonry for card grids -->
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+{% endif %}
 
+{% if page.uses contains "qrcodes" %}
 <!-- QR Codes -->
 <script src="/assets/js/qrcode.min.js"></script>
 <script type="text/javascript">
     new QRCode(document.getElementById("btcqr"), "bitcoin://{{site.btc_address}}");
     new QRCode(document.getElementById("stlrqr"), "web+stellar:pay?destination={{site.stellar_address}}");
 </script>
+{% endif %}
 
+{% if page.uses contains "katex" %}
 <!-- Load KaTeX -->
 <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" crossorigin="anonymous"
@@ -45,9 +50,12 @@
             return katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
         });
 </script>
+{% endif %}
 
+{% if page.uses contains "tikz" %}
 <!-- TikZJax loader -->
 <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+{% endif %}
 
 <!-- Tracking API -->
 <script src="https://api.retrylife.ca/tracking/external/retrylife.ca"></script>
@@ -85,13 +93,13 @@
 </script>
 
 
-{% if page.requires_twitter %}
+{% if page.uses contains "twitter" %}
 <!-- Twitter embeds -->
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 {% endif %}
 
 
-{% if page.requires_graphs %}
+{% if page.uses contains "graphs" %}
 <!-- Roughviz -->
 <script src="https://unpkg.com/rough-viz@1.0.5"></script>
 {% endif %}
