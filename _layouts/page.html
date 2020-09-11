@@ -26,6 +26,16 @@
                 <div class="title-container container">
                     <h1>{{page.title}}</h1>
                     <h4>{{page.description}}</h4>
+
+                    {% assign page_date = page.date | split: " " %}
+                    <h6>
+                        <small style="color:gray;">{{page_date.first}}</small>
+                        {% for category in page.categories %}
+                        <span class="badge badge-secondary">{{category}}</span>
+                        {% endfor %}
+                    </h6>
+
+
                 </div><br>
 
                 <div class="inner-content-container container">
@@ -35,7 +45,10 @@
                     {% if page.categories %}
                     <hr>
                     <div class="retention">
-                        <p>Thank you for reading this post. If you enjoyed the content, and want to let me know, or want
+
+                        <!-- Thank you text -->
+                        <h6>Thank you for reading this post. If you enjoyed the content, and want to let me know, or
+                            want
                             to
                             ask any questions, please contact me via one of the methods <a href="/about">listed
                                 here</a>. If
@@ -43,7 +56,30 @@
                                 rss
                                 feed</a> into your favorite feed reader, or <a
                                 href="https://twitter.com/ewpratten">follow
-                                me on Twitter</a> for notifications about my work and future posts.</p>
+                                me on Twitter</a> for notifications about my work and future posts.</h6>
+
+                        <!-- Other posts to check out -->
+                        <h6>If you have the time to read some more, I recommend checking out one of the following posts:</h6>
+                        <div class="card-group">
+                            {% assign i = 0 %}
+                            {% for post in site.posts %}
+                            {% if i < 4 and post.title != page.title %}
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{post.title}}</h5>
+                                    <h6 class="card-text">{{post.excerpt}}</h6>
+                                </div>
+                                <div class="card-footer">
+                                    {% assign post_date = post.date | split: " " %}
+                                    <small class="text-muted">Published: {{post_date.first}}</small>
+                                    <a href="{{post.url}}"><button class="btn btn-outline-primary btn-sm" style="float:right;">Read Post</button></a>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% assign i = i | plus:1 %}
+                            {% endfor %}
+                        </div>
+
                     </div>
                     {% endif %}
                 </div>

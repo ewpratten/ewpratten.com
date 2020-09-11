@@ -2,8 +2,11 @@
 layout: page
 title:  "Project overview: The Ultralight maven server"
 description: "It is suprisingly easy to build a maven server"
-date:   2020-09-04 11:00:00 
+date:   2020-09-17 11:00:00 
 categories: project github maven
+excerpt: >- 
+  In this post, I explain the process of building my own personal 
+  maven server, and show how simple maven servers really are.
 redirect_from: 
  - /post/2jf002s4/
  - /2jf002s4/
@@ -70,7 +73,5 @@ Finally, a request is made to `http(s)://<baseurl>/<groupID>/<artifactID>/<versi
 ***Case 3.*** The client has asked for an artifact's JAR file. In this case, the backend will first make sure the artifact exists, then make a request out to the GitHub API, and ask for the correct asset URL on GitHub's servers. With this url, Ultralight just crafts an [HTTP 302](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302) response. This makes the client actually request from GitHub itself instead of the Ultralight server, thus Ultralight never needs to store any artifacts.
 
 Both to make the experience faster, and to get around GitHub's rate limiting on the tags API, Ultralight sends the client [`stale-while-revalidate`](https://vercel.com/docs/edge-network/caching#stale-while-revalidate) cache control headers. This forces the Vercel server that hosts Ultralight to only update its cache once per minute (slightly slower than the GitHub rate limit :wink:)
-
----
 
 For instructions on how to set up your own maven server using Ultralight, see the [README](https://github.com/Ewpratten/ultralight#ultralight) on GitHub.
