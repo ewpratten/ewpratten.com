@@ -16,7 +16,7 @@
             }
         ],
         "hero": {
-            "img_src": "https://raw.githubusercontent.com/Ewpratten/student_portal/master/assets/images/homepage.png"
+            "img_src": "/assets/images/projects/studentportal.png"
         }
     },
     {
@@ -53,7 +53,7 @@
             }
         ],
         "hero": {
-            "img_src": "https://raw.githubusercontent.com/frc5024/lib5k/master/assets/lib5k.png"
+            "img_src": "/assets/images/projects/lib5k.png"
         }
     },
     {
@@ -73,7 +73,7 @@
             }
         ],
         "hero": {
-            "img_src": "https://raw.githubusercontent.com/Ewpratten/mcinfo/master/assets/img/mc-search.png"
+            "img_src": "/assets/images/projects/mcinfo.png"
         }
     },
     {
@@ -95,7 +95,7 @@
             }
         ],
         "hero": {
-            "img_src": "https://raw.githubusercontent.com/Ewpratten/libepn/master/assets/libepn.png"
+            "img_src": "/assets/images/projects/libepn.png"
         }
     },
     {
@@ -115,7 +115,7 @@
             }
         ],
         "hero": {
-            "img_src": "https://raw.githubusercontent.com/Ewpratten/ultralight/master/assets/ultralight-index.png"
+            "img_src": "/assets/images/projects/ultralight.png"
         }
     },
     {
@@ -163,7 +163,7 @@
             }
         ],
         "hero": {
-            "img_src": "https://raw.githubusercontent.com/Ewpratten/Rayzor/master/examples/left-wall-close.png"
+            "img_src": "/assets/images/projects/rayzor.png"
         }
     },
     {
