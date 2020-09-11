@@ -47,6 +47,10 @@ iframe {
     
 }
 
+.hidden{
+    display:none !important;
+}
+
 /* .inner-content-container>p>a {
     position: relative;
     display: inline-block;
