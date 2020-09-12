@@ -11,10 +11,10 @@ I have recently started publishing some small papers I have written. As of now, 
 <div class="list-group" id="posts">
 
     {% assign i = 0 %}
-    {% for paper in site.data.papers %}
+    {% for paper in site.papers %}
 
     {% if i == 0 %}
-    <a href="{{paper.url}}" class="list-group-item list-group-item-action">
+    <a href="{{paper.src}}" class="list-group-item list-group-item-action">
         <div class="d-flex w-100 justify-content-between">
             <div class="card-body">
                 <h5 class="mb-1">{{paper.title}}</h5>
@@ -32,7 +32,7 @@ I have recently started publishing some small papers I have written. As of now, 
     {% else %}
 
 
-    <a href="{{paper.url}}" class="list-group-item list-group-item-action">
+    <a href="{{paper.src}}" class="list-group-item list-group-item-action">
         <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{paper.title}}</h5>
             <small style="color:gray;">{{paper.date}}</small>

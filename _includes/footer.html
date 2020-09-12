@@ -51,6 +51,11 @@
 </script>
 {% endif %}
 
+{% if page.uses contains "pdf" %}
+<!-- Inline PDF files -->
+<script src="https://unpkg.com/browse/pdfjs-dist@2.4.456/web/pdf_viewer.js"></script>
+{% endif %}
+
 {% if page.uses contains "tikz" %}
 <!-- TikZJax loader -->
 <script src="https://tikzjax.com/v1/tikzjax.js"></script>
