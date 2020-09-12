@@ -1,12 +1,5 @@
----
----
-
 .custom-navbar {
-    {% if page.header_red %}
-    background-color: var(--color-red)!important;
-    {% else %}
     background-color: var(--color-purple)!important;
-    {% endif %}
     /* background-color: unset!important;
     -webkit-backdrop-filter: blur(10px);
     -moz-backdrop-filter: blur(10px);
