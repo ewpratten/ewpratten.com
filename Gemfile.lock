@@ -40,6 +40,8 @@ GEM
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
       terminal-table (~> 1.8)
+    jekyll-avatar (0.7.0)
+      jekyll (>= 3.0, < 5.0)
     jekyll-feed (0.12.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-github-metadata (2.13.0)
@@ -105,7 +107,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  html-pipeline
   jekyll (~> 4.0.0)
+  jekyll-avatar
   jekyll-feed (~> 0.12)
   jekyll-github-metadata
   jekyll-mentions
@@ -117,4 +121,4 @@ DEPENDENCIES
   wdm (~> 0.1.1)
 
 BUNDLED WITH
-   2.0.2
+   2.1.4

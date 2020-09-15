@@ -107,3 +107,61 @@
 <!-- Roughviz -->
 <script src="https://unpkg.com/rough-viz@1.0.5"></script>
 {% endif %}
+
+{% if page.uses contains "github-cards" and false %}
+
+<!-- GH user card library -->
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+<!-- Modal containing GitHub account card -->
+<div class="modal fade" id="GitHub-account-card" tabindex="-1" role="dialog" aria-labelledby="GitHub-account-card-title"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="GitHub-account-card-title">Username</h5><a href=""
+                    id="GitHub-account-card-url"><button type="button" class="btn btn-outline-secondary">View
+                        account</button></a>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <!-- <div class="modal-body" id="GitHub-account-card-body">
+                ...
+            </div> -->
+            <!-- <div class="modal-footer">
+                
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function renderGitHubUserAccount(name, url) {
+        // Set the inner HTML to be the card
+        //document.getElementById("GitHub-account-card-body").innerHTML = '<div class="github-card" data-github="' + name + '" data-width="400" data-height="158" data-theme="default"></div>' 
+        document.getElementById("GitHub-account-card-title").innerText = name.replace("@", "");
+
+        // Show the modal
+        $("#GitHub-account-card").modal("show");
+    }
+
+    // Edit every github user link
+    var github_accounts = document.getElementsByClassName("user-mention");
+    [...github_accounts].forEach((element) => {
+        // Get the user's name and URL
+        var name = element.innerText;
+        var url = `${element.href}`;
+
+        // Clear the button href
+        element.href = "#";
+
+        // Add an onclick()
+        element.onclick = () => {
+            renderGitHubUserAccount(name, url);
+        }
+    })
+</script>
+
+{% endif %}
