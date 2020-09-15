@@ -119,6 +119,17 @@
         }
     },
     {
+        "title": "SmallTools",
+        "description": "SmallTools is a collection of programs and tools that are too small to get their own GitHub repository. I mainly use these as a learning tool for trying out new languages, libraries, and ideas.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/smalltools"
+            }
+        ]
+    },
+    {
         "title": "GitHub Actions for FRC",
         "description": "A GitHub CI action specifically built for FRC/GradleRIO codebases. This has been used in production by multiple FRC teams, and has become a core tool in the Raider Robotics software development pipeline.",
         "text_buttons": [
