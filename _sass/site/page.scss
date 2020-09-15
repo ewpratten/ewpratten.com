@@ -27,6 +27,7 @@ img {
     max-width: 99%;
 }
 
+
 iframe {
     max-width: 99%;
 }
@@ -53,6 +54,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     border: 1px solid rgba(0, 0, 0, .125);
+
 }
 
 th {
@@ -63,4 +65,20 @@ th {
 td {
     border: 1px solid rgba(0, 0, 0, .125);
     padding: 5px;
+}
+
+.user-mention {
+    color: black;
+    font-weight: bolder;
+}
+
+.user-mention:hover {
+    text-decoration: none;
+}
+
+// Handles weird spacing
+.highlighter-rouge,
+table,
+.content-container img {
+    margin-bottom: .6rem;
 }

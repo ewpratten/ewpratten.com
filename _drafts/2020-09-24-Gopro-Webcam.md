@@ -3,6 +3,7 @@ layout: page
 title:  "My workflow: video conference edition"
 description: "Turning some spare filmmaking equipment into a high-quality video conference setup"
 date:   2020-09-24 15:30:00 
+written: 2020-09-13
 categories: video cameras workflow
 excerpt: >-
     As my courses have moved mostly online, I have looked to improve 

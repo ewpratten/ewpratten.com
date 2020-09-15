@@ -1,8 +1,9 @@
 ---
 layout: page
-title:  "Project overview: The Ultralight maven server"
-description: "It is suprisingly easy to build a maven server"
+title:  "Building my own mini maven server for fun"
+description: "Project overview: The Ultralight maven server"
 date:   2020-09-17 11:00:00 
+written: 2020-09-05
 categories: project github maven
 excerpt: >- 
   In this post, I explain the process of building my own personal 

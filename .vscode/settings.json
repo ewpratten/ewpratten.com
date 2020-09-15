@@ -3,6 +3,7 @@
         "Bazel",
         "DSLR",
         "Starlark",
+        "libc",
         "microcontrollers",
         "videographers"
     ],

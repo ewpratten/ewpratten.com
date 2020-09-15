@@ -29,9 +29,11 @@
 
                     {% assign page_date = page.date | split: " " %}
                     <h6>
-                        <small style="color:gray;">{{page_date.first}}</small>
+                        <small class="text-muted" {% if page.written %} data-toggle="tooltip" data-placement="top"
+                            title="Written {{page.written}}" {% endif %} style="color:gray;">{{page_date.first}}</small>
                         {% for category in page.categories %}
-                        <a href="/categories?c={{category}}"><span class="badge" style="background-color: var(--light-gray);color:#333;">{{category}}</span></a>
+                        <a href="/categories?c={{category}}"><span class="badge"
+                                style="background-color: var(--light-gray);color:#333;">{{category}}</span></a>
                         {% endfor %}
                     </h6>
 
@@ -43,6 +45,7 @@
                     {{content}}
 
                     {% if page.categories %}
+                    <br>
                     <hr>
                     <div class="retention">
 
@@ -59,7 +62,8 @@
                                 me on Twitter</a> for notifications about my work and future posts.</h6>
 
                         <!-- Other posts to check out -->
-                        <h6>If you have the time to read some more, I recommend checking out one of the following posts:</h6>
+                        <h6>If you have the time to read some more, I recommend checking out one of the following posts:
+                        </h6>
                         <div class="card-group">
                             {% assign i = 0 %}
                             {% for post in site.posts %}
@@ -72,7 +76,8 @@
                                 <div class="card-footer">
                                     {% assign post_date = post.date | split: " " %}
                                     <small class="text-muted">Published: {{post_date.first}}</small>
-                                    <a href="{{post.url}}"><button class="btn btn-outline-primary btn-sm" style="float:right;">Read Post</button></a>
+                                    <a href="{{post.url}}"><button class="btn btn-outline-primary btn-sm"
+                                            style="float:right;">Read Post</button></a>
                                 </div>
                             </div>
                             {% assign i = i | plus:1 %}
