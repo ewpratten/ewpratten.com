@@ -119,6 +119,26 @@
         }
     },
     {
+        "title": "Not Enough Reviews",
+        "description": "Not Enough Reviews (NER) is a GitHub frontend webapp I built to let me browse discussions and changes in a visual style I like. This project was inspired by old text-based software mailing lists, and made more modern with a nice touch of CSS.",
+        "text_buttons": [
+            {
+                "text": "Open App",
+                "url": "https://ner.retrylife.ca",
+                "color": "primary"
+            }
+        ],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/ner"
+            }
+        ],
+        "hero": {
+            "img_src": "/assets/images/projects/ner-search.jp2"
+        }
+    },
+    {
         "title": "SmallTools",
         "description": "SmallTools is a collection of programs and tools that are too small to get their own GitHub repository. I mainly use these as a learning tool for trying out new languages, libraries, and ideas.",
         "text_buttons": [],
