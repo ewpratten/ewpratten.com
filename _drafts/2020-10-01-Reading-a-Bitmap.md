@@ -2,7 +2,7 @@
 layout: page
 title:  "Reading metadata from a bitmap file"
 description: "A project writeup"
-date:   2020-10-10 12:25:00 
+date:   2020-10-01 12:25:00 
 written: 2020-09-15
 categories: project c images
 excerpt: >-
