@@ -139,6 +139,21 @@
         }
     },
     {
+        "title": "InputLib",
+        "description": "InputLib is a small and easy-to-use Java library for working with text-based user inputs in a terminal. InputLib is designed to reduce messy  safety-checking code without sing a large parsing library like ANTLR",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/inputlib"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://ewpratten.retrylife.ca/inputlib"
+            }
+        ]
+    },
+    {
         "title": "SmallTools",
         "description": "SmallTools is a collection of programs and tools that are too small to get their own GitHub repository. I mainly use these as a learning tool for trying out new languages, libraries, and ideas.",
         "text_buttons": [],
