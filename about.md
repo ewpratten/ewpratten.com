@@ -13,6 +13,7 @@ I exist in various places around the internet. Mainly:
  - Email: `ewpratten@<this_domain>`
  - [Twitter](https://twitter.com/{{site.twitter_username}})
  - [Instagram](https://www.instagram.com/{{site.insta_username}})
+ - <a data-toggle="modal" data-target="#discord" href="">Discord</a>
  - <a data-toggle="modal" data-target="#snapcode" href="">Snapchat</a>
  - <a data-toggle="modal" data-target="#devrant-disclaimer" href="">devRant</a>
  - [GitHub](https://github.com/{{site.github_username}})
@@ -94,6 +95,23 @@ This website uses free assets from:
       <!-- Snapcode -->
         <img src="/assets/images/snapcode-full.png" style="margin:auto;">
         <h4><em>slabs5225</em></h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Discord -->
+<div class="modal fade" id="discord" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Discord</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="align-contents:center; text-align: center">
+        <h4><em>ewpratten#9114</em></h4>
       </div>
     </div>
   </div>
