@@ -139,6 +139,21 @@
         }
     },
     {
+        "title": "JState",
+        "description": "JState is a library for implementing Finite State Machines in Java code with minimal work. It was originally written by me for use at Raider Robotics, but has since been forked and updated to run without the team's infrastructure around it.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/jstate"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://ewpratten.retrylife.ca/jstate"
+            }
+        ]
+    },
+    {
         "title": "InputLib",
         "description": "InputLib is a small and easy-to-use Java library for working with text-based user inputs in a terminal. InputLib is designed to reduce messy  safety-checking code without sing a large parsing library like ANTLR",
         "text_buttons": [],
