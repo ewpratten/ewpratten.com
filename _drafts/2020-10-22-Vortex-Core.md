@@ -26,6 +26,8 @@ That being said, since the keyboard has so many shortcuts and combinations to ge
 
 The keyboard's baseplate is made of aluminum, and is CNC-cut, so it both looks and feels very nice. For a keyboard that I can wrap my (admittedly large) hand around, it is fairly heavy too (I seem to remember the FedEx shipment coming in at around 3lbs). In this case, heavy is not at all a bad thing. The weight of this keyboard makes it feel... expensive. Also, it never feels like the board is sliding away when I'm typing.
 
+![The keyboard](/assets/images/core.jpg)
+
 One downside though, in terms of connectivity, the keyboard unfortunately uses USB micro connector instead of the newer (and nicer) USB type C connector. As someone who connects his life with USB-C, I am not the biggest fan of this choice, but at least I had a right-angle USB-micro cable lying around that I can use with it. Alongside the USB-micro connection, removing the backplate will reveal a [JTAG](https://en.wikipedia.org/wiki/JTAG) connector that allows you to flash custom firmware to the keyboard if you want. @ChaoticEnigma has forked the popular [QMK](https://github.com/qmk/qmk_firmware) keyboard firmware as [`qmk_pok3r`](https://github.com/pok3r-custom/qmk_pok3r), and added support for many Vortex boards including the Core, if you are looking to load something more custom.
 
 ## Keybindings
@@ -39,7 +41,28 @@ Let's say you wanted to type the number `5`. On the core, this is done by pressi
 
 ## Programming
 
-There are two main things I wanted to do immediately after getting my core:
+There are three main things I wanted to do immediately after getting my core:
 
+ - Remap <kbd>Caps Lock</kbd> to <kbd>Tab</kbd>
  - Switch the <kbd>Win</kbd> and <kbd>Alt</kbd> keys to match the layout of my Thinkpad
- - Remap the arrow keys to [vim keys]()
+ - Remap the arrow keys to [vim keys](https://hea-www.harvard.edu/~fine/Tech/vi.html)
+
+The first could be done simply by performing a firmware upgrade to the latest version for the core. Setting custom keybindings on the other hand, requires switching the core's firmware to the `MPC` version. 
+
+This process unfortunately requires access to a computer that runs Windows (or VirtualBox). On windows, the setup process is really quite easy. You go to [this link](http://www.vortexgear.tw/db/upload/webdata4/6vortex_201861271445393.exe), which will download the firmware upgrade tool. Running the tool, and plugging in the keyboard will provide you with some options.
+
+![Vortex Core firmware upgrade tool](/assets/images/core-mpc-tool.png)
+
+The "bin group" selection provides two options. Selecting `Core by MPC` will flash the re-programmable firmware to the keyboard, and the other option will restore the keyboard to factory firmware.
+
+Vortex provides a programming tool, but I am not a huge fan of it. I plan to write a Java app that can program the keyboard (and load saved profiles from it), but for now, I am using a great tool made by @tsfreddie called [Much Programming Core](https://tsfreddie.github.io/much-programming-core/). This tool allows you to configure keybindings and remap keys through his website, and there are easy-to-follow instructions on how to download the correct file, and flash your keyboard.
+
+![Much Programming Core website](/assets/images/core-mpc-webapp.png)
+
+Speaking of flashing the board, with the MPC firmware, the process for loading custom keybindings (which works on any OS) is really easy and simple. Just unplug the keyboard, then plug it back in while holding <kbd>fn</kbd>+<kbd>D</kbd>. This will cause the keyboard to mount as a USB drive, and you can drop configuration files on to it.
+
+## Do I recommend it?
+
+Well, that depends. If you are the type of person to customize everything for maximum efficiency, go for it! The Vortex Core is a very nice keyboard with more configurability than I can wrap my head around (even if you need a third party tool to do so). If you just want something simple, stick to a 60% keyboard. The lack of numbers on the core drives many people crazy.
+
+For programmers: you basically need to remap your keys. Most common keys (brackets, quotes, operators, ...) are hidden behind one or two function keys, and the learning curve might hurt for the first week or so.
