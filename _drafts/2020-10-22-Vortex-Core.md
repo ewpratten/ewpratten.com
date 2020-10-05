@@ -66,3 +66,4 @@ Speaking of flashing the board, with the MPC firmware, the process for loading c
 Well, that depends. If you are the type of person to customize everything for maximum efficiency, go for it! The Vortex Core is a very nice keyboard with more configurability than I can wrap my head around (even if you need a third party tool to do so). If you just want something simple, stick to a 60% keyboard. The lack of numbers on the core drives many people crazy.
 
 For programmers: you basically need to remap your keys. Most common keys (brackets, quotes, operators, ...) are hidden behind one or two function keys, and the learning curve might hurt for the first week or so.
+
