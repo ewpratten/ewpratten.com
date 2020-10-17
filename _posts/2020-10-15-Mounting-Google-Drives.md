@@ -2,7 +2,7 @@
 layout: page
 title:  "Mounting Google Drive accounts as network drives"
 description: "Easy-to-use Google Drive integration for Linux using rclone"
-date:   2020-10-08 10:00:00 
+date:   2020-10-15 10:00:00 
 written: 2020-09-22
 categories: linux workflow google
 excerpt: >-
