@@ -2,7 +2,7 @@
 layout: page
 title:  "My first mechanical keyboard: The Vortex Core"
 description: "Just the right amount of obscure"
-date:   2020-10-29 20:00:00 
+date:   2020-11-6 23:00:00 
 written: 2020-09-28
 categories: keyboards workflow
 excerpt: >-
