@@ -2,7 +2,7 @@
 layout: page
 title:  "Connecting to a Minecraft server over IRC"
 description: "For server administration, or just chatting with friends"
-date:   2020-11-05 10:00:00 
+date:   2020-11-19 10:00:00 
 written: 2020-10-25
 categories: minecraft project irc
 excerpt: >-
