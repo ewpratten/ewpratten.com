@@ -84,7 +84,10 @@ table,
 }
 
 .inner-content-container {
-    p, h2, h3 {
+
+    p,
+    h2,
+    h3 {
         a {
             text-decoration: none;
             position: relative;
@@ -115,5 +118,11 @@ table,
                 }
             }
         }
+    }
+}
+
+@media only screen and(max-width: 767px) {
+    .maybe-date {
+        display: none;
     }
 }

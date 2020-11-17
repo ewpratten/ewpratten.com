@@ -17,7 +17,7 @@ Here are links to various downloadable files
     <a href="{{file.src}}" class="list-group-item list-group-item-action">
         <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{file.title}}</h5>
-            <small style="color:gray;">{{file.date}}</small>
+            <small style="color:gray;" class="maybe-date">{{file.date}}</small>
         </div>
         <p class="card-text">{{file.subtitle}}</p>
     </a>
@@ -27,9 +27,9 @@ Here are links to various downloadable files
 ---
 
 
-## Papers
+## Lecture Notes & Papers
 
-I have recently started publishing some small papers I have written. As of now, these are mostly from presentations I have given, or are from my school notes.
+Finished lecture notes and papers.
 
 <div class="list-group" id="posts">
 
@@ -38,7 +38,7 @@ I have recently started publishing some small papers I have written. As of now, 
     <a href="{{paper.src}}" class="list-group-item list-group-item-action">
         <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{paper.title}}</h5>
-            <small style="color:gray;">{{paper.date}}</small>
+            <small style="color:gray;" class="maybe-date">{{paper.date}}</small>
         </div>
         <p class="card-text">{{paper.subtitle}}</p>
         <p class="card-text">
