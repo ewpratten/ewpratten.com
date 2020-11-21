@@ -35,6 +35,10 @@
                         <a href="/categories?c={{category}}"><span class="badge"
                                 style="background-color: var(--light-gray);color:#333;">{{category}}</span></a>
                         {% endfor %}
+                        {% if page.path contains "_drafts" %}
+                        <a href="#"><span class="badge"
+                            style="background-color: var(--light-gray);color:rgb(255, 0, 0);">draft</span></a>
+                        {% endif %}
                     </h6>
 
 
