@@ -77,6 +77,21 @@
         }
     },
     {
+        "title": "LegalAccess",
+        "description": "LegalAccess is a small Java library that wraps some commonly used reflection code for fetching / modifying private variables and methods.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/legalaccess"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://ewpratten.retrylife.ca/legalaccess"
+            }
+        ]
+    },
+    {
         "title": "Easy Pose Notation library",
         "description": "LibEPN is a Java library I built that provides a common interface for working with the position and orientation of objects in 3-dimensional space by making heavy use of Quaternions.",
         "text_buttons": [],
