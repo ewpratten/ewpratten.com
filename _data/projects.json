@@ -77,6 +77,24 @@
         }
     },
     {
+        "title": "Bird's-Eye",
+        "description": "A GUI application for providing a multi-user bird's-eye view of players on Minecraft servers that have the <a href='https://github.com/webbukkit/dynmap'>Dynmap</a> plugin installed.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/birdseye"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://pypi.org/project/birdseye-mc/"
+            }
+        ],
+        "hero": {
+            "img_src": "/assets/images/projects/birdseye.png"
+        }
+    },
+    {
         "title": "LegalAccess",
         "description": "LegalAccess is a small Java library that wraps some commonly used reflection code for fetching / modifying private variables and methods.",
         "text_buttons": [],
@@ -88,6 +106,25 @@
             {
                 "icon": "fas fa-book",
                 "url": "https://ewpratten.retrylife.ca/legalaccess"
+            }
+        ]
+    },
+    {
+        "title": "MCDiscovery",
+        "description": "mcdiscovery is a Python library and CLI tool for discovering Minecraft LAN worlds / servers on your local network by listening to multicast communication between Minecraft clients",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/mcdiscovery"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://ewpratten.retrylife.ca/mcdiscovery/"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://pypi.python.org/pypi/mcdiscovery/"
             }
         ]
     },
