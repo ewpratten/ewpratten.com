@@ -2,7 +2,7 @@
 layout: page
 title:  "Upgrading my chromebook"
 description: "The process of installing GalliumOS on an ACER R11"
-date:   2020-12-3 09:00:00 
+date:   2020-12-4 09:00:00 
 written: 2020-10-31
 categories: project laptop hardware
 excerpt: >-
