@@ -4,6 +4,7 @@
         "Curseforge",
         "DSLR",
         "Keybase",
+        "Litematica",
         "Minecraft",
         "Minecraft's",
         "Optifine",
@@ -19,8 +20,10 @@
         "modpack",
         "ortholinear",
         "shulker",
+        "singleplayer",
         "thinkpad",
-        "videographers"
+        "videographers",
+        "voxel"
     ],
     "compile-hero.disable-compile-files-on-did-save-code": true
 }

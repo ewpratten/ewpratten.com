@@ -63,13 +63,33 @@ In my inventory, I use [Roughly Enough Items](https://github.com/shedaniel/Rough
 
 
 <div class="center" markdown="1">
-![Screenshot of Sodium settings](/assets/images/rei.png)
+![Screenshot of Roughly Enough Items](/assets/images/rei.png)
 </div>
 
 In terms of HUD "extras", I use [Here's What You're Looking At](https://www.curseforge.com/minecraft/mc-mods/hwyla) to show basic information about the block I am looking at. This is very helpful for me, as I am still learning what all the new `1.9+` blocks are. I also extend HWYLA with [Hwyla Addon Horse Info](https://www.curseforge.com/minecraft/mc-mods/hwyla-addon-horse-info) to show me the stats of any horse I look at, and [cAn i MiNe thIS bLOCk?](https://www.curseforge.com/minecraft/mc-mods/can-i-mine-this-block) to tell me the needed tool to harvest a specific block. I also use [Game Info](https://www.curseforge.com/minecraft/mc-mods/gameinfo) to tell me the world time in the upper left of my screen.
 
+In the world, I use [Orderly](https://www.curseforge.com/minecraft/mc-mods/orderly/) to show the health of mobs above their heads, and [Name Pain](https://www.curseforge.com/minecraft/mc-mods/name-pain), which will give player's names a red tint when they are low on health.
+
 ## Utility
+
+There are a few small mods that I have installed to provide some nice-to-have information in game, like [Chat Heads](https://www.curseforge.com/minecraft/mc-mods/chat-heads), which shows a player's face beside their chat messages, [AuthMe](https://www.curseforge.com/minecraft/mc-mods/auth-me), which allows you to switch accounts without restarting the game, [Anti-Ghost](https://www.curseforge.com/minecraft/mc-mods/antighost), which fixes Minecraft's ghost block problem, [BetterF3](https://www.curseforge.com/minecraft/mc-mods/betterf3), which improves the game's <kbd>F3</kbd> screen, [Controlling](https://www.curseforge.com/minecraft/mc-mods/controlling-for-fabric), which allows you to search through the game's keybinds in an easier way, [Craft Presence](https://www.curseforge.com/minecraft/mc-mods/craftpresence), which provides highly-customizable [Discord Rich Presence](https://discord.com/rich-presence) data, [Custom Selection Box](https://www.curseforge.com/minecraft/mc-mods/custom-selection-box-port), which makes the block you are looking at more distinct, [Mod Menu](https://www.curseforge.com/minecraft/mc-mods/modmenu), which is used by many mods to provide settings screens, [Not Enough Crashes](https://www.curseforge.com/minecraft/mc-mods/not-enough-crashes), which just brings you back to the title screen if something stops working, instead of closing the game, and [Path Suggestion](https://www.curseforge.com/minecraft/mc-mods/pathsuggestion), which improves Minecraft command auto-complete.
 
 ## World map
 
+I hate writing down coordinates of various things, so I use Xaero's [Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) and [World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map) mods. These both provide in-world waypoints, and generate a map of everywhere you travel in the world.
+
+<div class="center" markdown="1">
+![Xaero's Minimap](/assets/images/minimap_2020.png)
+</div>
+
+## Building utilities
+
+I spend a lot of time programmatically editing and copying builds around between worlds and servers. I do this to make redstone templates, generate build platforms, and create Minecraft-based voxel art over on [my Instagram](https://www.instagram.com/evanpratten/) page.
+
+To do this, I use [WorldEdit](https://www.curseforge.com/minecraft/mc-mods/worldedit) for most of the heavy lifting, [Euclid](https://www.curseforge.com/minecraft/mc-mods/euclid) to show me my WorldEdit selections as I create them, and [Litematica](https://www.curseforge.com/minecraft/mc-mods/litematica/) to copy builds from servers to singleplayer worlds (since WorldEdit only works in singleplayer).
+
 ## World generation
+
+Finally, I use [Terrestria](https://www.curseforge.com/minecraft/mc-mods/terrestria), [Traverse](https://www.curseforge.com/minecraft/mc-mods/traverse), [Cinderscapes](https://www.curseforge.com/minecraft/mc-mods/cinderscapes) and [Overworld Two](https://www.curseforge.com/minecraft/mc-mods/overworld-two/) to improve terrain generation, and "spice up" my worlds. 
+
+*NOTE: The first three of these mods introduce new blocks to the game, but do not cause issues in vanilla multiplayer games.*
