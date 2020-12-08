@@ -3,7 +3,7 @@ layout: page
 title:  "I did some cleaning"
 description: "Spring cleaning is fun when it isn't spring, and a computer does all the work"
 date:   2019-08-27 12:37:00
-categories: random
+tags: random
 ---
 
 As I am continuing to check items off my TODO list before school starts, I have come to an item I have been putting off for a while. **Clean up GitHub Account**. Luckily, I discovered a little trick to make the process of deleting unused repos a little easier!

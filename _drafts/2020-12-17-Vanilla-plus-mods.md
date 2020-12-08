@@ -4,7 +4,7 @@ title:  "How I have tweaked my Minecraft client to be 'just right'"
 description: "Pushing the boundaries of a vanilla game, while being able to play on un-modified servers"
 date:   2020-12-17 09:00:00 
 written: 2020-12-04
-categories: project python short
+tags: project python short
 excerpt: >-
     Over the past 10 years, I have been building the perfect Minecraft experience for myself. This post shares the collection of mods I run, and why I use them.
 redirect_from: 

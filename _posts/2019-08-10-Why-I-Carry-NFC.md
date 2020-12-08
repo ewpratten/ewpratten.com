@@ -3,7 +3,7 @@ layout: page
 title:  "My weird piece of EDC"
 description: "Reasons why I always carry NFC cards with me"
 date:   2019-08-10 20:57:00
-categories: random
+tags: random
 ---
 
 Im back with a quick little post about something I cary with me everywhere I go, EDC (Every-Day Carry) if you will.

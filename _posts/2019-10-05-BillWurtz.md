@@ -3,7 +3,7 @@ layout: page
 title:  "Using an RNN to generate Bill Wurtz notes"
 description: "Textgenrnn is fun"
 date:   2019-10-05 18:54:00
-categories: project
+tags: project
 redirect_from: 
  - /post/99g9j2r90/
  - /99g9j2r90/

@@ -3,7 +3,7 @@ layout: page
 title:  "What I have learned from 2 years of FRC programming"
 description: "Robots are pretty cool"
 date:   2019-06-21 15:14:00
-categories: frc
+tags: frc
 ---
 
 Over the past two years (2018 / 2019), I have been a member of my school's [FRC](https://www.firstinspires.org/robotics/frc) team, [Raider Robotics](frc5024.github.io). Specifically, a programmer.

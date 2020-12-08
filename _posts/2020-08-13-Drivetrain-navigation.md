@@ -3,7 +3,7 @@ layout: page
 title:  "Notes from FRC: Autonomous point-to-point navigation"
 description: "The tale of some very curvy math"
 date:   2020-08-13 10:00:00 
-categories: frc
+tags: frc
 excerpt: >-
     This post is a continuation on my "Notes from FRC" series. This time, 
     I cover an extremely simple, yet very effective way to get a 

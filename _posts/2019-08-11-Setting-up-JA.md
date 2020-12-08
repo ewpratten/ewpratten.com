@@ -3,7 +3,7 @@ layout: page
 title:  "How I set up ひらがな input on my laptop"
 description: "I3wm makes everything 10x harder than it should be"
 date:   2019-08-12 19:40:00
-categories: notes languages
+tags: notes languages
 ---
 
 I am currently working with [ひらがな](https://en.wikipedia.org/wiki/Hiragana), [かたかな](https://en.wikipedia.org/wiki/Katakana), and, [かんじ](https://en.wikipedia.org/wiki/Kanji) in some projects, and needed a more reliable way to write than running some [romaji](https://en.wikipedia.org/wiki/Romanization_of_Japanese) through an online translator. So, this post will detail what I did to enable native inputs on my laptop. This guide is specifically for [i3wm](https://i3wm.org/), because it does not obey system settings for languages and inputs.

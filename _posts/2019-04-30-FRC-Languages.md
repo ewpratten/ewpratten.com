@@ -2,7 +2,7 @@
 layout: page
 title:  "The language hunt"
 date:   2019-04-30 18:32:00+0000
-categories: frc
+tags: frc
 ---
 
 Our programming team is looking to switch languages in the 2020 season. Here is the what, why, and how.

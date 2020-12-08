@@ -4,7 +4,7 @@ title:  "Mounting Google Drive accounts as network drives"
 description: "Easy-to-use Google Drive integration for Linux using rclone"
 date:   2020-10-15 10:00:00 
 written: 2020-09-22
-categories: linux workflow google
+tags: linux workflow google
 excerpt: >-
     I can never get the Google Drive webapp to load quickly when I need it 
     to. My solution: use some command-line magic to mount my drives directly 

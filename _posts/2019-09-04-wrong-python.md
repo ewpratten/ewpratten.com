@@ -3,7 +3,7 @@ layout: page
 title:  "Doing Python OOP the wrong way"
 description: "In the name of science!"
 date:   2019-09-07 13:13:00
-categories: projects random
+tags: projects random
 ---
 
 If you know me, you probably know of the many weird things I do with python. Most recent of which being this [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz) implementation in one line of python code:

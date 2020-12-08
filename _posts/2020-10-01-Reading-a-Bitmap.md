@@ -4,7 +4,7 @@ title:  "Reading metadata from a bitmap file"
 description: "A project writeup"
 date:   2020-10-01 12:25:00 
 written: 2020-09-15
-categories: project c images
+tags: project c images
 excerpt: >-
     Inspired from one of my friend's projects, I built a small 
     tool for displaying bitmap file info from the command line.

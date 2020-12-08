@@ -4,7 +4,7 @@ title:  "Building a mini maven server"
 description: "Project overview: The Ultralight maven server"
 date:   2020-09-17 11:00:00 
 written: 2020-09-05
-categories: project github maven
+tags: project github maven
 excerpt: >- 
   In this post, I explain the process of building my own personal 
   maven server, and show how simple maven servers really are.

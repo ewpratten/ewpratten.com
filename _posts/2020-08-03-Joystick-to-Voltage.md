@@ -3,7 +3,7 @@ layout: page
 title:  "Notes from FRC: Converting joystick data to tank-drive outputs"
 description: "and making a tank-based robot's movements look natural"
 date:   2020-08-03 09:07:00 
-categories: frc
+tags: frc
 redirect_from: 
  - /post/6j49kjl4/
  - /6j49kjl4/

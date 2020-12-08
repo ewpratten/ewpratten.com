@@ -3,7 +3,7 @@ layout: page
 title:  "Compiling BrainFuck with a shell script"
 description: "That was easy"
 date:   2020-01-20 20:13:00
-categories: random
+tags: random
 redirect_from: 
  - /post/es3v140d/
  - /es3v140d/

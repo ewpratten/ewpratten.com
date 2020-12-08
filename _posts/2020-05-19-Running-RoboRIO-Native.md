@@ -3,7 +3,7 @@ layout: page
 title:  "Running RoboRIO firmware inside Docker"
 description: "Containerized native ARMv7l emulation in 20 minutes"
 date:   2020-05-19 13:00:00 
-categories: frc roborio emulation
+tags: frc roborio emulation
 redirect_from: 
  - /post/5d3nd9s4/
  - /5d3nd9s4/

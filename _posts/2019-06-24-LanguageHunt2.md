@@ -3,7 +3,7 @@ layout: page
 title:  "The language hunt: Part 2"
 description: "A quick followup"
 date:   2019-06-24 21:36:00
-categories: frc
+tags: frc
 ---
 
 This is a very short post, just to explain the result of [The language Hunt](/frc/2019/04/30/FRC-Languages.html).

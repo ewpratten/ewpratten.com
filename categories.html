@@ -15,7 +15,7 @@ backing_scalar: "height:90%;"
     {% assign the_date = post.date | split: " " %}
 
     <a href="{{post.url}}" class="list-group-item list-group-item-action hidden"
-        categories="{% for category in post.categories %}{{category}},{% endfor %}">
+        categories="{% for category in post.tags %}{{category}},{% endfor %}">
         <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{post.title}}</h5>
             <small style="color:gray;">{{the_date.first}}</small>
@@ -37,7 +37,7 @@ backing_scalar: "height:90%;"
     }
 
     // Fill in the subtitle
-    document.getElementById("page-subtitle").innerText = "Here are all my posts about " + category + ":";
+    document.getElementById("page-subtitle").innerHTML = "Below, are all my posts about '" + category + "'. An RSS feed for this specific category can be found <a href='/feed/by_tag/" + category + ".xml'>here</a>";
 
     // Get all sub-posts of the posts list
     var allposts = document.getElementById("posts").children;

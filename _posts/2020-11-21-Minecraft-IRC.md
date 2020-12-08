@@ -4,7 +4,7 @@ title:  "Connecting to a Minecraft server over IRC"
 description: "For server administration, or just chatting with friends"
 date:   2020-11-21 10:00:00 
 written: 2020-10-25
-categories: minecraft project irc
+tags: minecraft project irc
 excerpt: >-
     This post outlines the process of writing a custom IRC server that can bridge between your favorite IRC client, and any Minecraft server
 redirect_from: 

@@ -4,7 +4,7 @@ title:  "Using Bazel to create Minecraft modpacks"
 description: "An overview of how I automated the build process for CorePack"
 date:   2020-10-24 08:00:00 
 written: 2020-09-27
-categories: bazel workflow git minecraft
+tags: bazel workflow git minecraft
 excerpt: >-
     I decided to modernize my system for producing builds of my personal Minecraft modpack using the Bazel buildsystem.
 redirect_from: 

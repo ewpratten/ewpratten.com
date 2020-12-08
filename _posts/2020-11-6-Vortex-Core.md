@@ -4,7 +4,7 @@ title:  "My first mechanical keyboard: The Vortex Core"
 description: "Just the right amount of obscure"
 date:   2020-11-6 23:00:00 
 written: 2020-09-28
-categories: keyboards workflow
+tags: keyboards workflow
 excerpt: >-
     I recently purchased my first mechanical keyboard, and decided to go "all in" with a 40% layout.
 redirect_from: 
