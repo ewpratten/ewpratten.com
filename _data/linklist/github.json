@@ -1,0 +1,33 @@
+{
+    "name": "Interesting Open Source Projects",
+    "entries": [
+        {
+            "text": "ImHex: A hex editor build on ImGUI",
+            "url": "https://github.com/WerWolv/ImHex"
+        },
+        {
+            "text": "Aseprite source code",
+            "url": "https://github.com/aseprite/aseprite"
+        },
+        {
+            "text": "Windows memory access from JavaScript",
+            "url": "https://github.com/Rob--/memoryjs"
+        },
+        {
+            "text": "Poetry: A very nice Python build tool",
+            "url": "https://python-poetry.org/"
+        },
+        {
+            "text": "CLI rich text formatting for Python",
+            "url": "https://github.com/willmcgugan/rich"
+        },
+        {
+            "text": "Small but powerful JavaScript animation library",
+            "url": "https://github.com/alexfoxy/lax.js"
+        },
+        {
+            "text": "A modern implementation of the Flash Player in Rust+WASM",
+            "url": "https://github.com/ruffle-rs/ruffle"
+        }
+    ]
+}

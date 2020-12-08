@@ -1,0 +1,21 @@
+{
+    "name": "Random Links",
+    "entries": [
+        {
+            "text": "Polyglot programming",
+            "url": "https://en.wikipedia.org/wiki/Polyglot_(computing)"
+        },
+        {
+            "text": "A lot of information on the P2P networking that powers GTA Online",
+            "url": "https://www.reddit.com/r/GTA/comments/5onqrv/can_i_catch_a_modder_with_wireshark_pc/"
+        },
+        {
+            "text": "The UI tools used to build GitHub",
+            "url": "https://primer.style/"
+        },
+        {
+            "text": "Using takeout and GDPR data to graph activity",
+            "url": "https://twitter.com/Benjojo12/status/1335569822776700928?s=19"
+        }
+    ]
+}

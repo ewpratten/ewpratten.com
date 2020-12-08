@@ -1,0 +1,26 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US"
+    xmlns="http://www.w3.org/2005/Atom"
+    xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">
+    <id>{{ site.url }}/linklist.atom</id>
+    <link rel="alternate" type="text/html" href="{{ site.url }}/linklist"/>
+    <link rel="self" type="application/atom+xml" href="{{ site.url }}/linklist.atom"/>
+    <title>{{ site.title }} - The LinkList</title>
+    <author>
+        <name>{{site.title}}</name>
+    </author>
+{% for category in site.data.linklist %}
+{% for entry in category[1].entries %}
+    <entry>
+        <id>{{entry.url}}</id>
+        <link rel="alternate" type="text/html" href="{{entry.url}}"/>
+        <title><![CDATA[{{ entry.text }}]]></title>
+        <author>
+            <name>{{ site.title }}</name>
+        </author>
+    </entry>
+{% endfor %}
+{% endfor %}
+</feed>	
