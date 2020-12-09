@@ -110,6 +110,21 @@
         ]
     },
     {
+        "title": "MChat",
+        "description": "A console chat client for most Minecraft server versions. This is mainly a personal tool for quick server moderation without dealing with RCON.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/mchat"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://pypi.org/project/mchat/"
+            }
+        ]
+    },
+    {
         "title": "MCDiscovery",
         "description": "mcdiscovery is a Python library and CLI tool for discovering Minecraft LAN worlds / servers on your local network by listening to multicast communication between Minecraft clients",
         "text_buttons": [],
