@@ -51,6 +51,7 @@ collections:
 
 feed:
   tags: true
+  posts_limit: 200
 
 highlighter: rouge
 
