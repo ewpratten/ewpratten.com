@@ -1,6 +1,6 @@
 .color-hero {
     height: 108vh;
-    background-color: var(--color-purple)!important;
+    background-color: var(--color-purple) !important;
 }
 
 .color-hero .hello {
@@ -16,13 +16,13 @@
 
 .home-third-panel {
     transform: translateY(-50px);
-    background-color: var(--color-dark-blue)!important;
+    background-color: var(--color-dark-blue) !important;
     min-height: 500px;
     color: white;
 }
 
 .home-third-panel a {
-    color: var(--color-blue)!important;
+    color: var(--color-blue) !important;
 }
 
 .home-content {
@@ -36,5 +36,20 @@
 
 .home-project {
     /* min-height: 310px; */
-    margin-top:1rem;
+    margin-top: 1rem;
+}
+
+.hello {
+    #callsign {
+        color: rgba(255, 255, 255, .75);
+
+        a {
+            color: rgba(255, 255, 255, .75);
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: none;
+        }
+    }
 }

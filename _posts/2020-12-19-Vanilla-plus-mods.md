@@ -2,7 +2,7 @@
 layout: page
 title:  "How I have tweaked my Minecraft client to be 'just right'"
 description: "Pushing the boundaries of a vanilla game, while being able to play on un-modified servers"
-date:   2020-12-17 09:00:00 
+date:   2020-12-19 11:00:00 
 written: 2020-12-04
 tags: project python short
 excerpt: >-
