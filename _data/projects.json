@@ -20,21 +20,6 @@
         }
     },
     {
-        "title": "RetryLife API",
-        "description": "If you are looking to build an application that hooks into the backend of any one of my services, take a look at the RetryLife API. My backend API is edge-cached and CORS-ready for use in any application at any load.",
-        "text_buttons": [],
-        "icon_buttons": [
-            {
-                "icon": "fas fa-book",
-                "url": "https://api.retrylife.ca/apidocs"
-            },
-            {
-                "icon": "fas fa-info-circle",
-                "url": "https://status.retrylife.ca"
-            }
-        ]
-    },
-    {
         "title": "Lib5K",
         "description": "Lib5K is the core software library that powers all of Raider Robotics' robots. It started as a summer project of mine, and has now been used to build high-performance competitive robots, and win some awards along the way.",
         "text_buttons": [],
@@ -75,6 +60,21 @@
         "hero": {
             "img_src": "/assets/images/projects/mcinfo.jp2"
         }
+    },
+    {
+        "title": "FilterLib",
+        "description": "FilterLib is a small utility library for Java that is designed to provide a simple way to work with lists of data. This library is heavily callback-oriented.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/filterlib"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://ewpratten.retrylife.ca/filterlib"
+            }
+        ]
     },
     {
         "title": "Bird's-Eye",
@@ -140,6 +140,21 @@
             {
                 "icon": "fas fa-download",
                 "url": "https://pypi.python.org/pypi/mcdiscovery/"
+            }
+        ]
+    },
+    {
+        "title": "RetryLife API",
+        "description": "If you are looking to build an application that hooks into the backend of any one of my services, take a look at the RetryLife API. My backend API is edge-cached and CORS-ready for use in any application at any load.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fas fa-book",
+                "url": "https://api.retrylife.ca/apidocs"
+            },
+            {
+                "icon": "fas fa-info-circle",
+                "url": "https://status.retrylife.ca"
             }
         ]
     },
