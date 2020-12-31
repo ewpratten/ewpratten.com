@@ -12,7 +12,7 @@ redirect_from:
  - /g494l5j3/
 ---
 
-*So, whats up with 2020?*. For readers who do not know me personally, here is a quick overview:
+*So, whats up with 2020?* For readers who do not know me personally, here is a quick overview:
 
  - I made over 6000 commits to over 300 open source projects
  - I passed both 300 and 400 GitHub repositories on my account (and am on track to pass 500 any second)
@@ -53,7 +53,7 @@ My goal with Lib5K was to design a way for myself to pass along my knowledge and
 
 ## Personal projects
 
-During a rewrite of this website I did earlier this year, I implemented a new section on the homepage, where I list all of my major projects. This list is ever-growing, but is generally a good place to see what I am working on.
+During a rewrite of this website I did earlier this year, I implemented a new section on the homepage, where I list all of my major projects. This list is ever-growing, and generally a good place to see what I am working on.
 
 <!-- This year, I have spent my time in the following development categories:
 
@@ -64,9 +64,9 @@ During a rewrite of this website I did earlier this year, I implemented a new se
 
 All the code I have written this year has lead to the need to build a plethora of common software libraries in my three main languages: Python, Java, and C/C++. Through the process of building these, I have picked up many new skills like: properly unit-testing software, [building reliable library distribution systems](/blog/2020/09/17/ultralight-writeup), and extensively documenting code.
 
-In the web world, I have learned to work with [JamStack](https://jamstack.org/), and have deployed many serverless / lambda-powered web applications, all based on [Flask](https://github.com/pallets/flask) or [Jekyll](https://jekyllrb.com/). A list of my repositories that use these technologies can be found [here](https://github.com/search?l=&q=user%3AEwpratten+filename%3Anow.json&type=code). 
+In the web world, I have learned to work with [JamStack](https://jamstack.org/), and have deployed many serverless / lambda-powered web applications, mostly based on [Flask](https://github.com/pallets/flask) or [Jekyll](https://jekyllrb.com/). A list of my repositories that use these technologies can be found [here](https://github.com/search?l=&q=user%3AEwpratten+filename%3Anow.json&type=code). 
 
-I have also picked up low-level programming for systems running on the [AVR Microprocessor architecture](https://en.wikipedia.org/wiki/AVR_microcontrollers). I have found AVR programming to be a fun and generally easy way to learn about very low-level computing: interrupts, timers, I/O, serial busses, memory management, etc. I also used this as an opportunity to learn how to use a powerful new build system developed by Google, called [*Bazel*](/categories?c=bazel). Many of my projects this year have been shifting over to build with *Bazel* as I really enjoy the build environment and tooling available. I have also used *Bazel* to build [my quite popular school note-taking system](/blog/2020/08/23/notetaking-with-latex).
+I have also picked up low-level programming for systems running on the [AVR Microprocessor architecture](https://en.wikipedia.org/wiki/AVR_microcontrollers). I have found AVR programming to be a fun and generally easy way to learn about very low-level computing: interrupts, timers, I/O, serial busses, memory management, etc. I also used this as an opportunity to learn how to use a powerful new build system developed by Google, called [*Bazel*](/categories?c=bazel). Many of my projects this year have been shifting over to build with *Bazel* as I really enjoy the build environment and tooling available. I have also used *Bazel* to build [my popular school note-taking system](/blog/2020/08/23/notetaking-with-latex).
 
 A list of the over 200 personal projects I have worked on this year (including unfinished projects) can be found with [this query](https://github.com/search?l=&q=user%3AEwpratten+created%3A%22%3E+2020-01-01+%3C+2021-01-01%22&type=repositories).
 
