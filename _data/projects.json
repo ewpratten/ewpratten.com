@@ -62,6 +62,21 @@
         }
     },
     {
+        "title": "JDMA",
+        "description": "JDMA is a Java library that provides c-like <code>malloc()</code> and <code>free()</code> functions, along with many others. All functions operate off-heap, meaning no need to deal with the garbage collector.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/JDMA"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://ewpratten.retrylife.ca/JDMA"
+            }
+        ]
+    },
+    {
         "title": "FilterLib",
         "description": "FilterLib is a small utility library for Java that is designed to provide a simple way to work with lists of data. This library is heavily callback-oriented.",
         "text_buttons": [],
@@ -107,7 +122,10 @@
                 "icon": "fas fa-book",
                 "url": "https://ewpratten.retrylife.ca/legalaccess"
             }
-        ]
+        ],
+        "hero": {
+            "img_src": "/assets/images/projects/legalaccess.png"
+        }
     },
     {
         "title": "MChat",

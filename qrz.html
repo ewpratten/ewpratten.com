@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRZ profile</title>
+
+    <style>
+        /* Site theme */
+        :root {
+            --color-red: #ff556e;
+            --color-purple: #4844a3;
+            --color-light-purple: #8a8ed8;
+            --color-dark-purple: #342d71;
+            --color-blue: #50b9e8;
+            --color-dark-blue: #1274bf;
+            --color-orange: #ffc07f;
+            --color-pink: #e15fbd;
+            --light-gray: #e9e9ed;
+        }
+
+        /* Fonts */
+        @font-face {
+            font-family: "walsheim-bold";
+            src: url("https://retrylife.ca/assets/fonts/GT-Walsheim-Bold.woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "walsheim-regular";
+            src: url("https://retrylife.ca/assets/fonts/GT-Walsheim-Bold.woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "tiempos-regular";
+            src: url("https://retrylife.ca/assets/fonts/GT-Walsheim-Bold.woff");
+            font-display: swap;
+        }
+
+        h1 {
+            line-height: 1.25;
+            font-size: 3.5rem;
+        }
+
+        h1,
+        h2 {
+            font-family: "walsheim-bold", "sans-serif";
+        }
+
+        h2,
+        h4,
+        h5,
+        h6 {
+            font-family: "walsheim-regular", "sans-serif";
+        }
+
+        p {
+            font-family: "IBM Plex Sans", "sans-serif";
+            font-size: 1.05rem;
+        }
+
+        /* Fancy Link animations */
+        a {
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+            z-index: 1;
+            color: var(--color-dark-blue);
+        }
+
+        a:visited {
+            color: var(--color-dark-blue);
+        }
+
+        a:after {
+            content: '';
+            display: block;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            left: 50%;
+            background-color: var(--color-blue);
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+            transform-origin: bottom center;
+            z-index: -1;
+        }
+
+        a:hover {
+            color: #212529;
+        }
+
+        a:hover:after {
+            right: 0;
+            left: 0;
+        }
+
+        /* Content container */
+        .content-container {
+            max-width: 830px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content-container">
+        <h2>
+            Hi there
+            <g-emoji class="g-emoji" alias="wave"
+                fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png">
+                <img class="emoji" alt="wave" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png"
+                    width="20" height="20">
+            </g-emoji>
+        </h2>
+
+        <p>
+            I am a <my_age>17</my_age> year-old student with an ever-growing list of hobbies. I am mainly a software
+            developer, maintaining a plethora of projects over on <a href="https://github.com/ewpratten">GitHub</a>.
+            Included in this, I am the lead software developer at
+            <a href="https://github.com/frc5024">Raider Robotics</a>,
+            a competitive robotics team. I also work with software-defined radios, do
+            <a href="https://www.instagram.com/evanpratten/">photography</a>, and much more.
+        </p>
+
+        <p>
+            For more information on my work, and my blog, see <a href="https://retrylife.ca">my website</a>.
+        </p>
+
+        <h2>
+            My Gear
+            <g-emoji class="g-emoji" alias="wrench"
+                fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png">
+                <img class="emoji" alt="wrench" src="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png"
+                    width="20" height="20">
+            </g-emoji>
+        </h2>
+
+        <p>I keep my radio gear fairly low power. Here is an overview of my commonly used equipment.</p>
+
+        <h3>Radios</h3>
+        <ul>
+            <!-- <li>
+                <a href="https://elecraft.com/products/kx2-ssb-cw-data-80-10-m-transceiver">
+                    Elecraft KX2
+                </a>
+            </li> -->
+            <li>
+                <a href="https://www.aliexpress.com/item/32794436207.html">
+                    Baofeng UV-5R
+                </a>
+            </li>
+            <li>
+                <a href="https://countycomm.com/collections/radio/products/countycomm-gp-5-ssb-general-purpose-radio">
+                    CountyComm GP-5
+                </a>
+            </li>
+            <li>
+                <a href="https://www.nooelec.com/store/nesdr-nano-three.html">
+                    Nooelec NESDR Nano 3
+                </a>
+            </li>
+            <li>
+                <a href="https://www.amazon.com/dp/B0129EBDS2/">
+                    RTL-SDR RTL2832U
+                </a>
+            </li>
+            <li>
+                KC9ON
+                <a href="https://kc9on.com/ham-radio/qrp-radios/chinese-qrp-kits-2/chinese-pixie/">Pixie</a>
+                and
+                <a href="https://kc9on.com/product/pixie-switch/">Pixie Switch</a>
+                kit
+            </li>
+        </ul>
+
+        <h3>Antennae</h3>
+
+        <ul>
+            <li>
+                <a href="https://www.amazon.ca/Authentic-Genuine-NA-771-15-6-Inch-SMA-Female/dp/B00KC4PWQQ">
+                    Nagoya NA-771
+                </a>
+            </li>
+            <li>
+                <a href="https://greatscottgadgets.com/ant500/">
+                    Great Scott Gadgets ANT500
+                </a>
+            </li>
+            <li>
+                <a href="https://www.dxengineering.com/parts/mfj-1840t">
+                    MFJ-1840T
+                </a>
+            </li>
+            <li>Various long-wire antennae</li>
+        </ul>
+
+        <h3>Software</h3>
+
+        <ul>
+            <li>
+                <a href="https://gqrx.dk/">
+                    GQRX
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/pothosware/SoapySDR/wiki">
+                    SoapySDR
+                </a>
+            </li>
+        </ul>
+
+        <h2>
+            Contact Info
+            <g-emoji class="g-emoji" alias="phone"
+                fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4f1.png">
+                <img class="emoji" alt="phone" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4f1.png"
+                    width="20" height="20">
+            </g-emoji>
+        </h2>
+
+        <p>Additional Contact information can be found on <a href="https://retrylife.ca/about">my website</a>.</p>
+
+    </div>
+
+</body>
+
+</html>

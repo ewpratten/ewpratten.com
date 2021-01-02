@@ -93,7 +93,7 @@ This website uses free assets from:
       </div>
       <div class="modal-body" style="align-contents:center; text-align: center">
       <!-- Snapcode -->
-        <img src="/assets/images/snapcode-full.png" style="margin:auto;">
+        <img src="https://api.retrylife.ca/snapchat/slabs5225/snapcode.png" style="margin:auto;">
         <h4><em>slabs5225</em></h4>
       </div>
     </div>
