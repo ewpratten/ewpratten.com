@@ -28,12 +28,20 @@
         "username": "evanpratten",
         "icon": "fab fa-deviantart",
         "url": "https://www.deviantart.com/evanpratten"
-    },{
+    },
+    {
         "name": "Snapchat",
         "username": "slabs5225",
         "icon": "fab fa-snapchat-ghost",
         "url": "https://www.snapchat.com/add/slabs5225"
-    },{
+    },
+    {
+        "name": "TikTok",
+        "username": "evanpratten",
+        "icon": "fab fa-tiktok",
+        "url": "https://www.tiktok.com/@evanpratten"
+    },
+    {
         "name": "QRZ",
         "username": "va3zza",
         "icon": "fas fa-broadcast-tower",
