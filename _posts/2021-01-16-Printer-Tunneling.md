@@ -2,7 +2,7 @@
 layout: page
 title: "Tunneling a printer from a home network to a VPN" 
 description: "Using socat to port-forward between network interfaces" 
-date:   2021-01-14 10:00:00 
+date:   2021-01-16 10:00:00 
 written: 2020-12-19
 tags: projects tutorial snippet
 excerpt: >-
