@@ -92,6 +92,23 @@
         ]
     },
     {
+        "title": "FrostBucket",
+        "description": "FrostBucket is a server-side Minecraft plugin that adds a new item, the \"Frost Bucket\". This item turns water into ice.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/FrostBucket"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://github.com/Ewpratten/FrostBucket/releases/latest"
+            }
+        ],
+        "hero": {
+            "img_src": "/assets/images/projects/FrostBucket.png"
+        }
+    },{
         "title": "Bird's-Eye",
         "description": "A GUI application for providing a multi-user bird's-eye view of players on Minecraft servers that have the <a href='https://github.com/webbukkit/dynmap'>Dynmap</a> plugin installed.",
         "text_buttons": [],
@@ -294,7 +311,8 @@
                 "icon": "fab fa-github",
                 "url": "https://github.com/Ewpratten/FRC-actions"
             }
-        ]
+        ],
+        "archived":true
     },
     {
         "title": "Shift",
