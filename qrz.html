@@ -97,7 +97,7 @@
             left: 0;
         }
 
-        a.no_animate:hover:after{
+        a.no_animate:hover:after {
             right: 50%;
             left: 50%;
         }
@@ -116,11 +116,13 @@
 
         <div>
             <img src="https://img.shields.io/badge/licensed-15/12/2020-blue" alt="Licensed 15/12/2020">
-            <img src="https://img.shields.io/badge/license%20class-Basic%20with%20Honours-blue" alt="License Class: Basic with Honours">
-            <a class="no_animate" href="https://aprs.fi/#!addr=EN92JX"><img src="https://img.shields.io/badge/grid-EN92jx-orange" alt="Grid: EN92jx"></a>
+            <img src="https://img.shields.io/badge/license%20class-Basic%20with%20Honours-blue"
+                alt="License Class: Basic with Honours">
+            <a class="no_animate" href="https://aprs.fi/#!addr=EN92JX"><img
+                    src="https://img.shields.io/badge/grid-EN92jx-orange" alt="Grid: EN92jx"></a>
         </div>
 
-        
+
         <h2>
             Hi there
             <g-emoji class="g-emoji" alias="wave"
@@ -144,7 +146,7 @@
         <p>
             On HF, I operate my Elecraft KX2 at 1-5W. I'll occasionally bump the power up as needed if I'm having an
             issue with a specific QSO. I almost exclusively operate CW so I can get some morse code practice. I operate
-            on 20m through the day, and drop down to 40m at night.  
+            on 20m through the day, and drop down to 40m at night.
         </p>
 
         <h2>
@@ -245,9 +247,20 @@
 
         <img src="https://rbn.telegraphy.de/activity/image/VA3ZZA" style="width:100%;">
 
-        <iframe align="top" frameborder="0" height="500" width="100%" scrolling="yes" src="https://logbook.qrz.com/lbstat/VA3ZZA/" width="640"></iframe>
+        <iframe align="top" frameborder="0" height="500" width="100%" scrolling="yes"
+            src="https://logbook.qrz.com/lbstat/VA3ZZA/" width="640"></iframe>
 
     </div>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{site.ga_analytics}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', '{{site.ga_analytics}}');
+    </script>
 
 </body>
 
