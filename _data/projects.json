@@ -108,7 +108,38 @@
         "hero": {
             "img_src": "/assets/images/projects/FrostBucket.png"
         }
-    },{
+    },
+    {
+        "title": "MinimapServer",
+        "description": "MinimapServer is an open-source re-implementation of <a href='https://www.curseforge.com/members/xaero96/projects'>xaero96</a>'s Minimap API for his popular <em><a href='https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap'>Xaero's Minimap</a></em> and <em><a href='https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map'>Xaero's World Map</a></em> Minecraft mods.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/MinimapServer"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://ewpratten.retrylife.ca/MinimapServer/"
+            }
+        ]
+    },
+    {
+        "title": "mathutils",
+        "description": "The goal of this library is to provide a few small and simple functions to speed up software development involving linear transformations and basic trigonometry.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/mathutils"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://ewpratten.retrylife.ca/mathutils/"
+            }
+        ]
+    },
+    {
         "title": "Bird's-Eye",
         "description": "A GUI application for providing a multi-user bird's-eye view of players on Minecraft servers that have the <a href='https://github.com/webbukkit/dynmap'>Dynmap</a> plugin installed.",
         "text_buttons": [],
@@ -312,7 +343,7 @@
                 "url": "https://github.com/Ewpratten/FRC-actions"
             }
         ],
-        "archived":true
+        "archived": true
     },
     {
         "title": "Shift",
