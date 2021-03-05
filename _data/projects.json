@@ -62,6 +62,20 @@
         }
     },
     {
+        "title": "DJI3D",
+        "description": "DJI3D is a tool for graphing 3d positional data extracted from DJI drone telemetry. This tool works by extracting flight computer data from video metadata.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/dji3d"
+            }
+        ],
+        "hero": {
+            "img_src": "https://raw.githubusercontent.com/Ewpratten/dji3d/master/test.png"
+        }
+    },
+    {
         "title": "JDMA",
         "description": "JDMA is a Java library that provides c-like <code>malloc()</code> and <code>free()</code> functions, along with many others. All functions operate off-heap, meaning no need to deal with the garbage collector.",
         "text_buttons": [],
@@ -75,6 +89,54 @@
                 "url": "https://ewpratten.retrylife.ca/JDMA"
             }
         ]
+    },
+    {
+        "title": "Minecraft Query",
+        "description": "Minecraft Query is a small CLI tool for checking who is playing on a Minecraft server.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/mcq"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://crates.io/crates/mcquery"
+            }
+        ]
+    },
+    {
+        "title": "HamBands",
+        "description": "HamBands is a small Rust library for checking which amateur radio band a frequency belongs to.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/hambands"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://docs.rs/hambands"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://crates.io/crates/hambands"
+            }
+        ]
+    },
+    {
+        "title": "Path Following Demo",
+        "description": "This application is an interactive demonstration of the Pure Pursuit algorithm used by <a href='https://github.com/frc5024'><strong>@frc5024</strong></a> in <a href='https://github.com/frc5024/lib5k'>frc5024/lib5k</a>.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/pathfollowing-demo"
+            }
+        ],
+        "hero": {
+            "img_src": "https://raw.githubusercontent.com/Ewpratten/pathfollowing-demo/master/screenshot.png"
+        }
     },
     {
         "title": "FilterLib",
