@@ -22,7 +22,7 @@ I exist in various places around the internet. Mainly:
 
 ## Donations
 
-I accept small donations [over here](/donations).
+I accept small donations [over here](https://donate.retrylife.ca/).
 
 ## PGP
 
