@@ -217,7 +217,8 @@
         ],
         "hero": {
             "img_src": "/assets/images/projects/birdseye.png"
-        }
+        },
+        "archived": true
     },
     {
         "title": "LegalAccess",
@@ -379,6 +380,25 @@
         ]
     },
     {
+        "title": "rev-11-1105-rs",
+        "description": "Platform-agnostic Rust definitions for the Rev Robotics REV-11-1105 Blinkin LED Driver",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/rev-11-1105-rs"
+            },
+            {
+                "icon": "fas fa-book",
+                "url": "https://docs.rs/rev-11-1105-rs/0.1.0/rev_11_1105_rs/"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://crates.io/crates/rev-11-1105-rs"
+            }
+        ]
+    },
+    {
         "title": "SmallTools",
         "description": "SmallTools is a collection of programs and tools that are too small to get their own GitHub repository. I mainly use these as a learning tool for trying out new languages, libraries, and ideas.",
         "text_buttons": [],
@@ -436,7 +456,8 @@
         ],
         "hero": {
             "img_src": "/assets/images/projects/rayzor.jp2"
-        }
+        },
+        "archived": true
     },
     {
         "title": "Pi-hole API",
