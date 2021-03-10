@@ -61,3 +61,33 @@
     }
   }
 }
+
+
+#software-experience {
+	background-color: var(--color-dark-purple);
+	min-height: 100vh;
+
+	.content{
+		color: white;
+		padding-top:30vh;
+
+		h1{
+			text-transform: uppercase;
+		}
+
+		.work-experience-item{
+			background-color: unset;
+			border-color: white;
+			padding:10px;
+			transition: color 0.4s cubic-bezier(0, 0, 0.58, 1), border 0.4s cubic-bezier(0, 0, 0.58, 1);
+
+			&:hover {
+				cursor: pointer;
+				border-color:var(--color-red);
+				color:var(--color-red);
+				transition: color 0.1s cubic-bezier(0, 0, 0.58, 1), border 0.1s cubic-bezier(0, 0, 0.58, 1);
+			}
+		}
+	}
+
+}

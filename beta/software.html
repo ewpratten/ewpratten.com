@@ -15,3 +15,31 @@ layout: raw_page
     <img src="/assets/images/dev/software-landing.jpg" alt="Me, on my computer">
 
 </div>
+
+<div id="software-experience">
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col">
+                    <h1>Experience</h1>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus a augue id egestas.
+                        Etiam maximus velit at mauris viverra inte</h3>
+                </div>
+                <div class="col-7">
+                    <!-- <ul class="list-group"> -->
+                    {% for job in site.data.work_experience %}
+                    <li class="card work-experience-item" onclick="document.location='{{job.url}}';">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="mb-1">{{job.title}}</h4>
+                            <small>{{job.date.min}} - {{job.date.max}}</small>
+                        </div>
+                        <h5>{{job.employer}}</h5>
+                    </li><br>
+                    {% endfor %}
+                    <!-- </ul> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Pipeline Technical Director",
+        "employer": "Industrial Brothers",
+        "url": "https://industrialbrothers.com/",
+        "date": {
+            "min": "Feb 2021",
+            "max": "Present"
+        }
+    },
+    {
+        "title": "Lead of Software Development",
+        "employer": "Raider Robotics",
+        "url": "https://www.raiderrobotics.org/",
+        "date": {
+            "min": "Jun 2018",
+            "max": "Present"
+        }
+    },
+    {
+        "title": "Pipeline Technical Director",
+        "employer": "Industrial Brothers",
+        "url": "https://industrialbrothers.com/",
+        "date": {
+            "min": "Jun 2020",
+            "max": "Sep 2020"
+        }
+    },
+    {
+        "title": "Technical Consultant",
+        "employer": "Personal Computers of London",
+        "url": "http://personalcomputerslondon.com/",
+        "date": {
+            "min": "May 2018",
+            "max": "Dec 2019"
+        }
+    }
+]
