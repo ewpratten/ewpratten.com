@@ -4,7 +4,7 @@ title:  "How I flashed QMK to my Vortex Core"
 description: "Open-source firmware on a closed-source keyboard"
 date:   2021-03-14 13:00:00 
 written: 2021-03-14
-categories: project keyboards qmk firmware
+tags: project keyboards qmk firmware
 excerpt: >-
     After having some issues with the factory firmware on my 40% keyboard, I decided to replace it with the widely used QMK firmware instead.
 redirect_from: 
