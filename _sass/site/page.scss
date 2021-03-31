@@ -161,6 +161,11 @@ blockquote p {
     transition: 0.15s;
 }
 
+.blog-post-card:hover{
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.19);
+    transition: 0.15s;
+}
+
 .list-group-item-action{
     transition: background 0.2s cubic-bezier(0, 0, 0.58, 1);
 }

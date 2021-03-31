@@ -10,7 +10,47 @@ uses:
 
 <p>Here is a list of things I find interesting, and writeups of projects I have worked on.</p>
 
-<div class="list-group" id="posts">
+<div class="row" id="blog-grid">
+    {% assign i = 0 %}
+    {% for post in site.posts %}
+    <div class="col-sm-4">
+        <div class="card blog-post-card">
+            <div class="card-body">
+                <h5 class="card-title">{{post.title}}</h5>
+                <p class="card-text">{{post.description}}</p>
+            </div>
+            <div class="card-footer">
+                {% assign post_date = post.date | split: " " %}
+                <small class="text-muted">Published: {{post_date.first}}</small>
+                <a href="{{post.url}}"><button class="btn btn-outline-primary btn-sm" style="float:right;">Read
+                        Post</button></a>
+            </div>
+        </div>
+    </div>
+    {% assign i = i | plus:1 %}
+    {% endfor %}
+
+</div>
+
+<!-- Grid handler -->
+<script>
+
+    function orderPostGrid() {
+        $('#blog-grid').masonry({
+            // options
+            itemSelector: '.blog-post-card',
+            // columnWidth: 500,
+            transitionDuration: '0s'
+        });
+    }
+
+    // re-order in 2 seconds in case anything was still lazy-loading
+    setTimeout(orderPostGrid, 1500);
+    setTimeout(orderPostGrid, 2000);
+    setTimeout(orderPostGrid, 5000);
+</script>
+
+<!-- <div class="list-group" id="posts">
 
     {% assign i = 0 %}
     {% for post in site.posts %}
@@ -46,4 +86,4 @@ uses:
     {% endif %}
     {% assign i = i | plus:1 %}
     {% endfor %}
-</div>
+</div> -->

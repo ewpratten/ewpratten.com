@@ -76,6 +76,20 @@
         }
     },
     {
+        "title": "PolyMesh",
+        "description": "PolyMesh is a suite of tools, a library, and a file format I designed to describe and render arbitrary 3D objects. This project is partly a learning experiment, and partly a tool for future projects to build upon.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/polymesh"
+            }
+        ],
+        "hero": {
+            "img_src": "https://raw.githubusercontent.com/Ewpratten/polymesh/master/screenshots/logo.png"
+        }
+    },
+    {
         "title": "JDMA",
         "description": "JDMA is a Java library that provides c-like <code>malloc()</code> and <code>free()</code> functions, along with many others. All functions operate off-heap, meaning no need to deal with the garbage collector.",
         "text_buttons": [],
