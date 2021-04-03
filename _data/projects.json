@@ -90,6 +90,21 @@
         }
     },
     {
+        "title": "boop",
+        "description": "boop is a command-line tool that aims to be a super simple cross between ping and nmap. The tool can quickly probe hosts using ICMP ping packets, and report their status.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/ewpratten/boop"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://crates.io/crates/boop-ping"
+            }
+        ]
+    },
+    {
         "title": "JDMA",
         "description": "JDMA is a Java library that provides c-like <code>malloc()</code> and <code>free()</code> functions, along with many others. All functions operate off-heap, meaning no need to deal with the garbage collector.",
         "text_buttons": [],
