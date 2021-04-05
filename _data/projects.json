@@ -268,6 +268,28 @@
         }
     },
     {
+        "title": "Micromanaged Mike",
+        "description": "Micromanaged Mike is a game built over a weekend for <a href='https://ldjam.com/events/ludum-dare/46'>Ludum Dare 46</a> by myself and a group of friends.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/rsninja722/LudumDare46/"
+            },
+            {
+                "icon": "fas fa-info-circle",
+                "url": "https://ldjam.com/events/ludum-dare/46/micromanaged-mike"
+            },
+            {
+                "icon": "fas fa-play",
+                "url": "https://rsninja.dev/LudumDare46/"
+            }
+        ],
+        "hero": {
+            "img_src": "/assets/images/projects/micro_mike.png"
+        }
+    },
+    {
         "title": "MChat",
         "description": "A console chat client for most Minecraft server versions. This is mainly a personal tool for quick server moderation without dealing with RCON.",
         "text_buttons": [],
