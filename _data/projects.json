@@ -1,6 +1,10 @@
 [
     {
         "title": "Student Portal",
+        "types": [
+            "web",
+            "app"
+        ],
         "description": "This is a free-to-use webapp that acts as a new frontend to the <a href='https://schoolapps2.tvdsb.ca/students/student_login/lgn.aspx'>TVDSB Student Portal</a> website. This webapp also includes some extra data and graphs of each student's progress through highschool.",
         "text_buttons": [
             {
@@ -21,6 +25,9 @@
     },
     {
         "title": "Lib5K",
+        "types": [
+            "library"
+        ],
         "description": "Lib5K is the core software library that powers all of Raider Robotics' robots. It started as a summer project of mine, and has now been used to build high-performance competitive robots, and win some awards along the way.",
         "text_buttons": [],
         "icon_buttons": [
@@ -43,6 +50,10 @@
     },
     {
         "title": "MCInfo",
+        "types": [
+            "web",
+            "app"
+        ],
         "description": "MCInfo is a simple web app for viewing information about any public Minecraft server or user. The site is powered by the RetryLife API, and communicates to servers via TCP connections using <ahref='https://github.com/dinnerbone'>Dinnerbone</a>'s Python library.",
         "text_buttons": [
             {
@@ -63,6 +74,9 @@
     },
     {
         "title": "DJI3D",
+        "types": [
+            "app"
+        ],
         "description": "DJI3D is a tool for graphing 3d positional data extracted from DJI drone telemetry. This tool works by extracting flight computer data from video metadata.",
         "text_buttons": [],
         "icon_buttons": [
@@ -77,6 +91,10 @@
     },
     {
         "title": "PolyMesh",
+        "types": [
+            "app",
+            "library"
+        ],
         "description": "PolyMesh is a suite of tools, a library, and a file format I designed to describe and render arbitrary 3D objects. This project is partly a learning experiment, and partly a tool for future projects to build upon.",
         "text_buttons": [],
         "icon_buttons": [
@@ -91,6 +109,9 @@
     },
     {
         "title": "boop",
+        "types": [
+            "app"
+        ],
         "description": "boop is a command-line tool that aims to be a super simple cross between ping and nmap. The tool can quickly probe hosts using ICMP ping packets, and report their status.",
         "text_buttons": [],
         "icon_buttons": [
@@ -106,6 +127,9 @@
     },
     {
         "title": "JDMA",
+        "types": [
+            "library"
+        ],
         "description": "JDMA is a Java library that provides c-like <code>malloc()</code> and <code>free()</code> functions, along with many others. All functions operate off-heap, meaning no need to deal with the garbage collector.",
         "text_buttons": [],
         "icon_buttons": [
@@ -121,6 +145,9 @@
     },
     {
         "title": "Minecraft Query",
+        "types": [
+            "app"
+        ],
         "description": "Minecraft Query is a small CLI tool for checking who is playing on a Minecraft server.",
         "text_buttons": [],
         "icon_buttons": [
@@ -136,6 +163,9 @@
     },
     {
         "title": "HamBands",
+        "types": [
+            "library"
+        ],
         "description": "HamBands is a small Rust library for checking which amateur radio band a frequency belongs to.",
         "text_buttons": [],
         "icon_buttons": [
@@ -155,6 +185,9 @@
     },
     {
         "title": "Path Following Demo",
+        "types": [
+            "app"
+        ],
         "description": "This application is an interactive demonstration of the Pure Pursuit algorithm used by <a href='https://github.com/frc5024'><strong>@frc5024</strong></a> in <a href='https://github.com/frc5024/lib5k'>frc5024/lib5k</a>.",
         "text_buttons": [],
         "icon_buttons": [
@@ -169,6 +202,9 @@
     },
     {
         "title": "FilterLib",
+        "types": [
+            "library"
+        ],
         "description": "FilterLib is a small utility library for Java that is designed to provide a simple way to work with lists of data. This library is heavily callback-oriented.",
         "text_buttons": [],
         "icon_buttons": [
@@ -184,6 +220,9 @@
     },
     {
         "title": "FrostBucket",
+        "types": [
+            "plugin"
+        ],
         "description": "FrostBucket is a server-side Minecraft plugin that adds a new item, the \"Frost Bucket\". This item turns water into ice.",
         "text_buttons": [],
         "icon_buttons": [
@@ -202,6 +241,9 @@
     },
     {
         "title": "MinimapServer",
+        "types": [
+            "plugin"
+        ],
         "description": "MinimapServer is an open-source re-implementation of <a href='https://www.curseforge.com/members/xaero96/projects'>xaero96</a>'s Minimap API for his popular <em><a href='https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap'>Xaero's Minimap</a></em> and <em><a href='https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map'>Xaero's World Map</a></em> Minecraft mods.",
         "text_buttons": [],
         "icon_buttons": [
@@ -217,6 +259,9 @@
     },
     {
         "title": "mathutils",
+        "types": [
+            "library"
+        ],
         "description": "The goal of this library is to provide a few small and simple functions to speed up software development involving linear transformations and basic trigonometry.",
         "text_buttons": [],
         "icon_buttons": [
@@ -232,6 +277,9 @@
     },
     {
         "title": "Bird's-Eye",
+        "types": [
+            "app"
+        ],
         "description": "A GUI application for providing a multi-user bird's-eye view of players on Minecraft servers that have the <a href='https://github.com/webbukkit/dynmap'>Dynmap</a> plugin installed.",
         "text_buttons": [],
         "icon_buttons": [
@@ -251,6 +299,9 @@
     },
     {
         "title": "LegalAccess",
+        "types": [
+            "library"
+        ],
         "description": "LegalAccess is a small Java library that wraps some commonly used reflection code for fetching / modifying private variables and methods.",
         "text_buttons": [],
         "icon_buttons": [
@@ -269,6 +320,9 @@
     },
     {
         "title": "Micromanaged Mike",
+        "types": [
+            "game"
+        ],
         "description": "Micromanaged Mike is a game built over a weekend for <a href='https://ldjam.com/events/ludum-dare/46'>Ludum Dare 46</a> by myself and a group of friends.",
         "text_buttons": [],
         "icon_buttons": [
@@ -291,6 +345,9 @@
     },
     {
         "title": "MChat",
+        "types": [
+            "app"
+        ],
         "description": "A console chat client for most Minecraft server versions. This is mainly a personal tool for quick server moderation without dealing with RCON.",
         "text_buttons": [],
         "icon_buttons": [
@@ -306,6 +363,10 @@
     },
     {
         "title": "MCDiscovery",
+        "types": [
+            "app",
+            "library"
+        ],
         "description": "mcdiscovery is a Python library and CLI tool for discovering Minecraft LAN worlds / servers on your local network by listening to multicast communication between Minecraft clients",
         "text_buttons": [],
         "icon_buttons": [
@@ -325,6 +386,9 @@
     },
     {
         "title": "RetryLife API",
+        "types": [
+            "web"
+        ],
         "description": "If you are looking to build an application that hooks into the backend of any one of my services, take a look at the RetryLife API. My backend API is edge-cached and CORS-ready for use in any application at any load.",
         "text_buttons": [],
         "icon_buttons": [
@@ -340,6 +404,9 @@
     },
     {
         "title": "Easy Pose Notation library",
+        "types": [
+            "library"
+        ],
         "description": "LibEPN is a Java library I built that provides a common interface for working with the position and orientation of objects in 3-dimensional space by making heavy use of Quaternions.",
         "text_buttons": [],
         "icon_buttons": [
@@ -362,6 +429,10 @@
     },
     {
         "title": "Ultralight",
+        "types": [
+            "web",
+            "app"
+        ],
         "description": "Ultralight is a custom maven server that is designed to run on machines with very low resources, and almost no storage. I use Ultralight to host my personal maven repositories, and welcome other people to set up their own instances.",
         "text_buttons": [
             {
@@ -382,6 +453,10 @@
     },
     {
         "title": "Not Enough Reviews",
+        "types": [
+            "web",
+            "app"
+        ],
         "description": "Not Enough Reviews (NER) is a GitHub frontend webapp I built to let me browse discussions and changes in a visual style I like. This project was inspired by old text-based software mailing lists, and made more modern with a nice touch of CSS.",
         "text_buttons": [
             {
@@ -402,6 +477,9 @@
     },
     {
         "title": "JState",
+        "types": [
+            "library"
+        ],
         "description": "JState is a library for implementing Finite State Machines in Java code with minimal work. It was originally written by me for use at Raider Robotics, but has since been forked and updated to run without the team's infrastructure around it.",
         "text_buttons": [],
         "icon_buttons": [
@@ -417,6 +495,9 @@
     },
     {
         "title": "InputLib",
+        "types": [
+            "library"
+        ],
         "description": "InputLib is a small and easy-to-use Java library for working with text-based user inputs in a terminal. InputLib is designed to reduce messy  safety-checking code without sing a large parsing library like ANTLR",
         "text_buttons": [],
         "icon_buttons": [
@@ -432,6 +513,9 @@
     },
     {
         "title": "rev-11-1105-rs",
+        "types": [
+            "library"
+        ],
         "description": "Platform-agnostic Rust definitions for the Rev Robotics REV-11-1105 Blinkin LED Driver",
         "text_buttons": [],
         "icon_buttons": [
@@ -451,6 +535,9 @@
     },
     {
         "title": "SmallTools",
+        "types": [
+            "app"
+        ],
         "description": "SmallTools is a collection of programs and tools that are too small to get their own GitHub repository. I mainly use these as a learning tool for trying out new languages, libraries, and ideas.",
         "text_buttons": [],
         "icon_buttons": [
@@ -462,6 +549,9 @@
     },
     {
         "title": "GitHub Actions for FRC",
+        "types": [
+            "plugin"
+        ],
         "description": "A GitHub CI action specifically built for FRC/GradleRIO codebases. This has been used in production by multiple FRC teams, and has become a core tool in the Raider Robotics software development pipeline.",
         "text_buttons": [
             {
@@ -480,6 +570,9 @@
     },
     {
         "title": "Shift",
+        "types": [
+            "app"
+        ],
         "description": "Shift is a rotating-key, XOR-based data encryption tool that I built to learn about the inner workings of simple encryption tools. This tool is used to obfuscate program data in some of my other applications.",
         "text_buttons": [
             {
@@ -497,6 +590,9 @@
     },
     {
         "title": "Rayzor",
+        "types": [
+            "app"
+        ],
         "description": "Rayzor is my final project from my ICS4U computer science class. This is a 3D raytracer that can generate still images from a scene definition file. Take a look at the project's README file for some examples.",
         "text_buttons": [],
         "icon_buttons": [
@@ -512,6 +608,9 @@
     },
     {
         "title": "Pi-hole API",
+        "types": [
+            "library"
+        ],
         "description": "This is an old project of mine that is used in some of my backend server management tools, and by many other people in personal projects. Pi-hole API is a Python3 wrapper around the Pi-hole admin interface.",
         "text_buttons": [],
         "icon_buttons": [
