@@ -129,11 +129,27 @@ uses:
 
                     <div style="padding-top:3rem;"></div>
 
+                    <div style="margin:auto;width:max-content;max-width:100%;">
+                        <button style="margin:5px;" type="button" class="btn btn-outline-info btn-sm"
+                            onclick="updateProjectWall('all');">All</button>
+                        <button style="margin:5px;" type="button" class="btn btn-outline-info btn-sm"
+                            onclick="updateProjectWall('app');">Apps</button>
+                        <button style="margin:5px;" type="button" class="btn btn-outline-info btn-sm"
+                            onclick="updateProjectWall('web');">Web</button>
+                        <button style="margin:5px;" type="button" class="btn btn-outline-info btn-sm"
+                            onclick="updateProjectWall('plugin');">Plugins</button>
+                        <button style="margin:5px;" type="button" class="btn btn-outline-info btn-sm"
+                            onclick="updateProjectWall('library');">Libraries</button>
+                        <button style="margin:5px;" type="button" class="btn btn-outline-info btn-sm"
+                            onclick="updateProjectWall('game');">Games</button>
+                    </div>
+
                     <div class="row" id="project-grid">
 
                         {% for project in site.data.projects %}
                         <div class="col-sm-4 project-item">
-                            <div class="card home-project">
+                            <div class="card home-project"
+                                data-types="{% for type in project.types %}{{type}},{% endfor %}">
                                 {% if project.hero %}
                                 <img src="{{project.hero.img_src}}" class="card-img-top" alt="{{project.title}}"
                                     loading="auto">
@@ -195,6 +211,8 @@ uses:
         setTimeout(orderProjectGrid, 2000);
         setTimeout(orderProjectGrid, 5000);
     </script>
+
+    <script src="/assets/js/project-wall.js"></script>
 
 
     <!-- Dotdav -->
