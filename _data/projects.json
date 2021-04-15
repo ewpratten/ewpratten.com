@@ -428,6 +428,24 @@
         }
     },
     {
+        "title": "FlippyCat",
+        "types": [
+            "game"
+        ],
+        "archived":true,
+        "description": "FlippyCat is a FlappyBird clone that I built with <a href='https://github.com/hyperliskdev'>@hyperliskdev</a> for an 11th grade computer science assignment. The first game I ever worked on in Java",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/FlippyCat"
+            }
+        ],
+        "hero": {
+            "img_src": "/assets/images/projects/flippycat.png"
+        }
+    },
+    {
         "title": "Ultralight",
         "types": [
             "web",
