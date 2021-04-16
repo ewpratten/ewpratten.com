@@ -1,0 +1,22 @@
+@media print {
+    @page {
+      margin: 0.5in;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      page-break-before: auto;
+      page-break-after: avoid;
+    }
+  
+    p {
+      page-break-inside: avoid;
+    }
+  
+    .print-hidden {
+        display: none !important;
+    }
+  }

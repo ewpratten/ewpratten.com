@@ -12,6 +12,7 @@ pre {
 
 div.highlighter-rouge {
     position: relative;
+    break-inside: avoid;
 }
 
 div.highlighter-rouge::after {

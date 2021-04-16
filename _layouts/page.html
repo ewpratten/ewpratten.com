@@ -13,7 +13,7 @@
 
         <div class="reactive-bg">
 
-            <div class="color-space" id="color-space">
+            <div class="color-space print-hidden" id="color-space">
                 <div class="container" style="height:100%; text-align:right">
                     {% if page.backing_img %}
                     <img src="{{page.backing_img}}" style="{{page.backing_scalar}};padding-right:5%"></img>
@@ -36,11 +36,11 @@
                         <small class="text-muted" {% if page.written %} data-toggle="tooltip" data-placement="top"
                             title="Written {{page.written}}" {% endif %} style="color:gray;">{{page_date.first}}</small>
                         {% for category in page.tags %}
-                        <a href="/categories?c={{category}}"><span class="badge"
+                        <a href="/categories?c={{category}}"><span class="badge print-hidden"
                                 style="background-color: var(--light-gray);color:#333;">{{category}}</span></a>
                         {% endfor %}
                         {% if page.path contains "_drafts" %}
-                        <a href="#"><span class="badge"
+                        <a href="#"><span class="badge print-hidden"
                             style="background-color: var(--light-gray);color:rgb(255, 0, 0);">draft</span></a>
                         {% endif %}
                     </h6>
@@ -53,9 +53,9 @@
                     {{content}}
 
                     {% if page.categories %}
-                    <br>
-                    <hr>
-                    <div class="retention">
+                    <br class="print-hidden">
+                    <hr class="print-hidden">
+                    <div class="retention print-hidden">
 
                         <!-- Thank you text -->
                         <p>Thank you for reading this post. If you enjoyed the content, and want to let me know, or
