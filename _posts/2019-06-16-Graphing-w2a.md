@@ -8,7 +8,7 @@ tags: frc
 
 I was scrolling through reddit the other day, and came across [this great post](https://www.reddit.com/r/FRC/comments/byzv5q/i_know_what_im_doing/) by u/[MasterQuacks](https://www.reddit.com/user/MasterQuacks/).
 
-![My insporation](/assets/images/w2ainspo.jpg)
+![My insporation](/assets/images/posts/wheels-to-awards/w2ainspo.jpg)
 
 I thought to myself "ha. Thats funny", and moved on. But that thought had stuck with me. 
 
@@ -59,4 +59,4 @@ with plt.xkcd():
 ## The result
 Here is the resulting image. From left, to right: 5024, 254, 1114, 5406, 2056
 
-![Thr result](/assets/images/w2a.png)
+![Thr result](/assets/images/posts/wheels-to-awards/w2a.png)

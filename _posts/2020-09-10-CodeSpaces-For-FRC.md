@@ -96,11 +96,11 @@ Notice the line `"image":"ewpratten/frc_devcontainer:2020.3.2",`. This is tellin
 
 With a minimal amount of work, I got everything needed to develop and test FRC robotics code running in the browser via Codespaces.
 
-![](/assets/images/codespaces-menu.png)
+![](/assets/images/posts/frc-codespaces/codespaces-menu.png)
 
 *Launching Codespaces from a GitHub repository*
 
-![](/assets/images/codespaces-code.png)
+![](/assets/images/posts/frc-codespaces/codespaces-code.png)
 
 *Editing code in the browser*
 

@@ -25,12 +25,12 @@ I am currently running a stock Ubuntu [18.04]() base, which means that everythin
 env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
 ```
 
-![Gnome language settings](/assets/images/language-settings.png)
+![Gnome language settings](/assets/images/posts/japanese-input/language-settings.png)
 
 Next, go to *Settings > Language and Region > Input Sources*, and click on *Manage Installed Languages*.
 This will bring up a window where you can select a new language to install. From here, I clicked on *Install / Remove Language*.
 
-![Language installation panel](/assets/images/language-installation.png)
+![Language installation panel](/assets/images/posts/japanese-input/language-installation.png)
 
 In this list, I just selected the languages I wanted (English and Japanese), and applied my changes. You may be asked to enter your password while installing the new languages. Once installation is complete, log out, and in again.
 
@@ -54,12 +54,12 @@ Now that `ibus` is installed, run the setup script:
 ibus-setup
 ```
 
-![Ibus settings](/assets/images/ibus-general.png)
+![Ibus settings](/assets/images/posts/japanese-input/ibus-general.png)
 
 From here, set your shortcut to something not used by I3 (I chose `CTRL+Shift+Space`, but most people prefer `Alt+Space`), and enable the system tray icon.
 Now, go to the *Input Method* settings.
 
-![Ibus input settings](/assets/images/ibus-input.png)
+![Ibus input settings](/assets/images/posts/japanese-input/ibus-input.png)
 
 From here, press the `+`, and add your language(s).
 

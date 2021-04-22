@@ -35,7 +35,7 @@ In terms of workflow, I write all my notes as markdown files with [embedded LaTe
 
 <script src="https://gist.github.com/Ewpratten/163aa9c9cb4e8c20e732e3713c95c915.js" ></script>
 
-![](/assets/images/hs_notes_workflow.png)
+![](/assets/images/posts/latex-notes/hs_notes_workflow.png)
 *A screenshot of my workspace*
 
 Now, the question came up of *"how do you easily distribute notes and assignments to classmates and professors?"*. That question got me stuck for a while, but here is the system I have come up with:

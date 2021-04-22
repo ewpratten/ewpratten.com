@@ -48,9 +48,9 @@ I also looked at other file types. Binaries are very interesting because they fo
 
 Back to executable data, these are small segments of a `dll` file:
 
-![Segment 1](/assets/images/dll.png)
+![Segment 1](/assets/images/posts/bin-images/dll.png)
 
-![Segment 2](/assets/images/dll2.png)
+![Segment 2](/assets/images/posts/bin-images/dll2.png)
 
 ## Check out the script
 This script is hosted [on my GitHub account](https://github.com/Ewpratten/binmap) as a standalone file. Any version of python3 should work, but the following libraries are needed:
