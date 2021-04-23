@@ -1,26 +1,29 @@
 [
     {
-        "title": "Student Portal",
+        "title": "Darth Raider",
+        "archived":true,
         "types": [
-            "web",
-            "app"
+            "robot"
         ],
-        "description": "This is a free-to-use webapp that acts as a new frontend to the <a href='https://schoolapps2.tvdsb.ca/students/student_login/lgn.aspx'>TVDSB Student Portal</a> website. This webapp also includes some extra data and graphs of each student's progress through highschool.",
+        "description": "Darth Raider was a competitive robot built in 6 weeks by a team of highschool students. My main role on this project was as the lead programmer and team lead for software development as a whole.",
         "text_buttons": [
-            {
-                "text": "Open App",
-                "url": "https://studentportal.retrylife.ca",
-                "color": "primary"
-            }
         ],
         "icon_buttons": [
             {
                 "icon": "fab fa-github",
-                "url": "https://github.com/Ewpratten/student_portal"
+                "url": "https://github.com/frc5024/InfiniteRecharge"
+            },
+            {
+                "icon": "fas fa-play",
+                "url": "https://www.youtube.com/watch?v=iF-p-rTo8Xk"
+            },
+            {
+                "icon": "fas fa-list",
+                "url": "https://www.thebluealliance.com/team/5024/2020"
             }
         ],
         "hero": {
-            "img_src": "/assets/images/projects/studentportal.jp2"
+            "img_src": "/assets/images/projects/darthraider.png"
         }
     },
     {
@@ -162,6 +165,30 @@
         ]
     },
     {
+        "title": "Student Portal",
+        "types": [
+            "web",
+            "app"
+        ],
+        "description": "This is a free-to-use webapp that acts as a new frontend to the <a href='https://schoolapps2.tvdsb.ca/students/student_login/lgn.aspx'>TVDSB Student Portal</a> website. This webapp also includes some extra data and graphs of each student's progress through highschool.",
+        "text_buttons": [
+            {
+                "text": "Open App",
+                "url": "https://studentportal.retrylife.ca",
+                "color": "primary"
+            }
+        ],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/student_portal"
+            }
+        ],
+        "hero": {
+            "img_src": "/assets/images/projects/studentportal.jp2"
+        }
+    },
+    {
         "title": "HamBands",
         "types": [
             "library"
@@ -298,6 +325,33 @@
         "archived": true
     },
     {
+        "title": "HATCHField",
+        "archived":true,
+        "types": [
+            "robot"
+        ],
+        "description": "HATCHField was a competitive robot built in 6 weeks by a team of highschool students. My main role on this project was as the lead programmer and team co-lead for software development as a whole.",
+        "text_buttons": [
+        ],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/frc5024/DeepSpace"
+            },
+            {
+                "icon": "fas fa-play",
+                "url": "https://www.youtube.com/watch?v=jOMny7rGcmc"
+            },
+            {
+                "icon": "fas fa-list",
+                "url": "https://www.thebluealliance.com/team/5024/2019"
+            }
+        ],
+        "hero": {
+            "img_src": "/assets/images/projects/hatchfield.jpg"
+        }
+    },
+    {
         "title": "LegalAccess",
         "types": [
             "library"
@@ -401,6 +455,25 @@
                 "url": "https://status.retrylife.ca"
             }
         ]
+    },
+    {
+        "title": "MiniBot",
+        "archived":true,
+        "types": [
+            "robot"
+        ],
+        "description": "MiniBot was an experimental robot built by myself and some friends. I both developed its control software, and worked on the hardware side of the machine.",
+        "text_buttons": [
+        ],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/frc5024/uBase"
+            },
+        ],
+        "hero": {
+            "img_src": "/assets/images/projects/minibot.jpg"
+        }
     },
     {
         "title": "Easy Pose Notation library",
@@ -550,6 +623,29 @@
                 "url": "https://crates.io/crates/rev-11-1105-rs"
             }
         ]
+    },
+    {
+        "title": "Q*bert",
+        "archived":true,
+        "types": [
+            "robot"
+        ],
+        "description": "Q*bert was a competitive robot built in 6 weeks by a team of highschool students. I developed control and navigation software for this robot.",
+        "text_buttons": [
+        ],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/frc5024/PowerUp"
+            },
+            {
+                "icon": "fas fa-list",
+                "url": "https://www.thebluealliance.com/team/5024/2018"
+            }
+        ],
+        "hero": {
+            "img_src": "/assets/images/projects/qbert.png"
+        }
     },
     {
         "title": "SmallTools",
