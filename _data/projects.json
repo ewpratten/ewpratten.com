@@ -111,6 +111,27 @@
         }
     },
     {
+        "title": "Deep Breath",
+        "types": [
+            "game"
+        ],
+        "description": "<strong>Deep Breath</strong> is an exploration game where you explore an underwater cave in hopes of finding your lost transponder. Items and upgrades can be acquired along the way to assist your search.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/ludum-dare-48"
+            },
+            {
+                "icon": "fas fa-play",
+                "url": "https://ldjam.com/events/ludum-dare/48/$236526"
+            }
+        ],
+        "hero": {
+            "img_src": "https://github.com/Ewpratten/ludum-dare-48/raw/master/assets/img/map/shopHighRes.png"
+        }
+    },
+    {
         "title": "boop",
         "types": [
             "app"
