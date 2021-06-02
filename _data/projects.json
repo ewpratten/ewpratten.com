@@ -23,7 +23,7 @@
             }
         ],
         "hero": {
-            "img_src": "/assets/images/projects/darthraider.png"
+	"img_src": "/assets/images/projects/darthraider.png"
         }
     },
     {
@@ -50,6 +50,21 @@
         "hero": {
             "img_src": "/assets/images/projects/lib5k.jp2"
         }
+    },
+    {
+        "title": "OpenDepthMap",
+        "types": [
+            "app"
+        ],
+        "description": "OpenDepthMap is an experiment in Binocular Depth Mapping, based around the ultraleap's first generation LeapMotion hand tracking sensors.",
+        "text_buttons": [
+        ],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/OpenDepthMap"
+            }
+        ],
     },
     {
         "title": "MCInfo",

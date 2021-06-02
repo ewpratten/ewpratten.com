@@ -1,7 +1,7 @@
 [
     {
         "name": "Ludum Dare 48",
-        "upcoming":true,
+        "upcoming":false,
         "date": {
             "start": "2021-04-23",
             "end": "2021-04-26"
@@ -11,7 +11,7 @@
             "url":"https://github.com/Ewpratten/ludum-dare-48"
         },
         "url":"https://ldjam.com/events/ludum-dare/48",
-        "info":""
+        "info":"Participant & Team lead"
     },
     {
         "name": "Google CTF 2020",
