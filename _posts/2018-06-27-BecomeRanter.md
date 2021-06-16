@@ -63,4 +63,3 @@ python3 createhfd5frominput.py
 ```
 
 A new hdf5 file will be generated in the same folder as the script
-

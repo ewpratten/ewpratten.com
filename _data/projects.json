@@ -147,6 +147,24 @@
         }
     },
     {
+        "title": "cl",
+        "types": [
+            "app"
+        ],
+        "description": "cl is my command-line amateur radio logging tool. This program is designed to allow me to log radio contacts in my terminal.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/cl"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://crates.io/crates/cllog"
+            }
+        ]
+    },
+    {
         "title": "boop",
         "types": [
             "app"
@@ -161,6 +179,42 @@
             {
                 "icon": "fas fa-download",
                 "url": "https://crates.io/crates/boop-ping"
+            }
+        ]
+    },
+    {
+        "title": "ittyr",
+        "types": [
+            "app"
+        ],
+        "description": "ittyr is a CLI Internet Teletype client that decodes and outputs ITTY messages in real time as they are being streamed through the ITTY service.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/ittyr"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://crates.io/crates/ittyr"
+            }
+        ]
+    },
+    {
+        "title": "adif-rs",
+        "types": [
+            "app"
+        ],
+        "description": "Amateur Data Interchange Format parsing and generation tools for Rust.",
+        "text_buttons": [],
+        "icon_buttons": [
+            {
+                "icon": "fab fa-github",
+                "url": "https://github.com/Ewpratten/adif-rs"
+            },
+            {
+                "icon": "fas fa-download",
+                "url": "https://crates.io/crates/adif"
             }
         ]
     },
