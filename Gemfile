@@ -37,3 +37,4 @@ gem 'jekyll-seo-tag'
 gem "jekyll-github-metadata"
 gem 'jekyll-avatar'
 gem 'html-pipeline'
+gem "webrick", "~> 1.7"
