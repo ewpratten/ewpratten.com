@@ -1,0 +1,64 @@
+[
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "additionalType": [
+            "CreativeWork",
+            "Person"
+        ],
+        "url": "{{url}}",
+        "name": "Evan Pratten",
+        "alternateName": "ewpratten",
+        "headline": "{{title}}",
+        "image": "{{avatar}}",
+        "logo": "{{avatar}}",
+        "inLanguage": "en-CA",
+        "author": "Evan Pratten",
+        "description": "{{description}}",
+        "disambiguatingDescription": "Personal website of Evan Pratten",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Evan Pratten",
+            "url": "https://ewpratten.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{avatar}}",
+                "width": "460",
+                "height": "460"
+            }
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "{{url}}/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        },
+        "keywords": [
+            "Evan Pratten",
+            "Software",
+            "Music",
+            "Photography",
+            "Hobby",
+            "Blog"
+        ]
+    },
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@context": "https://schema.org",
+                "@type": "SiteNavigationElement",
+                "name": "Blog",
+                "url": "{{url}}/blog"
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "SiteNavigationElement",
+                "name": "Contact",
+                "url": "{{url}}/contact"
+            }
+        ]
+    }
+]

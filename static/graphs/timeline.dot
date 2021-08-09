@@ -1,0 +1,16 @@
+digraph {
+
+    y2008;
+    y2008 -> piano;
+
+    y2008 -> y2010;
+    y2010 -> drums;
+    drums -> amped;
+
+    y2010 -> y2012;
+    y2012 -> killer_hamsters;
+    amped -> killer_hamsters;
+    y2012 -> drum_comps;
+    drums -> drum_comps;
+
+}

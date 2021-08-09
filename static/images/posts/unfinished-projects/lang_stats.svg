@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="400"
+   version="1.1"
+   width="640"
+   style="overflow: hidden; position: relative;"
+   id="svg86"
+   sodipodi:docname="mySvg.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata90">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1638"
+     inkscape:window-height="887"
+     id="namedview88"
+     showgrid="false"
+     inkscape:zoom="1.5335378"
+     inkscape:cx="478.80417"
+     inkscape:cy="135.53985"
+     inkscape:window-x="2183"
+     inkscape:window-y="95"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg86" />
+  <desc
+     id="desc2">Created with Raphaël 2.3.0</desc>
+  <defs
+     id="defs4" />
+  <path
+     style="stroke-linejoin: round;"
+     fill="#3069bf"
+     stroke="none"
+     d="M320,180L172.76612645134017,151.3262056947942A150,150,0,0,1,467.2338735486598,151.32620569479417Z"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="path6" />
+  <path
+     style="stroke-linejoin: round;"
+     fill="#a3bf30"
+     stroke="none"
+     d="M320,180L467.2338735486598,151.32620569479417A150,150,0,0,1,389.3807435361253,312.98989595595003Z"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="path8" />
+  <path
+     style="stroke-linejoin: round;"
+     fill="#bf5b30"
+     stroke="none"
+     d="M320,180L389.3807435361253,312.98989595595003A150,150,0,0,1,230.28342042631755,300.2120432801935Z"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="path10" />
+  <path
+     style="stroke-linejoin: round;"
+     fill="#bfa330"
+     stroke="none"
+     d="M320,180L230.28342042631755,300.2120432801935A150,150,0,0,1,191.72858554919804,257.75888524657876Z"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="path12" />
+  <path
+     style="stroke-linejoin: round;"
+     fill="#7830bf"
+     stroke="none"
+     d="M320,180L191.72858554919804,257.75888524657876A150,150,0,0,1,173.76081317272644,213.37814009344712Z"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="path14" />
+  <path
+     style="stroke-linejoin: round;"
+     fill="#bf3030"
+     stroke="none"
+     d="M320,180L173.76081317272644,213.37814009344712A150,150,0,0,1,170.07706756989683,184.8077366357482Z"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="path16" />
+  <path
+     style="stroke-linejoin: round;"
+     fill="#003380"
+     stroke="none"
+     d="M320,180L170.07706756989683,184.8077366357482A150,150,0,0,1,170.6931330576203,165.5965461138477Z"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="path18" />
+  <path
+     style="stroke-linejoin: round;"
+     fill="#668000"
+     stroke="none"
+     d="M320,180L170.6931330576203,165.5965461138477A150,150,0,0,1,172.76612645134023,151.32620569479408Z"
+     stroke-width="1"
+     stroke-linejoin="round"
+     id="path20" />
+  <path
+     style="fill-opacity: 0;"
+     fill="#000000"
+     stroke="none"
+     d="M320,180L172.76612645134017,151.3262056947942A150,150,0,0,1,467.2338735486598,151.32620569479417Z"
+     fill-opacity="0"
+     id="path22" />
+  <path
+     style="fill-opacity: 0;"
+     fill="#000000"
+     stroke="none"
+     d="M320,180L467.2338735486598,151.32620569479417A150,150,0,0,1,389.3807435361253,312.98989595595003Z"
+     fill-opacity="0"
+     id="path24" />
+  <path
+     style="fill-opacity: 0;"
+     fill="#000000"
+     stroke="none"
+     d="M320,180L389.3807435361253,312.98989595595003A150,150,0,0,1,230.28342042631755,300.2120432801935Z"
+     fill-opacity="0"
+     id="path26" />
+  <path
+     style="fill-opacity: 0;"
+     fill="#000000"
+     stroke="none"
+     d="M320,180L230.28342042631755,300.2120432801935A150,150,0,0,1,191.72858554919804,257.75888524657876Z"
+     fill-opacity="0"
+     id="path28" />
+  <path
+     style="fill-opacity: 0;"
+     fill="#000000"
+     stroke="none"
+     d="M320,180L191.72858554919804,257.75888524657876A150,150,0,0,1,173.76081317272644,213.37814009344712Z"
+     fill-opacity="0"
+     id="path30" />
+  <path
+     style="fill-opacity: 0;"
+     fill="#000000"
+     stroke="none"
+     d="M320,180L173.76081317272644,213.37814009344712A150,150,0,0,1,170.07706756989683,184.8077366357482Z"
+     fill-opacity="0"
+     id="path32" />
+  <path
+     style="fill-opacity: 0;"
+     fill="#000000"
+     stroke="none"
+     d="M320,180L170.07706756989683,184.8077366357482A150,150,0,0,1,170.6931330576203,165.5965461138477Z"
+     fill-opacity="0"
+     id="path34" />
+  <path
+     style="fill-opacity: 0;"
+     fill="#000000"
+     stroke="none"
+     d="M320,180L170.6931330576203,165.5965461138477A150,150,0,0,1,172.76612645134023,151.32620569479408Z"
+     fill-opacity="0"
+     id="path36" />
+  <circle
+     cx="505"
+     cy="190"
+     r="5"
+     fill="#3069bf"
+     stroke="none"
+     style=""
+     transform="matrix(1,0,0,1,0,-65.8)"
+     id="circle38" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:Arial, sans-serif;text-anchor:start;fill:#000000;stroke:none"
+     x="520"
+     y="190"
+     font-size="10px"
+     font="12px Arial, sans-serif"
+     transform="translate(0,-65.8)"
+     id="text42">
+    <tspan
+       id="tspan40">Rust</tspan>
+  </text>
+  <circle
+     cx="505"
+     cy="206.8"
+     r="5"
+     fill="#a3bf30"
+     stroke="none"
+     style=""
+     transform="matrix(1,0,0,1,0,-65.8)"
+     id="circle44" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:Arial, sans-serif;text-anchor:start;fill:#000000;stroke:none"
+     x="520"
+     y="206.8"
+     font-size="10px"
+     font="12px Arial, sans-serif"
+     transform="translate(0,-65.8)"
+     id="text48">
+    <tspan
+       id="tspan46">Python</tspan>
+  </text>
+  <circle
+     cx="505"
+     cy="223.60000000000002"
+     r="5"
+     fill="#bf5b30"
+     stroke="none"
+     style=""
+     transform="matrix(1,0,0,1,0,-65.8)"
+     id="circle50" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:Arial, sans-serif;text-anchor:start;fill:#000000;stroke:none"
+     x="520"
+     y="223.60001"
+     font-size="10px"
+     font="12px Arial, sans-serif"
+     transform="translate(0,-65.8)"
+     id="text54">
+    <tspan
+       id="tspan52">Java</tspan>
+  </text>
+  <circle
+     cx="505"
+     cy="240.40000000000003"
+     r="5"
+     fill="#bfa330"
+     stroke="none"
+     style=""
+     transform="matrix(1,0,0,1,0,-65.8)"
+     id="circle56" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:Arial, sans-serif;text-anchor:start;fill:#000000;stroke:none"
+     x="520"
+     y="240.39999"
+     font-size="10px"
+     font="12px Arial, sans-serif"
+     transform="translate(0,-65.8)"
+     id="text60">
+    <tspan
+       id="tspan58">Starlark</tspan>
+  </text>
+  <circle
+     cx="505"
+     cy="257.20000000000005"
+     r="5"
+     fill="#7830bf"
+     stroke="none"
+     style=""
+     transform="matrix(1,0,0,1,0,-65.8)"
+     id="circle62" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:Arial, sans-serif;text-anchor:start;fill:#000000;stroke:none"
+     x="520"
+     y="257.20001"
+     font-size="10px"
+     font="12px Arial, sans-serif"
+     transform="translate(0,-65.8)"
+     id="text66">
+    <tspan
+       id="tspan64">HTML</tspan>
+  </text>
+  <circle
+     cx="505"
+     cy="274.00000000000006"
+     r="5"
+     fill="#bf3030"
+     stroke="none"
+     style=""
+     transform="matrix(1,0,0,1,0,-65.8)"
+     id="circle68" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:Arial, sans-serif;text-anchor:start;fill:#000000;stroke:none"
+     x="520"
+     y="274"
+     font-size="10px"
+     font="12px Arial, sans-serif"
+     transform="translate(0,-65.8)"
+     id="text72">
+    <tspan
+       id="tspan70">C</tspan>
+  </text>
+  <circle
+     cx="505"
+     cy="290.80000000000007"
+     r="5"
+     fill="#003380"
+     stroke="none"
+     style=""
+     transform="matrix(1,0,0,1,0,-65.8)"
+     id="circle74" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:Arial, sans-serif;text-anchor:start;fill:#000000;stroke:none"
+     x="520"
+     y="290.79999"
+     font-size="10px"
+     font="12px Arial, sans-serif"
+     transform="translate(0,-65.8)"
+     id="text78">
+    <tspan
+       id="tspan76">Shell</tspan>
+  </text>
+  <circle
+     cx="505"
+     cy="307.6000000000001"
+     r="5"
+     fill="#668000"
+     stroke="none"
+     style=""
+     transform="matrix(1,0,0,1,0,-65.8)"
+     id="circle80" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:Arial, sans-serif;text-anchor:start;fill:#000000;stroke:none"
+     x="520"
+     y="307.60001"
+     font-size="10px"
+     font="12px Arial, sans-serif"
+     transform="translate(0,-65.8)"
+     id="text84">
+    <tspan
+       id="tspan82">Dockerfiles</tspan>
+  </text>
+</svg>

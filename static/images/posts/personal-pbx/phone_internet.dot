@@ -1,0 +1,38 @@
+graph G {
+    rankdir=LR;
+    
+    client1 -- pbx1;
+    client2 -- pbx1;
+    
+    client3 -- pbx2, pbx1;
+    client4 -- pbx2;
+    
+    pbx1 -- carrier1;
+    pbx2 -- carrier1;
+    
+    carrier1 -- magic;
+    magic -- carrier2;
+    
+    carrier2 -- client5;
+    carrier2 -- pbx3;
+    
+    pbx3 -- client6;
+    pbx3 -- client7;
+    
+    client1 [label="Phone A"];
+    client2 [label="Phone B"];
+    client3 [label="Phone C"];
+    client4 [label="Phone D"];
+    client5 [label="Phone E"];
+    client6 [label="Phone F"];
+    client7 [label="Phone G"];
+    
+    carrier1 [label="Carrier A"];
+    carrier2 [label="Carrier B"];
+    
+    magic [label="Dark Magic"];
+    
+    pbx1 [label="PBX A"];
+    pbx2 [label="PBX B"];
+    pbx3 [label="PBX C"];
+}
