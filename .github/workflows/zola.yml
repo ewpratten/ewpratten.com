@@ -1,32 +1,24 @@
+name: CI
+
 on:
   push:
-    branches:
-      - master 
-  pull_request:
+    branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref != 'refs/heads/master'
+
     steps:
-      - name: 'Checkout'
-        uses: actions/checkout@master
-      - name: 'Build only' 
-        uses: shalzz/zola-deploy-action@master
-        env:
-          BUILD_DIR: .
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BUILD_ONLY: true
-  
-  build_and_deploy:
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
-    steps:
-      - name: 'Checkout'
-        uses: actions/checkout@master
-      - name: 'Build and deploy'
-        uses: shalzz/zola-deploy-action@master
-        env:
-          PAGES_BRANCH: gh-pages
-          BUILD_DIR: .
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+      - name: Install and Run Zola
+        run: |
+          sudo snap install --edge zola
+          zola build
+
+      - uses: amondnet/vercel-action@v19
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-org-id: ${{ secrets.ORG_ID}}
+          vercel-project-id: ${{ secrets.PROJECT_ID}}
+          working-directory: ./public
