@@ -1,11 +1,17 @@
 base_url = "https://va3zza.com"
+title = "Evan Pratten"
+description = "Evan Pratten's website"
+default_language = "en"
 compile_sass = true
 build_search_index = true
 generate_feed = true
+feed_filename = "rss.xml"
 minify_html = true
 
 [markdown]
 highlight_code = true
+render_emoji = true
+external_links_target_blank = true
 
 [extra]
 name = "Evan Pratten"
