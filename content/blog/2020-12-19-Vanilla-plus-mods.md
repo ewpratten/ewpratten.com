@@ -36,7 +36,7 @@ This can also be set up on the client instead of the server, allowing a single c
 On the rendering side of the game, I run a few specialized mods to improve or replace various functions of Minectaft's built-in game renderer. Starting with the largest change, I use the [Sodium](https://github.com/jellysquid3/sodium-fabric) renderer, which includes a large number of rendering improvements, and opens up some extra customizability to the user.
 
 <div class="center" markdown="1">
-![Screenshot of Sodium settings](/assets/images/posts/vanilla-plus/sodium_settings.jpeg)
+![Screenshot of Sodium settings](/images/posts/vanilla-plus/sodium_settings.jpeg)
 </div>
 
 The developer of Sodium, @jellysquid3, has a few other rendering or rendering-related projects I use. Mainly: [Phosphor](https://github.com/jellysquid3/phosphor-fabric), which makes large improvements to the game lighting engine, and [Lithium](https://github.com/jellysquid3/lithium-fabric) which makes all-around improvements to the game.
@@ -63,7 +63,7 @@ In my inventory, I use [Roughly Enough Items](https://github.com/shedaniel/Rough
 
 
 <div class="center" markdown="1">
-![Screenshot of Roughly Enough Items](/assets/images/posts/vanilla-plus/rei.png)
+![Screenshot of Roughly Enough Items](/images/posts/vanilla-plus/rei.png)
 </div>
 
 In terms of HUD "extras", I use [Here's What You're Looking At](https://www.curseforge.com/minecraft/mc-mods/hwyla) to show basic information about the block I am looking at. This is very helpful for me, as I am still learning what all the new `1.9+` blocks are. I also extend HWYLA with [Hwyla Addon Horse Info](https://www.curseforge.com/minecraft/mc-mods/hwyla-addon-horse-info) to show me the stats of any horse I look at, and [cAn i MiNe thIS bLOCk?](https://www.curseforge.com/minecraft/mc-mods/can-i-mine-this-block) to tell me the needed tool to harvest a specific block. I also use [Game Info](https://www.curseforge.com/minecraft/mc-mods/gameinfo) to tell me the world time in the upper left of my screen.
@@ -79,7 +79,7 @@ There are a few small mods that I have installed to provide some nice-to-have in
 I hate writing down coordinates of various things, so I use Xaero's [Minimap](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap) and [World Map](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map) mods. These both provide in-world waypoints, and generate a map of everywhere you travel in the world.
 
 <div class="center" markdown="1">
-![Xaero's Minimap](/assets/images/posts/vanilla-plus/minimap_2020.png)
+![Xaero's Minimap](/images/posts/vanilla-plus/minimap_2020.png)
 </div>
 
 ## Building utilities

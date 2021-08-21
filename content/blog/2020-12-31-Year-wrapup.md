@@ -40,10 +40,7 @@ On the software side of this machine, [I pushed to switch the core development l
 
 We were able to design a fully autonomous shooting system using high-speed computer vision, real-time path planning, and ball trajectory models to allow our operators to make the robot score game pieces by pressing and holding a single button. On top of this scoring system, *Darth Raider* featured fully autonomous and real-time-error-correcting spatial navigation, allowing us to input a list of goal coordinates for the robot to navigate to efficiently. The final large autonomously controlled system of this robot was known as the "hopper"; a long tunnel for storing and stacking balls. This system was 100% software controlled, and made use of an amazing predictive sorting system developed by @rsninja722 that would perfectly align balls as they were fed in to the robot. Below is a clip taken from semi-finals where we wrote an experimental system that allowed us to essentially use two completely separate robots as one, effectively doubling our gamepiece storage capacity from our max 4 balls to 7. (Big thanks to the [Falcons](https://www.thebluealliance.com/team/5032) for letting us subject them to this experiment.)
 
-<div class="center" markdown="1">
-![Two-robot autonomous scoring system](/assets/images/posts/2020-wrapup/buddy-auto.gif)
-</div>
-
+![Two-robot autonomous scoring system](/images/posts/2020-wrapup/buddy-auto.gif)
 
 For a few months after we finished competing, I went on to publish my largest open source project to date: [Lib5K](https://github.com/frc5024/Lib5k). 
 
