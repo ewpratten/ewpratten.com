@@ -7,7 +7,8 @@ h6 {
   font-family: "Urbanist", sans-serif;
   font-weight: bolder;
 }
-p {
+p,
+li {
   font-family: "Roboto", sans-serif;
   font-weight: normal;
 }
@@ -97,5 +98,8 @@ body {
 
 .blog-post-li {
   margin: 0.25em;
-  font-size: 96%;
+}
+
+.gray {
+  color: gray;
 }
