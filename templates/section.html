@@ -3,26 +3,6 @@
 {{section.title}}
 {% endblock title %}
 
-{% block profile %}
-<div class="row">
-    <div class="headshot-container">
-        <img src="https://avatars.githubusercontent.com/u/21065412" alt="Headshot">
-    </div>
-    <div class="text-container">
-        <h1>{{config.extra.name}}</h1>
-        <p>
-            {{config.extra.profession}}
-            <br><br><br>
-            <a href="mailto:{{config.extra.email}}"><i class="las la-envelope"></i> {{config.extra.email}}</a><br>
-            <a href="https://github.com/{{config.extra.github}}"><i class="lab la-github"></i>
-                {{config.extra.github}}</a><br>
-            <a href="https://qrz.com/db/{{config.extra.qrz}}"><i class="las la-broadcast-tower"></i>
-                {{config.extra.qrz}}</a>
-        </p>
-    </div>
-</div>
-{% endblock profile %}
-
 {% block content %}
 {{section.content | safe}}
 

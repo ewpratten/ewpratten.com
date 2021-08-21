@@ -25,12 +25,27 @@
 </head>
 
 <body>
-    {# For IndieLogin #}
-    <link href="https://github.com/ewpratten" rel="me authn">
-
     <div class="container">
         <div class="profile-card">
             {% block profile %}
+            <div class="row">
+                <div class="headshot-container">
+                    <img src="https://avatars.githubusercontent.com/u/21065412" alt="Headshot">
+                </div>
+                <div class="text-container">
+                    <h1>{{config.extra.name}}</h1>
+                    <p>
+                        {{config.extra.profession}}
+                        <br><br><br>
+                        <a href="mailto:{{config.extra.email}}" rel="me"><i class="las la-envelope"></i>
+                            {{config.extra.email}}</a><br>
+                        <a href="https://github.com/{{config.extra.github}}" rel="me"><i class="lab la-github"></i>
+                            {{config.extra.github}}</a><br>
+                        <a href="https://qrz.com/db/{{config.extra.qrz}}" rel="me"><i class="las la-broadcast-tower"></i>
+                            {{config.extra.qrz}}</a>
+                    </p>
+                </div>
+            </div>
             {% endblock profile %}
         </div>
         <div class="navigation-bar">
