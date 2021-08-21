@@ -15,6 +15,16 @@ a {
   text-decoration: none;
 }
 
+.yt-embed {
+  width: 100%;
+  height: 400px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .container {
   max-width: 700px;
   margin: auto;
@@ -23,15 +33,22 @@ a {
 .profile-card {
   margin-top: 30px;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
   .row {
     width: max-content;
-    max-width: 100vw;
+    max-width: 95vw;
     margin: auto;
     overflow-wrap: normal;
 
     .headshot-container {
       display: inline-block;
       max-width: 150px;
+      @media only screen and (max-width: 377px) {
+        display: block;
+        margin: auto;
+      }
       img {
         width: 100%;
       }

@@ -2,7 +2,7 @@
 layout: page
 title:  "Building a mini maven server"
 description: "Project overview: The Ultralight maven server"
-date:   2020-09-17 11:00:00 
+date:   2020-09-17
 written: 2020-09-05
 tags: project github maven
 excerpt: >- 

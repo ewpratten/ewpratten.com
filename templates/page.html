@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}
+{{page.title}}
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
+    integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+{{ super() }}
+
+{% if page.extra.uses_katex %}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [ ['$$','$$'], ['\[','\]'] ]}});
+</script>
+{% endif %}
+{% endblock head %}
+
+{% block profile %}
+<div class="row">
+    <div class="headshot-container">
+        <img src="https://avatars.githubusercontent.com/u/21065412" alt="Headshot" style="height:50px;">
+    </div>
+    <div class="text-container">
+        <h1>{{config.extra.name}}</h1>
+        <p>
+            {{config.extra.profession}}
+        </p>
+    </div>
+</div>
+{% endblock profile %}
+
+{% block content %}
+<br><br>
+<article class="markdown-body">
+    <h1>{{page.title}}</h1>
+    <div style="text-align: justify;">
+        {{page.content | safe}}
+    </div>
+</article>
+{% endblock content %}
