@@ -13,6 +13,24 @@ p {
 }
 a {
   text-decoration: none;
+
+  &:visited {
+    color: blue;
+  }
+
+  &:hover {
+    color: blueviolet;
+  }
+}
+
+body {
+  margin-bottom: 30px;
+}
+
+.mobile-hidden {
+  @media only screen and (max-width: 650px) {
+    display: none;
+  }
 }
 
 .yt-embed {
@@ -75,4 +93,9 @@ a {
       text-decoration: none;
     }
   }
+}
+
+.blog-post-li {
+  margin: 0.25em;
+  font-size: 96%;
 }

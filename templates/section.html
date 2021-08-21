@@ -28,9 +28,10 @@
 
 {% if section.extra.inject_blog_posts %}
 <ul>
-{% for page in section.pages %}
-<li><a href="{{page.path}}">{{page.title}}</a> <span style="color:gray;">({{page.date}})</span></li>
-{% endfor %}
+    {% for page in section.pages %}
+    <li class="blog-post-li"><a href="{{page.path}}">{{page.title}}</a> <span style="color:gray;">({{page.date}})</span>
+    </li>
+    {% endfor %}
 </ul>
 {% endif %}
 {% endblock content %}
