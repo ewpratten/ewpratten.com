@@ -40,4 +40,8 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMat
         {{page.content | safe}}
     </div>
 </article>
+
+{% if page.extra.uses_twitter %}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endif %}
 {% endblock content %}
