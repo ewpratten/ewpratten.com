@@ -64,7 +64,7 @@ body {
     .headshot-container {
       display: inline-block;
       max-width: 150px;
-      @media only screen and (max-width: 377px) {
+      @media only screen and (max-width: 382px) {
         display: block;
         margin: auto;
       }
@@ -102,4 +102,33 @@ body {
 
 .gray {
   color: gray;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.events-list {
+  & > li {
+    color: gray;
+  }
+  & > ul {
+    & > li {
+      & > div {
+        display: table-row;
+        & > span {
+          display: table-cell;
+
+          &:first-of-type {
+            color: gray;
+            width: 30px;
+            letter-spacing: -0.35em;
+            text-align: center;
+            padding-right: 8px;
+            text-transform: full-width;
+          }
+        }
+      }
+    }
+  }
 }
