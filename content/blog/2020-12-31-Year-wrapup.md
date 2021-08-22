@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/g494l5j3/
  - /g494l5j3/
+aliases: [/blog/2020/12/31/year-wrapup]
 ---
 
 *So, whats up with 2020?* For readers who do not know me personally, here is a quick overview:

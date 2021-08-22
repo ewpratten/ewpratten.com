@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/XlPl0k24/
  - /XlPl0k24/
+aliases: [/blog/2020/11/06/vortex-core]
 ---
 
 About a month ago, I decided to buy myself a mechanical keyboard. I have always been a huge fan of membrane / laptop keyboards. My current laptop (the Lenovo T480) has a very nice feel to its keyboard, and my previous laptop (the Acer R11) had the best keyboard I have ever used. The switch to mechanical wasn't my first choice, although I was open to trying something new, so didn't see it as a negative. Ever since adding another monitor to my setup, I haven't had enough room on my desk to fit a keyboard. This generally is not a problem since I mainly use my laptop, but I occasionally need to use my desktop for rendering work, which requires a separate keyboard.

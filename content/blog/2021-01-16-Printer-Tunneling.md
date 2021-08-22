@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/g494ld99/
  - /g494ld99/
+aliases: [/blog/2021/01/16/printer-tunneling]
 ---
 
 For the past few years, I have been using a self-hosted VPN to bring all my personal devices into the same "network" even though many of them are spread across various locations and physical networks. This system never gives me problems, but there was one thing I wished I could do: access non-VPN devices on other networks using one of my VPN devices as a gateway.

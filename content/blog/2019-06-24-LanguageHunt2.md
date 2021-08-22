@@ -4,6 +4,7 @@ title:  "The language hunt: Part 2"
 description: "A quick followup"
 date:   2019-06-24
 tags: frc
+alises: [https://retrylife.ca/blog/2019/06/24/languagehunt2]
 ---
 
 This is a very short post, just to explain the result of [The language Hunt](/blog/2019/04/30/frc-languages).

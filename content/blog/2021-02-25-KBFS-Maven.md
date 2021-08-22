@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/g4lk45j3/
  - /g4lk45j3/
+aliases: [/blog/2021/02/25/kbfs-maven]
 ---
 
 As I continue to write more and more Java libraries for personal and public use, I keep finding myself limited by my library hosting solutions. Maven servers are currently my go-to way of storing and organizing all things Java. I have gone through a solid handful of servers over the past few years, here are my comments on each:

@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/68dk02l4/
  - /68dk02l4/
+aliases: [/blog/2020/09/03/bazel-and-avr]
 ---
 
 *The GitHub repository for everything in this post can be found [here](https://github.com/Ewpratten/avr-for-bazel-demo)*

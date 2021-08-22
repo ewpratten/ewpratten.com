@@ -3,6 +3,7 @@ layout: page
 title:  "The language hunt"
 date:   2019-04-30
 tags: frc
+alises: [https://retrylife.ca/blog/2019/04/30/frc-languages]
 ---
 
 Our programming team is looking to switch languages in the 2020 season. Here is the what, why, and how.

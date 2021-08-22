@@ -7,6 +7,7 @@ tags: project
 redirect_from: 
  - /post/99g9j2r90/
  - /99g9j2r90/
+aliases: [/blog/2019/10/05/billwurtz]
 ---
 
 [Bill Wurtz](https://billwurtz.com/) is an American musician who became [reasonably famous](https://socialblade.com/youtube/user/billwurtz/realtime) through short musical videos posted to Vine and YouTube. I was searching through his website the other day, and stumbled upon a page labeled [*notebook*](https://billwurtz.com/notebook.html), and thought I should check it out.

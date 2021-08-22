@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/gk3jEkd4/
  - /gk3jEkd4/
+aliases: [/blog/2020/12/04/galliumos]
 ---
 
 My previous development laptop was an [Acer R11](https://www.acer.com/ac/en/CA/content/series/acerchromebookr11) chromebook. I always ran it in [developer mode](https://chromium.googlesource.com/chromiumos/docs/+/master/developer_mode.md) with all the Linux packages I needed installed via [chromebrew](https://github.com/skycocker/chromebrew). This setup worked great except for GUI programs, as (at the time), the built-in [Wayland](https://en.wikipedia.org/wiki/Wayland_(display_server_protocol)) server on the chromebook was not exposed to the user in a meaningful way. I relied on an internal tool from Google called [sommelier](https://chromium.googlesource.com/chromiumos/platform2/+/HEAD/vm_tools/sommelier/) to translate X11 calls to the internal Wayland server. None of this was ideal, but with a lot of scripts and aliases, I made it work.

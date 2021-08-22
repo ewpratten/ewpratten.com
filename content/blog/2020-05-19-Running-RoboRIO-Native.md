@@ -7,6 +7,7 @@ tags: frc roborio emulation
 redirect_from: 
  - /post/5d3nd9s4/
  - /5d3nd9s4/
+aliases: [/blog/2020/05/19/running-roborio-native]
 ---
 
 It has now been 11 weeks since the last time I have had access to a [RoboRIO](https://www.ni.com/en-ca/support/model.roborio.html) to use for debugging code, and there are limits to my simulation software. So, I really only have one choice: *emulate my entire robot*.

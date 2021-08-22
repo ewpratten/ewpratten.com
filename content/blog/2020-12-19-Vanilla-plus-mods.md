@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/gas49g43/
  - /gas49g43/
+aliases: [/blog/2020/12/19/vanilla-plus-mods]
 ---
 
 

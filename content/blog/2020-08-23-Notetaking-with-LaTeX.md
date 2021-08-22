@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/68df02l4/
  - /68df02l4/
+aliases: [/blog/2020/08/23/notetaking-with-latex]
 ---
 
 *You can view my public demo for this post [here](https://github.com/Ewpratten/school-notes-demo)*

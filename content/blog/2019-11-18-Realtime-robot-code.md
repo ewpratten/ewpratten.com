@@ -7,6 +7,7 @@ tags: random frc
 redirect_from: 
  - /post/e9gdhj90/
  - /e9gdhj90/
+aliases: [/blog/2019/11/20/realtime-robot-code]
 ---
 
 > *"So.. what if we could skip asking for driver inputs, and just have the robot operators control the bot through a commandline interface?"* 

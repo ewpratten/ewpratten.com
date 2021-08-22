@@ -4,6 +4,7 @@ title:  "Graphing the relation between wheels and awards for FRC"
 description: "AKA. Why programmer + reddit + matplotlib is a bad idea."
 date:   2019-06-16
 tags: frc
+alises: [https://retrylife.ca/blog/2019/06/16/graphing-w2a]
 ---
 
 I was scrolling through reddit the other day, and came across [this great post](https://www.reddit.com/r/FRC/comments/byzv5q/i_know_what_im_doing/) by u/[MasterQuacks](https://www.reddit.com/user/MasterQuacks/).

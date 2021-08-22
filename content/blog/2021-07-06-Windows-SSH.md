@@ -7,6 +7,7 @@ written: 2021-07-07
 tags: reference
 excerpt: >-
     I commonly need to configure SSH servers on remote Windows 10 boxes. This post covers the whole process.
+aliases: [/blog/2021/07/07/windows-ssh]
 ---
 
 Between work, school, and just helping various people out with things, I end up needing to quickly spin up SSH servers on windows machines *a lot*. Despite what you might think, this functionality is actually built right in to Windows 10, and fairly easy to enable.

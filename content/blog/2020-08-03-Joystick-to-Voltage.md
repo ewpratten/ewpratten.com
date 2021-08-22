@@ -3,6 +3,7 @@ title =  "Notes from FRC: Converting joystick data to tank-drive outputs"
 description = "and making a tank-based robot's movements look natural"
 date = "2020-08-03"
 tags = ["frc"]
+aliases = ["/blog/2020/08/03/joystick-to-voltage"]
 
 [extra]
 uses_katex = true

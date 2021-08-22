@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/gkedkd93/
  - /gkedkd93/
+aliases: [/blog/2021/03/14/qmk-vortex-core]
 ---
 
 Last fall, I [purchased my first mechanical keyboard](/blog/2020/11/06/vortex-core), the [Vortex Core](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3550), and have been loving it ever since. Well, almost loving it. There are a few "quirks" of the keyboard that I wasn't super fond of, like: occasionally not sending `KEY_UP` commands back to the computer, or the badly documented and maintained system for building custom layouts.

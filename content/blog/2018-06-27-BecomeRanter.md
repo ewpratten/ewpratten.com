@@ -4,6 +4,7 @@ title:  "Using a python script to create devRant posts based on the style and co
 description: "if/else ++"
 date:   2018-06-27
 tags: projects
+aliases: [/blog/2018/06/27/becomeranter]
 ---
 
 

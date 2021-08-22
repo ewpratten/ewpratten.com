@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/eb0klDd9/
  - /eb0klDd9/
+aliases: [/blog/2021/04/20/direwolf-aprs]
 ---
 
 ***WARNING:** To replicate this project, you **must** be the holder of an amateur radio license in your country*

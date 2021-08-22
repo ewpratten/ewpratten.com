@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/lls5jkd4/
  - /lls5jkd4/
+aliases: [/blog/2020/11/21/minecraft-irc]
 ---
 
 As I talked about in my post [about Minecraft modpack development](/blog/2020/10/24/corepack-development), I got back in to playing Minecraft earlier this year. I primairly play on a server full of friends, where the server owner has [dynmap](https://github.com/webbukkit/dynmap) installed. Dynmap is a handy tool that provides a near-real-time overview of the minecraft world in the form of a webapp. I always keep Dynmap open on my laptop so I can chat with whoever is online, and see whats being worked on.

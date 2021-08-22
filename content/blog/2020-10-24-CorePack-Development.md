@@ -10,6 +10,7 @@ excerpt: >-
 redirect_from: 
  - /post/XlA00k24/
  - /XlA00k24/
+aliases: [/blog/2020/10/24/corepack-development]
 ---
 
 *All content of this post is based around the work I did [here](https://github.com/Ewpratten/corepack)*

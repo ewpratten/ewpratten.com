@@ -12,6 +12,7 @@ excerpt: >-
 redirect_from: 
  - /post/XcaM0k24/
  - /XcaM0k24/
+aliases: [/blog/2020/10/15/mounting-google-drives]
 ---
 
 When sharing files, I use three main services. I use [Firefox Send](https://en.wikipedia.org/wiki/Firefox_Send) and [KeybaseFS](https://book.keybase.io/docs/files) to share one-off and large files with friends, and I use [Google Drive](https://drive.google.com) to store some personal files, and for everything school-related (I don't get a choice about this). For the first two services, sharing a file is as simple as calling [`ffsend`](https://github.com/timvisee/ffsend) or moving a local file into my kbfs mountpoint, and I am done. Google Drive, on the other hand, the process isn't as easy. While some Linux distributions have Google Drive integration out of the box (I miss daily-driving [ChromiumOS](https://www.chromium.org/chromium-os)), Linux users generally have to go to `drive.google.com`, and deal with the Google Drive webapp. Not sure if this is an "only me" problem, but whenever I need to quickly make a change to a document through the webapp, It decides to stop working.
