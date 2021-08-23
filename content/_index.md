@@ -19,17 +19,17 @@ I am a first-year college student, studying Information Security at Sheridan Col
   <li><div><span>Aug</span> <span>Participated in Google CTF 2020</span></div></li>
   <li><div><span>May</span> <span>Participated in Hack-A-Sat CTF</span></div></li>
   <li><div><span>Apr</span> <span>Produced <a href="https://ldjam.com/events/ludum-dare/46/micromanaged-mike"><em>Micromanaged Mike</em></a> as part of Ludum Dare 46</span></div></li>
-  <li><div><span>Mar</span> <span>FRC Humber district event *finalists* as part of Raider Robotics</span></div></li>
+  <li><div><span>Mar</span> <span>FRC Humber district event <em>finalists</em> as part of Raider Robotics</span></div></li>
   <li><div><span>Feb</span> <span>Participated in the Canadian Computing Competition</span></div></li>
 </ul>
 
 <li>2019</li>
 <ul>
   <li><div><span>Jun</span> <span>Participated in Google CTF 2019</span></div></li>
-  <li><div><span>Apr</span> <span>FRC district championships *quarter-finalists* as part of Raider Robotics</span></div></li>
-  <li><div><span>Apr</span> <span>FRC Western district event *semi-finalists* as part of Raider Robotics</span></div></li>
+  <li><div><span>Apr</span> <span>FRC district championships <em>quarter-finalists</em> as part of Raider Robotics</span></div></li>
+  <li><div><span>Apr</span> <span>FRC Western district event <em>semi-finalists</em> as part of Raider Robotics</span></div></li>
   <li><div><span>Mar</span> <span>Participated in the ECOO Programming Contest</span></div></li>
-  <li><div><span>Feb</span> <span>FRC Ryerson district event *quarter-finalists* as part of Raider Robotics</span></div></li>
+  <li><div><span>Feb</span> <span>FRC Ryerson district event <em>quarter-finalists</em> as part of Raider Robotics</span></div></li>
   <li><div><span>Feb</span> <span>Participated in the Canadian Computing Competition</span></div></li>
 </ul>
 
@@ -37,7 +37,7 @@ I am a first-year college student, studying Information Security at Sheridan Col
 <ul>
   <li><div><span>Sep</span> <span>Completed Google's *Foobar* programming challenge</span></div></li>
   <li><div><span>Apr</span> <span>Participated in the ECOO Programming Contest</span></div></li>
-  <li><div><span>Mar</span> <span>FRC Waterloo district event *quarter-finalists* as part of Raider Robotics</span></div></li>
-  <li><div><span>Mar</span> <span>FRC Georgian district event *quarter-finalists* as part of Raider Robotics</span></div></li>
+  <li><div><span>Mar</span> <span>FRC Waterloo district event <em>quarter-finalists</em> as part of Raider Robotics</span></div></li>
+  <li><div><span>Mar</span> <span>FRC Georgian district event <em>quarter-finalists</em> as part of Raider Robotics</span></div></li>
 </ul>
 </ul>
