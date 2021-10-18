@@ -10,6 +10,7 @@ I am a first-year college student, studying Information Security at Sheridan Col
 <ul class="events-list">
 <li>2021</li>
 <ul>
+    <li><div><span>Oct</span> <span>Set up network infrastructure for managing a personal public /24 IPv4 block</span></div></li>
     <li><div><span>Oct</span> <span>Produced <a href="https://github.com/Ewpratten/ludum-dare-49"><strong>[data::loss]</strong></a> as part of Ludum Dare 49</span></div></li>
     <li><div><span>Jun</span> <span>Participated in ARRL Summer Field Day, scoring 270 points</span></div></li>
     <li><div><span>Apr</span> <span>Produced <a href="https://github.com/Ewpratten/ludum-dare-48"><em>Deep Breath</em></a> as part of Ludum Dare 48</span></div></li>
