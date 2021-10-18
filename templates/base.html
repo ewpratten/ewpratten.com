@@ -41,7 +41,8 @@
                             {{config.extra.email}}</a><br>
                         <a href="https://github.com/{{config.extra.github}}" rel="me"><i class="lab la-github"></i>
                             {{config.extra.github}}</a><br>
-                        <a href="https://www.linkedin.com/in/{{config.extra.linkedin}}" rel="me"><i class="lab la-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/{{config.extra.linkedin}}" rel="me"><i
+                                class="lab la-linkedin"></i>
                             {{config.extra.linkedin}}</a><br>
                         <a href="https://qrz.com/db/{{config.extra.qrz}}" rel="me"><i
                                 class="las la-broadcast-tower"></i>
@@ -63,6 +64,13 @@
             {% block content %}
             {% endblock content %}
         </div>
+        <div id="ampr-notice" style="display:none;">
+            <br>
+            <p style="text-align: center;color:gray;">
+                You are being served via AMPRNet [<a href="http://router.va3zza.com" style="color:rgb(46, 46, 141)">More
+                    Info</a>]
+            </p>
+        </div>
     </div>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -73,6 +81,24 @@
         gtag('js', new Date());
 
         gtag('config', 'G-5912H4H03P');
+    </script>
+
+    <script>
+        if (window.performance && performance.getEntriesByType) { // avoid error in Safari 10, IE9- and other old browsers
+            let navTiming = performance.getEntriesByType('navigation')
+            if (navTiming.length > 0) { // still not supported as of Safari 14...
+                let serverTiming = navTiming[0].serverTiming
+                if (serverTiming && serverTiming.length > 0) {
+                    for (let i = 0; i < serverTiming.length; i++) {
+                        if (serverTiming[i].name == 'source') {
+                            if (serverTiming[i].description == 'net44') {
+                                document.getElementById('ampr-notice').style.display = 'block';
+                            }
+                        }
+                    }
+                }
+            }
+        }
     </script>
 </body>
 
