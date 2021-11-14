@@ -9,7 +9,7 @@ draft: true
 
 Your first, and possibly only question is likely: *"what?"*, and I forgive you for asking such a thing. As probably any reader of my posts knows very well, IPv4 address blocks are practically impossible to get, and more than impossible to get for personal use. To quickly clear things up, my address block is *not* for personal use, but in comparison to the majority of the internet's existing address block owners, I am basically a single person holding on to a /24 subnet for dear life while the giants of large internet corporations are eating up everything around me.
 
-Ok, ok, I'm sure you are hear for actual technical talk, and not a history lesson, so here we go.
+Ok, ok, I'm sure you are here for actual technical talk, and not a history lesson, so here we go.
 
 ## How do you even get IPv4 space? 
 
@@ -20,3 +20,17 @@ Alright, enough getting side-tracked. I'd rather pay $0 for some IP space if pos
 There are, of course, restrictions to this which I will not cover in full here. The main restriction to keep in mind is: AMPRNet address space *must* be used for amateur-radio-related uses only, and generally must better the radio community in some way.
 
 The primary justification for my allocation is that a large chunk of my addresses are being used to provide [Echolink](https://secure.echolink.org/) proxies that allow users behind firewalls to interact with the Echolink network. Other uses of my address space involve exposing software-defined radios to the internet, and repeater linking.
+
+<h2>RIP <em class="gray">(my free time)</em></h2>
+<!-- Mention the first OpenVPN setup -->
+
+## There is a better way
+
+
+
+<!-- 
+ - Inexperience, jumping right in
+ - Benjojo
+ - Contacting people (Felix and other person)
+ - 
+ -->
