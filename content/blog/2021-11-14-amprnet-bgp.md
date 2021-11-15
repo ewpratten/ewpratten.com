@@ -1,11 +1,9 @@
 ---
 layout: page
-title:  "How I route my own public IPv4 address space"
+title:  "Adventures in BGP: routing my own public IPv4 address space"
 description: "A college student, playing with the \"big boys\""
 date:   2021-11-14
 tags: reference
-extra:
-    hidden: true
 ---
 
 Your first, and possibly only question is likely: *"what?"*, and I forgive you for asking such a thing. As probably any reader of my posts knows very well, IPv4 address blocks are practically impossible to get, and more than impossible to get for personal use. To quickly clear things up, my address block is *not* for personal use, but in comparison to the majority of the internet's existing address block owners, I am basically a single person holding on to a `/24` subnet for dear life while the giants of large internet corporations are eating up everything around me.
@@ -14,7 +12,7 @@ Ok, ok, I'm sure you are here for actual technical talk, and not a history lesso
 
 ## How do you even get IPv4 space? 
 
-These days, the minimum [BGP](https://en.wikipedia.org/wiki/Border_Gateway_Protocol)-routable IPv4 block is a `/24` subnet, coming in at 255 addresses. One of these blocks auctions for prices starting around 15 thousand dollars USD. I'd say thats slightly unachievable for a college student like me, but when I come to think about it, that's still about the same as a year of tuition, so... :eyes:
+These days, the minimum [BGP](https://en.wikipedia.org/wiki/Border_Gateway_Protocol)-routable IPv4 block is a `/24` subnet, coming in at 255 addresses. One of these blocks auctions for prices starting around 15 thousand dollars USD. I'd say that's slightly unachievable for a college student like me, but when I come to think about it, that's still about the same as a year of tuition and housing, so... :eyes:
 
 Alright, enough getting side-tracked. I'd rather pay $0 for some IP space if possible, and luckily for me, it is! I am a licensed [Amateur Radio operator](https://en.wikipedia.org/wiki/Amateur_radio), and through this, I get to make use of a few cool license-restricted services run by and for other operators. One of such services is [AMPRNet](https://en.wikipedia.org/wiki/AMPRNet), a `/8` subnet of public IP space specifically assigned for Amateur Radio Digital Communications back in 1981, and self-administered by radio amateurs. The governing body of this subnet is the [Amateur Radio Digital Communications](https://www.ampr.org/) (ARDC) foundation. Through their web portal, with a manually-verified account, any amateur can request subnets or single addresses under the `44.0.0.0/8` subnet.
 
@@ -24,11 +22,11 @@ The primary justification for my allocation is that a large chunk of my addresse
 
 <h2>RIP <em class="gray">(my free time)</em></h2>
 
-The most common way users of AMPRNet route their allocated IP addresses to and from the public internet is via the [RIP](https://en.wikipedia.org/wiki/Routing_Information_Protocol) protocol. RIP is one of the oldest routing protocols, and has the main downside of not being particularly scalable, and had not been the preferred routing protocol for the internet for a long time.
+The most common way users of AMPRNet route their allocated IP addresses to and from the public internet is via the [RIP](https://en.wikipedia.org/wiki/Routing_Information_Protocol) protocol. RIP is one of the oldest routing protocols, and has the main downside of not being particularly scalable, as well as not being the preferred routing protocol for the internet for a long time.
 
 The choice of RIP (specifically RIPv2) is not exactly surprising for a network as old as AMPRNet, but not exactly what I was looking for. With the conventional RIP setup used by almost all AMPRNet hosts, gateway servers are set up to subscribe to RIP broadcasts sent by the AMPRNet-Internet gateway (`amprgw.ucsd.edu`), located at the UCSD [San Diego Supercomputer Center](https://en.wikipedia.org/wiki/San_Diego_Supercomputer_Center).
 
-I tried setting up RIPv2-based routing on my gateway to start. I was allocated the `44.63.7.32/29` address block to test this out with, and followed the guides on the [AMPRNet Wiki](https://wiki.ampr.org/wiki/Main_Page), along with [KB9MWR's documentation](https://www.qsl.net/kb9mwr/wapr/tcpip/) on the subject. I ran into *many* roadblocks through this method that absorbed many weekends of my life. The common issue between all of these roadblocks is lack of, or plain incorrect documentation. The AMPRNet Wiki seems to have an issue of lack of review. Many guides are lacking details and have spelling issues in important places.
+I tried setting up RIPv2-based routing on my gateway to start. I was allocated the `44.63.7.32/29` address block to test this out with, and followed the guides on the [AMPRNet Wiki](https://wiki.ampr.org/wiki/Main_Page), along with [KB9MWR's documentation](https://www.qsl.net/kb9mwr/wapr/tcpip/) on the subject. I ran into *many* roadblocks through this method that absorbed many weekends of my life. The common issue between all of these roadblocks is lack of, or plain incorrect documentation. The AMPRNet Wiki seems to have an issue of minimal review. Many guides are lacking details and have spelling issues in important places.
 
 Through piecing together broken and incomplete documentation, along with emails from the AMPRNet mailing list, I eventually got my gateway to route between my hosts and other hosts under the `44/8` IP space, but never managed to get the public internet to see my hosts.
 
@@ -40,7 +38,7 @@ The AMPRNet documentation rather strongly tells users **not** to try routing the
 
 Well, ok, it was not quite as simple as saying "no" and clicking a button, but this big scary piece of dark magic that is BGP was surprisingly easy to work with in the end. I had heard of BGP before from many great blog posts by [*Ben Cox*](https://benjojo.co.uk/) but I had never had the reason, time, or resources to even come close to touching it. After all, at the time of first learning about routing protocols, I was just a 9th grader.
 
-I didn't want to dive in to BGP blind and on my own, since I had read many horror stories of what can go wrong when you mess up your routes <span class="gray"><em>cough Facebook cough</em></span>, so I began looking for help. I stumbled across [2M0LOB](https://lobi.to/)'s AMPRNet allocation, and sent an email asking for advice before hopping in the project. Thanks to 2M0LOB for some great pointers to get me started, and teaching me about [DN42](https://dn42.eu/Home), a great resource for smoke-checking your BGP routing setups before throwing them into the real world.
+I didn't want to dive in to BGP blind and on my own, since I had read many horror stories of what can go wrong when you mess up your routes <span class="gray"><em>cough Facebook cough</em></span>, so I began looking for help. I stumbled across [2M0LOB](https://lobi.to/)'s AMPRNet allocation, and sent an email asking for advice before hopping in the project. Thanks to 2M0LOB for some great pointers that got me started, and for teaching me about [DN42](https://dn42.eu/Home), a great resource for smoke-checking your BGP routing setups before throwing them into the real world.
 
 ## A second attempt
 
