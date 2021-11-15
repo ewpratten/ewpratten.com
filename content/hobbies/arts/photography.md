@@ -2,8 +2,6 @@
 title: Photography
 ---
 
-# Photography
-
 I have been interested in photography for many years. My earliest memories taking photos involve disposable film cameras my parents would buy me from a nearby grocery store and since then, my interest has only further evolved. I have never used professional camera equipment for my personal work, but instead like sticking to phone cameras and heavy post-processing to give my photos my distinct *look*.
 
 ## Some of my favorites
