@@ -51,7 +51,7 @@ In the world of internet routing, you generally need four things:
 
 ### Requesting an IP allocation
 
-My existing AMPRNet allocation was a `/29` block which, due to [CIDR Notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation) being being clever, is *smaller* than a `/24`. Thus, I had to request a larger IP block for myself. The process for requesting a BGP-routable `/24` from ARDC is a bit different than the standard allocation request process. Firstly, all BGP allocations must be requested under [`44.31.0.0/16`](https://portal.ampr.org/networks.php?a=region&id=162), which is the "BGP Allocations" segment of `44/8`. These BGP allocations fall under the `Direct` allocation type that the AMPRNet Wiki warns you *not* to use.
+My existing AMPRNet allocation was a `/29` block which, due to [CIDR Notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation) being clever, is *smaller* than a `/24`. Thus, I had to request a larger IP block for myself. The process for requesting a BGP-routable `/24` from ARDC is a bit different than the standard allocation request process. Firstly, all BGP allocations must be requested under [`44.31.0.0/16`](https://portal.ampr.org/networks.php?a=region&id=162), which is the "BGP Allocations" segment of `44/8`. These BGP allocations fall under the `Direct` allocation type that the AMPRNet Wiki warns you *not* to use.
 
 After filling out the usual allocation application, I was contacted by [G1FEF](https://g1fef.co.uk/), the IT Director of ARDC, with an extra document to fill out, then I was handed an Letter Of Authorization (LOA) and was ready to go!
 
