@@ -14,7 +14,9 @@ As my friends know very well, I do *a lot* of things. This section exists to kee
   - Animation
   - Audio Production
 - Software Development
-  - Games
+  - [Games](/hobbies/software/games)
+  <!-- - https://github.com/Java-prog-class-2019/slate -->
+  - CTFs
   - Graphics Pipeline
   - Web Development
   - Control Systems
@@ -22,3 +24,5 @@ As my friends know very well, I do *a lot* of things. This section exists to kee
 - Networking and Infrastructure
   - Virtual and Physical networks
   - [My public IPv4 block](/blog/amprnet-bgp/)
+- Longboarding
+- Drones
