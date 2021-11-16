@@ -9,7 +9,7 @@ The first event I participated in was the 2018 [ECOO Programming Contest](https:
 Later that same year, I was granted an invite to the elusive [Google Foobar](https://foobar.withgoogle.com/) challenge. I forgive anyone that has no idea what I'm talking about here. Google Foobar is Google's super secret hiring challenge. Googling it will lead you to a few blog posts by other people that got invited, and not a whole lot else. Invites are granted *by Google* and will pop up on your screen when on one of their websites if they deem you worthy. At the time I completed Foobar, there were five challenges of progressing difficulty, covering everything you might expect from a hard programming interview, but all put together as parts of a story. It was a really really cool experience. And yes, I did say *"completed"*. I even got the recruiting email from Google, but was ultimately rejected due to being too young (14 at the time).
 
 > Hi Evan,
-><br>Hope all is well! I work on Google’s Campus Tech Intern Recruiting team and saw you had played the foo.bar challenge in the past. I’m really interested in learning more about you and sharing what opportunities we have for University students. 
+><br>Hope all is well! I work on Google’s Campus Tech Intern Recruiting team and saw you had played the foo.bar challenge in the past. I’m really interested in learning more about you and sharing what opportunities we have for students. 
 > <br>...
 
 In February 2019, with the same group as before, I participated in the [Canadian Computing Competition](https://cemc.uwaterloo.ca/contests/computing.html) held by the Centre for Education in Mathematics and Computing at the University of Waterloo. I also participated in ECOO again that year in March.
