@@ -17,15 +17,13 @@ As my friends know very well, I do *a lot* of things. This section exists to kee
 - Software Development
   - [Games](/hobbies/software/games)
   - [Competitive Programming](/hobbies/software/competitive-programming)
-  <!-- CTFs -->
-  <!-- Foobar -->
-  <!-- ECOO... -->
   - Graphics Pipeline
   - Web Development
   - Control Systems
   - Automation
 - Networking and Infrastructure
   - Virtual and Physical networks
+  <!-- - [Virtual and Physical networks](/hobbies/networking/zzanet) -->
   - [My public IPv4 block](/blog/amprnet-bgp/)
 - Longboarding
 - Drones
