@@ -13,9 +13,13 @@ As my friends know very well, I do *a lot* of things. This section exists to kee
   - [Videography](/hobbies/arts/videography)
   - [Animation](/hobbies/arts/animation)
   - Audio Production
+  <!-- RetryLife -->
 - Software Development
   - [Games](/hobbies/software/games)
-  - CTFs
+  - [Competitive Programming](/hobbies/software/competitive-programming)
+  <!-- CTFs -->
+  <!-- Foobar -->
+  <!-- ECOO... -->
   - Graphics Pipeline
   - Web Development
   - Control Systems
