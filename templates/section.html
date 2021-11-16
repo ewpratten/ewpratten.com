@@ -13,6 +13,37 @@
 <meta property="og:description" content="{{config.description}}" />
 <meta property="description" content="{{config.description}}" />
 {% endif %}
+
+{# Handle listing blog posts nicely in search #}
+{% if section.extra.inject_blog_posts %}
+<script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"ItemList",
+      "itemListElement":[
+        {% for page in section.pages %}
+        {% if not page.extra.hidden %}
+        {
+            "@type":"ListItem",
+            "position": "{{loop.index}}",
+            "item": {
+                "@type": "Article",
+                "headline": "{{page.title}}",
+                "url":"https://va3zza.com{{page.path | safe}}",
+                "author": [{
+                    "@type": "Person",
+                    "name": "Evan Pratten",
+                    "url": "https://va3zza.com"
+                  }]
+            }
+        } {% if not loop.last %},{% endif %}
+        {% endif %}
+        {% endfor %}
+        
+      ]
+    }
+</script>
+{% endif %}
 {% endblock head %}
 
 {% block content %}
