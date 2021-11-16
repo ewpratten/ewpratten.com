@@ -1,6 +1,6 @@
 base_url = "https://va3zza.com"
 title = "Evan Pratten"
-description = "Evan Pratten's website"
+description = "Evan Pratten is a college student, amateur radio operator, software developer, and more. This is his website."
 default_language = "en"
 compile_sass = true
 build_search_index = true

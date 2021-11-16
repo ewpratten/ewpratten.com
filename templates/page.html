@@ -21,6 +21,10 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMat
 <meta property="og:type" content="article" />
 {% if page.description %}
 <meta property="og:description" content="{{page.description}}" />
+<meta property="description" content="{{page.description}}" />
+{% else %}
+<meta property="og:description" content="{{config.description}}" />
+<meta property="description" content="{{config.description}}" />
 {% endif %}
 <meta property="article:published_time" content="{{page.date}}T00:00:00+00:00" />
 {% endblock head %}

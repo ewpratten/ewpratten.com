@@ -6,6 +6,13 @@
 {% block head %}
 {{ super() }}
 <meta property="og:title" content="{{section.title}}" />
+{% if section.description %}
+<meta property="og:description" content="{{section.description}}" />
+<meta property="description" content="{{section.description}}" />
+{% else %}
+<meta property="og:description" content="{{config.description}}" />
+<meta property="description" content="{{config.description}}" />
+{% endif %}
 {% endblock head %}
 
 {% block content %}
