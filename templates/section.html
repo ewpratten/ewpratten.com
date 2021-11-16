@@ -3,6 +3,11 @@
 {{section.title}}
 {% endblock title %}
 
+{% block head %}
+{{ super() }}
+<meta property="og:title" content="{{page.title}}" />
+{% endblock head %}
+
 {% block content %}
 {{section.content | safe}}
 
