@@ -67,7 +67,7 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMat
     </div>
 
     {# Comments only on blog posts #}
-    {% if page.description and page.date %}
+    {% if page.extra.is_rfc or page.description and page.date %}
     <br>
     <hr>
     <script src="https://utteranc.es/client.js" repo="ewpratten/va3zza.com" issue-term="title" label="comment"
@@ -79,5 +79,8 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMat
 
 {% if page.extra.uses_twitter %}
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endif %}
+{% if page.extra.uses_graphviz %}
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 {% endif %}
 {% endblock content %}
