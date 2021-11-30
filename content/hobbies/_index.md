@@ -18,6 +18,7 @@ As my friends know very well, I do *a lot* of things. This section exists to kee
 - Software Development
   - [Games](/hobbies/software/games)
   - [Competitive Programming](/hobbies/software/competitive-programming)
+  - [Discord Bots](/hobbies/software/discord-bots)
   - Graphics Pipeline
   - Web Development
   - Control Systems
