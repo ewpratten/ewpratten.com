@@ -84,16 +84,16 @@ My goal for this new network of mine was to have a single gateway server that ex
 
 For anyone curious on what BGP routing on a Vultr VPS involves, check out [Vultr's Documentation](https://www.vultr.com/docs/configuring-bgp-on-vultr) on the matter.
 
-## The results
+## Thanks
 
 Well, thats it! I am now the proud owner of a `/24` block of public IPv4 address space, and am happily using it for all kinds of radio projects. It is unbelievably convenient to be able to use public addresses even for testing, just because I have them!
-
+<!-- 
 Wanting to see a real-life service using this IP space? Good news! If you are reading this article on `va3zza.com`, you are currently being served by `44.31.62.3`, one of my brand new addresses!
 
 I also set up a bunch of monitoring software, so I can generate cool traffic and usage graphs like this:
 
 <img src="http://mrtg.router.va3zza.com/localhost_wg0-day.png" width="100%" alt="Subnet Traffic Graph">
 
-Check out more info about the gateway itself [here](http://router.va3zza.com/).
+Check out more info about the gateway itself [here](http://router.va3zza.com/). -->
 
 Once again, I'd like to thank Ben, 2M0LOB, G1FEF, and Felix for helping me through this process, and helping me get hands-on experience learning about a piece of critical internet infrastructure technology the very few other college students get to touch beyond a simulator.
