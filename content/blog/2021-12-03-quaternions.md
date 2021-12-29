@@ -4,7 +4,7 @@ title: "A rusty guide to quaternions"
 description: "Fast and efficient 3D object manipulation"
 date:   2021-12-03
 tags: reference
-draft: true
+draft: false
 extra:
   uses_katex: true
 ---
