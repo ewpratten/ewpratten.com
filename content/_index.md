@@ -10,9 +10,14 @@ I am a first-year college student, studying Information Security at Sheridan Col
 <ul class="events-list">
 <li>2021</li>
 <ul>
+    <li><div><span>Nov</span> <span>Completed the <em>Hurricane Electric IPv6 Certification</em></span></div></li>
+    <li><div><span>Nov</span> <span>Acquired a /64 and a /48 block of public IPv6 addresses</span></div></li>
     <li><div><span>Nov</span> <span>Built the Echolink node VA3ZZA-L</span></div></li>
-    <li><div><span>Oct</span> <span>Set up network infrastructure for managing a personal public /24 IPv4 block</span></div></li>
+    <li><div><span>Oct</span> <span>Set up network infrastructure for managing my public IP addresses</span></div></li>
+    <li><div><span>Oct</span> <span>Acquired a /24 block of public IPv4 addresses</span></div></li>
     <li><div><span>Oct</span> <span>Produced <a href="https://github.com/Ewpratten/ludum-dare-49"><strong>[data::loss]</strong></a> as part of Ludum Dare 49</span></div></li>
+    <li><div><span>Sep</span> <span>Began an <em>Honours Bachelor of Applied Information Sciences</em></span></div></li>
+    <li><div><span>Aug</span> <span>Acquired a /29 block of public IPv4 addresses</span></div></li>
     <li><div><span>Jun</span> <span>Participated in ARRL Summer Field Day, scoring 270 points</span></div></li>
     <li><div><span>Apr</span> <span>Produced <a href="https://github.com/Ewpratten/ludum-dare-48"><em>Deep Breath</em></a> as part of Ludum Dare 48</span></div></li>
 </ul>
