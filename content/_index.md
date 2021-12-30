@@ -10,6 +10,7 @@ I am a first-year college student, studying Information Security at Sheridan Col
 <ul class="events-list">
 <li>2021</li>
 <ul>
+    <li><div><span>Dec</span> <span>Started the <a href="https://ffixp.net"><em>Freeform Internet Exchange</em></a> project</span></div></li>
     <li><div><span>Nov</span> <span>Completed the <em>Hurricane Electric IPv6 Certification</em></span></div></li>
     <li><div><span>Nov</span> <span>Acquired a /64 and a /48 block of public IPv6 addresses</span></div></li>
     <li><div><span>Nov</span> <span>Built the Echolink node VA3ZZA-L</span></div></li>
