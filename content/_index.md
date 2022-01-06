@@ -8,6 +8,11 @@ I am a first-year college student, studying Information Security at Sheridan Col
 ## What I have been up to
 
 <ul class="events-list">
+<li>2022</li>
+<ul>
+    <li><div><span>Jan</span> <span>Assigned autonomous system number <a href="https://explorer.burble.com/?#/AS4242422811"><em>4242422811</em></a></span></div></li>
+</ul>
+
 <li>2021</li>
 <ul>
     <li><div><span>Dec</span> <span>Started the <a href="https://ffixp.net"><em>Freeform Internet Exchange</em></a> project</span></div></li>

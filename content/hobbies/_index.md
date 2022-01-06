@@ -27,5 +27,6 @@ As my friends know very well, I do *a lot* of things. This section exists to kee
   - Virtual and Physical networks
   <!-- - [Virtual and Physical networks](/hobbies/networking/zzanet) -->
   - [My public IPv4 block](/blog/amprnet-bgp/)
+  - [The Freeform Internet Exchange Project](https://ffixp.net)
 - Longboarding
 - Drones
