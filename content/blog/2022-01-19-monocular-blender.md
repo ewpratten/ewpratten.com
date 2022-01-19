@@ -4,7 +4,7 @@ title: "Monocular depth mapping in Blender"
 description: "My 3D pipeline is backed by neural networks"
 date:   2022-01-19
 tags: random 3d-pipeline
-draft: true
+draft: false
 extra:
   uses_katex: false
 ---
