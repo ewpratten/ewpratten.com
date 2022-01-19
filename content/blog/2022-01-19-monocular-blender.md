@@ -71,5 +71,53 @@ An example of an output from MiDaS is shown below. I have boosted the exposure a
 
 ### The Blender plugin
 
+I have a personal project called [*Evan's DCC Scripts*](https://github.com/Ewpratten/dcc_scripts) where I keep personal plugins for 3D software. 
+
+I decided to piggy-back off the pipeline infrastructure I have already set up there for this project. Thus, bringing my MiDaS tool into blender was as simple as creating a new QT GUI, and hooking it up to a custom operator. 
+
+*For anyone curious, my Blender plugins use QT for maximum interoperability with the rest of my toolset.*
+
+<div style="text-align:center;">
+<img src="/images/posts/monocular-blender/blender-importer-window.png">
+<p>Plugin Dialog: <em>Import Monocular Image</em></p>
+</div>
+
 ### Actually creating textured 3D meshes
 
+The process for converting a depth map and texture to a 3D object is quite simple:
+
+1) Create a plane (this can be done through [*Images As Planes*](https://docs.blender.org/manual/en/latest/addons/import_export/images_as_planes.html))
+2) Subdivide the plane (I have been using 128 subdivisions, and it seems to work well)
+3) Apply a [*Displace Modifier*](https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/displace.html) to the plane, using the depth map as the source texture, and configuring the modifier to work with UV coordinates
+
+The first time I tried this, I encountered a slight issue with depth mapping:
+
+<div style="text-align:center;">
+<img src="/images/posts/monocular-blender/ayo_bro.png">
+<p>A failed attempt</p>
+</div>
+
+But then, I quickly figured out how to set up the displacement modifier, and got my expected result:
+
+<table>
+<tr>
+<td>
+<div style="text-align:center;">
+<img src="/images/posts/monocular-blender/ayo_displaced.png">
+<p>Displaced, untextured</p>
+</div>
+</td>
+<td>
+<div style="text-align:center;">
+<img src="/images/posts/monocular-blender/ayo_textured.png">
+<p>Textured, viewed from the original camera position</p>
+</div>
+</td>
+</tr>
+</table>
+
+## Conclusion
+
+This whole project was a fun experiment with some tools that are designed for very different applications. I plan to continue refining the quality of the outputs of my plugin. I'll likely look in to reducing un-needed subdivisions using [OpenSubdiv](https://graphics.pixar.com/opensubdiv) in the near future.
+
+If you are interested in experimenting with my depth mapping plugin yourself, feel free to send me [an email](mailto:mail@va3zza.com) and I'll help you set it up. Currently, my tools are Linux-exclusive.
