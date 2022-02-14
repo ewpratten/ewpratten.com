@@ -1,0 +1,18 @@
+graph G {
+    pstn -- twilio;
+    other_hams -- hh;
+    allstar -- hh;
+    twilio -- pbx;
+    hh -- pbx;
+    pbx -- phone, desktop, laptop;
+    
+    pstn[label="PSTN"];
+    twilio[label="Twilio"];
+    other_hams[label="Other Hams"];
+    allstar[label="AllStarLink"];
+    hh[label="Hamshack Hotline"];
+    pbx[label="My PBX"];
+    phone[label="My Phone"];
+    desktop[label="My Desktop"];
+    laptop[label="My Laptop"];
+}
