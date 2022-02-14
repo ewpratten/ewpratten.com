@@ -1,0 +1,7 @@
+digraph G {
+    rankdir=LR;
+    client -> magic -> client2; 
+    client[label="Phone A"];
+    magic[label="Dark Magic"];
+    client2[label="Phone B"];
+}

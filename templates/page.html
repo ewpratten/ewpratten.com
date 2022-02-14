@@ -42,6 +42,19 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMat
         }]
     }
 </script>
+
+
+
+{# Handle auto-centering request #}
+{% if page.extra.auto_center_images %}
+<style>
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+{% endif %}
 {% endblock head %}
 
 {% block profile %}
