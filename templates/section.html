@@ -54,7 +54,7 @@
 <ul>
     {% for page in section.pages %}
     {% if not page.extra.hidden %}
-    <li class="blog-post-li"><a href="{{page.path}}">{{page.title}}</a> <span style="color:gray;">({{page.date}})</span>
+    <li class="blog-post-li"><a href="{{page.path}}">{{page.title}}</a> <span style="color:{%if page.draft%}red{%else%}gray{%endif%};">({{page.date}})</span>
     </li>
     {% endif %}
     {% endfor %}

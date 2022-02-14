@@ -61,7 +61,18 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMat
 {% block content %}
 <br><br>
 <article class="markdown-body">
+    {% if page.description %}
+    <h1 style="border:none;margin-bottom:0;padding-bottom:0">{{page.title}}</h1>
+    <h3 style="margin-top:0;color:gray;padding-bottom:.3em;border-bottom:1px solid #eaecef;">
+        <em>
+            <span style="color:rgb(186, 186, 186)">/*</span>
+            {{page.description}}
+            <span style="color:rgb(186, 186, 186)">*/</span>
+        </em>
+    </h3>
+    {% else %}
     <h1>{{page.title}}</h1>
+    {% endif %}
     <div style="text-align: justify;">
         {{page.content | safe}}
     </div>
