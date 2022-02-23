@@ -22,7 +22,7 @@ The following are all the steps required to complete this process. Make sure to 
  1. [Compiling the toolchain](#compiling-the-toolchain)
  2. [Compiling the firmware](#compiling-the-firmware)
  3. [Finding debugging hardware](#finding-debugging-hardware)
- 4. [Connecting to the core's JTAG interface](#connecting-to-the-cores-jtag-interface)
+ 4. [Connecting to the core's JTAG interface](#connecting-to-the-core-s-jtag-interface)
  5. [Unlocking the keyboard](#unlocking-the-keyboard)
  6. [Flashing QMK](#flashing-qmk)
 
