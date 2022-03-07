@@ -10,8 +10,10 @@ As my friends know very well, I do *a lot* of things. This section exists to kee
 - [Robotics](/hobbies/robotics)
 - Visual and Creative Arts
   - [Photography](/hobbies/arts/photography)
-  - [Videography](/hobbies/arts/videography)
-  - [Animation](/hobbies/arts/animation)
+  <!-- - [Videography](/hobbies/arts/videography) -->
+  - Videography
+  <!-- - [Animation](/hobbies/arts/animation) -->
+  - Animation
   - Audio Production
   <!-- - [Audio Production](/hobbies/arts/music) -->
   <!-- RetryLife -->
