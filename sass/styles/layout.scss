@@ -49,6 +49,8 @@ body {
 .container {
   max-width: 700px;
   margin: auto;
+  padding-left:10px;
+  padding-right:10px;
 }
 
 .profile-card {
@@ -69,6 +71,7 @@ body {
       @media only screen and (max-width: 382px) {
         display: block;
         margin: auto;
+        text-align: center;
       }
       img {
         width: 100%;
