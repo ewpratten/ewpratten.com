@@ -5,6 +5,7 @@ title: Home
 
 I am a first-year college student, studying Software Engineering at Sheridan College. I develop software both as a hobby, and professionally, and have been programming since I was in the 5th grade. I am also a Canadian amateur radio operator (callsign **VA3ZZA**), and the former Lead Software Developer at [Raider Robotics](https://github.com/frc5024).
 
+
 ## What I have been up to
 
 <ul class="events-list">
@@ -55,3 +56,5 @@ I am a first-year college student, studying Software Engineering at Sheridan Col
   <li><div><span>Mar</span> <span>FRC Georgian district event <em>quarter-finalists</em> as part of Raider Robotics</span></div></li>
 </ul>
 </ul>
+
+

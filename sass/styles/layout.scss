@@ -8,7 +8,8 @@ h6 {
   font-weight: bolder;
 }
 p,
-li {
+li,
+span {
   font-family: "Roboto", sans-serif;
   font-weight: normal;
 }
@@ -25,7 +26,8 @@ a {
 }
 
 body {
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
+  margin: 0;
 }
 
 .mobile-hidden {
@@ -166,6 +168,13 @@ ul {
 
 .blog-post-listing-item {
   color: black !important;
+  & > div {
+    border-left: solid rgb(201, 201, 201) 5px;
+    &:hover {
+      border-left: solid black 5px;
+    }
+    padding-left: 5px;
+  }
 
   h4,
   h1,
@@ -174,22 +183,58 @@ ul {
     margin: 0;
   }
 
-  h1{
-    margin-bottom:10px;
+  h1 {
+    margin-bottom: 10px;
   }
 
   &:hover {
-    color:rgb(85, 85, 85) !important;
+    color: rgb(85, 85, 85) !important;
   }
 }
 
-.pn-previous, .pn-next {
-  border:1px solid black;
-  border-radius:5px;
-  padding:5px;
-  color:black !important;
-  &:hover{
-    color:rgb(85, 85, 85) !important;
+.pn-previous,
+.pn-next {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  color: black !important;
+  &:hover {
+    color: rgb(85, 85, 85) !important;
     border: 1px solid rgb(85, 85, 85) !important;
+  }
+}
+
+#footer {
+  background-color: rgb(201, 201, 201);
+  padding: 10px;
+  font-size: 0.8em;
+  color: black;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.carded-section {
+  border: 1px solid black;
+  width: 100%;
+
+  & > .header {
+    background-color: aliceblue;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid rgb(201, 201, 201);
+    & > span {
+      font-size: 1.5em;
+      font-weight: bolder;
+    }
+  }
+  & > .content {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }

@@ -10,5 +10,4 @@ extra:
 
 I write about software, hardware, life, and school. ([RSS](/rss.xml))
 
----
 <br>

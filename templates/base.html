@@ -78,8 +78,8 @@
             <p>
                 <a href="/">Home</a> |
                 <a href="/blog">Blog</a> |
-                <a href="/hobbies">Hobbies</a> |
-                <a href="/whois">WHOIS</a> 
+                <a href="/hobbies">Hobbies</a> 
+                {# <a href="/whois">WHOIS</a>  #}
                 {# <a href="/rfc">RFC</a> #}
             </p>
             <hr>
@@ -88,13 +88,14 @@
             {% block content %}
             {% endblock content %}
         </div>
-        <div id="ampr-notice" style="display:none;">
-            <br>
-            <p style="text-align: center;color:gray;">
-                You are being served via AMPRNet [<a href="http://router.va3zza.com" style="color:rgb(46, 46, 141)">More
-                    Info</a>]
-            </p>
-        </div>
+        
+        {# <div id="footer">
+            <div>
+                <h2>Evan Pratten</h2>
+            </div>
+            <div>
+            </div>
+        </div> #}
     </div>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
