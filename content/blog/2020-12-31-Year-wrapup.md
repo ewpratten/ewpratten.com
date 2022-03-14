@@ -5,8 +5,9 @@ description: "I wrote a lot of code this year. This post looks back on it all"
 date:   2020-12-31
 written: 2020-12-09
 tags: writeup review projects
-excerpt: >-
-    2020 has been my most productive year so far in terms of software development. This post looks back at the year
+extra:
+    excerpt: >-
+        2020 has been my most productive year so far in terms of software development. This post looks back at the year
 redirect_from: 
  - /post/g494l5j3/
  - /g494l5j3/

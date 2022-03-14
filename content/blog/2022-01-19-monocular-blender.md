@@ -7,6 +7,7 @@ tags: random 3d-pipeline
 draft: false
 extra:
   uses_katex: false
+  excerpt: This post covers the process I went through to write a Neural-Network-assisted Blender plugin for converting monocular images into 3D textured meshes.
 ---
 
 A while back, I encountered an interesting trend going on over on TikTok. People were turning their photos into videos with 3D camera movements.

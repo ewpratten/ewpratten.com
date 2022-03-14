@@ -5,8 +5,9 @@ description: "A free and secure way to host personal Java libraries and applicat
 date:   2021-02-25
 written: 2021-02-22
 tags: writeup maven projects
-excerpt: >-
-    In my never-ending hunt for a suitable solution for hosting Java libraries, I take a stop to try out Keybase Filesystem (KBFS)
+extra:
+    excerpt: >-
+        In my never-ending hunt for a suitable solution for hosting Java libraries, I take a stop to try out Keybase Filesystem (KBFS)
 redirect_from: 
  - /post/g4lk45j3/
  - /g4lk45j3/

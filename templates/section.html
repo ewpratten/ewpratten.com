@@ -51,15 +51,36 @@
 
 {# Blog posts #}
 {% if section.extra.inject_blog_posts %}
-<ul>
-  {% for page in section.pages %}
+<div>
+  {% for page in paginator.pages %}
   {% if not page.extra.hidden %}
-  <li class="blog-post-li"><a href="{{page.path}}">{{page.title}}</a> <span
-      style="color:{%if page.draft%}red{%else%}gray{%endif%};">({{page.date}})</span>
-  </li>
+  <a href="{{page.path}}" class="blog-post-listing-item">
+    <div>
+      <h4 {%if page.draft%}style="color:red;" {%endif%}>{{page.date | date(format="%b %d, %Y")}}</h4>
+      <h1>{{page.title}}</h1>
+      {% if page.extra.excerpt %}
+      <p>{{page.extra.excerpt}}</p>
+      {% endif %}
+    </div>
+  </a>
+  <hr>
+  <br>
   {% endif %}
   {% endfor %}
-</ul>
+</div>
+
+<div style="text-align: center;">
+  {% if paginator.previous %}
+  <a class="pn-previous" href="{{ paginator.previous }}">PREV</a>
+  {% endif %}
+  {% if paginator.previous and paginator.next %}
+    <span> • </span>
+  {% endif %}
+  {% if paginator.next %}
+  <a class="pn-next" href="{{ paginator.next }}">NEXT</a>
+  {% endif %}
+</div>
+
 {% endif %}
 
 {# RFCs #}

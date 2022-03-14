@@ -5,8 +5,8 @@ description: "A tutorial for future me"
 date:   2021-07-07
 written: 2021-07-07 
 tags: reference
-excerpt: >-
-    I commonly need to configure SSH servers on remote Windows 10 boxes. This post covers the whole process.
+extra:
+    excerpt: I commonly need to configure SSH servers on remote Windows 10 boxes. This post covers the whole process.
 aliases: [/blog/2021/07/07/windows-ssh]
 ---
 

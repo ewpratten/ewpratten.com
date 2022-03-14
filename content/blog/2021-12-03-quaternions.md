@@ -7,6 +7,7 @@ tags: reference
 draft: false
 extra:
   uses_katex: true
+  excerpt: This post is an overview of Quaternions for Rust programmers, and anyone willing to learn.
 ---
 
 The running joke in the graphics programming world is that nobody understands quaternions. These big scary math-filled types are always <em>someone else's problem</em>. While quaternions <del>are</del> may be scary, they serve an important purpose in the world of computing as they

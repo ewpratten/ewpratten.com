@@ -5,8 +5,9 @@ description: "Open-source firmware on a closed-source keyboard"
 date: 2021-03-14
 written: 2021-03-14
 tags: project keyboards qmk firmware
-excerpt: >-
-    After having some issues with the factory firmware on my 40% keyboard, I decided to replace it with the widely used QMK firmware instead.
+extra:
+    excerpt: >-
+        After having some issues with the factory firmware on my 40% keyboard, I decided to replace it with the widely used QMK firmware instead.
 redirect_from: 
  - /post/gkedkd93/
  - /gkedkd93/

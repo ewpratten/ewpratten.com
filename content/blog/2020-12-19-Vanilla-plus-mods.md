@@ -5,8 +5,9 @@ description: "Pushing the boundaries of a vanilla game, while being able to play
 date:   2020-12-19
 written: 2020-12-04
 tags: project python short
-excerpt: >-
-    Over the past 10 years, I have been building the perfect Minecraft experience for myself. This post shares the collection of mods I run, and why I use them.
+extra:
+    excerpt: >-
+        Over the past 10 years, I have been building the perfect Minecraft experience for myself. This post shares the collection of mods I run, and why I use them.
 redirect_from: 
  - /post/gas49g43/
  - /gas49g43/

@@ -163,3 +163,33 @@ ul {
   margin: auto !important;
   width: fit-content !important;
 }
+
+.blog-post-listing-item {
+  color: black !important;
+
+  h4,
+  h1,
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  h1{
+    margin-bottom:10px;
+  }
+
+  &:hover {
+    color:rgb(85, 85, 85) !important;
+  }
+}
+
+.pn-previous, .pn-next {
+  border:1px solid black;
+  border-radius:5px;
+  padding:5px;
+  color:black !important;
+  &:hover{
+    color:rgb(85, 85, 85) !important;
+    border: 1px solid rgb(85, 85, 85) !important;
+  }
+}

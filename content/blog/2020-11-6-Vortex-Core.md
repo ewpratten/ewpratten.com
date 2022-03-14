@@ -5,8 +5,9 @@ description: "Just the right amount of obscure"
 date:   2020-11-06
 written: 2020-09-28
 tags: keyboards workflow
-excerpt: >-
-    I recently purchased my first mechanical keyboard, and decided to go "all in" with a 40% layout.
+extra:
+    excerpt: >-
+        I recently purchased my first mechanical keyboard, and decided to go "all in" with a 40% layout.
 redirect_from: 
  - /post/XlPl0k24/
  - /XlPl0k24/

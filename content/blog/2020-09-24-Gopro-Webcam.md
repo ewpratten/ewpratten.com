@@ -5,10 +5,11 @@ description: "Turning some spare filmmaking equipment into a high-quality video 
 date:   2020-09-24
 written: 2020-09-13
 tags: video cameras workflow
-excerpt: >-
-    As my courses have moved mostly online, I have looked to improve 
-    my live video setup. This post covers how I stream sharp HD video 
-    at home, and some interesting quirks of the setup.
+extra:
+    excerpt: >-
+        As my courses have moved mostly online, I have looked to improve 
+        my live video setup. This post covers how I stream sharp HD video 
+        at home, and some interesting quirks of the setup.
 redirect_from: 
  - /post/XcaM04o4/
  - /XcaM04o4/

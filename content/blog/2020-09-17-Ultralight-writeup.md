@@ -5,9 +5,10 @@ description: "Project overview: The Ultralight maven server"
 date:   2020-09-17
 written: 2020-09-05
 tags: project github maven
-excerpt: >- 
-  In this post, I explain the process of building my own personal 
-  maven server, and show how simple maven servers really are.
+extra:
+    excerpt: >- 
+      In this post, I explain the process of building my own personal 
+      maven server, and show how simple maven servers really are.
 redirect_from: 
  - /post/2jf002s4/
  - /2jf002s4/

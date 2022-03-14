@@ -4,11 +4,11 @@ title:  "Notes from FRC: Autonomous point-to-point navigation"
 description: "The tale of some very curvy math"
 date:   2020-08-13
 tags: frc
-excerpt: >-
-    This post is a continuation on my "Notes from FRC" series. This time, 
-    I cover an extremely simple, yet very effective way to get a 
-    tank-drive robot from A to B autonomously.
 extra:
+    excerpt: >-
+        This post is a continuation on my "Notes from FRC" series. This time, 
+        I cover an extremely simple, yet very effective way to get a 
+        tank-drive robot from A to B autonomously.
     uses_katex: true
 aliases: [/blog/2020/08/13/drivetrain-navigation]
 ---

@@ -4,9 +4,10 @@ title:  "Taking notes with Markdown and LaTeX"
 description: "Using a lot of tech to replace a piece of paper"
 date:   2020-08-23
 tags: pandoc latex bazel
-excerpt: >-
-    I have completely reworked my school notetaking system to use LaTeX. 
-    This post outlines how I did everything, and my new workflow.
+extra:
+    excerpt: >-
+        I have completely reworked my school notetaking system to use LaTeX. 
+        This post outlines how I did everything, and my new workflow.
 redirect_from: 
  - /post/68df02l4/
  - /68df02l4/

@@ -4,9 +4,10 @@ title:  "Compiling AVR-C code with a modern build system"
 description: "Bringing Bazel to 8-bit microcontrollers"
 date:   2020-09-03
 tags: avr embedded bazel
-excerpt: >-
-    In this post, I cover my process of combining low level 
-    programming with a very high level buildsystem.
+extra:
+    excerpt: >-
+        In this post, I cover my process of combining low level 
+        programming with a very high level buildsystem.
 redirect_from: 
  - /post/68dk02l4/
  - /68dk02l4/

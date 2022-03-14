@@ -5,8 +5,9 @@ description: "The process of installing GalliumOS on an ACER R11"
 date:   2020-12-04
 written: 2020-10-31
 tags: project laptop hardware
-excerpt: >-
-    Performing some upgrades to my old laptop. This post outlines the setup process for installing GalliumOS
+extra:
+    excerpt: >-
+        Performing some upgrades to my old laptop. This post outlines the setup process for installing GalliumOS
 redirect_from: 
  - /post/gk3jEkd4/
  - /gk3jEkd4/

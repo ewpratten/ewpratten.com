@@ -5,9 +5,10 @@ description: "A project writeup"
 date:   2020-10-01
 written: 2020-09-15
 tags: project c images
-excerpt: >-
-    Inspired from one of my friend's projects, I built a small 
-    tool for displaying bitmap file info from the command line.
+extra:
+    excerpt: >-
+        Inspired from one of my friend's projects, I built a small 
+        tool for displaying bitmap file info from the command line.
 redirect_from: 
  - /post/XcaMdj2m/
  - /XcaMdj2m/

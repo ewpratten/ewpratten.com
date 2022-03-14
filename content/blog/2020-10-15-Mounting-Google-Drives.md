@@ -5,10 +5,11 @@ description: "Easy-to-use Google Drive integration for Linux using rclone"
 date:   2020-10-15
 written: 2020-09-22
 tags: linux workflow google
-excerpt: >-
-    I can never get the Google Drive webapp to load quickly when I need it 
-    to. My solution: use some command-line magic to mount my drives directly 
-    to my laptop's filesystem.
+extra:
+    excerpt: >-
+        I can never get the Google Drive webapp to load quickly when I need it 
+        to. My solution: use some command-line magic to mount my drives directly 
+        to my laptop's filesystem.
 redirect_from: 
  - /post/XcaM0k24/
  - /XcaM0k24/

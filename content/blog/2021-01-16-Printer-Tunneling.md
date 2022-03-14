@@ -5,8 +5,9 @@ description: "Using socat to port-forward between network interfaces"
 date:   2021-01-16
 written: 2020-12-19
 tags: projects tutorial snippet
-excerpt: >-
-    I use a self-hosted VPN to access all my devices at all times, and to deal with my school's aggressive firewall. This post explains the process I use for exposing my home printer to the VPN.
+extra:
+    excerpt: >-
+        I use a self-hosted VPN to access all my devices at all times, and to deal with my school's aggressive firewall. This post explains the process I use for exposing my home printer to the VPN.
 redirect_from: 
  - /post/g494ld99/
  - /g494ld99/

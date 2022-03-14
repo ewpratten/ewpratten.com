@@ -5,8 +5,9 @@ description: "For server administration, or just chatting with friends"
 date:   2020-11-21
 written: 2020-10-25
 tags: minecraft project irc
-excerpt: >-
-    This post outlines the process of writing a custom IRC server that can bridge between your favorite IRC client, and any Minecraft server
+extra:
+    excerpt: >-
+        This post outlines the process of writing a custom IRC server that can bridge between your favorite IRC client, and any Minecraft server
 redirect_from: 
  - /post/lls5jkd4/
  - /lls5jkd4/

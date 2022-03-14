@@ -4,10 +4,11 @@ title:  "Integrating GitHub Codespaces with FRC"
 description: "Robotics software development in your browser"
 date:   2020-09-10
 tags: github codespaces
-excerpt: >-
-    I was recently accepted into the GitHub Codespaces beta test program
-    and decided to try it out on the largest open source project I am 
-    currently involved with. 
+extra:
+    excerpt: >-
+        I was recently accepted into the GitHub Codespaces beta test program
+        and decided to try it out on the largest open source project I am 
+        currently involved with. 
 aliases: [/blog/2020/09/10/codespaces-for-frc]
 ---
 
