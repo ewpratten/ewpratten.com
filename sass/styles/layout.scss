@@ -49,8 +49,8 @@ body {
 .container {
   max-width: 700px;
   margin: auto;
-  padding-left:10px;
-  padding-right:10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .profile-card {
@@ -240,4 +240,18 @@ ul {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+.portfolio-sellout {
+  margin-top: 15px;
+  background-color: #afa79e;
+  border-radius: 5px;
+  text-align: center;
+  // color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  // & > p > a {
+  //   color: aqua;
+  // }
 }
