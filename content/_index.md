@@ -8,10 +8,38 @@ title: Home
 
 ## About me
 
-I am a first-year college student, studying Software Engineering at Sheridan College. I develop software both as a hobby, and professionally, and have been programming since I was in the 5th grade. I am also a Canadian amateur radio operator (callsign **VA3ZZA**), and the former Lead Software Developer at [Raider Robotics](https://github.com/frc5024).
+I'm a Canadian software developer, 3D artist, photographer, musician, [blogger](/blog), amateur radio operator, and general maker of things. I love to experiment with little-used technologies, and specialize in *making things interconnect*.
+
+<!-- I am a first-year college student, studying Software Engineering at Sheridan College. I develop software both as a hobby, and professionally, and have been programming since I was in the 5th grade. I am also a Canadian amateur radio operator (callsign **VA3ZZA**), and the former Lead Software Developer at [Raider Robotics](https://github.com/frc5024). -->
 
 
-## What I have been up to
+As always, I'm working on multiple projects at the same time and have my head crammed full of technobabble. Currently, I am:
+
+- Working on the graphics pipeline powering children's TV productions at [Industrial Brothers](https://www.industrialbrothers.com/)
+- Administering experimental internet routing gear
+- Contributing to the Rust library and tooling ecosystem over on [GitHub](https://github.com/ewpratten)
+- Working with low-power radio communication modes
+
+## Am I on air?
+
+...given how little time I leave for hobbies some days, probably not. But it's worth a check anyways. If I happen to be reaching you with my transmissions, please QSL.
+
+<div style="text-align:center;">
+<img src="https://hamalert.org/myspot?c=VA3ZZA&h=e0fa3b8ff28e81a5&a=12" srcset="https://hamalert.org/myspot?c=VA3ZZA&h=e0fa3b8ff28e81a5&hr=1&a=12 2x" style="width:100%;max-width:400px">
+<br>
+<img src="https://rbn.telegraphy.de/activity/image/VA3ZZA" style="width:100%;max-width:600px">
+</div>
+
+## I make music too!
+
+Every once in a while, I get around to uploading a new track or two. If you'd like to hear my musical experiments, check out my profiles on:
+
+- [Spotify](https://open.spotify.com/artist/1aLNEmgqBJkhfkEZvf8Vh5)
+- [Apple Music](https://music.apple.com/us/artist/evan-pratten/1611566708)
+- [YouTube](https://www.youtube.com/channel/UCrHT3Lt0Mg90bspbMHJfTcA)
+- [Amazon Music](https://music.amazon.com/artists/B09TBHQCM1/evan-pratten)
+
+## Recent events
 
 <ul class="events-list">
 <li>2022</li>

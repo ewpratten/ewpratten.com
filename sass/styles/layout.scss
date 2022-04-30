@@ -10,7 +10,7 @@ h6 {
 p,
 li,
 span {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: normal;
 }
 a {
@@ -127,10 +127,12 @@ ul {
           &:first-of-type {
             color: gray;
             width: 30px;
-            letter-spacing: -0.35em;
             text-align: center;
             padding-right: 8px;
-            text-transform: full-width;
+
+            // Only Firefox supports this
+            // letter-spacing: -0.35em;
+            // text-transform: full-width;
           }
         }
       }
