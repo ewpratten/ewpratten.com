@@ -50,7 +50,6 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMat
         replace(from="{{title}}", to=page.title) | 
         replace(from="{{date}}", to=page.date) | 
         replace(from="{{profile_pic}}", to=config.extra.profile_photo) | 
-        replace(from="{{content}}", to=page.content | striptags | linebreaksbr) | 
         safe 
     }}
 </script>
