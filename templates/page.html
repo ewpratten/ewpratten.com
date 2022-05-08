@@ -26,24 +26,7 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMat
 <meta property="og:description" content="{{config.description}}" />
 <meta property="description" content="{{config.description}}" />
 {% endif %}
-<meta property="article:published_time" content="{{page.date}}T00:00:00+00:00" />
-
-{# Handle article listing #}
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "{{page.title}}",
-      "datePublished": "{{page.date}}T00:00:00+00:00",
-      "author": [{
-          "@type": "Person",
-          "name": "Evan Pratten",
-          "url": "https://va3zza.com"
-        }]
-    }
-</script>
-
-
+<meta property="article:published_time" content="{{page.date}}T00:00:00" />
 
 {# Handle auto-centering request #}
 {% if page.extra.auto_center_images %}
@@ -54,6 +37,23 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMat
         margin-right: auto;
     }
 </style>
+{% endif %}
+
+{# Handle loading JSONLD #}
+{% if page.extra.is_rfc or page.description and page.date %}
+<script type="application/ld+json">
+    {# Import our template file #}
+    {% set template = load_data(path="jsonld_templates/blog_post.jsonld") %}
+    {# Now we can fill in any additional data #}
+    {{ template | 
+        replace(from="{{url}}", to=config.base_url ~ page.path) | 
+        replace(from="{{title}}", to=page.title) | 
+        replace(from="{{date}}", to=page.date) | 
+        replace(from="{{profile_pic}}", to=config.extra.profile_photo) | 
+        replace(from="{{content}}", to=page.content | striptags | linebreaksbr) | 
+        safe 
+    }}
+</script>
 {% endif %}
 {% endblock head %}
 
