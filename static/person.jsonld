@@ -2,6 +2,7 @@
     "@context": "http://www.schema.org",
     "@type": "person",
     "name": "Evan Pratten",
+    "alternateName": "ewpratten",
     "nationality": "Canadian",
     "jobTitle": "Pipeline Software Developer",
     "description":"Software Developer",
@@ -67,5 +68,5 @@
         "https://twitter.com/ewpratten",
         "https://www.wikidata.org/wiki/Q111170999"
     ],
-    "mainEntity": "https://www.wikidata.org/wiki/Q111170999"
+    "mainEntityOfPage": "True"
 }

@@ -14,20 +14,16 @@
   {% if person_ld %}{{person_ld | safe}}{% endif %}
 </script>
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://va3zza.com/",
-    "about": "{{config.description}}",
-    "potentialAction": [{
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://va3zza.com/search?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }]
-  }
+  {# Import our template file #}
+  {% set template = load_data(path="jsonld_templates/website.jsonld") %}
+  {# Now we can fill in any additional data #}
+  {{ template | 
+      replace(from="{{url}}", to=config.base_url) | 
+      replace(from="{{title}}", to=section.title) | 
+      replace(from="{{description}}", to=config.description) | 
+      replace(from="{{avatar}}", to=config.extra.profile_photo) | 
+      safe 
+  }}
 </script>
 {% endblock head %}
 
