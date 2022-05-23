@@ -5,10 +5,22 @@
     "alternateName": "ewpratten",
     "nationality": "Canadian",
     "jobTitle": "Pipeline Software Developer",
-    "description":"Software Developer",
+    "description": "Software Developer",
     "callSign": [
         "VA3ZZA",
-        "VA3UJF"
+        "VA3UJF",
+        "VB3YEET",
+        "VG3ZZA",
+        "VG3UJF"
+    ],
+    "parent": [
+        {
+            "@type": "person",
+            "name": "Warren Pratten",
+            "alternateName": "awpratten",
+            "description": "Musical artist",
+            "gender": "male"
+        }
     ],
     "gender": "male",
     "url": "https://va3zza.com",
