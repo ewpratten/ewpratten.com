@@ -21,6 +21,7 @@
         "alternateName": "ewpratten",
         "headline": "{{title}}",
         "image": "{{avatar}}",
+        "logo": "{{avatar}}",
         "inLanguage": "en-CA",
         "author": "Evan Pratten",
         "description": "{{description}}",

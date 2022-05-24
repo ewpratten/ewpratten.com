@@ -20,8 +20,15 @@ I (VA3ZZA) will be the primary operator of VB3YEET, although I may allow some ot
 There is very little in the way of a plan for which bands, frequencies, and modes will be in use. Please refer to the following data for real-time information about callsign usage:
 
 <img src="https://hamalert.org/myspot?c=VB3YEET&amp;h=43adad96f1c09138&amp;a=12" srcset="https://hamalert.org/myspot?c=VB3YEET&amp;h=43adad96f1c09138&amp;hr=1&amp;a=12 2x">
+
+### Cheating: APRS
+
+I figured I might as well set up something special for this station. Through the entire period of the event, VB3YEET will be listening for APRS messages and logging them to LOtW automatically as Digital/FM contacts. I'm excited to see how many people want to try out this feature, and if I goes well, I may set up a more permanent automated station under one of my personal calls.
+
+To participate, send a message to the SSID: [`VB3YEET`](https://aprs.fi/?c=message&call=VB3YEET) and await your response.
+
+## Logs
+
 <div style="display:flex;justify-content:center;">
 <iframe iframe align="top" frameborder="0" height="350" name="iframe" scrolling="yes" style="width:100%;max-width:450px;margin:auto;" src="https://clublog.org/last10_iframe.php?call=vb3yeet"></iframe>
 </div>
-
-## WIP. Please check back soon
