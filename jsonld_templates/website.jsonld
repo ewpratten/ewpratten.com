@@ -1,16 +1,6 @@
 [
     {
         "@context": "http://schema.org",
-        "@type": "Webpage",
-        "specialty": "{{description}}",
-        "mainContentOfPage": {
-            "@context": "http://schema.org/",
-            "@type": "WebPageElement",
-            "cssSelector": ".page-content"
-        }
-    },
-    {
-        "@context": "http://schema.org",
         "@type": "WebSite",
         "additionalType": [
             "CreativeWork",
