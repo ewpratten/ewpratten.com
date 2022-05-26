@@ -257,3 +257,14 @@ ul {
   //   color: aqua;
   // }
 }
+
+.hover-help {
+  &:hover {
+    cursor: help;
+  }
+  border-bottom: 1px double rgb(171, 167, 167);
+}
+
+.small {
+  font-size: 0.5em;
+}
