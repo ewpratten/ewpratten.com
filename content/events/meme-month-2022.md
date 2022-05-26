@@ -1,6 +1,7 @@
 ---
 title: Meme Appreciation Month
 description: "\"Ligma Balls OM\""
+aliases: [/yeet]
 extra:
     uses_flags: true
 ---
@@ -38,3 +39,6 @@ Simply send a message to the SSID `VB3YEET`, wait for your automatic response, a
 
 ## Join the madness!
 
+This mess is a little more organized than it appears on the surface. Want to join the fun?
+
+[<center><img class="hover-shadow" src="/images/join-our-discord.png" alt="Join our Discord server" style="max-width:200px;border-radius:5px;"></center>](https://discord.gg/y3yMfPPtdX)
