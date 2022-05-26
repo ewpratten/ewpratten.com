@@ -35,7 +35,7 @@ Between the group of operators behind this event, we will keep the meme calls on
 
 ### Missing out on the lolz? <span style="color:red;">~~Move closer to Canada~~</span> <span style="color:green;">*Try APRS!*</span>
 
-For the duration of the event, **VB3YEET** will be active autonomously on APRS, listening for messages from near and var both via *144.39MHz* and APRS-IS.
+For the duration of the event, **VB3YEET** will be active autonomously on APRS, listening for messages from near and far both via *144.39MHz* and APRS-IS.
 
 Simply send a message to the SSID `VB3YEET`, wait for your automatic response, and enjoy your call being entered in the logbook within the week! All contacts through this method are marked as both FM and Digital in order to make LOtW happy. I (VA3ZZA) look forward to seeing a stupidly full logbook. Write something funny and I'll feature it in my post-event writeup.
 
