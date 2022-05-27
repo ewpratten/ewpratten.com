@@ -29,4 +29,5 @@ title: Music
   - [YouTube](https://www.youtube.com/channel/UCrHT3Lt0Mg90bspbMHJfTcA)
   - [Amazon Music](https://music.amazon.com/artists/B09TBHQCM1/evan-pratten)
 - RetryLife
+  - [Spotify](https://open.spotify.com/artist/4RoVvaoNjTgtgIMLhO6yWT)
   - [Apple Music](https://music.apple.com/ca/artist/retrylife/1626304389)
