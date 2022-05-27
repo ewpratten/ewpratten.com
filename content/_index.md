@@ -20,7 +20,99 @@ As always, I'm working on multiple projects at the same time and have my head cr
 - Contributing to the Rust library and tooling ecosystem over on [GitHub](https://github.com/ewpratten)
 - Working with low-power radio communication modes
 
-## Am I on air?
+## Amateur Radio
+
+I am a fairly active Amateur Radio operator. The following table is a reference list of my current, future, and past callsigns:
+
+<article class="markdown-body">
+
+| Callsign             |  Status  | Usage                             |
+|----------------------|:--------:|-----------------------------------|
+| **VA3ZZA**           | *Active* | My primary callsign               |
+| **VA3UJF**           | *Active* | Testing & automated transmissions |
+| [**VB3YEET**](/yeet) | *Future* | Special Event                     |
+| **VG3ZZA**           | *Active* | Special Event                     |
+| **VG3UJF**           | *Active* | Special Event                     |
+
+</article>
+
+My current license class is *Basic with Honours*, and I have been on-air since late 2020. More station information may be found at [my QRZ page](https://www.qrz.com/db/VA3ZZA).
+
+<article class="markdown-body">
+<table><tr>
+<td><img src="https://hamalert.org/myspot?c=VA3ZZA&amp;h=e0fa3b8ff28e81a5&amp;a=12" srcset="https://hamalert.org/myspot?c=VA3ZZA&amp;h=e0fa3b8ff28e81a5&amp&amp;hr=1&amp;a=12 2x"></td>
+<td><img src="https://hamalert.org/myspot?c=VB3YEET&amp;h=43adad96f1c09138&amp;a=12" srcset="https://hamalert.org/myspot?c=VB3YEET&amp;h=43adad96f1c09138&amp;hr=1&amp;a=12 2x"></td>
+</tr></table>
+</article>
+
+## Music
+
+I make music too! Nearly all electronic; a mix of samplers, raw sound design from oscillators, and everything in-between. The following are my three most recent releases:
+
+<div class="project-mosaic">
+  <div class="project project-small conform-height">
+    <img src="https://i.scdn.co/image/ab67616d00001e02c0921eceecc13b079e07e602" alt="Album Art" loading="lazy">
+    <!-- <h3>Space & Time, Vol. 1</h3>
+    <p>An album comprised of unrelated songs.</p> -->
+    <span style="border:none;padding:0;">
+      <a href="https://open.spotify.com/album/718OAeNsyhO1znebsXVSdf" target="blank"><i class="lab la-spotify"></i></a>
+      <a href="https://music.apple.com/us/album/space-time-vol-1-ep/1623507117" target="blank"><i class="lab la-apple"></i></a>
+      <a href="https://music.youtube.com/playlist?list=OLAK5uy_n1Q3M-zO8gloIvZD4NqMCvz2i9BOHoqIg" target="blank"><i class="lab la-youtube"></i></a>
+    </span>
+  </div>
+  <div class="project project-small conform-height">
+    <img src="https://i.scdn.co/image/ab67616d00001e026ceff2b5e55799d32b9d1b44" alt="Album Art" loading="lazy">
+    <!-- <h3>Scale Hop</h3>
+    <p>My reintroduction to Ableton after a 2-year break in music production.</p> -->
+    <span style="border:none;padding:0;">
+      <a href="https://open.spotify.com/album/6tpUJQlZ1I7bWK4X4pwiOj" target="blank"><i class="lab la-spotify"></i></a>
+      <a href="https://music.apple.com/us/album/scale-hop-single/1611874192" target="blank"><i class="lab la-apple"></i></a>
+      <a href="https://music.youtube.com/playlist?list=OLAK5uy_lbBo7a4AT-3s1xhs9FkL5yLM1-QNv3v7c" target="blank"><i class="lab la-youtube"></i></a>
+    </span>
+  </div>
+  <div class="project project-small conform-height">
+    <img src="https://i.scdn.co/image/ab67616d00001e0212903dc5bfc506c84fb16205" alt="Album Art" loading="lazy">
+    <!-- <h3>Studio225 Remasters</h3>
+    <p>My personal remasters of some old tracks produced in HighSchool audio production classes.</p> -->
+    <span style="border:none;padding:0;">
+      <a href="https://open.spotify.com/album/7BNFpIlZMbTksFJzMeiynE" target="blank"><i class="lab la-spotify"></i></a>
+      <a href="https://music.apple.com/us/album/studio225-remasters-remastered-single/1621595606" target="blank"><i class="lab la-apple"></i></a>
+      <a href="https://music.youtube.com/playlist?list=OLAK5uy_mzt8HGbC1A34irVWolKa6ApC3fCkSeEf8" target="blank"><i class="lab la-youtube"></i></a>
+    </span>
+  </div>
+</div>
+
+For more music content, check out [my music page](/music).
+
+
+
+<!-- ## Projects
+
+<div class="project-mosaic">
+
+  <div class="project"> 
+    <h3>The Freeform Internet Exchange Project</h3>
+    <p>FFIXP is a virtual internet exchange for connecting experimental and research networks in a reasonably safe and controlled manner.</p>
+    <span>
+      <a href="https://ffixp.net" target="blank"><i class="las la-globe"></i></a>
+      <a href="https://github.com/ffixp" target="blank"><i class="lab la-github"></i></a>
+    </span>
+  </div>
+
+  <div class="project">
+    <img src="https://raw.githubusercontent.com/Ewpratten/vb3yeet-aprs/master/assets/vb3yeet.png" alt="VB3YEET" loading="lazy">
+    <h3>VB3YEET APRS Station</h3>
+    <p>This application is a part of Meme Appreciation Month and powers the automatic APRS messaging capabilities behind <a href="/yeet">VB3YEET</a>.</p>
+    <span>
+      <a href="https://github.com/Ewpratten/vb3yeet-aprs" target="blank"><i class="lab la-github"></i></a>
+    </span>
+  </div>
+
+  
+
+</div> -->
+
+<!-- ## Am I on air?
 
 ...given how little time I leave for hobbies some days, probably not. But it's worth a check anyways. If I happen to be reaching you with my transmissions, please QSL.
 
@@ -39,7 +131,7 @@ Every once in a while, I get around to uploading a new track or two. If you'd li
 - [YouTube](https://www.youtube.com/channel/UCrHT3Lt0Mg90bspbMHJfTcA)
 - [Amazon Music](https://music.amazon.com/artists/B09TBHQCM1/evan-pratten)
 
-## Recent events
+## The Timeline
 
 <ul class="events-list">
 <li>2022</li>
@@ -88,6 +180,6 @@ Every once in a while, I get around to uploading a new track or two. If you'd li
   <li><div><span>Mar</span> <span>FRC Waterloo district event <em>quarter-finalists</em> as part of Raider Robotics</span></div></li>
   <li><div><span>Mar</span> <span>FRC Georgian district event <em>quarter-finalists</em> as part of Raider Robotics</span></div></li>
 </ul>
-</ul>
+</ul> -->
 
 
