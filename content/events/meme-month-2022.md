@@ -44,3 +44,92 @@ Simply send a message to the SSID `VB3YEET`, wait for your automatic response, a
 This mess is a little more organized than it appears on the surface. Want to join the fun?
 
 [<center><img class="hover-shadow" src="/images/join-our-discord.png" alt="Join our Discord server" style="max-width:200px;border-radius:5px;"></center>](https://discord.gg/y3yMfPPtdX)
+
+<script type="application/ld+json">
+[
+    {
+        "@type": "BroadcastEvent",
+        "name": "Meme Appreciation Month",
+        "startDate": "2022-06-25",
+        "endDate": "2022-08-05",
+        "isAccessibleForFree": true,
+    },
+    {
+        "@type": "RadioBroadcastService",
+        "broadcastDisplayName": "VB4LIGMA",
+        "callSign": "VB4LIGMA",
+        "isLanguage": "en",
+        "category": "Amateur Radio",
+        "sameAs": [
+            "https://www.qrz.com/db/VB4LIGMA",
+            "https://dxnews.com/forum/forum/special-event-stations/41657-vb4ligma-canada",
+            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+        ]
+    },
+    {
+        "@type": "RadioBroadcastService",
+        "broadcastDisplayName": "VB3YEET",
+        "callSign": "VB3YEET",
+        "isLanguage": "en",
+        "category": "Amateur Radio",
+        "sameAs": [
+            "https://www.qrz.com/db/VB3YEET",
+            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+        ]
+    },
+    {
+        "@type": "RadioBroadcastService",
+        "broadcastDisplayName": "VC9CATGIRL",
+        "callSign": "VC9CATGIRL",
+        "isLanguage": "en",
+        "category": "Amateur Radio",
+        "sameAs": [
+            "https://www.qrz.com/db/VC9CATGIRL",
+            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+        ]
+    },
+    {
+        "@type": "RadioBroadcastService",
+        "broadcastDisplayName": "K3K",
+        "callSign": "K3K",
+        "isLanguage": "en",
+        "category": "Amateur Radio",
+        "sameAs": [
+            "https://www.qrz.com/db/K3K"
+        ]
+    },
+    {
+        "@type": "RadioBroadcastService",
+        "broadcastDisplayName": "VB6DANK",
+        "callSign": "VB6DANK",
+        "isLanguage": "en",
+        "category": "Amateur Radio",
+        "sameAs": [
+            "https://www.qrz.com/db/VB6DANK",
+            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+        ]
+    },
+    {
+        "@type": "RadioBroadcastService",
+        "broadcastDisplayName": "VC3RIKROLL",
+        "callSign": "VC3RIKROLL",
+        "isLanguage": "en",
+        "category": "Amateur Radio",
+        "sameAs": [
+            "https://www.qrz.com/db/VC3RIKROLL",
+            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+        ]
+    },
+    {
+        "@type": "RadioBroadcastService",
+        "broadcastDisplayName": "VB3HARAMBE",
+        "callSign": "VB3HARAMBE",
+        "isLanguage": "en",
+        "category": "Amateur Radio",
+        "sameAs": [
+            "https://www.qrz.com/db/VB3HARAMBE",
+            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+        ]
+    }
+]
+</script>

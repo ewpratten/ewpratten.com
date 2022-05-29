@@ -20,6 +20,7 @@ As always, I'm working on multiple projects at the same time and have my head cr
 - Contributing to the Rust library and tooling ecosystem over on [GitHub](https://github.com/ewpratten)
 - Working with low-power radio communication modes
 
+
 ## Amateur Radio
 
 I am a fairly active Amateur Radio operator. The following table is a reference list of my current, future, and past callsigns:
@@ -84,6 +85,21 @@ I make music too! Nearly all electronic; a mix of samplers, raw sound design fro
 
 For more music content, check out [my music page](/music).
 
+
+<!-- ## Robotics
+
+Before college, I invested most of my time into learning to work with industrial control systems and medium-scale robotics. My specialization was in fully-autonomous and driver-assist navigation algorithms.
+
+I developed a highly flexible navigation and waypoint traversal system for [*Raider Robotics*](https://www.raiderrobotics.org) in highschool, and also wrote a complete robotic control library called: [Lib5K](https://github.com/frc5024/lib5k).
+
+<div style="display:flex; flex-wrap:wrap; justify-content:space-evenly;width:100%">
+<div style="width:340px"><img src="/images/hobbies/robotics/robots/darthraider.png" style="width:100%;" loading="lazy"></div>
+<div style="width:340px"><img src="/images/hobbies/robotics/robots/minibot.jpg" style="width:100%;" loading="lazy"></div>
+<div style="width:340px"><img src="/images/hobbies/robotics/robots/hatchfield.jpg" style="width:100%;"loading="lazy"></div>
+<div style="width:340px"><img src="/images/hobbies/robotics/robots/qbert.png" style="width:100%;" loading="lazy"></div>
+</div>
+
+More information on my robotics work can be found on [my robotics page](/hobbies/robotics). -->
 
 
 <!-- ## Projects
