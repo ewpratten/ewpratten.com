@@ -22,6 +22,8 @@ During the course of the event, the following callsigns will be active on air:
 
 The actual operators of these calls may <span class="gray">(will)</span> rotate throughout the event in order to get the most out of our money <span class="gray">*(cries in $60 event callsign fees)*</span>.
 
+*It is assumed that participating operators are members of our Discord server. If you are not, but would like your meme call in this list, contact [`memecalls@va3zza.com`](mailto:memecalls@va3zza.com)*
+
 ## Contacting us
 
 Between the group of operators behind this event, we will keep the meme calls on air for most of the event, surely with enough dial spinning you too can add a meme call to your logbook.
@@ -46,90 +48,90 @@ This mess is a little more organized than it appears on the surface. Want to joi
 [<center><img class="hover-shadow" src="/images/join-our-discord.png" alt="Join our Discord server" style="max-width:200px;border-radius:5px;"></center>](https://discord.gg/y3yMfPPtdX)
 
 <script type="application/ld+json">
-[
-    {
-        "@type": "BroadcastEvent",
-        "name": "Meme Appreciation Month",
-        "startDate": "2022-06-25",
-        "endDate": "2022-08-05",
-        "isAccessibleForFree": true,
-    },
-    {
-        "@type": "RadioBroadcastService",
-        "broadcastDisplayName": "VB4LIGMA",
-        "callSign": "VB4LIGMA",
-        "isLanguage": "en",
-        "category": "Amateur Radio",
-        "sameAs": [
-            "https://www.qrz.com/db/VB4LIGMA",
-            "https://dxnews.com/forum/forum/special-event-stations/41657-vb4ligma-canada",
-            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
-        ]
-    },
-    {
-        "@type": "RadioBroadcastService",
-        "broadcastDisplayName": "VB3YEET",
-        "callSign": "VB3YEET",
-        "isLanguage": "en",
-        "category": "Amateur Radio",
-        "sameAs": [
-            "https://www.qrz.com/db/VB3YEET",
-            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
-        ]
-    },
-    {
-        "@type": "RadioBroadcastService",
-        "broadcastDisplayName": "VC9CATGIRL",
-        "callSign": "VC9CATGIRL",
-        "isLanguage": "en",
-        "category": "Amateur Radio",
-        "sameAs": [
-            "https://www.qrz.com/db/VC9CATGIRL",
-            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
-        ]
-    },
-    {
-        "@type": "RadioBroadcastService",
-        "broadcastDisplayName": "K3K",
-        "callSign": "K3K",
-        "isLanguage": "en",
-        "category": "Amateur Radio",
-        "sameAs": [
-            "https://www.qrz.com/db/K3K"
-        ]
-    },
-    {
-        "@type": "RadioBroadcastService",
-        "broadcastDisplayName": "VB6DANK",
-        "callSign": "VB6DANK",
-        "isLanguage": "en",
-        "category": "Amateur Radio",
-        "sameAs": [
-            "https://www.qrz.com/db/VB6DANK",
-            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
-        ]
-    },
-    {
-        "@type": "RadioBroadcastService",
-        "broadcastDisplayName": "VC3RIKROLL",
-        "callSign": "VC3RIKROLL",
-        "isLanguage": "en",
-        "category": "Amateur Radio",
-        "sameAs": [
-            "https://www.qrz.com/db/VC3RIKROLL",
-            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
-        ]
-    },
-    {
-        "@type": "RadioBroadcastService",
-        "broadcastDisplayName": "VB3HARAMBE",
-        "callSign": "VB3HARAMBE",
-        "isLanguage": "en",
-        "category": "Amateur Radio",
-        "sameAs": [
-            "https://www.qrz.com/db/VB3HARAMBE",
-            "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
-        ]
-    }
-]
+{
+    "@type": "BroadcastEvent",
+    "name": "Meme Appreciation Month",
+    "startDate": "2022-06-25",
+    "endDate": "2022-08-05",
+    "isAccessibleForFree": true,
+    "publishedOn": [
+        {
+            "@type": "RadioBroadcastService",
+            "broadcastDisplayName": "VB4LIGMA",
+            "callSign": "VB4LIGMA",
+            "isLanguage": "en",
+            "category": "Amateur Radio",
+            "sameAs": [
+                "https://www.qrz.com/db/VB4LIGMA",
+                "https://dxnews.com/forum/forum/special-event-stations/41657-vb4ligma-canada",
+                "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+            ]
+        },
+        {
+            "@type": "RadioBroadcastService",
+            "broadcastDisplayName": "VB3YEET",
+            "callSign": "VB3YEET",
+            "isLanguage": "en",
+            "category": "Amateur Radio",
+            "sameAs": [
+                "https://www.qrz.com/db/VB3YEET",
+                "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+            ]
+        },
+        {
+            "@type": "RadioBroadcastService",
+            "broadcastDisplayName": "VC9CATGIRL",
+            "callSign": "VC9CATGIRL",
+            "isLanguage": "en",
+            "category": "Amateur Radio",
+            "sameAs": [
+                "https://www.qrz.com/db/VC9CATGIRL",
+                "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+            ]
+        },
+        {
+            "@type": "RadioBroadcastService",
+            "broadcastDisplayName": "K3K",
+            "callSign": "K3K",
+            "isLanguage": "en",
+            "category": "Amateur Radio",
+            "sameAs": [
+                "https://www.qrz.com/db/K3K"
+            ]
+        },
+        {
+            "@type": "RadioBroadcastService",
+            "broadcastDisplayName": "VB6DANK",
+            "callSign": "VB6DANK",
+            "isLanguage": "en",
+            "category": "Amateur Radio",
+            "sameAs": [
+                "https://www.qrz.com/db/VB6DANK",
+                "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+            ]
+        },
+        {
+            "@type": "RadioBroadcastService",
+            "broadcastDisplayName": "VC3RIKROLL",
+            "callSign": "VC3RIKROLL",
+            "isLanguage": "en",
+            "category": "Amateur Radio",
+            "sameAs": [
+                "https://www.qrz.com/db/VC3RIKROLL",
+                "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+            ]
+        },
+        {
+            "@type": "RadioBroadcastService",
+            "broadcastDisplayName": "VB3HARAMBE",
+            "callSign": "VB3HARAMBE",
+            "isLanguage": "en",
+            "category": "Amateur Radio",
+            "sameAs": [
+                "https://www.qrz.com/db/VB3HARAMBE",
+                "https://apc-cap.ic.gc.ca/pls/apc_anon/query_spev$.startup"
+            ]
+        }
+    ]
+}
 </script>
