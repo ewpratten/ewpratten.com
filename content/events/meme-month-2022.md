@@ -16,6 +16,7 @@ During the course of the event, the following callsigns will be active on air:
 - <span class="fi fi-ca"></span> [VB3YEET](https://www.qrz.com/db/VB3YEET?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022)
 - <span class="fi fi-ca"></span> [VC9CATGIRL](https://www.qrz.com/db/VC9CATGIRL?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022)
 - <span class="fi fi-us"></span> [K3K](https://www.qrz.com/db/K3K?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022)
+- <span class="fi fi-ca"></span> [VC3DEEZ](https://www.qrz.com/db/VC3DEEZ?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022)
 - <span class="fi fi-ca"></span> VB6DANK <!-- [VB6DANK](https://www.qrz.com/db/VB6DANK?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022) -->
 - <span class="fi fi-ca"></span> VC3RIKROLL <!-- [VC3RIKROLL](https://www.qrz.com/db/VC3RIKROLL?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022) -->
 - <span class="fi fi-ca"></span> VB3HARAMBE
@@ -97,6 +98,16 @@ This mess is a little more organized than it appears on the surface. Want to joi
             "category": "Amateur Radio",
             "sameAs": [
                 "https://www.qrz.com/db/K3K"
+            ]
+        },
+        {
+            "@type": "RadioBroadcastService",
+            "broadcastDisplayName": "VC3DEEZ",
+            "callSign": "VC3DEEZ",
+            "isLanguage": "en",
+            "category": "Amateur Radio",
+            "sameAs": [
+                "https://www.qrz.com/db/VC3DEEZ"
             ]
         },
         {
