@@ -20,3 +20,4 @@ If you'd rather find me somewhere else, here's a list of platforms I am reasonab
 - [YouTube](https://www.youtube.com/channel/UCrHT3Lt0Mg90bspbMHJfTcA")
 - [AVRFreaks](https://www.avrfreaks.net/users/ewpratten)
 - [Chief Delphi](https://www.chiefdelphi.com/u/ewpratten)
+- [IMDb](https://www.imdb.com/name/nm13747554/)
