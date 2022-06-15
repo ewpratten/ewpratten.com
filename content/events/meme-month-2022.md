@@ -17,9 +17,9 @@ During the course of the event, the following callsigns will be active on air:
 - <span class="fi fi-ca"></span> [VC9CATGIRL](https://www.qrz.com/db/VC9CATGIRL?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022)
 - <span class="fi fi-us"></span> [K3K](https://www.qrz.com/db/K3K?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022)
 - <span class="fi fi-ca"></span> [VC3DEEZ](https://www.qrz.com/db/VC3DEEZ?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022)
+- <span class="fi fi-ca"></span> [VB3HARAMBE](https://www.qrz.com/db/VB3HARAMBE)
+- <span class="fi fi-ca"></span> [VC3RIKROLL](https://www.qrz.com/db/VC3RIKROLL?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022)
 - <span class="fi fi-ca"></span> VB6DANK <!-- [VB6DANK](https://www.qrz.com/db/VB6DANK?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022) -->
-- <span class="fi fi-ca"></span> VC3RIKROLL <!-- [VC3RIKROLL](https://www.qrz.com/db/VC3RIKROLL?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022) -->
-- <span class="fi fi-ca"></span> VB3HARAMBE
 
 The actual operators of these calls may <span class="gray">(will)</span> rotate throughout the event in order to get the most out of our money <span class="gray">*(cries in $60 event callsign fees)*</span>.
 
@@ -34,6 +34,7 @@ Between the group of operators behind this event, we will keep the meme calls on
 <td><img src="https://hamalert.org/myspot?c=VB3YEET&amp;h=43adad96f1c09138&amp;a=12" srcset="https://hamalert.org/myspot?c=VB3YEET&amp;h=43adad96f1c09138&amp;hr=1&amp;a=12 2x"></td>
 </tr><tr>
 <td><img src="https://hamalert.org/myspot?c=VC9CATGIRL&amp;h=976e9f7f1a40bfbc&amp;a=12" srcset="https://hamalert.org/myspot?c=VC9CATGIRL&amp;h=976e9f7f1a40bfbc&amp;hr=1&amp;a=12 2x"></td>
+<td><img src="https://hamalert.org/myspot?c=VB3HARAMBE&amp;h=227ae1c093e9208c&amp;a=12" srcset="https://hamalert.org/myspot?c=VB3HARAMBE&amp;h=227ae1c093e9208c&amp;hr=1&amp;a=12 2x"></td>
 </tr></table>
 
 ### Missing out on the lolz? <span style="color:red;">~~Move closer to Canada~~</span> <span style="color:green;">*Try APRS!*</span>
