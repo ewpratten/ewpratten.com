@@ -1,6 +1,6 @@
 ---
 title: Meme Appreciation Month
-description: "\"Ligma Balls OM\""
+description: "Come chat with young hams, and join the meme madness!"
 aliases: [/yeet]
 extra:
     uses_flags: true
