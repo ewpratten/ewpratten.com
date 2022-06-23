@@ -13,6 +13,12 @@ extra:
 <img style="max-width:400px;" src="https://bgp.tools/pathimg/204466-default" alt="Routing overview is currently unavailable for display">
 </div>
 
+<br>
+You may find the following links useful:
+
+- [bgp.tools](https://bgp.tools/as/204466)
+- [PeeringDB](https://www.peeringdb.com/asn/204466)
+
 ## Network goals
 
 - Focus on IPv6 adoption
@@ -30,7 +36,14 @@ Looking to peer with the network? [Send me a message](/contact), and I'll work s
 | [`44.31.62.0/24`](https://bgp.tools/prefix/44.31.62.0/24)             | London, UK   | AMPRNet address block        |
 | [`2a06:a005:d2b::/48`](https://bgp.tools/prefix/2a06:a005:d2b::/48)   | Toronto, CA  | North America - General use  |
 | [`2a12:dd47:8040::/48`](https://bgp.tools/prefix/2a12:dd47:8040::/48) | London, UK   | General use & Infrastructure |
-| [`2a06:a005:ed1::/48`](https://bgp.tools/prefix/2a06:a005:ed1::/48)   | London, UK   | Europe - General use         |
+| [`2a06:a005:edf::/48`](https://bgp.tools/prefix/2a06:a005:edf::/48)   | N/A          | Anycast Prefix               |
+
+### Anycast addresses
+
+I am making use of anycast addresses to provide simple geographically routed endpoints for various services. The following are what I have set up so far:
+
+- `2a06:a005:edf::1`: Best router
+- `2a06:a005:edf::614c`: Best 6in4 tunnel
 
 ## Requests and employment opportunities
 
