@@ -47,7 +47,13 @@
 {% endblock head %}
 
 {% block content %}
+{% if section.extra.enable_gh_markdown %}
+<article class="markdown-body">
+{% endif %}
 {{section.content | safe}}
+{% if section.extra.enable_gh_markdown %}
+</article>
+{% endif %}
 
 {# Blog posts #}
 {% if section.extra.inject_blog_posts %}
