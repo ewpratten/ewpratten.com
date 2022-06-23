@@ -27,7 +27,7 @@ You may find the following links useful:
 
 ## Peering
 
-Looking to peer with the network? [Send me a message](/contact), and I'll work something out with you. Physical co-location is not a requirement.
+Looking to peer with the network? [Send me a message](/contact), and I'll work something out with you. Physical co-location is not a requirement, I do most of my work through WireGuard tunnels.
 
 ## Sub-networks
 
