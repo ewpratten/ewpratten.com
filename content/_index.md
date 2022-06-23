@@ -8,7 +8,7 @@ title: Home
 
 ## About me
 
-<span class="description">I'm a Canadian software developer, 3D artist, photographer, musician, [blogger](/blog), amateur radio operator, and general maker of things. I love to experiment with little-used technologies, and specialize in *making things interconnect*.</span>
+<span class="description">I'm a Canadian software developer, 3D artist, photographer, network operator, musician, [blogger](/blog), amateur radio operator, IPv6 nerd, drone pilot, and general maker of things. I love to experiment with little-used technologies, and specialize in *making things interconnect*.</span>
 
 <!-- I am a first-year college student, studying Software Engineering at Sheridan College. I develop software both as a hobby, and professionally, and have been programming since I was in the 5th grade. I am also a Canadian amateur radio operator (callsign **VA3ZZA**), and the former Lead Software Developer at [Raider Robotics](https://github.com/frc5024). -->
 
@@ -16,7 +16,7 @@ title: Home
 As always, I'm working on multiple projects at the same time and have my head crammed full of technobabble. Currently, I am:
 
 - Working on the graphics pipeline powering children's TV productions at [Industrial Brothers](https://www.industrialbrothers.com/)
-- Administering experimental internet routing gear
+- Operating [AS204466](https://bgp.tools/as/204466), a global IPv6 network.
 - Contributing to the Rust library and tooling ecosystem over on [GitHub](https://github.com/ewpratten)
 - Working with low-power radio communication modes
 
@@ -32,8 +32,8 @@ I am a fairly active Amateur Radio operator. The following table is a reference 
 | **VA3ZZA**           | *Active* | My primary callsign               |
 | **VA3UJF**           | *Active* | Testing & automated transmissions |
 | [**VB3YEET**](/yeet) | *Future* | Special Event                     |
-| **VG3ZZA**           | *Active* | Special Event                     |
-| **VG3UJF**           | *Active* | Special Event                     |
+<!-- | **VG3ZZA**           | *Active* | Special Event                     | -->
+<!-- | **VG3UJF**           | *Active* | Special Event                     | -->
 
 </article>
 
