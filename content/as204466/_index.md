@@ -27,24 +27,24 @@ You may find the following links useful:
 
 ## Peering
 
-Looking to peer with the network? [Send me a message](/contact), and I'll work something out with you. Physical co-location is not a requirement, I do most of my work through WireGuard tunnels.
+Looking to peer with the network? [Send me a message](/contact), and I'll work something out with you. Physical co-location is not a requirement, I do most of my work through WireGuard tunnels, and am up to trying new things.
 
-## Sub-networks
+## Prefixes
 
-| Prefix                                                                | Announced at | Description                  |
-|-----------------------------------------------------------------------|--------------|------------------------------|
-| [`44.31.62.0/24`](https://bgp.tools/prefix/44.31.62.0/24)             | London, UK   | AMPRNet address block        |
-| [`2a06:a005:d2b::/48`](https://bgp.tools/prefix/2a06:a005:d2b::/48)   | Toronto, CA  | North America - General use  |
-| [`2a12:dd47:8040::/48`](https://bgp.tools/prefix/2a12:dd47:8040::/48) | London, UK   | General use & Infrastructure |
-| [`2a06:a005:edf::/48`](https://bgp.tools/prefix/2a06:a005:edf::/48)   | N/A          | Anycast Prefix               |
+The following is the as204466 prefix breakdown. This list should be fairly up to date, but real-time announcements can be viewed [here](https://bgp.tools/as/204466#prefixes).
 
-### Anycast addresses
+- [`44.31.62.0/24`](https://bgp.tools/prefix/44.31.62.0/24): AMPRNet address block
+- [`2a12:dd47:8040::/48`](https://bgp.tools/prefix/2a12:dd47:8040::/48): Primary European service
+- [`2a06:a005:d2b::/48`](https://bgp.tools/prefix/2a06:a005:d2b::/48): Primary North American service
+- `2a06:a005:ed0::/44`: Global allocation pool
+  - [`2a06:a005:ed0::/48`](https://bgp.tools/prefix/2a06:a005:ed0::/48): Experimental
+  - [`2a06:a005:edf::/48`](https://bgp.tools/prefix/2a06:a005:edf::/48): Anycast
 
-I am making use of anycast addresses to provide simple geographically routed endpoints for various services. The following are what I have set up so far:
+Currently, these blocks are announced from the following locations:
 
-- `2a06:a005:edf::1`: Best router
-- `2a06:a005:edf::614c`: Best 6in4 tunnel
+- London, UK (Interxion LON1)
+- Toronto, Canada (Equinix TR2)
 
-## Requests and employment opportunities
+## Contact
 
-I enjoy working with backbone tech, and would love to work with you on a larger scale. Please [contact me](/contact) if your company is hiring, or for any other information related to AS204466.
+If you or your company would like to get in touch, please [contact me](/contact). I currently handle all aspects of operation for as204466, and network issues will be treated with urgency.
