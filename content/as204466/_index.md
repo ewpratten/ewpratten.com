@@ -36,6 +36,7 @@ The following is the as204466 prefix breakdown. This list should be fairly up to
 - [`44.31.62.0/24`](https://bgp.tools/prefix/44.31.62.0/24): AMPRNet address block
 - [`2a12:dd47:8040::/48`](https://bgp.tools/prefix/2a12:dd47:8040::/48): Primary European service
 - [`2a06:a005:d2b::/48`](https://bgp.tools/prefix/2a06:a005:d2b::/48): Primary North American service
+  - `2a06:a005:d2b:c011::/64`: The [rickroll subnet](/blog/rickrolling-the-internet/)
 - `2a06:a005:ed0::/44`: Global allocation pool
   - [`2a06:a005:ed0::/48`](https://bgp.tools/prefix/2a06:a005:ed0::/48): Experimental
   - [`2a06:a005:edf::/48`](https://bgp.tools/prefix/2a06:a005:edf::/48): Anycast
