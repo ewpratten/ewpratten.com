@@ -6,12 +6,37 @@ title: Home
 <p>Looking for my portfolio? Click <a href="">here</a>.</p>
 </div> -->
 
-## About me
+## About me 
 
-<span class="description">I'm a Canadian software developer, 3D artist, [photographer](https://instagram.com/evanpratten), [network operator](/as204466), [musician](/music), [blogger](/blog), amateur radio operator, IPv6 nerd, drone pilot, and general maker of things. I love to experiment with little-used technologies, and specialize in *making things interconnect*.</span>
+<center><em>"Collecting hobbies like pokemon cards"</em></center>
+<br>
+
+<div id="main-skills" >
+<div>
+
+- Software developer
+- 3D artist
+- [Photographer](https://instagram.com/evanpratten)
+- [Network operator](/as204466)
+- [Musician](/music)
+- Hacker
+
+</div><div>
+
+- [Blogger](/blog)
+- Amateur radio operator
+- [Competitive programmer](/hobbies/software/competitive-programming)
+- IPv6 nerd
+- Drone pilot
+- General maker of things
+
+</div></div>
+
+<!-- I love to experiment with little-used technologies, and specialize in *making things interconnect*. -->
 
 <!-- I am a first-year college student, studying Software Engineering at Sheridan College. I develop software both as a hobby, and professionally, and have been programming since I was in the 5th grade. I am also a Canadian amateur radio operator (callsign **VA3ZZA**), and the former Lead Software Developer at [Raider Robotics](https://github.com/frc5024). -->
 
+<br>
 
 As always, I'm working on multiple projects at the same time and have my head crammed full of technobabble. Currently, I am:
 
@@ -20,6 +45,13 @@ As always, I'm working on multiple projects at the same time and have my head cr
 - Contributing to the Rust library and tooling ecosystem over on [GitHub](https://github.com/ewpratten)
 - Working with low-power radio communication modes
 
+<!-- ## Projects
+
+The following links will bring you to more specific pages covering some of my best projects in various fields.
+
+- [Minecraft Development](/projects/minecraft)
+- [Kobo Ereader Hacking](/projects/kobo)
+- [Chromebook Hacking](/projects/chromebooks) -->
 
 ## Amateur Radio
 
@@ -31,7 +63,7 @@ I am a fairly active Amateur Radio operator. The following table is a reference 
 |----------------------|:--------:|-----------------------------------|
 | **VA3ZZA**           | *Active* | My primary callsign               |
 | **VA3UJF**           | *Active* | Testing & automated transmissions |
-| [**VB3YEET**](/yeet) | *Future* | Special Event                     |
+| [**VB3YEET**](/yeet) | *Active* | Special Event                     |
 <!-- | **VG3ZZA**           | *Active* | Special Event                     | -->
 <!-- | **VG3UJF**           | *Active* | Special Event                     | -->
 

@@ -10,7 +10,7 @@ h6 {
 p,
 li,
 span {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: normal;
 }
 a {
@@ -272,5 +272,19 @@ ul {
 .hover-shadow {
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
+
+#main-skills {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+  @media screen and (max-width: 455px) {
+    justify-content: left;
+  }
+  
+  ul {
+    margin:0;
   }
 }
