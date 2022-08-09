@@ -63,20 +63,20 @@ I am a fairly active Amateur Radio operator. The following table is a reference 
 |----------------------|:--------:|-----------------------------------|
 | **VA3ZZA**           | *Active* | My primary callsign               |
 | **VA3UJF**           | *Active* | Testing & automated transmissions |
-| [**VB3YEET**](/yeet) | *Active* | Special Event                     |
+<!-- | [**VB3YEET**](/yeet) | *Active* | Special Event                     | -->
 <!-- | **VG3ZZA**           | *Active* | Special Event                     | -->
 <!-- | **VG3UJF**           | *Active* | Special Event                     | -->
 
 </article>
 
-My current license class is *Basic with Honours*, and I have been on-air since late 2020. More station information may be found at [my QRZ page](https://www.qrz.com/db/VA3ZZA).
+<!-- My current license class is *Basic with Honours*, and I have been on-air since late 2020. More station information may be found at [my QRZ page](https://www.qrz.com/db/VA3ZZA).
 
 <article class="markdown-body">
 <table><tr>
 <td><img src="https://hamalert.org/myspot?c=VA3ZZA&amp;h=e0fa3b8ff28e81a5&amp;a=12" srcset="https://hamalert.org/myspot?c=VA3ZZA&amp;h=e0fa3b8ff28e81a5&amp&amp;hr=1&amp;a=12 2x"></td>
 <td><img src="https://hamalert.org/myspot?c=VB3YEET&amp;h=43adad96f1c09138&amp;a=12" srcset="https://hamalert.org/myspot?c=VB3YEET&amp;h=43adad96f1c09138&amp;hr=1&amp;a=12 2x"></td>
 </tr></table>
-</article>
+</article> -->
 
 ## Music
 
