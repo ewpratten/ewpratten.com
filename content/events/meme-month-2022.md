@@ -20,6 +20,8 @@ During the course of the event, the following callsigns will be active on air:
 - <span class="fi fi-ca"></span> [VB3HARAMBE](https://www.qrz.com/db/VB3HARAMBE)
 - <span class="fi fi-ca"></span> [VC3RIKROLL](https://www.qrz.com/db/VC3RIKROLL?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022)
 - <span class="fi fi-fr"></span> [TM1SSOU](https://www.qrz.com/db/TM1SSOU)
+- <span class="fi fi-fr"></span> [TM0WO](https://www.qrz.com/db/TM0WO)
+- <span class="fi fi-fr"></span> [TM0RBIN](https://www.qrz.com/db/TM0RBIN)
 - <span class="fi fi-ca"></span> VB6DANK <!-- [VB6DANK](https://www.qrz.com/db/VB6DANK?utm_source=va3zza&utm_medium=blog&utm_campaign=meme_month_2022) -->
 
 The actual operators of these calls may <span class="gray">(will)</span> rotate throughout the event in order to get the most out of our money <span class="gray">*(cries in $60 event callsign fees)*</span>.
