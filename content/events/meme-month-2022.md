@@ -6,6 +6,8 @@ extra:
     uses_flags: true
 ---
 
+***This event has passed. Page preserved for nostalgia.***
+
 *Meme Appreciation Month* is an event organized by a bunch of <a class="hover-help" title="..really? (Licensed IDiot)">LID</a>s as <span style="color:red;">~~an excuse to put rediculous callsigns on the air~~</span> <span style="color:green;">*a celebration of the funny internet pictures your parents don't understand*</span> during the period from **June 25<sup>th</sup>** to **August 5<sup>th</sup>** 2022.
 
 ## Who? <span class="small gray">..asked?</span>
@@ -26,7 +28,7 @@ During the course of the event, the following callsigns will be active on air:
 
 The actual operators of these calls may <span class="gray">(will)</span> rotate throughout the event in order to get the most out of our money <span class="gray">*(cries in $60 event callsign fees)*</span>.
 
-*It is assumed that participating operators are members of our Discord server. If you are not, but would like your meme call in this list, contact [`memecalls@va3zza.com`](mailto:memecalls@va3zza.com)*
+<!-- *It is assumed that participating operators are members of our Discord server. If you are not, but would like your meme call in this list, contact [`memecalls@va3zza.com`](mailto:memecalls@va3zza.com)* -->
 
 ## Contacting us
 
