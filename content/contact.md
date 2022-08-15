@@ -6,6 +6,15 @@ description: Here is how you can reach me
 
 Want to get in touch? Feel free to send me an email at [mail@va3zza.com](mailto:mail@va3zza.com). If you'd prefer a more casual chat, message me on Discord at `ewpratten#9114`.
 
+## NOC
+
+If you need to contact me in relation to AS398057 or AS204466, please use the following:
+
+| Service | Contact          |
+|---------|------------------|
+| Email   | `noc@va3zza.com` |
+| Discord | `ewpratten#9114` |
+
 ## Me, elsewhere
 
 If you'd rather find me somewhere else, here's a list of platforms I am reasonably active on:

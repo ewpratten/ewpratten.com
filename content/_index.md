@@ -17,7 +17,7 @@ title: Home
 - Software developer
 - 3D artist
 - [Photographer](https://instagram.com/evanpratten)
-- [Network operator](/as204466)
+- [Network operator](https://net.va3zza.com)
 - [Musician](/music)
 - Hacker
 
@@ -41,7 +41,7 @@ title: Home
 As always, I'm working on multiple projects at the same time and have my head crammed full of technobabble. Currently, I am:
 
 - Working on the graphics pipeline powering children's TV productions at [Industrial Brothers](https://www.industrialbrothers.com/)
-- Operating [AS204466](/as204466), a global IPv6 network.
+- Operating [AS398057](https://net.va3zza.com), providing internet backbone services.
 - Contributing to the Rust library and tooling ecosystem over on [GitHub](https://github.com/ewpratten)
 - Working with low-power radio communication modes
 

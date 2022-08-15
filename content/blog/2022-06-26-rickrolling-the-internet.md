@@ -11,6 +11,8 @@ extra:
   excerpt: This post covers some of the logistics behind rickrolling the internet with some clever routing tricks.
 ---
 
+**NOTICE: The service mentioned in this post is currently unavailable due to ongoing network upgrades.**
+
 `mtr` (a modern version of [`traceroute`](https://en.wikipedia.org/wiki/Traceroute)) is a network debugging tool commonly used by network engineers to trace the physical (and sometimes virtual) paths their packets take between two computers over a network. Both `mtr` and `traceroute` will list the addresses or names of as many routers along the path as they can.
 
 The following is an example output of an `mtr` trace from this computer to a Hurricane Electric server:
