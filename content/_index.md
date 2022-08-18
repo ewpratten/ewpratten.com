@@ -24,6 +24,7 @@ I like to learn new things, and build up my arsenal of unusual skills. Everythin
 - [Network operator](https://net.va3zza.com)
 - [Musician](/music)
 - Hacker
+- Longboard enthusiast
 
 </div><div>
 
@@ -31,6 +32,7 @@ I like to learn new things, and build up my arsenal of unusual skills. Everythin
 - Amateur radio operator
 - [Competitive programmer](/hobbies/software/competitive-programming)
 - IPv6 nerd
+- Keyboard builder
 - Drone pilot
 - General maker of things
 
@@ -48,15 +50,24 @@ As always, I'm working on multiple projects at the same time and have my head cr
 - Operating [AS398057](https://net.va3zza.com), providing internet backbone services.
 - Contributing to the Rust library and tooling ecosystem over on [GitHub](https://github.com/ewpratten)
 
-## Experience
+<!-- ## Experience
 
 - **Pipeline Software Developer**, [Industrial Brothers](https://www.industrialbrothers.com/)
 - **Pipeline Technical Director**, [Industrial Brothers](https://www.industrialbrothers.com/)
 - **Lead of Software Development**, [Raider Robotics](https://raiderrobotics.org)
 - **Technical Consultant**, [Personal Computers of London](http://pcol.ca)
-- **Co-Founder**, [RetryLife](/music/retrylife)
+- **Co-Founder**, [RetryLife](/music/retrylife) -->
 
-## Projects
+## The less technical
+
+Occasionally I like to spend some time doing something that doesn't involve programming.
+
+I've been a musician since a very young age, and still continue my musical experimentation (albeit to a lesser degree) in my free time. I generally focus on integrating various samples into new genres, and like to produce tracks that float somewhere between dubstep and lofi. Check out [my music page](/music) for more info.
+
+I also enjoy shooting and editing photos. I almost exclusively shoot with just a phone camera, and like playing around with various bits of software for the finishing touches. Check out my photography and 3D rendering work [on my Instagram page](https://instagram.com/evanpratten).
+
+
+## Featured Projects
 
 <div class="project">
 <h3>AS398057</h3>
@@ -68,7 +79,7 @@ AS398057 (formerly AS204466) is my personal network, powering many of my project
 </div>
 
 <div class="project">
-<h3>Rust libraries</h3>
+<h3>Rust libraries</h3> 
 
 I develop and maintain many Rust libraries. Some are end products, but many are developed out of necessity for other projects of mine. I see a strong future in the Rust programming language, and it has become my language of choice in personal projects.
 
@@ -84,6 +95,17 @@ Every half-year, I set aside some time to participate in [Ludum Dare](https://ld
 - [\[data::loss\]](https://github.com/Ewpratten/ludum-dare-49)
 - [Deep Breath](https://github.com/Ewpratten/ludum-dare-48)
 - [Micromanaged Mike](https://rsninja.dev/LudumDare46/)
+</div>
+
+<div class="project">
+<h3>Robotics</h3>
+
+From 2017 to 2021, I was the Lead Software Developer at [Raider Robotics](https://raiderrobotics.org), a competitive robotics team. I handled most aspects of core software development and subteam management. Some of the biggest projects I lead during my time with the team were:
+
+- [Lib5K](https://github.com/frc5024/lib5k), the core control and mathematics library for the team
+- [Darth Raider](https://github.com/frc5024/InfiniteRecharge), a highly integrated robot with fully-autonomous navigation and control
+- [HATCHField](https://github.com/frc5024/DeepSpace), a robot with experimental on-the-fly path planning capabilities
+- [Q*bert](https://github.com/frc5024/powerup), a robot that integrated my first ever computer-vision-assisted aiming system
 </div>
 
 
