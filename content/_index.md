@@ -21,7 +21,7 @@ I like to learn new things, and build up my arsenal of unusual skills. Everythin
 - Software developer
 - 3D artist
 - [Photographer](https://instagram.com/evanpratten)
-- [Network operator](https://net.va3zza.com)
+- [Network operator](/network)
 - [Musician](/music)
 - Hacker
 - Longboard enthusiast
@@ -47,7 +47,7 @@ I like to learn new things, and build up my arsenal of unusual skills. Everythin
 As always, I'm working on multiple projects at the same time and have my head crammed full of technobabble. Currently, I am:
 
 - Working on the graphics pipeline powering children's TV productions at [Industrial Brothers](https://www.industrialbrothers.com/)
-- Operating [AS398057](https://net.va3zza.com), providing internet backbone services.
+- Operating [AS398057](/network), providing internet backbone services.
 - Contributing to the Rust library and tooling ecosystem over on [GitHub](https://github.com/ewpratten)
 
 <!-- ## Experience
@@ -74,7 +74,7 @@ I also enjoy shooting and editing photos. I almost exclusively shoot with just a
 
 AS398057 (formerly AS204466) is my personal network, powering many of my projects. I cover all aspects of network operation myself, from playing [NOC](https://en.wikipedia.org/wiki/Network_operations_center) to getting my hands dirty with hand-crafted router configs.
 
-- [Website](https://net.va3zza.com)
+- [Website](/network)
 - [PeeringDB](https://peeringdb.com/asn/398057)
 </div>
 

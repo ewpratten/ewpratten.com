@@ -3,7 +3,7 @@ layout: page
 title: "Rickrolling the internet" 
 description: "Abusing ICMPv6 to inject lyrics into public routes"
 date: 2022-06-26
-tags: random as204466
+tags: random as398057
 draft: false
 extra:
   uses_katex: false

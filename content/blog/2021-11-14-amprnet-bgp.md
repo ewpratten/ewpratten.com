@@ -3,7 +3,7 @@ layout: page
 title:  "Adventures in BGP: routing my own public IPv4 address space"
 description: "A college student, playing with the \"big boys\""
 date:   2021-11-14
-tags: reference
+tags: reference as398057
 extra:
     excerpt: This post covers the process I went through to publicly route my own /24 block of IP addresses with low-cost hardware.
 ---
