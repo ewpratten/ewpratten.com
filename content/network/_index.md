@@ -61,5 +61,12 @@ To request a peering arrangement, please contact me via email at [`peering@va3zz
 - Routing policy may be found via WHOIS. ([`whois -h whois.radb.net AS398057`](https://www.radb.net/query?keywords=AS398057))
 - I will generally announce [`AS-EVAN-PRATTEN`](https://www.radb.net/query?keywords=AS-EVAN-PRATTEN) to peers by default
 
+<hr>
+
+<div style="text-align:center;display:flex;justify-content:space-evenly;align-items:center;flex-wrap:wrap;">
+<img src="//ipv6.he.net/certification/create_badge.php?pass_name=ewpratten&amp;badge=1" style="border: 0; width: 128px; height: 128px" alt="IPv6 Certification Badge for ewpratten"></img>
+<a href="https://www.arin.net/"><img src="/images/network/arin.png" alt="ARIN Member" width="256px"></img></a>
+<a href="https://www.ampr.org/"><img src="/images/network/44-logo.png" alt="AMPRNet Operator" width="128px"></img></a>
+</div>
 
 <br><br>
