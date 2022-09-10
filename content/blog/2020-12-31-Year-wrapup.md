@@ -34,6 +34,7 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 </iframe>
 
 *The full source code and tooling for this robot is [public](https://github.com/frc5024/InfiniteRecharge)*
+
 </div>
 
 This robot brought us all the way to the finals of our only competition this year (before the world got shut down). It was only in the finals that we finally lost our winning streak (and strong #1 place) due to some questionable scoring and a broken component on one of our teammate's robots.

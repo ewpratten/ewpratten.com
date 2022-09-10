@@ -64,7 +64,9 @@ The resulting directory structure would end up looking like:
 ```
 
 <div class="center" markdown="1">
+
 *Generated with [tree.nathanfriend.io](https://tree.nathanfriend.io)*
+
 </div>
 
 In this example. I chose to use the `sha1` hashing algorithm, but maven clients support pretty much any algorithm I can think of. 

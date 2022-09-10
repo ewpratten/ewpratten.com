@@ -22,7 +22,9 @@ From Jitpack, I moved on to hosting a maven server in a docker container on one 
 After my attempt at self-hosting, I moved to (and quickly away from) [GitHub Packages](https://github.com/features/packages). GitHub Packages is a great service with a huge drawback. Anyone wanting to use one of my libraries must authenticate with the github maven servers. Along with that, the buildsystem configuration to actually load a GitHub Packages artifact is currently a bit of a mess. While GitHub staff have addressed this issue, and a way to load packages without authentication is roumered to be coming to the platform sometime soon, I don't want to wait. After this adventure, I got curious. 
 
 <div class="center" markdown="1">
+
 > *How hard is it to write my own maven server?* 
+
 </div>
 
 Turns out, not very hard at all.

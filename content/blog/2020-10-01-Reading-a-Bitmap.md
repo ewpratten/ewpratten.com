@@ -28,8 +28,10 @@ While @rsninja722 was working on his project, I found myself using `xxd` and `py
 This was the first big question. I had learned a while ago when working on another project that the image data stored in a bitmap is just raw pixel values, but aside from that, I had no clue how this file format works. Luckily, Wikipedia came to the rescue (as per usual) with [this great article](https://en.wikipedia.org/wiki/BMP_file_format). It turns out that the file metadata, like the pixel values, is stupidly simple to work with**<sup>1, 2</sup>**. 
 
 <div style="color:gray;" markdown="1">
+
 ***1.** I am going to cover only images with `24-bit` color, with no compression*<br>
 ***2.** All integers in a bitmap are little-[endian](https://en.wikipedia.org/wiki/Endianness). These must be converted to the host's endianness*
+
 </div>
 
 A simple bitmap file consists of only three parts (although the specification can support more data):
