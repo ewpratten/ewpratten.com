@@ -54,7 +54,7 @@ AS398057 has an **open** peering policy and is willing to peer with networks whi
 
 *Additional note for [AMPRNet](https://www.ampr.org/) operators:* Due to the lack of RPKI support in 44net, special filters are in place to validate route origins for AMPRNet prefixes. If you are an AMPRNet operator and wish to peer with AS398057, please mention this in our communications so I can ensure your routes are properly accepted. Also, if you are single-homed on Vultr and lack a public ASN, I can work out a way to peer with you.
 
-To request a peering arrangement, please contact me via email at [`peering@va3zza.com`](mailto:peering@va3zza.com), on discord at `ewpratten#9114`, or through a common IXP's peering portal.
+To request a peering arrangement, please contact me via email at [`peering@ewpratten.com`](mailto:peering@ewpratten.com), on discord at `ewpratten#9114`, or through a common IXP's peering portal.
 
 ### Additional peering information
 

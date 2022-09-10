@@ -4,7 +4,7 @@ description: Here is how you can reach me
 ---
 
 
-Want to get in touch? Feel free to send me an email at [mail@va3zza.com](mailto:mail@va3zza.com). If you'd prefer a more casual chat, message me on Discord at `ewpratten#9114`.
+Want to get in touch? Feel free to send me an email at [contact@ewpratten.com](mailto:contact@ewpratten.com). If you'd prefer a more casual chat, message me on Discord at `ewpratten#9114`.
 
 ## NOC
 
@@ -12,7 +12,7 @@ If you need to contact me in relation to AS398057 or AS204466, please use the fo
 
 | Service | Contact          |
 |---------|------------------|
-| Email   | `noc@va3zza.com` |
+| Email   | `noc@ewpratten.com` |
 | Discord | `ewpratten#9114` |
 
 ## Me, elsewhere

@@ -3,7 +3,7 @@ title: The History of RetryLife
 aliases: [/retrylife]
 ---
 
-**RetryLife** (previously known as **RetRY Life Music**) was a Canadian electronic music collective based in London, Ontario, Canada. Founded mid-2015 by [Evan Pratten](https://va3zza.com) and [Nathan Desjardins](https://www.artstation.com/kondroel), the group was dedicated to publication and distribution of experimental Electronic dance music produced by a small group of local friends who struggled to find their own platforms.
+**RetryLife** (previously known as **RetRY Life Music**) was a Canadian electronic music collective based in London, Ontario, Canada. Founded mid-2015 by [Evan Pratten](https://ewpratten.com) and [Nathan Desjardins](https://www.artstation.com/kondroel), the group was dedicated to publication and distribution of experimental Electronic dance music produced by a small group of local friends who struggled to find their own platforms.
 
 RetryLife distributed music via their Bandcamp webpage as well as a now-defunct YouTube channel showcasing songs with short music videos and audio visualizations.
 

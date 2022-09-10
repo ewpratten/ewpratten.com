@@ -16,7 +16,7 @@ title: "WHOIS: Evan Pratten"
 | GitHub | [`ewpratten`](https://github.com/ewpratten) |
 | Twitter | [`ewpratten`](https://twitter.com/ewpratten) |
 | Instagram | [`evanpratten`](https://www.instagram.com/evanpratten/) |
-| Email | `mail@va3zza.com` |
+| Email | `contact@ewpratten.com` |
 | APRS <sup>[?](https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System)</sup> | `VA3ZZA-10` |
 | Winlink <sup>[?](https://en.wikipedia.org/wiki/Winlink)</sup> | `va3zza` or `va3zza@winlink.org` |
 | Discord | `ewpratten#9114` |

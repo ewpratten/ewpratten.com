@@ -121,7 +121,7 @@ But then, I quickly figured out how to set up the displacement modifier, and got
 
 This whole project was a fun experiment with some tools that are designed for very different applications. I plan to continue refining the quality of the outputs of my plugin. I'll likely look in to reducing un-needed subdivisions using [OpenSubdiv](https://graphics.pixar.com/opensubdiv) in the near future.
 
-If you are interested in experimenting with my depth mapping plugin yourself, feel free to send me [an email](mailto:mail@va3zza.com) and I'll help you set it up. Currently, my tools are Linux-exclusive.
+If you are interested in experimenting with my depth mapping plugin yourself, feel free to send me [an email](mailto:contact@ewpratten.com) and I'll help you set it up. Currently, my tools are Linux-exclusive.
 
 And finally, a demo render:
 

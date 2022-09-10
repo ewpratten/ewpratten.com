@@ -11,22 +11,22 @@
     "accountablePerson": {
         "@type": "Person",
         "name": "Evan Pratten",
-        "url": "https://va3zza.com"
+        "url": "https://ewpratten.com"
     },
     "author": {
         "@type": "Person",
         "name": "Evan Pratten",
-        "url": "https://va3zza.com"
+        "url": "https://ewpratten.com"
     },
     "creator": {
         "@type": "Person",
         "name": "Evan Pratten",
-        "url": "https://va3zza.com"
+        "url": "https://ewpratten.com"
     },
     "publisher": {
         "@type": "Organization",
         "name": "Evan Pratten",
-        "url": "https://va3zza.com",
+        "url": "https://ewpratten.com",
         "logo": {
             "@type": "ImageObject",
             "url": "{{profile_pic}}",
