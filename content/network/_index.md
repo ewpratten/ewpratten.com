@@ -17,17 +17,16 @@ The network is designed to be a playground for my experiments and research, whil
 
 [![Map of network routers](/images/network/net_map_cropped.svg)](/images/network/net_map.svg)
 
-## Configuration & Architecture
+<!-- ## Configuration & Architecture
 
-Currently, the network operates with a partial routing table and is configured to act as an overlay transit provider for my downstream peers. The only routes known internally are those to peers and their customers. Even then, only [RPKI](https://en.wikipedia.org/wiki/Resource_Public_Key_Infrastructure) **`VALID`** routes are accepted (yep, I drop both `INVALID` and `MISSING` routes).
+Currently, the network operates with a partial routing table and is configured to act as an overlay transit provider for my downstream peers. The only routes known internally are those to peers and their customers. 
 
 This choice has a few reasons behind it:
 
 - Only accepting my peers routes forces me to peer with as many ASes as I can, and develop good relations with other network operators.
-- Only accepting RPKI `VALID` routes ~~sounds cool~~ means my network has a pretty solid resilience against BGP hijacks and route leaks.
 - Providing transit to select peers allows me to experiment with the technical implications that come with such a service. I ensure that each of these peers has a backup upstream, allowing me to tinker with lesser repercussions.
 
-I generally aim to deploy routers with roughly 512MB of RAM, a single core, and 5-20GB of disk space. This additional limitation helps me learn to keep my router configs lean and efficient.
+I generally aim to deploy routers with roughly 512MB of RAM, a single core, and 5-20GB of disk space. This additional limitation helps me learn to keep my router configs lean and efficient. -->
 
 ## What is the network actually *doing*?
 
@@ -52,14 +51,12 @@ AS398057 has an **open** peering policy and is willing to peer with networks whi
 - Only announce address space which you are authorized to announce
 - Only send traffic destined to the routes AS398057 announces to you
 
-*Additional note for [AMPRNet](https://www.ampr.org/) operators:* Due to the lack of RPKI support in 44net, special filters are in place to validate route origins for AMPRNet prefixes. If you are an AMPRNet operator and wish to peer with AS398057, please mention this in our communications so I can ensure your routes are properly accepted. Also, if you are single-homed on Vultr and lack a public ASN, I can work out a way to peer with you.
-
 To request a peering arrangement, please contact me via email at [`peering@ewpratten.com`](mailto:peering@ewpratten.com), on discord at `ewpratten#9114`, or through a common IXP's peering portal.
 
 ### Additional peering information
 
 - Routing policy may be found via WHOIS. ([`whois -h whois.radb.net AS398057`](https://www.radb.net/query?keywords=AS398057))
-- I will generally announce [`AS-EVAN-PRATTEN`](https://www.radb.net/query?keywords=AS-EVAN-PRATTEN) to peers by default
+- I will generally announce [`AS-EWP`](https://www.radb.net/query?keywords=AS-EWP) to peers by default
 
 <hr>
 
