@@ -54,7 +54,7 @@ The largest continuous IPv6 block award is tied between 18 people. All of them a
 
 The prefix with the most origins is `2a07:54c2:b00b::/48`. I am personally announcing this address space to help build the anycasted chaos that is:
 
-[2a07:54c2:b00b:b00b:b00b:b00b:b00b:b00b](http://b00b.eu)
+[2a07:54c2:b00b:b00b:b00b:b00b:b00b:b00b](http://b00b.eu) (IPv6-only website)
 
 Along with myself, there are currently 9 other ASNs announcing their own instances of this website. The version you see in your browser will be different depending on your geographical location or even ISP in the same building.
 
