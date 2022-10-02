@@ -50,6 +50,15 @@ As always, I'm working on multiple projects at the same time and have my head cr
 - Operating [AS398057](/network), providing internet backbone services.
 - Contributing to the Rust library and tooling ecosystem over on [GitHub](https://github.com/ewpratten)
 
+## Services
+
+I am currently offering the following services upon request. [Get in touch](/contact) with me if you're interested:
+
+- Layer 3 BGP tunnels
+- IPv6 address space
+- Public routed IPv4 addresses (for amateur radio operators only)
+- AMPRNet BGP setup assistance
+
 <!-- ## Experience
 
 - **Pipeline Software Developer**, [Industrial Brothers](https://www.industrialbrothers.com/)
