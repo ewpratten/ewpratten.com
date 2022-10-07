@@ -25,6 +25,7 @@ I like to learn new things, and build up my arsenal of unusual skills. Everythin
 - [Musician](/music)
 - Hacker
 - Longboard enthusiast
+- Web designer
 
 </div><div>
 
@@ -34,6 +35,7 @@ I like to learn new things, and build up my arsenal of unusual skills. Everythin
 - IPv6 nerd
 - Keyboard builder
 - Drone pilot
+- Hardware hacker
 - General maker of things
 
 </div></div>
@@ -104,6 +106,15 @@ Every half-year, I set aside some time to participate in [Ludum Dare](https://ld
 - [\[data::loss\]](https://github.com/Ewpratten/ludum-dare-49)
 - [Deep Breath](https://github.com/Ewpratten/ludum-dare-48)
 - [Micromanaged Mike](https://rsninja.dev/LudumDare46/)
+</div>
+
+<div class="project">
+<h3>Web design</h3>
+
+I build websites for friends and family. Generally simple designs with easy to maintain backends. I of course also build all my own websites too. All of it with vanilla HTML, CSS, and JavaScript, and all written by hand. The following are some websites I have had a hand in building:
+
+- [pratten.ca](https://pratten.ca)
+- [demilurii.art](https://demilurii.art)
 </div>
 
 <div class="project">
