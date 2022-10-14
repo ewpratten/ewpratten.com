@@ -52,14 +52,29 @@ As always, I'm working on multiple projects at the same time and have my head cr
 - Operating [AS398057](/network), providing internet backbone services.
 - Contributing to the Rust library and tooling ecosystem over on [GitHub](https://github.com/ewpratten)
 
-## Services
+<div class="homepage-showoff">
 
-I am currently offering the following services upon request. [Get in touch](/contact) with me if you're interested:
+## Put my work to use
+
+I turn some of my projects into products you can either buy or grab for free. <br>
+Check out what I have made recently:
+
+- [**A10U8R: A VCV Rack attenuator module**](/products/vcvrack/a10u8r)
+- *more coming soon*
+
+To see more, check out my [products page](/products).
+
+</div>
+
+<!-- I am currently offering the following services upon request. [Get in touch](/contact) with me if you're interested:
 
 - Layer 3 BGP tunnels
 - IPv6 address space
 - Public routed IPv4 addresses (for amateur radio operators only)
 - AMPRNet BGP setup assistance
+
+
+ -->
 
 <!-- ## Experience
 
