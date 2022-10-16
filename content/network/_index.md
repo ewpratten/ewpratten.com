@@ -58,16 +58,14 @@ To request a peering arrangement, please contact me via email at [`peering@ewpra
 
 ### BGP communities
 
-| Lage Community   | Description                 |
-|------------------|-----------------------------|
-| `398057,100,0`   | Private route               |
-| `398057,100,1`   | Clearnet route              |
-| `398057,100,2`   | DN42 route                  |
-| `398057,100,3`   | AMPRNet route               |
-| `398057,200,0`   | Learned from homelab        |
-| `398057,200,1`   | Learned from preferred peer |
-| `398057,200,2`   | Learned from fallback peer  |
-| `398057,666,666` | Magic has happened          |
+| Lage Community   | Description                   |
+|------------------|-------------------------------|
+| `398057,100,1`   | Nexthop is an AMPRNet gateway |
+| `398057,100,2`   | Nexthop is an DN42 gateway    |
+| `398057,200,0`   | Learned from homelab          |
+| `398057,200,1`   | Learned from preferred peer   |
+| `398057,200,2`   | Learned from fallback peer    |
+| `398057,666,666` | Magic has happened            |
 
 <hr>
 
