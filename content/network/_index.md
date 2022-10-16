@@ -11,11 +11,9 @@ extra:
 [![BGP.tools](https://img.shields.io/badge/-bgp.tools-blue)](https://bgp.tools/as/398057)
 [![PeeringDB](https://img.shields.io/badge/-PeeringDB-yellowgreen)](https://www.peeringdb.com/asn/398057)
 
-I operate [Autonomous System](https://en.wikipedia.org/wiki/Autonomous_system_(Internet)) **398057**, a multinational network routing public internet traffic between various nodes and peers.
+I operate [Autonomous System](https://en.wikipedia.org/wiki/Autonomous_system_(Internet)) **398057**. This network is designed to be a playground for my experiments and research, while at the same time providing internet access to my servers and devices in a fast and reliable manner.
 
-The network is designed to be a playground for my experiments and research, while at the same time providing internet access to my servers and devices in a fast and reliable manner.
-
-[![Map of network routers](/images/network/net_map_cropped.svg)](/images/network/net_map.svg)
+<!-- [![Map of network routers](/images/network/net_map_cropped.svg)](/images/network/net_map.svg) -->
 
 <!-- ## Configuration & Architecture
 
@@ -57,6 +55,19 @@ To request a peering arrangement, please contact me via email at [`peering@ewpra
 
 - Routing policy may be found via WHOIS. ([`whois -h whois.radb.net AS398057`](https://www.radb.net/query?keywords=AS398057))
 - I will generally announce [`AS-EWP`](https://www.radb.net/query?keywords=AS-EWP) to peers by default
+
+### BGP communities
+
+| Lage Community   | Description                 |
+|------------------|-----------------------------|
+| `398057,100,0`   | Private route               |
+| `398057,100,1`   | Clearnet route              |
+| `398057,100,2`   | DN42 route                  |
+| `398057,100,3`   | AMPRNet route               |
+| `398057,200,0`   | Learned from homelab        |
+| `398057,200,1`   | Learned from preferred peer |
+| `398057,200,2`   | Learned from fallback peer  |
+| `398057,666,666` | Magic has happened          |
 
 <hr>
 

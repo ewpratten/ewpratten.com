@@ -6,6 +6,8 @@ extra:
 
 This is a planning document that keeps track of my IP address space. This is by no means complete, just a reference for a specific part of my network.
 
+- `172.23.44.128/25`
+  - 
 - **`44.31.62.0/24`**: Aggregated at edge
   - `44.31.62.0/25`
     - `44.31.62.0/26`
