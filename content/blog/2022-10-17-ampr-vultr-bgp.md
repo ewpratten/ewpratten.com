@@ -60,7 +60,32 @@ I personally went the second route with my own ASN ([398057](https://bgp.tools/a
 
 ## Bringing up a VPS
 
+Alright. Prerequisites out of the way, its time to set up a router for your IP space.
+
+With a Vultr account created, head to the [deploy page](https://my.vultr.com/deploy/?ref=8932365) and start configuring your server. My personal recommendation for a server that is only routing packets and not hosting any content is as follows:
+
+- Cloud Compute, Regular Performance
+- Whichever region is closest to you
+- Debian 11 (x64)
+- The $5/month plan is plenty
+- No backups
+- IPv6 *enabled*
+
+Once your server is up and running, head to `Products > Network > BGP` in the Vultr control panel, and request BGP to be set up for your account. You'll have to provide the LOA you got from ARDC in your prefix application process.
+
+At this point, you should get the option to choose between full routing tables and the default route. If you are single-homed, choose default route. If you have your own ASN, you should be able to decide for yourself weather you need full tables or not (I'm trusting you on this one :wink:).
+
+While you are getting stuff ready, I recommend logging in to the server, possibly setting up [Fail2Ban](https://www.fail2ban.org/wiki/index.php/Main_Page), and installing the following packages:
+
+```bash
+apt install bird2 mtr tcpdump
+```
+
+At this point, just wait until Vultr gets your BGP session set up.
+
 ## Announcing your space
+
+
 
 ### Action communities
 
