@@ -4,6 +4,10 @@ extra:
     uses_graphviz: true
 ---
 
+- `2602:faf5::/40`
+  - `2602:faf5::/48` Site - Cologix Toronto
+    - `2602:faf5:0:1::/64` Personal VPN
+
 <!-- This is a planning document that keeps track of my IP address space. This is by no means complete, just a reference for a specific part of my network. -->
 
 <!-- - `172.23.44.128/25`
@@ -27,7 +31,7 @@ extra:
   - **`2a12:dd47:9003::/48`**: Website infrastructure
   - **`2a12:dd47:9004::/48`**: Homelab -->
 
-## Needs
+<!-- ## Needs
 
 - VPN
 - Home IPv6
@@ -37,9 +41,9 @@ extra:
 - Home
 - yyz-edge
 
-## Plan
+## Plan -->
 
-- `44.31.62.0/24`
+<!-- - `44.31.62.0/24`
   - `44.31.62.0/25`
     - `44.31.62.0/26` 
       - `44.31.62.0/27` 
@@ -54,4 +58,4 @@ extra:
       - *All clients should be eui-64 if possible*
       - *RDNS: `abcd-abff-fecd-abcd.home.ewpratten.com`*
     - `xxxx:xxxx:xx01:1000::/52` Homelab prefix
-  - `xxxx:xxxx:xx02::/48` VPN space
+  - `xxxx:xxxx:xx02::/48` VPN space -->
