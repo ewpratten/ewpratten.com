@@ -1,9 +1,7 @@
 ---
 title: Donate
 extra:
-    redir_to: https://www.paypal.com/donate/?hosted_button_id=V8MYNJ68MEKDA
+    redir_to: https://donate.stripe.com/14k9CRfNu83V1EsfYY
 ---
 
-If your browser does not support `meta refresh`, you may see this message instead of the intended page.
-
-Please [click here](https://www.paypal.com/donate/?hosted_button_id=V8MYNJ68MEKDA) to be redirected to your destination.
+Please [click here](https://donate.stripe.com/14k9CRfNu83V1EsfYY) if you are not redirected.
