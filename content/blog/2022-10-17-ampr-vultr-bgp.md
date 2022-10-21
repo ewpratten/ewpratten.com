@@ -87,6 +87,4 @@ At this point, just wait until Vultr gets your BGP session set up.
 
 
 
-### Action communities
-
 ## Verify everything is working

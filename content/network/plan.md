@@ -4,9 +4,9 @@ extra:
     uses_graphviz: true
 ---
 
-This is a planning document that keeps track of my IP address space. This is by no means complete, just a reference for a specific part of my network.
+<!-- This is a planning document that keeps track of my IP address space. This is by no means complete, just a reference for a specific part of my network. -->
 
-- `172.23.44.128/25`
+<!-- - `172.23.44.128/25`
   - 
 - **`44.31.62.0/24`**: Aggregated at edge
   - `44.31.62.0/25`
@@ -25,4 +25,33 @@ This is a planning document that keeps track of my IP address space. This is by 
   - `2a12:dd47:9002::/48`: Point-to-Point linking prefix
     - **`2a12:dd47:9002::/126`**: Links `border.lab` and `bgp-vm.lab`
   - **`2a12:dd47:9003::/48`**: Website infrastructure
-  - **`2a12:dd47:9004::/48`**: Homelab
+  - **`2a12:dd47:9004::/48`**: Homelab -->
+
+## Needs
+
+- VPN
+- Home IPv6
+
+## Sites
+
+- Home
+- yyz-edge
+
+## Plan
+
+- `44.31.62.0/24`
+  - `44.31.62.0/25`
+    - `44.31.62.0/26` 
+      - `44.31.62.0/27` 
+      - `44.31.62.32/27` VPN Space
+    - `44.31.62.64/26` Homelab prefix
+  - `44.31.62.128/25` Temp: Home
+- `44.31.119.0/24`
+- `xxxx:xxxx:xx00::/40`
+  - `xxxx:xxxx:xx01::/48` Site: Home
+    - `xxxx:xxxx:xx01::/52` Home network clients
+      - *This should be further broken down by vlan*
+      - *All clients should be eui-64 if possible*
+      - *RDNS: `abcd-abff-fecd-abcd.home.ewpratten.com`*
+    - `xxxx:xxxx:xx01:1000::/52` Homelab prefix
+  - `xxxx:xxxx:xx02::/48` VPN space
