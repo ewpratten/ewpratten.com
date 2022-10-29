@@ -1,23 +1,15 @@
 ---
-title: Contact
-description: Here is how you can reach me
+title: Contact Information
+description: Get in touch with me!
 ---
 
 
 Want to get in touch? Feel free to send me an email at [contact@ewpratten.com](mailto:contact@ewpratten.com). If you'd prefer a more casual chat, message me on Discord at `ewpratten#9114`.
 
-## NOC
 
-If you need to contact me in relation to AS398057 or AS204466, please use the following:
+## Finding me elsewhere
 
-| Service | Contact          |
-|---------|------------------|
-| Email   | `noc@ewpratten.com` |
-| Discord | `ewpratten#9114` |
-
-## Me, elsewhere
-
-If you'd rather find me somewhere else, here's a list of platforms I am reasonably active on:
+Here is a list of social platforms I am reasonably active on:
 
 - [LinkedIn](https://www.linkedin.com/in/ewpratten/)
 - [GitHub](https://github.com/ewpratten)
@@ -26,7 +18,5 @@ If you'd rather find me somewhere else, here's a list of platforms I am reasonab
 - [QRZ](https://qrz.com/db/va3zza)
 - [Spotify](https://open.spotify.com/artist/1aLNEmgqBJkhfkEZvf8Vh5)
 - [Apple Music](https://music.apple.com/us/artist/evan-pratten/1611566708)
-- [YouTube](https://www.youtube.com/channel/UCrHT3Lt0Mg90bspbMHJfTcA")
-- [AVRFreaks](https://www.avrfreaks.net/users/ewpratten)
-- [Chief Delphi](https://www.chiefdelphi.com/u/ewpratten)
+- [YouTube](https://www.youtube.com/@ewpratten)
 - [IMDb](https://www.imdb.com/name/nm13747554/)

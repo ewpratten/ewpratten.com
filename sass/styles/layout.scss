@@ -68,7 +68,7 @@ body {
     .headshot-container {
       display: inline-block;
       max-width: 150px;
-      @media only screen and (max-width: 382px) {
+      @media only screen and (max-width: 399px) {
         display: block;
         margin: auto;
         text-align: center;
@@ -312,4 +312,10 @@ ul {
 
   background-color: #e3e3e3;
   color: black;
+}
+
+.home-list {
+  &>ul>li {
+    padding-top:0.5em;
+  }
 }

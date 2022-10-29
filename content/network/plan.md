@@ -4,10 +4,16 @@ extra:
     uses_graphviz: true
 ---
 
+
+
 - `2602:faf5::/40`
   - `2602:faf5::/48` Site - Cologix Toronto
     - `2602:faf5:0:1::/64` Personal VPN
-
+    - `2602:faf5:0:ffff::/64` /64 announcement test
+  <!-- - `10 - 1F`: Reserved
+  - `20 - 2F`: Customer allocations
+    - `2602:faf5:20::/48` /64 allocation block -->
+  
 <!-- This is a planning document that keeps track of my IP address space. This is by no means complete, just a reference for a specific part of my network. -->
 
 <!-- - `172.23.44.128/25`
