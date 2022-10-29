@@ -1,17 +1,19 @@
 ---
 title: Network
 extra:
-    enable_gh_markdown: true
+    redir_to: https://as54041.peeringdb.com
 ---
 
-<p></p>
+[click here](https://as54041.peeringdb.com) to be redirected
+
+<!-- <p></p>
 
 # My Network
 
 [![BGP.tools](https://img.shields.io/badge/-bgp.tools-blue)](https://bgp.tools/as/398057)
 [![PeeringDB](https://img.shields.io/badge/-PeeringDB-yellowgreen)](https://www.peeringdb.com/asn/398057)
 
-I operate [Autonomous System](https://en.wikipedia.org/wiki/Autonomous_system_(Internet)) **398057**. This network is designed to be a playground for my experiments and research, while at the same time providing internet access to my servers and devices in a fast and reliable manner.
+I operate [Autonomous System](https://en.wikipedia.org/wiki/Autonomous_system_(Internet)) **398057**. This network is designed to be a playground for my experiments and research, while at the same time providing internet access to my servers and devices in a fast and reliable manner. -->
 
 <!-- [![Map of network routers](/images/network/net_map_cropped.svg)](/images/network/net_map.svg) -->
 
@@ -26,7 +28,7 @@ This choice has a few reasons behind it:
 
 I generally aim to deploy routers with roughly 512MB of RAM, a single core, and 5-20GB of disk space. This additional limitation helps me learn to keep my router configs lean and efficient. -->
 
-## What is the network actually *doing*?
+<!-- ## What is the network actually *doing*?
 
 Currently, AS398057 is:
 
@@ -75,4 +77,4 @@ To request a peering arrangement, please contact me via email at [`peering@ewpra
 <a href="https://www.ampr.org/"><img src="/images/network/44-logo.png" alt="AMPRNet Operator" width="128px"></img></a>
 </div>
 
-<br><br>
+<br><br> -->
