@@ -2,6 +2,7 @@
 2602:faf5::/40,CA,CA-ON,Toronto,M5A2Y5
 44.31.62.0/24,CA,CA-ON,Oakville,L6H0M3
 44.31.119.0/24,CA,CA-ON,Toronto,M5A2Y5
+23.142.232.0/24,CA,CA-ON,Oakville,L6H0M3
 
 ## Machines
 2602:faf5:0:1:a8a1:59ff:fe61:3be8/128,CA,CA-ON,Oakville,L6H0M3
