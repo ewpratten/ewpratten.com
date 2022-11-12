@@ -10,6 +10,11 @@
 
 {{ super() }}
 
+{# Disable crawling if requested #}
+{% if page.extra.no_crawl %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
+
 {% if page.extra.uses_katex %}
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 <script type="text/x-mathjax-config">

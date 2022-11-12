@@ -5,6 +5,12 @@
 
 {% block head %}
 {{ super() }}
+
+{# Disable crawling if requested #}
+{% if section.extra.no_crawl %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
+
 <meta property="og:title" content="{{section.title}} - Evan Pratten" />
 {% if section.description %}
 <meta property="og:description" content="{{section.description}}" />
@@ -91,4 +97,17 @@
   {% endfor %}
 </ul>
 {% endif %}
+
+{# Notes #}
+{% if section.extra.inject_notes %}
+<ul>
+  {% for page in section.pages %}
+  {% if not page.extra.hidden %}
+  <li class="blog-post-li"><a href="{{page.path}}">{{page.title}}</a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}
+
 {% endblock content %}
