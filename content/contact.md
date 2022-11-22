@@ -13,7 +13,6 @@ Here is a list of social platforms I am reasonably active on:
 - [LinkedIn](https://www.linkedin.com/in/ewpratten/)
 - [GitHub](https://github.com/ewpratten)
 - [Instagram](https://www.instagram.com/evanpratten/)
-<!-- - [Twitter](https://twitter.com/ewpratten/) -->
 - [Mastodon](https://ewp.fyi/mastodon)
 - [QRZ](https://qrz.com/db/va3zza)
 - [Spotify](https://open.spotify.com/artist/1aLNEmgqBJkhfkEZvf8Vh5)

@@ -17,7 +17,7 @@ I am currently working on a few projects, including:
 - Publishing music under my own name on [Spotify](https://open.spotify.com/artist/1aLNEmgqBJkhfkEZvf8Vh5) and [Apple Music](https://music.apple.com/us/artist/evan-pratten/1611566708)
 - Practicing my morse code skills on-air as [VA3ZZA](https://www.qrz.com/db/va3zza)
 
-## Past experience
+<!-- ## Past experience
 
 The following is a list of notable positions I have held in the past:
 
@@ -42,9 +42,8 @@ The following is a list of notable positions I have held in the past:
 - **RetryLife**: *Co-founder & Artist*
   - Composed two orchestral pieces for student orchestras
   - Produced a full-length theatrical soundtrack
-  - Published 24 albums
-
-</div>
+  - Published 24 albums 
+</div> -->
 
 ## Looking for more?
 
