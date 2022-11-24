@@ -15,7 +15,10 @@ I am currently working on a few projects, including:
 
 - Maintaining [AS54041](https://as54041.peeringdb.com), a small computer network
 - Publishing music under my own name on [Spotify](https://open.spotify.com/artist/1aLNEmgqBJkhfkEZvf8Vh5) and [Apple Music](https://music.apple.com/us/artist/evan-pratten/1611566708)
-- Practicing my morse code skills on-air as [VA3ZZA](https://www.qrz.com/db/va3zza)
+
+I am also working on an Internet-Draft:
+
+- [draft-evan-amateur-radio-ipv6](https://datatracker.ietf.org/doc/html/draft-evan-amateur-radio-ipv6) - Globally Unique IPv6 Addressing for Amateur Radio
 
 <!-- ## Past experience
 
