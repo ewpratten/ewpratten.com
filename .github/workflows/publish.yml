@@ -18,6 +18,9 @@ jobs:
         env:
           CONFIG_FILE: "config.toml"
 
+      - name: Disable Jekyll
+        run: touch ./public/.nojekyll
+
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
