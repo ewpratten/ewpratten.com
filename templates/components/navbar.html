@@ -1,0 +1,18 @@
+{% block component_styles %}
+{{ super() }}
+<link rel="stylesheet" href="/styles/components/navbar.css">
+{% endblock component_styles %}
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/blog">Blog</a></li>
+        <li class="separator">|</li>
+        <li><a href="#" role="button">More</a></li>
+        <li class="separator">|</li>
+        <li><a href="#" role="button">Profiles</a></li>
+    </ul>
+    <hr>
+</div>

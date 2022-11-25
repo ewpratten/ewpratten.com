@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="/styles/fixes/youtube.css">
     <link rel="stylesheet" href="/styles/typography.css">
     <link rel="stylesheet" href="/styles/utils.css">
+    <link rel="stylesheet" href="/styles/layout.css">
 
     {# Component styles #}
     {% block component_styles %}
@@ -52,6 +53,11 @@
 
     {# The whole page #}
     <div class="page">
+
+        {# Navbar #}
+        <div class="container">
+            {% include "components/navbar.html" %}
+        </div>
 
         {# Actual content #}
         <div id="content" class="container">
