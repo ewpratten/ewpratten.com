@@ -1,0 +1,21 @@
+{# Site info #}
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="{{config.extra.domain_name}}" />
+<meta name="og:site_name" content="{{config.title}}" />
+
+{# Page image #}
+<meta name="og:image"
+    content="{% block opengraph_image_url %}{{config.extra.profile_photo}}{% endblock opengraph_image_url %}" />
+
+{# Page description #}
+<meta property="og:description" content="{{description}}" />
+<meta property="description" content="{{description}}" />
+<meta name="description" content="{{description}}">
+
+{# Page title #}
+<meta property="og:title" content="{{title}} - {{config.title}}" />
+
+{# Article-specifics #}
+{% if is_article %}
+<meta property="og:type" content="article" />
+{% endif %}
