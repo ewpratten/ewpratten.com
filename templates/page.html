@@ -107,15 +107,6 @@ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMat
         {{page.content | safe}}
     </div>
 
-    {# Comments only on blog posts #}
-    {% if page.extra.is_rfc or page.description and page.date %}
-    <br>
-    <hr>
-    <script src="https://utteranc.es/client.js" repo="ewpratten/va3zza.com" issue-term="title" label="comment"
-        theme="github-light" crossorigin="anonymous" async>
-        </script>
-    {% endif %}
-
 </article>
 
 {% if page.extra.uses_twitter %}
