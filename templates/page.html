@@ -1,5 +1,25 @@
 {% extends "base.html" %}
 
+{# Additional metadata for Google #}
+{% block head %}
+{{ super() }}
+
+{% if page.description and page.date %}
+<script type="application/ld+json">
+    {# Import our template file #}
+    {% set template = load_data(path="jsonld_templates/blog_post.jsonld") %}
+    {# Now we can fill in any additional data #}
+    {{ template | 
+        replace(from="{{url}}", to=config.base_url ~ page.path) | 
+        replace(from="{{title}}", to=page.title) | 
+        replace(from="{{date}}", to=page.date) | 
+        replace(from="{{profile_pic}}", to=config.extra.profile_photo) | 
+        safe 
+    }}
+</script>
+{% endif %}
+{% endblock head %}
+
 {# Pass data through to the base template #}
 {% block variable_wormhole %}
 {{ super() }}
