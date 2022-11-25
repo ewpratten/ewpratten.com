@@ -2,7 +2,7 @@
 title: Blog
 sort_by: date
 extra:
-    inject_blog_posts: true
+    section_embed_mode: blog_posts
 ---
 
 ## Blog posts
