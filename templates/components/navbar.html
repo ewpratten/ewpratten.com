@@ -1,0 +1,27 @@
+{% block component_styles %}
+{{ super() }}
+<link rel="stylesheet" href="/styles/components/navbar.css">
+{% endblock component_styles %}
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/blog">Blog</a></li>
+        <li class="separator">|</li>
+        {# <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </li>
+        <li class="separator">|</li> #}
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+    <hr>
+</div>

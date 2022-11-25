@@ -1,0 +1,11 @@
+.zola-github-card {
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 1px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.1s ease 0s;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 15px;
+  }
+}

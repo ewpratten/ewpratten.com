@@ -1,113 +1,49 @@
 {% extends "base.html" %}
-{% block title %}
-{{section.title}}
-{% endblock title %}
 
-{% block head %}
+{# Pass data through to the base template #}
+{% block variable_wormhole %}
 {{ super() }}
-
-{# Disable crawling if requested #}
-{% if section.extra.no_crawl %}
-<meta name="robots" content="noindex, nofollow">
+{% set title = section.title %}
+{% set description = section.description %}
+{% if section.extra.uses %}
+{% set feature_flags = section.extra.uses %}
 {% endif %}
+{% endblock variable_wormhole %}
 
-<meta property="og:title" content="{{section.title}} - Evan Pratten" />
-{% if section.description %}
-<meta property="og:description" content="{{section.description}}" />
-<meta property="description" content="{{section.description}}" />
-{% else %}
-<meta property="og:description" content="{{config.description}}" />
-<meta property="description" content="{{config.description}}" />
-{% endif %}
-
-{# Handle listing blog posts nicely in search #}
-{% if section.extra.inject_blog_posts %}
-<script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"ItemList",
-      "itemListElement":[
-        {% for page in section.pages %}
-        {% if not page.extra.hidden %}
-        {
-            "@type":"ListItem",
-            "position": "{{loop.index}}",
-            "item": {
-                "@type": "Article",
-                "headline": "{{page.title}}",
-                "url":"https://ewpratten.com{{page.path | safe}}",
-                "author": [{
-                    "@type": "Person",
-                    "name": "Evan Pratten",
-                    "url": "https://ewpratten.com"
-                  }]
-            }
-        } {% if not loop.last %},{% endif %}
-        {% endif %}
-        {% endfor %}
-        
-      ]
-    }
-</script>
-{% endif %}
-{% endblock head %}
-
+{# Page content #}
+{% block page_start %}
+{% include "components/heading-card.html" %}
+{% endblock page_start %}
 {% block content %}
-{% if section.extra.enable_gh_markdown %}
-<article class="markdown-body">
-{% endif %}
-{{section.content | safe}}
-{% if section.extra.enable_gh_markdown %}
-</article>
-{% endif %}
+{{ section.content | safe }}
 
-{# Blog posts #}
-{% if section.extra.inject_blog_posts %}
-    <ul style="margin:0">
-        <div>
-            {# Posts shall be broken down by year #}
-            {% set title_year = "3000" %}
-            {% for page in section.pages %}
-            {% if not page.extra.hidden %}
-            {% set page_year = page.date | date(format="%Y")%}
-            {% if page_year != title_year %}
-            {% set_global title_year = page_year %}
-    </ul>
-    <h2>{{title_year}}</h2>
-    <ul>
-        {% endif %}
+{# Handle various embed modes #}
+{% if section.extra.section_embed_mode %}
 
-        <li class="blog-post-li"><span style="color:{% if page.draft %}red{% else %}gray{% endif %};">{{page.date}}:</span> <a
-                href="{{page.path}}">{{page.title}}</a>
-        </li>
-        {% endif %}
-        {% endfor %}
-    </ul>
-    <br><br>
-    {% endif %}
 
-{# RFCs #}
-{% if section.extra.inject_rfcs %}
+{% if section.extra.section_embed_mode == "blog_posts" %}
+{# <ul style="margin:0"> #}
+  <div>
+    {# Posts shall be broken down by year #}
+    {% set title_year = "3000" %}
+    {% for page in section.pages %}
+    {% if not page.extra.hidden %}
+    {% set page_year = page.date | date(format="%Y")%}
+    {% if page_year != title_year %}
+    {% set_global title_year = page_year %}
+
+</ul>
+<h2>{{title_year}}</h2>
 <ul>
-  {% for page in section.pages %}
-  {% if not page.extra.hidden %}
-  <li class="blog-post-li"><a href="{{page.path}}">{{page.title}}</a> <span style="color:gray;">({{page.date}})</span>
+  {% endif %}
+
+  <li class="blog-post-li"><span style="color:{% if page.draft %}red{% else %}gray{% endif %};">{{page.date}}:</span>
+    <a href="{{page.path}}">{{page.title}}</a>
   </li>
   {% endif %}
   {% endfor %}
 </ul>
+</div>
 {% endif %}
-
-{# Notes #}
-{% if section.extra.inject_notes %}
-<ul>
-  {% for page in section.pages %}
-  {% if not page.extra.hidden %}
-  <li class="blog-post-li"><a href="{{page.path}}">{{page.title}}</a>
-  </li>
-  {% endif %}
-  {% endfor %}
-</ul>
 {% endif %}
-
 {% endblock content %}

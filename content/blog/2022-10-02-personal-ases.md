@@ -6,7 +6,7 @@ date: 2022-10-02
 tags: website network
 draft: false
 extra:
-  uses_katex: false
+  
   auto_center_images: true
   excerpt: A look at the usage of personal ASNs based on freely available data
 ---

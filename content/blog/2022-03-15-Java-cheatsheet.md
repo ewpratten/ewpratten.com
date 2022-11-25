@@ -7,7 +7,7 @@ tags: reference
 draft: false
 extra:
   excerpt: This document is written for my PROG10082 classmates as a quick reference for some Java concepts that were skipped over in the course.
-  uses_katex: false
+  
   hidden: true
   auto_center_images: true
 ---

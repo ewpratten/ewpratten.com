@@ -6,7 +6,7 @@ date:   2022-02-14
 tags: project pbx
 draft: true
 extra:
-  uses_katex: false
+  
   auto_center_images: true
 ---
 

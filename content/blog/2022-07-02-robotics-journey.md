@@ -6,7 +6,7 @@ date: 2022-07-02
 tags: story
 draft: true
 extra:
-  uses_katex: false
+  
   auto_center_images: true
   excerpt: From 2016 to 2021, I dedicated most of my time to robotics and control systems programming. This is my journey
 ---

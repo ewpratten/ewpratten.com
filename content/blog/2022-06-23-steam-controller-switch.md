@@ -6,7 +6,7 @@ date: 2022-06-23
 tags: random
 draft: false
 extra:
-  uses_katex: false
+  
   auto_center_images: true
   excerpt: How to flash custom firmware to the Steam Controller, allowing it to connect to the Nintendo Switch
 ---

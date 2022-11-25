@@ -6,7 +6,7 @@ date:   2022-04-11
 tags: robotics
 draft: true
 extra:
-  uses_katex: true
+  uses: [katex]
   excerpt: In this post, I take a look at a mathematical problem commonly encountered with relative rotation offset calculation in robotics.
 ---
 

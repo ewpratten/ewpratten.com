@@ -14,11 +14,13 @@ render_emoji = true
 external_links_target_blank = true
 
 [extra]
+# Website
+domain_name = "ewpratten.com"
+# Me
 name = "Evan Pratten"
 profession = "Software Developer"
-email = "contact@ewpratten.com"
-twitter = "ewpratten"
-github = "ewpratten"
-qrz = "va3zza"
-linkedin = "ewpratten"
 profile_photo = "https://avatars.githubusercontent.com/u/21065412"
+# Accounts
+email = "evan@ewpratten.com"
+github = "ewpratten"
+linkedin = "ewpratten"

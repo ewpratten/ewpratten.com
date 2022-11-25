@@ -1,165 +1,96 @@
+{# Allow extenders to pass through variables #}
+{% block variable_wormhole %}
+{% set title = "NO TITLE SET" %}
+{% set description = "" %}
+{% set is_article = false %}
+{% set feature_flags = [] %}
+{% set redirect_target = "" %}
+{% endblock variable_wormhole %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    {% block head %}
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-KFJ95RP');</script>
-    <!-- End Google Tag Manager -->
-
-    
-
+    {# Page metadata #}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/jpg" href="{{config.extra.profile_photo}}" />
-    {% if current_url %}
-    <link rel="canonical" href="{{current_url}}" />
+    {% include "components/metadata/advertise-rss.html" %}
+    {% include "components/metadata/opengraph.html" %}
+
+    {# Redirect support #}
+    {% if redirect_target != "" %}
+    <meta http-equiv="refresh" content="0; url={{redirect_target}}" />
     {% endif %}
 
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{get_url(path=" rss.xml",
-        trailing_slash=false)}}">
-    <link rel="webmention" href="https://webmention.io/ewpratten.com/webmention" />
-    <link rel="pingback" href="https://webmention.io/ewpratten.com/xmlrpc" />
+    {# Page title #}
+    <title>{{title}} | {{config.title}}</title>
 
-    <title>{% block title %}{% endblock title %} | {{config.extra.name}}</title>
-
+    {# Preconnects for external resources #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Urbanist:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
     <link rel="preconnect" href="https://maxst.icons8.com">
+
+    {# External styles #}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-    <link rel="stylesheet" href="/styles/project_mosaic.css">
-
-
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css"
         integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    {# Site-wide styles #}
+    <link rel="stylesheet" href="/styles/fixes/instagram.css">
+    <link rel="stylesheet" href="/styles/fixes/markdown.css">
+    <link rel="stylesheet" href="/styles/fixes/mermaid.css">
+    <link rel="stylesheet" href="/styles/fixes/tiktok.css">
+    <link rel="stylesheet" href="/styles/fixes/youtube.css">
+    <link rel="stylesheet" href="/styles/typography.css">
+    <link rel="stylesheet" href="/styles/utils.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/components/github-card.css">
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="og:site" content="ewpratten.com" />
-    <meta name="og:image" content="{{config.extra.profile_photo}}" />
-    <meta name="twitter:creator" content="@ewpratten">
-    <meta name="og:site_name" content="Evan Pratten (VA3ZZA)" />
+    {# Component styles #}
+    {% block component_styles %}
+    {% endblock component_styles %}
 
-    {% endblock head %}
+    {# Enable features #}
+    {% include "components/metadata/page-features.html" %}
 </head>
 
 <body>
-    <div class="container">
-        <div class="profile-card">
-            {% block profile %}
-            <div class="row">
-                <div class="headshot-container">
-                    <img src="{{config.extra.profile_photo}}" alt="Headshot">
-                </div>
-                <div class="text-container">
-                    <h1>{{config.extra.name}}</h1>
-                    <p>
-                        {{config.extra.profession}}
-                        <br><br>
-                        <a href="mailto:{{config.extra.email}}" rel="me"><i class="las la-envelope"></i>
-                            {{config.extra.email}}</a><br>
-                        <a href="https://github.com/{{config.extra.github}}" rel="me"><i class="lab la-github"></i>
-                            {{config.extra.github}}</a><br>
-                        <a href="https://www.linkedin.com/in/{{config.extra.linkedin}}" rel="me"><i
-                                class="lab la-linkedin"></i>
-                            {{config.extra.linkedin}}</a><br>
-                        <a href="https://qrz.com/db/{{config.extra.qrz}}" rel="me"><i
-                                class="las la-broadcast-tower"></i>
-                            {{config.extra.qrz}}</a>
-                    </p>
-                </div>
-            </div>
-            {% endblock profile %}
-        </div>
-        <div class="navigation-bar">
-            <hr>
-            <p>
-                <a href="/">Home</a> |
-                <a href="/blog">Blog</a> |
-                {# <a href="/blog">Rabbit Hole</a> | #}
-                {# <a href="/work">My Work</a> | #}
-                {# <a href="/network">Network</a> | #}
-                <a href="/contact">Contact</a>
-                {# <a href="/hobbies">Hobbies</a> #}
-                {# <a href="/whois">WHOIS</a> #}
-                {# <a href="/rfc">RFC</a> #}
-            </p>
-            <hr>
-        </div>
-        <div class="page-content">
-            {% block content %}
-            {% endblock content %}
+
+    {# The whole page #}
+    <div class="page">
+
+        {# Allow pages to override the content before the navbar #}
+        {% block page_start %}{% endblock page_start %}
+
+        {# Navbar #}
+        <div class="container">
+            {% include "components/navbar.html" %}
         </div>
 
-        <div id="footer">
-            <p class="gray">-- EOF --</p>
-            <p>
-                <em>
-                    <a href="https://github.com/ewpratten/va3zza.com"><i class="lab la-github"></i></a>
-                    <a href="https://status.ewpratten.com"><i class="las la-info-circle"></i></a>
-                    <a href="/rss.xml"><i class="las la-rss"></i></a><br>
-
-                    Thanks for reading :)<br>
-                    Site design & content by: <a href="/info">Evan Pratten</a><br>
-                    Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
-
-                </em>
-            </p>
+        {# Actual content #}
+        <div id="content" class="container">
+            <article class="markdown-body">
+                {% block content %}{% endblock content %}
+            </article>
         </div>
+
+        {# Footer #}
+        {% include "components/footer.html" %}
     </div>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    {# External scripts #}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 
-        gtag('config', 'G-5912H4H03P');
-    </script>
-
-    <script>
-        if (window.performance && performance.getEntriesByType) { // avoid error in Safari 10, IE9- and other old browsers
-            let navTiming = performance.getEntriesByType('navigation')
-            if (navTiming.length > 0) { // still not supported as of Safari 14...
-                let serverTiming = navTiming[0].serverTiming
-                if (serverTiming && serverTiming.length > 0) {
-                    for (let i = 0; i < serverTiming.length; i++) {
-                        if (serverTiming[i].name == 'source') {
-                            if (serverTiming[i].description == 'net44') {
-                                document.getElementById('ampr-notice').style.display = 'block';
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    {# URL Rewriter for retrylife.ca #}
-    <script>
-        if (window.location.hostname == 'retrylife.ca') {
-            window.location.href = window.location.href.replace('retrylife.ca', 'ewpratten.com');
-        }
-    </script>
-
-    {# Meta magic for mastodon verification #}
-    <a rel="me" href="https://social.ewpratten.com/@evan" style="display:none;"></a>
+    {% include "components/metadata/analytics.html" %}
 </body>
 
 </html>

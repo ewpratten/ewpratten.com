@@ -6,7 +6,7 @@ date: 2022-05-18
 tags: random
 draft: false
 extra:
-  uses_katex: false
+  
   auto_center_images: true
   excerpt: This post covers how to keep your commit graph alive across multiple GIT instances by syncing your commit history to magic repos.
 ---

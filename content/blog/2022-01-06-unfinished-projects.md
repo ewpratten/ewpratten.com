@@ -6,7 +6,7 @@ date:   2022-01-06
 tags: random
 draft: false
 extra:
-  uses_katex: false
+  
   excerpt: My GitHub profile is a bit like an iceberg. At the time of writing, I have made nearly 8 and a half thousand commits to nearly a thousand repositories. This post covers the hidden failed projects.
 ---
 

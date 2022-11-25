@@ -6,7 +6,7 @@ date: 2022-10-17
 tags: amprnet network
 draft: true
 extra:
-  uses_katex: false
+  
   auto_center_images: true
   excerpt: A tutorial for AMPRNet operators who are BGP announcing their first prefix to Vultr
 ---

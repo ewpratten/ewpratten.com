@@ -6,7 +6,7 @@ date:   2022-01-19
 tags: random 3d-pipeline
 draft: false
 extra:
-  uses_katex: false
+  
   excerpt: This post covers the process I went through to write a Neural-Network-assisted Blender plugin for converting monocular images into 3D textured meshes.
 ---
 

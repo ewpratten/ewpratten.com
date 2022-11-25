@@ -1,0 +1,46 @@
+{% block component_styles %}
+{{ super() }}
+<link rel="stylesheet" href="/styles/components/about-card.css">
+{% endblock component_styles %}
+
+<div class="about-card">
+    <div class="profile-photo-container">
+        <img src="{{config.extra.profile_photo}}" alt="Profile Photo">
+    </div>
+    <div class="text-container">
+        <div class="intro-text">
+            <h1>{{config.extra.name}}</h1>
+            <p>{{config.extra.profession}}</p>
+        </div>
+        <div class="quick-links">
+            <ul>
+                <li>
+                    <a href="mailto:{{config.extra.email}}" rel="me">
+                        <i class="las la-envelope"></i>
+                        {{config.extra.email}}
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/{{config.extra.github}}" rel="me">
+                        <i class="lab la-github"></i>
+                        {{config.extra.github}}
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/{{config.extra.linkedin}}" rel="me">
+                        <i class="lab la-linkedin"></i>
+                        {{config.extra.linkedin}}
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact">
+                        ...&nbsp;&nbsp;more
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{# Mastodon requires this to exist somewhere, so why not here #}
+<a rel="me" href="https://social.ewpratten.com/@evan" style="display:none;"></a>
