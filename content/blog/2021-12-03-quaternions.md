@@ -6,7 +6,7 @@ date:   2021-12-03
 tags: reference
 draft: false
 extra:
-  uses_katex: true
+  uses: [katex]
   excerpt: This post is an overview of Quaternions for Rust programmers, and anyone willing to learn.
 ---
 

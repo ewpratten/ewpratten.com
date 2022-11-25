@@ -9,7 +9,7 @@ extra:
         This post is a continuation on my "Notes from FRC" series. This time, 
         I cover an extremely simple, yet very effective way to get a 
         tank-drive robot from A to B autonomously.
-    uses_katex: true
+    uses: [katex]
 aliases: [/blog/2020/08/13/drivetrain-navigation]
 ---
 

@@ -5,6 +5,7 @@ description: "I3wm makes everything 10x harder than it should be"
 date: 2019-08-12
 tags: notes languages
 aliases: [/blog/2019/08/12/setting-up-ja]
+draft: true
 ---
 
 I am currently working with [Hiragana](https://en.wikipedia.org/wiki/Hiragana), [Katakana](https://en.wikipedia.org/wiki/Katakana), and, [Kanji](https://en.wikipedia.org/wiki/Kanji) in some projects, and needed a more reliable way to write than running some [romaji](https://en.wikipedia.org/wiki/Romanization_of_Japanese) through an online translator. So, this post will detail what I did to enable native inputs on my laptop. This guide is specifically for [i3wm](https://i3wm.org/), because it does not obey system settings for languages and inputs.

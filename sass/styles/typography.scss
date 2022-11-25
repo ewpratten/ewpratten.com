@@ -43,3 +43,11 @@ body {
   }
   border-bottom: 1px double rgb(171, 167, 167);
 }
+
+.page #content {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

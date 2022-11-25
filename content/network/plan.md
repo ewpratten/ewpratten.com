@@ -1,7 +1,7 @@
 ---
 title: IP Addressing Plan
 extra:
-    uses_graphviz: true
+    uses: [graphviz]
 ---
 
 

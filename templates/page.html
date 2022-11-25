@@ -6,6 +6,12 @@
 {% set title = page.title %}
 {% set description = page.description %}
 {% set is_article = true %}
+{% if page.extra.uses %}
+{% set feature_flags = page.extra.uses %}
+{% endif %}
+{% if page.extra.redir_to %}
+{% set redirect_target = page.extra.redir_to %}
+{% endif %}
 {% endblock variable_wormhole %}
 
 {# Page content #}

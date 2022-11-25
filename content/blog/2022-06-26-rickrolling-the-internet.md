@@ -6,7 +6,7 @@ date: 2022-06-26
 tags: random as398057
 draft: false
 extra:
-  uses_katex: false
+  
   auto_center_images: true
   excerpt: This post covers some of the logistics behind rickrolling the internet with some clever routing tricks.
 ---

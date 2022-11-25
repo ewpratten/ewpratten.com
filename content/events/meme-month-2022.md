@@ -3,7 +3,7 @@ title: Meme Appreciation Month
 description: "Come chat with young hams, and join the meme madness!"
 aliases: [/yeet]
 extra:
-    uses_flags: true
+    uses: [flags]
 ---
 
 ***This event has passed. Page preserved for nostalgia.***

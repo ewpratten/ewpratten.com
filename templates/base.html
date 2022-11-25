@@ -3,6 +3,8 @@
 {% set title = "NO TITLE SET" %}
 {% set description = "" %}
 {% set is_article = false %}
+{% set feature_flags = [] %}
+{% set redirect_target = "" %}
 {% endblock variable_wormhole %}
 
 <!DOCTYPE html>
@@ -16,6 +18,11 @@
     <link rel="shortcut icon" type="image/jpg" href="{{config.extra.profile_photo}}" />
     {% include "components/metadata/advertise-rss.html" %}
     {% include "components/metadata/opengraph.html" %}
+
+    {# Redirect support #}
+    {% if redirect_target != "" %}
+    <meta http-equiv="refresh" content="0; url={{redirect_target}}" />
+    {% endif %}
 
     {# Page title #}
     <title>{{title}} | {{config.title}}</title>
@@ -48,6 +55,9 @@
     {# Component styles #}
     {% block component_styles %}
     {% endblock component_styles %}
+
+    {# Enable features #}
+    {% include "components/metadata/page-features.html" %}
 </head>
 
 <body>

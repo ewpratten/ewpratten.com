@@ -6,7 +6,7 @@ date: 2022-09-09
 tags: website
 draft: false
 extra:
-  uses_katex: false
+  
   auto_center_images: true
   excerpt: A small update post about some website changes
 ---
