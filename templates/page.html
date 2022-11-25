@@ -9,6 +9,13 @@
 {% endblock variable_wormhole %}
 
 {# Page content #}
+{% block page_start %}
+{% include "components/heading-card.html" %}
+{% endblock page_start %}
 {% block content %}
- {{ page.content | safe }}
+<h1 style="margin-bottom:0;padding-bottom:0;">{{page.title}}</h1>
+<em>{{page.description}}</em>
+<br><br>
+
+{{ page.content | safe }}
 {% endblock content %}

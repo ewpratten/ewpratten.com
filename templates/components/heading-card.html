@@ -1,0 +1,14 @@
+{% block component_styles %}
+{{ super() }}
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+{% endblock component_styles %}
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="{{config.extra.profile_photo}}" alt="Profile Photo">
+    </div>
+    <div class="text-container">
+        <h1>{{config.extra.name}}</h1>
+        <p>{{config.extra.profession}}</p>
+    </div>
+</div>

@@ -8,6 +8,9 @@
 {% endblock variable_wormhole %}
 
 {# Page content #}
+{% block page_start %}
+{% include "components/about-card.html" %}
+{% endblock page_start %}
 {% block content %}
- {{ section.content | safe }}
+{{ section.content | safe }}
 {% endblock content %}
