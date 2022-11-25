@@ -19,7 +19,7 @@ jobs:
           CONFIG_FILE: "config.toml"
 
       - name: Disable Jekyll
-        run: touch ./public/.nojekyll
+        run: sudo touch ./public/.nojekyll
 
       - name: Deploy to GitHub Pages
         if: success()
