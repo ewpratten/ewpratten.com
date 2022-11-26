@@ -1,0 +1,20 @@
+.photo-collection-card {
+  text-decoration: none !important;
+  color: unset !important;
+
+  .card {
+    .cover-image {
+      min-height: 100%;
+      min-width: 100%;
+      overflow: hidden;
+    }
+
+    .card-title {
+      margin: 0;
+    }
+
+    &:hover {
+        box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+    }
+  }
+}
