@@ -12,30 +12,30 @@ While I was mainly focused on shooting video, I did take a few hundred photos al
 
 <!-- ## From the streets -->
 
-![](/photos/quebec-2017/20170621_132531-01.jpeg)
+{{clickable_photo(path="/photos/quebec-2017/20170621_132531-01.jpeg")}}
 
-![](/photos/quebec-2017/20170621_131126-01.jpeg)
+{{clickable_photo(path="/photos/quebec-2017/20170621_131126-01.jpeg")}}
 
-![](/photos/quebec-2017/20170621_225558-01.jpeg)
-
-<hr>
-
-I am quite fond of this one, a super wide shot made from stitching a bunch of photos together in [Microsoft ICE](https://en.wikipedia.org/wiki/Image_Composite_Editor).
-
-![](/photos/quebec-2017/20170621_105853-01.jpeg)
+{{clickable_photo(path="/photos/quebec-2017/20170621_225558-01.jpeg")}}
 
 <hr>
 
-![](/photos/quebec-2017/20170621_105921-01.jpeg)
+I am quite fond of this one, a super wide shot made from stitching a bunch of photos together in [Microsoft ICE](https://en.wikipedia.org/wiki/Image_Composite_Editor")}}.
 
-![](/photos/quebec-2017/20170622_112655-01.jpeg)
+{{clickable_photo(path="/photos/quebec-2017/20170621_105853-01.jpeg")}}
+
+<hr>
+
+{{clickable_photo(path="/photos/quebec-2017/20170621_105921-01.jpeg")}}
+
+{{clickable_photo(path="/photos/quebec-2017/20170622_112655-01.jpeg")}}
 
 <hr>
 
 I also took a bunch of neat waterfall photos:
 
-![](/photos/quebec-2017/20170622_152959-01.jpeg)
+{{clickable_photo(path="/photos/quebec-2017/20170622_152959-01.jpeg")}}
 
-![](/photos/quebec-2017/20170622_153509-02.jpeg)
+{{clickable_photo(path="/photos/quebec-2017/20170622_153509-02.jpeg")}}
 
-![](/photos/quebec-2017/20170622_153903-01.jpeg)
+{{clickable_photo(path="/photos/quebec-2017/20170622_153903-01.jpeg")}}
