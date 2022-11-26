@@ -20,7 +20,7 @@
 {# Handle various embed modes #}
 {% if section.extra.section_embed_mode %}
 
-
+{# Blog post injection #}
 {% if section.extra.section_embed_mode == "blog_posts" %}
 {# <ul style="margin:0"> #}
   <div>
@@ -45,5 +45,14 @@
 </ul>
 </div>
 {% endif %}
+
+{# Photo collection injection #}
+{% if section.extra.section_embed_mode == "photos" %}
+{% for collection in section.pages %}
+{% include "components/photo-collection-card.html" %}
+{% endfor %}
+{% endif %}
+
+
 {% endif %}
 {% endblock content %}
