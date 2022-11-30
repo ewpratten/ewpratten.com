@@ -37,8 +37,28 @@
 <ul>
   {% endif %}
 
-  <li class="blog-post-li"><span style="color:{% if page.draft %}red{% else %}gray{% endif %};">{{page.date}}:</span>
+  <li class="blog-post-li">
+
+    {# Informational icon #}
+    {% if page.extra.icon %}
+    <i class="{{page.extra.icon}}"></i>
+    {% else %}
+    <i class="las la-book"></i>
+    {% endif %}
+
+    {# Datestamp #}
+    <span style="color:{% if page.draft %}red{% else %}gray{% endif %};" class="monospace">{{page.date}}:</span>
+
+    {# Title #}
     <a href="{{page.path}}">{{page.title}}</a>
+
+    {# <ul>
+      <li>
+        {% if page.description %}
+        {{page.description}}
+        {% endif %}
+      </li>
+    </ul> #}
   </li>
   {% endif %}
   {% endfor %}
@@ -53,6 +73,10 @@
 {% endfor %}
 {% endif %}
 
+{# Site timeline injection #}
+{% if section.extra.section_embed_mode == "timeline" %}
+{% include "components/site-timeline.html" %}
+{% endif %}
 
 {% endif %}
 {% endblock content %}

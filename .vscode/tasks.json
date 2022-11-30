@@ -13,6 +13,16 @@
                 "--open"
             ],
             "problemMatcher": []
+        },
+        {
+            "label": "Launch development webserver (without drafts)",
+            "type": "shell",
+            "command": "zola",
+            "args": [
+                "serve",
+                "--open"
+            ],
+            "problemMatcher": []
         }
     ]
 }

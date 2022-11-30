@@ -1,0 +1,47 @@
+{# Build a list of pages to work with #}
+{# {% set all_pages = [] %}
+{% set all_pages = all_pages + %} #}
+{% set blog_section = get_section(path="blog/_index.md") %}
+{% set music_ewp_section = get_section(path="music/evan-pratten/_index.md") %}
+{% set music_rtl_section = get_section(path="music/retrylife/_index.md") %}
+
+{# Combine pages #}
+{% set all_pages = [] %}
+{% set all_pages = all_pages | concat(with=blog_section.pages) %}
+{% set all_pages = all_pages | concat(with=music_ewp_section.pages) %}
+{% set all_pages = all_pages | concat(with=music_rtl_section.pages) %}
+
+{# Sort and group #}
+{% set all_pages = all_pages | sort(attribute="date") | reverse %}
+{% set map = all_pages | group_by(attribute="year") %}
+{% set_global years = [] %}
+{% for year, ignored in map %}
+{% set_global years = years | concat(with=year) %}
+{% endfor %}
+
+{# Iterate all pages #}
+{% for year in years %}
+{% set pages = map[year] %}
+{# Per-year heading #}
+<h2>{{year}}</h2>
+<ul>
+    {% for page in pages %}
+    {% if not page.draft %}
+    <li>
+        {# Informational icon #}
+        {% if page.extra.icon %}
+        <i class="{{page.extra.icon}}"></i>
+        {% else %}
+        <i class="las la-book"></i>
+        {% endif %}
+
+        {# Datestamp #}
+        <span class="gray monospace">{{page.date}}:</span>
+
+        {# Title #}
+        <a href="{{page.path}}">{{page.title}}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endfor %}
