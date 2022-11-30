@@ -8,6 +8,9 @@
 {% if section.extra.uses %}
 {% set feature_flags = section.extra.uses %}
 {% endif %}
+{% if section.extra.redir_to %}
+{% set redirect_target = section.extra.redir_to %}
+{% endif %}
 {% endblock variable_wormhole %}
 
 {# Page content #}

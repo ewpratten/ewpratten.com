@@ -1,0 +1,14 @@
+.timeline-item {
+  .timeline-datestamp {
+    display: inline-block;
+  }
+
+  .mobile-linebreak {
+    @media screen and (max-width: 450px) {
+      display: block !important;
+    }
+  }
+
+  .timeline-title {
+  }
+}

@@ -1,10 +1,9 @@
 ---
-title: Web Log
+title: Blog
 sort_by: date
 extra:
-    section_embed_mode: blog_posts
+    # section_embed_mode: blog_posts
+    redir_to: /timeline
 ---
 
-## My web log
-
-I write about software, hardware, life, and more. ([RSS](/rss.xml))
+This page has been integrated in to the [site timeline](/timeline).

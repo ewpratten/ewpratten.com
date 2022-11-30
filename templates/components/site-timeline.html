@@ -1,15 +1,22 @@
+{% block component_styles %}
+{{ super() }}
+<link rel="stylesheet" href="/styles/components/site-timeline.css">
+{% endblock component_styles %}
+
 {# Build a list of pages to work with #}
 {# {% set all_pages = [] %}
 {% set all_pages = all_pages + %} #}
 {% set blog_section = get_section(path="blog/_index.md") %}
 {% set music_ewp_section = get_section(path="music/evan-pratten/_index.md") %}
 {% set music_rtl_section = get_section(path="music/retrylife/_index.md") %}
+{% set photo_section = get_section(path="photography/_index.md") %}
 
 {# Combine pages #}
 {% set all_pages = [] %}
 {% set all_pages = all_pages | concat(with=blog_section.pages) %}
 {% set all_pages = all_pages | concat(with=music_ewp_section.pages) %}
 {% set all_pages = all_pages | concat(with=music_rtl_section.pages) %}
+{% set all_pages = all_pages | concat(with=photo_section.pages) %}
 
 {# Sort and group #}
 {% set all_pages = all_pages | sort(attribute="date") | reverse %}
@@ -27,19 +34,23 @@
 <ul>
     {% for page in pages %}
     {% if not page.draft %}
-    <li>
-        {# Informational icon #}
-        {% if page.extra.icon %}
-        <i class="{{page.extra.icon}}"></i>
-        {% else %}
-        <i class="las la-book"></i>
-        {% endif %}
+    <li class="timeline-item">
+        <div class="timeline-datestamp">
+            {# Informational icon #}
+            {% if page.extra.icon %}
+            <i class="{{page.extra.icon}}"></i>
+            {% else %}
+            <i class="las la-book"></i>
+            {% endif %}
 
-        {# Datestamp #}
-        <span class="gray monospace">{{page.date}}:</span>
+            {# Datestamp #}
+            <span class="gray monospace">{{page.date}}:</span>
+        </div>
+
 
         {# Title #}
-        <a href="{{page.path}}">{{page.title}}</a>
+        <br class="mobile-linebreak" style="display: none;">
+        <a href="{{page.path}}" class="timeline-title">{{page.title}}</a>
     </li>
     {% endif %}
     {% endfor %}
