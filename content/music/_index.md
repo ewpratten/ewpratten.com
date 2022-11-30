@@ -3,14 +3,9 @@ title: Music
 sort_by: date
 ---
 
-# My Music
+# My musical journey
 
-- <span class="gray monospace">2020-11-25:</span> [Evan Pratten - *Channels*](https://open.spotify.com/track/4tDNc9IFvj62p7aYHa7vCc) <span class="gray">(Single)</span>
-- <span class="gray monospace">2020-11-25:</span> [Evan Pratten - *Summer Tracks.*](https://open.spotify.com/album/3bcakhzNwyK40K0TowcT0m) <span class="gray">(Single)</span>
-
-<!-- # My musical journey -->
-
-<!-- - <span class="gray monospace">2022</span>: Began releasing music under my own name
+- <span class="gray monospace">2022</span>: Began releasing music under my own name
 - <span class="gray monospace">2019</span>: Produced multiple tracks with other students at [*Studio 225*](https://www.facebook.com/studio225beal/)
 - <span class="gray monospace">2016</span>: Produced a full-length theatrical soundtrack for *Lester B. Pearson SFTA*
 - <span class="gray monospace">2016</span>: Released 8 albums
@@ -25,9 +20,9 @@ sort_by: date
 - <span class="gray monospace">2011-2012</span>: Played every variant of recorder I could get my hands on
 - <span class="gray monospace">2010</span>: Formed *AMPED*, a rock band. I was drummer and occasional vocalist
 - <span class="gray monospace">2010</span>: Started playing the drums
-- <span class="gray monospace">2008</span>: Started playing the piano -->
+- <span class="gray monospace">2008</span>: Started playing the piano
 
-<!-- ## Streaming platforms
+## Streaming platforms
 
 - Evan Pratten
   - [Spotify](https://open.spotify.com/artist/1aLNEmgqBJkhfkEZvf8Vh5)
@@ -36,4 +31,4 @@ sort_by: date
   - [Amazon Music](https://music.amazon.com/artists/B09TBHQCM1/evan-pratten)
 - RetryLife
   - [Spotify](https://open.spotify.com/artist/4RoVvaoNjTgtgIMLhO6yWT)
-  - [Apple Music](https://music.apple.com/ca/artist/retrylife/1626304389) -->
+  - [Apple Music](https://music.apple.com/ca/artist/retrylife/1626304389)
