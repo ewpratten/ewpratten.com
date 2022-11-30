@@ -4,6 +4,7 @@ date: 2017-06-22
 description: My favorites from a larger collection of photos taken on a trip around Québec
 extra:
     cover_image: /photos/quebec-2017/20170622_112655-01.jpeg
+    icon: las la-camera
 ---
 
 Back in 2017, I took a school-organized trip around Québec. My friends and I brought our cameras, loaded up on SD cards, and went all out with some pretty creative shots.

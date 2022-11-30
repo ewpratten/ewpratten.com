@@ -4,6 +4,7 @@ date: 2019-08-09
 description: My favorites from a larger collection of photos taken in Nova Scotia
 extra:
     cover_image: /photos/nova-scotia-2019/IMG_20190807_122409-01.jpeg
+    icon: las la-camera
 ---
 
 <!-- ## Evening shots -->

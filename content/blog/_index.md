@@ -2,9 +2,8 @@
 title: Blog
 sort_by: date
 extra:
-    section_embed_mode: blog_posts
+    # section_embed_mode: blog_posts
+    redir_to: /timeline
 ---
 
-## Blog posts
-
-I write about software, hardware, life, and school. ([RSS](/rss.xml))
+This page has been integrated in to the [site timeline](/timeline).
