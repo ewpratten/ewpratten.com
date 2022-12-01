@@ -1,15 +1,10 @@
+name: Bundle Website
+on: push
 
-on: 
-  push:
-    branches:
-      - master
-
-name: Build and publish site
 jobs:
-  build-bundle-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-    
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -23,7 +18,7 @@ jobs:
 
       - name: Compile assets
         run: make
-        
+
       - name: Build
         uses: TonySpegel/zola-build-action@v1
         env:
@@ -32,6 +27,11 @@ jobs:
       - name: Disable Jekyll
         run: sudo touch ./public/.nojekyll
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/master'
+    steps:
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
