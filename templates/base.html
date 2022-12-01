@@ -75,11 +75,9 @@
         </div>
 
         {# Actual content #}
-        <div id="content" class="container">
-            <article class="markdown-body">
-                {% block content %}{% endblock content %}
-            </article>
-        </div>
+        <article id="content" class="container markdown-body">
+            {% block content %}{% endblock content %}
+        </article>
 
         {# Footer #}
         {% include "components/footer.html" %}
