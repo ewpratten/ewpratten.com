@@ -8,7 +8,6 @@ Want to get in touch? Feel free to send me an email at [contact@ewpratten.com](m
 
 ## Find me elsewhere
 
-
 - [LinkedIn](https://www.linkedin.com/in/ewpratten/)
 - [GitHub](https://github.com/ewpratten)
 - [Instagram](https://www.instagram.com/evanpratten/)
@@ -19,3 +18,12 @@ Want to get in touch? Feel free to send me an email at [contact@ewpratten.com](m
 - [YouTube](https://www.youtube.com/@ewpratten)
 - [IMDb](https://www.imdb.com/name/nm13747554/)
 - [IETF Datatracker](https://datatracker.ietf.org/person/Evan%20Pratten)
+
+## AS54041 network operations
+
+**AS54041** operates with a selective peering policy. If you are interested in peering with this network, please send an email to [noc@ewpratten.com](mailto:noc@ewpratten.com). 
+
+All other network information may be found via:
+
+- [PeeringDB](https://www.peeringdb.com/asn/54041)
+- [BGP.tools](https://bgp.tools/as/54041)
