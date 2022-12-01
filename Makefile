@@ -14,3 +14,6 @@ static/dist/line-awesome/fonts/la-brands-400.woff: node_modules/line-awesome/dis
 static/dist/github-markdown-css/github-markdown-light.css: node_modules/github-markdown-css/github-markdown-light.css
 	@mkdir -p $(dir $@)
 	cp $< $@
+
+node_modules:
+	npm install
