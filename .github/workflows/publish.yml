@@ -27,6 +27,9 @@ jobs:
       - name: Disable Jekyll
         run: sudo touch ./public/.nojekyll
 
+      - name: Copy generated dist files
+        run: cp -r ./static/dist ./public/dist
+
       - name: Publish site as artifact
         uses: actions/upload-artifact@v2
         with:
