@@ -28,7 +28,7 @@ jobs:
         run: sudo touch ./public/.nojekyll
 
       - name: Delete dist gitignore
-        run: rm -f ./public/dist/.gitignore
+        run: sudo rm -f ./public/dist/.gitignore
 
       - name: Publish site as artifact
         uses: actions/upload-artifact@v2
