@@ -10,3 +10,5 @@ Cargo.lock
 **/*.rs.bk
 
 /public/
+
+/node_modules/
