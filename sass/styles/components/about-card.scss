@@ -49,8 +49,16 @@
           line-height: 1.25em;
           margin: 0;
           padding: 0;
+
+          .about-quick-link{
+            img{
+              display: inline-block;
+              height: 1em;
+              width: 1em;
+              filter: invert(9%) sepia(97%) saturate(6581%) hue-rotate(247deg) brightness(94%) contrast(144%);
+            }
+          }
         }
-        padding: 0;
       }
     }
   }
