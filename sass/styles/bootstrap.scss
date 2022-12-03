@@ -1,0 +1,19 @@
+@import "../../node_modules/bootstrap/scss/functions"; // Required
+@import "../../node_modules/bootstrap/scss/variables"; // Required
+@import "../../node_modules/bootstrap/scss/mixins"; // Required
+@import "../../node_modules/bootstrap/scss/maps"; // Required
+// @import "../../node_modules/bootstrap/scss/utilities";
+
+@import "../../node_modules/bootstrap/scss/root"; // Required
+@import "../../node_modules/bootstrap/scss/reboot"; // Required
+
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/card";
+
+// @import "../../node_modules/bootstrap/scss/helpers";
+// @import "../../node_modules/bootstrap/scss/utilities/api";
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
