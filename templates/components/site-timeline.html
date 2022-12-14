@@ -10,14 +10,16 @@
 {% set blog_section = get_section(path="blog/_index.md") %}
 {% set music_ewp_section = get_section(path="music/evan-pratten/_index.md") %}
 {% set music_rtl_section = get_section(path="music/retrylife/_index.md") %}
-{% set photo_section = get_section(path="photography/_index.md") %}
+{# {% set photo_section = get_section(path="photography/_index.md") %} #}
+{% set microblog_section = get_section(path="microblog/_index.md") %}
 
 {# Combine pages #}
 {% set all_pages = [] %}
 {% set all_pages = all_pages | concat(with=blog_section.pages) %}
 {% set all_pages = all_pages | concat(with=music_ewp_section.pages) %}
 {% set all_pages = all_pages | concat(with=music_rtl_section.pages) %}
-{% set all_pages = all_pages | concat(with=photo_section.pages) %}
+{# {% set all_pages = all_pages | concat(with=photo_section.pages) %} #}
+{% set all_pages = all_pages | concat(with=microblog_section.pages) %}
 
 {# Sort and group #}
 {% set all_pages = all_pages | sort(attribute="date") | reverse %}
@@ -32,9 +34,10 @@
 {% set pages = map[year] %}
 {# Per-year heading #}
 <h2>{{year}}</h2>
-<ul>
+{# <ul> #}
     {% for page in pages %}
     {% if not page.draft %}
+    <!--
     <li class="timeline-item">
         <div class="timeline-datestamp">
             {# Informational icon #}
@@ -53,7 +56,46 @@
         <br class="mobile-linebreak" style="display: none;">
         <a href="{{page.path}}" class="timeline-title">{{page.title}}</a>
     </li>
+-->
+
+
+    <div class="card">
+        <div class="card-header">
+            {# Informational icon #}
+            {% if page.extra.icon %}
+            <i class="{{page.extra.icon}}"></i>
+            {% else %}
+            <i class="las la-book"></i>
+            {% endif %}
+
+            <strong>{{page.title}}</strong>
+        </div>
+        <div class="card-body">
+
+            {# Embed appropriate content #}
+            {# {% if page.extra.excerpt %}
+            <p>{{page.extra.excerpt}}</p>
+            {% endif %} #}
+            
+            {# Handle page types #}
+            {% if page.path is starting_with("/music") %}
+            {{page.content | safe}}
+            {% elif page.path is starting_with("/blog") %}
+            <blockquote>
+                {% if page.extra.excerpt %}
+                {{page.extra.excerpt}}
+                {% endif %}
+            </blockquote>
+            <a href="{{page.path}}">Read More</a>
+            {% elif page.path is starting_with("/microblog") %}
+            {{page.content | safe}}
+            {% endif %}
+            
+        </div>
+    </div><br>
+
     {% endif %}
     {% endfor %}
-</ul>
+    {#
+</ul> #}
 {% endfor %}
