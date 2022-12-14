@@ -8,6 +8,12 @@ draft: false
 extra:
   icon: las la-music
   excerpt: '"Channels" is a single by Evan Pratten, released on November 25, 2022.'
+  opengraph:
+    song:
+      duration: 3:24
+      artists:
+        - first_name: Evan
+          last_name: Pratten         
 ---
 
 I just published a new song!

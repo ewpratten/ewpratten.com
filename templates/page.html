@@ -32,6 +32,9 @@
 {% if page.extra.redir_to %}
 {% set redirect_target = page.extra.redir_to %}
 {% endif %}
+{% if page.extra.opengraph %}
+{% set opengraph = page.extra.opengraph %}
+{% endif %}
 {% endblock variable_wormhole %}
 
 {# Page content #}
