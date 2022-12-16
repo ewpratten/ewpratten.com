@@ -37,6 +37,15 @@
 <ul class="timeline-list">
     {% for page in pages %}
     {% if not page.draft %}
+    {% if not page.extra.hidden %}
+
+    {# Determine the appropriate outlink #}
+    {% if page.extra.redir_to %}
+    {% set page_path = page.extra.redir_to %}
+    {% else %}
+    {% set page_path = page.path %}
+    {% endif %}
+
     <li class="timeline-item">
         <div class="timeline-datestamp">
             {# Informational icon #}
@@ -53,15 +62,24 @@
 
         {# Title #}
         <br class="mobile-linebreak" style="display: none;">
-        <a href="{{page.path}}" class="timeline-title">{{page.title}}</a>
+        <a href="{{page_path}}" class="timeline-title" {% if page.extra.redir_to %} target="_blank" {% endif %}>
+            {{page.title}}
+
+            {# If the page is a redirect, show the outlink icon #}
+            {% if page.extra.redir_to %}
+            <i class="las la-external-link-alt"></i>
+            {% endif %}
+        </a>
         <br>
-        
+
         {# Additonal info #}
         {% if page.extra.excerpt %}
         <blockquote class="timeline-description">{{page.extra.excerpt}}</blockquote>
         {% endif %}
-        {# <hr> #}
+        {#
+        <hr> #}
     </li>
+    {% endif %}
     {% endif %}
     {% endfor %}
 </ul>
