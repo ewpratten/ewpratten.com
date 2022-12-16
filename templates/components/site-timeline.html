@@ -11,6 +11,7 @@
 {% set music_ewp_section = get_section(path="music/evan-pratten/_index.md") %}
 {% set music_rtl_section = get_section(path="music/retrylife/_index.md") %}
 {% set photo_section = get_section(path="photography/_index.md") %}
+{% set software_section = get_section(path="software/_index.md") %}
 
 {# Combine pages #}
 {% set all_pages = [] %}
@@ -18,6 +19,7 @@
 {% set all_pages = all_pages | concat(with=music_ewp_section.pages) %}
 {% set all_pages = all_pages | concat(with=music_rtl_section.pages) %}
 {% set all_pages = all_pages | concat(with=photo_section.pages) %}
+{% set all_pages = all_pages | concat(with=software_section.pages) %}
 
 {# Sort and group #}
 {% set all_pages = all_pages | sort(attribute="date") | reverse %}
