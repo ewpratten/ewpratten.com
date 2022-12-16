@@ -32,7 +32,7 @@
 {% set pages = map[year] %}
 {# Per-year heading #}
 <h2>{{year}}</h2>
-<ul>
+<ul class="timeline-list">
     {% for page in pages %}
     {% if not page.draft %}
     <li class="timeline-item">
@@ -52,6 +52,13 @@
         {# Title #}
         <br class="mobile-linebreak" style="display: none;">
         <a href="{{page.path}}" class="timeline-title">{{page.title}}</a>
+        <br>
+        
+        {# Additonal info #}
+        {% if page.extra.excerpt %}
+        <blockquote class="timeline-description">{{page.extra.excerpt}}</blockquote>
+        {% endif %}
+        {# <hr> #}
     </li>
     {% endif %}
     {% endfor %}

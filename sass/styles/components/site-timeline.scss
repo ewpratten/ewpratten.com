@@ -1,14 +1,26 @@
-.timeline-item {
-  .timeline-datestamp {
-    display: inline-block;
+.timeline-list {
+  @media screen and (max-width: 700px) {
+    padding-left: 1em !important;
   }
 
-  .mobile-linebreak {
-    @media screen and (max-width: 450px) {
-      display: block !important;
+  .timeline-item {
+    .timeline-datestamp {
+      display: inline-block;
     }
-  }
 
-  .timeline-title {
+    .mobile-linebreak {
+      @media screen and (max-width: 450px) {
+        display: block !important;
+      }
+    }
+
+    .timeline-title {
+    }
+
+    .timeline-description {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      margin-left: 0.25em;
+    }
   }
 }
