@@ -1,0 +1,35 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+
+  # purge_cache:
+  #   runs-on: ubuntu-latest
+  #   needs: deploy
+  #   environment:
+  #     name: cloudflare-api
+  #   steps:
+  #     - name: Purge Cloudflare Cache
+  #       uses: jakejarvis/cloudflare-purge-action@master
+  #       env:
+  #         CLOUDFLARE_ZONE: "ewpratten.com"
+  #         CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
