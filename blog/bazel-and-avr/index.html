@@ -1,0 +1,376 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;bazel-and-avr&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="Bringing Bazel to 8-bit microcontrollers" />
+<meta property="description" content="Bringing Bazel to 8-bit microcontrollers" />
+<meta name="description" content="Bringing Bazel to 8-bit microcontrollers">
+
+
+<meta property="og:title" content="Compiling AVR-C code with a modern build system - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Compiling AVR-C code with a modern build system | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Compiling AVR-C code with a modern build system</h1>
+<em>Bringing Bazel to 8-bit microcontrollers</em>
+<br><br>
+
+<p><em>The GitHub repository for everything in this post can be found <a rel="noopener" target="_blank" href="https://github.com/Ewpratten/avr-for-bazel-demo">here</a></em></p>
+<p>When writing software for an Arduino, or any other <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/AVR_microcontrollers">AVR</a>-based device, there are generally three main options. You can use the <a rel="noopener" target="_blank" href="https://www.arduino.cc/en/main/software">Arduino IDE</a> with <a rel="noopener" target="_blank" href="https://github.com/arduino/arduino-cli">arduino-cli</a>, which is in my opinion, a clunky system that is great for high levels of abstraction and teaching people how to program, but lacks any kind of easy customization I am interested in. If you are looking for something more advanced (and works in your favorite IDE), you might look at <a rel="noopener" target="_blank" href="https://platformio.org/">PlatformIO</a>. Finally, you can just program without any Hardware Abstraction Library at all, and use <a rel="noopener" target="_blank" href="https://www.nongnu.org/avr-libc/">avr-libc</a> along with <a rel="noopener" target="_blank" href="https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers">avr-gcc</a> and <a rel="noopener" target="_blank" href="https://www.nongnu.org/avrdude/">avrdude</a>. </p>
+<p>This final option is my favorite by far, as it both forces me to think about how the system I am building is actually working &quot;behind the scenes&quot;, and lets me do everything exactly the way I want. Unfortunately, when working directly with the AVR system libraries, the only buildsystem / tool that is available (without a lot of extra work) is <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Make_(software)">Make</a>. As somebody who spends 90% of his time working with higher-level buildsystems like <a rel="noopener" target="_blank" href="https://gradle.org/">Gradle</a> and <a rel="noopener" target="_blank" href="https://bazel.build">Bazel</a>, I don't really like needing to deal with Makefiles, and manually handle dependency loading. This got me thinking. I have spent a lot of time working in Bazel, and cross-compiling for the armv7l platform via the <a rel="noopener" target="_blank" href="https://launchpad.net/%7Ewpilib/+archive/ubuntu/toolchain/">FRC Toolchain</a>. How hard can it be to add AVR Toolchain support to Bazel?</p>
+<p><em>The answer: Its pretty easy.</em></p>
+<p>The Bazel buildsystem allows users to define custom toolchains via the <a rel="noopener" target="_blank" href="https://docs.bazel.build/versions/master/toolchains.html">toolchain</a> rule. I am going to assume you have a decent understanding of the <a rel="noopener" target="_blank" href="https://docs.bazel.build/versions/master/skylark/language.html">Starlark</a> DSL, or at least Python3 (which Starlark is syntactically based on). To get started setting up a Bazel toolchain, I create empty <code>WORKSPACE</code> and <code>BUILD</code> files, along with a new bazel package named <code>toolchain</code> that has a bazel file inside for the toolchain settings, a <code>.bazelrc</code> file, and a package to store my test program.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>/project
+</span><span>    |
+</span><span>    +-.bazelrc
+</span><span>    +-BUILD
+</span><span>    +-example
+</span><span>    |   |
+</span><span>    |   +-BUILD
+</span><span>    |   +-main.cc
+</span><span>    +-toolchain
+</span><span>    |   |
+</span><span>    |   +-BUILD
+</span><span>    |   +-avr.bzl
+</span><span>    +-WORKSPACE
+</span></code></pre>
+<p>I only learned about this recently, but you can use a <code>.bazelrc</code> file to define constant arguments to be passed to the buildsystem per-project. For this project, I am adding the following arguments to the config file to define which toolchain to use for which target:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># .bazelrc
+</span><span>
+</span><span style="color:#65737e;"># Use our custom-configured c++ toolchain.
+</span><span style="color:#bf616a;">build:avr_config --crosstool_top</span><span>=//toolchain:avr_suite
+</span><span style="color:#bf616a;">build:avr_config --cpu</span><span>=avr
+</span><span>
+</span><span style="color:#65737e;"># Use the default Bazel C++ toolchain to build the tools used during the
+</span><span style="color:#65737e;"># build.
+</span><span style="color:#bf616a;">build:avr_config --host_crosstool_top</span><span>=@bazel_tools//tools/cpp:toolchain
+</span></code></pre>
+<p>This config will default all builds to use a custom toolchain named <code>avr_suite</code>, and compile to target the <code>avr</code> CPU architecture. But, the final line will make sure to use the host's toolchain for compiling tools needed for Bazel itself (since we can't run AVR code on the host machine). With this, we now have everything needed to tell Bazel what to use when building, but we have not actually defined the toolcahin in the first place. This step comes in two parts. First, we need to define a toolchain implementation (this happens in <code>avr.bzl</code>). This implementation will define things like, where to find every tool on the host, which libc version to use, and what types of tools are provided by avr-gcc in the first place. We can start out by adding some <code>load</code> statements to the file to tell Bazel what functions we need to use.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># toolchain/avr.bzl
+</span><span>
+</span><span style="color:#bf616a;">load</span><span>(&quot;</span><span style="color:#a3be8c;">@bazel_tools//tools/build_defs/cc:action_names.bzl</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">ACTION_NAMES</span><span>&quot;)
+</span><span style="color:#bf616a;">load</span><span>(
+</span><span>    &quot;</span><span style="color:#a3be8c;">@bazel_tools//tools/cpp:cc_toolchain_config_lib.bzl</span><span>&quot;,
+</span><span>    &quot;</span><span style="color:#a3be8c;">feature</span><span>&quot;,
+</span><span>    &quot;</span><span style="color:#a3be8c;">flag_group</span><span>&quot;,
+</span><span>    &quot;</span><span style="color:#a3be8c;">flag_set</span><span>&quot;,
+</span><span>    &quot;</span><span style="color:#a3be8c;">tool_path</span><span>&quot;,
+</span><span>)
+</span></code></pre>
+<p>Once this is done, we need to define everything that this toolchain implementation can do. In this case avr-gcc can link executables, link dynamic libraries, and link a &quot;nodeps&quot; dynamic library.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># ...
+</span><span>
+</span><span>all_link_actions = [
+</span><span>    </span><span style="color:#bf616a;">ACTION_NAMES</span><span>.cpp_link_executable,
+</span><span>    </span><span style="color:#bf616a;">ACTION_NAMES</span><span>.cpp_link_dynamic_library,
+</span><span>    </span><span style="color:#bf616a;">ACTION_NAMES</span><span>.cpp_link_nodeps_dynamic_library,
+</span><span>]
+</span></code></pre>
+<p>We also need to tell Bazel where to find every tool. This may vary platform-to-platform, but with a standard avr-gcc install on Linux, the following should work just fine. Experienced Bazel users may wish to make use of Bazel's <a rel="noopener" target="_blank" href="https://docs.bazel.build/versions/master/configurable-attributes.html"><code>config_setting</code> and <code>select</code></a> rules to allow the buildsystem to run on any type of host via a CLI flag.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># ...
+</span><span>
+</span><span>tool_paths = [
+</span><span>    </span><span style="color:#bf616a;">tool_path</span><span>(
+</span><span>        </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">gcc</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">path </span><span>= &quot;</span><span style="color:#a3be8c;">/usr/bin/avr-gcc</span><span>&quot;,
+</span><span>    ),
+</span><span>    </span><span style="color:#bf616a;">tool_path</span><span>(
+</span><span>        </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">ld</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">path </span><span>= &quot;</span><span style="color:#a3be8c;">/usr/bin/avr-ld</span><span>&quot;,
+</span><span>    ),
+</span><span>    </span><span style="color:#bf616a;">tool_path</span><span>(
+</span><span>        </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">ar</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">path </span><span>= &quot;</span><span style="color:#a3be8c;">/usr/bin/avr-ar</span><span>&quot;,
+</span><span>    ),
+</span><span>    </span><span style="color:#bf616a;">tool_path</span><span>(
+</span><span>        </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">cpp</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">path </span><span>= &quot;</span><span style="color:#a3be8c;">/usr/bin/avr-g++</span><span>&quot;,
+</span><span>    ),
+</span><span>    </span><span style="color:#bf616a;">tool_path</span><span>(
+</span><span>        </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">gcov</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">path </span><span>= &quot;</span><span style="color:#a3be8c;">/usr/bin/avr-gcov</span><span>&quot;,
+</span><span>    ),
+</span><span>    </span><span style="color:#bf616a;">tool_path</span><span>(
+</span><span>        </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">nm</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">path </span><span>= &quot;</span><span style="color:#a3be8c;">/usr/bin/avr-nm</span><span>&quot;,
+</span><span>    ),
+</span><span>    </span><span style="color:#bf616a;">tool_path</span><span>(
+</span><span>        </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">objdump</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">path </span><span>= &quot;</span><span style="color:#a3be8c;">/usr/bin/avr-objdump</span><span>&quot;,
+</span><span>    ),
+</span><span>    </span><span style="color:#bf616a;">tool_path</span><span>(
+</span><span>        </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">strip</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">path </span><span>= &quot;</span><span style="color:#a3be8c;">/usr/bin/avr-strip</span><span>&quot;,
+</span><span>    ),
+</span><span>]
+</span></code></pre>
+<p>Finally, we need to define the actual avr-toolchain implementation. This can be done via a simple function, and the creation of a new custom rule:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># ...
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">_avr_impl</span><span>(</span><span style="color:#bf616a;">ctx</span><span>):
+</span><span>    features = [
+</span><span>        </span><span style="color:#bf616a;">feature</span><span>(
+</span><span>            </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">default_linker_flags</span><span>&quot;,
+</span><span>            </span><span style="color:#bf616a;">enabled </span><span>= </span><span style="color:#d08770;">True</span><span>,
+</span><span>            </span><span style="color:#bf616a;">flag_sets </span><span>= [
+</span><span>                </span><span style="color:#bf616a;">flag_set</span><span>(
+</span><span>                    </span><span style="color:#bf616a;">actions </span><span>= all_link_actions,
+</span><span>                    </span><span style="color:#bf616a;">flag_groups </span><span>= ([
+</span><span>                        </span><span style="color:#bf616a;">flag_group</span><span>(
+</span><span>                            </span><span style="color:#bf616a;">flags </span><span>= [
+</span><span>                                &quot;</span><span style="color:#a3be8c;">-lstdc++</span><span>&quot;,
+</span><span>                            ],
+</span><span>                        ),
+</span><span>                    ]),
+</span><span>                ),
+</span><span>            ],
+</span><span>        ),
+</span><span>    ]
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">return </span><span>cc_common.</span><span style="color:#bf616a;">create_cc_toolchain_config_info</span><span>(
+</span><span>        </span><span style="color:#bf616a;">ctx </span><span>= ctx,
+</span><span>        </span><span style="color:#bf616a;">toolchain_identifier </span><span>= &quot;</span><span style="color:#a3be8c;">avr-toolchain</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">host_system_name </span><span>= &quot;</span><span style="color:#a3be8c;">local</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">target_system_name </span><span>= &quot;</span><span style="color:#a3be8c;">local</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">target_cpu </span><span>= &quot;</span><span style="color:#a3be8c;">avr</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">target_libc </span><span>= &quot;</span><span style="color:#a3be8c;">unknown</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">compiler </span><span>= &quot;</span><span style="color:#a3be8c;">avr-g++</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">abi_version </span><span>= &quot;</span><span style="color:#a3be8c;">unknown</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">abi_libc_version </span><span>= &quot;</span><span style="color:#a3be8c;">unknown</span><span>&quot;,
+</span><span>        </span><span style="color:#bf616a;">tool_paths </span><span>= tool_paths,
+</span><span>        </span><span style="color:#bf616a;">cxx_builtin_include_directories </span><span>= [
+</span><span>            &quot;</span><span style="color:#a3be8c;">/usr/lib/avr/include</span><span>&quot;,
+</span><span>            &quot;</span><span style="color:#a3be8c;">/usr/lib/gcc/avr/5.4.0/include</span><span>&quot;
+</span><span>        ],
+</span><span>    )
+</span><span>
+</span><span>cc_toolchain_config = </span><span style="color:#bf616a;">rule</span><span>(
+</span><span>    </span><span style="color:#bf616a;">attrs </span><span>= {},
+</span><span>    </span><span style="color:#bf616a;">provides </span><span>= [CcToolchainConfigInfo],
+</span><span>    </span><span style="color:#bf616a;">implementation </span><span>= _avr_impl,
+</span><span>)
+</span></code></pre>
+<p>The <code>cxx_builtin_include_directories</code> argument is very important. This tells the compiler where to find the libc headers. <strong>Both</strong> paths are required, as the headers are split between two directories on Linux for some reason. We are now done with the <code>avr.bzl</code> file, and can add the following to the <code>toolchain</code> package's <code>BUILD</code> file to register our custom toolcahin as an official CC toolchain for Bazel to use:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># toolchain/BUILD
+</span><span>
+</span><span style="color:#bf616a;">load</span><span>(&quot;</span><span style="color:#a3be8c;">@rules_cc//cc:defs.bzl</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">cc_toolchain</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">cc_toolchain_suite</span><span>&quot;)
+</span><span style="color:#bf616a;">load</span><span>(&quot;</span><span style="color:#a3be8c;">:avr.bzl</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">cc_toolchain_config</span><span>&quot;)
+</span><span>
+</span><span style="color:#bf616a;">cc_toolchain_config</span><span>(</span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">avr_toolchain_config</span><span>&quot;)
+</span><span>
+</span><span style="color:#bf616a;">cc_toolchain_suite</span><span>(
+</span><span>    </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">avr_suite</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">toolchains </span><span>= {
+</span><span>        &quot;</span><span style="color:#a3be8c;">avr</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">:avr_toolchain</span><span>&quot;,
+</span><span>    },
+</span><span>)
+</span><span>
+</span><span style="color:#bf616a;">filegroup</span><span>(</span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">empty</span><span>&quot;)
+</span><span>
+</span><span style="color:#bf616a;">cc_toolchain</span><span>(
+</span><span>    </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">avr_toolchain</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">all_files </span><span>= &quot;</span><span style="color:#a3be8c;">:empty</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">compiler_files </span><span>= &quot;</span><span style="color:#a3be8c;">:empty</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">dwp_files </span><span>= &quot;</span><span style="color:#a3be8c;">:empty</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">linker_files </span><span>= &quot;</span><span style="color:#a3be8c;">:empty</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">objcopy_files </span><span>= &quot;</span><span style="color:#a3be8c;">:empty</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">strip_files </span><span>= &quot;</span><span style="color:#a3be8c;">:empty</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">supports_param_files </span><span>= </span><span style="color:#d08770;">0</span><span>,
+</span><span>    </span><span style="color:#bf616a;">toolchain_config </span><span>= &quot;</span><span style="color:#a3be8c;">:avr_toolchain_config</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">toolchain_identifier </span><span>= &quot;</span><span style="color:#a3be8c;">avr-toolchain</span><span>&quot;,
+</span><span>)
+</span></code></pre>
+<p>Thats it. Now, if we wanted to compile a simple blink program in AVR-C, we can add the following to <code>main.cc</code>:</p>
+<pre data-lang="cpp" style="background-color:#2b303b;color:#c0c5ce;" class="language-cpp "><code class="language-cpp" data-lang="cpp"><span style="color:#b48ead;">#ifndef</span><span> F_CPU
+</span><span style="color:#b48ead;">#define </span><span>F_CPU </span><span style="color:#d08770;">16000000</span><span style="color:#b48ead;">UL
+</span><span style="color:#b48ead;">#endif
+</span><span>
+</span><span style="color:#b48ead;">#include </span><span>&lt;</span><span style="color:#a3be8c;">avr/io.h</span><span>&gt;
+</span><span style="color:#b48ead;">#include </span><span>&lt;</span><span style="color:#a3be8c;">util/delay.h</span><span>&gt;
+</span><span>
+</span><span style="color:#b48ead;">int </span><span style="color:#8fa1b3;">main</span><span>(</span><span style="color:#b48ead;">void</span><span>)
+</span><span>{
+</span><span>  DDRC = </span><span style="color:#d08770;">0xFF</span><span>;
+</span><span>  </span><span style="color:#b48ead;">while</span><span>(</span><span style="color:#d08770;">1</span><span>) {
+</span><span>    PORTC = </span><span style="color:#d08770;">0xFF</span><span>; 
+</span><span>    </span><span style="color:#bf616a;">_delay_ms</span><span>(</span><span style="color:#d08770;">1000</span><span>); 
+</span><span>    PORTC= </span><span style="color:#d08770;">0x00</span><span>; 
+</span><span>    </span><span style="color:#bf616a;">_delay_ms</span><span>(</span><span style="color:#d08770;">1000</span><span>); 
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<p>To compile this, just define a <code>cc_binary</code> in the example <code>BUILD</code> file just like any normal Bazel program.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># example/BUILD
+</span><span>
+</span><span style="color:#bf616a;">load</span><span>(&quot;</span><span style="color:#a3be8c;">@rules_cc//cc:defs.bzl</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">cc_binary</span><span>&quot;)
+</span><span>
+</span><span style="color:#bf616a;">cc_binary</span><span>(
+</span><span>    </span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">example</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">srcs </span><span>= [&quot;</span><span style="color:#a3be8c;">main.cc</span><span>&quot;],
+</span><span>    </span><span style="color:#65737e;"># Add any needed cc options here for your specific platform
+</span><span>)
+</span></code></pre>
+<p>This can be compiled with <code>bazel build //example --config=avr_config</code>, and the output binary will be in the <code>bazel-bin</code> directory. You can run <code>avr-objcopy</code> and <code>avrdude</code> manually just like with a normal program.</p>
+<p>Importantly, every normal Bazel function will still work. Want to include <a rel="noopener" target="_blank" href="https://github.com/vancegroup/EigenArduino">EigenArduino</a> in your project? Just import the <a rel="noopener" target="_blank" href="https://github.com/bazelbuild/rules_foreign_cc"><code>rules_foreign_cc</code></a> ruleset and load the Eigen library like normal. You can also run unit tests through Bazel's regular <a rel="noopener" target="_blank" href="https://docs.bazel.build/versions/master/be/c-cpp.html#cc_test">testing rules</a>. If you are a masochist, you could even try loading the <a rel="noopener" target="_blank" href="https://github.com/pybind/pybind11_bazel">pybind11 rules</a> and embedding a Python interpreter in your code.</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

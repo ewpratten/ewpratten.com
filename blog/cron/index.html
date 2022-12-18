@@ -1,0 +1,214 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;cron&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="And I didn&#x27;t die" />
+<meta property="description" content="And I didn&#x27;t die" />
+<meta name="description" content="And I didn&#x27;t die">
+
+
+<meta property="og:title" content="I used cron for the first time - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>I used cron for the first time | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">I used cron for the first time</h1>
+<em>And I didn&#x27;t die</em>
+<br><br>
+
+<p><a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Cron">Cron</a> has always been one of those &quot;scary sysadmin things&quot; in my head. But today, I finally used it!</p>
+<h2 id="my-need">My need</h2>
+<p>I have access to a private API that happens to clear it's users if they are inactive for too long. To solve this, I decided to add a small cron job to make an API call once per month. Basically a <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Keepalive">keepalive</a>.</p>
+<h2 id="how-i-set-it-up">How I set it up</h2>
+<p>Adding a cron job to my laptop was very easy. First, I made a bash script for my api call (not needed, but I felt like doing it).</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#! /bin/bash
+</span><span style="color:#bf616a;">curl --include --header </span><span>&quot;</span><span style="color:#a3be8c;">Accept: application/xml</span><span>&quot; &#39;</span><span style="color:#a3be8c;">&lt;API Endpoint Here&gt;</span><span>&#39;</span><span style="color:#bf616a;"> --user </span><span>$</span><span style="color:#bf616a;">1</span><span>:$</span><span style="color:#bf616a;">2
+</span></code></pre>
+<p>Then, by running <code>crontab -e</code> in my terminal, I just added a new line at the bottom of the file, discribing the task, and when it should be run.</p>
+<pre data-lang="cron" style="background-color:#2b303b;color:#c0c5ce;" class="language-cron "><code class="language-cron" data-lang="cron"><span># Edit this file to introduce tasks to be run by cron.
+</span><span># 
+</span><span># Each task to run has to be defined through a single line
+</span><span># indicating with different fields when the task will be run
+</span><span># and what command to run for the task
+</span><span># 
+</span><span># To define the time you can provide concrete values for
+</span><span># minute (m), hour (h), day of month (dom), month (mon),
+</span><span># and day of week (dow) or use &#39;*&#39; in these fields (for &#39;any&#39;).# 
+</span><span># Notice that tasks will be started based on the cron&#39;s system
+</span><span># daemon&#39;s notion of time and timezones.
+</span><span># 
+</span><span># Output of the crontab jobs (including errors) is sent through
+</span><span># email to the user the crontab file belongs to (unless redirected).
+</span><span># 
+</span><span># For example, you can run a backup of all your user accounts
+</span><span># at 5 a.m every week with:
+</span><span># 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+</span><span># 
+</span><span># For more information see the manual pages of crontab(5) and cron(8)
+</span><span># 
+</span><span># m h  dom mon dow   command
+</span><span>00 11 1 * * /usr/local/bin/api-keepalive.sh &lt;username&gt; &lt;password&gt;
+</span></code></pre>
+<p>This will run once per month, on the 1st, at 11:00.</p>
+<p>That's it! Stupidly simple, and I am no longer scared of cron</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

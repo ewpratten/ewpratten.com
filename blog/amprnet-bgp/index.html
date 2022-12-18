@@ -1,0 +1,238 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;amprnet-bgp&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="A college student, playing with the &quot;big boys&quot;" />
+<meta property="description" content="A college student, playing with the &quot;big boys&quot;" />
+<meta name="description" content="A college student, playing with the &quot;big boys&quot;">
+
+
+<meta property="og:title" content="Adventures in BGP: routing my own public IPv4 address space - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Adventures in BGP: routing my own public IPv4 address space | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Adventures in BGP: routing my own public IPv4 address space</h1>
+<em>A college student, playing with the &quot;big boys&quot;</em>
+<br><br>
+
+<p>Your first, and possibly only question is likely: <em>&quot;what?&quot;</em>, and I forgive you for asking such a thing. As probably any reader of my posts knows very well, IPv4 address blocks are practically impossible to get, and more than impossible to get for personal use. To quickly clear things up, my address block is <em>not</em> for personal use, but in comparison to the majority of the internet's existing address block owners, I am basically a single person holding on to a <code>/24</code> subnet for dear life while the giants of large internet corporations are eating up everything around me.</p>
+<p>Ok, ok, I'm sure you are here for actual technical talk, and not a history lesson, so here we go.</p>
+<h2 id="how-do-you-even-get-ipv4-space">How do you even get IPv4 space?</h2>
+<p>These days, the minimum <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Border_Gateway_Protocol">BGP</a>-routable IPv4 block is a <code>/24</code> subnet, coming in at 255 addresses. One of these blocks auctions for prices starting around 15 thousand dollars USD. I'd say that's slightly unachievable for a college student like me, but when I come to think about it, that's still about the same as a year of tuition and housing, so... 👀</p>
+<p>Alright, enough getting side-tracked. I'd rather pay $0 for some IP space if possible, and luckily for me, it is! I am a licensed <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Amateur_radio">Amateur Radio operator</a>, and through this, I get to make use of a few cool license-restricted services run by and for other operators. One of such services is <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/AMPRNet">AMPRNet</a>, a <code>/8</code> subnet of public IP space specifically assigned for Amateur Radio Digital Communications back in 1981, and self-administered by radio amateurs. The governing body of this subnet is the <a rel="noopener" target="_blank" href="https://www.ampr.org/">Amateur Radio Digital Communications</a> (ARDC) foundation. Through their web portal, with a manually-verified account, any amateur can request subnets or single addresses under the <code>44.0.0.0/8</code> subnet.</p>
+<p>There are, of course, restrictions to this which I will not cover in full here. The main restriction to keep in mind is: AMPRNet address space <em>must</em> be used for amateur-radio-related uses only, and generally must better the radio community in some way.</p>
+<p>The primary justification for my allocation is that a large chunk of my addresses are being used to provide <a rel="noopener" target="_blank" href="https://secure.echolink.org/">Echolink</a> proxies that allow users behind firewalls to interact with the Echolink network. Other uses of my address space involve exposing software-defined radios to the internet, and repeater linking.</p>
+<h2>RIP <em class="gray">(my free time)</em></h2>
+<p>The most common way users of AMPRNet route their allocated IP addresses to and from the public internet is via the <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Routing_Information_Protocol">RIP</a> protocol. RIP is one of the oldest routing protocols, and has the main downside of not being particularly scalable, as well as not being the preferred routing protocol for the internet for a long time.</p>
+<p>The choice of RIP (specifically RIPv2) is not exactly surprising for a network as old as AMPRNet, but not exactly what I was looking for. With the conventional RIP setup used by almost all AMPRNet hosts, gateway servers are set up to subscribe to RIP broadcasts sent by the AMPRNet-Internet gateway (<code>amprgw.ucsd.edu</code>), located at the UCSD <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/San_Diego_Supercomputer_Center">San Diego Supercomputer Center</a>.</p>
+<p>I tried setting up RIPv2-based routing on my gateway to start. I was allocated the <code>44.63.7.32/29</code> address block to test this out with, and followed the guides on the <a rel="noopener" target="_blank" href="https://wiki.ampr.org/wiki/Main_Page">AMPRNet Wiki</a>, along with <a rel="noopener" target="_blank" href="https://www.qsl.net/kb9mwr/wapr/tcpip/">KB9MWR's documentation</a> on the subject. I ran into <em>many</em> roadblocks through this method that absorbed many weekends of my life. The common issue between all of these roadblocks is lack of, or plain incorrect documentation. The AMPRNet Wiki seems to have an issue of minimal review. Many guides are lacking details and have spelling issues in important places.</p>
+<p>Through piecing together broken and incomplete documentation, along with emails from the AMPRNet mailing list, I eventually got my gateway to route between my hosts and other hosts under the <code>44/8</code> IP space, but never managed to get the public internet to see my hosts.</p>
+<p>As a quick aside, before setting up RIP routing, I had my gateway connected to the highly experimental <a rel="noopener" target="_blank" href="https://wiki.ampr.org/wiki/AMPRNet_VPN">AMPRNet VPN</a> service run by <a rel="noopener" target="_blank" href="https://www.qrz.com/db/OHX/OH7LZB">OH7LZB</a>. This service allows all clients to access both AMPRNet and the internet, but does not route back to clients, and all clients are given dynamic IP addresses. Not optimal for any of the uses I outlined at the end of the last section.</p>
+<h2 id="there-is-a-better-way">There is a better way</h2>
+<p>The AMPRNet documentation rather strongly tells users <strong>not</strong> to try routing their allocated IP space via the ubiquitous Border Gateway Protocol (BGP), and provides many solid reasons why. Of course, I took this as a bit of a challenge, and simply <em>did it anyways</em>. </p>
+<p>Well, ok, it was not quite as simple as saying &quot;no&quot; and clicking a button, but this big scary piece of dark magic that is BGP was surprisingly easy to work with in the end. I had heard of BGP before from many great blog posts by <a rel="noopener" target="_blank" href="https://benjojo.co.uk/"><em>Ben Cox</em></a> but I had never had the reason, time, or resources to even come close to touching it. After all, at the time of first learning about routing protocols, I was just a 9th grader.</p>
+<p>I didn't want to dive in to BGP blind and on my own, since I had read many horror stories of what can go wrong when you mess up your routes <span class="gray"><em>cough Facebook cough</em></span>, so I began looking for help. I stumbled across <a rel="noopener" target="_blank" href="https://lobi.to/">2M0LOB</a>'s AMPRNet allocation, and sent an email asking for advice before hopping in the project. Thanks to 2M0LOB for some great pointers that got me started, and for teaching me about <a rel="noopener" target="_blank" href="https://dn42.eu/Home">DN42</a>, a great resource for smoke-checking your BGP routing setups before throwing them into the real world.</p>
+<h2 id="a-second-attempt">A second attempt</h2>
+<p>In the world of internet routing, you generally need four things:</p>
+<ul>
+<li>A block of IP addresses of size <code>/24</code> or larger</li>
+<li>An <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Autonomous_system_(Internet)">autonomous system number</a> (ASN)</li>
+<li>A gateway server</li>
+<li>Peers to announce your routes to</li>
+</ul>
+<h3 id="requesting-an-ip-allocation">Requesting an IP allocation</h3>
+<p>My existing AMPRNet allocation was a <code>/29</code> block which, due to <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">CIDR Notation</a> being clever, is <em>smaller</em> than a <code>/24</code>. Thus, I had to request a larger IP block for myself. The process for requesting a BGP-routable <code>/24</code> from ARDC is a bit different than the standard allocation request process. Firstly, all BGP allocations must be requested under <a rel="noopener" target="_blank" href="https://portal.ampr.org/networks.php?a=region&amp;id=162"><code>44.31.0.0/16</code></a>, which is the &quot;BGP Allocations&quot; segment of <code>44/8</code>. These BGP allocations fall under the <code>Direct</code> allocation type that the AMPRNet Wiki warns you <em>not</em> to use.</p>
+<p>After filling out the usual allocation application, I was contacted by <a rel="noopener" target="_blank" href="https://g1fef.co.uk/">G1FEF</a>, the IT Director of ARDC, with an extra document to fill out, then I was handed an Letter Of Authorization (LOA) and was ready to go!</p>
+<h3 id="not-becoming-an-autonomous-system">(Not) becoming an Autonomous System</h3>
+<blockquote>
+<p>An autonomous system (AS) is a collection of connected Internet Protocol (IP) routing prefixes under the control of one or more network operators [<a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Autonomous_system_(Internet)">Wikipedia</a>]</p>
+</blockquote>
+<p>The idea behind becoming an Autonomous System is that you and your IP allocations are registered in a public coordinated database. These &quot;databases&quot; are managed by <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Regional_Internet_registry">Regional Internet Registries</a> (RIRs), and in my case as a Canadian, specifically the <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/American_Registry_for_Internet_Numbers">American Registry for Internet Numbers</a> (ARIN). </p>
+<p>This is where I ran into a <em>slight</em> roadblock. Registering an Autonomous System under ARIN requires a membership, costing $250USD annually for a <code>/24</code>, along with the requirement that all entities assigned an ASN must be registered organizations. I don't have my own company, nor do I want to pay a large yearly fee for a side-project. </p>
+<p>I decided <em>not</em> to register myself an Autonomous System.</p>
+<h3 id="killing-three-birds-with-one-stone">Killing three birds with one stone</h3>
+<p>Bailing out on the second of four critical steps isn't a great start, but having done my research beforehand, I had a fallback plan. A friendly &quot;little&quot; company called <a rel="noopener" target="_blank" href="https://www.vultr.com/">Vultr</a> has a crazy good deal package that covers all three remaining requirements and more! Vultr provides:</p>
+<ul>
+<li>Virtual Private Server hosting</li>
+<li>The ability for clients to bring their own IP space for free</li>
+<li>Private ASNs</li>
+<li>Free BGP peering</li>
+</ul>
+<p>This means, for only $5USD per month (yes, $5) I get a gateway server, a private ASN, multiple BGP peers, and the added upside of their Canadian datacenter being literally 40km from where I live. My college is on the same internet exchange as my brand new gateway server, and they have a 10-gig fiber link running between them, so the latency for me to use this thing is insanely tiny.</p>
+<h2 id="bringing-it-all-together">Bringing it all together</h2>
+<p>Now equipped with everything I needed to route my <code>/24</code> IP space, I was left with one last step: <em>actually doing it</em>. Back on the <a rel="noopener" target="_blank" href="https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/">Facebook BGP</a> issues, I really didn't want to screw this part up, so I once again went looking for help. Luckily after asking around my college, I was introduced to <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/felixgustavocarapaica/">Felix Carapaica</a>, Sheridan's resident BGP expert.</p>
+<p>My goal for this new network of mine was to have a single gateway server that exposes a <a rel="noopener" target="_blank" href="https://www.wireguard.com/">Wireguard</a> server, where each VPN client is assigned a <em>public</em> static IP address. Felix was very helpful and provided me with instructions on simulating my entire networking setup in <a rel="noopener" target="_blank" href="https://www.gns3.com/">GNS3</a>. Once I was satisfied with my test environment, I proceeded to replicate everything in real life on the gateway server, and it worked first try! Seriously. I know that never happens, but 🤷‍♂️</p>
+<p>For anyone curious on what BGP routing on a Vultr VPS involves, check out <a rel="noopener" target="_blank" href="https://www.vultr.com/docs/configuring-bgp-on-vultr">Vultr's Documentation</a> on the matter.</p>
+<h2 id="thanks">Thanks</h2>
+<p>Well, thats it! I am now the proud owner of a <code>/24</code> block of public IPv4 address space, and am happily using it for all kinds of radio projects. It is unbelievably convenient to be able to use public addresses even for testing, just because I have them!</p>
+<!-- 
+Wanting to see a real-life service using this IP space? Good news! If you are reading this article on `va3zza.com`, you are currently being served by `44.31.62.3`, one of my brand new addresses!
+
+I also set up a bunch of monitoring software, so I can generate cool traffic and usage graphs like this:
+
+<img src="http://mrtg.router.va3zza.com/localhost_wg0-day.png" width="100%" alt="Subnet Traffic Graph">
+
+Check out more info about the gateway itself [here](http://router.va3zza.com/). -->
+<p>Once again, I'd like to thank Ben, 2M0LOB, G1FEF, and Felix for helping me through this process, and helping me get hands-on experience learning about a piece of critical internet infrastructure technology the very few other college students get to touch beyond a simulator.</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

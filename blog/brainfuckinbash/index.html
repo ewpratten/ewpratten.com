@@ -1,0 +1,213 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;brainfuckinbash&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="That was easy" />
+<meta property="description" content="That was easy" />
+<meta name="description" content="That was easy">
+
+
+<meta property="og:title" content="Compiling BrainFuck with a shell script - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Compiling BrainFuck with a shell script | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Compiling BrainFuck with a shell script</h1>
+<em>That was easy</em>
+<br><br>
+
+<p><a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Brainfuck">BrainFuck</a> is an <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Esoteric_programming_language">esoteric programming language</a> that is surprisingly easy to implement. It is almost on the same level as &quot;Hello, world!&quot;, but for compilers and interpreters. In this post, ill share my new little BrainFuck compiler I built with a bash script.</p>
+<h2 id="the-brainfuck-instruction-set">The BrainFuck instruction set</h2>
+<p>BrainFuck has 8 simple instructions:</p>
+<table><thead><tr><th>Instruction</th><th>Operation</th></tr></thead><tbody>
+<tr><td><code>&gt;</code></td><td>increment  data pointer</td></tr>
+<tr><td><code>&lt;</code></td><td>decrement  data pointer</td></tr>
+<tr><td><code>+</code></td><td>increment the byte at the data pointer</td></tr>
+<tr><td><code>-</code></td><td>decrement  the byte at the data pointer</td></tr>
+<tr><td><code>.</code></td><td>print the current byte to stdout</td></tr>
+<tr><td><code>,</code></td><td>read one byte from stdin to the current byte</td></tr>
+<tr><td><code>[</code></td><td>jump to the matching <code>]</code> if the current byte is 0</td></tr>
+<tr><td><code>]</code></td><td>jump to the matching <code>[</code> if the current byte is nonzero</td></tr>
+</tbody></table>
+<h3 id="the-c-equivalent">The C equivalent</h3>
+<p>BrainFuck works on a &quot;tape&quot;. This is essentially a massive array, with a pointer that moves around. Luckily, this can be implemented with a tiny bit of C. (Thanks <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Brainfuck#Commands">wikipedia</a>)</p>
+<table><thead><tr><th>BF</th><th>C code</th></tr></thead><tbody>
+<tr><td><code>&gt;</code></td><td><code>++ptr;</code></td></tr>
+<tr><td><code>&lt;</code></td><td><code>--ptr;</code></td></tr>
+<tr><td><code>+</code></td><td><code>++*ptr;</code></td></tr>
+<tr><td><code>-</code></td><td><code>--*ptr;</code></td></tr>
+<tr><td><code>.</code></td><td><code>putchar(*ptr);</code></td></tr>
+<tr><td><code>,</code></td><td><code>*ptr=getchar();</code></td></tr>
+<tr><td><code>[</code></td><td><code>while (*ptr) {</code></td></tr>
+<tr><td><code>]</code></td><td><code>}</code></td></tr>
+</tbody></table>
+<h2 id="implementation">Implementation</h2>
+<p>Due to the fact BF has a direct conversion to C, I figured: <em>&quot;Why not just use <a rel="noopener" target="_blank" href="https://www.gnu.org/software/sed/manual/sed.html">sed</a> to make a BF compiler?&quot;</em>. And so I did.</p>
+<p>The script is available at <a rel="noopener" target="_blank" href="https://git.io/JvIHm">git.io/JvIHm</a>, and works as follows:</p>
+<ol>
+<li>Create a file containing a &quot;header&quot; that contains some C code that imports <code>stdio.h</code> and creates a char array</li>
+<li>Use SED to replace all BF instructions with the matching C code</li>
+<li>Append a file footer with code to return the current value at the program pointer</li>
+<li>Compile this c file with <a rel="noopener" target="_blank" href="https://gcc.gnu.org/">GCC</a></li>
+</ol>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

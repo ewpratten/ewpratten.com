@@ -1,0 +1,251 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;wrong-python&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="In the name of science!" />
+<meta property="description" content="In the name of science!" />
+<meta name="description" content="In the name of science!">
+
+
+<meta property="og:title" content="Doing Python OOP the wrong way - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Doing Python OOP the wrong way | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Doing Python OOP the wrong way</h1>
+<em>In the name of science!</em>
+<br><br>
+
+<p>If you know me, you probably know of the many weird things I do with python. Most recent of which being this <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz</a> implementation in one line of python code:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#bf616a;">_</span><span>=[</span><span style="color:#96b5b4;">print</span><span>(&quot;</span><span style="color:#a3be8c;">FizzBuzz</span><span>&quot;[</span><span style="color:#bf616a;">_</span><span>*</span><span style="color:#bf616a;">_</span><span>%</span><span style="color:#d08770;">3</span><span>*</span><span style="color:#d08770;">4</span><span>:</span><span style="color:#d08770;">8</span><span>--</span><span style="color:#bf616a;">_</span><span>**</span><span style="color:#d08770;">4</span><span>%</span><span style="color:#d08770;">5</span><span>] or </span><span style="color:#bf616a;">_</span><span>) </span><span style="color:#b48ead;">for </span><span style="color:#bf616a;">_ </span><span style="color:#b48ead;">in </span><span style="color:#96b5b4;">range</span><span>(</span><span style="color:#d08770;">101</span><span>)]
+</span></code></pre>
+<p>This installment of &quot;weird things I do with python&quot; will not focus on one-liners (that's going on my todo list though). But instead, playing with Python's classes and object system.</p>
+<h2 id="a-quick-introduction-to-classes">A quick introduction to classes</h2>
+<p>Im going to assume that you, the reader, have some reasonable knowledge of how computers work, and OOP concepts. If you do not, there are <a rel="noopener" target="_blank" href="https://medium.com/swlh/5-free-object-oriented-programming-online-courses-for-programmers-156afd0a3a73">many great online resources</a> to help you out.</p>
+<p>As a quick refresher, this is the Python syntax for a basic class:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">MyClass</span><span style="color:#eff1f5;">:
+</span><span>
+</span><span>    </span><span style="color:#65737e;"># This is the constructor. __init__ is an overridable python built-in
+</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#96b5b4;">__init__</span><span>(</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">arg1</span><span>: int):
+</span><span>
+</span><span>        </span><span style="color:#65737e;"># Here we set the class&#39; scoped my_number to arg1
+</span><span>        </span><span style="color:#bf616a;">self</span><span>.my_number = arg1
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">printMyNumber</span><span>(</span><span style="color:#bf616a;">self</span><span>):
+</span><span>        </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#bf616a;">self</span><span>.my_number)
+</span></code></pre>
+<p>This is really just a fancy setter and getter. Here is some example usage:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>my_object = </span><span style="color:#bf616a;">MyClass</span><span>(</span><span style="color:#d08770;">10</span><span>)
+</span><span>my_object.</span><span style="color:#bf616a;">printMyNumber</span><span>() </span><span style="color:#65737e;"># Prints 10
+</span></code></pre>
+<h2 id="noticing-something-odd">Noticing something odd</h2>
+<p>Before reading the following, keep in mind that (as of now) I have not actually looked at the Python interpreter's source code enough to know about their memory system. The following is just an educated guess.</p>
+<p>Looking at any python class, you may notice that <strong>at least</strong> 1 argument is required. <code>self</code> is used to access the class' data from itself. This is not present in most other languages I know, which means there might be something interesting happening behind the scenes. Here is a re-implementation of <code>MyClass</code> from above in java:</p>
+<pre data-lang="java" style="background-color:#2b303b;color:#c0c5ce;" class="language-java "><code class="language-java" data-lang="java"><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">MyClass </span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">int </span><span style="color:#eff1f5;">my_int;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">MyClass</span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">arg1</span><span style="color:#eff1f5;">){
+</span><span style="color:#eff1f5;">        my_int </span><span>=</span><span style="color:#eff1f5;"> arg1;
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public void </span><span style="color:#8fa1b3;">printMyNumber</span><span style="color:#eff1f5;">(){
+</span><span style="color:#eff1f5;">        </span><span style="color:#ebcb8b;">System</span><span style="color:#eff1f5;">.out.</span><span style="color:#bf616a;">println</span><span style="color:#eff1f5;">(my_int);
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+<p>Notice the fact that there is no <code>self</code>? Yet Java methods can still access class data.</p>
+<h2 id="implementing-objects-in-a-non-object-oriented-language">Implementing objects in a non-object oriented language</h2>
+<p>In a non-OOP language (like C), objects can be faked by creating <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Struct_(C_programming_language)">structures</a> and some standard functions. These functions then take a pointer to their &quot;parent&quot; structure. Confusing? yes. But it works, and I see it used all over the place. Here a pseudocode example:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>struct MyClass {
+</span><span>    int my_int; // Scpoed int
+</span><span>}
+</span><span>
+</span><span>fn printMyNumber(MyClass* self){
+</span><span>    print(self.my_int);
+</span><span>}
+</span><span>
+</span></code></pre>
+<p><code>printMyNumber</code> takes a pointer to it's &quot;parent class&quot;, called <code>self</code>. Look familiar? This is how Python works.</p>
+<h2 id="let-s-do-some-python">Let's do some Python</h2>
+<p>Alright.. Time for some &quot;broken&quot; Python. Here is yet another implementation of <code>MyClass</code>, except this time, each function is globally scoped:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>
+</span><span style="color:#65737e;"># Private, globally scoped functions
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">_init_myclass</span><span>(</span><span style="color:#bf616a;">self</span><span>, </span><span style="color:#bf616a;">arg1</span><span>: int):
+</span><span>    </span><span style="color:#bf616a;">self</span><span>.my_number = arg1
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">_myclass_printMyNumber</span><span>(</span><span style="color:#bf616a;">self</span><span>):
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#bf616a;">self</span><span>.my_number)
+</span><span>
+</span><span>
+</span><span style="color:#65737e;"># struct-like class containing function pointers
+</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">MyClass</span><span style="color:#eff1f5;">:
+</span><span>
+</span><span>    </span><span style="color:#96b5b4;">__init__ </span><span>= _init_myclass
+</span><span>    printMyNumber = _myclass_printMyNumber
+</span><span>    
+</span></code></pre>
+<p>This code will still function like a normal class. Unlike a regular class definition, the above code defines the constructor and <code>printMyNumber</code> methods in the global scope (marked as private with an underscore). A class is then created with function pointers to each of the global functions. This means that calling <code>MyClass.printMyNumber</code> will point to, and execute <code>_myclass_printMyNumber</code>. The interpreter still treats the underscore functions as members of <code>MyClass</code>, and passes the <code>self</code> argument along to them.</p>
+<h2 id="why">Why?</h2>
+<p>I have absolutely no idea why this would ever be useful. If you think you should start doing this in your code, <strong>don't</strong>. It leads to very messy and confusing code, and is bad practice in just about every way. </p>
+<p>The point of this post is to show yet another instance of the Python interpreter saying &quot;<a rel="noopener" target="_blank" href="https://www.urbandictionary.com/define.php?term=idgaf">idgaf</a>&quot;, and letting us have a little fun.</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

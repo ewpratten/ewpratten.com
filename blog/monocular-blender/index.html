@@ -1,0 +1,263 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;monocular-blender&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="My 3D pipeline is backed by neural networks" />
+<meta property="description" content="My 3D pipeline is backed by neural networks" />
+<meta name="description" content="My 3D pipeline is backed by neural networks">
+
+
+<meta property="og:title" content="Monocular depth mapping in Blender - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Monocular depth mapping in Blender | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Monocular depth mapping in Blender</h1>
+<em>My 3D pipeline is backed by neural networks</em>
+<br><br>
+
+<p>A while back, I encountered an interesting trend going on over on TikTok. People were turning their photos into videos with 3D camera movements.</p>
+<p>Having created content like this before myself in both Adobe After Effects and Blender, I just assumed I had come across a few people who also knew the process for creating <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/2.5D_(visual_perception)">2.5D</a> content. For anyone who has not seen 2.5D content before, check out the video below by the amazing artist <a rel="noopener" target="_blank" href="https://www.instagram.com/SpencerMiller/">Spencer Miller</a>, who is well know  for his 2.5D and 3D concert videos.</p>
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CCeBnxmjfuY/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: auto; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CCeBnxmjfuY/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CCeBnxmjfuY/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by spencer miller (@spencermiller)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+<br>
+<p>Alright. Back to TikTok, here is an example of one of the trend videos I came across. Notice how there is some graphical artifacting near the top and bottom of this video? This made me realize these videos are not your standard 2.5D content, but something else was going on.</p>
+<br>
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@flash_supercars/video/7016749321043463430" data-video-id="7016749321043463430" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@flash_supercars" href="https://www.tiktok.com/@flash_supercars">@flash_supercars</a> This is a nice Effekt!👍🔥😍<a title="münchen" target="_blank" href="https://www.tiktok.com/tag/m%C3%BCnchen">#münchen</a> <a title="hypercars" target="_blank" href="https://www.tiktok.com/tag/hypercars">#hypercars</a> <a title="supercars" target="_blank" href="https://www.tiktok.com/tag/supercars">#supercars</a> <a title="carspotting" target="_blank" href="https://www.tiktok.com/tag/carspotting">#carspotting</a> <a title="münchencars" target="_blank" href="https://www.tiktok.com/tag/m%C3%BCnchencars">#münchencars</a> <a title="flashsupercars" target="_blank" href="https://www.tiktok.com/tag/flashsupercars">#flashsupercars</a> <a title="fürdich" target="_blank" href="https://www.tiktok.com/tag/f%C3%BCrdich">#fürdich</a> <a title="fy" target="_blank" href="https://www.tiktok.com/tag/fy">#fy</a> <a title="carlovers" target="_blank" href="https://www.tiktok.com/tag/carlovers">#carlovers</a> <a title="richlifestyle" target="_blank" href="https://www.tiktok.com/tag/richlifestyle">#richlifestyle</a> <a title="bugatti" target="_blank" href="https://www.tiktok.com/tag/bugatti">#bugatti</a> <a title="ferrari" target="_blank" href="https://www.tiktok.com/tag/ferrari">#ferrari</a> <a title="3d" target="_blank" href="https://www.tiktok.com/tag/3d">#3d</a> <a title="3dzoompro" target="_blank" href="https://www.tiktok.com/tag/3dzoompro">#3dzoompro</a> <a title="3dtrend" target="_blank" href="https://www.tiktok.com/tag/3dtrend">#3dtrend</a> <a title="trend" target="_blank" href="https://www.tiktok.com/tag/trend">#trend</a> <a title="3dzoomeffect" target="_blank" href="https://www.tiktok.com/tag/3dzoomeffect">#3dzoomeffect</a> <a target="_blank" title="♬ original sound - 6X Camps 🏆🏆🏆🏆🏆🏆" href="https://www.tiktok.com/music/original-sound-7013166802171644677">♬ original sound - 6X Camps 🏆🏆🏆🏆🏆🏆</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+<br>
+<p>There was no way so many people could have suddenly learned how to work in 2.5D, all had the required software, and all had the time to painstakingly rotoscope out every depth level of their photo to make it all look good.</p>
+<p>Conveniently, it took very little effort to find out that this was all being done by a video editing app called <a rel="noopener" target="_blank" href="https://www.capcut.net/">CapCut</a>. I'll spare you the details of researching this CapCut effect to find out how it works, and we will skip right to the technology powering it.</p>
+<h2 id="playing-with-neural-networks">Playing with Neural Networks</h2>
+<p>From my research, this techololgy (called <em>context-aware inpainting</em>) stems from a paper called <a rel="noopener" target="_blank" href="https://doi.org/10.1109/CVPR42600.2020.00805"><em>3D Photography Using Context-Aware Layered Depth Inpainting</em></a>. I wanted to try replicating this effect in Blender, so I loaded up the <a rel="noopener" target="_blank" href="https://github.com/vt-vl-lab/3d-photo-inpainting">demo for this paper</a>, tried it out on some images I had lying around, and immediately ran in to issues with incorrect depth estimation results.</p>
+<p>After some experimentation, I decided to take a step back from neural-network-powered inpainting and instead started experimenting with the underlying depth estimation research this paper was build on top of.</p>
+<p>The <a rel="noopener" target="_blank" href="https://www.embodiedaifoundation.org/">Embodied AI Foundation</a> has a paper called <a rel="noopener" target="_blank" href="https://doi.org/10.1109/TPAMI.2020.3019967">Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-shot Cross-dataset Transfer</a> (much better known as <strong>MiDaS</strong>). This paper and <a rel="noopener" target="_blank" href="https://github.com/isl-org/MiDaS">accompanying Python library</a> describes an implements a high-accuracy method for estimating depth maps from a monocular (single-lense camera) image.</p>
+<h2 id="my-goal">My goal</h2>
+<p>My goal for this side-project at this point was to create a &quot;zero-thought, one-click&quot; system for bringing monocular images into Blender as full 3D meshes with projection-mapped textures.</p>
+<p>This requires three parts:</p>
+<ul>
+<li>A simple system for creating depth maps from images</li>
+<li>An in-DCC interface for image importing in Blender</li>
+<li>Some code to tie everything together and actually create the object</li>
+</ul>
+<h3 id="using-docker-with-gpu-passthrough-for-fast-depth-computation">Using Docker with GPU-passthrough for fast depth computation</h3>
+<p>I happen to have grabbed myself an NVIDIA graphics card with around 4800 CUDA cores last year with the plan of using it for 3D rendering and machine learning experimentation, so my top priority was to make sure I could actually use it for this project.</p>
+<p>Luckily, NVIDIA has a solution for doing just this through their project called the <a rel="noopener" target="_blank" href="https://github.com/NVIDIA/nvidia-docker">NVIDIA Container Toolkit</a> (aka <code>nvidia-docker</code>).</p>
+<blockquote>
+<p>The NVIDIA Container Toolkit allows users to build and run GPU accelerated Docker containers. The toolkit includes a container runtime library and utilities to automatically configure containers to leverage NVIDIA GPUs.<br>
+[source: <a rel="noopener" target="_blank" href="https://github.com/NVIDIA/nvidia-docker#introduction">NVIDIA</a>]</p>
+</blockquote>
+<p>Essentially, this toolkit leverages an existing Docker Engine on a host, and provides a bit of a &quot;side channel&quot; for containers with the appropriate client software to access the Host's GPU resources.</p>
+<p>Using the toolkit, I threw together a quick project called <code>midas-depth-solve</code> that provides a Docker container to run MiDaS through a little <a rel="noopener" target="_blank" href="https://github.com/Ewpratten/midas-depth-solve/blob/master/solve.py">batch-processing wrapper script</a> I wrote. Simply provide a directory full of images in whatever format you'd like along with some configuration flags, and it will spit out each image as a grayscale depth map.</p>
+<div class="zola-github-card" >
+    <a href="https://github.com/ewpratten&#x2F;midas-depth-solve">
+        <img src="https://opengraph.githubassets.com/1/ewpratten&#x2F;midas-depth-solve" alt="GitHub: ewpratten&#x2F;midas-depth-solve">
+    </a>
+</div>
+<br>
+<p>Information on how to use this container stand-alone yourself can be found in the project README.</p>
+<p>An example of an output from MiDaS is shown below. I have boosted the exposure a lot to make it easier to see the depth levels. Generally, depth maps are low-contrast.</p>
+<p><img src="/images/posts/monocular-blender/exaggerated-depth.png" alt="Example Depth Image" /></p>
+<h3 id="the-blender-plugin">The Blender plugin</h3>
+<p>I have a personal project called <a rel="noopener" target="_blank" href="https://github.com/Ewpratten/dcc_scripts"><em>Evan's DCC Scripts</em></a> where I keep personal plugins for 3D software. </p>
+<p>I decided to piggy-back off the pipeline infrastructure I have already set up there for this project. Thus, bringing my MiDaS tool into blender was as simple as creating a new QT GUI, and hooking it up to a custom operator. </p>
+<p><em>For anyone curious, my Blender plugins use QT for maximum interoperability with the rest of my toolset.</em></p>
+<div style="text-align:center;">
+<img src="/images/posts/monocular-blender/blender-importer-window.png">
+<p>Plugin Dialog: <em>Import Monocular Image</em></p>
+</div>
+<h3 id="actually-creating-textured-3d-meshes">Actually creating textured 3D meshes</h3>
+<p>The process for converting a depth map and texture to a 3D object is quite simple:</p>
+<ol>
+<li>Create a plane (this can be done through <a rel="noopener" target="_blank" href="https://docs.blender.org/manual/en/latest/addons/import_export/images_as_planes.html"><em>Images As Planes</em></a>)</li>
+<li>Subdivide the plane (I have been using 128 subdivisions, and it seems to work well)</li>
+<li>Apply a <a rel="noopener" target="_blank" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/displace.html"><em>Displace Modifier</em></a> to the plane, using the depth map as the source texture, and configuring the modifier to work with UV coordinates</li>
+</ol>
+<p>The first time I tried this, I encountered a slight issue with depth mapping:</p>
+<div style="text-align:center;">
+<img src="/images/posts/monocular-blender/ayo_bro.png">
+<p>A failed attempt</p>
+</div>
+<p>But then, I quickly figured out how to set up the displacement modifier, and got my expected result:</p>
+<table>
+<tr>
+<td>
+<div style="text-align:center;">
+<img src="/images/posts/monocular-blender/ayo_displaced.png">
+<p>Displaced, untextured</p>
+</div>
+</td>
+<td>
+<div style="text-align:center;">
+<img src="/images/posts/monocular-blender/ayo_textured.png">
+<p>Textured, viewed from the original camera position</p>
+</div>
+</td>
+</tr>
+</table>
+<h2 id="conclusion">Conclusion</h2>
+<p>This whole project was a fun experiment with some tools that are designed for very different applications. I plan to continue refining the quality of the outputs of my plugin. I'll likely look in to reducing un-needed subdivisions using <a rel="noopener" target="_blank" href="https://graphics.pixar.com/opensubdiv">OpenSubdiv</a> in the near future.</p>
+<p>If you are interested in experimenting with my depth mapping plugin yourself, feel free to send me <a href="mailto:contact@ewpratten.com">an email</a> and I'll help you set it up. Currently, my tools are Linux-exclusive.</p>
+<p>And finally, a demo render:</p>
+<video style="max-width:100%;" controls>
+<source src="/images/posts/monocular-blender/demo_render.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

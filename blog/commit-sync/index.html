@@ -1,0 +1,237 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;commit-sync&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="How I keep my commit graph alive" />
+<meta property="description" content="How I keep my commit graph alive" />
+<meta name="description" content="How I keep my commit graph alive">
+
+
+<meta property="og:title" content="Commit syncing across hosted GIT instances - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Commit syncing across hosted GIT instances | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Commit syncing across hosted GIT instances</h1>
+<em>How I keep my commit graph alive</em>
+<br><br>
+
+<p>Since September of 2018 (3 and a half years ago) I have been roughly holding a streak of going no more than three days without making a commit to some project on GitHub.</p>
+<p><img src="/images/posts/commit-sync/commit_graph.png" alt="A screenshot of my commit history last year" /></p>
+<p>This is not entirely intentional, and I have broken it a few times:</p>
+<ul>
+<li>June 7, 2019</li>
+<li>August 8, 2019</li>
+<li>September 27, 2019</li>
+<li>November 3, 2021</li>
+</ul>
+<p>..but a streak is a streak. A few of my friends know about this and keep an eye on my commit graph and I do too. Recently, with most of my programming time allocated to work, my graph started looking like weeks of empty cells, implying I broke my streak for good.</p>
+<p>In reality, that couldn't be farther from the truth. I have been writing quite a lot of code actually, its just all tracked in a company GIT instance with a separate account.</p>
+<h2 id="time-for-some-trickery">Time for some trickery</h2>
+<p>I happened to remember a little trick I used in a CI pipeline for <a rel="noopener" target="_blank" href="https://github.com/frc5024/">Raider Robotics</a> where you can backdate empty commits with arbitrary authors. I recall using this for some kind of version tagging system at some point.. idk.. the important part being it is possible to make &quot;fake&quot; commits with the right command-line flags.</p>
+<h3 id="the-game-plan">The game plan</h3>
+<p>My idea was as follows:</p>
+<ol>
+<li>Scrape all work repos for commits authored by one of my email addresses</li>
+<li>Keep track of the commit timestamps</li>
+<li>Make empty commits to a GitHub repo and backdate them to the timestamps from the last step</li>
+<li>Enjoy having my GitHub contributor graph synced to my work account</li>
+</ol>
+<p><em>For anyone concerned with the security issue of leaking commit data, In my real implementation, dates are shuffled a bit. This also all happens in a private repo, so the public can only ever see its affect on my commit graph, and can't actually see the commits themselves.</em></p>
+<h3 id="scraping-commits-from-repos">Scraping commits from repos</h3>
+<p>The <code>git</code> command has a <code>log</code> subcommand for querying info about commits. In its simplest form, you can dump all commits for a repo with:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git -C</span><span> /path/to/repo log</span><span style="color:#bf616a;"> --pretty</span><span>=format:&quot;</span><span style="color:#a3be8c;">%H</span><span>&quot;
+</span></code></pre>
+<p>An example output for the repo behind this website:</p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>...
+</span><span>62d0c4833766671182ed0aeeb76bb16cc3f35174
+</span><span>420b3cc4a9d61024e0dd6c32deafb57244d09433
+</span><span>fed6fc374d02c2ae8f67bff837c8c8334760b303
+</span><span>5a64788339afd750c3853468f89d275cf8fa49cd
+</span><span>01992912951d80631fa5069fce7d9a3593bbcd39
+</span><span>d894387400158d231ed6559636169f1464bb630d
+</span><span>4a68456c7a5df699bc7620c9250b7a04aac5bd3c
+</span><span>ff87809b9c14c5132ecd5a39921b1cf2118b12cc
+</span><span>2b8797bbdcec61654540d995aaae67bcab8dc1c1
+</span><span>c4d978c5d098846b8a0105c5b6d3f42b389c6ea7
+</span><span>9791cdd979a17f0d5ebf9028d4778152ca07ae1d
+</span><span>dda08261872d3c2301cc02108c0f466dedaacaca
+</span><span>f408c1fa9785a40038e04b0ef017bd8d2897cdd6
+</span><span>...
+</span></code></pre>
+<p>Its just a bunch of hashes.</p>
+<p>As a side note, if you are trying to replicate my work and also commit with multiple email addresses, you can chain <code>--author</code> flags together.</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git -C</span><span> /path/to/repo log</span><span style="color:#bf616a;"> --pretty</span><span>=format:&quot;</span><span style="color:#a3be8c;">%H</span><span>&quot;</span><span style="color:#bf616a;"> --author</span><span>=ewpratten@example.com</span><span style="color:#bf616a;"> --author</span><span>=evan@work.com
+</span></code></pre>
+<h3 id="cloning-commits">Cloning commits</h3>
+<p>If we iterate over our list of hashes, we can perform the rest of the steps. The main data point we care about is the timestamp.</p>
+<p>To fetch a commit timestamp from a repo, use the following, replacing <code>$COMMIT_HASH</code> with the hash in question:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git -C</span><span> /path/to/repo show</span><span style="color:#bf616a;"> -s --format</span><span>=%</span><span style="color:#bf616a;">ci </span><span>$</span><span style="color:#bf616a;">COMMIT_HASH
+</span></code></pre>
+<p>And finally, with our timestamp (stored as <code>$DATE</code>) a new commit can be written to a target repo:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git -C</span><span> /path/to/public/repo commit</span><span style="color:#bf616a;"> -m </span><span>&quot;</span><span style="color:#a3be8c;">A message.</span><span>&quot;</span><span style="color:#bf616a;"> --date</span><span>=&quot;$</span><span style="color:#bf616a;">DATE</span><span>&quot;</span><span style="color:#bf616a;"> --no-edit --allow-empty
+</span></code></pre>
+<p>Importantly, the <code>--allow-empty</code> flag removes the requirement for any files to be contained in the commit, essentially allowing you to have a &quot;zero size&quot; repository.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Uh, ya. Cool. With your scripting language of choice, you can chain these commands together, toss a <code>git push</code> in there, stick this in a cron job, and have yourself a nice, healthy commit graph.</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

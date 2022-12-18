@@ -1,0 +1,215 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;2020-12-4-galliumos&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="The process of installing GalliumOS on an ACER R11" />
+<meta property="description" content="The process of installing GalliumOS on an ACER R11" />
+<meta name="description" content="The process of installing GalliumOS on an ACER R11">
+
+
+<meta property="og:title" content="Upgrading my chromebook - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Upgrading my chromebook | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Upgrading my chromebook</h1>
+<em>The process of installing GalliumOS on an ACER R11</em>
+<br><br>
+
+<p>My previous development laptop was an <a rel="noopener" target="_blank" href="https://www.acer.com/ac/en/CA/content/series/acerchromebookr11">Acer R11</a> chromebook. I always ran it in <a rel="noopener" target="_blank" href="https://chromium.googlesource.com/chromiumos/docs/+/master/developer_mode.md">developer mode</a> with all the Linux packages I needed installed via <a rel="noopener" target="_blank" href="https://github.com/skycocker/chromebrew">chromebrew</a>. This setup worked great except for GUI programs, as (at the time), the built-in <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Wayland_(display_server_protocol)">Wayland</a> server on the chromebook was not exposed to the user in a meaningful way. I relied on an internal tool from Google called <a rel="noopener" target="_blank" href="https://chromium.googlesource.com/chromiumos/platform2/+/HEAD/vm_tools/sommelier/">sommelier</a> to translate X11 calls to the internal Wayland server. None of this was ideal, but with a lot of scripts and aliases, I made it work.</p>
+<p>Recently, I decided to remove the locked-down ChromeOS all together, and set the laptop up with <a rel="noopener" target="_blank" href="https://galliumos.org">GalliumOS</a> so it can be used as a lightweight code-review machine with access to some useful tools like <a rel="noopener" target="_blank" href="https://code.visualstudio.com/">VSCode</a> and <a rel="noopener" target="_blank" href="https://www.gitkraken.com/">GitKraken</a>. This whole process is actually fairly easy, and a good way to breathe new life in to an old chromebook. This guide will be R11-specific, but the process doesn't vary too wildly between models.</p>
+<h2 id="developer-mode">Developer mode</h2>
+<p>A standard feature on chromebooks is &quot;developer mode&quot;. This is a hidden boot mode that is designed to give <a rel="noopener" target="_blank" href="https://www.chromium.org/chromium-os">ChromiumOS</a> contributors and Google developers access to debug tools when testing new OS builds. Along with debug tools, this mode also exposes a Linux terminal with root access to the user via <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>-&gt;</kbd>. On an extremely locked down system like a chromebook, this terminal access exposes a lot of new capability. For this use case, we will only use it to modify the system bootloader.</p>
+<p>To enable developer mode, simply press <kbd>Esc</kbd> + <kbd>Refresh</kbd> + <kbd>Power</kbd>, and let the chromebook reboot. Once the recovery screen pops up, press <kbd>Ctrl</kbd> + <kbd>D</kbd>, and the device is now in developer mode.</p>
+<h2 id="write-protection">Write protection</h2>
+<p>This step will void your device's warranty. Chromebooks are able to handle anything you throw at them. Even if you were to delete important system files to the point the device can no longer boot, hopping in to recovery mode can reset the device to a working state. This works via ChromeOS's write protect mechanism. All important files are protected by hardware-enforced write protection. Since the process of loading a new operating system onto the device involves overwriting important system files (like the BIOS), we must physically disable write protection.</p>
+<p>Luckily, on the Acer R11, this process is very simple. Firstly, unscrew the laptop's bottom plate to expose the motherboard (some screws are hidden under rubber feet). With the backplate off, you will find a screw that looks like this:</p>
+<p><img src="/images/posts/galliumos/arcer_r11_screw.jpg" alt="R11 write protect screw" /></p>
+<p>The screw is hard to miss, it is beside the WIFI card, an has an arrow pointing to it. Simply remove it, and put the laptop back together. You now have a fully unlocked device.</p>
+<h2 id="flashing-a-custom-bootloader">Flashing a custom bootloader</h2>
+<p><a rel="noopener" target="_blank" href="https://mrchromebox.tech">Mr Chromebox</a>, a well known person in the world of Chromebook modification, provides and maintains a very easy to use shell script that handles bootloader modifications automatically. To use this tool, open up the ChromeOS terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>-&gt;</kbd>), log in with the username <code>chronos</code> (you must already be logged in to your personal Google account. This will not work from the login screen), and run:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">crossystem</span><span> dev_boot_usb=1 dev_boot_legacy=1
+</span><span style="color:#96b5b4;">cd</span><span>; </span><span style="color:#bf616a;">curl -LO</span><span> mrchromebox.tech/firmware-util.sh
+</span><span style="color:#bf616a;">sudo</span><span> install</span><span style="color:#bf616a;"> -Dt</span><span> /usr/local/bin</span><span style="color:#bf616a;"> -m</span><span> 755 firmware-util.sh
+</span><span style="color:#bf616a;">sudo</span><span> firmware-util.sh
+</span></code></pre>
+<p>This will open up the <code>firmware-util</code> settings screen.</p>
+<p><img src="/images/posts/galliumos/fwutil_cros_wp-on.png" alt="firmware-util screen" /></p>
+<p>You will want to select the <code>RW_LEGACY</code> option to load the <code>RW_LEGACY</code> / SEABIOS payload. The <code>UEFI</code> option is technically the better choice, but it will completely remove the device's ability to run ChromeOS again in the future.</p>
+<h3 id="setting-fuses">Setting fuses</h3>
+<p>The <code>RW_LEGACY</code> payload only works if the laptop always has power. Once the device completely runs out of power, the boot settings are wiped from the device (not something we want). The solution is to modify the <a rel="noopener" target="_blank" href="https://chromium.googlesource.com/chromiumos/platform/vboot/+/master/_vboot_reference/firmware/include/gbb_header.h">system <code>gbb</code> fuses</a>. This sounds complicated (and it is), but Mr Chromebox comes to the rescue again with the <code>GBB Flags</code> option in his script. <em>After</em> the <code>RW_LEGACY</code> payload has been configured, run his script again, and select <code>GBB Flags</code>.</p>
+<h2 id="installing-galliumos">Installing GalliumOS</h2>
+<p>On another computer, <a rel="noopener" target="_blank" href="https://galliumos.org/download">download GalliumOS</a> (make sure to select the <code>Braswell</code> option), and <a rel="noopener" target="_blank" href="https://wiki.galliumos.org/Installing/Creating_Bootable_USB">create a bootable USB</a>. Plug this USB into the Chromebook, reboot, and press <kbd>Ctrl</kbd> + <kbd>L</kbd> as the warning screen pops up. This will begin the GalliumOS setup process (which is identical to that of Ubuntu).</p>
+<h3 id="enabling-verbose-boot">Enabling verbose boot</h3>
+<p>It is nice to know what is happening when the device is booting. To disable the boot animation and replace it with the boot log, edit <code>/etc/default/grub</code>, and replace both the <code>quiet</code> and <code>splash</code> arguments with <code>noplymouth</code> in the <code>GRUB_CMDLINE_LINUX_DEFAULT</code> options. Next, run the following, then reboot:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> update-grub
+</span></code></pre>
+<!--
+https://imgur.com/a/GuyYz
+
+https://medium.com/@simstems/how-i-got-the-acer-chromebook-r11-cb5-132t-to-run-parrot-security-os-without-crouton-d282a110060a
+
+https://wiki.galliumos.org/Hardware_Compatibility
+
+https://chromium.googlesource.com/chromiumos/platform/vboot/+/master/_vboot_reference/firmware/include/gbb_header.h
+-->
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

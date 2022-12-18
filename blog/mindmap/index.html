@@ -1,0 +1,278 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;mindmap&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="Step 1" />
+<meta property="description" content="Step 1" />
+<meta name="description" content="Step 1">
+
+
+<meta property="og:title" content="Mind map generation with Python - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Mind map generation with Python | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Mind map generation with Python</h1>
+<em>Step 1</em>
+<br><br>
+
+<p>While working on an assignment with <a rel="noopener" target="_blank" href="https://coggle.it">Coggle</a> today, I noticed an interesting option in the save menu. <em>Download as .mm file</em>. Having rarely worked with mind maps before, and only doing it online, it never occured to me that someone would have a file format for it. So I took a look.</p>
+<h2 id="what-is-a-mm-file">What is a .mm file?</h2>
+<p>It turns out, a <code>.mm</code> file is just some XML describing the mind map. Here is a simple mind map:</p>
+<p><img src="/images/posts/mindmap/mindmap-simple.png" alt="Simple Mind Map" /></p>
+<p>And again as a <code>.mm</code> file:</p>
+<pre data-lang="xml" style="background-color:#2b303b;color:#c0c5ce;" class="language-xml "><code class="language-xml" data-lang="xml"><span>&lt;</span><span style="color:#bf616a;">map </span><span style="color:#d08770;">version</span><span>=&quot;</span><span style="color:#a3be8c;">0.9.0</span><span>&quot;&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">node </span><span style="color:#d08770;">TEXT</span><span>=&quot;</span><span style="color:#a3be8c;">Master Node</span><span>&quot; </span><span style="color:#d08770;">FOLDED</span><span>=&quot;</span><span style="color:#a3be8c;">false</span><span>&quot; </span><span style="color:#d08770;">POSITION</span><span>=&quot;</span><span style="color:#a3be8c;">right</span><span>&quot; </span><span style="color:#d08770;">ID</span><span>=&quot;</span><span style="color:#a3be8c;">5d2d02b1a315dd0879f48c1c</span><span>&quot; </span><span style="color:#d08770;">X_COGGLE_POSX</span><span>=&quot;</span><span style="color:#a3be8c;">0</span><span>&quot; </span><span style="color:#d08770;">X_COGGLE_POSY</span><span>=&quot;</span><span style="color:#a3be8c;">0</span><span>&quot;&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">edge </span><span style="color:#d08770;">COLOR</span><span>=&quot;</span><span style="color:#a3be8c;">#b4b4b4</span><span>&quot;/&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">font </span><span style="color:#d08770;">NAME</span><span>=&quot;</span><span style="color:#a3be8c;">Helvetica</span><span>&quot; </span><span style="color:#d08770;">SIZE</span><span>=&quot;</span><span style="color:#a3be8c;">17</span><span>&quot;/&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">node </span><span style="color:#d08770;">TEXT</span><span>=&quot;</span><span style="color:#a3be8c;">Child branch</span><span>&quot; </span><span style="color:#d08770;">FOLDED</span><span>=&quot;</span><span style="color:#a3be8c;">false</span><span>&quot; </span><span style="color:#d08770;">POSITION</span><span>=&quot;</span><span style="color:#a3be8c;">right</span><span>&quot; </span><span style="color:#d08770;">ID</span><span>=&quot;</span><span style="color:#a3be8c;">f72704969525d2a0333dd635</span><span>&quot;&gt;
+</span><span>            &lt;</span><span style="color:#bf616a;">edge </span><span style="color:#d08770;">COLOR</span><span>=&quot;</span><span style="color:#a3be8c;">#7aa3e5</span><span>&quot;/&gt;
+</span><span>            &lt;</span><span style="color:#bf616a;">font </span><span style="color:#d08770;">NAME</span><span>=&quot;</span><span style="color:#a3be8c;">Helvetica</span><span>&quot; </span><span style="color:#d08770;">SIZE</span><span>=&quot;</span><span style="color:#a3be8c;">15</span><span>&quot;/&gt;
+</span><span>            &lt;</span><span style="color:#bf616a;">node </span><span style="color:#d08770;">TEXT</span><span>=&quot;</span><span style="color:#a3be8c;">Children 1</span><span>&quot; </span><span style="color:#d08770;">FOLDED</span><span>=&quot;</span><span style="color:#a3be8c;">false</span><span>&quot; </span><span style="color:#d08770;">POSITION</span><span>=&quot;</span><span style="color:#a3be8c;">right</span><span>&quot; </span><span style="color:#d08770;">ID</span><span>=&quot;</span><span style="color:#a3be8c;">c83826af506cae6e55761d5c</span><span>&quot;&gt;
+</span><span>                &lt;</span><span style="color:#bf616a;">edge </span><span style="color:#d08770;">COLOR</span><span>=&quot;</span><span style="color:#a3be8c;">#7ea7e5</span><span>&quot;/&gt;
+</span><span>                &lt;</span><span style="color:#bf616a;">font </span><span style="color:#d08770;">NAME</span><span>=&quot;</span><span style="color:#a3be8c;">Helvetica</span><span>&quot; </span><span style="color:#d08770;">SIZE</span><span>=&quot;</span><span style="color:#a3be8c;">13</span><span>&quot;/&gt;
+</span><span>            &lt;/</span><span style="color:#bf616a;">node</span><span>&gt;
+</span><span>            &lt;</span><span style="color:#bf616a;">node </span><span style="color:#d08770;">TEXT</span><span>=&quot;</span><span style="color:#a3be8c;">Children 2</span><span>&quot; </span><span style="color:#d08770;">FOLDED</span><span>=&quot;</span><span style="color:#a3be8c;">false</span><span>&quot; </span><span style="color:#d08770;">POSITION</span><span>=&quot;</span><span style="color:#a3be8c;">right</span><span>&quot; </span><span style="color:#d08770;">ID</span><span>=&quot;</span><span style="color:#a3be8c;">47723a4d0fb766863f70d204</span><span>&quot;&gt;
+</span><span>                &lt;</span><span style="color:#bf616a;">edge </span><span style="color:#d08770;">COLOR</span><span>=&quot;</span><span style="color:#a3be8c;">#82aae7</span><span>&quot;/&gt;
+</span><span>                &lt;</span><span style="color:#bf616a;">font </span><span style="color:#d08770;">NAME</span><span>=&quot;</span><span style="color:#a3be8c;">Helvetica</span><span>&quot; </span><span style="color:#d08770;">SIZE</span><span>=&quot;</span><span style="color:#a3be8c;">13</span><span>&quot;/&gt;
+</span><span>            &lt;/</span><span style="color:#bf616a;">node</span><span>&gt;
+</span><span>        &lt;/</span><span style="color:#bf616a;">node</span><span>&gt;
+</span><span>    &lt;/</span><span style="color:#bf616a;">node</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">map</span><span>&gt;
+</span></code></pre>
+<p>Neat, right?</p>
+<h2 id="what-can-we-do-with-it">What can we do with it?</h2>
+<p>I have not done much research about this because I wanted to work all of this out on my own. But I know one thing as a fact: working with XML sucks (especially in Python). I decided that this would be much better if I could load <code>.mm</code> files as JSON. This would allow easy manipulation and some cool projects.</p>
+<h2 id="my-script">My script</h2>
+<p>Like everything I do, I made a script to play with these files. </p>
+<p>It's pretty simple. First, It loads a <code>.mm</code> file, then parses it into a <code>list</code> of <code>xml.etree.ElementTree.Element</code>.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>raw_mm = &quot;&quot;
+</span><span>
+</span><span style="color:#b48ead;">with </span><span style="color:#96b5b4;">open</span><span>(args.file, &quot;</span><span style="color:#a3be8c;">r</span><span>&quot;) </span><span style="color:#b48ead;">as </span><span>fp:
+</span><span>    raw_mm = fp.</span><span style="color:#bf616a;">read</span><span>()
+</span><span>    fp.</span><span style="color:#bf616a;">close</span><span>()
+</span><span>
+</span><span>xml = ET.</span><span style="color:#bf616a;">fromstring</span><span>(raw_mm)
+</span></code></pre>
+<p>The parsed <code>list</code> is then passed into a recursive function that constructs a <code>dict</code></p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">xmlToDict</span><span>(</span><span style="color:#bf616a;">xml</span><span>):
+</span><span>    output = []
+</span><span>    </span><span style="color:#b48ead;">for </span><span>elem </span><span style="color:#b48ead;">in </span><span style="color:#bf616a;">list</span><span>(xml):
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if </span><span>&quot;</span><span style="color:#a3be8c;">TEXT</span><span>&quot; not in elem.attrib:
+</span><span>            </span><span style="color:#b48ead;">continue
+</span><span>        
+</span><span>        name = elem.attrib[&#39;</span><span style="color:#a3be8c;">TEXT</span><span>&#39;]
+</span><span>        json_element = {&quot;</span><span style="color:#a3be8c;">name</span><span>&quot;: name}
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">try</span><span>:            
+</span><span>            json_element[&quot;</span><span style="color:#a3be8c;">children</span><span>&quot;] = </span><span style="color:#bf616a;">xmlToDict</span><span>(elem)
+</span><span>        </span><span style="color:#b48ead;">except</span><span>:
+</span><span>            </span><span style="color:#b48ead;">continue
+</span><span>        
+</span><span>        </span><span style="color:#65737e;"># Detect node type
+</span><span>        </span><span style="color:#b48ead;">if </span><span>json_element[&quot;</span><span style="color:#a3be8c;">children</span><span>&quot;]:
+</span><span>            json_element[&quot;</span><span style="color:#a3be8c;">type</span><span>&quot;] = &quot;</span><span style="color:#a3be8c;">branch</span><span>&quot;
+</span><span>        </span><span style="color:#b48ead;">else</span><span>:
+</span><span>            json_element[&quot;</span><span style="color:#a3be8c;">type</span><span>&quot;] = &quot;</span><span style="color:#a3be8c;">leaf</span><span>&quot;
+</span><span>            </span><span style="color:#b48ead;">del </span><span>json_element[&quot;</span><span style="color:#a3be8c;">children</span><span>&quot;]
+</span><span>        
+</span><span>        output.</span><span style="color:#bf616a;">append</span><span>(json_element)
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">return </span><span>output
+</span></code></pre>
+<p>Finally, the <code>dict</code> is written to a file with <code>json.dump</code></p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>json.</span><span style="color:#bf616a;">dump</span><span>(mind_map, </span><span style="color:#96b5b4;">open</span><span>(args.file + &quot;</span><span style="color:#a3be8c;">.json</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">w</span><span>&quot;))
+</span></code></pre>
+<p>The whole script (with comments) can be found on my <a rel="noopener" target="_blank" href="https://gist.github.com/Ewpratten/0d8f7c7371380c9ca8adcfc6502ccf84#file-parser-py">GitHub account</a>.</p>
+<h2 id="the-output">The output</h2>
+<p>Running the <code>.mm</code> file from above through the script gives:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>[
+</span><span>    {
+</span><span>        &quot;</span><span style="color:#a3be8c;">name</span><span>&quot;:&quot;</span><span style="color:#a3be8c;">Master Node</span><span>&quot;,
+</span><span>        &quot;</span><span style="color:#a3be8c;">children</span><span>&quot;:[
+</span><span>            {
+</span><span>                &quot;</span><span style="color:#a3be8c;">name</span><span>&quot;:&quot;</span><span style="color:#a3be8c;">Child branch</span><span>&quot;,
+</span><span>                &quot;</span><span style="color:#a3be8c;">children</span><span>&quot;:[
+</span><span>                    {
+</span><span>                        &quot;</span><span style="color:#a3be8c;">name</span><span>&quot;:&quot;</span><span style="color:#a3be8c;">Children 1</span><span>&quot;,
+</span><span>                        &quot;</span><span style="color:#a3be8c;">type</span><span>&quot;:&quot;</span><span style="color:#a3be8c;">leaf</span><span>&quot;
+</span><span>                    },
+</span><span>                    {
+</span><span>                        &quot;</span><span style="color:#a3be8c;">name</span><span>&quot;:&quot;</span><span style="color:#a3be8c;">Children 2</span><span>&quot;,
+</span><span>                        &quot;</span><span style="color:#a3be8c;">type</span><span>&quot;:&quot;</span><span style="color:#a3be8c;">leaf</span><span>&quot;
+</span><span>                    }
+</span><span>                ],
+</span><span>                &quot;</span><span style="color:#a3be8c;">type</span><span>&quot;:&quot;</span><span style="color:#a3be8c;">branch</span><span>&quot;
+</span><span>            }
+</span><span>        ],
+</span><span>        &quot;</span><span style="color:#a3be8c;">type</span><span>&quot;:&quot;</span><span style="color:#a3be8c;">branch</span><span>&quot;
+</span><span>    }
+</span><span>]
+</span></code></pre>
+<h2 id="the-next-step">The next step</h2>
+<p>This script just translates a <code>.mm</code> file to JSON. Nothing else. Next, I want to convert this to a library, and add a JSON to <code>.mm</code> function as well. This leads into my ultimate goal for this project.</p>
+<p>I want a script that I can drop in the root of any project to build a <a rel="noopener" target="_blank" href="https://gource.io/">Gource</a>-style visualization of the folder structure. This will give me a way to make cool visualizations for lessons on the robotics team. On top of the folder visualization, Coggle's new flowchart feature can be used to generate graphical representations of @frc5024's codebases. This could give me an interactive overview of the work being done by our team. </p>
+<h3 id="further-learning">Further learning</h3>
+<p>crm.org has done a great writeup of <a rel="noopener" target="_blank" href="https://crm.org/news/free-flowin-mind-maps-with-coggle">Coggle, and some of it's features</a>. If you are looking to learn more about the tool, I recommend taking a few minute to read their post.</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

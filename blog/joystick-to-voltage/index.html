@@ -1,0 +1,271 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;joystick-to-voltage&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="and making a tank-based robot&#x27;s movements look natural" />
+<meta property="description" content="and making a tank-based robot&#x27;s movements look natural" />
+<meta name="description" content="and making a tank-based robot&#x27;s movements look natural">
+
+
+<meta property="og:title" content="Notes from FRC: Converting joystick data to tank-drive outputs - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Notes from FRC: Converting joystick data to tank-drive outputs | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [ ['$$','$$'], ['\[','\]'] ]}});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Notes from FRC: Converting joystick data to tank-drive outputs</h1>
+<em>and making a tank-based robot&#x27;s movements look natural</em>
+<br><br>
+
+<p>I am starting a new little series here called &quot;Notes from FRC&quot;. The idea is that I am going to write about what I have learned over the past three years of working (almost daily) with robots, and hopefully someone in the future will find them useful. The production source code I based this post around is available <a rel="noopener" target="_blank" href="https://github.com/frc5024/lib5k/blob/cd8ad407146b514cf857c1d8ac82ac8f3067812b/common_drive/src/main/java/io/github/frc5024/common_drive/calculation/DifferentialDriveCalculation.java">here</a>.</p>
+<p>Today's topic is quite simple, yet almost nobody has written anything about it. One of the very first problems presented to you when working with an FRC robot is: <em>&quot;I have a robot, and I have a controller.. How do I make this thing move?&quot;</em>. When I first started as a software developer at <em>Raider Robotics</em>, I decided to do some Googling, as I was sure someone would have at least written about this from the video-game industry.. Nope.</p>
+<p>Let's lay out the problem. We have an application that needs to run some motors from a joystick input. Periodically, we are fed a vector of joystick data, $\lbrack\begin{smallmatrix}T \ S\end{smallmatrix}\rbrack$, where the values follow $-1\leq \lbrack\begin{smallmatrix}T \ S\end{smallmatrix}\rbrack \leq 1$. $T$ denotes our <em>throttle</em> input, and $S$ denotes something we at Raider Robotics call <em>&quot;rotation&quot;</em>. As you will see later on, rotation is not quite the correct word, but none of us can come up with anything better. Some teams, who use a steering wheel as input instead of a joystick, call this number <em>wheel</em>, which makes sense in their context. For every time an input is received, we must also produce an output, $\lbrack\begin{smallmatrix}L \ R\end{smallmatrix}\rbrack$, where the values follow $-12\leq \lbrack\begin{smallmatrix}L \ R\end{smallmatrix}\rbrack \leq 12$. $\lbrack\begin{smallmatrix}L \ R\end{smallmatrix}\rbrack$ is a vector containing <em>left</em> and <em>right</em> side motor output voltages respectively. Since we build <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Tank_steering_systems">tank-drive</a>-style robots, when $\lbrack\begin{smallmatrix}L \ R\end{smallmatrix}\rbrack = \lbrack\begin{smallmatrix}12 \ 12\end{smallmatrix}\rbrack$, the robot would be moving forward at full speed, and when $\lbrack\begin{smallmatrix}L \ R\end{smallmatrix}\rbrack = \lbrack\begin{smallmatrix}12 \ 0\end{smallmatrix}\rbrack$, the robot would be pivoting right around the centre of its right track at full speed. The simplest way to convert a throttle and rotation input to left and right voltages is as follows:</p>
+<p>$$
+output = 12\cdot\begin{bmatrix}T + S \ T - S\end{bmatrix} 
+$$</p>
+<p>This can be expressed in Python as:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">computeMotorOutputs</span><span>(</span><span style="color:#bf616a;">T</span><span>: float, </span><span style="color:#bf616a;">S</span><span>: float) -&gt; Tuple[float, float]: 
+</span><span>    </span><span style="color:#b48ead;">return </span><span>(</span><span style="color:#d08770;">12 </span><span>* (T + S), </span><span style="color:#d08770;">12 </span><span>* (T - S))
+</span></code></pre>
+<p>In FRC, we call this method &quot;arcade drive&quot;, since the controls feel like you are driving a tank in an arcade game. Although this is very simple, there is a big drawback. At high values of $T$ and $S$, precision is lost. The best solution I have seen to this problem is to divide both $L$ and $R$ by the result of $\max(abs(T), abs(S))$ if the resulting value is greater than $1.0$. With this addition, the compute function now looks like this:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">computeMotorOutputs</span><span>(</span><span style="color:#bf616a;">T</span><span>: float, </span><span style="color:#bf616a;">S</span><span>: float) -&gt; Tuple[float, float]: 
+</span><span>    </span><span style="color:#65737e;"># Calculate normal arcade values
+</span><span>    L = </span><span style="color:#d08770;">12 </span><span>* (T + S)
+</span><span>    R = </span><span style="color:#d08770;">12 </span><span>* (T - S)
+</span><span>
+</span><span>    </span><span style="color:#65737e;"># Determine maximum output
+</span><span>    m = </span><span style="color:#96b5b4;">max</span><span>(</span><span style="color:#96b5b4;">abs</span><span>(T), </span><span style="color:#96b5b4;">abs</span><span>(S))
+</span><span>
+</span><span>    </span><span style="color:#65737e;"># Scale if needed
+</span><span>    </span><span style="color:#b48ead;">if </span><span>m &gt; </span><span style="color:#d08770;">1.0</span><span>:
+</span><span>        L /= m
+</span><span>        R /= m
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">return </span><span>(L, R)
+</span></code></pre>
+<p>Perfect. Now we have solved the problem!</p>
+<p>Of course, I'm not stopping here. Although arcade drive works, the result is not great. Small movements are very hard to get right, as a small movement on your controller will translate to a fairly large one on the robot (on an Xbox controller, we are fitting the entire range of 0m/s to 5m/s in about half an inch of joystick movement). This is generally tolerable when moving forward and turning, but when sitting still, it is near impossible to make precise rotational movements. Also, unless you have a lot of practice driving tank-drive vehicles, sharp turns are a big problem, as overshooting and skidding are very common. Wouldn't it be nice if we could have a robot that manuevers in graceful curves like a car? This is where the second method of joystick-to-voltage conversion comes in to play.</p>
+<p>FRC teams like <a rel="noopener" target="_blank" href="https://www.team254.com/">254</a> and <a rel="noopener" target="_blank" href="https://frc971.org/">971</a> use variations of this calculation method called <em>&quot;constant curvature drive&quot;</em>. Curvature drive is only slightly different from arcade drive. Here is the new formula:</p>
+<p>$$
+output = 12\cdot\begin{bmatrix}T + abs(T) \cdot S \ T - abs(T) \cdot S\end{bmatrix}
+$$</p>
+<p>If we also add the speed scaling from arcade drive, we are left with the following Python code:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">computeMotorOutputs</span><span>(</span><span style="color:#bf616a;">T</span><span>: float, </span><span style="color:#bf616a;">S</span><span>: float) -&gt; Tuple[float, float]:
+</span><span>    </span><span style="color:#65737e;"># Calculate normal curvature values
+</span><span>    L = </span><span style="color:#d08770;">12 </span><span>* (T + </span><span style="color:#96b5b4;">abs</span><span>(T) * S)
+</span><span>    R = </span><span style="color:#d08770;">12 </span><span>* (T - </span><span style="color:#96b5b4;">abs</span><span>(T) * S)
+</span><span>
+</span><span>    </span><span style="color:#65737e;"># Determine maximum output
+</span><span>    m = </span><span style="color:#96b5b4;">max</span><span>(</span><span style="color:#96b5b4;">abs</span><span>(T), </span><span style="color:#96b5b4;">abs</span><span>(S))
+</span><span>
+</span><span>    </span><span style="color:#65737e;"># Scale if needed
+</span><span>    </span><span style="color:#b48ead;">if </span><span>m &gt; </span><span style="color:#d08770;">1.0</span><span>:
+</span><span>        L /= m
+</span><span>        R /= m
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">return </span><span>(L, R)
+</span></code></pre>
+<p>The $S$ component now changes the curvature of the robot's path, rather than the heading's rate of change. This makes the robot much more controllable at high speeds. There is one downside to this method though. As a tradeoff to making high-speed driving much more controllable, we have completely removed the robot's ability to turn when stopped. </p>
+<p>This is where the final drive method comes in to play. At Raider Robotics, we call it <em>&quot;semi-constant curvature drive&quot;</em>, and have been using it in gameplay with great success since 2019. Since we want to take the best parts of arcade drive and constant curvature drive, we came to the simple conclusion that we should just average the two methods. Doing this results in this new formula:</p>
+<p>$$
+output = 12\cdot\begin{bmatrix}\frac{(T + abs(T) * S) + (T + S)}{2} \ \frac{(T - abs(T) * S) + (T - S)}{2}\end{bmatrix}
+$$</p>
+<p>And here is the associated Python code:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">computeMotorOutputs</span><span>(</span><span style="color:#bf616a;">T</span><span>: float, </span><span style="color:#bf616a;">S</span><span>: float) -&gt; Tuple[float, float]:
+</span><span>    </span><span style="color:#65737e;"># Calculate semi-constant curvature values
+</span><span>    L = </span><span style="color:#d08770;">12 </span><span>* (((T + </span><span style="color:#96b5b4;">abs</span><span>(T) * S) + (T + S)) / </span><span style="color:#d08770;">2</span><span>)
+</span><span>    R = </span><span style="color:#d08770;">12 </span><span>* (((T - </span><span style="color:#96b5b4;">abs</span><span>(T) * S) + (T - S)) / </span><span style="color:#d08770;">2</span><span>)
+</span><span>
+</span><span>    </span><span style="color:#65737e;"># Determine maximum output
+</span><span>    m = </span><span style="color:#96b5b4;">max</span><span>(</span><span style="color:#96b5b4;">abs</span><span>(T), </span><span style="color:#96b5b4;">abs</span><span>(S))
+</span><span>
+</span><span>    </span><span style="color:#65737e;"># Scale if needed
+</span><span>    </span><span style="color:#b48ead;">if </span><span>m &gt; </span><span style="color:#d08770;">1.0</span><span>:
+</span><span>        L /= m
+</span><span>        R /= m
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">return </span><span>(L, R)
+</span></code></pre>
+<hr />
+<p>I hope someone will some day find this post helpful. I am working on a few more FRC-related posts about more advanced topics, and things I have learned through my adventures at Raider Robotics. If you would like to check out the code that powers all of this, take a look at our core software library: <a rel="noopener" target="_blank" href="https://github.com/frc5024/lib5k">Lib5K</a></p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

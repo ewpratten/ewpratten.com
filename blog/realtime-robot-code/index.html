@@ -1,0 +1,322 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;realtime-robot-code&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="Living on the edge is an understatement" />
+<meta property="description" content="Living on the edge is an understatement" />
+<meta name="description" content="Living on the edge is an understatement">
+
+
+<meta property="og:title" content="Programming a live robot - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Programming a live robot | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Programming a live robot</h1>
+<em>Living on the edge is an understatement</em>
+<br><br>
+
+<blockquote>
+<p><em>&quot;So.. what if we could skip asking for driver inputs, and just have the robot operators control the bot through a commandline interface?&quot;</em> </p>
+</blockquote>
+<p>This is exactly the kind of question I randomly ask while sitting in the middle of class, staring at my laptop. So, here is a post about my real-time programming adventure!</p>
+<h2 id="geting-started">Geting started</h2>
+<p>To get started, I needed a few things. Firstly, I have a laptop running <a href="/about/#my-gear">a Linux distribution</a>. This allows me to use <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a> and <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Secure_copy">SCP</a>. There are Windows versions of both of these programs, but I find the &quot;linux experience&quot; easier to use. Secondly, I have grabbed one of <a rel="noopener" target="_blank" href="https://www.thebluealliance.com/team/5024">5024</a>'s <a rel="noopener" target="_blank" href="https://cs.5024.ca/webdocs/docs/robots">robots</a> to be subjected to my experiment. The components I care about are: </p>
+<ul>
+<li>A RoboRIO running 2019v12 firmware</li>
+<li>2 <a rel="noopener" target="_blank" href="https://www.ctr-electronics.com/talon-srx.html">TalonSRX</a> motor controllers </li>
+<li>An FRC router</li>
+</ul>
+<p>Most importantly, the RoboRIO has <a rel="noopener" target="_blank" href="https://robotpy.readthedocs.io/en/stable/install/robot.html#install-robotpy">RobotPy</a> and the <a rel="noopener" target="_blank" href="https://robotpy.readthedocs.io/en/stable/install/ctre.html">CTRE Libraries</a> installed.</p>
+<h3 id="ssh-connection">SSH connection</h3>
+<p>To get some code running on the robot, we must first connect to it via SSH. Depending on your connection to the RoboRIO, this step may be different. Generally, the following command will work just fine to connect (assuming your computer has an <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Multicast_DNS">mDNS</a> service):</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">ssh</span><span> admin@roborio-&lt;team&gt;-frc.local
+</span></code></pre>
+<p>If you have issues, try one of the following addresses instead:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>roborio-&lt;team&gt;-FRC
+</span><span>roborio-&lt;team&gt;-FRC.lan
+</span><span>roborio-&lt;team&gt;-FRC.frc-field.local
+</span><span>10.TE.AM.2
+</span><span>172.22.11.2 # Only works on a USB connection
+</span></code></pre>
+<p>If you are asked for a password, and have not set one, press <kbd>Enter</kbd> 3 times (Don't ask why.. this just works).</p>
+<h2 id="repl-based-control">REPL-based control</h2>
+<p>If you have seen my work before, you'll know that I use Python for basically everything. This project is no exception. Conveniently, the RoboRIO is a linux-based device, and can run a Python3 <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>. This allows real-time robot programming using a REPL via SSH. </p>
+<p>WPILib requires a robot class to act as a &quot;callback&quot; for robot actions. My idea was to build a special robot class with static methods to allow me to start it, then use the REPL to interact with some control methods (like <code>setSpeed</code> and <code>stop</code>).</p>
+<p>After connecting to the robot via SSH, a Python REPL can be started by running <code>python3</code>. If there is already robot code running, it will be automatically killed in the next step. </p>
+<p>With Python running, we will need 2 libraries imported. <code>wpilib</code> and <code>ctre</code>. When importing <code>wpilib</code> a message may appear to notify you that the old robot code has been stopped.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>&gt;&gt;&gt; </span><span style="color:#b48ead;">import </span><span>wpilib
+</span><span>Killing previously running </span><span style="color:#bf616a;">FRC </span><span>program</span><span style="color:#d08770;">...
+</span><span style="color:#bf616a;">FRC </span><span>pid </span><span style="color:#d08770;">1445 </span><span>did not die within 0ms. Force killing </span><span style="color:#b48ead;">with </span><span>kill -</span><span style="color:#d08770;">9
+</span><span>&gt;&gt;&gt; </span><span style="color:#b48ead;">import </span><span>ctre
+</span></code></pre>
+<p>Keep in mind, this is a REPL. Lines that start with <code>&gt;&gt;&gt;</code> or <code>...</code> are <em>user input</em>. Everything else is produced by code.</p>
+<p>Next, we need to write a little code to get the robot operational. To save time, I wrote this &quot;library&quot; to do most of the work for me. Just save this as <code>rtrbt.py</code> somewhere, then use SCP to copy it to <code>/home/lvuser/rtrbt.py</code>.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># RealTime FRC Robot control helper
+</span><span style="color:#65737e;"># By: Evan Pratten &lt;ewpratten&gt;
+</span><span>
+</span><span style="color:#65737e;"># Import normal robot stuff
+</span><span style="color:#b48ead;">import </span><span>wpilib
+</span><span style="color:#b48ead;">import </span><span>ctre
+</span><span>
+</span><span style="color:#65737e;"># Handle WPI trickery
+</span><span style="color:#b48ead;">try</span><span>:
+</span><span>    </span><span style="color:#b48ead;">from </span><span>unittest.mock </span><span style="color:#b48ead;">import </span><span>patch
+</span><span style="color:#b48ead;">except </span><span>ImportError:
+</span><span>    </span><span style="color:#b48ead;">from </span><span>mock </span><span style="color:#b48ead;">import </span><span>patch
+</span><span style="color:#b48ead;">import </span><span>sys
+</span><span style="color:#b48ead;">from </span><span>threading </span><span style="color:#b48ead;">import </span><span>Thread
+</span><span>
+</span><span>
+</span><span style="color:#65737e;">## Internal methods ##
+</span><span>_controllers = []
+</span><span>_thread: Thread
+</span><span>
+</span><span>
+</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">_RTRobot</span><span style="color:#eff1f5;">(</span><span style="color:#a3be8c;">wpilib.TimedRobot</span><span style="color:#eff1f5;">):
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">robotInit</span><span>(</span><span style="color:#bf616a;">self</span><span>):
+</span><span>
+</span><span>        </span><span style="color:#65737e;"># Create motors
+</span><span>        _controllers.</span><span style="color:#bf616a;">append</span><span>(ctre.</span><span style="color:#bf616a;">WPI_TalonSRX</span><span>(</span><span style="color:#d08770;">1</span><span>))
+</span><span>        _controllers.</span><span style="color:#bf616a;">append</span><span>(ctre.</span><span style="color:#bf616a;">WPI_TalonSRX</span><span>(</span><span style="color:#d08770;">2</span><span>))
+</span><span>
+</span><span>        </span><span style="color:#65737e;"># Set safe modes
+</span><span>        _controllers[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#bf616a;">setSafetyEnabled</span><span>(</span><span style="color:#d08770;">False</span><span>)
+</span><span>        _controllers[</span><span style="color:#d08770;">1</span><span>].</span><span style="color:#bf616a;">setSafetyEnabled</span><span>(</span><span style="color:#d08770;">False</span><span>)
+</span><span>
+</span><span>
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">_start</span><span>():
+</span><span>    </span><span style="color:#65737e;"># Handle fake args
+</span><span>    args = [&quot;</span><span style="color:#a3be8c;">run</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">run</span><span>&quot;]
+</span><span>    </span><span style="color:#b48ead;">with </span><span>patch.</span><span style="color:#bf616a;">object</span><span>(sys, &quot;</span><span style="color:#a3be8c;">argv</span><span>&quot;, args):
+</span><span>        </span><span style="color:#96b5b4;">print</span><span>(sys.argv)
+</span><span>        wpilib.</span><span style="color:#bf616a;">run</span><span>(_RTRobot)
+</span><span>
+</span><span style="color:#65737e;">## Utils ##
+</span><span>
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">startRobot</span><span>():
+</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot; Start the robot code &quot;&quot;&quot;
+</span><span>    </span><span style="color:#b48ead;">global </span><span>_thread
+</span><span>    _thread = </span><span style="color:#bf616a;">Thread</span><span>(</span><span style="color:#bf616a;">target</span><span>=_start)
+</span><span>    _thread.</span><span style="color:#bf616a;">start</span><span>()
+</span><span>
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">setMotor</span><span>(</span><span style="color:#bf616a;">id</span><span>, </span><span style="color:#bf616a;">speed</span><span>):
+</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot; Set a motor speed &quot;&quot;&quot;
+</span><span>    _controllers[</span><span style="color:#96b5b4;">id</span><span>].</span><span style="color:#bf616a;">set</span><span>(speed)
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">arcadeDrive</span><span>(</span><span style="color:#bf616a;">speed</span><span>, </span><span style="color:#bf616a;">rotation</span><span>):
+</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot; Control the robot with arcade inputs &quot;&quot;&quot;
+</span><span>    
+</span><span>    l = speed + rotation
+</span><span>    r = speed - rotation
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">setMotor</span><span>(</span><span style="color:#d08770;">0</span><span>, l)
+</span><span>    </span><span style="color:#bf616a;">setMotor</span><span>(</span><span style="color:#d08770;">1</span><span>, r)
+</span></code></pre>
+<p>The idea is to create a simple robot program with global hooks into the motor controllers. Python's mocking tools are used to fake commandline arguments to trick robotpy into thinking this script is being run via the RIO's robotCommand.</p>
+<p>Once this script has been placed on the robot, SSH back in as <code>lvuser</code> (not <code>admin</code>), and run <code>python3</code>. If using <code>rtrbt.py</code>, the imports mentioned above are handled for you. To start the robot, just run the following:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>&gt;&gt;&gt; </span><span style="color:#b48ead;">from </span><span>rtrbt </span><span style="color:#b48ead;">import </span><span style="color:#d08770;">*
+</span><span>&gt;&gt;&gt; </span><span style="color:#bf616a;">startRobot</span><span>()
+</span></code></pre>
+<p>WPILib will dump some logs into the terminal (and probably some spam) from it's own thread. Don't worry if you can't see the REPL prompt. It's probably just hidden due to the use of multiple threads in the same shell. Pressing <kbd>Enter</kbd> should show it again.</p>
+<p>I added 2 functions for controlling motors. The first, <code>setMotor</code>, will set either the left (0), or right (1) motor to the specified speed. <code>arcadeDrive</code> will allow you to specify a speed and rotational force for the robot's drivetrain.</p>
+<p>To kill the code and exit, press <kbd>CTRL</kbd> + <kbd>D</kbd> then <kbd>CTRL</kbd> + <kbd>C</kbd>.</p>
+<p>Here is an example where I start the bot, then tell it to drive forward, then kill the left motor:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>Python </span><span style="color:#d08770;">3.6.8 </span><span>(default, Oct  </span><span style="color:#d08770;">7 2019</span><span>, </span><span style="color:#d08770;">12</span><span>:</span><span style="color:#d08770;">59</span><span>:</span><span style="color:#d08770;">55</span><span>) 
+</span><span>[</span><span style="color:#bf616a;">GCC </span><span style="color:#d08770;">8.3.0</span><span>] on linux
+</span><span>Type &quot;</span><span style="color:#a3be8c;">help</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">copyright</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">credits</span><span>&quot; or &quot;</span><span style="color:#a3be8c;">license</span><span>&quot; </span><span style="color:#b48ead;">for </span><span>more information.
+</span><span>&gt;&gt;&gt; </span><span style="color:#b48ead;">from </span><span>rtrbt </span><span style="color:#b48ead;">import </span><span style="color:#d08770;">*
+</span><span>&gt;&gt;&gt; </span><span style="color:#bf616a;">startRobot</span><span>()
+</span><span>[&#39;</span><span style="color:#a3be8c;">run</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">run</span><span>&#39;]
+</span><span style="color:#d08770;">17</span><span>:</span><span style="color:#d08770;">53</span><span>:</span><span style="color:#d08770;">46</span><span>:</span><span style="color:#d08770;">472 </span><span style="color:#bf616a;">INFO    </span><span>: wpilib              : WPILib version </span><span style="color:#d08770;">2019.2.3
+</span><span style="color:#d08770;">17</span><span>:</span><span style="color:#d08770;">53</span><span>:</span><span style="color:#d08770;">46</span><span>:</span><span style="color:#d08770;">473 </span><span style="color:#bf616a;">INFO    </span><span>: wpilib              : </span><span style="color:#bf616a;">HAL </span><span>base version </span><span style="color:#d08770;">2019.2.3</span><span>; 
+</span><span style="color:#d08770;">17</span><span>:</span><span style="color:#d08770;">53</span><span>:</span><span style="color:#d08770;">46</span><span>:</span><span style="color:#d08770;">473 </span><span style="color:#bf616a;">INFO    </span><span>: wpilib              : robotpy-ctre version </span><span style="color:#d08770;">2019.3.2
+</span><span style="color:#d08770;">17</span><span>:</span><span style="color:#d08770;">53</span><span>:</span><span style="color:#d08770;">46</span><span>:</span><span style="color:#d08770;">473 </span><span style="color:#bf616a;">INFO    </span><span>: wpilib              : robotpy-cscore version </span><span style="color:#d08770;">2019.1.0
+</span><span style="color:#d08770;">17</span><span>:</span><span style="color:#d08770;">53</span><span>:</span><span style="color:#d08770;">46</span><span>:</span><span style="color:#d08770;">473 </span><span style="color:#bf616a;">INFO    </span><span>: faulthandler        : registered </span><span style="color:#bf616a;">SIGUSR2 </span><span style="color:#b48ead;">for </span><span style="color:#bf616a;">PID</span><span> 5447
+</span><span style="color:#d08770;">17</span><span>:</span><span style="color:#d08770;">53</span><span>:</span><span style="color:#d08770;">46</span><span>:</span><span style="color:#d08770;">474 </span><span style="color:#bf616a;">INFO    </span><span>: nt                  : NetworkTables initialized in server mode
+</span><span style="color:#d08770;">17</span><span>:</span><span style="color:#d08770;">53</span><span>:</span><span style="color:#d08770;">46</span><span>:</span><span style="color:#d08770;">497 </span><span style="color:#bf616a;">INFO    </span><span>: robot               : Default IterativeRobot.</span><span style="color:#bf616a;">disabledInit</span><span>() method</span><span style="color:#d08770;">... </span><span>Override me!
+</span><span style="color:#d08770;">17</span><span>:</span><span style="color:#d08770;">53</span><span>:</span><span style="color:#d08770;">46</span><span>:</span><span style="color:#d08770;">498 </span><span style="color:#bf616a;">INFO    </span><span>: robot               : Default IterativeRobot.</span><span style="color:#bf616a;">disabledPeriodic</span><span>() method</span><span style="color:#d08770;">... </span><span>Override me!
+</span><span style="color:#d08770;">17</span><span>:</span><span style="color:#d08770;">53</span><span>:</span><span style="color:#d08770;">46</span><span>:</span><span style="color:#d08770;">498 </span><span style="color:#bf616a;">INFO    </span><span>: robot               : Default IterativeRobot.</span><span style="color:#bf616a;">robotPeriodic</span><span>() method</span><span style="color:#d08770;">... </span><span>Override me!
+</span><span>&gt;&gt;&gt; 
+</span><span>&gt;&gt;&gt; </span><span style="color:#bf616a;">arcadeDrive</span><span>(</span><span style="color:#d08770;">1.0</span><span>, </span><span style="color:#d08770;">0.0</span><span>)
+</span><span>&gt;&gt;&gt; </span><span style="color:#bf616a;">setMotor</span><span>(</span><span style="color:#d08770;">0</span><span>, </span><span style="color:#d08770;">0.0</span><span>)
+</span><span>&gt;&gt;&gt; 
+</span><span>^C
+</span><span>Exception ignored in: &lt;module &#39;</span><span style="color:#a3be8c;">threading</span><span>&#39; </span><span style="color:#b48ead;">from </span><span>&#39;</span><span style="color:#a3be8c;">/usr/lib/python3.6/threading.py</span><span>&#39;&gt;
+</span><span style="color:#bf616a;">Traceback </span><span>(most recent call last):
+</span><span>  File &quot;</span><span style="color:#a3be8c;">/usr/lib/python3.6/threading.py</span><span>&quot;, line </span><span style="color:#d08770;">1294</span><span>, in _shutdown
+</span><span>    t.</span><span style="color:#bf616a;">join</span><span>()
+</span><span>  File &quot;</span><span style="color:#a3be8c;">/usr/lib/python3.6/threading.py</span><span>&quot;, line </span><span style="color:#d08770;">1056</span><span>, in join
+</span><span>    </span><span style="color:#bf616a;">self</span><span>.</span><span style="color:#bf616a;">_wait_for_tstate_lock</span><span>()
+</span><span>  File &quot;</span><span style="color:#a3be8c;">/usr/lib/python3.6/threading.py</span><span>&quot;, line </span><span style="color:#d08770;">1072</span><span>, in _wait_for_tstate_lock
+</span><span>    </span><span style="color:#b48ead;">elif </span><span>lock.</span><span style="color:#bf616a;">acquire</span><span>(block, timeout):
+</span><span>KeyboardInterrupt
+</span></code></pre>
+<p>The message at the end occurs when killing the code.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I have no idea why any of this would be useful, or if it is even field legal.. It's just a fun project for a monday morning. </p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

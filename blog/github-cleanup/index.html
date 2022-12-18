@@ -1,0 +1,204 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;github-cleanup&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="Spring cleaning is fun when it isn&#x27;t spring, and a computer does all the work" />
+<meta property="description" content="Spring cleaning is fun when it isn&#x27;t spring, and a computer does all the work" />
+<meta name="description" content="Spring cleaning is fun when it isn&#x27;t spring, and a computer does all the work">
+
+
+<meta property="og:title" content="I did some cleaning - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>I did some cleaning | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">I did some cleaning</h1>
+<em>Spring cleaning is fun when it isn&#x27;t spring, and a computer does all the work</em>
+<br><br>
+
+<p>As I am continuing to check items off my TODO list before school starts, I have come to an item I have been putting off for a while. <strong>Clean up GitHub Account</strong>. Luckily, I discovered a little trick to make the process of deleting unused repos a little easier!</p>
+<h2 id="getting-a-list-of-repos-to-delete">Getting a list of repos to delete</h2>
+<p>I could have automated this, but I prefer a little control. To get the list, start by opening up a new Firefox window with a single tab. In this tab, open your GitHub profile to the list of repos.
+Starting from the top, scroll through, and middle click on anything you want to delete. This opens it in a new tab.</p>
+<p>Once you have a bunch of tabs open with repos to remove, use <a rel="noopener" target="_blank" href="https://addons.mozilla.org/en-US/firefox/addon/urls-list/">this Firefox plugin</a> to create a plaintext list of every link you opened, and paste the list of links into VS-code.</p>
+<h2 id="getting-an-api-token">Getting an API token</h2>
+<p>Next, an API token is needed. Go to GitHub's <a rel="noopener" target="_blank" href="https://github.com/settings/tokens">token settings</a>, and generate a new one (make sure to enable repository deletion).</p>
+<h2 id="parsing-the-links">&quot;Parsing&quot; the links</h2>
+<p>With our new token, and out VS-code file, we can start &quot;parsing&quot; the data. </p>
+<p>Pressing <code>CTRL + F</code> brings up the Find/Search toolbar. In the text box, there are a few icons. Pressing the one farthest to the right will enable <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Regular_expression">Regex</a> mode. With this set, paste the following:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>https://github.com/
+</span></code></pre>
+<p>Now, click the arrow on the left to enable <em>replace mode</em>, and put this in the new box:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>curl -XDELETE -H &#39;Authorization: token &lt;API token from above&gt;&#39; &quot;https://api.github.com/repos/
+</span></code></pre>
+<p>Then press <em>replace all</em>.</p>
+<p>Finally, replace the contents of the first box with:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>\n
+</span></code></pre>
+<p>and the second with:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&quot;\n
+</span></code></pre>
+<p>and <em>replace all</em> again.</p>
+<h2 id="deleting-the-repos">Deleting the repos</h2>
+<p>Simply copy the entire text file that was made, and paste it in a terminal, then press &lt;enter&gt; (this will take a while)</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;kbfs-maven&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="A free and secure way to host personal Java libraries and applications" />
+<meta property="description" content="A free and secure way to host personal Java libraries and applications" />
+<meta name="description" content="A free and secure way to host personal Java libraries and applications">
+
+
+<meta property="og:title" content="Using KBFS as a makeshift maven server - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Using KBFS as a makeshift maven server | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Using KBFS as a makeshift maven server</h1>
+<em>A free and secure way to host personal Java libraries and applications</em>
+<br><br>
+
+<p>As I continue to write more and more Java libraries for personal and public use, I keep finding myself limited by my library hosting solutions. Maven servers are currently my go-to way of storing and organizing all things Java. I have gone through a solid handful of servers over the past few years, here are my comments on each:</p>
+<ul>
+<li>GitHub Releases
+<ul>
+<li>No <a rel="noopener" target="_blank" href="https://dependabot.com/">dependabot</a> integration</li>
+<li>No easy way to get Gradle to load files directly from GitHub</li>
+</ul>
+</li>
+<li><a rel="noopener" target="_blank" href="https://jitpack.io/">JitPack</a>
+<ul>
+<li>Slow builds</li>
+<li>No easy way to publish custom artifacts or use custom groups</li>
+<li>Sometimes unusably long cache policy</li>
+</ul>
+</li>
+<li><a href="/blog/2020/09/17/ultralight-writeup">Ultralight</a>
+<ul>
+<li>Has a file transfer limit</li>
+<li>Uses my personal API keys to interact with GitHub</li>
+<li>No way to automate package updates</li>
+</ul>
+</li>
+<li><a rel="noopener" target="_blank" href="https://github.com/features/packages">GitHub Packages</a>
+<ul>
+<li>Requires users to authenticate even for public assets</li>
+<li>Has a file transfer limit</li>
+<li>Uses a separate maven url per project</li>
+</ul>
+</li>
+</ul>
+<p>As a student, I prefer not to do the sensible solution--<em>spin up an <a rel="noopener" target="_blank" href="https://jfrog.com/artifactory/">Artifactory</a> server</em>--as that costs money I could be spending on coffee.</p>
+<h2 id="what-makes-a-maven-server-special">What makes a maven server special?</h2>
+<p>Really, not much. As outlined in my <a href="/blog/2020/09/17/ultralight-writeup">previous maven-related post</a>, a maven server is just a simple webserver with a specific directory structure, and some metadata files placed in specific locations.</p>
+<p>Let's say we wanted to publish a package with the following attributes:</p>
+<table><thead><tr><th>Attribute</th><th>Value</th></tr></thead><tbody>
+<tr><td>GroupID</td><td><code>ca.retrylife.example</code></td></tr>
+<tr><td>ArtifactID</td><td><code>example-artifact</code></td></tr>
+<tr><td>Version</td><td><code>1.0.4</code></td></tr>
+</tbody></table>
+<p>The resulting directory structure would end up looking like:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>.
+</span><span>└── ca
+</span><span>    └── retrylife
+</span><span>        └── example
+</span><span>            └── example-artifact
+</span><span>                ├── maven-metadata.xml
+</span><span>                ├── maven-metadata.xml.sha1
+</span><span>                └── 1.0.4
+</span><span>                    ├── example-artifact-1.0.4.jar
+</span><span>                    ├── example-artifact-1.0.4.jar.sha1
+</span><span>                    ├── example-artifact-1.0.4.pom
+</span><span>                    └── example-artifact-1.0.4.pom.sha1
+</span></code></pre>
+<div class="center" markdown="1">
+<p><em>Generated with <a rel="noopener" target="_blank" href="https://tree.nathanfriend.io">tree.nathanfriend.io</a></em></p>
+</div>
+<p>In this example. I chose to use the <code>sha1</code> hashing algorithm, but maven clients support pretty much any algorithm I can think of. </p>
+<p>As you can see, the files are layed out very logically. Packages are organized similarly to how you organize your source code; each artifact is accompanied by a <a rel="noopener" target="_blank" href="https://maven.apache.org/guides/introduction/introduction-to-the-pom.html">Project Object Model</a> describing it, <code>maven-metadata</code> files keep track of versioning, and every file also has a hash alongside it.</p>
+<p>For reference, the <code>maven-metadata.xml</code> in this example would look something like this:</p>
+<pre data-lang="xml" style="background-color:#2b303b;color:#c0c5ce;" class="language-xml "><code class="language-xml" data-lang="xml"><span>&lt;?</span><span style="color:#bf616a;">xml </span><span style="color:#d08770;">version</span><span>=&quot;</span><span style="color:#a3be8c;">1.0</span><span>&quot; </span><span style="color:#d08770;">encoding</span><span>=&quot;</span><span style="color:#a3be8c;">UTF-8</span><span>&quot;?&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">metadata</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">groupId</span><span>&gt;ca.retrylife.example&lt;/</span><span style="color:#bf616a;">groupId</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">artifactId</span><span>&gt;example-artifact&lt;/</span><span style="color:#bf616a;">artifactId</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">versioning</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">release</span><span>&gt;1.0.4&lt;/</span><span style="color:#bf616a;">release</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">latest</span><span>&gt;1.0.4&lt;/</span><span style="color:#bf616a;">latest</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">versions</span><span>&gt;
+</span><span>      &lt;</span><span style="color:#bf616a;">version</span><span>&gt;1.0.4&lt;/</span><span style="color:#bf616a;">version</span><span>&gt;
+</span><span>    &lt;/</span><span style="color:#bf616a;">versions</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">lastUpdated</span><span>&gt;20210216203206&lt;/</span><span style="color:#bf616a;">lastUpdated</span><span>&gt;
+</span><span>  &lt;/</span><span style="color:#bf616a;">versioning</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">metadata</span><span>&gt;
+</span></code></pre>
+<p>As far as I know, <code>maven-metadata</code> is not actually required, but I always include them so that I can make use of <a rel="noopener" target="_blank" href="https://docs.gradle.org/current/userguide/dynamic_versions.html">dynamic versions</a> in Gradle.</p>
+<h2 id="using-a-static-cdn-as-a-maven-server">Using a static CDN as a maven server</h2>
+<p>Since there is nothing special about a maven server aside from its directory structure, anywhere that can host files can become a server. My choice for now is <a rel="noopener" target="_blank" href="https://keybase.io/">Keybase</a>'s <a rel="noopener" target="_blank" href="https://book.keybase.io/docs/files">KBFS</a>. KBFS is a pgp-signed file store that allows every user 250GB of free storage. This web filesystem is mounted to the user's device using <a rel="noopener" target="_blank" href="https://www.kernel.org/doc/html/latest/filesystems/fuse.html">FUSE</a> in a similar way to <a rel="noopener" target="_blank" href="https://rclone.org/">rclone</a>.</p>
+<p>This local mount &amp; sync setup allows me to interact with my <code>/keybase</code> mountpoint like any other directory, while having all its contents automatically backed up and published.</p>
+<h3 id="taking-advantage-of-this">Taking advantage of this</h3>
+<p>Gradle's <a rel="noopener" target="_blank" href="https://docs.gradle.org/current/userguide/publishing_maven.html"><code>maven-publish</code></a> plugin is designed to publish packages to remote servers, but will also work with local URIs. Simply pointing a <a rel="noopener" target="_blank" href="https://docs.gradle.org/current/dsl/org.gradle.api.publish.maven.MavenPublication.html"><code>MavenPublication</code></a> to <code>/keybase/public/ewpratten/maven/release</code> (my directory of choice for now) will automatically generate everything mentioned in the section about file structure above.</p>
+<p>My exact configuration for doing this in gradle is as follows (<a rel="noopener" target="_blank" href="https://github.com/Ewpratten/gradle_scripts/blob/master/keybase_publishing.gradle">source</a>):</p>
+<pre data-lang="groovy" style="background-color:#2b303b;color:#c0c5ce;" class="language-groovy "><code class="language-groovy" data-lang="groovy"><span>apply </span><span style="color:#d08770;">plugin</span><span>: &quot;</span><span style="color:#a3be8c;">maven-publish</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;">// Determine SNAPSHOT vs release
+</span><span style="color:#b48ead;">def</span><span> isRelease = !project.findProperty(&quot;</span><span style="color:#a3be8c;">version</span><span>&quot;).contains(&quot;</span><span style="color:#a3be8c;">-SNAPSHOT</span><span>&quot;)
+</span><span style="color:#b48ead;">if</span><span> (!isRelease) {
+</span><span>    </span><span style="color:#96b5b4;">println </span><span>&quot;</span><span style="color:#a3be8c;">Detected SNAPSHOT</span><span>&quot;
+</span><span>}
+</span><span>
+</span><span>publishing {
+</span><span>    repositories {
+</span><span>        maven {
+</span><span>            name = &quot;</span><span style="color:#a3be8c;">KBFS</span><span>&quot;
+</span><span>            </span><span style="color:#b48ead;">if</span><span> (isRelease) {
+</span><span>                url = uri(
+</span><span>                    project.findProperty(&quot;</span><span style="color:#a3be8c;">kbfs.maven.release</span><span>&quot;) ?: &quot;</span><span style="color:#a3be8c;">/keybase/public/ewpratten/maven/release</span><span>&quot;
+</span><span>                )
+</span><span>            } </span><span style="color:#b48ead;">else </span><span>{
+</span><span>                url = uri(
+</span><span>                    project.findProperty(&quot;</span><span style="color:#a3be8c;">kbfs.maven.snapshot</span><span>&quot;) ?: &quot;</span><span style="color:#a3be8c;">/keybase/public/ewpratten/maven/snapshot</span><span>&quot;
+</span><span>                )
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>This configuration is a bit fancy as it will separate snapshots from releases, and allow me to completely override the endpoint(s) in my <code>settings.gradle</code> file if I choose. A minimal approach would be:</p>
+<pre data-lang="groovy" style="background-color:#2b303b;color:#c0c5ce;" class="language-groovy "><code class="language-groovy" data-lang="groovy"><span>apply </span><span style="color:#d08770;">plugin</span><span>: &quot;</span><span style="color:#a3be8c;">maven-publish</span><span>&quot;
+</span><span>
+</span><span>publishing {
+</span><span>    repositories {
+</span><span>        maven {
+</span><span>            name = &quot;</span><span style="color:#a3be8c;">KBFS</span><span>&quot;
+</span><span>            url = uri(&quot;</span><span style="color:#a3be8c;">/keybase/public/&lt;your username&gt;/maven</span><span>&quot;)
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h3 id="pretty-urls">Pretty URLs</h3>
+<p>With the solution outlined in this post, the end user would end up specifying one of the following URLs in their maven client:</p>
+<ul>
+<li><code>https://&lt;username&gt;.keybase.pub/maven/release/</code></li>
+<li><code>https://&lt;username&gt;.keybase.pub/maven/snapshot/</code></li>
+</ul>
+<p>While that is perfectly fine, I prefer to keep all of my projects / services / etc under my personal domain (<code>retrylife.ca</code>). Unlike the rest of this post, this step does cost some money.</p>
+<p>I already rent two servers for various other projects, and one of them is running the <a rel="noopener" target="_blank" href="https://caddyserver.com/">Caddy</a> webserver and acting as a reverse proxy. I have pointed two domains (<code>release.maven.retrylife.ca</code> and <code>snapshot.maven.retrylife.ca</code>) at this server and am using the following rules to route them:</p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>release.maven.retrylife.ca {
+</span><span>    route /* {
+</span><span>        rewrite * /maven/release/{path}
+</span><span>        reverse_proxy https://ewpratten.keybase.pub {
+</span><span>            header_up Host ewpratten.keybase.pub
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span>snapshot.maven.retrylife.ca {
+</span><span>    route /* {
+</span><span>        rewrite * /maven/snapshot/{path}
+</span><span>        reverse_proxy https://ewpratten.keybase.pub {
+</span><span>            header_up Host ewpratten.keybase.pub
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>This means that I can point users at one of the following domains, and they will get the packages they are looking for:</p>
+<ul>
+<li><code>https://release.maven.retrylife.ca/</code></li>
+<li><code>https://snapshot.maven.retrylife.ca/</code></li>
+</ul>
+<p>I am also now able to switch out backend servers / services whenever I want, and users will see no difference.</p>
+<h2 id="future-improvements">Future improvements</h2>
+<p>Some time in the future, I plan to move from KBFS to the S3-based <a rel="noopener" target="_blank" href="https://www.digitalocean.com/products/spaces/">DigitalOcean Spaces</a> so I can speed up the download time for packages, and have better global distribution of files.</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

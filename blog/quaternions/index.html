@@ -1,0 +1,308 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;quaternions&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="Fast and efficient 3D object manipulation" />
+<meta property="description" content="Fast and efficient 3D object manipulation" />
+<meta name="description" content="Fast and efficient 3D object manipulation">
+
+
+<meta property="og:title" content="A rusty guide to quaternions - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>A rusty guide to quaternions | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [ ['$$','$$'], ['\[','\]'] ]}});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">A rusty guide to quaternions</h1>
+<em>Fast and efficient 3D object manipulation</em>
+<br><br>
+
+<p>The running joke in the graphics programming world is that nobody understands quaternions. These big scary math-filled types are always <em>someone else's problem</em>. While quaternions <del>are</del> may be scary, they serve an important purpose in the world of computing as they</p>
+<ul>
+<li>Don't suffer from <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Gimbal_lock">Gimbal Lock</a></li>
+<li>Are extremely efficient to work with computationally</li>
+</ul>
+<p><img src="/images/posts/quaternions/quaternion_meme.png" alt="Quaternion Meme" /></p>
+<blockquote>
+<p>Gimbal lock is the loss of one degree of freedom in a three-dimensional, three-gimbal mechanism that occurs when the axes of two of the three gimbals are driven into a parallel configuration, &quot;locking&quot; the system into rotation in a degenerate two-dimensional space.<br>
+[<a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Gimbal_lock">Wikipedia</a>]</p>
+</blockquote>
+<p>Over the past few years, I have made it my personal goal to work with quaternions in my code as much as possible whenever applicable. This choice was partly to help me better understand quaternions, and partly to simply set my code apart from others due to the use of <em>&quot;fancy math stuff&quot;</em>.</p>
+<h2 id="what-is-this-post-for">What is this post for?</h2>
+<p>My goal here in writing about quaternions is to help explain the concept to other programmers in a fairly approachable way. </p>
+<p>This post will prefer code snippets over complicated math, and will leave out some details not relavant to the normal use of quaternions in code. For a more in-depth look at quaternions, there are many complicated papers to be read on the topic, and they are all one easy Google search away. </p>
+<p>As a final note before I get started, all code snippets will be centered around the Rust programming language (although easily translatable to anything else). I'll also be making heavy use of <a rel="noopener" target="_blank" href="https://nalgebra.org/">Nalgebra</a> by <a rel="noopener" target="_blank" href="https://dimforge.com/">Dimforge</a> for the actual mathematical implementations.</p>
+<h2 id="prerequisite-knowledge-vectors">Prerequisite knowledge: Vectors</h2>
+<p>Most programmers already have a good grasp on at least the basics of vectors, but I was learning about quaternions in 10th grade, and had yet to even take a math class that covered them. Due to this, I'll briefly cover vectors here as a refresher, and in case anyone else is in a similar situation to younger me.</p>
+<p>N-dimensional vectors are expressed as a list of <code>N</code> real numbers. This is simply a point in space, except we tend to visualize vectors as arrows, and points as...well...points. All vectors start at the origin ($\big[\begin{smallmatrix}0 \\ 0\end{smallmatrix}\big]$ in $2$ dimensions for example) and &quot;point to&quot; the coordinate denoted by the vector.</p>
+<p>Importantly, vectors cannot start anywhere other than the origin. If you want to do that, you'd need to express a vector as two seperate vectors (a start, and an end). This definition is a <em>line segment</em>.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">struct </span><span>LineSegment2D {
+</span><span>    </span><span style="color:#b48ead;">pub </span><span style="color:#bf616a;">start</span><span>: Vector2&lt;</span><span style="color:#b48ead;">f32</span><span>&gt;,
+</span><span>    </span><span style="color:#b48ead;">pub </span><span style="color:#bf616a;">end</span><span>: Vector2&lt;</span><span style="color:#b48ead;">f32</span><span>&gt;
+</span><span>}
+</span></code></pre>
+<p>With this data structure, we could define a &quot;vector&quot; (line) starting at $\big[\begin{smallmatrix}1 \\ 2\end{smallmatrix}\big]$ and ending at $\big[\begin{smallmatrix}3 \\ 4\end{smallmatrix}\big]$ as:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> line = LineSegment2D {
+</span><span>    start: Vector2::new(</span><span style="color:#d08770;">1.0</span><span>, </span><span style="color:#d08770;">2.0</span><span>),
+</span><span>    end: Vector2::new(</span><span style="color:#d08770;">3.0</span><span>, </span><span style="color:#d08770;">4.0</span><span>),
+</span><span>};
+</span></code></pre>
+<h2 id="an-intro-to-quaternions">An intro to quaternions</h2>
+<blockquote>
+<p>In mathematics, the quaternion number system extends the complex numbers. Quaternions were first described by Irish mathematician William Rowan Hamilton in 1843 and applied to mechanics in three-dimensional space.<br>
+[<a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Quaternion">Wikipedia</a>]</p>
+</blockquote>
+<p>Quaternions are essentially 4-dimensional numbers consisting of one real, and three imaginary components. They are expressed with the components $w$, $i$, $j$, and $k$. So far, this sounds pretty scary, but it is a lot simpler to deal with when you remember mathematicians like overcomplicating their variable names 😉</p>
+<p>The following is a slightly modified version of the quaternion expression, made to express the concept in a more computer-oriented manner:</p>
+<p>$$
+q = w + x \mathbf{i} + y \mathbf{j} + z \mathbf{k}
+$$</p>
+<p>$i$, $j$, and $k$ can be interpreted as unit-vectors pointing along the three spatial axes.</p>
+<p>You may notice the quaternion expression is split into two distinct parts: the <em>real</em> and <em>vector</em> parts:</p>
+<p>$$
+q = \overbrace{w}^{\text{real}} + \overbrace{x \mathbf{i} + y \mathbf{j} + z \mathbf{k}}^{\text{vector}}
+$$</p>
+<p>The real part is a single <em>real number</em>, and the vector part is simply a 3-dimensional vector ($x,y,z$) with some pesky imaginary basis vectors attached to the components ($i,j,k$). From a programming standpoint, we can simply ignore the imaginary numbers, and treat a quaternion as a structure similar to the following:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// Don&#39;t actually implement a quaternion this way
+</span><span style="color:#65737e;">// This is just to show how I imagine them when working with them
+</span><span style="color:#b48ead;">struct </span><span>Quaternion {
+</span><span>    </span><span style="color:#b48ead;">pub </span><span style="color:#bf616a;">real</span><span>: </span><span style="color:#b48ead;">f32</span><span>,
+</span><span>    </span><span style="color:#b48ead;">pub </span><span style="color:#bf616a;">vector</span><span>: Vector3&lt;</span><span style="color:#b48ead;">f32</span><span>&gt;
+</span><span>}
+</span></code></pre>
+<p>An important fact to keep in mind is that quaternions can <em>and will</em> be found in their normalized form, where all the coefficients (real and vector) are values between $-1$ and $1$.</p>
+<div style="text-align:center;">
+<img src="/images/posts/quaternions/quat_vec3.png" style="max-width:300px;">
+</div>
+<h2 id="quaternions-are-transformations">Quaternions are transformations</h2>
+<p>For the next few sections, there is a single important detail:</p>
+<p><em>Quaternions are transformations</em></p>
+<p>Like everything else in this post, this statement is not true for all applications of quaternions, but is true for the two core uses in graphics programming: <em>rotations</em> and <em>translations</em>.</p>
+<p>You can essentially treat a quaternion as an action applied to a 3-dimensional vector. For example, a quaternion that rotates $90^{\circ}$ around the $z$ axis, applied to the vector $\big[\begin{smallmatrix}1 \\ 0 \\ 0\end{smallmatrix}\big]$ would produce: $\big[\begin{smallmatrix}0 \\ -1 \\ 0\end{smallmatrix}\big]$. Similairly, a quaternion could move a vector to a new origin (turning it into a line segment). We will get to the second transformation in a bit.</p>
+<h3 id="transforms-expressed-mathematically">Transforms: expressed mathematically</h3>
+<p>To transform any vector by a quaternion ($q$ in this case), you must first turn the vector into a <em>pure quaternion</em> (in this case, $k$):</p>
+<p>$$
+\begin{aligned}
+v &amp;= \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} \\
+k &amp;= 0 + 1 \mathbf{i} + 2 \mathbf{j} + 3 \mathbf {k}
+\end{aligned}
+$$</p>
+<p>As you can see, a pure quaternion is a quaternion with a real part of $0$ and a vector part equal to the vector it is being made of. </p>
+<p>Next, you need the conjugate of the quaternion (which is called $q^*$). The following are both the expressions for a quaternion, and a conjugate quaternion:</p>
+<p>$$
+\begin{aligned}
+q &amp;= w + x \mathbf{i} + y \mathbf{j} + z \mathbf{k} \\
+q^* &amp;= w - x \mathbf{i} - y \mathbf{j} - z \mathbf{k}
+\end{aligned}
+$$</p>
+<p>With all the required parts, the transformed vector ($p$) is equal to:</p>
+<p>$$
+p = q^*kq
+$$</p>
+<p><strong>NOTE:</strong> Quaternion multiplicaiton is <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Commutative_property">noncommutative</a>, meaning that the order you multiply things <em>matters</em>. This is not normal multiplication.</p>
+<div style="text-align:center;">
+<img src="/images/posts/quaternions/quat_mul.jpg">
+</div>
+<h3 id="expressing-a-rotation-with-a-quaternion">Expressing a rotation with a quaternion</h3>
+<p>An extremely intuitive way to work with rotations in general, and especially in the quaternion world, is via something called an <em>axis-angle</em>.</p>
+<p>The name is quite self-explanitory, but to describe it better, an axis-angle is made up of a 3-dimensional unit vector pointing in an arbitrary direction, and a single angle (in radians) describing the clockwise twist around that axis.</p>
+<p>Conveniently, as I pointed out earlier, quaternions also work in the same way, with a $w$ value (essentially the angle), and a vector part (essentially the axis). In rust, we can construct a quaternion from an axis-angle as follows:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// In this example, we will describe a rotation of
+</span><span style="color:#65737e;">// 90 degrees around the positive Z axis
+</span><span style="color:#b48ead;">let</span><span> axis = Vector3::z_axis();
+</span><span style="color:#b48ead;">let</span><span> angle = std::f32::consts::</span><span style="color:#d08770;">FRAC_PI_2</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> quaternion = UnitQuaternion::from_axis_angle(&amp;axis, angle);
+</span></code></pre>
+<p>Now, if we wanted to rotate the vector $\big[\begin{smallmatrix}1 \\ 2 \\ 3\end{smallmatrix}\big]$ by <code>quaternion</code>, we could simply write:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let</span><span> rotated_vector = quaternion.</span><span style="color:#96b5b4;">transform_vector</span><span>(&amp;Vector3::new(</span><span style="color:#d08770;">1.0</span><span>, </span><span style="color:#d08770;">2.0</span><span>, </span><span style="color:#d08770;">3.0</span><span>));
+</span></code></pre>
+<h3 id="expressing-a-translation-and-a-rotation-with-a-quaternion">Expressing a translation <em>and</em> a rotation with a quaternion</h3>
+<h2 id="further-reading">Further &quot;reading&quot;</h2>
+<p>So, do you know what you are doing when it comes to quaternions now?</p>
+<p><em>No?</em></p>
+<p>Well, I can't say I'm surprised. Now that you have learned the basics of quaternions, I recommend working through <a rel="noopener" target="_blank" href="https://www.3blue1brown.com/">Grant Sanderson</a>'s videos on the topic:</p>
+<iframe width="100%" height="426" src="https://www.youtube.com/embed/zjMuIxRvygQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><br><br>
+<em>ya, I'm not sure why I decided to fill this with memes either...</em></p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

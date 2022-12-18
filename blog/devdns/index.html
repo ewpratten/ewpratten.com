@@ -1,0 +1,204 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;devdns&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="The DNS over devRant service" />
+<meta property="description" content="The DNS over devRant service" />
+<meta name="description" content="The DNS over devRant service">
+
+
+<meta property="og:title" content="devDNS - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>devDNS | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">devDNS</h1>
+<em>The DNS over devRant service</em>
+<br><br>
+
+<p>Over the past year and a half, I have been hacking my way around the undocumented <a rel="noopener" target="_blank" href="https://devrant.com">devRant</a> auth/write API. At the request of devRant's creators, this API must not be documented due to the way logins work on the platform. That is besides the point. I have been working on a little project called <a rel="noopener" target="_blank" href="https://devrant.com/collabs/2163502">devDNS</a> over the past few days that uses this undocumented API. Why must I be so bad at writing intros?</p>
+<h2 id="what-is-devdns">What is devDNS</h2>
+<p>devDNS is a devRant bot written in python. It will serve any valid DNS query from any user on the platform. A query is just a comment in one of the following forms:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>@devDNS example.com
+</span></code></pre>
+<p>or</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>@devDNS MX example.com
+</span></code></pre>
+<p>Of course, <code>MX</code> and <code>example.com</code> are to be replaced with the domain and entry of your choosing.</p>
+<p>devDNS was inspired by <a rel="noopener" target="_blank" href="https://twitter.com/1111resolver">@1111Resolver</a>, and the source is available on <a rel="noopener" target="_blank" href="https://github.com/Ewpratten/devDNS">GitHub</a>.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>The Python script behind devDNS is very simple. devDNS does the following every 10 seconds:</p>
+<ul>
+<li>Fetch all new notifs</li>
+<li>Find only mentions</li>
+<li>Spin off a thread for each mention that passes a basic parser (Is the message 2 or 3 words long)</li>
+<li>In the thread, check if the message is a control message (allows me to view the status of the bot via devRant)</li>
+<li>Check if the request matches a required pattern</li>
+<li>Call <code>dnspython</code> with requested record and domain</li>
+<li>Receive answer from a custom <a rel="noopener" target="_blank" href="https://pi-hole.net/">PIHole</a> server with caching and super low latency</li>
+<li>Send a comment with the results to the requester</li>
+</ul>
+<p>Thats it! Super simple, and only two days from concept to reality.</p>
+<h2 id="where-is-this-hosted">Where is this hosted?</h2>
+<p>This program is hosted on a raspberry pi laying in my room running docker. I also have <a rel="noopener" target="_blank" href="https://www.portainer.io/">Portainer</a> set up so I can easily monitor the bot from my phone over my VPN.</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

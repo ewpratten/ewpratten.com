@@ -1,0 +1,328 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;qmk-vortex-core&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="Open-source firmware on a closed-source keyboard" />
+<meta property="description" content="Open-source firmware on a closed-source keyboard" />
+<meta name="description" content="Open-source firmware on a closed-source keyboard">
+
+
+<meta property="og:title" content="How I flashed QMK to my Vortex Core - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>How I flashed QMK to my Vortex Core | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">How I flashed QMK to my Vortex Core</h1>
+<em>Open-source firmware on a closed-source keyboard</em>
+<br><br>
+
+<p>Last fall, I <a href="/blog/2020/11/06/vortex-core">purchased my first mechanical keyboard</a>, the <a rel="noopener" target="_blank" href="https://mechanicalkeyboards.com/shop/index.php?l=product_detail&amp;p=3550">Vortex Core</a>, and have been loving it ever since. Well, almost loving it. There are a few &quot;quirks&quot; of the keyboard that I wasn't super fond of, like: occasionally not sending <code>KEY_UP</code> commands back to the computer, or the badly documented and maintained system for building custom layouts.</p>
+<p>In my previous post on this keyboard, I had mentioned @ChaoticEnigma's fork of <a rel="noopener" target="_blank" href="https://github.com/qmk/qmk_firmware">QMK</a> for the core. This custom firmware had been sitting on my mind for a while, and I finally decided to try it out on my keyboard. This post will cover the process of loading QMK on to a non-supported Vortex Core keyboard.</p>
+<p>The following are all the steps required to complete this process. Make sure to <strong>read them all before getting started</strong>. As per usual when I am outlining ways to modify hardware, you might brick your keyboard doing this so: <em>be careful</em>.</p>
+<ol>
+<li><a href="https://ewpratten.com/blog/qmk-vortex-core/#compiling-the-toolchain">Compiling the toolchain</a></li>
+<li><a href="https://ewpratten.com/blog/qmk-vortex-core/#compiling-the-firmware">Compiling the firmware</a></li>
+<li><a href="https://ewpratten.com/blog/qmk-vortex-core/#finding-debugging-hardware">Finding debugging hardware</a></li>
+<li><a href="https://ewpratten.com/blog/qmk-vortex-core/#connecting-to-the-core-s-jtag-interface">Connecting to the core's JTAG interface</a></li>
+<li><a href="https://ewpratten.com/blog/qmk-vortex-core/#unlocking-the-keyboard">Unlocking the keyboard</a></li>
+<li><a href="https://ewpratten.com/blog/qmk-vortex-core/#flashing-qmk">Flashing QMK</a></li>
+</ol>
+<h2 id="compiling-the-toolchain">Compiling the toolchain</h2>
+<p>Firstly, you'll need all the software tools required to interface with the keyboard. The following list contains GitHub links to everything needed (this is all for Linux of course):</p>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://github.com/ChaoticConundrum/openocd-ht32">OpenOCD patched with HT32 support</a></li>
+<li><a rel="noopener" target="_blank" href="https://github.com/pok3r-custom/pok3rtool">Commandline interface tool</a></li>
+<li><a rel="noopener" target="_blank" href="https://github.com/pok3r-custom/pok3r_re_firmware">Unlocked core firmware</a></li>
+</ul>
+<h3 id="openocd">OpenOCD</h3>
+<p>What is <a rel="noopener" target="_blank" href="http://openocd.org/">OpenOCD</a>?</p>
+<blockquote>
+<p>OpenOCD is a free-software tool mainly used for on-chip debugging, in-system. programming and boundary-scan testing. OpenOCD supports flashing and. debugging a wide variety of platforms such as: ARMv5 through latest ARMv8. [source: <a rel="noopener" target="_blank" href="https://wiki.debian.org/OpenOCD">Debian WIKI</a>]</p>
+</blockquote>
+<p>OpenOCD is a standard tool / interface that allows you to use many different types of hardware debuggers interchangeably. It is a very useful project for tasks like this, where we will need to connect directly into an embedded chip via its debugging ports.</p>
+<p>The link provided above for OpenOCD is actually a fork of the main project that specifically adds support for the <a rel="noopener" target="_blank" href="https://www.keil.com/dd2/holtek/ht32f1655/">Holtek HT32F165x</a> MCU (the chip that powers the keyboard).</p>
+<p>After cloning the GitHub repo, the build process is fairly simple:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#96b5b4;">cd</span><span> openocd-ht32
+</span><span>
+</span><span style="color:#65737e;"># Install the build dependencies
+</span><span style="color:#bf616a;">sudo</span><span> apt install build-essential pkg-config libtool
+</span><span>
+</span><span style="color:#65737e;"># Configure the build system
+</span><span style="color:#bf616a;">./bootstrap
+</span><span>
+</span><span style="color:#65737e;"># These arguments may change depending on the hardware debugger you are using. I use the ST-LinkV2
+</span><span style="color:#65737e;"># Check the official OpenOCD documentation for more information on this
+</span><span style="color:#bf616a;">./configure --enable-stlink --disable-werror
+</span><span>
+</span><span style="color:#65737e;"># Build
+</span><span style="color:#bf616a;">make 
+</span><span style="color:#bf616a;">sudo</span><span> make install
+</span></code></pre>
+<h3 id="pok3rtool">Pok3rtool</h3>
+<p><code>pok3rtool</code> is the commandline interface tool designed specifically for interacting with the firmware on Vortex keyboards. It is fairly unstable, but I can confirm that all the commands used in this guide work just fine.</p>
+<p>The build process for <code>pok3rtool</code> is a little different as it requires you to clone the GitHub repo, then create a new directly called <code>pok3rtool-build</code> <strong>beside</strong> the cloned repo. Aside from that quirk, the process for building <code>pok3rtool</code> is as follows:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#96b5b4;">cd</span><span> pok3rtool
+</span><span>
+</span><span style="color:#65737e;"># Pull the git submodules
+</span><span style="color:#bf616a;">git</span><span> submodule update</span><span style="color:#bf616a;"> --init --recursive
+</span><span>
+</span><span style="color:#96b5b4;">cd</span><span> ../pok3rtool-build
+</span><span>
+</span><span style="color:#65737e;"># Build the tool
+</span><span style="color:#bf616a;">cmake</span><span> ../pok3rtool
+</span><span style="color:#bf616a;">make
+</span></code></pre>
+<h3 id="intermediary-firmware">Intermediary firmware</h3>
+<p>Part of the firmware upgrade process involves loading some intermediary firmware on to the keyboard. This is simply the stock Vortex Core firmware, but with the security bit disabled on the chip. This allows us to perform all further firmware upgrades over the keyboard's USB port instead of through JTAG.</p>
+<p>Building this is as simple as cloning the repo, then running <code>make</code>.</p>
+<h2 id="compiling-the-firmware">Compiling the firmware</h2>
+<p>When it comes to the final firmware, I have <a rel="noopener" target="_blank" href="https://github.com/Ewpratten/qmk_core/">my own fork</a> of @ChaoticEnigma's fork of QMK. You could use @ChaoticEnigma's fork, but I would recommend my own, since I am specifically maintaining it for the Vortex Core, and my fork has a few more features (like a proper layout for the core).</p>
+<p>You have the option between four QMK keyboard layouts for the Vortex Core:</p>
+<ul>
+<li>@ChaoticEnigma's <code>default</code>
+<ul>
+<li>A remake of the factory layout (missing a few function keys)</li>
+</ul>
+</li>
+<li>@ChaoticEnigma's <code>chaotic</code>
+<ul>
+<li>Presumably @ChaoticEnigma's personal layout. No idea what it does</li>
+</ul>
+</li>
+<li><code>ewpratten</code>
+<ul>
+<li>My personal layout</li>
+</ul>
+</li>
+<li><code>better_default</code>
+<ul>
+<li>My full remake of the factory layout</li>
+</ul>
+</li>
+</ul>
+<p>To build my QMK fork, run the following:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#96b5b4;">cd</span><span> qmk_core
+</span><span>
+</span><span style="color:#65737e;"># Fetch everything needed to build QMK
+</span><span style="color:#bf616a;">make</span><span> git-submodule
+</span><span>
+</span><span style="color:#65737e;"># Build the layout of your choosing
+</span><span style="color:#65737e;"># For example, I use: make vortex/core:ewpratten
+</span><span style="color:#bf616a;">make</span><span> vortex/core:&lt;layout_name&gt;
+</span></code></pre>
+<h2 id="finding-debugging-hardware">Finding debugging hardware</h2>
+<p>As mentioned in the <a href="https://ewpratten.com/blog/qmk-vortex-core/#openocd">OpenOCD</a> section, I am using a clone of the <a rel="noopener" target="_blank" href="https://www.st.com/en/development-tools/st-link-v2.html">ST-Link/V2</a>, which I picked up for a few dollars <a rel="noopener" target="_blank" href="https://www.ebay.com/itm/ST-Link-V2-OpenOCD-On-Chip-Debugger-STM8-STM32-JTAG-SWIM-Linux-OSX-Arduino/254315946241?hash=item3b36696101:g:Uq0AAOSwYRJdQWxj">from ebay</a>. You can use any OpenOCD-supported debugger though.</p>
+<p>The next section will assume you have an ST-Link when I talk about I/O pin names.</p>
+<h2 id="connecting-to-the-core-s-jtag-interface">Connecting to the core's JTAG interface</h2>
+<p>Its finally time to open up the keyboard. This is pretty simple, there are five screws hidden under the keycaps. Just remove the caps, and the screws.</p>
+<p>On the bottom of the keyboard, you'll see a serial number. If this is <strong>not</strong> <code>CYKB175_V03 20160511</code>, stop right now, and do not proceed with this guide. This is the only model supported.</p>
+<p>In between the <code>LED80</code> and <code>LED66</code> markings on the PCB (just below the serial number), you'll find an empty 5-pin header. For the sake of simplicity, I'll number them 1 to 5, where 1 is the pin closest to the serial number. Connect them to your hardware debugger as follows (this will require soldering, or small clips):</p>
+<table><thead><tr><th>Keyboard Pin</th><th>Debugger Pin</th></tr></thead><tbody>
+<tr><td><code>1</code></td><td><strong>N/A</strong></td></tr>
+<tr><td><code>2</code></td><td><code>SWDIO</code></td></tr>
+<tr><td><code>3</code></td><td><code>SWCLK</code></td></tr>
+<tr><td><code>4</code></td><td><code>RST</code></td></tr>
+<tr><td><code>5</code></td><td><code>GND</code></td></tr>
+</tbody></table>
+<h2 id="unlocking-the-keyboard">Unlocking the keyboard</h2>
+<p>With the keyboard JTAG interface wired up, plug in the keyboard's USB (to provide power), then after the keyboard has connected, plug in the hardware debugger.</p>
+<p>Move to the directory you built OpenOCD in, then run the following:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#96b5b4;">cd</span><span> tcl
+</span><span>
+</span><span style="color:#65737e;"># Connect to the keyboard
+</span><span style="color:#65737e;"># The first -f flag of this command will vary depending on the hardware debugger you chose to use
+</span><span style="color:#bf616a;">../src/openocd -c </span><span>&#39;</span><span style="color:#a3be8c;">set HT32_SRAM_SIZE 0x4000</span><span>&#39;</span><span style="color:#bf616a;"> -c </span><span>&#39;</span><span style="color:#a3be8c;">set HT32_FLASH_SIZE 0x10000</span><span>&#39;</span><span style="color:#bf616a;"> -f</span><span> ./interface/stlink-v2-1.cfg</span><span style="color:#bf616a;"> -f</span><span> ./target/ht32f165x.cfg
+</span></code></pre>
+<p>This will spawn a telnet server on <code>localhost:4444</code>. Connect to that with <code>telnet 172.0.0.1 4444</code>, then run the following commands over telnet:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># REMINDER: We are now going to be modifying firmware on the keyboard. If you mess up, you may have just created an expensive brick
+</span><span>
+</span><span style="color:#65737e;"># We need to erase the existing firmware
+</span><span style="color:#bf616a;">ht32f165x</span><span> mass_erase 0
+</span><span>
+</span><span style="color:#65737e;"># Now, we write the new firmware
+</span><span style="color:#65737e;"># The &#39;0&#39; at the end of this command is very important
+</span><span style="color:#65737e;"># This must be an absolute path to where ever you cloned the intermediary firmware
+</span><span style="color:#bf616a;">flash</span><span> write_image /path/to/pok3r_re_firmware/disassemble/core/builtin_core/firmware_builtin_core.bin 0
+</span></code></pre>
+<p>The last command will take a solid five minutes, so go grab a snack and <em>don't bump anything</em>. There is no progress bar or anything, so enjoy the suspense.</p>
+<p>Assuming all went well, you can run <code>exit</code> over telnet, then close OpenOCD. Unplug the hardware debugger and keyboard, then just plug the keyboard back in. It should function like it just came from the factory. If you forgot to unplug the debugger, the keyboard will not function.</p>
+<p>You now have a firmware-unlocked Vortex Core.</p>
+<h2 id="flashing-qmk">Flashing QMK</h2>
+<p><em>Its time for the last step 🎉</em></p>
+<p>With the keyboard unlocked, you can technically load anything you want on to it, but lets stick with QMK. The following commands will do all the hard work for you:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># Go back to where you built pok3rtool
+</span><span style="color:#96b5b4;">cd</span><span> pok3rtool-build
+</span><span>
+</span><span style="color:#65737e;"># Make sure you can see the keyboard from pok3rtool
+</span><span style="color:#bf616a;">sudo</span><span> ./pok3rtool list
+</span><span>
+</span><span style="color:#65737e;"># Flash the firmware
+</span><span style="color:#65737e;"># &quot;QMK_CORE_EW&quot; can be whatever you want the version of your keyboard to display
+</span><span style="color:#65737e;"># vortex_core_xxxx.bin will be different depending on the keyboard layout you chose to compile
+</span><span style="color:#bf616a;">sudo</span><span> ./pok3rtool</span><span style="color:#bf616a;"> -t</span><span> vortex-core flash QMK_CORE_EW /path/to/qmk_core/vortex_core_xxxx.bin
+</span></code></pre>
+<p>Any time you want to update QMK or change layouts, the above commands will be how to do it.</p>
+<p><strong>NOTE:</strong> sometimes, <code>pok3rtool</code> fails to put the keyboard in bootloader mode before flashing new firmware. If this happens, just run the following command before flashing (and you may need to repeat this process a few times to get <code>pok3rtool</code> to behave)</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> ./pok3rtool</span><span style="color:#bf616a;"> -t</span><span> vortex-core bootloader
+</span></code></pre>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

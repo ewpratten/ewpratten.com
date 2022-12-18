@@ -1,0 +1,322 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;running-roborio-native&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="Containerized native ARMv7l emulation in 20 minutes" />
+<meta property="description" content="Containerized native ARMv7l emulation in 20 minutes" />
+<meta name="description" content="Containerized native ARMv7l emulation in 20 minutes">
+
+
+<meta property="og:title" content="Running RoboRIO firmware inside Docker - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Running RoboRIO firmware inside Docker | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Running RoboRIO firmware inside Docker</h1>
+<em>Containerized native ARMv7l emulation in 20 minutes</em>
+<br><br>
+
+<p>It has now been 11 weeks since the last time I have had access to a <a rel="noopener" target="_blank" href="https://www.ni.com/en-ca/support/model.roborio.html">RoboRIO</a> to use for debugging code, and there are limits to my simulation software. So, I really only have one choice: <em>emulate my entire robot</em>.</p>
+<p>My goal is to eventually have every bit of hardware on <a rel="noopener" target="_blank" href="https://www.thebluealliance.com/team/5024">5024</a>'s <a rel="noopener" target="_blank" href="https://cs.5024.ca/webdocs/docs/robots/darthRaider">Darth Raider</a> emulated, and running on my docker swarm. Conveniently, everything uses (mostly) the same CPU architecture. In this post, I will go over how to build a RoboRIO docker container.</p>
+<h2 id="host-system-requirements">Host system requirements</h2>
+<p>This process requires a host computer with:</p>
+<ul>
+<li>An x86_64 CPU</li>
+<li>A decent amount of RAM</li>
+<li><a rel="noopener" target="_blank" href="https://mirrors.lug.mtu.edu/ubuntu-releases/18.04/">Ubuntu 18.04</a> or later</li>
+<li><a rel="noopener" target="_blank" href="https://docs.docker.com/engine/install/debian/">Docker CE</a> installed</li>
+<li><a rel="noopener" target="_blank" href="https://docs.docker.com/compose/install/">docker-compose</a> installed</li>
+</ul>
+<h2 id="getting-a-system-image">Getting a system image</h2>
+<p>This is the hardest step. To get a RoboRIO docker container running, you will need:</p>
+<ul>
+<li>A copy of the latest RoboRIO firmware package</li>
+<li>A copy of <code>libfakearmv7l.so</code> (<a rel="noopener" target="_blank" href="https://github.com/robotpy/fakearmv7l/releases/download/v1/libfakearmv7l.so">download</a>)</li>
+</ul>
+<h3 id="roborio-firmware">RoboRIO Firmware</h3>
+<p>To acquire a copy of the latest RoboRIO Firmware package, you will need to install the <a rel="noopener" target="_blank" href="https://www.ni.com/en-ca/support/downloads/drivers/download.frc-game-tools.html">FRC Game Tools</a> on a <strong>Windows</strong> machine (not wine).</p>
+<p>After installing the toolsuite, and activating it with your FRC team's activation key (provided in Kit of Parts), you can grab the latest <code>FRC_roboRIO_XXXX_vXX.zip</code> file from the installation directory of the <em>FRC Imaging Tool</em> (This will vary depending on how, and where the Game Tools are installed).</p>
+<p>After unzipping this file, you will find another ZIP file, and a LabVIEW FPGA file. Unzip the ZIP, and look for a file called <code>systemimage.tar.gz</code>. This is the RoboRIO system image. Copy it to your Ubuntu computer.</p>
+<h2 id="bootstrapping">Bootstrapping</h2>
+<p>The bootstrap process is made up of a few parts:</p>
+<ol>
+<li>Enabling support for ARM-based docker containers</li>
+<li>Converting the RoboRIO system image to a Docker base image</li>
+<li>Building a Dockerfile with hacked auth</li>
+</ol>
+<h3 id="enabling-docker-arm-support">Enabling Docker-ARM support</h3>
+<p>Since the RoboRIO system image and libraries are compiled to run on ARMv7l hardware, they will refuse to run on an x86_64 system. This is where <a rel="noopener" target="_blank" href="https://www.qemu.org/">QEMU</a> comes in to play. We can use QEMU as an emulation layer between out docker containers and our CPU. To get QEMU set up, we must first install support for ARM-&gt;x86 emulation by running:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> apt install qemu binfmt-support qemu-user-static</span><span style="color:#bf616a;"> -y
+</span></code></pre>
+<p>Once QEMU has been installed, we must run the registration scripts with:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">docker</span><span> run</span><span style="color:#bf616a;"> --rm --privileged</span><span> multiarch/qemu-user-static</span><span style="color:#bf616a;"> --reset -p</span><span> yes
+</span></code></pre>
+<h3 id="converting-the-system-image-to-a-docker-base">Converting the system image to a Docker base</h3>
+<p>We have a system image filesystem, but need Docker to view it as a Docker image. </p>
+<h4 id="using-my-pre-built-image">Using my pre-built image</h4>
+<p>Feel free to skip the following step, and just use my <a rel="noopener" target="_blank" href="https://hub.docker.com/r/ewpratten/roborio">pre-built</a> RoboRIO base image. It is already set up with hacked auth, and is (at the time of writing) based on firmware version <code>2020_v10</code>.</p>
+<p>To use it, replace <code>roborio:latest</code> with <code>ewpratten/roborio:2020_v10</code> in the <code>docker-compose.yml</code> config below.</p>
+<h4 id="building-your-own-image">Building your own image</h4>
+<p>Make a folder, and put both the system image, and <code>libfakearmv7l.so</code> files in it. This will be your &quot;working directory&quot;. Now, import the system image into docker with:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">docker</span><span> import ./systemimage.tar.gz roborio:tmp
+</span></code></pre>
+<p>This will build a docker base image out of the system image, and name it <code>roborio:tmp</code>. You can use this on it's own, but if you want to deploy code to the container with <a rel="noopener" target="_blank" href="https://github.com/wpilibsuite/GradleRIO">GradleRIO</a>, or SSH into the container, you will need to strip the NI Auth.</p>
+<h3 id="stripping-national-instruments-auth">Stripping National Instruments Auth</h3>
+<p>By default, the RoboRIO system image comes fairly locked down. To fix this, we can &quot;extend&quot; our imported docker image with some configuration to allow us to remove some unknown passwords.</p>
+<p>In the working directory, we must first create a file called <code>common_auth</code>. This will store our modified authentication configuration. Add the following to the file:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>#
+</span><span># /etc/pam.d/common-auth - authentication settings common to all services
+</span><span>#
+</span><span># This file is included from other service-specific PAM config files,
+</span><span># and should contain a list of the authentication modules that define
+</span><span># the central authentication scheme for use on the system
+</span><span># (e.g., /etc/shadow, LDAP, Kerberos, etc.).  The default is to use the
+</span><span># traditional Unix authentication mechanisms.
+</span><span>
+</span><span># ~~~ This file is modified for use with Docker ~~~ 
+</span><span>
+</span><span># here are the per-package modules (the &quot;Primary&quot; block)
+</span><span># auth	[success=2 auth_err=1 default=ignore]	pam_niauth.so nullok
+</span><span># auth	[success=1 default=ignore]	pam_unix.so nullok
+</span><span># here&#39;s the fallback if no module succeeds
+</span><span># auth	requisite			pam_deny.so
+</span><span># prime the stack with a positive return value if there isn&#39;t one already;
+</span><span># this avoids us returning an error just because nothing sets a success code
+</span><span># since the modules above will each just jump around
+</span><span>auth	required			pam_permit.so
+</span><span># and here are more per-package modules (the &quot;Additional&quot; block)
+</span><span>
+</span></code></pre>
+<p>Now, we must create a <code>Dockerfile</code> in the same directory with the following contents:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>FROM roborio:tmp
+</span><span>
+</span><span># Fixes issues with the original RoboRIO image
+</span><span>RUN mkdir -p /var/volatile/tmp &amp;&amp; \
+</span><span>    mkdir -p /var/volatile/cache &amp;&amp; \
+</span><span>    mkdir -p /var/volatile/log &amp;&amp; \
+</span><span>    mkdir -p /var/run/sshd
+</span><span>
+</span><span>RUN opkg update &amp;&amp; \
+</span><span>    opkg install binutils-symlinks gcc-symlinks g++-symlinks libgcc-s-dev make libstdc++-dev
+</span><span>
+</span><span># Overwrite auth
+</span><span>COPY system/common_auth /etc/pam.d/common-auth
+</span><span>RUN useradd admin -ou 0 -g 0 -s /bin/bash -m
+</span><span>RUN usermod -aG sudo admin
+</span><span>
+</span><span># Fixes for WPILib
+</span><span>RUN mkdir -p /usr/local/frc/third-party/lib
+</span><span>RUN chmod 777 /usr/local/frc/third-party/lib
+</span><span>
+</span><span># This forces uname to report armv7l
+</span><span>COPY system/libfakearmv7l.so /usr/local/lib/libfakearmv7l.so
+</span><span>RUN chmod +x /usr/local/lib/libfakearmv7l.so &amp;&amp; \
+</span><span>    mkdir -p /home/admin/.ssh &amp;&amp; \ 
+</span><span>    echo &quot;LD_PRELOAD=/usr/local/lib/libfakearmv7l.so&quot; &gt;&gt; /home/admin/.ssh/environment &amp;&amp; \
+</span><span>    echo &quot;PermitUserEnvironment yes&quot; &gt;&gt; /etc/ssh/sshd_config &amp;&amp; \
+</span><span>    echo &quot;PasswordAuthentication no&quot;&gt;&gt; /etc/ssh/sshd_config
+</span><span>
+</span><span># Put the CPU into 32bit mode, and start an SSH server
+</span><span>ENTRYPOINT [&quot;setarch&quot;, &quot;linux32&quot;, &quot;&amp;&amp;&quot;, &quot;/usr/sbin/sshd&quot;, &quot;-D&quot; ]
+</span></code></pre>
+<p>This file will cause the container to:</p>
+<ul>
+<li>Install needed tools</li>
+<li>Configure an &quot;admin&quot; user with full permissions</li>
+<li>Set r/w permissions for all FRC libraries</li>
+<li>Overwrite the system architecture with a custom string to allow programs like <code>pip</code> to run properly</li>
+<li>Enables password-less SSH login</li>
+<li>Sets the CPU to 32bit mode</li>
+</ul>
+<p>We can now build the final image with these commands:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">docker</span><span> build</span><span style="color:#bf616a;"> -f</span><span> ./Dockerfile</span><span style="color:#bf616a;"> -t</span><span> roborio:local .
+</span><span style="color:#bf616a;">docker</span><span> rmi roborio:tmp
+</span><span style="color:#bf616a;">docker</span><span> tag roborio:local roborio:latest
+</span></code></pre>
+<h2 id="running-the-roborio-container-locally">Running the RoboRIO container locally</h2>
+<p>We can now use <code>docker-compose</code> to start a fake robot network locally, and run our RoboRIO container. First, we need to make a <code>docker-compose.yml</code> file. In this file, add:</p>
+<pre data-lang="yml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">3</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">roborio</span><span>:
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">roborio:latest </span><span style="color:#65737e;"># Change this to &quot;ewpratten/roborio:2020_v10&quot; if using my pre-built image
+</span><span>    </span><span style="color:#bf616a;">networks</span><span>:
+</span><span>      </span><span style="color:#bf616a;">robo_net</span><span>:
+</span><span>        </span><span style="color:#bf616a;">ipv4_address</span><span>: </span><span style="color:#d08770;">10.50.24.2
+</span><span>
+</span><span style="color:#bf616a;">networks</span><span>:
+</span><span>    </span><span style="color:#bf616a;">robo_net</span><span>:
+</span><span>        </span><span style="color:#bf616a;">ipam</span><span>:
+</span><span>            </span><span style="color:#bf616a;">driver</span><span>: </span><span style="color:#a3be8c;">default
+</span><span>            </span><span style="color:#bf616a;">config</span><span>:
+</span><span>                - </span><span style="color:#bf616a;">subnet</span><span>: </span><span style="color:#a3be8c;">10.50.24.0/24
+</span></code></pre>
+<p>We can now start the RoboRIO container by running</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">docker-compose</span><span> up
+</span></code></pre>
+<p>You should now be able to SSH into the RoboRIO container with:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">ssh</span><span> admin@10.50.24.2
+</span></code></pre>
+<p>Or even deploy code to the container! (Just make sure to set your FRC team number to <code>5024</code>)</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

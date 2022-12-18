@@ -1,0 +1,231 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;steam-controller-switch&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="An unreasonably cursed setup for zero gain" />
+<meta property="description" content="An unreasonably cursed setup for zero gain" />
+<meta name="description" content="An unreasonably cursed setup for zero gain">
+
+
+<meta property="og:title" content="Using a Steam Controller with the Nintendo Switch - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Using a Steam Controller with the Nintendo Switch | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Using a Steam Controller with the Nintendo Switch</h1>
+<em>An unreasonably cursed setup for zero gain</em>
+<br><br>
+
+<p>Remember the <a rel="noopener" target="_blank" href="https://store.steampowered.com/app/353370/Steam_Controller/">Steam Controller</a>?</p>
+<p><img src="/images/posts/steam-switch/sc.png" alt="Image of the Steam Controller" /></p>
+<p>As it turns out, pretty much nobody does. I picked mine up back in elementary school at a good ol' <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/EB_Games">EB Games</a> shop, and remember being blown away by the extensible configurability of the thing. Shooting portals with gyro aim really <em>was</em> a cool thing to experience.</p>
+<h2 id="what-do-you-do-with-an-old-steam-controller">What do you do with an old Steam Controller?</h2>
+<p>Well, I ended up surrounding myself with <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Nintendo_Switch">Nintendo Switch</a> owners, and instantly disliking the feel of the <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Nintendo_Switch#Joy-Con">Joy-Con</a> controllers (seriously, who makes digital triggers!?). Thus the thought:</p>
+<blockquote>
+<p>I wonder if I can pair third-party controllers to the switch?</p>
+</blockquote>
+<p>It turns out that, yes, with some effort this is possible. Firstly, I tried an <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Xbox_Wireless_Controller">Xbox Wireless Controller</a> which should <em>in theory</em> be compatible with the switch. According to various people on Reddit, later versions of the Nintendo Switch firmware contain a driver for the Xbox dongle, when plugged into the back of the switch dock, but I left my bluetooth dongle at my old highschool in another city, so that plan isn't going very far.</p>
+<p>Back to the Steam Controller. I thought, surely a completely configurable input device like this could be set up in a way to trick the switch into thinking its a supported controller.</p>
+<h2 id="i-was-almost-wrong">I was <em>almost</em> wrong</h2>
+<p>As it turns out, I was not alone in wanting to Nintendo-ify a Steam Controller, and someone has already done most of the work.</p>
+<p><strong>Disclaimer:</strong> The following is about to be a guide in doing rather questionable things with a Steam Controller. If you aren't 100% sure what you are doing with these types of devices, do not try any of this.</p>
+<h3 id="the-opensteamcontroller-project">The OpenSteamController project</h3>
+<p><a rel="noopener" target="_blank" href="https://github.com/greggersaurus/OpenSteamController">OpenSteamController</a> is a now-abandoned project that completely re-implements the core functionality of the Steam Controller through reverse-engineered code.</p>
+<p>With just a bit of work (and selling your soul to <a rel="noopener" target="_blank" href="https://www.nxp.com/">NXP</a>), you can compile the custom firmware, and swap out the existing firmware for your own with patched switch support!</p>
+<h4 id="the-steps">The steps</h4>
+<ol>
+<li>Clone the <a rel="noopener" target="_blank" href="https://github.com/greggersaurus/OpenSteamController">OpenSteamController</a> repository</li>
+<li>Head over to the <a rel="noopener" target="_blank" href="https://www.nxp.com/design/microcontrollers-developer-resources/lpcxpresso-ide-v8-2-2:LPCXPRESSO">LPCXpresso IDE</a> download page, press the download button, create an account, and install the latest IDE version</li>
+<li>Open the LPCXpresso IDE</li>
+<li>Do <code>File &gt; Import &gt; General &gt; Existing Project into Workspace</code> for both of these directories:
+<ul>
+<li><code>/path/to/OpenSteamController/firmware/OpenSteamController</code></li>
+<li><code>/path/to/OpenSteamController/firmware/lpc_chip_11uxx_lib</code></li>
+</ul>
+</li>
+<li>Change <code>FIRMWARE_BEHAVIOR</code> to have the value <code>SWITCH_WIRED_POWERA_FW</code> in <code>OpenSteamController/inc/fw_cfg.h</code></li>
+<li>Right click the lpc project and build it, then do the same for the OpenSteamController project</li>
+</ol>
+<p>For a less terse walkthrough, see <a rel="noopener" target="_blank" href="https://www.youtube.com/watch?v=VxD9rCuD9Vc">the tutorial video</a>.</p>
+<p>After completing these steps, you will have a new firmware file at</p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>OpenSteamController/Debug/OpenSteamController.bin
+</span></code></pre>
+<h3 id="flashing-custom-firmware-to-the-steam-controller">Flashing custom firmware to the Steam Controller;</h3>
+<p>Now for the fun part. It turns out the Steam Controller has a sort of <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/USB#Device_Firmware_Upgrade_mechanism">Device Firmware Upgrade</a> (DFU) mechanism that can be triggered by holding the <em>right trigger</em> while plugging the controller in.</p>
+<p>After doing so, a new &quot;drive&quot; will appear on your machine called <code>CRP DISABLD</code>.</p>
+<p><strong>Make a backup of the firmware file on this drive!</strong></p>
+<p>At this point, the final flashing step is os-dependent. Assume your <code>OpenSteamController.bin</code> file is <code>${FIRMWARE}</code> and the path to your <code>CRP DISABLED</code> drive is <code>${CRP_DRV}</code>.</p>
+<h4 id="linux">Linux</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">dd</span><span> conv=nocreat,notrunc oflag=direct bs=512 if=${</span><span style="color:#bf616a;">FIRMWARE</span><span>} of=${</span><span style="color:#bf616a;">CRP_DRV</span><span>}/firmware.bin
+</span></code></pre>
+<h4 id="macos">macOS</h4>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">cat </span><span>${</span><span style="color:#bf616a;">FIRMWARE</span><span>} &gt; ${</span><span style="color:#bf616a;">CRP_DRV</span><span>}/firmware.bin
+</span></code></pre>
+<h4 id="windows">Windows</h4>
+<p>Simply copy the <code>OpenSteamController.bin</code> file to the <code>CRP DISABLED</code> drive and rename it to <code>firmware.bin</code></p>
+<h3 id="connecting-everything">Connecting everything</h3>
+<p>Finally, with a full-sized USB to USB-C adapter (like the one that comes with most phones), you can plug the controller into the switch. Make sure to enable support for wired switch pro controllers in the settings if you have issues.</p>
+<p>A known (and annoying) problem is that the trackpads are <em>wayy</em> too sensitive with this firmware so.. Good luck?</p>
+<p><img src="/images/posts/steam-switch/sc-switch.jpg" alt="My steam controller plugged into a switch" /></p>
+<p>If you want to revert to factory firmware, just copy the saved <code>firmware.bin</code> file back to the controller in the same way you deployed the custom one.</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

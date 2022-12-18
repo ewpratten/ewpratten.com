@@ -1,0 +1,230 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;direwolf-aprs&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="How I set up my feature-packed APRS digipeater for under $100" />
+<meta property="description" content="How I set up my feature-packed APRS digipeater for under $100" />
+<meta name="description" content="How I set up my feature-packed APRS digipeater for under $100">
+
+
+<meta property="og:title" content="Building a cheap APRS digipeater - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Building a cheap APRS digipeater | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Building a cheap APRS digipeater</h1>
+<em>How I set up my feature-packed APRS digipeater for under $100</em>
+<br><br>
+
+<p><em><strong>WARNING:</strong> To replicate this project, you <strong>must</strong> be the holder of an amateur radio license in your country</em></p>
+<p>I have an extra <a rel="noopener" target="_blank" href="https://baofengtech.com/product/uv-5r/">Baofeng UV-5R</a> lying around, and had no idea what to use it for. The original plan was to set up a UHF simplex repeater with internet linking capabilities, but that project was set back due to my lack of time to figure out how to set up the <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Asterisk_(PBX)">Asterisk PBX</a>.</p>
+<p>After giving up on Asterisk, I was left without ideas once again. That is, until a few days ago when I remembered that the large <a rel="noopener" target="_blank" href="http://www.aprs.org/">APRS</a> network exists, and is fairly easy to experiment with. I have some past experience with APRS, specifically the <a rel="noopener" target="_blank" href="http://www.aprs-is.net/">APRS-IS</a> internet bridge. I have cron jobs running on a few of my computers that fetches their positions through <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Internet_geolocation">geo-ip</a> and beacons this info (plus weather info if I feel like it) to the APRS network through APRS-IS. None of that setup has anything to do with radio though, so it feels like I'm not a <em>true APRS user</em>. </p>
+<p>A solution to both problems: set up a digipeater.</p>
+<h2 id="what-my-radio-is-doing">What my radio is doing</h2>
+<p>To be specific, I am running much more than just a digipeater. This spare radio is also an APRS-IS <a rel="noopener" target="_blank" href="http://www.aprs-is.net/IGating.aspx">IGate</a>, and an <a rel="noopener" target="_blank" href="http://www.aprs.org/aprstt.html">APRStt</a> bridge. The more important of these capabilities is APRStt.</p>
+<p>APRStt is a standard originally designed for the <a rel="noopener" target="_blank" href="http://www.aprs.org/psat2.html">PSAT2</a> satellite, that allows radio operators with non-APRS-compatible radios to send beacons using DTMF sequences. The encoding standard for doing this is not exactly user friendly in my opinion, but it works.</p>
+<p>Combining these radio capabilities with some basic knowledge of the <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Maidenhead_Locator_System">Maidenhead Locator System</a> on my part allows me to go anywhere in the city with my HT and send beacons to the APRS network using DTMF. Pretty cool in my opinion.</p>
+<h2 id="setup-guide">Setup Guide</h2>
+<p>The following is a mostly complete guide on replicating my digipeater setup. You will have to do some extra reading to understand the configuration system.</p>
+<h3 id="required-hardware">Required hardware</h3>
+<p>To set up a digipeater, you need a controller, a radio, and some hardware to connect the two. All of the parts I use are found below (I did not choose the most cost-effective listings here):</p>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://www.ebay.com/itm/193345669838">Raspberry Pi 3B+</a></li>
+<li><a rel="noopener" target="_blank" href="https://baofengtech.com/product/uv-5r/">Baofeng UB-5R</a></li>
+<li><a rel="noopener" target="_blank" href="https://www.ebay.com/itm/203355827559">USB sound card</a></li>
+<li>2x <a rel="noopener" target="_blank" href="https://www.ebay.com/itm/402032141776">3.5mm audio cables</a></li>
+<li><a rel="noopener" target="_blank" href="https://www.ebay.com/itm/202853095248">2.5mm Male to 3.5mm Female adaptor</a></li>
+<li><a rel="noopener" target="_blank" href="https://www.ebay.com/itm/114771147582">Single-channel relay</a></li>
+<li>Some female-to-female jumper cables (see <a rel="noopener" target="_blank" href="https://www.ebay.com/itm/203350136236">here</a>)</li>
+<li>Solder and a soldering iron are also needed for cable modifications</li>
+</ul>
+<h3 id="compiling-dire-wolf">Compiling Dire Wolf</h3>
+<p>Compiling and setting up the control software, <a rel="noopener" target="_blank" href="https://github.com/wb2osz/direwolf">Dire Wolf</a>, is pretty easy. The full guide on this process can be found <a rel="noopener" target="_blank" href="https://github.com/wb2osz/direwolf/blob/master/doc/Raspberry-Pi-APRS.pdf">here</a>. I'll summarize below:</p>
+<p>On a fresh install of <a rel="noopener" target="_blank" href="https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit">Raspbian</a>:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">sudo</span><span> apt update
+</span><span style="color:#bf616a;">sudo</span><span> apt install cmake libasound2-dev libudev-dev git
+</span><span style="color:#96b5b4;">cd </span><span style="color:#bf616a;">~
+</span><span style="color:#bf616a;">git</span><span> clone https://github.com/wb2osz/direwolf
+</span><span style="color:#96b5b4;">cd</span><span> direwolf
+</span><span style="color:#bf616a;">mkdir</span><span> build &amp;&amp; </span><span style="color:#96b5b4;">cd</span><span> build
+</span><span style="color:#bf616a;">cmake</span><span> ..
+</span><span style="color:#bf616a;">make -j4
+</span><span style="color:#bf616a;">sudo</span><span> make install
+</span><span style="color:#bf616a;">make</span><span> install-conf
+</span><span style="color:#96b5b4;">cd </span><span style="color:#bf616a;">~
+</span></code></pre>
+<p>You can now launch Dire Wolf by running <code>direwolf</code>. See the full guide for info on staring on boot.</p>
+<h3 id="building-a-ptt-cable-for-the-baofeng-uv-5r">Building a PTT cable for the Baofeng UV-5R</h3>
+<p>Baofeng sells a proper <a rel="noopener" target="_blank" href="https://baofengtech.com/product/aprs-k1/">audio interface cable</a>, which will make this process easier, but it is not really needed if you have some basic soldering skills.</p>
+<p>The push-to-talk system on most Baofeng radios works by shorting the ground of the mic cable to the ground of the speaker cable. Interestingly, the USB audio interface listed above automatically does this (aka. PTT is always enabled when the cables are plugged in). My quick solution is to use some wire strippers to open up the 3.5mm cable used for the microphone input, and snipping the ground line. I then just stick the relay in series with this snipped cable, and can enable and disable ground by triggering the relay.</p>
+<p>Plugging the relay into <a rel="noopener" target="_blank" href="https://www.bigmessowires.com/wp-content/uploads/2018/05/Raspberry-GPIO.jpg">pin <code>GPIO14</code></a> of the Raspberry PI will let Dire Wolf have full control over the radio PTT.</p>
+<h3 id="configuration">Configuration</h3>
+<p>The entire configuration process is outlined in the Dire Wolf <a rel="noopener" target="_blank" href="https://github.com/wb2osz/direwolf/blob/master/doc/User-Guide.pdf">user manual</a>. Here are some additional notes:</p>
+<ul>
+<li>Set <code>PTT GPIO 14</code> in the <code>CHANNEL 0</code> section to enable hardware PTT using the relay</li>
+<li>Set <code>DTMF</code> in the <code>CHANNEL 0</code> section to enable APRStt</li>
+<li>Uncomment the <code>DIGIPEAT</code> configuration to enable digipeating</li>
+</ul>
+<h2 id="need-help">Need help?</h2>
+<p>If you happened to follow this guide and need more configuration help, <a href="/about">send me a message</a>.</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

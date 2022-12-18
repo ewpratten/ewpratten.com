@@ -1,0 +1,265 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;rickrolling-the-internet&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="Abusing ICMPv6 to inject lyrics into public routes" />
+<meta property="description" content="Abusing ICMPv6 to inject lyrics into public routes" />
+<meta name="description" content="Abusing ICMPv6 to inject lyrics into public routes">
+
+
+<meta property="og:title" content="Rickrolling the internet - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Rickrolling the internet | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Rickrolling the internet</h1>
+<em>Abusing ICMPv6 to inject lyrics into public routes</em>
+<br><br>
+
+<p><strong>NOTICE: The service mentioned in this post is currently unavailable due to ongoing network upgrades.</strong></p>
+<p><code>mtr</code> (a modern version of <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Traceroute"><code>traceroute</code></a>) is a network debugging tool commonly used by network engineers to trace the physical (and sometimes virtual) paths their packets take between two computers over a network. Both <code>mtr</code> and <code>traceroute</code> will list the addresses or names of as many routers along the path as they can.</p>
+<p>The following is an example output of an <code>mtr</code> trace from this computer to a Hurricane Electric server:</p>
+<p><img src="/images/posts/rickroll-ipv6/he-mtr.png" alt="MTR command output" /></p>
+<h2 id="traceroute-toys">Traceroute toys</h2>
+<p>Over time, a few exceptionally bored network engineers have created some fun services that piggyback off of this idea of listing hosts along a path.</p>
+<p>For example, there is:</p>
+<ul>
+<li><code>mtr cv6.poinsignon.org</code>: Displays a brief version of <a rel="noopener" target="_blank" href="https://www.mygb.eu/">Louis Poinsignon</a>'s resume</li>
+<li><code>mtr bad.horse</code>: Displays the lyrics to <a rel="noopener" target="_blank" href="https://www.youtube.com/watch?v=rN2U5wkhRWc">Bad Horse</a></li>
+<li><a rel="noopener" target="_blank" href="https://benjojo.co.uk">Ben Cox</a>'s old <a rel="noopener" target="_blank" href="https://blog.benjojo.co.uk/post/traceroute-haikus">Traceroute Haiku</a> service</li>
+</ul>
+<p>That last one was the inspiration for this project, and I will likely reference Ben's post a fair bit in this one. If you are interested in the lower level technical aspects of what I have set up, go read his post, as I am running a nearly identical setup to him.</p>
+<h2 id="the-game-plan">The game plan</h2>
+<p>My intent for this project was rather simple: <a rel="noopener" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">rickroll</a> people when they traceroute my website. Now, I technically failed at most of that, and the result is really: rickroll people when they <code>mtr</code> <em>part of</em> my website. This change of scope was simply due to the fact I'd rather not introduce unwanted latency into the regular viewing experience of this site.</p>
+<p>The steps were as follows:</p>
+<ol>
+<li>Allocate an IPv6 address block for the project</li>
+<li>Set up <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Reverse_DNS_lookup">Reverse DNS</a> 
+<ol>
+<li>Convert the lyrics of <em>Never Gonna Give You Up</em> to <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Fully_qualified_domain_name">FQDN</a> format</li>
+<li>Register the appropriate <code>PTR</code> records</li>
+</ol>
+</li>
+<li><em>Dark magic</em></li>
+<li><a rel="noopener" target="_blank" href="https://knowyourmeme.com/memes/profit">Profit!</a></li>
+</ol>
+<h2 id="ip-addresses-and-rdns">IP addresses and RDNS</h2>
+<p>For this project, I ended up using the public address block <code>2a06:a005:d2b:c011::/64</code>, as I already own and control the routing for its <a rel="noopener" target="_blank" href="https://bgp.tools/prefix/2a06:a005:d2b::/48">parent block</a>.</p>
+<p>I then delegated reverse DNS to the <a rel="noopener" target="_blank" href="https://dns.he.net/">Hurricane Electric DNS service</a> for easy management. I'll get back to this in a second.</p>
+<h3 id="converting-lyrics-to-fqdns">Converting lyrics to FQDNs</h3>
+<p>For this process, I ended up building a little Python tool called <code>lyrics2ptr</code> that generates copy-pastable Hurricane Electric settings from a text file full of lyrics.</p>
+<div class="zola-github-card" >
+    <a href="https://github.com/ewpratten&#x2F;lyrics2ptr">
+        <img src="https://opengraph.githubassets.com/1/ewpratten&#x2F;lyrics2ptr" alt="GitHub: ewpratten&#x2F;lyrics2ptr">
+    </a>
+</div>
+<br>
+<p>The specific command for this was:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">python3</span><span> lyrics2ptr.py /path/to/rickroll-lyrics.txt</span><span style="color:#bf616a;"> --addr-prefix</span><span> c011::
+</span></code></pre>
+<p>Thus generating output like this:</p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>...
+</span><span>c011::0008 never.gonna.give.you.up
+</span><span>c011::0009 never.gonna.let.you.down
+</span><span>c011::000a never.gonna.run.around.and.desert.you
+</span><span>c011::000b never.gonna.make.you.cry
+</span><span>c011::000c never.gonna.say.goodbye
+</span><span>c011::000d never.gonna.tell.a.lie.and.hurt.you
+</span><span>...
+</span></code></pre>
+<p>While the output format may look weird, it directly corresponds to the input fields in the DNS control panel.</p>
+<p><img src="/images/posts/rickroll-ipv6/he-dns-fields.png" alt="A screenshot of the HE control panel" /></p>
+<h2 id="icmpv6-trickery">ICMPv6 trickery</h2>
+<p>Now, for the <del>fun</del> complicated part of this project.</p>
+<p>When you run an <code>mtr</code> or <code>traceroute</code> against a remote host, your computer will send out arbitrary packets to that host, but slowly increment the <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Time_to_live">Time to live</a> (TTL) field in such packets. </p>
+<p>As a refresher, the TTL field is a number that is decremented every time a packet is passed through a router. If this number ever hits zero, the packet is discarded and an <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Time_exceeded">ICMPv6 Time Exceeded</a> packet is returned to the sender indicating that their packet spent too long in transit. This mechanism exists to help prevent <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Routing_loop">routing loops</a>. </p>
+<p>Generally, this field is set to a value of <code>64</code>, but tracing programs will make it low numbers to attempt to get otherwise hidden routers to announce their presence via a Time Exceeded packet.</p>
+<p>For a router to show up with a <em>name</em> in the <code>mtr</code> output, it must both send a Time Exceeded packet back to your host, and have a reverse DNS record registered (thus, why I did that in the previous section).</p>
+<h3 id="aren-t-you-going-to-need-a-ton-of-hosts">Aren't you going to need a ton of hosts?</h3>
+<p>Generally, such a setup would involve daisy-chaining routers physically in your network, and setting each of their hostnames, so clients would physically have their packets routed between each of the routers, and get an ICMP response from each of them. This is a lot of work.</p>
+<p>Conveniently for my wallet, Linux machines provide something called <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/TUN/TAP">Tun/Tap Interfaces</a>. These virtual network interfaces allow programs to pretend to be one of many other computers on the network and act as if they were real hosts. When a program registers one of these interfaces with the kernel, it gets raw access to either the 2<sup>nd</sup> or 3<sup>rd</sup> OSI layer of the network stack in the form of a raw stream.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tun-tap-osilayers-diagram.png/400px-Tun-tap-osilayers-diagram.png" alt="Tun/Tap in the OSI stack" /></p>
+<p>I chose to register a Tun interface, and control things at the Internet Protocol level. This choice was mainly due to simplicity, as I really don't care about hardware addresses.</p>
+<h3 id="lying-about-routers">Lying about routers</h3>
+<p>At this point, someone can perform <code>mtr</code> on my Tun interface address, and they will get... <em>nothing</em>. </p>
+<p>But, importantly, my program sees their request (again, as raw bytes) and has complete control over the response (I could just send <code>DEADBEEFDEADBEEFDEADBEEF</code> if I wanted in place of a real IP packet).</p>
+<p>When an ICMPv6 Echo Request packet (the type that <code>mtr</code> sends for queries) comes in, I simply grab two things: the <em>source address</em> and the <em>ttl field</em>.</p>
+<p>Quick sidenote: the way I had configured my RDNS records, each line of lyrics works out to the next host in line. </p>
+<p><img src="/images/posts/rickroll-ipv6/ptr-records.png" alt="The PTR record list" /></p>
+<p>With my RDNS setup, and the fact <code>mtr</code> will increment the TTL field for every router it wants to find, the process for mapping a &quot;next router please&quot; request to a &quot;here is the next line of lyrics instead&quot; response is simply to use the TTL itself as the host part of the IP address I pretend to respond from.</p>
+<p>Thus, when <code>mtr</code> looks for the third router in line, it'll get the address <code>2a06:a005:d2b:c011::3</code> in response, and resolve it to <code>you.know.the.rules.and.so.do.i</code>.</p>
+<h2 id="profit">Profit!</h2>
+<p>Well, thats about it. I skipped over some implementation details, but if you'd like to check out the source code for this project, head over to its GitHub page:</p>
+<div class="zola-github-card" >
+    <a href="https://github.com/ewpratten&#x2F;imaginary-addrs">
+        <img src="https://opengraph.githubassets.com/1/ewpratten&#x2F;imaginary-addrs" alt="GitHub: ewpratten&#x2F;imaginary-addrs">
+    </a>
+</div>
+<br>
+<p>And for the end result:</p>
+<p><img src="/images/posts/rickroll-ipv6/result.png" alt="The result" /></p>
+<p>Try it yourself!</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">mtr -rwc</span><span> 1 rickroll.as204466.va3zza.com
+</span></code></pre>
+<p>For more AS204466 projects, view <a href="/as204466">my networking page</a>.</p>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>

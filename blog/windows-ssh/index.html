@@ -1,0 +1,223 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+    
+<link rel="canonical" href="https:&#x2F;&#x2F;ewpratten.com&#x2F;blog&#x2F;windows-ssh&#x2F;" />
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
+    
+<meta name="twitter:card" content="summary" />
+<meta name="og:site" content="ewpratten.com" />
+<meta name="og:site_name" content="Evan Pratten" />
+
+
+<meta name="og:image"
+    content="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" />
+
+
+<meta property="og:description" content="A tutorial for future me" />
+<meta property="description" content="A tutorial for future me" />
+<meta name="description" content="A tutorial for future me">
+
+
+<meta property="og:title" content="Configuring a native SSH server on Windows 10 - Evan Pratten" />
+
+
+
+<meta property="og:type" content="article" />
+
+
+
+
+
+    
+    
+
+    
+    <title>Configuring a native SSH server on Windows 10 | Evan Pratten</title>
+
+    
+    <link rel="stylesheet" href="/global.css">
+
+    
+    <link rel="stylesheet" href="/dist/github-markdown-css/github-markdown-light.css" lazyload>
+    <link rel="stylesheet" href="/styles/bootstrap.css" lazyload>
+    <link rel="stylesheet" href="/styles/typography.css">
+
+    
+    
+    
+
+    
+    
+</head>
+
+<body>
+
+    
+    <div class="page">
+
+        
+        
+
+
+    
+<link rel="stylesheet" href="/styles/components/heading-card.css">
+
+
+<div class="heading-card">
+    <div class="profile-photo-container">
+        <img src="https:&#x2F;&#x2F;branding.ewpratten.com&#x2F;pfp&#x2F;2022&#x2F;460x460.webp" alt="Profile Photo"  loading="lazy">
+    </div>
+    <div class="text-container">
+        <h1>Evan Pratten</h1>
+        <p>Software Developer</p>
+    </div>
+</div>
+
+
+        
+        <div class="container">
+            
+
+    
+<link rel="stylesheet" href="/styles/components/navbar.css">
+
+
+<div class="ewp-navbar">
+    <hr>
+    <ul class="navbar-items">
+        <li><a href="/">Home</a></li>
+        <li class="separator">|</li>
+        <li><a href="/timeline">Timeline</a></li>
+        <li class="separator">|</li>
+        <li class="dropdown-center">
+            <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+            </a>
+            <ul class="dropdown-menu">
+                
+                
+                <li><a class="dropdown-item" href="/photography">Photography</a></li>
+                <li><a class="dropdown-item" href="/contact">Contact</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+    <hr>
+</div>
+        </div>
+
+        
+        <article id="content" class="container markdown-body">
+            
+<h1 style="margin-bottom:0;padding-bottom:0;">Configuring a native SSH server on Windows 10</h1>
+<em>A tutorial for future me</em>
+<br><br>
+
+<p>Between work, school, and just helping various people out with things, I end up needing to quickly spin up SSH servers on windows machines <em>a lot</em>. Despite what you might think, this functionality is actually built right in to Windows 10, and fairly easy to enable.</p>
+<h2 id="enabling-the-openssh-service">Enabling the OpenSSH service</h2>
+<p>Just like many Linux machines, Windows uses the <a rel="noopener" target="_blank" href="https://www.openssh.com/">OpenSSH</a> server internally. This used to be controlled by a feature flag in the <em>&quot;Turn Windows features on or off&quot;</em> dialog, but this can now be done through <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/PowerShell">PowerShell</a> (as a local administrator).</p>
+<p>First, we need to add the OpenSSH capability to Windows, and enable the service:</p>
+<pre data-lang="powershell" style="background-color:#2b303b;color:#c0c5ce;" class="language-powershell "><code class="language-powershell" data-lang="powershell"><span style="color:#65737e;"># Add the capability
+</span><span style="color:#96b5b4;">Add-WindowsCapability </span><span>-Online -Name OpenSSH.Server~~~~</span><span style="color:#d08770;">0.0</span><span>.</span><span style="color:#d08770;">1.0
+</span><span style="color:#96b5b4;">Start-Service</span><span> sshd
+</span><span>
+</span><span style="color:#65737e;"># Start on boot
+</span><span style="color:#96b5b4;">Set-Service </span><span>-Name sshd -StartupType &#39;</span><span style="color:#a3be8c;">Automatic</span><span>&#39;
+</span></code></pre>
+<p>This should also automatically configure the firewall, but you can manually verify this and enable the rules yourself if needed:</p>
+<pre data-lang="powershell" style="background-color:#2b303b;color:#c0c5ce;" class="language-powershell "><code class="language-powershell" data-lang="powershell"><span style="color:#65737e;"># Check firewall
+</span><span style="color:#96b5b4;">Get-NetFirewallRule </span><span>-Name *ssh*
+</span><span>
+</span><span style="color:#65737e;"># If needed, add a firewall rule
+</span><span style="color:#96b5b4;">New-NetFirewallRule </span><span>-Name sshd -DisplayName &#39;</span><span style="color:#a3be8c;">OpenSSH Server (sshd)</span><span>&#39; -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort </span><span style="color:#d08770;">22
+</span></code></pre>
+<h2 id="setting-up-key-based-authentication">Setting up key-based authentication</h2>
+<p>While we are on the Windows side, it is a good idea to install Git and Git Bash from <a rel="noopener" target="_blank" href="https://git-scm.com/downloads">here</a>. Then, inside Git Bash, run the following to generate SSH keys on the Windows server:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># Generate
+</span><span style="color:#bf616a;">ssh-keygen.exe
+</span><span>
+</span><span style="color:#65737e;"># View the public key
+</span><span style="color:#bf616a;">cat ~</span><span>/.ssh/id_rsa.pub
+</span></code></pre>
+<p>On your client (for me, a Linux laptop), you must generate SSH keys, and copy the public key over to the Windows server.</p>
+<p>The path for the file in Windows depends on your user type. Regular users append their keys to <code>C:\Users\&lt;username&gt;\.ssh\authorized_keys</code> (remembering to change the <code>&lt;username&gt;</code>), whereas local admins must append their keys to <code>C:\ProgramData\ssh\administrators_authorized_keys</code>, then update the permissions on that file with:</p>
+<pre data-lang="powershell" style="background-color:#2b303b;color:#c0c5ce;" class="language-powershell "><code class="language-powershell" data-lang="powershell"><span style="color:#96b5b4;">icacls.exe </span><span>&quot;</span><span style="color:#a3be8c;">C:\ProgramData\ssh\administrators_authorized_keys</span><span>&quot; /inheritance:r /grant &quot;</span><span style="color:#a3be8c;">Administrators:F</span><span>&quot; /grant &quot;</span><span style="color:#a3be8c;">SYSTEM:F</span><span>&quot;
+</span></code></pre>
+<h2 id="configuring-ssh-clients-to-automatically-launch-bash">Configuring SSH clients to automatically launch bash</h2>
+<p>By default, incoming SSH connections spawn a <code>cmd.exe</code> shell. I much prefer being dropped straight into <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a>.</p>
+<p>To do this, you must modify your client's <code>~/.ssh/config</code> file to add a <code>RemoteCommand</code>. An example for one of my machines looks similar to:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Host hostname
+</span><span>	HostName hostname.example.com
+</span><span>	RequestTTY force
+</span><span>	User ewpratten
+</span><span>	RemoteCommand powershell &quot;&amp; &#39;C:\Program Files\Git\bin\sh.exe&#39; --login&quot;
+</span></code></pre>
+<p>The last line is the actual command to launch Bash (through PowerShell).</p>
+<h2 id="uninstalling-and-disabling-openssh">Uninstalling and disabling OpenSSH</h2>
+<p>This is a simple one-liner:</p>
+<pre data-lang="powershell" style="background-color:#2b303b;color:#c0c5ce;" class="language-powershell "><code class="language-powershell" data-lang="powershell"><span style="color:#96b5b4;">Remove-WindowsCapability </span><span>-Online -Name OpenSSH.Server~~~~</span><span style="color:#d08770;">0.0</span><span>.</span><span style="color:#d08770;">1.0
+</span></code></pre>
+
+
+        </article>
+
+        
+        
+
+    
+<link rel="stylesheet" href="/styles/components/footer.css">
+
+
+<div class="footer">
+    <br>
+    <span class="gray">-- EOF --</span>
+    <p>
+        Site design & content by: <a href="/contact">Evan Pratten</a><br>
+        Consider <a href="/donate" target="_blank">supporting my work</a> if you like what you see<br>
+    </p>
+</div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5912H4H03P"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5912H4H03P');
+</script>
+</body>
+
+</html>
