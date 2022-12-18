@@ -1,0 +1,9 @@
+name: Build Commit
+on:
+  push:
+    branches:
+      - "!master"
+
+jobs:
+  call-build:
+    uses: ./.github/workflows/common/build-site.yml
