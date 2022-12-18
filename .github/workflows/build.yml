@@ -38,8 +38,13 @@ jobs:
       - name: Delete dist gitignore
         run: sudo rm -f ./public/dist/.gitignore
 
-      - name: Publish site as artifact
-        uses: actions/upload-artifact@v2
+      # - name: Publish site as artifact
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: website-static-bundle
+      #     path: ./public
+
+      - name: Upload site as artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: website-static-bundle
           path: ./public
