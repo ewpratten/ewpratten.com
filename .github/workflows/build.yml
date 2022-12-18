@@ -1,6 +1,12 @@
 name: Build Website
 
 on:
+  push:
+    branches:
+      - "*"
+      # Master has its own set of build rules,
+      # and will eventually call this script on its own
+      - "!master"
   workflow_call:
 
 jobs:
@@ -31,3 +37,9 @@ jobs:
 
       - name: Delete dist gitignore
         run: sudo rm -f ./public/dist/.gitignore
+
+      - name: Publish site as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: website-static-bundle
+          path: ./public
