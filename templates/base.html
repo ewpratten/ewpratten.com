@@ -57,9 +57,19 @@
         </div>
 
         {# Actual content #}
+        {% if redirect_target %}
+        <div class="container" style="text-align:center;">
+            <h2>Redirection Notice</h2>
+            <p>
+                You are being redirected to another page.<br>
+                Click <a href="{{redirect_target}}">here</a> if this does not happen automatically.
+            </p>
+        </div>
+        {% else %}
         <article id="content" class="container markdown-body">
             {% block content %}{% endblock content %}
         </article>
+        {% endif %}
 
         {# Footer #}
         {% include "components/footer.html" %}
