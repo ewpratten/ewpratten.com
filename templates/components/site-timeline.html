@@ -57,6 +57,8 @@
         {# Additonal info #}
         {% if page.extra.excerpt %}
         <blockquote class="timeline-description">{{page.extra.excerpt}}</blockquote>
+        {% elif page.description %}
+        <blockquote class="timeline-description">{{page.description}}</blockquote>
         {% endif %}
         {# <hr> #}
     </li>
