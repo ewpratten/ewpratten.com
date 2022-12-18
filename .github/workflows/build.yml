@@ -2,6 +2,7 @@ name: Build Commit
 on:
   push:
     branches:
+      - "*"
       - "!master"
 
 jobs:
