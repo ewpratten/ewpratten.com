@@ -23,14 +23,6 @@
                 "--open"
             ],
             "problemMatcher": []
-        },
-        {
-            "label": "Compile assets",
-            "type": "shell",
-            "command": "make",
-            "args": [
-            ],
-            "problemMatcher": []
         }
     ]
 }
