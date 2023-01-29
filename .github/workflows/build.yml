@@ -24,6 +24,9 @@ jobs:
       # - name: Install dependencies
       #   run: npm install
 
+      - name: Allow all dirs
+        run: git config --global --add safe.directory '*'
+
       - name: Build
         uses: TonySpegel/zola-build-action@v1
         env:
