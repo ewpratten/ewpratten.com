@@ -1,59 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" contant="width=device-width, initial-scale=1.0">
 
-        <title>Evan Warren Pratten</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <style>
-            body { text-align: justify; }
-            .container { max-width: 800px; margin: auto; }
-        </style>
-    </head>
-    <body>
+    <title>Evan Warren Pratten</title>
 
-        <div style="margin-top:2em;margin-bottom:2em;">
-            <center>
-                <strong>
-                    
-                    <font size=6>E</font><font size=5 style="color:dimgray;">VAN</font>
-                    <font size=6>W</font><font size=5 style="color:dimgray;">ARREN</font>
-                    <font size=6>PRATTEN</font>
-                    <br>
-                    <font size=4>SOFTWARE DEVELOPER</font>
-                </strong>
-                <br>
-                <a href="https://github.com/ewpratten" rel="me">GitHub</a>
-               	&middot;
-                <a href="https://linkedin.com/in/ewpratten" rel="me">Linkedin</a>
-              	&middot;
-                <a href="mailto:evan@ewpratten.com" rel="me">Contact</a>
-            </center>
-        </div>
-        <hr>
+    <style>
+        :root {
+            --dim-text: rgb(67, 67, 67);
+            --menu-header-bg: #000;
+        }
 
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                By day I am a software developer, working on the tooling that powers children's TV productions at 
-                <a target="_blank" href="https://www.industrialbrothers.com">Industrial Brothers</a>. 
-                Perviously worked with 
-                <a target="_blank" href="https://raiderrobotics.org">Raider Robotics</a>, 
-                building high-performance robotic control system software.
-            </p>
-            <p>
-                By night I am <em>"indecisive about my hobbies"</em>. I bounce around between a large collection of interests, with the common focus of wanting to learn how things really work. I take deep dives into topics that I find interesting, and occasionally write about them on my blog.
-            </p>
+        @media screen and (min-width: 800px) {
+            body {
+                text-align: justify;
+            }
+        }
 
-            <h2>Whats in the Works</h2>
-            <p>I am currently working on a few projects, including:</p>
-            <ul>
-                <li>Maintaining <a href="https://peeringdb.com/asn/54041">AS54041</a>, a small computer network</li>
-            </ul>
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
 
-        </div>
+<body>
 
+    <div style="margin-top:2em;margin-bottom:2em;">
+        <center>
+            <strong>
+                <h1 style="text-transform: uppercase; margin: 0;">
+                    E<span style="color: var(--dim-text); font-size: 0.8em;">van</span>
+                    W<span style="color: var(--dim-text); font-size: 0.8em;">arren</span>
+                    Pratten
+                </h1>
+                <font size=4 style="color:var(--dim-text);">SOFTWARE DEVELOPER</font>
+            </strong>
+            <br>
+            <a href="https://github.com/ewpratten" rel="me">GitHub</a>
+            &middot;
+            <a href="https://linkedin.com/in/ewpratten" rel="me">Linkedin</a>
+            &middot;
+            <a href="mailto:evan@ewpratten.com" rel="me">Contact</a>
+        </center>
+    </div>
+    <hr>
 
-    </body>
+    <article class="container">
+
+        <h2>About Me</h2>
+        <p>
+            By day I am a software developer, working on the tooling that powers children's TV productions at
+            <a target="_blank" href="https://www.industrialbrothers.com">Industrial Brothers</a>.
+            Perviously worked with
+            <a target="_blank" href="https://raiderrobotics.org">Raider Robotics</a>,
+            building high-performance robotic control system software.
+        </p>
+        <p>
+            By night I am <em>"indecisive about my hobbies"</em>. I bounce around between a large collection of
+            interests, with the common focus of wanting to learn how things <em>really</em> work. I take deep dives
+            into
+            topics
+            that I find interesting, and occasionally write about them on my blog.
+        </p>
+
+        <h2>Whats in the Works</h2>
+        <p>I am currently working on a few projects, including:</p>
+        <ul>
+            <li>Maintaining <a href="https://peeringdb.com/asn/54041">AS54041</a>, a small computer network</li>
+            <li>Publishing music under my own name on Spotify and Apple Music</li>
+        </ul>
+
+        <p>I am also working on an Internet-Draft:</p>
+        <ul>
+            <li>
+                <a target="_blank" href="https://datatracker.ietf.org/doc/html/draft-evan-amateur-radio-ipv6">
+                    draft-evan-amateur-radio-ipv6</a>
+                - Globally Unique IPv6 Addressing for Amateur Radio
+            </li>
+        </ul>
+
+        <h2></h2>
+    </article>
+
+    <hr>
+    <p style="text-align:center;">
+        Copyright &copy; 2017 - 2023 <strong>Evan Warren Pratten</strong>
+    </p>
+
+</body>
+
 </html>
