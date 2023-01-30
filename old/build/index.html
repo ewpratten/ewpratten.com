@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/jpg" href="https://branding.ewpratten.com/pfp/2022/460x460.webp" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://ewpratten.com/rss.xml">
-
     <title>Evan Warren Pratten</title>
-
-    <link rel="stylesheet" href="/main.css">
+    <style>
+        :root {
+            --dim-text: rgb(67, 67, 67);
+            --menu-header-bg: #000;
+        }
+        @media screen and (min-width: 800px) {
+            body {
+                text-align: justify;
+            }
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h2 {
+            margin-bottom: 0;
+        }
+    </style>
 </head>
-
 <body>
-
-    <div style="margin-top:2em;margin-bottom:2em;">
-        <center>
-            <strong>
-                <h1 style="text-transform: uppercase; margin: 0; font-size:2.5em;">
-                    E<span style="color: var(--dim-text); font-size: 0.8em;">van</span>
-                    W<span style="color: var(--dim-text); font-size: 0.8em;">arren</span>
-                    Pratten
-                </h1>
-                <font size=3 style="color:var(--dim-text);">SOFTWARE DEVELOPER &middot; NETWORK ENGINEER</font>
-            </strong>
-            <br>
-            <a target="_blank" href="https://github.com/ewpratten" rel="me">GitHub</a>
-            &middot;
-            <a target="_blank" href="https://linkedin.com/in/ewpratten" rel="me">Linkedin</a>
-            &middot;
-            <a target="_blank" href="mailto:evan@ewpratten.com" rel="me">Contact</a>
-        </center>
-    </div>
-    <hr>
-
+<div style="margin-top:2em;margin-bottom:2em;">
+    <center>
+        <strong>
+            <h1 style="text-transform: uppercase; margin: 0; font-size:2.5em;">
+                E<span style="color: var(--dim-text); font-size: 0.8em;">van</span>
+                W<span style="color: var(--dim-text); font-size: 0.8em;">arren</span>
+                Pratten
+            </h1>
+            <font size=3 style="color:var(--dim-text);">SOFTWARE DEVELOPER &middot; NETWORK ENGINEER</font>
+        </strong>
+        <br>
+        <a href="https://github.com/ewpratten" rel="me">GitHub</a>
+        &middot;
+        <a href="https://linkedin.com/in/ewpratten" rel="me">Linkedin</a>
+        &middot;
+        <a href="mailto:evan@ewpratten.com" rel="me">Contact</a>
+    </center>
+</div>
+<hr>
     <article class="container">
-
         <h2>About Me</h2>
         <p style="margin-top:0;">
             By day I am a software developer, working on the tooling that powers children's TV productions at
@@ -51,7 +59,6 @@
             topics
             that I find interesting, and occasionally write about them on <a href="/blog">my blog</a>.
         </p>
-
         <h2>Whats in the Works</h2>
         <p style="margin-top:0;">I am currently working on a few projects, including:</p>
         <ul>
@@ -69,7 +76,6 @@
                 <a target="_blank" href="https://instagram.com/ewpratten" rel="me">photos and artwork</a>
             </li>
         </ul>
-
         <p>I am also working on an Internet-Draft:</p>
         <ul>
             <li>
@@ -78,15 +84,11 @@
                 - Globally Unique IPv6 Addressing for Amateur Radio
             </li>
         </ul>
-
     </article>
-
     <br>
     <hr>
     <p style="text-align:center;">
         Copyright &copy; 2017 - 2023 <strong>Evan Warren Pratten</strong>
     </p>
-
 </body>
-
 </html>
