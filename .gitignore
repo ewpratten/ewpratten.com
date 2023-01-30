@@ -12,3 +12,4 @@ Cargo.lock
 /public/
 
 /node_modules/
+/build/
