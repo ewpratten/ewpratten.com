@@ -3,12 +3,11 @@
 <link rel="stylesheet" href="/styles/components/footer.css">
 {% endblock component_styles %}
 
-<div class="footer">
+<div class="footer container">
     <br>
     <hr>
-    <p>
-        <span id="copyright">Copyright &copy; Evan Warren Pratten </span>
-        <br>
-        <a href="mailto:{{config.extra.email}}">{{config.extra.email}}</a>
+    <p id="copyright">
+        Copyright &copy; 2017 - {{ now() | date(format="%Y") }}
+        <strong>Evan Warren Pratten</strong>
     </p>
 </div>
