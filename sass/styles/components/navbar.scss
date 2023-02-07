@@ -1,11 +1,7 @@
 .ewp-navbar {
   margin-top: 1em;
   margin-bottom: 1em;
-
-  hr {
-    margin: 0;
-    border-top: 2px solid;
-  }
+  text-align: center;
 
   .navbar-items {
     width: max-content;
@@ -15,16 +11,12 @@
     margin-left: auto;
     margin-right: auto;
 
-    & > li {
-      display: inline-block;
+    // & > li {
+    //   display: inline-block;
     
-      .dropdown-menu {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      }
-    }
-
-    .separator {
-      content: "|";
-    }
+    //   .dropdown-menu {
+    //     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    //   }
+    // }
   }
 }
