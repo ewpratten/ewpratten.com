@@ -1,6 +1,6 @@
 .ewp-navbar {
   margin-top: 1em;
-  margin-bottom: 1em;
+  // margin-bottom: 1em;
   text-align: center;
 
   .navbar-items {
@@ -13,10 +13,21 @@
 
     // & > li {
     //   display: inline-block;
-    
+
     //   .dropdown-menu {
     //     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     //   }
     // }
   }
+}
+
+.announcement {
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(239, 239, 239);
+  margin-top: 0;
+  padding: 0.25em;
+  border: 2px dashed grey;
+  border-top: none;
+  color:dimgray;
 }
