@@ -5,6 +5,7 @@
 {% set is_article = false %}
 {% set feature_flags = [] %}
 {% set redirect_target = "" %}
+{% set announcement = "" %}
 {% endblock variable_wormhole %}
 
 <!DOCTYPE html>
@@ -58,6 +59,10 @@
         {# Navbar #}
         <div class="container">
             {% include "components/navbar.html" %}
+
+            {% if announcement %}
+             <p class="announcement">{{announcement | safe}}</p>
+            {% endif %}
         </div>
 
         {# Actual content #}
