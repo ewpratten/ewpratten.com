@@ -1,20 +1,20 @@
-@import "fonts";
+// @import "fonts";
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Urbanist", sans-serif;
-  font-weight: bolder;
-}
-p,
-li,
-span {
-  font-family: "Rubik", sans-serif;
-  font-weight: normal;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: "Urbanist", sans-serif;
+//   font-weight: bolder;
+// }
+// p,
+// li,
+// span {
+//   font-family: "Rubik", sans-serif;
+//   font-weight: normal;
+// }
 a {
   text-decoration: none;
   color: blue !important;
@@ -30,6 +30,8 @@ a {
 
 body {
   margin: 0;
+  font-family: serif;
+  text-align: justify;
 }
 
 .gray {
@@ -49,6 +51,10 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.markdown-body{
+  font-family: serif;
 }
 
 .monospace {

@@ -9,7 +9,7 @@ By day I am a <strong>Pipeline Software Developer</strong> at Toronto-based anim
 where I build backend tooling that helps streamline the process from concept to final render
 for our productions. The most recent of which: *Daniel Spellbound* is now streaming on Netflix.
 
-By night I am *"indecisive about my hobbies"*. I bounce around between a large collection of interests, with the common focus of wanting to learn how things *really work*. I take deep dives into topics that I find interesting, and occasionally write about them on this site.
+By night I am *"indecisive about my hobbies"*. I bounce around between a large collection of interests, with the common focus of wanting to learn how things *really work*. I take deep dives into topics that I find interesting, and occasionally write about them on [my blog](/blog).
 
 ## Whats in the works
 
