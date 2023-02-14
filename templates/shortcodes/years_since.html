@@ -1,0 +1,4 @@
+{% set year_start = year | int %}
+{% set year_end = now() | date(format="%Y") | int %}
+
+{{ year_end - year_start }}
