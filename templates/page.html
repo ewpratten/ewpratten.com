@@ -43,8 +43,11 @@
 {% endblock page_start %}
 {% block content %}
 <h1 style="margin-bottom:0;padding-bottom:0;">{{page.title}}</h1>
+{% if page.description %}
 <em>{{page.description}}</em>
-<br><br>
+<br>
+{% endif %}
+<br>
 
 {{ page.content | safe }}
 {% endblock content %}
