@@ -13,7 +13,7 @@ I have been an amateur radio operator since 2020, and an electronics enthusiast 
 I generally operate:
 
 - 7.030 MHz CW
-- 2M & 4M FM
+- 2M & 70CM FM
 - APRS
 
 ## VA3UJF
