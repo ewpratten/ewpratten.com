@@ -27,6 +27,7 @@ Want to join me and hiding AI posts? Just pop this script into Tapermonkey or Gr
 // @author       Evan Pratten <evan@ewpratten.com>
 // @match        https://news.ycombinator.com/news*
 // @match        https://news.ycombinator.com/newest
+// @match        https://news.ycombinator.com/?p=*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=ycombinator.com
 // @grant        none
 // ==/UserScript==
