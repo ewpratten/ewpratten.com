@@ -6,6 +6,7 @@
         "configurability",
         "grayscale",
         "inpainting",
-        "rotoscope"
+        "rotoscope",
+        "Tapermonkey"
     ]
 }
