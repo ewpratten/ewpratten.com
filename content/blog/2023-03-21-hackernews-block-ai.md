@@ -4,7 +4,7 @@ title: "A script that hides AI topics from Hacker News"
 description: "Sometimes I want to read about something different"
 date: 2023-03-21
 tags: random
-draft: true
+draft: false
 extra:
   auto_center_images: true
   excerpt: "This post shows off a userscript I built that hides AI topics from Hacker News."
