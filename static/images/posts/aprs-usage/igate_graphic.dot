@@ -1,0 +1,25 @@
+digraph G {
+    rankdir = "LR";
+    
+    subgraph cluster_region1 {
+        label = "Region 1";
+        user_1 [label = "User 1";];
+        igate_1 [label = "IGate";];
+    }
+    internet [label = "Internet";];
+    subgraph cluster_region2 {
+        label = "Region 2";
+        igate_2 [label = "IGate";];
+    }
+    subgraph cluster_region3 {
+        label = "Region 3";
+        digi [label = "Digipeater";];
+        user_2 [label = "User 2";];
+    }
+    
+    user_1 -> igate_1 [label = "RF";];
+    igate_1 -> internet [label = "WAN";];
+    internet -> igate_2 [label = "WAN";];
+    igate_2 -> digi [label = "RF";];
+    digi -> user_2 [label = "RF";];
+}
