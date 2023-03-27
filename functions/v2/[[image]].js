@@ -16,7 +16,7 @@ export function onRequest(context) {
 
     // The first segment of the path is probably the user
     var path_split = url.pathname.split("/");
-    return Response.redirect(url.pathname, 302);
+    return new Response(path_split);
 
     // The image name is the part between `/vx/` and the first action token
     var image_name = "";
