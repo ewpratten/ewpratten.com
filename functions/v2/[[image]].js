@@ -15,6 +15,13 @@ export function onRequest(context) {
     // Parse the path out of the url
     const url = new URL(context.request.url);
 
+    // Replace the domain and port with the ghcr.io domain
+    url.hostname = "ghcr.io";
+    url.port = "";
+
+    // Redirect to the new url
+    return Response.redirect(url.toString(), 302);
+
     // // The first segment of the path is probably the user
     // var path_split = url.pathname.split("/");
 
@@ -44,16 +51,16 @@ export function onRequest(context) {
     //     image_name = `${DEFAULT_USER}/${image_name}`;
     // }
 
-    var has_allowed_user = false;
-    for (var user of ALLOWED_USERS) {
-        if (url.pathname.startsWith(`/v2/${user}/`)) {
-            has_allowed_user = true;
-            break;
-        }
-    }
-    if (!has_allowed_user) {
-        return new Response(`User does not exist`, { status: 404 });
-    }
+    // var has_allowed_user = false;
+    // for (var user of ALLOWED_USERS) {
+    //     if (url.pathname.startsWith(`/v2/${user}/`)) {
+    //         has_allowed_user = true;
+    //         break;
+    //     }
+    // }
+    // if (!has_allowed_user) {
+    //     return new Response(`User does not exist`, { status: 404 });
+    // }
 
-    return Response.redirect(`https://ghcr.io/${url.pathname}`, 302);
+    // return Response.redirect(`https://ghcr.io/${url.pathname}`, 302);
 }
