@@ -2,7 +2,8 @@
 // Configs for what to do with requests
 const ALLOWED_USERS = [
     "ewpratten",
-    "bgptools"
+    "bgptools",
+    "github"
 ];
 const DEFAULT_USER = "ewpratten";
 
