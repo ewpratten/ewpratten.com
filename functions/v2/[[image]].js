@@ -1,14 +1,13 @@
 
 // Configs for what to do with requests
-const ALLOWED_USERS = [
-    "ewpratten",
+const DEFAULT_USER = "ewpratten";
+const ALLOWED_EXTRA_USERS = [
     "bgptools",
     "github"
 ];
-const DEFAULT_USER = "ewpratten";
 
 // Info needed in order to partially parse OCIDS API endpoints.
-const POSSIBLE_ACTION_TOKENS = ["blobs", "manifests", "tags", "referrers"];
+// const POSSIBLE_ACTION_TOKENS = ["blobs", "manifests", "tags", "referrers"];
 
 export function onRequest(context) {
 
@@ -18,6 +17,21 @@ export function onRequest(context) {
     // Replace the domain and port with the ghcr.io domain
     url.hostname = "ghcr.io";
     url.port = "";
+
+    // If the path is just /v2 then redirect upstream
+    if (url.pathname == "/v2" || url.pathname == "/v2/") {
+        return Response.redirect("https://ghcr.io/v2/", 302);
+    }
+
+    // If the path starts with an allowed user, redirect to the new url
+    for (var user of ALLOWED_EXTRA_USERS) {
+        if (url.pathname.startsWith(`/v2/${user}/`)) {
+            return Response.redirect(url.toString(), 302);
+        }
+    }
+
+    // Inject the default user into the path after /v2/
+    url.pathname = url.pathname.replace("/v2/", `/v2/${DEFAULT_USER}/`);
 
     // Redirect to the new url
     return Response.redirect(url.toString(), 302);
