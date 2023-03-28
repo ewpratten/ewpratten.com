@@ -6,7 +6,7 @@ const DEFAULT_USER = "ewpratten";
 const ALLOWED_EXTRA_USERS = [
     
 ];
-const TARGET_URL = new URL("https://index.docker.io/v2/");
+const TARGET_URL = new URL("https://registry.hub.docker.com/v2/");
 
 export function onRequest(context) {
 
