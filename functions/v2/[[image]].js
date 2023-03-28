@@ -6,6 +6,7 @@ const DEFAULT_USER = "ewpratten";
 const ALLOWED_EXTRA_USERS = [
     
 ];
+const TARGET_URL = new URL("https://index.docker.io/v2/");
 
 export function onRequest(context) {
 
@@ -13,12 +14,12 @@ export function onRequest(context) {
     const url = new URL(context.request.url);
 
     // Replace the domain and port with the ghcr.io domain
-    url.hostname = "ghcr.io";
+    url.hostname = TARGET_URL.hostname;
     url.port = "";
 
     // If the path is just /v2 then redirect upstream
     if (url.pathname == "/v2" || url.pathname == "/v2/") {
-        return Response.redirect("https://ghcr.io/v2/", 302);
+        return Response.redirect(TARGET_URL.toString(), 302);
     }
 
     // If the path starts with an allowed user, redirect to the new url
