@@ -25,6 +25,7 @@ Want to join me and hiding AI posts? Just pop this script into Tapermonkey or Gr
 // @version      0.1
 // @description  Hides AI topics from HackerNews
 // @author       Evan Pratten <evan@ewpratten.com>
+// @match        https://news.ycombinator.com/
 // @match        https://news.ycombinator.com/news*
 // @match        https://news.ycombinator.com/newest
 // @match        https://news.ycombinator.com/?p=*
