@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
+   <rect width="330" height="60" style="fill:rgb(255,255,255);" />
+   <text x="0" y="40" fill="rgb(0,0,0)" font-size="50px">
+        ewpratten.com
+    </text>
+   
+   <script type="text/javascript">
+   window.location.href = "https://ewpratten.com";
+   </script>
+</svg>
