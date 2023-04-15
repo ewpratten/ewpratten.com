@@ -2,18 +2,35 @@
 title: My Projects
 ---
 
+# My Projects
+
+Most of my free time is spent working on various side projects. This is generally how I learn new things, and I quite enjoy the process of *making stuff*.
+
+## Categories
+
+Some of my projects fall into common categories. The ones that do, are listed here:
+
+<!-- - [Minecraft](/projects/minecraft)
+- [Discord](/projects/discord) -->
+- **Robotics**
+  - [**Lib5K**: A robotic control library written in Java for use in the *FIRST Robotics Competition*](https://github.com/frc5024/lib5k)
+  - [**TestBench**: A hardware testing utility built for *Raider Robotics*](https://github.com/frc5024/testbench)
+  <!-- - I wrote the [control software](https://github.com/frc5024/Snabb) for one of the *RoboRaptors'* robots -->
+
+## Chronological
+
 The following is a list of Open-Source projects I have worked on, along with their date of publication.
 
 **Disclaimer:** Unless otherwise noted, none of these projects come with any warranty or any
 guarantee of support. I try my best to respond to issues and questions in my personal time.
 
 
-## 2023
+### 2023
 
 - 2023-02-06: [Prometheus exporter for Ubisoft server statuses](https://github.com/ewpratten/ubisoft_status_exporter)
 - 2023-01-23: [A protective insert for my TG4x](https://github.com/ewpratten/tg4x-casing)
 
-## 2022
+### 2022
 
 - 2022-10-14: [A10U8R: Signal Attenuator for VCV Rack](https://github.com/ewpratten/A10U8R)
 - 2022-05-11: [The @entry decorator: Cleanly mark Python script entrypoints](https://github.com/ewpratten/atentry)
@@ -21,7 +38,7 @@ guarantee of support. I try my best to respond to issues and questions in my per
 - 2022-04-12: [Kobo e-reader interface library for Rust](https://github.com/ewpratten/kobo-rs)
 - 2022-01-23: [Linux command-line tool for configuring digitizer tablets](https://github.com/ewpratten/tabset)
 
-## 2021
+### 2021
 
 - 2021-12-17: [NetBrowse: an avahi-browse GUI](https://github.com/ewpratten/netbrowse)
 - 2021-10-04: [My Ludum Dare 49 entry: <strong>[data::loss]</strong>](https://github.com/ewpratten/ludum-dare-49)
@@ -53,7 +70,7 @@ guarantee of support. I try my best to respond to issues and questions in my per
 - 2021-01-25: [Reverse Beacon Network client for Python](https://github.com/ewpratten/pyRBN)
 - 2021-01-19: [FrostBucket](https://github.com/ewpratten/FrostBucket)
 
-## 2020
+### 2020
 
 - 2020-12-25: [Mandelbrot Set Viewer](https://github.com/ewpratten/mandelbrot)
 - 2020-12-07: [A Minecraft chat client](https://github.com/ewpratten/mchat)
@@ -75,7 +92,7 @@ guarantee of support. I try my best to respond to issues and questions in my per
 - 2020-03-11: [Scripts I use to quickly build classifiers for people's faces](https://github.com/ewpratten/easy-faces)
 - 2020-02-29: [Raider Robotics Inventory Management System](https://github.com/frc5024/parts)
 
-## 2019
+### 2019
 
 - 2019-12-28: [A toy raytracer](https://github.com/ewpratten/Rayzor)
 - 2019-08-27: [A tool for exporting your posts from devRant for offline storage](https://github.com/ewpratten/devrant-dl)
@@ -83,7 +100,7 @@ guarantee of support. I try my best to respond to issues and questions in my per
 - 2019-05-28: [A purposefully bad flappy bird clone](https://github.com/ewpratten/FlippyCat)
 - 2019-03-08: [A kernel / os for the atmega328p](https://github.com/ewpratten/os328)
 
-## 2018
+### 2018
 
 - 2018-11-16 [The Open Driver Waypoint Coordinator](https://github.com/ewpratten/ODWC)
 - 2018-11-04 [The c / c++ compiler that never compiles without errors](https://github.com/ewpratten/eco)
