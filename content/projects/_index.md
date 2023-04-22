@@ -4,14 +4,17 @@ title: My Projects
 
 # My Projects
 
-Most of my free time is spent working on various side projects. This is generally how I learn new things, and I quite enjoy the process of *making stuff*.
+Most of my free time is spent working on various side projects. This is generally how I learn new things and I quite enjoy the process of *making stuff*.
 
 ## Categories
 
-Some of my projects fall into common categories. The ones that do, are listed here:
+Some of my projects fall into common categories. The ones that do are listed here:
 
 <!-- - [Minecraft](/projects/minecraft)
 - [Discord](/projects/discord) -->
+- **Minecraft**
+  - [**FrostBucket**: A plugin that allows *Frost Walker* to be applied to buckets](https://modrinth.com/plugin/frostbucket)
+  - [**Blood Cod Plugins**: A custom plugin pack to extend the base game with lore](https://modrinth.com/plugin/blood-cod-plugins)
 - **Robotics**
   - [**Lib5K**: A robotic control library written in Java for use in the *FIRST Robotics Competition*](https://github.com/frc5024/lib5k)
   - [**TestBench**: A hardware testing utility built for *Raider Robotics*](https://github.com/frc5024/testbench)
