@@ -14,6 +14,7 @@ Some of my projects fall into common categories. The ones that do, are listed he
 - [Discord](/projects/discord) -->
 - **Robotics**
   - [**Lib5K**: A robotic control library written in Java for use in the *FIRST Robotics Competition*](https://github.com/frc5024/lib5k)
+  - [**Darth Raider**: A competitive robot built at *Raider Robotics* in 2020](/projects/darth-raider)
   - [**TestBench**: A hardware testing utility built for *Raider Robotics*](https://github.com/frc5024/testbench)
   <!-- - I wrote the [control software](https://github.com/frc5024/Snabb) for one of the *RoboRaptors'* robots -->
 
