@@ -15,6 +15,10 @@ Since 2022 I have been publishing personal music projects of all kinds under my 
 
 <ul>
     <li>
+        Soundtrack: <strong>Raindrops</strong>
+        (<a href="https://www.youtube.com/watch?v=RqzLxaQ3abM" target="_blank"><i class="fa-brands fa-youtube"></i></a>)
+    </li>
+    <li>
         Single: <strong>Channels</strong>
         (<a href="https://open.spotify.com/album/25xzDOHs8fN5WQUSnww7kj" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
         <a href="https://music.apple.com/us/album/channels-single/1656473075" target="_blank"><i class="fa-brands fa-apple"></i></a>)

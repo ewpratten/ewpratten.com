@@ -10,15 +10,12 @@ Most of my free time is spent working on various side projects. This is generall
 
 Some of my projects fall into common categories. The ones that do are listed here:
 
-<!-- - [Minecraft](/projects/minecraft)
-- [Discord](/projects/discord) -->
 - **Minecraft**
-  - [**FrostBucket**: A plugin that allows *Frost Walker* to be applied to buckets](https://modrinth.com/plugin/frostbucket)
-  - [**Blood Cod Plugins**: A custom plugin pack to extend the base game with lore](https://modrinth.com/plugin/blood-cod-plugins)
+  - [**Client Ping**: Client-side point-of-interest marking mod](https://ewp.fyi/client-ping)
 - **Robotics**
   - [**Lib5K**: A robotic control library written in Java for use in the *FIRST Robotics Competition*](https://github.com/frc5024/lib5k)
+  - [**Darth Raider**: A competitive robot built at *Raider Robotics* in 2020](/projects/darth-raider)
   - [**TestBench**: A hardware testing utility built for *Raider Robotics*](https://github.com/frc5024/testbench)
-  <!-- - I wrote the [control software](https://github.com/frc5024/Snabb) for one of the *RoboRaptors'* robots -->
 
 ## Chronological
 
@@ -30,6 +27,7 @@ guarantee of support. I try my best to respond to issues and questions in my per
 
 ### 2023
 
+- 2023-04-26: [Client Ping](https://ewp.fyi/client-ping)
 - 2023-02-06: [Prometheus exporter for Ubisoft server statuses](https://github.com/ewpratten/ubisoft_status_exporter)
 - 2023-01-23: [A protective insert for my TG4x](https://github.com/ewpratten/tg4x-casing)
 

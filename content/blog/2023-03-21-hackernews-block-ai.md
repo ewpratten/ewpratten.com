@@ -8,6 +8,9 @@ draft: false
 extra:
   auto_center_images: true
   excerpt: "This post shows off a userscript I built that hides AI topics from Hacker News."
+  discuss:
+    reddit: https://www.reddit.com/r/ewpratten/comments/12xzw5x/a_script_that_hides_ai_topics_from_hacker_news/
+    hacker_news: https://news.ycombinator.com/item?id=35252186
 ---
 
 Ok. AI-backed tools are cool, but sometimes I just want to read about something else on the [Hacker News](https://news.ycombinator.com/news) website.
