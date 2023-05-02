@@ -8,9 +8,9 @@ draft: false
 extra:
   auto_center_images: true
   excerpt: "Some photos and notes on how I swapped the middle button on my mouse"
-#   discuss:
-#     reddit: https://www.reddit.com/r/ewpratten/comments/12xzw5x/a_script_that_hides_ai_topics_from_hacker_news/
-#     hacker_news: https://news.ycombinator.com/item?id=35252186
+  discuss:
+    reddit: https://www.reddit.com/r/ewpratten/comments/1356u1t/i_performed_a_button_swap_on_my_mouse/
+    hacker_news: https://news.ycombinator.com/item?id=35781662
 ---
 
 Recently, my mouse (a [Logitech M310](https://www.logitech.com/en-us/products/mice/m310-wireless-mouse.910-001917.html)) has been starting to give out on me, which I suppose is to be expected considering how much use my peripherals get, but is nevertheless annoying, considering that the failing component was the middle button, which I use a lot.
