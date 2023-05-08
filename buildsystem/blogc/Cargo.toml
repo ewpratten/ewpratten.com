@@ -1,0 +1,12 @@
+[package]
+name = "blogc"
+publish = false
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+common = { version = "*", path = "../common" }
+clap = { version = "4.2.7", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde-frontmatter = "0.1.0"
+comrak = "0.18"

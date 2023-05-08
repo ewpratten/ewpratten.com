@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  "The language hunt"
+description: ""
 date:   2019-04-30
 tags: frc
 alises: [https://retrylife.ca/blog/2019/04/30/frc-languages]
