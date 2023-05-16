@@ -25,6 +25,7 @@
 {# Pass data through to the base template #}
 {% block variable_wormhole %}
 {{ super() }}
+{% set page_path = "/" %}
 {% set title = section.title %}
 {% set description = config.description %}
 {% if section.extra.uses %}

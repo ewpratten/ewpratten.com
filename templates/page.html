@@ -23,6 +23,7 @@
 {# Pass data through to the base template #}
 {% block variable_wormhole %}
 {{ super() }}
+{% set page_path = page.path %}
 {% set title = page.title %}
 {% set description = page.description %}
 {% set is_article = true %}
