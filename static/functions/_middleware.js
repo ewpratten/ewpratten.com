@@ -3,9 +3,6 @@ async function goat_counter_analytics(context) {
     // Parse the request URL
     let url = new URL(context.request.url);
 
-    // Create a fingerprint for the user
-
-
     // Build the payload to send to GoatCounter
     var payload = {
         hits: [
@@ -26,6 +23,7 @@ async function goat_counter_analytics(context) {
     // For debugging, allow the requester to expose the body through a response header
     if (url.searchParams.get('goat-counter-debug') == 'true') {
         response.headers.set('X-GoatCounter-Payload', JSON.stringify(payload));
+        response.headers.set('X-GoatCounter-Api-Token', context.env.GOAT_COUNTER_API_TOKEN);
     }
 
     // Return the response
