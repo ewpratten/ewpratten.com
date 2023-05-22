@@ -12,3 +12,5 @@ Cargo.lock
 /public/
 
 /node_modules/
+
+.dev.vars
