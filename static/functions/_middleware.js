@@ -26,7 +26,7 @@ async function goat_counter_analytics(context) {
     };
 
     // Count the goat
-    await fetch(`https://${context.env.GOAT_COUNTER_SITE_CODE}.goatcounter.com/api/v0/count`, {
+    fetch(`https://${context.env.GOAT_COUNTER_SITE_CODE}.goatcounter.com/api/v0/count`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
