@@ -27,6 +27,9 @@ async function goat_counter_analytics(context) {
     if (url.searchParams.get('goat-counter-debug') == 'true') {
         response.headers.set('X-GoatCounter-Payload', JSON.stringify(payload));
     }
+
+    // Return the response
+    return response;
 }
 
 // Chaining
