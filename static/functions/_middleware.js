@@ -20,13 +20,13 @@ async function goat_counter_analytics(context) {
         ]
     };
 
+    // Execute the rest of the request chain
+    let response = await context.next();
+
     // For debugging, allow the requester to expose the body through a response header
     if (url.searchParams.get('goat-counter-debug') == 'true') {
-        context.response.headers.set('X-GoatCounter-Payload', JSON.stringify(payload));
+        response.headers.set('X-GoatCounter-Payload', JSON.stringify(payload));
     }
-   
-    // Continue with the request
-    return await context.next();
 }
 
 // Chaining
