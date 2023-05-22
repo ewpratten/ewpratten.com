@@ -1,6 +1,5 @@
 async function goat_counter_analytics(context) {
 
-
     // We require some env vars to be set. If they are not, fail the request
     if (!context.env.GOAT_COUNTER_API_KEY) {
         return new Response('$GOAT_COUNTER_API_KEY is not set', { status: 500, headers: { 'Content-Type': 'text/plain' } });
@@ -27,7 +26,14 @@ async function goat_counter_analytics(context) {
     };
 
     // Count the goat
-    // await fetch()
+    await fetch(`https://${context.env.GOAT_COUNTER_SITE_CODE}.goatcounter.com/api/v0/count`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + context.env.GOAT_COUNTER_API_KEY,
+        },
+        body: JSON.stringify(payload),
+    });
 
     // Execute the rest of the request chain
     let response = await context.next();
@@ -35,7 +41,6 @@ async function goat_counter_analytics(context) {
     // For debugging, allow the requester to expose the body through a response header
     if (url.searchParams.get('goat-counter-debug') == 'true') {
         response.headers.set('X-GoatCounter-Payload', JSON.stringify(payload));
-        response.headers.set('X-GoatCounter-Api-Token', context.env.GOAT_COUNTER_API_KEY);
     }
 
     // Return the response
