@@ -5,10 +5,10 @@ async function redirect_secondary_domains(context) {
     // If the request is for any of the secondary domains, redirect to the primary domain
     var secondary_domains = ['test.ewp.fyi', 'evan.pratten.ca', 'evan.warren.pratten.ca'];
     if (secondary_domains.includes(url.hostname)) {
-        url.hostname = 'ewpratten.com';
         url.searchParams.set("utm_source", url.hostname);
         url.searchParams.set("utm_medium", "redirect");
         url.searchParams.set("utm_campaign", "secondary_domains");
+        url.hostname = 'ewpratten.com';
         return Response.redirect(url, 302);
     }
 
