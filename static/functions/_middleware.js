@@ -1,5 +1,19 @@
-async function goat_counter_analytics(context) {
+async function redirect_secondary_domains(context) {
+    // Parse the request URL
+    let url = new URL(context.request.url);
 
+    // If the request is for any of the secondary domains, redirect to the primary domain
+    var secondary_domains = ['test.ewp.fyi', 'evan.pratten.ca', 'evan.warren.pratten.ca'];
+    if (secondary_domains.includes(url.hostname)) {
+        url.hostname = 'ewpratten.com';
+        return Response.redirect(url, 302);
+    }
+
+    // Otherwise, continue the request chain
+    return context.next();
+}
+
+async function goat_counter_analytics(context) {
     // We require some env vars to be set. If they are not, fail the request
     if (!context.env.GOAT_COUNTER_API_KEY) {
         return new Response('$GOAT_COUNTER_API_KEY is not set', { status: 500, headers: { 'Content-Type': 'text/plain' } });
@@ -48,4 +62,4 @@ async function goat_counter_analytics(context) {
 }
 
 // Chaining
-export const onRequest = [goat_counter_analytics];
+export const onRequest = [redirect_secondary_domains, goat_counter_analytics];
