@@ -38,6 +38,10 @@ body {
   color: gray;
 }
 
+warning {
+  color: orangered;
+}
+
 .hover-help {
   &:hover {
     cursor: help;

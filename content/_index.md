@@ -19,7 +19,7 @@ I am currently working on a few projects, including:
 - Publishing music under my own name on [Spotify](https://open.spotify.com/artist/1aLNEmgqBJkhfkEZvf8Vh5) and [Apple Music](https://music.apple.com/us/artist/evan-pratten/1611566708)
 - Occasional <a href="https://instagram.com/evanpratten" target="_blank" rel="me">photography</a>
 
-I am also working on an Internet-Draft:
+<!-- I am also working on an Internet-Draft:
 
-- [draft-evan-amateur-radio-ipv6](https://datatracker.ietf.org/doc/html/draft-evan-amateur-radio-ipv6) - Globally Unique IPv6 Addressing for Amateur Radio
+- [draft-evan-amateur-radio-ipv6](https://datatracker.ietf.org/doc/html/draft-evan-amateur-radio-ipv6) - Globally Unique IPv6 Addressing for Amateur Radio -->
 
