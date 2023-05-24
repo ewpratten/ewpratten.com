@@ -6,6 +6,9 @@ async function redirect_secondary_domains(context) {
     var secondary_domains = ['test.ewp.fyi', 'evan.pratten.ca', 'evan.warren.pratten.ca'];
     if (secondary_domains.includes(url.hostname)) {
         url.hostname = 'ewpratten.com';
+        url.searchParams.set("utm_source", url.hostname);
+        url.searchParams.set("utm_medium", "redirect");
+        url.searchParams.set("utm_campaign", "secondary_domains");
         return Response.redirect(url, 302);
     }
 
