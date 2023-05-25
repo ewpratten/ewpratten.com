@@ -18,8 +18,8 @@ Want to get in touch? Feel free to send me an email at [evan@ewpratten.com](mail
 - [Apple Music](https://music.apple.com/us/artist/evan-pratten/1611566708)
 - [YouTube](https://www.youtube.com/@ewpratten)
 - [Modrinth](https://modrinth.com/user/ewpratten)
-<!-- - [IMDb](https://www.imdb.com/name/nm13747554/)
-- [IETF Datatracker](https://datatracker.ietf.org/person/Evan%20Pratten) -->
+- [IMDb](https://www.imdb.com/name/nm13747554/)
+<!--- [IETF Datatracker](https://datatracker.ietf.org/person/Evan%20Pratten) -->
 
 ## AS54041 network operations
 
