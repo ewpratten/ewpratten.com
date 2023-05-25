@@ -16,6 +16,7 @@ Since 2022 I have been publishing personal music projects of all kinds under my 
 <ul>
     <li>
         Soundtrack: <strong>Raindrops</strong>
+        <em>with <a href="https://demilurii.art" target="_blank">Emilia Frias</a></em>
         (<a href="https://www.youtube.com/watch?v=RqzLxaQ3abM" target="_blank"><i class="fa-brands fa-youtube"></i></a>)
     </li>
     <li>

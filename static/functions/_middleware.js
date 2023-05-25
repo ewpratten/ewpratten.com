@@ -33,7 +33,7 @@ async function goat_counter_analytics(context) {
         hits: [
             {
                 path: url.pathname,
-                query: url.search,
+                query: url.searchParams.toString(),
                 ref: context.request.headers.get('Referer'),
                 location: context.request.cf.country,
                 user_agent: context.request.headers.get('User-Agent'),
