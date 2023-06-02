@@ -15,6 +15,13 @@ Since 2022 I have been publishing personal music projects of all kinds under my 
 
 <ul>
     <li>
+        Single: <strong>Spring Tracks.</strong>
+        <em>ft. <a href="https://pratten.ca" target="_blank">Warren Pratten</a></em>
+        <em>& <a href="https://demilurii.art" target="_blank">Emilia Frias</a></em>
+        (<a href="https://open.spotify.com/album/4egrxAZmNgww1ocu8oYTqC" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
+        <a href="https://music.apple.com/us/album/spring-tracks-single/1690522416" target="_blank"><i class="fa-brands fa-apple"></i></a>)
+    </li>
+    <li>
         Soundtrack: <strong>Raindrops</strong>
         <em>with <a href="https://demilurii.art" target="_blank">Emilia Frias</a></em>
         (<a href="https://www.youtube.com/watch?v=RqzLxaQ3abM" target="_blank"><i class="fa-brands fa-youtube"></i></a>)
