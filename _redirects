@@ -42,4 +42,4 @@
 
 # Projects
 /tilde-tweaks https://github.com/ewpratten/tilde-tweaks
-/tilde-tweaks/* https://github.com/ewpratten/tilde-tweaks/blob/master/scripts/:splat
+/tilde-tweaks/* https://github.com/ewpratten/tilde-tweaks/raw/master/scripts/:splat
