@@ -54,6 +54,11 @@
 }
 
 .mermaid {
-  width: fit-content;
-  margin: auto;
+  width: 100%;
+  text-align: center;
+
+  & > svg {
+    width: 90%;
+    max-width: unset !important;
+  }
 }

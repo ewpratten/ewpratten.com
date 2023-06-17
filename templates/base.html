@@ -46,7 +46,7 @@
     {% endblock component_styles %}
 
     {# Enable features #}
-    {% include "components/metadata/page-features.html" %}
+    {% include "components/metadata/page-features-css.html" %}
 </head>
 
 <body>
@@ -104,7 +104,12 @@
     {# Brid.gy h-card #}
     <a href="https://ewpratten.com" class="h-card" rel="me" hidden>Evan Pratten</a>
 
+
+    {# Enable features #}
+    {% include "components/metadata/page-features-js.html" %}
+
     {% include "components/metadata/analytics.html" %}
+    
 </body>
 
 </html>
