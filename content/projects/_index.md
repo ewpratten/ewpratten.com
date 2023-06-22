@@ -6,17 +6,18 @@ title: My Projects
 
 Most of my free time is spent working on various side projects. This is generally how I learn new things, and I quite enjoy the process of *making stuff*.
 
-## Categories
-
-Some of my projects fall into common categories. The ones that do, are listed here:
-
 - **Minecraft**
   - [**Client Ping**: Client-side point-of-interest marking mod](https://ewp.fyi/client-ping)
 - **Robotics**
   - [**Lib5K**: A robotic control library written in Java for use in the *FIRST Robotics Competition*](https://github.com/frc5024/lib5k)
   - [**Darth Raider**: A competitive robot built at *Raider Robotics* in 2020](/robotics/5024/darth-raider)
   - [**TestBench**: A hardware testing utility built for *Raider Robotics*](https://github.com/frc5024/testbench)
-
+- **Music**
+  - [**A10U8R**: Signal Attenuator for VCV Rack](https://github.com/ewpratten/A10U8R)
+- **Utilities**
+  - [**tabset**: Linux command-line tool for configuring digitizer tablets](https://github.com/ewpratten/tabset)
+- **Games**
+  - [**\[data::loss\]**: A side-scroller, built for Ludum Dare 49](https://github.com/ewpratten/ludum-dare-49)
 ## Chronological
 
 The following is a list of Open-Source projects I have worked on, along with their date of publication.
@@ -33,16 +34,15 @@ guarantee of support. I try my best to respond to issues and questions in my per
 
 ### 2022
 
-- 2022-10-14: [A10U8R: Signal Attenuator for VCV Rack](https://github.com/ewpratten/A10U8R)
+- 2022-10-14: 
 - 2022-05-11: [The @entry decorator: Cleanly mark Python script entrypoints](https://github.com/ewpratten/atentry)
 - 2022-04-14: [Set & forget crash reporting for Rust programs](https://github.com/ewpratten/crashreport-rs)
 - 2022-04-12: [Kobo e-reader interface library for Rust](https://github.com/ewpratten/kobo-rs)
-- 2022-01-23: [Linux command-line tool for configuring digitizer tablets](https://github.com/ewpratten/tabset)
+- 2022-01-23: 
 
 ### 2021
 
 - 2021-12-17: [NetBrowse: an avahi-browse GUI](https://github.com/ewpratten/netbrowse)
-- 2021-10-04: [My Ludum Dare 49 entry: <strong>[data::loss]</strong>](https://github.com/ewpratten/ludum-dare-49)
 - 2021-09-27: [A "Quick and Dirty" implementation of a finite state machine](https://github.com/ewpratten/dirty-fsm)
 - 2021-09-24: [A real-time dashboard for my dorm room's wall-mounted TV](https://github.com/ewpratten/dorm-dash)
 - 2021-09-22: [APRSHTTP: One-way APRS position reporting using APRS-IS](https://github.com/ewpratten/aprshttp)
