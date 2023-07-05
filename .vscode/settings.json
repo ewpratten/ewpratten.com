@@ -4,10 +4,12 @@
         "callsigns",
         "centimetre",
         "configurability",
+        "fileserver",
         "grayscale",
         "inpainting",
         "rotoscope",
-        "Tapermonkey"
+        "Tapermonkey",
+        "webserver"
     ],
     "files.associations": {
         "*.json.liquid": "json",

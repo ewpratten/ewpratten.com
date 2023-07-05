@@ -4,6 +4,12 @@
 {% endblock component_styles %}
 
 <div class="footer container">
+
+    {% if is_article %}
+    <br>
+    <p id="sponsor-notice">Consider <a href="https://ewp.fyi/sponsor">sponsoring my work</a>!</p>
+    {% endif %}
+
     <br>
     <hr>
     <p id="copyright">
