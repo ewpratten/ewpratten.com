@@ -15,9 +15,17 @@ Most of my free time is spent working on various side projects. This is generall
 - **Music**
   - [**A10U8R**: Signal Attenuator for VCV Rack](https://github.com/ewpratten/A10U8R)
 - **Utilities**
-  - [**tabset**: Linux command-line tool for configuring digitizer tablets](https://github.com/ewpratten/tabset)
+  - [**NetBrowse**: an avahi-browse GUI](https://github.com/ewpratten/netbrowse)
+  - [**APRSHTTP**: One-way APRS position reporting using APRS-IS](https://github.com/ewpratten/aprshttp)
 - **Games**
   - [**\[data::loss\]**: A side-scroller, built for Ludum Dare 49](https://github.com/ewpratten/ludum-dare-49)
+- **Software Libraries**
+  - [**@entry**: Cleanly mark Python script entrypoints](https://github.com/ewpratten/atentry)
+  - [**crashreport-rs**: Set & forget crash reporting for Rust programs](https://github.com/ewpratten/crashreport-rs)
+  - [**kobo-rs**: Kobo e-reader interface library for Rust](https://github.com/ewpratten/kobo-rs)
+  - [**boids-rs**: A fast boids library for Rust](https://github.com/ewpratten/boids-rs)
+  - [**SpaceTrace**: 3D path planning](https://github.com/ewpratten/spacetrace)
+  - [**serde-frontmatter**: Front matter support for the Serde serialization framework](https://github.com/ewpratten/serde-frontmatter)
 ## Chronological
 
 The following is a list of Open-Source projects I have worked on, along with their date of publication.
@@ -28,27 +36,18 @@ guarantee of support. I try my best to respond to issues and questions in my per
 
 ### 2023
 
-- 2023-04-26: [Client Ping](https://ewp.fyi/client-ping)
 - 2023-02-06: [Prometheus exporter for Ubisoft server statuses](https://github.com/ewpratten/ubisoft_status_exporter)
 - 2023-01-23: [A protective insert for my TG4x](https://github.com/ewpratten/tg4x-casing)
 
-### 2022
-
-- 2022-10-14: 
-- 2022-05-11: [The @entry decorator: Cleanly mark Python script entrypoints](https://github.com/ewpratten/atentry)
-- 2022-04-14: [Set & forget crash reporting for Rust programs](https://github.com/ewpratten/crashreport-rs)
-- 2022-04-12: [Kobo e-reader interface library for Rust](https://github.com/ewpratten/kobo-rs)
-- 2022-01-23: 
 
 ### 2021
 
-- 2021-12-17: [NetBrowse: an avahi-browse GUI](https://github.com/ewpratten/netbrowse)
 - 2021-09-27: [A "Quick and Dirty" implementation of a finite state machine](https://github.com/ewpratten/dirty-fsm)
 - 2021-09-24: [A real-time dashboard for my dorm room's wall-mounted TV](https://github.com/ewpratten/dorm-dash)
-- 2021-09-22: [APRSHTTP: One-way APRS position reporting using APRS-IS](https://github.com/ewpratten/aprshttp)
-- 2021-09-03: [A fast boids library for Rust](https://github.com/ewpratten/boids-rs)
-- 2021-08-12: [SpaceTrace: 3D path planning](https://github.com/ewpratten/spacetrace)
-- 2021-07-17: [Front matter support for the Serde serialization framework](https://github.com/ewpratten/serde-frontmatter)
+- 2021-09-22: 
+- 2021-09-03: 
+- 2021-08-12: 
+- 2021-07-17: 
 - 2021-07-09: [CLI tool for providing information about a specific UNIX timestamp](https://github.com/ewpratten/tsinfo)
 - 2021-06-13: [An internet teletype reader](https://github.com/ewpratten/ittyr)
 - 2021-06-01: [Binocular depth mapping with LeapMotion hardware](https://github.com/ewpratten/OpenDepthMap)
