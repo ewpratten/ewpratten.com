@@ -14,6 +14,7 @@ Want to get in touch? Feel free to send me an email at [evan@ewpratten.com](mail
 - [Mastodon](https://ewp.fyi/mastodon)
 - [Discord](https://ewp.fyi/discord)
 - [Tildes](https://tildes.net/user/ewpratten)
+- [Threads](https://threads.net/@evanpratten)
 - [QRZ](https://qrz.com/db/va3zza)
 - [Spotify](https://open.spotify.com/artist/1aLNEmgqBJkhfkEZvf8Vh5)
 - [Apple Music](https://music.apple.com/us/artist/evan-pratten/1611566708)
