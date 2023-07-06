@@ -4,6 +4,9 @@
 {% block head %}
 {{ super() }}
 
+{# Override title format for homepage #}
+{% block title %}<title>{{config.title}}</title>{% endblock title %}
+
 <script type="application/ld+json">
     {% set person_ld = load_data(path="static/person.jsonld")%}
     {% if person_ld %}{{person_ld | safe}}{% endif %}
@@ -21,6 +24,8 @@
     }}
   </script>
 {% endblock head %}
+
+
 
 {# Pass data through to the base template #}
 {% block variable_wormhole %}
