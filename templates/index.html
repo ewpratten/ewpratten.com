@@ -43,8 +43,73 @@
 
 {# Page content #}
 {% block page_start %}
-{% include "components/about-card.html" %}
+{# {% include "components/about-card.html" %} #}
 {% endblock page_start %}
 {% block content %}
-{{ section.content | safe }}
+{# {{ section.content | safe }} #}
+
+<div class="home-page">
+  <div class="hello">
+    <h1>Hi, I'm Evan Pratten</h1>
+  </div>
+
+  <div class="home-cards">
+    <ul class="home-big-cards">
+      <li>
+        <a href="/software">
+          <div class="big-card">
+            <div class="card-image"></div>
+            <div class="card-title"><span>Software</span></div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/blog">
+          <div class="big-card">
+            <div class="card-image"></div>
+            <div class="card-title"><span>Blog</span></div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/music">
+          <div class="big-card">
+            <div class="card-image"></div>
+            <div class="card-title"><span>Music</span></div>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <ul class="home-small-cards">
+      <li>
+        <a href="/radio">
+          <div class="small-card">
+            <div class="card-title">
+              <span>Radio</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/network">
+          <div class="small-card">
+            <div class="card-title">
+              <span>Network</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/photos">
+          <div class="small-card">
+            <div class="card-title">
+              <span>Photography</span>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
 {% endblock content %}

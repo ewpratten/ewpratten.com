@@ -2,7 +2,7 @@
 title: Home
 ---
 
-## About me
+<!-- ## About me
 
 By day I am a <strong>Pipeline Software Developer</strong> at Toronto-based animation studio
 <a target="_blank" href="https://www.industrialbrothers.com">Industrial Brothers</a>
@@ -22,10 +22,10 @@ I am currently working on a few projects, including:
 <!-- I am also working on an Internet-Draft:
 
 - [draft-evan-amateur-radio-ipv6](https://datatracker.ietf.org/doc/html/draft-evan-amateur-radio-ipv6) - Globally Unique IPv6 Addressing for Amateur Radio -->
-
+<!--
 ## Previous work
 
 Some of the more notable things I've worked on in the past are:
 
 - The animated TV series [Daniel Spellbound](https://www.imdb.com/title/tt13983670/)
-- A [fleet of robots at *Raider Robotics*](/robotics/5024)
+- A [fleet of robots at *Raider Robotics*](/robotics/5024) -->

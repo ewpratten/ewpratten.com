@@ -57,10 +57,10 @@
     <div class="page">
 
         {# Allow pages to override the content before the navbar #}
-        {% block page_start %}{% endblock page_start %}
+        {# {% block page_start %}{% endblock page_start %} #}
 
         {# Navbar #}
-        <div class="container">
+        {# <div class="container">
             {% include "components/navbar.html" %}
 
             {% if announcement %}
@@ -68,40 +68,18 @@
             {% else %}
             <br>
             {% endif %}
-        </div>
+        </div> #}
 
         {# Actual content #}
         <div class="page-body">
-            <div class="left-side">
-                {% block left_side %}
-                {% endblock left_side %}
-            </div>
-            <div>
-                {% if redirect_target %}
-                <div class="container" style="text-align:center;">
-                    <h2>Redirection Notice</h2>
-                    <p>
-                        You are being redirected to another page.<br>
-                        Click <a href="{{redirect_target}}">here</a> if this does not happen automatically.
-                    </p>
-                </div>
-                {% else %}
-                <article id="content" class="container markdown-body">
-                    {% block content %}{% endblock content %}
-                </article>
-                {% endif %}
+           
+            {% block content %}{% endblock content %}
 
-                {# Footer #}
-                {% include "components/footer.html" %}
-            </div>
+            {# Footer #}
+            {% include "components/footer.html" %}
+
         </div>
     </div>
-
-    {# External scripts #}
-    {#
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script> #}
 
     {# Brid.gy h-card #}
     <a href="https://ewpratten.com" class="h-card" rel="me" hidden>Evan Pratten</a>
