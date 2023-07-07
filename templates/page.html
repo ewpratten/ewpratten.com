@@ -27,6 +27,9 @@
 {% set title = page.title %}
 {% set description = page.description %}
 {% set is_article = true %}
+{% if page.date %}
+{% set is_post = true %}
+{% endif %}
 {% if page.extra.uses %}
 {% set feature_flags = page.extra.uses %}
 {% endif %}
