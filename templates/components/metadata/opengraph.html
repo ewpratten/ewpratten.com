@@ -5,7 +5,7 @@
 
 {# Page image #}
 <meta name="og:image"
-    content="{% block opengraph_image_url %}{{config.extra.profile_photo}}{% endblock opengraph_image_url %}" />
+    content="{% block opengraph_image_url %}{{config.extra.profile_photo | safe}}{% endblock opengraph_image_url %}" />
 
 {# Page description #}
 <meta property="og:description" content="{{description}}" />
