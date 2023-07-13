@@ -4,12 +4,9 @@ title: Home
 
 ## About me
 
-By day I am a <strong>Pipeline Software Developer</strong> at Toronto-based animation studio
-<a target="_blank" href="https://www.industrialbrothers.com">Industrial Brothers</a>
-where I build backend tooling that helps streamline the process from concept to final render
-for our productions. The most recent of which: *Daniel Spellbound* is now streaming on Netflix.
+I am a **Software Developer**, specializing in *automation* and *computer networking*.
 
-By night I am *"indecisive about my hobbies"*. I bounce around between a large collection of interests, with the common focus of wanting to learn how things *really work*. I take deep dives into topics that I find interesting, and occasionally write about them on [my blog](/blog).
+In my free time, I bounce around between a large collection of interests, with the common focus of wanting to learn how things *really work*. I take deep dives into topics that I find interesting, and occasionally write about them on [my blog](/blog).
 
 ## Whats in the works
 
