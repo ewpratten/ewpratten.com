@@ -43,7 +43,7 @@
 /illuminated-shields https://modrinth.com/resourcepack/illuminated-shields
 
 # Projects
-/config https://github.com/ewpratten/ewconfig
+/config https://github.com/ewpratten/ewconfig.git
 /tilde-tweaks https://github.com/ewpratten/tilde-tweaks
 /tilde-tweaks/* https://github.com/ewpratten/tilde-tweaks/raw/master/scripts/:splat
 /protomask https://github.com/ewpratten/protomask
