@@ -4,6 +4,6 @@
         "/v2/*"
     ],
     "exclude": [
-        ".vscode"
+        "/.vscode"
     ]
 }
