@@ -3,5 +3,7 @@
     "include": [
         "/v2/*"
     ],
-    "exclude": []
+    "exclude": [
+        ".vscode"
+    ]
 }
