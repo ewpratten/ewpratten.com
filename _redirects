@@ -50,3 +50,4 @@
 /protomask https://github.com/ewpratten/protomask
 /protomask/v* https://github.com/ewpratten/protomask/releases/tag/v:splat
 /protomask/latest https://github.com/ewpratten/protomask/releases/latest
+/lra https://github.com/ewpratten/lra
