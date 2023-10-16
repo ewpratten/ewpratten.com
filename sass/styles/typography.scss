@@ -37,6 +37,9 @@ body {
 .gray {
   color: gray;
 }
+.grey {
+  color: gray;
+}
 
 .hover-help {
   &:hover {
@@ -66,4 +69,31 @@ body {
   width:max-content;
   margin:auto;
   padding: 5px;
+}
+
+li {
+  img {
+    margin-left: unset !important;
+    margin-right: unset !important;
+  }
+}
+
+blink {
+  animation: blinker 1s linear infinite;
+}
+
+blink-lightly {
+  animation: blinker_light 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker_light {
+  50% {
+    opacity: 0.5;
+  }
 }
