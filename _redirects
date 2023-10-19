@@ -45,6 +45,7 @@
 
 # Projects
 /config https://github.com/ewpratten/ewconfig.git 301
+/config.zip https://github.com/ewpratten/ewconfig/archive/refs/heads/master.zip
 /tilde-tweaks https://github.com/ewpratten/tilde-tweaks
 /tilde-tweaks/* https://github.com/ewpratten/tilde-tweaks/raw/master/scripts/:splat
 /protomask https://github.com/ewpratten/protomask
