@@ -1,12 +1,15 @@
 ---
 layout: page
-title: "A rusty guide to quaternions" 
-description: "Fast and efficient 3D object manipulation"
-date:   2021-12-03
-tags: reference
+title: A rusty guide to quaternions
+description: Fast and efficient 3D object manipulation
+date: 2021-12-03
+tags:
+  - reference
+  - math
 draft: false
 extra:
-  uses: [katex]
+  uses:
+    - katex
   excerpt: This post is an overview of Quaternions for Rust programmers, and anyone willing to learn.
 ---
 

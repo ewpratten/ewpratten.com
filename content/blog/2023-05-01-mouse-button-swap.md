@@ -1,13 +1,15 @@
 ---
 layout: page
-title: "I performed a button swap on my mouse" 
-description: "This had better not be my gateway drug into custom mice"
+title: I performed a button swap on my mouse
+description: This had better not be my gateway drug into custom mice
 date: 2023-05-01
-tags: random
+tags:
+  - random
+  - hardware
 draft: false
 extra:
   auto_center_images: true
-  excerpt: "Some photos and notes on how I swapped the middle button on my mouse"
+  excerpt: Some photos and notes on how I swapped the middle button on my mouse
   discuss:
     reddit: https://www.reddit.com/r/ewpratten/comments/1356u1t/i_performed_a_button_swap_on_my_mouse/
     hacker_news: https://news.ycombinator.com/item?id=35781662

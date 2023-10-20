@@ -1,15 +1,16 @@
 ---
 layout: page
-title:  "Integrating GitHub Codespaces with FRC"
-description: "Robotics software development in your browser"
-date:   2020-09-10
-tags: github codespaces
+title: Integrating GitHub Codespaces with FRC
+description: Robotics software development in your browser
+date: 2020-09-10
+tags:
+  - github
+  - frc
+  - project
 extra:
-    excerpt: >-
-        I was recently accepted into the GitHub Codespaces beta test program
-        and decided to try it out on the largest open source project I am 
-        currently involved with. 
-aliases: [/blog/2020/09/10/codespaces-for-frc]
+  excerpt: "I was recently accepted into the GitHub Codespaces beta test program and decided to try it out on the largest open source project I am  currently involved with. "
+aliases:
+  - /blog/2020/09/10/codespaces-for-frc
 ---
 
 I was recently accepted into the [GitHub Codespaces](https://github.com/features/codespaces) beta test program. After reading through the documentation, I wanted to find a good use for this new tool, and decided to try it out on the largest open source project I am currently involved with. At *Raider Robotics* (@frc5024), we maintain a fairly large robotics software library called [Lib5K](https://github.com/frc5024/lib5k). The goal of this library is to provide an easy-to-use framework for new programmers to use when writing control systems code. As this library has become more complex, we have recently forked it into its own GitHub repository, and completely reworked our dependency system to match that of any other large OSS project. I figured that setting this repository up to use Codespaces might make it easier for other developers at Raider Robotics to make small changes to the library without needing to pull in the nearly 5GB of dependencies needed just to compile the codebase.

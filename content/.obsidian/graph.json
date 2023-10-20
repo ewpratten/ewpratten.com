@@ -1,0 +1,37 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": true,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "/draft: true/",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:blog  ",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1.42708333333333,
+  "lineSizeMultiplier": 1.171875,
+  "collapse-forces": false,
+  "centerStrength": 0.328125,
+  "repelStrength": 14.1666666666667,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.0681389455779584,
+  "close": false
+}

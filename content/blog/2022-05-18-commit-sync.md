@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Commit syncing across hosted GIT instances" 
-description: "How I keep my commit graph alive"
+title: Commit syncing across hosted GIT instances
+description: How I keep my commit graph alive
 date: 2022-05-18
-tags: random
+tags:
+  - random
+  - git
 draft: false
 extra:
-  
   auto_center_images: true
   excerpt: This post covers how to keep your commit graph alive across multiple GIT instances by syncing your commit history to magic repos.
 ---

@@ -1,16 +1,15 @@
 ---
 layout: page
-title: "Rainbow keyboard" 
-description: "Game-specific keyboard layouts are really handy"
+title: Rainbow keyboard
+description: Game-specific keyboard layouts are really handy
 date: 2023-06-15
-tags: keyboards
+tags:
+  - keyboards
+  - random
 draft: false
 extra:
   auto_center_images: true
-  excerpt: "This post shows off my custom keyboard layout for playing Rainbow Six Siege"
-  # discuss:
-  #   reddit: https://www.reddit.com/r/ewpratten/comments/1356u1t/i_performed_a_button_swap_on_my_mouse/
-  #   hacker_news: https://news.ycombinator.com/item?id=35781662
+  excerpt: This post shows off my custom keyboard layout for playing Rainbow Six Siege
 ---
 
 In my ever-continuing quest to do interesting things with custom keyboards, I recently had the idea to take the left half of my [Ferris sweep](https://github.com/davidphilipbarr/Sweep) and configure it specifically for use in the game [Rainbow Six Siege](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six).

@@ -1,8 +1,10 @@
 ---
-title: "Robot reveal: HATCHField" 
-description: "What I have been working on for the past few months"
+title: "Robot reveal: HATCHField"
+description: What I have been working on for the past few months
 date: 2019-02-20
-tags: video
+tags:
+  - video
+  - frc
 draft: false
 extra:
   excerpt: HATCHField is a competitive robot built by Raider Robotics.

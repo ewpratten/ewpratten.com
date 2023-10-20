@@ -1,0 +1,202 @@
+{
+  "main": {
+    "id": "4a13bd73c32bf62e",
+    "type": "split",
+    "children": [
+      {
+        "id": "25944f6d53cf89cd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c474e8cb1cc7c081",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "graph",
+              "state": {},
+              "pinned": true
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "87f9bd498148ccd6",
+    "type": "split",
+    "children": [
+      {
+        "id": "a077c4fabaa61c8e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "70056c1e180364d0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b880cd0de0ca2e44",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "969926847ef967a5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c55fe0c2b46e0688",
+    "type": "split",
+    "children": [
+      {
+        "id": "286b27f5f9e3b7b8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f55bef5370bc227",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "87cb3e652da1f725",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "abe62b0e033de1c8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1e3a6a4ee78010f3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "7c5365d6b7a3ba04",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": true,
+      "daily-notes:Open today's daily note": true,
+      "templates:Insert template": true,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "c474e8cb1cc7c081",
+  "lastOpenFiles": [
+    "blog/2022-06-13-fedora-36-vp.md",
+    "blog/2020-12-31-Year-wrapup.md",
+    "blog/2021-09-28-frc-tech-reference.md",
+    "blog/2021-12-03-quaternions.md",
+    "blog/2021-07-06-Windows-SSH.md",
+    "blog/2021-11-14-amprnet-bgp.md",
+    "blog/2022-06-26-rickrolling-the-internet.md",
+    "blog/2022-05-21-nanovna.md",
+    "blog/2019-12-11-Cron.md",
+    "blog/2019-08-10-Why-I-Carry-NFC.md",
+    "blog/2022-01-06-unfinished-projects.md",
+    "blog/2022-04-06-udm-fan.md",
+    "blog/2022-06-23-steam-controller-switch.md",
+    "blog/2022-01-19-monocular-blender.md",
+    "blog/2023-03-21-hackernews-block-ai.md",
+    "blog/2019-06-27-Python.md",
+    "blog/2023-02-15-wireguard-options.md",
+    "blog/2020-01-20-BrainFuckInBash.md",
+    "blog/2022-05-18-commit-sync.md",
+    "blog/2023-05-01-mouse-button-swap.md",
+    "blog/2019-08-27-GitHub-cleanup.md",
+    "blog/2020-11-6-Vortex-Core.md",
+    "blog/2021-03-14-QMK-Vortex-Core.md",
+    "blog/2023-03-23-aprs-usage.md",
+    "blog/2022-09-09-new-domain.md",
+    "blog/2020-04-20-LudumDare46.md",
+    "images/posts/mouse-button-swap/PXL_20230501_234325200.jpg",
+    "images/hobbies/software/games/slate_map.jpg",
+    "images/hobbies/software/games/flippycat.png",
+    "images/hobbies/software/games/deep_breath.png",
+    "images/hobbies/robotics/robots/qbert.png",
+    "images/hobbies/robotics/robots/minibot.jpg",
+    "images/hobbies/robotics/robots/hatchfield.jpg",
+    "images/hobbies/robotics/robots/darthraider.png",
+    "images/hobbies/arts/photos/raider_names.jpg",
+    "images/hobbies/arts/photos/mother_stairs.jpg",
+    "images/posts/unfinished-projects/privates.json",
+    "images/posts/unfinished-projects/private_to_md.py",
+    "images/posts/rainbow-keyboard/kayboard.xcf",
+    "images/posts/personal-pbx/phone_internet.dot",
+    "images/posts/personal-pbx/my_trunks.dot",
+    "images/posts/personal-pbx/magic_phones.dot",
+    "images/posts/monocular-blender/demo_render.mp4",
+    "images/posts/aprs-usage/igate_graphic.dot",
+    "images/posts/amprnet-bgp-announce/internet_1.drawio",
+    "images/hobbies/software/games"
+  ]
+}

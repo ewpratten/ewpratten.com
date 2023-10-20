@@ -1,17 +1,19 @@
 ---
 layout: page
-title:  "2020 Wrap-Up"
-description: "I wrote a lot of code this year. This post looks back on it all"
-date:   2020-12-31
+title: 2020 Wrap-Up
+description: I wrote a lot of code this year. This post looks back on it all
+date: 2020-12-31
 written: 2020-12-09
-tags: writeup review project
+tags:
+  - project
+  - frc
 extra:
-    excerpt: >-
-        2020 has been my most productive year so far in terms of software development. This post looks back at the year
-redirect_from: 
- - /post/g494l5j3/
- - /g494l5j3/
-aliases: [/blog/2020/12/31/year-wrapup]
+  excerpt: 2020 has been my most productive year so far in terms of software development. This post looks back at the year
+redirect_from:
+  - /post/g494l5j3/
+  - /g494l5j3/
+aliases:
+  - /blog/2020/12/31/year-wrapup
 ---
 
 *So, whats up with 2020?* For readers who do not know me personally, here is a quick overview:

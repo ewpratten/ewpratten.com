@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Rickrolling the internet" 
-description: "Abusing ICMPv6 to inject lyrics into public routes"
+title: Rickrolling the internet
+description: Abusing ICMPv6 to inject lyrics into public routes
 date: 2022-06-26
-tags: random as398057
+tags:
+  - random
+  - networking
 draft: false
 extra:
-  
   auto_center_images: true
   excerpt: This post covers some of the logistics behind rickrolling the internet with some clever routing tricks.
 ---

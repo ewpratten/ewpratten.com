@@ -1,13 +1,14 @@
 ---
 layout: page
-title: "Crudely geo-filtering internet routes" 
-description: "How I make routers drop traffic for certain countries"
+title: Crudely geo-filtering internet routes
+description: How I make routers drop traffic for certain countries
 date: 2022-11-04
-tags: network
+tags:
+  - networking
 draft: true
 extra:
   auto_center_images: true
-  excerpt: 
+  excerpt:
 ---
 
 Sometimes I find the need to filter internet traffic traversing my networks based on country of origin. Commonly, I find that dropping certain countries (*cough Russia*) decreases the amount of scans and attacks I see to nearly zero. Sometimes its also nice to ignore routes that pass through countries with heavy surveillance policies too.

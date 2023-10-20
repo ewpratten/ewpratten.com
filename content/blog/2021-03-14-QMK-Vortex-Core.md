@@ -1,17 +1,21 @@
 ---
 layout: page
-title:  "How I flashed QMK to my Vortex Core"
-description: "Open-source firmware on a closed-source keyboard"
+title: How I flashed QMK to my Vortex Core
+description: Open-source firmware on a closed-source keyboard
 date: 2021-03-14
 written: 2021-03-14
-tags: project keyboards qmk firmware
+tags:
+  - project
+  - keyboards
+  - firmware
+  - walkthrough
 extra:
-    excerpt: >-
-        After having some issues with the factory firmware on my 40% keyboard, I decided to replace it with the widely used QMK firmware instead.
-redirect_from: 
- - /post/gkedkd93/
- - /gkedkd93/
-aliases: [/blog/2021/03/14/qmk-vortex-core]
+  excerpt: After having some issues with the factory firmware on my 40% keyboard, I decided to replace it with the widely used QMK firmware instead.
+redirect_from:
+  - /post/gkedkd93/
+  - /gkedkd93/
+aliases:
+  - /blog/2021/03/14/qmk-vortex-core
 ---
 
 Last fall, I [purchased my first mechanical keyboard](/blog/2020/11/06/vortex-core), the [Vortex Core](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3550), and have been loving it ever since. Well, almost loving it. There are a few "quirks" of the keyboard that I wasn't super fond of, like: occasionally not sending `KEY_UP` commands back to the computer, or the badly documented and maintained system for building custom layouts.

@@ -1,13 +1,15 @@
 ---
 layout: page
-title: "A script that hides AI topics from Hacker News" 
-description: "Sometimes I want to read about something different"
+title: A script that hides AI topics from Hacker News
+description: Sometimes I want to read about something different
 date: 2023-03-21
-tags: random
+tags:
+  - random
+  - javascript
 draft: false
 extra:
   auto_center_images: true
-  excerpt: "This post shows off a userscript I built that hides AI topics from Hacker News."
+  excerpt: This post shows off a userscript I built that hides AI topics from Hacker News.
   discuss:
     reddit: https://www.reddit.com/r/ewpratten/comments/12xzw5x/a_script_that_hides_ai_topics_from_hacker_news/
     hacker_news: https://news.ycombinator.com/item?id=35252186

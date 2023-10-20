@@ -1,16 +1,15 @@
 ---
 layout: page
-title: "Setting up a static DNF repository" 
-description: "Hosting RPMs is less painful than I expected"
+title: Setting up a static DNF repository
+description: Hosting RPMs is less painful than I expected
 date: 2023-07-05
-tags: linux
+tags:
+  - linux
+  - walkthrough
 draft: false
 extra:
   auto_center_images: true
-  excerpt: "Information on how I set up dist.ewpratten.com, my DNF repository"
-  # discuss:
-  #   reddit: https://www.reddit.com/r/ewpratten/comments/1356u1t/i_performed_a_button_swap_on_my_mouse/
-  #   hacker_news: https://news.ycombinator.com/item?id=35781662
+  excerpt: Information on how I set up dist.ewpratten.com, my DNF repository
 ---
 
 <!-- I regularly find myself bouncing between wanting to *self-host all the things* (because it is fun), and use well-known hosting services (because I generally have better things to do with my time). I doubt I'll ever actually pick one side or the other, but I have found that the back-and-fourth of `hosted, diy, hosted` leads me to learn a lot about the tools I use. -->

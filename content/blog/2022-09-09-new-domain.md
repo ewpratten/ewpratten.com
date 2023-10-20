@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "Website updates" 
-description: "Changing a few things in the background"
+title: Website updates
+description: Changing a few things in the background
 date: 2022-09-09
-tags: website
+tags:
+  - meta
 draft: false
 extra:
-  
   auto_center_images: true
   excerpt: A small update post about some website changes
 ---

@@ -1,8 +1,10 @@
 ---
-title: "Robot reveal: Darth Raider" 
-description: "What I have been working on for the past few months"
+title: "Robot reveal: Darth Raider"
+description: What I have been working on for the past few months
 date: 2020-02-21
-tags: video
+tags:
+  - video
+  - frc
 draft: false
 extra:
   excerpt: Darth Raider is a competitive robot built by Raider Robotics.

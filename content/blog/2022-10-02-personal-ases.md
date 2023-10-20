@@ -1,12 +1,14 @@
 ---
 layout: page
-title: "An analysis of personal ASNs in the wild" 
-description: "You can get a surprising amount of info from bulk whois"
+title: An analysis of personal ASNs in the wild
+description: You can get a surprising amount of info from bulk whois
 date: 2022-10-02
-tags: website network
+tags:
+  - project
+  - networking
+  - bgp
 draft: false
 extra:
-  
   auto_center_images: true
   excerpt: A look at the usage of personal ASNs based on freely available data
 ---

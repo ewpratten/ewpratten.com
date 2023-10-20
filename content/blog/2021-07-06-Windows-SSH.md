@@ -1,13 +1,16 @@
 ---
 layout: page
-title:  "Configuring a native SSH server on Windows 10"
-description: "A tutorial for future me"
-date:   2021-07-07
-written: 2021-07-07 
-tags: reference
+title: Configuring a native SSH server on Windows 10
+description: A tutorial for future me
+date: 2021-07-07
+written: 2021-07-07
+tags:
+  - reference
+  - tutorial
 extra:
-    excerpt: I commonly need to configure SSH servers on remote Windows 10 boxes. This post covers the whole process.
-aliases: [/blog/2021/07/07/windows-ssh]
+  excerpt: I commonly need to configure SSH servers on remote Windows 10 boxes. This post covers the whole process.
+aliases:
+  - /blog/2021/07/07/windows-ssh
 ---
 
 Between work, school, and just helping various people out with things, I end up needing to quickly spin up SSH servers on windows machines *a lot*. Despite what you might think, this functionality is actually built right in to Windows 10, and fairly easy to enable.

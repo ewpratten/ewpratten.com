@@ -1,17 +1,20 @@
 ---
 layout: page
-title:  "Compiling AVR-C code with a modern build system"
-description: "Bringing Bazel to 8-bit microcontrollers"
-date:   2020-09-03
-tags: avr embedded bazel
+title: Compiling AVR-C code with a modern build system
+description: Bringing Bazel to 8-bit microcontrollers
+date: 2020-09-03
+tags:
+  - avr
+  - embedded
+  - bazel
+  - walkthrough
 extra:
-    excerpt: >-
-        In this post, I cover my process of combining low level 
-        programming with a very high level buildsystem.
-redirect_from: 
- - /post/68dk02l4/
- - /68dk02l4/
-aliases: [/blog/2020/09/03/bazel-and-avr]
+  excerpt: In this post, I cover my process of combining low level  programming with a very high level buildsystem.
+redirect_from:
+  - /post/68dk02l4/
+  - /68dk02l4/
+aliases:
+  - /blog/2020/09/03/bazel-and-avr
 ---
 
 *The GitHub repository for everything in this post can be found [here](https://github.com/Ewpratten/avr-for-bazel-demo)*

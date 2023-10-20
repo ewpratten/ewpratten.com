@@ -1,17 +1,22 @@
 ---
 layout: page
-title:  "Building a cheap APRS digipeater"
-description: "How I set up my feature-packed APRS digipeater for under $100"
-date:   2021-04-20 
+title: Building a cheap APRS digipeater
+description: How I set up my feature-packed APRS digipeater for under $100
+date: 2021-04-20
 written: 2021-04-20
-tags: project raspberrypi hamradio aprs
+tags:
+  - project
+  - raspberrypi
+  - hamradio
+  - aprs
+  - walkthrough
 extra:
-    excerpt: >-
-        Using an extra radio and some spare parts, I set up an APRS/APRS-IS/APRStt digipeater. This post covers some of the details.
-redirect_from: 
- - /post/eb0klDd9/
- - /eb0klDd9/
-aliases: [/blog/2021/04/20/direwolf-aprs]
+  excerpt: Using an extra radio and some spare parts, I set up an APRS/APRS-IS/APRStt digipeater. This post covers some of the details.
+redirect_from:
+  - /post/eb0klDd9/
+  - /eb0klDd9/
+aliases:
+  - /blog/2021/04/20/direwolf-aprs
 ---
 
 ***WARNING:** To replicate this project, you **must** be the holder of an amateur radio license in your country*

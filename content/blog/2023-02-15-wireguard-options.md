@@ -1,13 +1,15 @@
 ---
 layout: page
-title: "Some lesser known WireGuard settings" 
-description: "Things I will probably forget in an important moment"
+title: Some lesser known WireGuard settings
+description: Things I will probably forget in an important moment
 date: 2023-02-15
-tags: random
+tags:
+  - random
+  - networking
 draft: false
 extra:
   auto_center_images: true
-  excerpt: "This post covers some lesser known WireGuard configuration options that I have found useful"
+  excerpt: This post covers some lesser known WireGuard configuration options that I have found useful
   discuss:
     reddit: https://www.reddit.com/r/ewpratten/comments/12xzvun/some_lesser_known_wireguard_settings/
 ---
