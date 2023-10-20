@@ -2,7 +2,7 @@
 layout: page
 title:  "GitHub's CSS is boring. So I refreshed the design"
 date:   2019-06-12
-tags: projects
+tags: project
 aliases: [/blog/2019/06/12/styiling-github]
 ---
 

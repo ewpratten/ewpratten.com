@@ -3,7 +3,7 @@ layout: page
 title:  "Taking a look back at GMAD"
 description: "Fun, Simple, and Quick"
 date:   2019-07-13
-tags: projects
+tags: project
 alises: [https://retrylife.ca/blog/2019/07/13/lookback-gmad]
 ---
 

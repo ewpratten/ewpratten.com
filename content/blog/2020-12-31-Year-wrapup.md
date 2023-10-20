@@ -4,7 +4,7 @@ title:  "2020 Wrap-Up"
 description: "I wrote a lot of code this year. This post looks back on it all"
 date:   2020-12-31
 written: 2020-12-09
-tags: writeup review projects
+tags: writeup review project
 extra:
     excerpt: >-
         2020 has been my most productive year so far in terms of software development. This post looks back at the year

@@ -3,7 +3,7 @@ layout: page
 title:  "BashSmash"
 description: "A tool for driving people crazy"
 date:   2019-06-26
-tags: projects
+tags: project
 alises: [https://retrylife.ca/blog/2019/06/26/bashsmash]
 ---
 

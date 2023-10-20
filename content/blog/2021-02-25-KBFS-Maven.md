@@ -4,7 +4,7 @@ title: "Using KBFS as a makeshift maven server"
 description: "A free and secure way to host personal Java libraries and applications" 
 date:   2021-02-25
 written: 2021-02-22
-tags: writeup maven projects
+tags: writeup maven project
 extra:
     excerpt: >-
         In my never-ending hunt for a suitable solution for hosting Java libraries, I take a stop to try out Keybase Filesystem (KBFS)

@@ -3,7 +3,7 @@ layout: page
 title:  "Using a python script to create devRant posts based on the style and content of another user"
 description: "if/else ++"
 date:   2018-06-27
-tags: projects
+tags: project
 aliases: [/blog/2018/06/27/becomeranter]
 ---
 
