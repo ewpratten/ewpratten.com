@@ -7,7 +7,7 @@ tags:
   - meta
   - random
   - product
-draft: true
+draft: false
 extra:
   auto_center_images: true
   excerpt: A post about authoring blog posts with Obsidian
