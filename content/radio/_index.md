@@ -1,5 +1,7 @@
 ---
 title: Amateur Radio
+tags:
+  - radio
 ---
 
 # Amateur Radio
@@ -18,9 +20,6 @@ I generally operate:
 
 ## VA3UJF
 
-**VA3UJF** is my secondary callsign. I use it to separate some of my projects from my primary callsign.
+**VA3UJF** is my secondary callsign.
 
-Currently, you may find VA3UJF:
-
-- [Injecting Canadian passenger train telemetry into the APRS network](https://github.com/ewpratten/aprs-trains/)
-- [Acting as a repeater linking hub](/radio/va3ujf-hub)
+If you see/hear this callsign on-air, its probably tied to some automated system. Check back to this page to see if I have any on-going project you can interact with.

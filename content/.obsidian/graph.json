@@ -20,6 +20,13 @@
         "a": 1,
         "rgb": 5419488
       }
+    },
+    {
+      "query": "path:notes",
+      "color": {
+        "a": 1,
+        "rgb": 13321934
+      }
     }
   ],
   "collapse-display": false,
@@ -32,6 +39,6 @@
   "repelStrength": 14.1666666666667,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.08791737851642221,
+  "scale": 0.13187606777463332,
   "close": false
 }

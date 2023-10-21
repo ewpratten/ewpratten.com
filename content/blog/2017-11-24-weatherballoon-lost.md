@@ -2,13 +2,14 @@
 title: We lost a weather balloon in another country
 description: ..and made the news because of it
 date: 2017-11-24
-tags: news
+tags:
+  - news
+  - school
 draft: false
 extra:
-  excerpt: Beal science project succeeds - maybe too much - as weather balloon floats
-    into U.S.
+  excerpt: Beal science project succeeds - maybe too much - as weather balloon floats into U.S.
 aliases:
-- /blog/weatherballoon-lost
+  - /blog/weatherballoon-lost
 ---
 
 A news article was written about a project I was involved in. It's even headed by a photo I took!

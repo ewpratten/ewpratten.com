@@ -1,9 +1,14 @@
 ---
 title: Meme Appreciation Month
-description: "Come chat with young hams, and join the meme madness!"
-aliases: [/yeet]
+description: Come chat with young hams, and join the meme madness!
+aliases:
+  - /yeet
 extra:
-    uses: [flags]
+  uses:
+    - flags
+tags:
+  - radio
+  - event
 ---
 
 ***This event has passed. Page preserved for nostalgia.***

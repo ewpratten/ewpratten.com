@@ -1,8 +1,10 @@
 ---
 title: My Music
 extra:
-    uses:
-        - fontawesome
+  uses:
+    - fontawesome
+tags:
+  - music
 ---
 
 I have been a musician since I was a small child, starting with the piano when I was 5, and progressing to drums and double bass a few years later.

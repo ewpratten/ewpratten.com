@@ -1,5 +1,7 @@
 ---
 title: VA3UJF Radio Linking System
+tags:
+  - radio
 ---
 
 VA3UJF operates as a hub for facilitating interconnections between various RF links and amateur VOIP services.

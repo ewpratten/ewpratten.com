@@ -1,5 +1,7 @@
 ---
 title: My work at Raider Robotics
+tags:
+  - frc
 ---
 
 # My work at Raider Robotics
