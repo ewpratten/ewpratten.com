@@ -15,10 +15,10 @@ extra:
 aliases:
 - /blog/obsidian-blogging
 ---
-
 It recently occurred to me that [Obsidian](https://obsidian.md) is capable of editing *any* type of markdown document store, not just its own note "Vaults". So, as a test I've been using it to interface with the source files that make up this website.
 
-This post largely exists for the sake of figuring out how Obsidian behaves when forced into an environment that doesn't entirely agree with the "obsidian way of doing things".
+This post largely exists for the sake of figuring out how Obsidian behaves when forced into an environment that doesn't entirely agree with the "obsidian way of doing things". 
+[test link](@/blog/2023-07-07-ampr-vpn.md) 
 
 ---
 - Editing extra field is hard
