@@ -28,7 +28,7 @@ As I continue to write more and more Java libraries for personal and public use,
    - Slow builds
    - No easy way to publish custom artifacts or use custom groups
    - Sometimes unusably long cache policy
- - [Ultralight](/blog/2020/09/17/ultralight-writeup)
+ - [Ultralight](@/blog/2020-09-17-Ultralight-writeup.md)
    - Has a file transfer limit
    - Uses my personal API keys to interact with GitHub
    - No way to automate package updates
@@ -41,7 +41,7 @@ As a student, I prefer not to do the sensible solution--*spin up an [Artifactory
 
 ## What makes a maven server special?
 
-Really, not much. As outlined in my [previous maven-related post](/blog/2020/09/17/ultralight-writeup), a maven server is just a simple webserver with a specific directory structure, and some metadata files placed in specific locations.
+Really, not much. As outlined in my [previous maven-related post](@/blog/2020-09-17-Ultralight-writeup.md), a maven server is just a simple webserver with a specific directory structure, and some metadata files placed in specific locations.
 
 Let's say we wanted to publish a package with the following attributes:
 

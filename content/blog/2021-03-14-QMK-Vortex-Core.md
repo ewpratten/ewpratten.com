@@ -20,18 +20,22 @@ aliases:
 - /blog/qmk-vortex-core
 ---
 
-Last fall, I [purchased my first mechanical keyboard](/blog/2020/11/06/vortex-core), the [Vortex Core](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3550), and have been loving it ever since. Well, almost loving it. There are a few "quirks" of the keyboard that I wasn't super fond of, like: occasionally not sending `KEY_UP` commands back to the computer, or the badly documented and maintained system for building custom layouts.
+Last fall, I [purchased my first mechanical keyboard](@/blog/2020-11-06-Vortex-Core.md), the [Vortex Core](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3550), and have been loving it ever since. Well, almost loving it. There are a few "quirks" of the keyboard that I wasn't super fond of, like: occasionally not sending `KEY_UP` commands back to the computer, or the badly documented and maintained system for building custom layouts.
 
 In my previous post on this keyboard, I had mentioned @ChaoticEnigma's fork of [QMK](https://github.com/qmk/qmk_firmware) for the core. This custom firmware had been sitting on my mind for a while, and I finally decided to try it out on my keyboard. This post will cover the process of loading QMK on to a non-supported Vortex Core keyboard.
 
 The following are all the steps required to complete this process. Make sure to **read them all before getting started**. As per usual when I am outlining ways to modify hardware, you might brick your keyboard doing this so: *be careful*.
 
- 1. [Compiling the toolchain](#compiling-the-toolchain)
- 2. [Compiling the firmware](#compiling-the-firmware)
- 3. [Finding debugging hardware](#finding-debugging-hardware)
- 4. [Connecting to the core's JTAG interface](#connecting-to-the-core-s-jtag-interface)
- 5. [Unlocking the keyboard](#unlocking-the-keyboard)
- 6. [Flashing QMK](#flashing-qmk)
+<!-- no toc -->
+- [Compiling the toolchain](#compiling-the-toolchain)
+  - [OpenOCD](#openocd)
+  - [Pok3rtool](#pok3rtool)
+  - [Intermediary firmware](#intermediary-firmware)
+- [Compiling the firmware](#compiling-the-firmware)
+- [Finding debugging hardware](#finding-debugging-hardware)
+- [Connecting to the core's JTAG interface](#connecting-to-the-core-s-jtag-interface)
+- [Unlocking the keyboard](#unlocking-the-keyboard)
+- [Flashing QMK](#flashing-qmk)
 
 ## Compiling the toolchain
 

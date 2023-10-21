@@ -22,7 +22,7 @@ Bill's notebook is a large (about 580 posts) collection of random thoughts, idea
 > *"If you are looking to burn something, fire may be just the ticket"* - Bill Wurtz
 
 ## Choosing the right tool for the job
-If you haven't noticed yet, Im building a neural net to generate notes based on his writing style and content. Anyone who has read [my first post](/blog/2018/06/27/becomeranter) will know that I have already done a similar project in the past. This means *time to reuse come code*!
+If you haven't noticed yet, Im building a neural net to generate notes based on his writing style and content. Anyone who has read [my first post](@/blog/2018-06-27-BecomeRanter.md) will know that I have already done a similar project in the past. This means *time to reuse come code*!
 
 For this project, I decided to use an amazing library by @minimaxir called [textgenrnn](https://github.com/minimaxir/textgenrnn). This Python library will handle all of the heavy (and light) work of training an RNN on a text dataset, then generating new text. 
 

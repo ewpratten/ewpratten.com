@@ -16,7 +16,7 @@ aliases:
 - /blog/personal-ases
 ---
 
-As a [network operator](/network), I keep a fairly close eye on what my peers are up to. This is mainly to make sure nobody is doing something *too* stupid near my network, but also just out of curiosity. Its nice to know what other people are up to, both as a sanity check on my own network, and as a view into new things I could try out.
+As a network operator, I keep a fairly close eye on what my peers are up to. This is mainly to make sure nobody is doing something *too* stupid near my network, but also just out of curiosity. Its nice to know what other people are up to, both as a sanity check on my own network, and as a view into new things I could try out.
 
 I was recently inspired by [Hurricane Electric](https://he.net/)'s webpage that provides [statistics on IPv6 adoption](https://bgp.he.net/ipv6-progress-report.cgi) to create a website to display info about personal [Autonomous System Numbers](https://en.wikipedia.org/wiki/Autonomous_system_(Internet)). This site both caught my interest due to being a pretty raw plain-text website (can you tell, I like simple webpages?), and due to containing a ton of interesting information.
 
@@ -73,4 +73,3 @@ All of this data comes from a cron job of mine. Check out the live data on my AS
 
 [as-stats.ewpratten.com](https://as-stats.ewpratten.com/) (see also: [archived version](https://web.archive.org/web/as-stats.ewpratten.com/))
 
-To read more about my own network, see [my networking page](/network).

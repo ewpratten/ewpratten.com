@@ -18,7 +18,7 @@ aliases:
 - /blog/reading-a-bitmap
 ---
 
-Recently, @rsninja722 was telling me about [a project](https://github.com/rsninja722/file2bmp) he was working on. The basic idea is that you pass a file into his program, and it generates a bitmap of the binary data. This was inspired by [an old post of mine](/post/ef7b3166) where I did the same thing with a horribly written Python script and the library [`pillow`](https://github.com/python-pillow/Pillow). 
+Recently, @rsninja722 was telling me about [a project](https://github.com/rsninja722/file2bmp) he was working on. The basic idea is that you pass a file into his program, and it generates a bitmap of the binary data. This was inspired by [an old post of mine](@/blog/2019-09-11-Buildingimgfrombin.md) where I did the same thing with a horribly written Python script and the library [`pillow`](https://github.com/python-pillow/Pillow). 
 
 Both of us are currently teaching ourselves the **C** programming language. Him, for a break from JavaScript. Me, for no particular reason. As somebody who mostly lives in the world of high-level C-family languages (C++ and Python), learning C has been a challenging, fun, and rewarding experience. I enjoy immersing myself in *"the old way of doing things"*. This means sitting down with my Father's old [*ANSI Standard C Programmer's Reference*](https://archive.org/search.php?query=external-identifier%3A%22urn%3Aoclc%3Arecord%3A1028045558%22) book, and looking up what I need to know through a good old appendix full of libc headers and their function lists.
 

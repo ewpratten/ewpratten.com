@@ -21,5 +21,5 @@ We, as a team are looking to bring our programming and robots to the next level 
 It's time for a change, but what do we change to?
 
 ## Part 2
-The followup can be found [HERE](/frc/2019/06/24/LanguageHunt2.html).
+The followup can be found [HERE](@/blog/2019-06-24-LanguageHunt2.md).
 

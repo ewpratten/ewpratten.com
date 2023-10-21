@@ -56,4 +56,4 @@ This is almost entirely accomplished by a shell script and a custom CI script.
 
 ---
 
-If you have any questions about this system, want me to write another post about it, or would like me to walk you through setting up a notes workspace of your own, [contact me](/about)
+If you have any questions about this system, want me to write another post about it, or would like me to walk you through setting up a notes workspace of your own, [contact me](/contact)

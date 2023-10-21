@@ -18,7 +18,7 @@ This is exactly the kind of question I randomly ask while sitting in the middle 
 
 ## Geting started
 
-To get started, I needed a few things. Firstly, I have a laptop running [a Linux distribution](/about/#my-gear). This allows me to use [SSH](https://en.wikipedia.org/wiki/Secure_Shell) and [SCP](https://en.wikipedia.org/wiki/Secure_copy). There are Windows versions of both of these programs, but I find the "linux experience" easier to use. Secondly, I have grabbed one of [5024](https://www.thebluealliance.com/team/5024)'s [robots](https://cs.5024.ca/webdocs/docs/robots) to be subjected to my experiment. The components I care about are: 
+To get started, I needed a few things. Firstly, I have a laptop running Linux. This allows me to use [SSH](https://en.wikipedia.org/wiki/Secure_Shell) and [SCP](https://en.wikipedia.org/wiki/Secure_copy). There are Windows versions of both of these programs, but I find the "linux experience" easier to use. Secondly, I have grabbed one of [5024](https://www.thebluealliance.com/team/5024)'s [robots](https://cs.5024.ca/webdocs/docs/robots) to be subjected to my experiment. The components I care about are: 
 
  - A RoboRIO running 2019v12 firmware
  - 2 [TalonSRX](https://www.ctr-electronics.com/talon-srx.html) motor controllers 

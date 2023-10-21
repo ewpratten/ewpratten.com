@@ -94,4 +94,4 @@ The entire configuration process is outlined in the Dire Wolf [user manual](http
 
 ## Need help?
 
-If you happened to follow this guide and need more configuration help, [send me a message](/about).
+If you happened to follow this guide and need more configuration help, [send me a message](/contact).

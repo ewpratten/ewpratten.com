@@ -130,7 +130,7 @@ Here is the new and improved list of my project ideas that never saw the light o
 - `amprdns`
   - An alternate DNS service, only avalible to 44net hosts
 - `betaroute`
-  - A peer-to-peer routing tool (example implementation of [this RFC](/rfc/modern-repeater-linking))
+  - A peer-to-peer routing tool
 - `MiwuStickers`
   - A custom sticker pack
 - `shoot-to-interact`

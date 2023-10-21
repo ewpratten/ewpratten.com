@@ -139,4 +139,3 @@ Try it yourself!
 mtr -rwc 1 rickroll.as204466.va3zza.com
 ```
 
-For more AS204466 projects, view [my networking page](/as204466).

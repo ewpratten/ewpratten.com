@@ -17,7 +17,7 @@ aliases:
 - /blog/drivetrain-navigation
 ---
 
-This post is a continuation on my "Notes from FRC" series. If you haven't already, I recommend reading my post on [Converting joystick data to tank-drive outputs](/blog/2020/08/03/joystick-to-voltage). Some concepts in this post were introduced there. Like last time, to see the production code behind this post, check [here](https://github.com/frc5024/lib5k/blob/ab90994b2a0c769abfdde9a834133725c3ce3a38/common_drive/src/main/java/io/github/frc5024/common_drive/DriveTrainBase.java) and [here](https://github.com/frc5024/lib5k/tree/master/purepursuit/src/main/java/io/github/frc5024/purepursuit/pathgen).
+This post is a continuation on my "Notes from FRC" series. If you haven't already, I recommend reading my post on [Converting joystick data to tank-drive outputs](@/blog/2020-08-03-Joystick-to-Voltage.md). Some concepts in this post were introduced there. Like last time, to see the production code behind this post, check [here](https://github.com/frc5024/lib5k/blob/ab90994b2a0c769abfdde9a834133725c3ce3a38/common_drive/src/main/java/io/github/frc5024/common_drive/DriveTrainBase.java) and [here](https://github.com/frc5024/lib5k/tree/master/purepursuit/src/main/java/io/github/frc5024/purepursuit/pathgen).
 
 At *Raider Robotics*, most of my work has been spent on these three subjects:
  - Productivity infrastructure
@@ -62,7 +62,7 @@ $$
 \Delta\theta = \arctan(\Delta y, \Delta x) \cdot \frac{180}{\pi}
 $$
 
-Notice how a polar coordinate containing these values: $\big[\begin{smallmatrix}\Delta d  \\  \Delta\theta\end{smallmatrix}\big]$ is very similar to our joystick input vector from the [previous post](/blog/2020/08/03/joystick-to-voltage): $\big[\begin{smallmatrix}T \\ S\end{smallmatrix}\big]$. Converting our positional error into a polar coordinate makes the process of navigating to any point very simple. All we need to do is take the [Hadamard product](https://en.wikipedia.org/wiki/Hadamard_product_(matrices)) of the coordinate matrix with a gain matrix to make small adjustments to the output based on the physical characteristics of your robot, like the amount of voltage required to overcome static friction. This is a very simple P-gain controller.
+Notice how a polar coordinate containing these values: $\big[\begin{smallmatrix}\Delta d  \\  \Delta\theta\end{smallmatrix}\big]$ is very similar to our joystick input vector from the [previous post](@/blog/2020-08-03-Joystick-to-Voltage.md): $\big[\begin{smallmatrix}T \\ S\end{smallmatrix}\big]$. Converting our positional error into a polar coordinate makes the process of navigating to any point very simple. All we need to do is take the [Hadamard product](https://en.wikipedia.org/wiki/Hadamard_product_(matrices)) of the coordinate matrix with a gain matrix to make small adjustments to the output based on the physical characteristics of your robot, like the amount of voltage required to overcome static friction. This is a very simple P-gain controller.
 
 $$
 input = \begin{bmatrix}\Delta d  \\  \Delta\theta\end{bmatrix}\circ\begin{bmatrix}K_t  \\  K_s \end{bmatrix}
@@ -90,4 +90,4 @@ For a real-world example of this method in use, check out 5024's robot (bottom r
 
 ---
 
-I hope someone will some day find this post helpful. Most papers about this topic went way over my head in 10th grade, or were over-complicated for the task. If you would like me to go further in depth on this topic, [contact me](/about/) and let me know. I will gladly help explain things, or write a new post further expanding on a topic.
+I hope someone will some day find this post helpful. Most papers about this topic went way over my head in 10th grade, or were over-complicated for the task. If you would like me to go further in depth on this topic, [contact me](/contact) and let me know. I will gladly help explain things, or write a new post further expanding on a topic.

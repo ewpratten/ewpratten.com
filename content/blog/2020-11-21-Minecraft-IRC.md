@@ -16,7 +16,7 @@ aliases:
 - /blog/minecraft-irc
 ---
 
-As I talked about in my post [about Minecraft modpack development](/blog/2020/10/24/corepack-development), I got back in to playing Minecraft earlier this year. I primairly play on a server full of friends, where the server owner has [dynmap](https://github.com/webbukkit/dynmap) installed. Dynmap is a handy tool that provides a near-real-time overview of the minecraft world in the form of a webapp. I always keep Dynmap open on my laptop so I can chat with whoever is online, and see whats being worked on.
+As I talked about in my post [about Minecraft modpack development](@/blog/2020-10-24-CorePack-Development.md), I got back in to playing Minecraft earlier this year. I primairly play on a server full of friends, where the server owner has [dynmap](https://github.com/webbukkit/dynmap) installed. Dynmap is a handy tool that provides a near-real-time overview of the minecraft world in the form of a webapp. I always keep Dynmap open on my laptop so I can chat with whoever is online, and see whats being worked on.
 
 While dynmap has a built-in chat log, and the ability to send chats, the incoming chat messages do not persist, and the outgoing chat messages don't always show your in-game username (but instead, your public IP address). Since I always have an IRC client open, I figured that making use of my IRC client to generate a persistent chat log in the background would be a good solution. Unfortunately, I could not find anyone who has ever built a `Minecraft <-> IRC` bridge. Thus my project, [chatster](https://github.com/Ewpratten/chatster), was born. 
 

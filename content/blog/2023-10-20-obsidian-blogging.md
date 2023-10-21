@@ -18,11 +18,12 @@ aliases:
 It recently occurred to me that [Obsidian](https://obsidian.md) is capable of editing *any* type of markdown document store, not just its own note "Vaults". So, as a test I've been using it to interface with the source files that make up this website.
 
 This post largely exists for the sake of figuring out how Obsidian behaves when forced into an environment that doesn't entirely agree with the "obsidian way of doing things". 
-[test link](@/blog/2023-07-07-ampr-vpn.md) 
 
 ---
 - Editing extra field is hard
 - Hot reload works very nicely (with auto-save when typing!)
 - Editing properties is pretty nice
 - Graph is very good
--
+- Handling Zola @-links
+- Plugin hot-reload
+- 

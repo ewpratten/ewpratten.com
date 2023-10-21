@@ -11,7 +11,7 @@ aliases:
 - /blog/personal-pbx
 ---
 
-Over the past few months, I have built my own [internet backbone router](/blog/amprnet-bgp) (and an [internet exchange](https://ffixp.net)). So logically, the next step is to branch off into telephony... *right?*
+Over the past few months, I have built my own [internet backbone router](@/blog/2021-11-14-amprnet-bgp.md) (and an [internet exchange](https://ffixp.net)). So logically, the next step is to branch off into telephony... *right?*
 
 Eh, even if I never get any practical use out of any of this in the end, at least its content for the blog.
 

@@ -16,7 +16,7 @@ aliases:
 - /blog/ampr-vultr-bgp
 ---
 
-Since I briefly [waved my hands over this topic](/blog/amprnet-bgp/) last year, I have gotten many emails and DMs from fellow amateur radio operators asking for help announcing their own `/24`s to the world. 
+Since I briefly [waved my hands over this topic](@/blog/2021-11-14-amprnet-bgp.md) last year, I have gotten many emails and DMs from fellow amateur radio operators asking for help announcing their own `/24`s to the world. 
 
 This post is aimed at existing operators of AMPRNet who wish to BGP announce a `/24` or larger of IPv4 space from a Virtual Private Server (VPS). The VPS provider I have chosen for this process is [Vultr](https://www.vultr.com/?ref=8932365), since they are highly recommended in the AMPRNet community and have free BGP sessions for their machines upon request.
 
