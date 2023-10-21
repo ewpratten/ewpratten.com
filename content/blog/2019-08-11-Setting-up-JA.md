@@ -1,11 +1,15 @@
 ---
 layout: page
-title:  "How I set up ひらがな input on my laptop"
-description: "I3wm makes everything 10x harder than it should be"
+title: How I set up ひらがな input on my laptop
+description: I3wm makes everything 10x harder than it should be
 date: 2019-08-12
-tags: notes languages
-aliases: [/blog/2019/08/12/setting-up-ja]
-draft: true
+tags:
+  - languages
+  - walkthrough
+  - linux
+aliases:
+  - /blog/2019/08/12/setting-up-ja
+draft: false
 ---
 
 I am currently working with [Hiragana](https://en.wikipedia.org/wiki/Hiragana), [Katakana](https://en.wikipedia.org/wiki/Katakana), and, [Kanji](https://en.wikipedia.org/wiki/Kanji) in some projects, and needed a more reliable way to write than running some [romaji](https://en.wikipedia.org/wiki/Romanization_of_Japanese) through an online translator. So, this post will detail what I did to enable native inputs on my laptop. This guide is specifically for [i3wm](https://i3wm.org/), because it does not obey system settings for languages and inputs.
@@ -89,5 +93,3 @@ Now, log out and in again to let ibus properly start again, and there should now
 
 ## Workflow
 `ibus` runs in the background and will show an indication of your selected language upon pressing the keyboard shortcut set in the [setup tool](#configuring-ibus). For languages like Japanese, where it's writing systems do not use the English / Latin-based alphabets, `ibus` will automatically convert your words as you type (this behavior will be different from language to language).
-
-An example of this is as follows. I want to write the word *Computer* in Japanese (Katakana to be exact). I would switch to `mozc` input, and start typing the romaji word for computer, *Pasokon*. This will automatically be converted to Hiragana, *ぱそこん*. *Computer* is not a word that one would write in Hiragana as far as I know, so Katakana would be a better choice. To convert this word, I just press `Space` (This is indicated in the bottom left of my screen by `ibus`), and I now have *パソコン*, the Katakana word for *Computer*!

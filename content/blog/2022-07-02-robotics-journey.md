@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "My journey through robotics" 
-description: "5 years of self-taught robotics development, recapped"
+title: My journey through robotics
+description: 5 years of self-taught robotics development, recapped
 date: 2022-07-02
-tags: story
+tags:
+  - story
+  - frc
 draft: true
 extra:
-  
   auto_center_images: true
   excerpt: From 2016 to 2021, I dedicated most of my time to robotics and control systems programming. This is my journey
 ---

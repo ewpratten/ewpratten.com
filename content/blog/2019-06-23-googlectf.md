@@ -1,10 +1,12 @@
 ---
 layout: page
-title:  "I gave Google's CTF a short try and learned a thing or two"
-description: "But exams got in the way and took all the fun"
-date:   2019-06-23
-tags: ctf
-alises: [https://retrylife.ca/blog/2019/06/23/googlectf]
+title: I gave Google's CTF a short try and learned a thing or two
+description: But exams got in the way and took all the fun
+date: 2019-06-23
+tags:
+  - ctf
+aliases:
+  - /blog/2019/06/23/googlectf
 ---
 
 Honestly, I completely forgot that this was the weekend of Google's online [CTF Qualifications](https://g.co/ctf) for 2019 and was late, unprepared, busy, and did not have a team to work with.

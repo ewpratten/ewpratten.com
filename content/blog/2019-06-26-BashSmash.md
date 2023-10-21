@@ -6,8 +6,8 @@ date: 2019-06-26
 tags:
   - project
   - bash
-alises:
-  - https://retrylife.ca/blog/2019/06/26/bashsmash
+aliases:
+  - /blog/2019/06/26/bashsmash
 ---
 
 I was watching this great [Liveoverflow video](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiOhNze_4fjAhUiB50JHR12D8AQwqsBMAB6BAgJEAQ&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6D1LnMj0Yt0&usg=AOvVaw2nOgft0SoPZujc9js9Vxhx) yesterday, and really liked the idea of building escape sequences with strings. So, I built a new tool, [BashSmash](https://pypi.org/project/bashsmash/). 

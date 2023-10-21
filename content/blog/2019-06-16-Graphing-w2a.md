@@ -6,8 +6,8 @@ date: 2019-06-16
 tags:
   - frc
   - data-analysis
-alises:
-  - https://retrylife.ca/blog/2019/06/16/graphing-w2a
+aliases:
+  - /blog/2019/06/16/graphing-w2a
 ---
 
 I was scrolling through reddit the other day, and came across [this great post](https://www.reddit.com/r/FRC/comments/byzv5q/i_know_what_im_doing/) by u/[MasterQuacks](https://www.reddit.com/user/MasterQuacks/).

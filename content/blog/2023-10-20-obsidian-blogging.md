@@ -5,6 +5,7 @@ description: Trying a new way to write for this site
 date: 2023-10-20
 tags:
   - meta
+  - random
 draft: true
 extra:
   auto_center_images: true
