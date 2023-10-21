@@ -3,6 +3,7 @@ import sys
 import re
 import frontmatter
 import yaml
+from pathlib import Path
 
 BLOG_POST_RE = re.compile(r"^\d{4}-\d+-\d+-(.*)\.md$")
 
