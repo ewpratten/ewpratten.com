@@ -17,8 +17,8 @@ Cargo.lock
 
 # Obsidian
 /content/.obsidian/themes
-.obsidian/appearance.json
-.obsidian/workspace.json
+/content/.obsidian/appearance.json
+/content/.obsidian/workspace.json
 
 # Python
 .venv
