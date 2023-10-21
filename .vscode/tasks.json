@@ -23,6 +23,17 @@
                 "--open"
             ],
             "problemMatcher": []
+        },
+        {
+            "label": "Initialize Python venv",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "-m",
+                "venv",
+                ".venv"
+            ],
+            "problemMatcher": []
         }
     ]
 }
