@@ -7,6 +7,7 @@ tags:
   - github
   - frc
   - project
+  - java
 extra:
   excerpt: "I was recently accepted into the GitHub Codespaces beta test program and decided to try it out on the largest open source project I am  currently involved with. "
 aliases:

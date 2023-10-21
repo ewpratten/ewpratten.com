@@ -7,6 +7,7 @@ tags:
   - project
   - networking
   - bgp
+  - data-analysis
 draft: false
 extra:
   auto_center_images: true

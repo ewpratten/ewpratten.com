@@ -7,9 +7,9 @@ written: 2021-04-20
 tags:
   - project
   - raspberrypi
-  - hamradio
   - aprs
   - walkthrough
+  - radio
 extra:
   excerpt: Using an extra radio and some spare parts, I set up an APRS/APRS-IS/APRStt digipeater. This post covers some of the details.
 redirect_from:

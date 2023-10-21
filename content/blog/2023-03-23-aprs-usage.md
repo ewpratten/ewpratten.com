@@ -6,6 +6,7 @@ date: 2023-03-23
 tags:
   - radio
   - aprs
+  - data-analysis
 draft: true
 extra:
   auto_center_images: true

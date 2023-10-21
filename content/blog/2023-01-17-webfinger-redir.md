@@ -1,13 +1,15 @@
 ---
 layout: page
-title: "Lazy search for Mastodon accounts" 
-description: "Webfinger + Cloudflare Workers + Firefox custom search engines"
+title: Lazy search for Mastodon accounts
+description: Webfinger + Cloudflare Workers + Firefox custom search engines
 date: 2023-01-17
-tags: project
+tags:
+  - project
+  - javascript
 draft: false
 extra:
   auto_center_images: true
-  excerpt: "I made a custom search prefix for my browser that can resolve ActivityPub accounts into their profile pages"
+  excerpt: I made a custom search prefix for my browser that can resolve ActivityPub accounts into their profile pages
   discuss:
     reddit: https://www.reddit.com/r/ewpratten/comments/12xzulo/lazy_search_for_mastodon_accounts/
 ---
