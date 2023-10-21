@@ -40,9 +40,29 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "55b0a9f99b36a7a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/2020-08-03-Joystick-to-Voltage.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "593c8a945e0bc198",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -108,7 +128,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/2019-08-11-Setting-up-JA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +144,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/2019-08-11-Setting-up-JA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,9 +165,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "blog/2019-08-11-Setting-up-JA.md"
-              }
+              "state": {}
             }
           },
           {
@@ -179,8 +195,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "22ff53eb1a88a69b",
+  "active": "593c8a945e0bc198",
   "lastOpenFiles": [
+    "blog/2020-08-03-Joystick-to-Voltage.md",
+    "blog/2019-08-11-Setting-up-JA.md",
     "blog/2018-06-27-BecomeRanter.md",
     "blog/2017-11-24-weatherballoon-lost.md",
     "blog/2019-06-12-Styiling-GitHub.md",
@@ -191,9 +209,7 @@
     "blog/frc-languages.md",
     "blog/2020-09-24-Gopro-Webcam.md",
     "blog/2023-10-20-obsidian-blogging.md",
-    "blog/2019-08-11-Setting-up-JA.md",
     "blog/2020-08-13-Drivetrain-navigation.md",
-    "blog/2020-08-03-Joystick-to-Voltage.md",
     "blog/2019-06-23-googlectf.md",
     "blog/2022-07-02-robotics-journey.md",
     "blog/2020/08/23/notetaking-with-latex.md",

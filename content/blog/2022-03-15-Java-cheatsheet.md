@@ -1,15 +1,17 @@
 ---
 layout: page
-title: "A Java development cheatsheet for my classmates" 
-description: "PROG10082: Reference Material"
-date:   2022-03-15
+title: A Java development cheatsheet for my classmates
+description: 'PROG10082: Reference Material'
+date: 2022-03-15
 tags: reference
 draft: true
 extra:
-  excerpt: This document is written for my PROG10082 classmates as a quick reference for some Java concepts that were skipped over in the course.
-  
+  excerpt: This document is written for my PROG10082 classmates as a quick reference
+    for some Java concepts that were skipped over in the course.
   hidden: true
   auto_center_images: true
+aliases:
+- /blog/java-cheatsheet
 ---
 
 This document is written for my PROG10082 classmates as a quick reference for some Java concepts that were skipped over in the course. This document may be updated as needed.

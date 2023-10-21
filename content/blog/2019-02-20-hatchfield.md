@@ -1,14 +1,16 @@
 ---
-title: "Robot reveal: HATCHField"
+title: 'Robot reveal: HATCHField'
 description: What I have been working on for the past few months
 date: 2019-02-20
 tags:
-  - video
-  - frc
+- video
+- frc
 draft: false
 extra:
   excerpt: HATCHField is a competitive robot built by Raider Robotics.
   icon: las la-play
+aliases:
+- /blog/hatchfield
 ---
 
 My roles in this project included:

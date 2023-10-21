@@ -3,10 +3,11 @@ layout: page
 title: GitHub's CSS is boring. So I refreshed the design
 date: 2019-06-12
 tags:
-  - project
-  - github
+- project
+- github
 aliases:
-  - /blog/2019/06/12/styiling-github
+- /blog/2019/06/12/styiling-github
+- /blog/styiling-github
 ---
 
 I have been using GitHub since 2017, and have been getting tired of GitHub's theme. I didn't need a huge change, just a small refresh. So, to solve this, I whipped out [Stylus](https://addons.mozilla.org/en-CA/firefox/addon/styl-us/) and made a nice little CSS file for it.

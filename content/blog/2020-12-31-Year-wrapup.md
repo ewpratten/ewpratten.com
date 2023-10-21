@@ -5,15 +5,17 @@ description: I wrote a lot of code this year. This post looks back on it all
 date: 2020-12-31
 written: 2020-12-09
 tags:
-  - project
-  - frc
+- project
+- frc
 extra:
-  excerpt: 2020 has been my most productive year so far in terms of software development. This post looks back at the year
+  excerpt: 2020 has been my most productive year so far in terms of software development.
+    This post looks back at the year
 redirect_from:
-  - /post/g494l5j3/
-  - /g494l5j3/
+- /post/g494l5j3/
+- /g494l5j3/
 aliases:
-  - /blog/2020/12/31/year-wrapup
+- /blog/2020/12/31/year-wrapup
+- /blog/year-wrapup
 ---
 
 *So, whats up with 2020?* For readers who do not know me personally, here is a quick overview:
@@ -83,4 +85,3 @@ People who know me in real life know of a bit of a challenge I set for myself a 
 ### This website
 
 I have now experimented with three posting schedules for this website: monthly, bi-weekly, and weekly. Monthly posts were too spread-apart, and left this site feeling a little empty. I switched to weekly posting through the summer, which worked out great. Since school started again, I have moved to bi-weekly posts, writing each post a few weeks before publishing it (hover over the date of any post to see the date I wrote it). The bi-weekly system seems to be working very well, and I will likely stick to it until summer 2021, so enjoy more content fairly regularly (and remember to subscribe to my [RSS Feed](/feed.xml)).
-

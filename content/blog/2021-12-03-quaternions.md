@@ -4,13 +4,16 @@ title: A rusty guide to quaternions
 description: Fast and efficient 3D object manipulation
 date: 2021-12-03
 tags:
-  - reference
-  - math
+- reference
+- math
 draft: false
 extra:
   uses:
-    - katex
-  excerpt: This post is an overview of Quaternions for Rust programmers, and anyone willing to learn.
+  - katex
+  excerpt: This post is an overview of Quaternions for Rust programmers, and anyone
+    willing to learn.
+aliases:
+- /blog/quaternions
 ---
 
 The running joke in the graphics programming world is that nobody understands quaternions. These big scary math-filled types are always <em>someone else's problem</em>. While quaternions <del>are</del> may be scary, they serve an important purpose in the world of computing as they

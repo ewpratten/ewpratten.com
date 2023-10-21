@@ -1,15 +1,18 @@
 ---
 layout: page
-title: "Adventures in BGP: routing my own public IPv4 address space"
+title: 'Adventures in BGP: routing my own public IPv4 address space'
 description: A college student, playing with the "big boys"
 date: 2021-11-14
 tags:
-  - reference
-  - amprnet
-  - bgp
-  - networking
+- reference
+- amprnet
+- bgp
+- networking
 extra:
-  excerpt: This post covers the process I went through to publicly route my own /24 block of IP addresses with low-cost hardware.
+  excerpt: This post covers the process I went through to publicly route my own /24
+    block of IP addresses with low-cost hardware.
+aliases:
+- /blog/amprnet-bgp
 ---
 
 Your first, and possibly only question is likely: *"what?"*, and I forgive you for asking such a thing. As probably any reader of my posts knows very well, IPv4 address blocks are practically impossible to get, and more than impossible to get for personal use. To quickly clear things up, my address block is *not* for personal use, but in comparison to the majority of the internet's existing address block owners, I am basically a single person holding on to a `/24` subnet for dear life while the giants of large internet corporations are eating up everything around me.

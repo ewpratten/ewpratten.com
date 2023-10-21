@@ -4,13 +4,14 @@ title: Compiling BrainFuck with a shell script
 description: That was easy
 date: 2020-01-20
 tags:
-  - random
-  - bash
+- random
+- bash
 redirect_from:
-  - /post/es3v140d/
-  - /es3v140d/
+- /post/es3v140d/
+- /es3v140d/
 aliases:
-  - /blog/2020/01/20/brainfuckinbash
+- /blog/2020/01/20/brainfuckinbash
+- /blog/brainfuckinbash
 ---
 
 [BrainFuck](https://en.wikipedia.org/wiki/Brainfuck) is an [esoteric programming language](https://en.wikipedia.org/wiki/Esoteric_programming_language) that is surprisingly easy to implement. It is almost on the same level as "Hello, world!", but for compilers and interpreters. In this post, ill share my new little BrainFuck compiler I built with a bash script.

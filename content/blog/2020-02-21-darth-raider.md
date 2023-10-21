@@ -1,14 +1,16 @@
 ---
-title: "Robot reveal: Darth Raider"
+title: 'Robot reveal: Darth Raider'
 description: What I have been working on for the past few months
 date: 2020-02-21
 tags:
-  - video
-  - frc
+- video
+- frc
 draft: false
 extra:
   excerpt: Darth Raider is a competitive robot built by Raider Robotics.
   icon: las la-play
+aliases:
+- /blog/darth-raider
 ---
 
 My roles in this project included:

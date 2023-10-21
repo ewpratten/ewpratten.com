@@ -1,20 +1,22 @@
 ---
 layout: page
-title: "My first mechanical keyboard: The Vortex Core"
+title: 'My first mechanical keyboard: The Vortex Core'
 description: Just the right amount of obscure
 date: 2020-11-06
 written: 2020-09-28
 tags:
-  - keyboards
-  - workflow
-  - product
+- keyboards
+- workflow
+- product
 extra:
-  excerpt: I recently purchased my first mechanical keyboard, and decided to go "all in" with a 40% layout.
+  excerpt: I recently purchased my first mechanical keyboard, and decided to go "all
+    in" with a 40% layout.
 redirect_from:
-  - /post/XlPl0k24/
-  - /XlPl0k24/
+- /post/XlPl0k24/
+- /XlPl0k24/
 aliases:
-  - /blog/2020/11/06/vortex-core
+- /blog/2020/11/06/vortex-core
+- /blog/vortex-core
 ---
 
 About a month ago, I decided to buy myself a mechanical keyboard. I have always been a huge fan of membrane / laptop keyboards. My current laptop (the Lenovo T480) has a very nice feel to its keyboard, and my previous laptop (the Acer R11) had the best keyboard I have ever used. The switch to mechanical wasn't my first choice, although I was open to trying something new, so didn't see it as a negative. Ever since adding another monitor to my setup, I haven't had enough room on my desk to fit a keyboard. This generally is not a problem since I mainly use my laptop, but I occasionally need to use my desktop for rendering work, which requires a separate keyboard.
@@ -71,4 +73,3 @@ Speaking of flashing the board, with the MPC firmware, the process for loading c
 Well, that depends. If you are the type of person to customize everything for maximum efficiency, go for it! The Vortex Core is a very nice keyboard with more configurability than I can wrap my head around (even if you need a third party tool to do so). If you just want something simple, stick to a 60% keyboard. The lack of numbers on the core drives many people crazy.
 
 For programmers: you basically need to remap your keys. Most common keys (brackets, quotes, operators, ...) are hidden behind one or two function keys, and the learning curve might hurt for the first week or so.
-

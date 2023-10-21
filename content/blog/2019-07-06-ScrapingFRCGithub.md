@@ -1,10 +1,12 @@
 ---
 layout: page
-title:  "Scraping FRC team's GitHub accounts to gather large amounts of data"
-description: "There are a lot of teams..."
-date:   2019-07-06
+title: Scraping FRC team's GitHub accounts to gather large amounts of data
+description: There are a lot of teams...
+date: 2019-07-06
 tags: frc
-aliases: [/blog/2019/07/06/scrapingfrcgithub]
+aliases:
+- /blog/2019/07/06/scrapingfrcgithub
+- /blog/scrapingfrcgithub
 ---
 
 I was curious about the most used languages for FRC, so I build a Python script to find out what they where. 

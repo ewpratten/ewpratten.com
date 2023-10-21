@@ -4,13 +4,16 @@ title: What are people actually doing with APRS?
 description: An analysis of worldwide APRS data
 date: 2023-03-23
 tags:
-  - radio
-  - aprs
-  - data-analysis
+- radio
+- aprs
+- data-analysis
 draft: true
 extra:
   auto_center_images: true
-  excerpt: This post looks in to what radio operators are actually doing with the APRS network
+  excerpt: This post looks in to what radio operators are actually doing with the
+    APRS network
+aliases:
+- /blog/aprs-usage
 ---
 
 Sometimes I wonder how many people really use the amateur radio services I hear about.

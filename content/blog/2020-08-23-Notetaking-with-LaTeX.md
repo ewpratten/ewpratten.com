@@ -1,17 +1,18 @@
 ---
 layout: page
-title:  "Taking notes with Markdown and LaTeX"
-description: "Using a lot of tech to replace a piece of paper"
-date:   2020-08-23
+title: Taking notes with Markdown and LaTeX
+description: Using a lot of tech to replace a piece of paper
+date: 2020-08-23
 tags: pandoc latex bazel
 extra:
-    excerpt: >-
-        I have completely reworked my school notetaking system to use LaTeX. 
-        This post outlines how I did everything, and my new workflow.
-redirect_from: 
- - /post/68df02l4/
- - /68df02l4/
-aliases: [/blog/2020/08/23/notetaking-with-latex]
+  excerpt: I have completely reworked my school notetaking system to use LaTeX.  This
+    post outlines how I did everything, and my new workflow.
+redirect_from:
+- /post/68df02l4/
+- /68df02l4/
+aliases:
+- /blog/2020/08/23/notetaking-with-latex
+- /blog/notetaking-with-latex
 ---
 
 *You can view my public demo for this post [here](https://github.com/Ewpratten/school-notes-demo)*

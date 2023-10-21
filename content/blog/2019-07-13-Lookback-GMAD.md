@@ -4,9 +4,10 @@ title: Taking a look back at GMAD
 description: Fun, Simple, and Quick
 date: 2019-07-13
 tags:
-  - project
+- project
 aliases:
-  - /blog/2019/07/13/lookback-gmad
+- /blog/2019/07/13/lookback-gmad
+- /blog/lookback-gmad
 ---
 
 One day, back in June of 2018, I was both looking for a new project to work on, and trying to decide which Linux distro to install on one of my computers. From this, a little project was born. [Give Me a Distro](http://ewpratten.retrylife.ca/GiveMeADistro/) (or, GMAD, as I like to call it) is a little website that chooses a random distribution of Linux and shows a description of what you are about to get yourself into, and a download link for the latest ISO.

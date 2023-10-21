@@ -4,12 +4,14 @@ title: Rainbow keyboard
 description: Game-specific keyboard layouts are really handy
 date: 2023-06-15
 tags:
-  - keyboards
-  - random
+- keyboards
+- random
 draft: false
 extra:
   auto_center_images: true
   excerpt: This post shows off my custom keyboard layout for playing Rainbow Six Siege
+aliases:
+- /blog/rainbow-keyboard
 ---
 
 In my ever-continuing quest to do interesting things with custom keyboards, I recently had the idea to take the left half of my [Ferris sweep](https://github.com/davidphilipbarr/Sweep) and configure it specifically for use in the game [Rainbow Six Siege](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six).

@@ -1,13 +1,15 @@
 ---
 layout: page
-title: "A brief walk through my all-time favorite songs" 
-description: "..and crashing spotify clients in the process"
+title: A brief walk through my all-time favorite songs
+description: ..and crashing spotify clients in the process
 date: 2022-11-10
 tags: music
 draft: true
 extra:
   auto_center_images: true
-  excerpt: 
+  excerpt: null
+aliases:
+- /blog/mega-playlists
 ---
 
 Music is a core part of my daily life. For about 13 hours straight each day, I have all kinds of tracks playing while I work on things. Having a constant stream of music playing is a habit I have held for years, it keeps some rhythm in my day, and at the same time gives me plenty of chances to find new tracks and artists to listen to.

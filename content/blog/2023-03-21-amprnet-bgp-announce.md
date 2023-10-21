@@ -4,13 +4,15 @@ title: Announcing your shiny new AMPRNet BGP allocation
 description: A crash course on BGP for radio people
 date: 2023-03-21
 tags:
-  - radio
-  - amprnet
-  - bgp
+- radio
+- amprnet
+- bgp
 draft: true
 extra:
   auto_center_images: true
   excerpt: This post is a quick guide to announcing your shiny new AMPRNet BGP allocation
+aliases:
+- /blog/amprnet-bgp-announce
 ---
 
 So, you got yourself a shiny new [AMPRNet](https://ampr.org) BGP allocation. What's next?

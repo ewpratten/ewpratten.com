@@ -5,16 +5,18 @@ description: A free and secure way to host personal Java libraries and applicati
 date: 2021-02-25
 written: 2021-02-22
 tags:
-  - maven
-  - project
-  - java
+- maven
+- project
+- java
 extra:
-  excerpt: In my never-ending hunt for a suitable solution for hosting Java libraries, I take a stop to try out Keybase Filesystem (KBFS)
+  excerpt: In my never-ending hunt for a suitable solution for hosting Java libraries,
+    I take a stop to try out Keybase Filesystem (KBFS)
 redirect_from:
-  - /post/g4lk45j3/
-  - /g4lk45j3/
+- /post/g4lk45j3/
+- /g4lk45j3/
 aliases:
-  - /blog/2021/02/25/kbfs-maven
+- /blog/2021/02/25/kbfs-maven
+- /blog/kbfs-maven
 ---
 
 As I continue to write more and more Java libraries for personal and public use, I keep finding myself limited by my library hosting solutions. Maven servers are currently my go-to way of storing and organizing all things Java. I have gone through a solid handful of servers over the past few years, here are my comments on each:

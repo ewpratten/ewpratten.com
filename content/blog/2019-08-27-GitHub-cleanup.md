@@ -1,13 +1,15 @@
 ---
 layout: page
 title: I did some cleaning
-description: Spring cleaning is fun when it isn't spring, and a computer does all the work
+description: Spring cleaning is fun when it isn't spring, and a computer does all
+  the work
 date: 2019-08-27
 tags:
-  - random
-  - github
+- random
+- github
 aliases:
-  - /blog/2019/08/27/github-cleanup
+- /blog/2019/08/27/github-cleanup
+- /blog/github-cleanup
 ---
 
 As I am continuing to check items off my TODO list before school starts, I have come to an item I have been putting off for a while. **Clean up GitHub Account**. Luckily, I discovered a little trick to make the process of deleting unused repos a little easier!

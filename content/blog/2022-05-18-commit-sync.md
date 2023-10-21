@@ -4,12 +4,15 @@ title: Commit syncing across hosted GIT instances
 description: How I keep my commit graph alive
 date: 2022-05-18
 tags:
-  - random
-  - git
+- random
+- git
 draft: false
 extra:
   auto_center_images: true
-  excerpt: This post covers how to keep your commit graph alive across multiple GIT instances by syncing your commit history to magic repos.
+  excerpt: This post covers how to keep your commit graph alive across multiple GIT
+    instances by syncing your commit history to magic repos.
+aliases:
+- /blog/commit-sync
 ---
 
 Since September of 2018 (3 and a half years ago) I have been roughly holding a streak of going no more than three days without making a commit to some project on GitHub.
@@ -99,4 +102,3 @@ Importantly, the `--allow-empty` flag removes the requirement for any files to b
 ## Conclusion
 
 Uh, ya. Cool. With your scripting language of choice, you can chain these commands together, toss a `git push` in there, stick this in a cron job, and have yourself a nice, healthy commit graph.
-

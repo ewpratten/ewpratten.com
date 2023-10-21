@@ -1,15 +1,17 @@
 ---
 layout: page
-title:  "Running RoboRIO firmware inside Docker"
-description: "Containerized native ARMv7l emulation in 20 minutes"
-date:   2020-05-19
+title: Running RoboRIO firmware inside Docker
+description: Containerized native ARMv7l emulation in 20 minutes
+date: 2020-05-19
 tags: frc roborio emulation
-redirect_from: 
- - /post/5d3nd9s4/
- - /5d3nd9s4/
-aliases: [/blog/2020/05/19/running-roborio-native]
+redirect_from:
+- /post/5d3nd9s4/
+- /5d3nd9s4/
+aliases:
+- /blog/2020/05/19/running-roborio-native
+- /blog/running-roborio-native
 extra:
-    excerpt: This post covers how to run a RoboRIO's operating system in Docker
+  excerpt: This post covers how to run a RoboRIO's operating system in Docker
 ---
 
 It has now been 11 weeks since the last time I have had access to a [RoboRIO](https://www.ni.com/en-ca/support/model.roborio.html) to use for debugging code, and there are limits to my simulation software. So, I really only have one choice: *emulate my entire robot*.

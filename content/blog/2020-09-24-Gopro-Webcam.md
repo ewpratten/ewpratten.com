@@ -1,19 +1,21 @@
 ---
 layout: page
-title:  "My workflow: video conference edition"
-description: "Turning some spare filmmaking equipment into a high-quality video conference setup"
-date:   2020-09-24
+title: 'My workflow: video conference edition'
+description: Turning some spare filmmaking equipment into a high-quality video conference
+  setup
+date: 2020-09-24
 written: 2020-09-13
 tags: video cameras workflow
 extra:
-    excerpt: >-
-        As my courses have moved mostly online, I have looked to improve 
-        my live video setup. This post covers how I stream sharp HD video 
-        at home, and some interesting quirks of the setup.
-redirect_from: 
- - /post/XcaM04o4/
- - /XcaM04o4/
-aliases: [/blog/2020/09/24/gopro-webcam]
+  excerpt: As my courses have moved mostly online, I have looked to improve  my live
+    video setup. This post covers how I stream sharp HD video  at home, and some interesting
+    quirks of the setup.
+redirect_from:
+- /post/XcaM04o4/
+- /XcaM04o4/
+aliases:
+- /blog/2020/09/24/gopro-webcam
+- /blog/gopro-webcam
 ---
 
 It has been quite some fun writing about my workflows for various day-to-day things on this blog recently, and since I have been getting a lot of positive feedback from my last few workflow-related posts, I am planning to continue writing them.

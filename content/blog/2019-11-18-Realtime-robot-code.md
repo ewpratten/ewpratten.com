@@ -1,13 +1,15 @@
 ---
 layout: page
-title:  "Programming a live robot"
-description: "Living on the edge is an understatement"
-date:   2019-11-20
+title: Programming a live robot
+description: Living on the edge is an understatement
+date: 2019-11-20
 tags: random frc
-redirect_from: 
- - /post/e9gdhj90/
- - /e9gdhj90/
-aliases: [/blog/2019/11/20/realtime-robot-code]
+redirect_from:
+- /post/e9gdhj90/
+- /e9gdhj90/
+aliases:
+- /blog/2019/11/20/realtime-robot-code
+- /blog/realtime-robot-code
 ---
 
 > *"So.. what if we could skip asking for driver inputs, and just have the robot operators control the bot through a commandline interface?"* 
@@ -183,4 +185,4 @@ The message at the end occurs when killing the code.
 
 ## Conclusion
 
-I have no idea why any of this would be useful, or if it is even field legal.. It's just a fun project for a monday morning. 
+I have no idea why any of this would be useful, or if it is even field legal.. It's just a fun project for a monday morning.

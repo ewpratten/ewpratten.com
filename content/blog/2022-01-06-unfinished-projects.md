@@ -1,13 +1,16 @@
 ---
 layout: page
-title: "Unfinished projects and failed ideas" 
-description: "A walkthrough of my private GitHub repos"
-date:   2022-01-06
+title: Unfinished projects and failed ideas
+description: A walkthrough of my private GitHub repos
+date: 2022-01-06
 tags: random
 draft: false
 extra:
-  
-  excerpt: My GitHub profile is a bit like an iceberg. At the time of writing, I have made nearly 8 and a half thousand commits to nearly a thousand repositories. This post covers the hidden failed projects.
+  excerpt: My GitHub profile is a bit like an iceberg. At the time of writing, I have
+    made nearly 8 and a half thousand commits to nearly a thousand repositories. This
+    post covers the hidden failed projects.
+aliases:
+- /blog/unfinished-projects
 ---
 
 My [GitHub profile](https://github.com/Ewpratten) is a bit like an iceberg. At the time of writing, I have made nearly 8 and a half thousand commits to nearly a thousand repositories. Since July 2018, I have made an effort to go no more than 3 consecutive days without writing code, and I have only broken that streak 6 times (each of those being a 4-day break).

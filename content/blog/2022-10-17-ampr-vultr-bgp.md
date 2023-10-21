@@ -4,13 +4,16 @@ title: Announcing your AMPRNet prefix to Vultr with BGP
 description: That how-to guide everyone keeps asking me to make
 date: 2022-10-17
 tags:
-  - amprnet
-  - networking
-  - bgp
+- amprnet
+- networking
+- bgp
 draft: true
 extra:
   auto_center_images: true
-  excerpt: A tutorial for AMPRNet operators who are BGP announcing their first prefix to Vultr
+  excerpt: A tutorial for AMPRNet operators who are BGP announcing their first prefix
+    to Vultr
+aliases:
+- /blog/ampr-vultr-bgp
 ---
 
 Since I briefly [waved my hands over this topic](/blog/amprnet-bgp/) last year, I have gotten many emails and DMs from fellow amateur radio operators asking for help announcing their own `/24`s to the world. 

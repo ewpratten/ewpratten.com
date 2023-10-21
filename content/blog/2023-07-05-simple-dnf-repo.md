@@ -4,12 +4,14 @@ title: Setting up a static DNF repository
 description: Hosting RPMs is less painful than I expected
 date: 2023-07-05
 tags:
-  - linux
-  - walkthrough
+- linux
+- walkthrough
 draft: false
 extra:
   auto_center_images: true
   excerpt: Information on how I set up dist.ewpratten.com, my DNF repository
+aliases:
+- /blog/simple-dnf-repo
 ---
 
 <!-- I regularly find myself bouncing between wanting to *self-host all the things* (because it is fun), and use well-known hosting services (because I generally have better things to do with my time). I doubt I'll ever actually pick one side or the other, but I have found that the back-and-fourth of `hosted, diy, hosted` leads me to learn a lot about the tools I use. -->

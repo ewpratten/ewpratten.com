@@ -4,12 +4,15 @@ title: Monocular depth mapping in Blender
 description: My 3D pipeline is backed by neural networks
 date: 2022-01-19
 tags:
-  - random
-  - 3d-pipeline
-  - python
+- random
+- 3d-pipeline
+- python
 draft: false
 extra:
-  excerpt: This post covers the process I went through to write a Neural-Network-assisted Blender plugin for converting monocular images into 3D textured meshes.
+  excerpt: This post covers the process I went through to write a Neural-Network-assisted
+    Blender plugin for converting monocular images into 3D textured meshes.
+aliases:
+- /blog/monocular-blender
 ---
 
 A while back, I encountered an interesting trend going on over on TikTok. People were turning their photos into videos with 3D camera movements.
@@ -130,4 +133,4 @@ And finally, a demo render:
 <video style="max-width:100%;" controls>
 <source src="/images/posts/monocular-blender/demo_render.mp4" type="video/mp4">
 Your browser does not support the video tag.
-</video> 
+</video>

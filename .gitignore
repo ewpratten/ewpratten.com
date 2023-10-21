@@ -16,7 +16,7 @@ Cargo.lock
 .dev.vars
 
 # Obsidian
-.obsidian/themes
+/content/.obsidian/themes
 .obsidian/appearance.json
 .obsidian/workspace.json
 

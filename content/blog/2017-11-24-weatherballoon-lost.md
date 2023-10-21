@@ -1,11 +1,14 @@
 ---
-title: "We lost a weather balloon in another country" 
-description: "..and made the news because of it"
+title: We lost a weather balloon in another country
+description: ..and made the news because of it
 date: 2017-11-24
 tags: news
 draft: false
 extra:
-  excerpt: Beal science project succeeds - maybe too much - as weather balloon floats into U.S.
+  excerpt: Beal science project succeeds - maybe too much - as weather balloon floats
+    into U.S.
+aliases:
+- /blog/weatherballoon-lost
 ---
 
 A news article was written about a project I was involved in. It's even headed by a photo I took!
@@ -31,4 +34,3 @@ Once found on the American side of the border, a corresponding article was writt
 ## The balloon on the other side
 
 ![](https://bloximages.chicago2.vip.townnews.com/tiogapublishing.com/content/tncms/assets/v3/editorial/1/38/1384aff6-d120-11e7-bd7f-e7d82bd3ef3c/5a1826bd8b199.image.jpg)
-

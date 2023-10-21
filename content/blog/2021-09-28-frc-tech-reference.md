@@ -5,11 +5,15 @@ description: Reference material for my friends
 date: 2021-09-28
 written: 2021-09-28
 tags:
-  - reference
-  - frc
-  - hardware
+- reference
+- frc
+- hardware
 extra:
-  excerpt: This document is aimed at a small handful of people, but published publicly as reference material for anyone that needs it. All contents are highly specific to the FRC robotics electrical and programming environments.
+  excerpt: This document is aimed at a small handful of people, but published publicly
+    as reference material for anyone that needs it. All contents are highly specific
+    to the FRC robotics electrical and programming environments.
+aliases:
+- /blog/frc-tech-reference
 ---
 
 This document is aimed at a small handful of people, but published publicly as reference material for anyone that needs it. All contents are highly specific to the FRC robotics electrical and programming environments.

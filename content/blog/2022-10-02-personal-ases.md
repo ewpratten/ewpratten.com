@@ -4,14 +4,16 @@ title: An analysis of personal ASNs in the wild
 description: You can get a surprising amount of info from bulk whois
 date: 2022-10-02
 tags:
-  - project
-  - networking
-  - bgp
-  - data-analysis
+- project
+- networking
+- bgp
+- data-analysis
 draft: false
 extra:
   auto_center_images: true
   excerpt: A look at the usage of personal ASNs based on freely available data
+aliases:
+- /blog/personal-ases
 ---
 
 As a [network operator](/network), I keep a fairly close eye on what my peers are up to. This is mainly to make sure nobody is doing something *too* stupid near my network, but also just out of curiosity. Its nice to know what other people are up to, both as a sanity check on my own network, and as a view into new things I could try out.

@@ -4,14 +4,17 @@ title: Lazy search for Mastodon accounts
 description: Webfinger + Cloudflare Workers + Firefox custom search engines
 date: 2023-01-17
 tags:
-  - project
-  - javascript
+- project
+- javascript
 draft: false
 extra:
   auto_center_images: true
-  excerpt: I made a custom search prefix for my browser that can resolve ActivityPub accounts into their profile pages
+  excerpt: I made a custom search prefix for my browser that can resolve ActivityPub
+    accounts into their profile pages
   discuss:
     reddit: https://www.reddit.com/r/ewpratten/comments/12xzulo/lazy_search_for_mastodon_accounts/
+aliases:
+- /blog/webfinger-redir
 ---
 
 Anyone who has been using Mastodon (or other ActivityPub servers) for a bit might have noticed how its a little annoying to look up someone's "home profile" from their account handle. My personal flow goes something like:

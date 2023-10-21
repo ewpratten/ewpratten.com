@@ -1,10 +1,12 @@
 ---
 layout: page
-title:  "Doing Python OOP the wrong way"
-description: "In the name of science!"
-date:   2019-09-07
+title: Doing Python OOP the wrong way
+description: In the name of science!
+date: 2019-09-07
 tags: project random
-aliases: [/blog/2019/09/07/wrong-python]
+aliases:
+- /blog/2019/09/07/wrong-python
+- /blog/wrong-python
 ---
 
 If you know me, you probably know of the many weird things I do with python. Most recent of which being this [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz) implementation in one line of python code:

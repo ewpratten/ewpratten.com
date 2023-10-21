@@ -1,13 +1,14 @@
 ---
 layout: page
-title: "I built my own private telephone network" 
-description: "Nobody makes phone calls anymore"
-date:   2022-02-14
+title: I built my own private telephone network
+description: Nobody makes phone calls anymore
+date: 2022-02-14
 tags: project pbx
 draft: true
 extra:
-  
   auto_center_images: true
+aliases:
+- /blog/personal-pbx
 ---
 
 Over the past few months, I have built my own [internet backbone router](/blog/amprnet-bgp) (and an [internet exchange](https://ffixp.net)). So logically, the next step is to branch off into telephony... *right?*

@@ -1,20 +1,21 @@
 ---
 layout: page
-title:  "Reading metadata from a bitmap file"
-description: "A project writeup"
-date:   2020-10-01
+title: Reading metadata from a bitmap file
+description: A project writeup
+date: 2020-10-01
 written: 2020-09-15
 tags: project c images
 extra:
-    excerpt: >-
-        Inspired from one of my friend's projects, I built a small 
-        tool for displaying bitmap file info from the command line.
-redirect_from: 
- - /post/XcaMdj2m/
- - /XcaMdj2m/
+  excerpt: Inspired from one of my friend's projects, I built a small  tool for displaying
+    bitmap file info from the command line.
+redirect_from:
+- /post/XcaMdj2m/
+- /XcaMdj2m/
 uses:
- - github-cards
-aliases: [/blog/2020/10/01/reading-a-bitmap]
+- github-cards
+aliases:
+- /blog/2020/10/01/reading-a-bitmap
+- /blog/reading-a-bitmap
 ---
 
 Recently, @rsninja722 was telling me about [a project](https://github.com/rsninja722/file2bmp) he was working on. The basic idea is that you pass a file into his program, and it generates a bitmap of the binary data. This was inspired by [an old post of mine](/post/ef7b3166) where I did the same thing with a horribly written Python script and the library [`pillow`](https://github.com/python-pillow/Pillow). 

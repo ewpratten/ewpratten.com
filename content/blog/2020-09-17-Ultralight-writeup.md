@@ -1,21 +1,23 @@
 ---
 layout: page
 title: Building a mini maven server
-description: "Project overview: The Ultralight maven server"
+description: 'Project overview: The Ultralight maven server'
 date: 2020-09-17
 written: 2020-09-05
 tags:
-  - project
-  - github
-  - maven
-  - java
+- project
+- github
+- maven
+- java
 extra:
-  excerpt: In this post, I explain the process of building my own personal  maven server, and show how simple maven servers really are.
+  excerpt: In this post, I explain the process of building my own personal  maven
+    server, and show how simple maven servers really are.
 redirect_from:
-  - /post/2jf002s4/
-  - /2jf002s4/
+- /post/2jf002s4/
+- /2jf002s4/
 aliases:
-  - /blog/2020/09/17/ultralight-writeup
+- /blog/2020/09/17/ultralight-writeup
+- /blog/ultralight-writeup
 ---
 
 I have been looking around for a small, and easy-to-use [maven](https://maven.apache.org/) server to host my personal Java libraries for some time now. I origionally went with [Jitpack.io](https://jitpack.io/), but didn't like the fact I jitpack overwrites artifact `groupID` fields. This means that instead of specifying a package via something like `ca.retrylife:librandom:1.0.0`, a user would have to write `com.github.ewpratten:librandom:1.0.0`. While this is not a huge deal, I prefer to use a `gorupID` under my own domain for branding reasons. Along with this issue, I just didn't have enough control over my artifacts with Jitpack. 

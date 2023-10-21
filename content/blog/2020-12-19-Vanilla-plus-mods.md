@@ -1,21 +1,23 @@
 ---
 layout: page
 title: How I have tweaked my Minecraft client to be 'just right'
-description: Pushing the boundaries of a vanilla game, while being able to play on un-modified servers
+description: Pushing the boundaries of a vanilla game, while being able to play on
+  un-modified servers
 date: 2020-12-19
 written: 2020-12-04
 tags:
-  - project
-  - minecraft
+- project
+- minecraft
 extra:
-  excerpt: Over the past 10 years, I have been building the perfect Minecraft experience for myself. This post shares the collection of mods I run, and why I use them.
+  excerpt: Over the past 10 years, I have been building the perfect Minecraft experience
+    for myself. This post shares the collection of mods I run, and why I use them.
 redirect_from:
-  - /post/gas49g43/
-  - /gas49g43/
+- /post/gas49g43/
+- /gas49g43/
 aliases:
-  - /blog/2020/12/19/vanilla-plus-mods
+- /blog/2020/12/19/vanilla-plus-mods
+- /blog/vanilla-plus-mods
 ---
-
 
 ## The base game
 

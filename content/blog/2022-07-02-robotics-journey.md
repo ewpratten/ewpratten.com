@@ -4,12 +4,15 @@ title: My journey through robotics
 description: 5 years of self-taught robotics development, recapped
 date: 2022-07-02
 tags:
-  - story
-  - frc
+- story
+- frc
 draft: true
 extra:
   auto_center_images: true
-  excerpt: From 2016 to 2021, I dedicated most of my time to robotics and control systems programming. This is my journey
+  excerpt: From 2016 to 2021, I dedicated most of my time to robotics and control
+    systems programming. This is my journey
+aliases:
+- /blog/robotics-journey
 ---
 
 My very first introduction to robotics was back in 2014, when I took an autonomous programming workshop as a part of a bigger summer engineering event at [Western University](https://www.uwo.ca/). A few years later, I ended up beginning a stint of robotics work through two different competitive robotics teams.

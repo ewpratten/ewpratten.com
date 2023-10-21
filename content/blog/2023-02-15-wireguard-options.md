@@ -4,14 +4,17 @@ title: Some lesser known WireGuard settings
 description: Things I will probably forget in an important moment
 date: 2023-02-15
 tags:
-  - random
-  - networking
+- random
+- networking
 draft: false
 extra:
   auto_center_images: true
-  excerpt: This post covers some lesser known WireGuard configuration options that I have found useful
+  excerpt: This post covers some lesser known WireGuard configuration options that
+    I have found useful
   discuss:
     reddit: https://www.reddit.com/r/ewpratten/comments/12xzvun/some_lesser_known_wireguard_settings/
+aliases:
+- /blog/wireguard-options
 ---
 
 I extensively use [WireGuard](https://www.wireguard.com/) to keep various devices connected across foreign and unstable networks. Over the past few years of doing this, I've discovered a few handy configuration tricks that can help in weirdly specific situations. The following is a short overview to be used as reference in the future.

@@ -4,12 +4,15 @@ title: Using a Steam Controller with the Nintendo Switch
 description: An unreasonably cursed setup for zero gain
 date: 2022-06-23
 tags:
-  - random
-  - hardware
+- random
+- hardware
 draft: false
 extra:
   auto_center_images: true
-  excerpt: How to flash custom firmware to the Steam Controller, allowing it to connect to the Nintendo Switch
+  excerpt: How to flash custom firmware to the Steam Controller, allowing it to connect
+    to the Nintendo Switch
+aliases:
+- /blog/steam-controller-switch
 ---
 
 Remember the [Steam Controller](https://store.steampowered.com/app/353370/Steam_Controller/)?

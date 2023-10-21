@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "The language hunt: Part 2"
+title: 'The language hunt: Part 2'
 description: A quick followup
 date: 2019-06-24
 tags:
-  - frc
+- frc
 aliases:
-  - /blog/2019/06/24/languagehunt2
+- /blog/2019/06/24/languagehunt2
+- /blog/languagehunt2
 ---
 
 This is a very short post, just to explain the result of [The language Hunt](/blog/frc-languages).
@@ -18,4 +19,4 @@ For our upcoming 2020 season and for the forseeable future, we have chosen Java 
 Not too much. Aside from learning new syntax, tools, and no longer worrying about linker errors, Java and C++ have no real difference. Most of the reason Java was chosen was based on support instead of functionality. Java is much better supported by FIRST, WPILib, and other vendors. Java is also taught in the school 5024 is based from. For a more detailed explanation of the benefits of each language, take a look at Chief Delphi. There are plenty of posts there explaining the choices of many teams and their reasoning.
 
 ## Side note
-I am experimenting with various post formats (This being a short post). Let me know which you prefer via the social platform of your choice. 
+I am experimenting with various post formats (This being a short post). Let me know which you prefer via the social platform of your choice.

@@ -4,17 +4,18 @@ title: Building images from binary data
 description: Simple, yet fun
 date: 2019-09-11
 tags:
-  - python
-  - images
-  - project
+- python
+- images
+- project
 redirect_from:
-  - /post/ef7b3166/
-  - /ef7b3166/
+- /post/ef7b3166/
+- /ef7b3166/
 aliases:
-  - /blog/2019/09/11/buildingimgfrombin
+- /blog/2019/09/11/buildingimgfrombin
+- /blog/buildingimgfrombin
 extra:
   uses:
-    - twitter
+  - twitter
 ---
 
 During a computer science class today, we were talking about embedding code and metadata in *jpg* and *bmp* files. @exvacuum was showing off a program he wrote that watched a directory for new image files, and would display them on a canvas. He then showed us a special image. In this image, he had injected some metadata into the last few pixels, which were not rendered, but told his program where to position the image on the canvas, and it's size.

@@ -1,17 +1,19 @@
 ---
-title: "Notes from FRC: Converting joystick data to tank-drive outputs"
+title: 'Notes from FRC: Converting joystick data to tank-drive outputs'
 description: and making a tank-based robot's movements look natural
 date: 2020-08-03
 tags:
-  - frc
-  - math
-  - python
+- frc
+- math
+- python
 aliases:
-  - /blog/2020/08/03/joystick-to-voltage
+- /blog/2020/08/03/joystick-to-voltage
+- /blog/joystick-to-voltage
 extra:
   uses:
-    - katex
-  excerpt: This post covers the algorithm I devised for converting joystick data to motor commands at Raider Robotics
+  - katex
+  excerpt: This post covers the algorithm I devised for converting joystick data to
+    motor commands at Raider Robotics
 ---
 
 I am starting a new little series here called "Notes from FRC". The idea is that I am going to write about what I have learned over the past three years of working (almost daily) with robots, and hopefully someone in the future will find them useful. The production source code I based this post around is available [here](https://github.com/frc5024/lib5k/blob/cd8ad407146b514cf857c1d8ac82ac8f3067812b/common_drive/src/main/java/io/github/frc5024/common_drive/calculation/DifferentialDriveCalculation.java).
