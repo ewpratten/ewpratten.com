@@ -5,9 +5,8 @@ $content-max-width: 800px;
 @import "elements/header.scss";
 
 body {
-  margin: 0;
+  margin: 1em;
   font-family: serif;
-  text-align: justify;
 }
 
 a {
@@ -65,6 +64,7 @@ main {
     margin-bottom: 0;
     padding-bottom: 0;
   }
+
 
   @import "elements/code.scss";
   @import "elements/headings.scss";

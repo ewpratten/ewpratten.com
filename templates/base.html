@@ -22,6 +22,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{title}} | {{config.title}}</title>
+        <link rel="shortcut icon" type="image/jpg" href="{{config.extra.profile_photo | safe}}" />
 
         {% if current_url %}<link rel="canonical" href="{{current_url | safe}}" />{% endif %}
 
