@@ -1,5 +1,4 @@
 ---
-layout: page
 title: 2020 Wrap-Up
 description: I wrote a lot of code this year. This post looks back on it all
 date: 2020-12-31

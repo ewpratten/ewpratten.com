@@ -4,7 +4,7 @@ tags:
   - frc
 ---
 
-# My work at Raider Robotics
+
 
 I was a member of [Raider Robotics](https://raiderrobotics.org) (a competitive robotics team) from 2017 through 2021.
 

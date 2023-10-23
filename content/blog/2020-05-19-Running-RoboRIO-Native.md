@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Running RoboRIO firmware inside Docker
 description: Containerized native ARMv7l emulation in 20 minutes
 date: 2020-05-19

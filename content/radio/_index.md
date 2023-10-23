@@ -4,8 +4,6 @@ tags:
   - radio
 ---
 
-# Amateur Radio
-
 I have been an amateur radio operator since 2020, and an electronics enthusiast since long before then.
 
 ## VA3ZZA

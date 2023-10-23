@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Compiling BrainFuck with a shell script
 description: That was easy
 date: 2020-01-20

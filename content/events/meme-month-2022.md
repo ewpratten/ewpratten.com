@@ -4,8 +4,8 @@ description: Come chat with young hams, and join the meme madness!
 aliases:
   - /yeet
 extra:
-  uses:
-    - flags
+    css_import:
+      - https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.4.3/css/flag-icons.min.css
 tags:
   - radio
   - event

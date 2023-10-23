@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Upgrading my chromebook
 description: The process of installing GalliumOS on an ACER R11
 date: 2020-12-04

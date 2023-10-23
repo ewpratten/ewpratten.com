@@ -24,4 +24,5 @@
         "_redirects": "plaintext",
     },
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "html.format.unformattedContentDelimiter": "<!--noformat-->",
 }

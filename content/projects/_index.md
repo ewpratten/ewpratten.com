@@ -2,7 +2,6 @@
 title: My Projects
 ---
 
-# My Projects
 
 Most of my free time is spent working on various side projects. This is generally how I learn new things, and I quite enjoy the process of *making stuff*.
 

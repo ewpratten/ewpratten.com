@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Authoring Blog Posts with Obsidian
 description: Trying a new way to write for this site
 date: 2023-10-20

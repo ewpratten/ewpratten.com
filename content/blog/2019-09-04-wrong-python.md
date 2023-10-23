@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Doing Python OOP the wrong way
 description: In the name of science!
 date: 2019-09-07

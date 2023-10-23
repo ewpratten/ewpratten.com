@@ -1,5 +1,4 @@
 ---
-layout: page
 title: What are people actually doing with APRS?
 description: An analysis of worldwide APRS data
 date: 2023-03-23

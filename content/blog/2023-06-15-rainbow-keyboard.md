@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Rainbow keyboard
 description: Game-specific keyboard layouts are really handy
 date: 2023-06-15

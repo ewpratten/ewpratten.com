@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Reading metadata from a bitmap file
 description: A project writeup
 date: 2020-10-01

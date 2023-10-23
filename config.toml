@@ -31,4 +31,6 @@ profile_photo = "https://branding.ewpratten.com/pfp/2022/460x460.webp"
 email = "evan@ewpratten.com"
 github = "ewpratten"
 linkedin = "ewpratten"
-mastodon = "@evan"
+# Announcements
+# home_announcement = "Test content"
+# global_announcement = "Global announcement content test"

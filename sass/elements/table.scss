@@ -1,0 +1,32 @@
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+
+  td,
+  th {
+    padding: 0;
+    padding: 6px 13px;
+    border: 1px solid #d0d7de;
+  }
+
+  th {
+    font-weight: 600;
+  }
+
+  tr {
+    background-color: #fff;
+    border-top: 1px solid #d7dde3;
+
+    &:nth-child(2n) {
+      background-color: #f6f8fa;
+    }
+  }
+
+  img {
+    background-color: transparent;
+  }
+}

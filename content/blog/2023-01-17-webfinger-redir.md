@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Lazy search for Mastodon accounts
 description: Webfinger + Cloudflare Workers + Firefox custom search engines
 date: 2023-01-17

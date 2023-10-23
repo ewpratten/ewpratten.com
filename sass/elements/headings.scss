@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  padding-bottom: 0.3em;
+  font-weight: 600;
+  line-height: 1.25;
+
+  border-bottom: 1px solid #d7dde3;
+
+  code {
+    padding: 0 0.2em;
+    font-size: inherit;
+  }
+}
+
+h1 {
+  font-size: 2em;
+}

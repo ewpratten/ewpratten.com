@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Building a mini maven server
 description: 'Project overview: The Ultralight maven server'
 date: 2020-09-17

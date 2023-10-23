@@ -1,0 +1,82 @@
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  width: max-content;
+  max-width: 95vw;
+
+  margin: 2em auto;
+
+  // Image Controls
+  &[data-size="large"] {
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  // Text column
+  .header-text {
+    margin-left: 1em;
+    height: max-content;
+
+    span {
+      margin: 0;
+      line-height: 1em;
+    }
+
+    .header-name {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  // Links
+  &[data-size="large"] {
+    .header-links {
+      margin: 0;
+      padding-left: 0;
+
+      li {
+        list-style-type: none;
+        height: 1.25em;
+        margin: 0;
+        padding: 0;
+        a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          img {
+            display: inline-block;
+            margin-right: 1px;
+            height: 1em;
+            width: 1em;
+            filter: invert(9%) sepia(97%) saturate(6581%) hue-rotate(247deg)
+              brightness(94%) contrast(144%);
+          }
+        }
+      }
+    }
+  }
+
+  // Alter the design if in small mode
+  &[data-size="small"] {
+    hr {
+      display: none;
+    }
+
+    .header-links {
+      display: none;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

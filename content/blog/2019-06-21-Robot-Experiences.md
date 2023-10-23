@@ -1,5 +1,4 @@
 ---
-layout: page
 title: What I have learned from 2 years of FRC programming
 description: Robots are pretty cool
 date: 2019-06-21

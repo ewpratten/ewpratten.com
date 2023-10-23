@@ -1,5 +1,4 @@
 ---
-layout: page
 title: 'Adventures in BGP: routing my own public IPv4 address space'
 description: A college student, playing with the "big boys"
 date: 2021-11-14

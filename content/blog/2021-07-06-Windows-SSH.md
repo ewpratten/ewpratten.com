@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Configuring a native SSH server on Windows 10
 description: A tutorial for future me
 date: 2021-07-07

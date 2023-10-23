@@ -1,0 +1,25 @@
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+  ol,
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: lower-roman;
+    ol,
+    ul {
+      list-style-type: lower-alpha;
+    }
+  }
+}
+
+li {
+  & > p {
+    margin-top: 16px;
+  }
+  & + li {
+    margin-top: 0.25em;
+  }
+}

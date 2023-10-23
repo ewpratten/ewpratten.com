@@ -1,5 +1,4 @@
 ---
-layout: page
 title: 'Album Release: Space & Time Vol. 1'
 description: New music from Evan Pratten
 date: 2022-05-10

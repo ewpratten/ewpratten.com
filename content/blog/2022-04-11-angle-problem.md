@@ -1,5 +1,4 @@
 ---
-layout: page
 title: The angle problem
 description: A look at a slightly infuriating robotics problem
 date: 2022-04-11

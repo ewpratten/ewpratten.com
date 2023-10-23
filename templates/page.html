@@ -1,78 +1,50 @@
 {% extends "base.html" %}
 
-{# Additional metadata for Google #}
 {% block head %}
-{{ super() }}
+{{super()}}
 
-{% if page.description and page.date %}
+{# JSON LD #}
 <script type="application/ld+json">
-    {# Import our template file #}
-    {% set template = load_data(path="jsonld_templates/blog_post.jsonld") %}
-    {# Now we can fill in any additional data #}
-    {{ template | 
-        replace(from="{{url}}", to=config.base_url ~ page.path) | 
-        replace(from="{{title}}", to=page.title) | 
-        replace(from="{{date}}", to=page.date) | 
-        replace(from="{{profile_pic}}", to=config.extra.profile_photo) | 
-        safe 
-    }}
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "url": "https://ewpratten.com{{page.path | safe}}",
+    "headline": "{{page.title}}",
+    "dateCreated": "{{page.date}}T00:00:00",
+    "datePublished": "{{page.date}}T00:00:00",
+    "dateModified": "{{page.date}}T00:00:00",
+    "inLanguage": "en-CA",
+    "isFamilyFriendly": "true",
+    "accountablePerson": {
+        "@type": "Person",
+        "name": "Evan Pratten",
+        "url": "https://ewpratten.com"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Evan Pratten",
+        "url": "https://ewpratten.com"
+    },
+    "creator": {
+        "@type": "Person",
+        "name": "Evan Pratten",
+        "url": "https://ewpratten.com"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Evan Pratten",
+        "url": "https://ewpratten.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "{{config.extra.profile_photo | safe}}",
+            "width": "460",
+            "height": "460"
+        }
+    },
+    "mainEntityOfPage": "True",
+    "keywords": [],
+    "genre": [],
+    "articleSection": "Blog Post"
+}
 </script>
-{% endif %}
 {% endblock head %}
-
-{# Pass data through to the base template #}
-{% block variable_wormhole %}
-{{ super() }}
-{% set page_path = page.path %}
-{% set title = page.title %}
-{% set description = page.description %}
-{% set is_article = true %}
-{% if page.date %}
-{% set is_post = true %}
-{% endif %}
-{% if page.extra.uses %}
-{% set feature_flags = page.extra.uses %}
-{% endif %}
-{% if page.extra.redir_to %}
-{% set redirect_target = page.extra.redir_to %}
-{% endif %}
-{% if page.extra.opengraph %}
-{% set opengraph = page.extra.opengraph %}
-{% endif %}
-{% endblock variable_wormhole %}
-
-{# Page content #}
-{% block page_start %}
-{% include "components/heading-card.html" %}
-{% endblock page_start %}
-{% block content %}
-<h1 style="margin-bottom:0;padding-bottom:0;text-align:left;">{{page.title}}</h1>
-{% if page.description %}
-<em style="text-align:left;">{{page.description}}</em>
-<br>
-{% endif %}
-<br>
-
-{{ page.content | safe }}
-{% endblock content %}
-
-{% block left_side %}
-{% if page.extra.discuss %}
-<div class="left-box">
-    <a href="{{page.extra.discuss.reddit}}" target="_blank">
-        <img src="/dist/line-awesome/reddit.svg"
-            alt="View on Reddit" loading="lazy">
-    </a>
-    {% if page.extra.discuss.hacker_news %}
-    <a href="{{page.extra.discuss.hacker_news}}" target="_blank">
-        <img src="/dist/line-awesome/hacker-news.svg"
-            alt="View on Hacker News" loading="lazy">
-    </a>
-    {% endif %}
-    <a href="mailto:comment@ewpratten.com?subject=Comment: {{page.title}}" target="_blank">
-        <img src="/dist/line-awesome/envelope.svg"
-            alt="Comment via Email" loading="lazy">
-    </a>
-</div>
-{% endif %}
-{% endblock left_side %}

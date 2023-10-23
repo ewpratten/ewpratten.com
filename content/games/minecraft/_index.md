@@ -1,7 +1,6 @@
 ---
 title: Minecraft
 ---
-# Minecraft
 
 Minecraft is one of my all-time favourite video games. I've been playing since the 1.2.x days, enjoying my fair share of creative redstone tinkering, lightly modded servers *(RIP MCCTF)*, and multiplayer survival shenanigans with friends.
 

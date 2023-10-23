@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Unfinished projects and failed ideas
 description: A walkthrough of my private GitHub repos
 date: 2022-01-06

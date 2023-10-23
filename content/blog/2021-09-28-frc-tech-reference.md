@@ -1,5 +1,4 @@
 ---
-layout: page
 title: An overview of the tech on a complex FRC robot
 description: Reference material for my friends
 date: 2021-09-28

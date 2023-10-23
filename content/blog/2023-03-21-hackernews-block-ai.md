@@ -1,5 +1,4 @@
 ---
-layout: page
 title: A script that hides AI topics from Hacker News
 description: Sometimes I want to read about something different
 date: 2023-03-21

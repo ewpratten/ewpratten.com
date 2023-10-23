@@ -2,7 +2,7 @@
 title: Home
 ---
 
-## About me
+## About me 
 
 I am a **Software Developer**, specializing in *automation* and *computer networking*.
 

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Setting up a static DNF repository
 description: Hosting RPMs is less painful than I expected
 date: 2023-07-05

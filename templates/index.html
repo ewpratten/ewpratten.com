@@ -1,50 +1,77 @@
 {% extends "base.html" %}
 
-{# Additional metadata for Google #}
 {% block head %}
-{{ super() }}
+{{super()}}
 
-{# Override title format for homepage #}
-{% block title %}<title>{{config.title}}</title>{% endblock title %}
-
+{# JSON LD #}
 <script type="application/ld+json">
-    {% set person_ld = load_data(path="static/person.jsonld")%}
-    {% if person_ld %}{{person_ld | safe}}{% endif %}
-  </script>
-<script type="application/ld+json">
-    {# Import our template file #}
-    {% set template = load_data(path="jsonld_templates/website.jsonld") %}
-    {# Now we can fill in any additional data #}
-    {{ template | 
-        replace(from="{{url}}", to=config.base_url) | 
-        replace(from="{{title}}", to=section.title) | 
-        replace(from="{{description}}", to=config.description) | 
-        replace(from="{{avatar}}", to=config.extra.profile_photo) | 
-        safe 
-    }}
-  </script>
+[
+    {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "additionalType": [
+            "CreativeWork",
+            "Person"
+        ],
+        "url": "{{config.base_url | safe}}",
+        "name": "Evan Pratten",
+        "alternateName": "ewpratten",
+        "headline": "{{section.title}}",
+        "image": "{{config.extra.profile_photo | safe}}",
+        "logo": "{{config.extra.profile_photo | safe}}",
+        "inLanguage": "en-CA",
+        "author": "Evan Pratten",
+        "description": "{{config.description}}",
+        "disambiguatingDescription": "Personal website of Evan Pratten",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Evan Pratten",
+            "url": "https://ewpratten.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{config.extra.profile_photo | safe}}",
+                "width": "460",
+                "height": "460"
+            }
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "{{config.base_url | safe}}/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        },
+        "keywords": [
+            "Evan Pratten",
+            "Software",
+            "Music",
+            "Photography",
+            "Hobby",
+            "Blog"
+        ]
+    },
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@context": "https://schema.org",
+                "@type": "SiteNavigationElement",
+                "name": "Blog",
+                "url": "{{config.base_url | safe}}/blog"
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "SiteNavigationElement",
+                "name": "Contact",
+                "url": "{{config.base_url | safe}}/contact"
+            }
+        ]
+    }
+]
+</script>
 {% endblock head %}
 
-
-
-{# Pass data through to the base template #}
-{% block variable_wormhole %}
-{{ super() }}
-{% set page_path = "/" %}
-{% set title = section.title %}
-{% set description = config.description %}
-{% if section.extra.uses %}
-{% set feature_flags = section.extra.uses %}
-{% endif %}
-{% if section.extra.announcement %}
-{% set announcement = section.extra.announcement %}
-{% endif %}
-{% endblock variable_wormhole %}
-
-{# Page content #}
-{% block page_start %}
-{% include "components/about-card.html" %}
-{% endblock page_start %}
 {% block content %}
-{{ section.content | safe }}
+{{ section.content | safe}}
 {% endblock content %}

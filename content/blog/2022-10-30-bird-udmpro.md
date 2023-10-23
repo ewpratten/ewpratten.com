@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Announcing your AMPRNet prefix to Vultr with BGP
 description: That how-to guide everyone keeps asking me to make
 date: 2022-10-17

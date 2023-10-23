@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Monocular depth mapping in Blender
 description: My 3D pipeline is backed by neural networks
 date: 2022-01-19

@@ -1,5 +1,4 @@
 ---
-layout: page
 title: How I flashed QMK to my Vortex Core
 description: Open-source firmware on a closed-source keyboard
 date: 2021-03-14

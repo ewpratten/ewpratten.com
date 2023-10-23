@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Tunneling a printer from a home network to a VPN
 description: Using socat to port-forward between network interfaces
 date: 2021-01-16
