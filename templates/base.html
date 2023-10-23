@@ -42,6 +42,11 @@
         <meta property="og:title" content="{{title}} - {{config.title}}" />
         {% if page.path %}<meta property="og:type" content="article" />{% endif %}
 
+        {# Fonts #}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
         {# Allow pages to import custom CSS if they need #}
         {% for url in extra.css_import | default(value=[]) %}
         <link rel="stylesheet" href="{{url}}"> <!-- Requested by Page -->
