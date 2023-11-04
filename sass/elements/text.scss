@@ -1,13 +1,19 @@
 p,
 li,
 span {
-  font-family: "Open Sans", serif;
+  font-family: sans-serif;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 16px;
   text-align: justify;
+}
+
+.no-justify {
+  p {
+    text-align: left !important;
+  }
 }
 
 sub,
