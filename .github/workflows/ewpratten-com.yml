@@ -17,4 +17,4 @@ jobs:
       - name: Build
         run: |
           cd sites/ewpratten.com
-          zola build 
+          /tmp/zola build 
