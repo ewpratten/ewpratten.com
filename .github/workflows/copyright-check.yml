@@ -1,8 +1,6 @@
 name: Copyright Check
 
 on:
-  schedule:
-    - cron: "0 0 1 1 *"
   push:
 
 jobs:
@@ -15,13 +13,18 @@ jobs:
             echo "Current year is $YEAR"
       - name: Update LICENSE file
         run: |
-            echo "Copyright (c) ${YEAR}, Evan Pratten, All rights reserved." > /tmp/correct_license
+            echo "Copyright (c) 2017-${YEAR}, Evan Pratten, All rights reserved." > /tmp/correct_license
       - name: Check if LICENSE file has changed
+        id: license-check
         run: |
-            diff /tmp/correct_license LICENSE
-            if [ $? -eq 0 ]; then
-                echo "LICENSE file is up to date"
-            else
-                echo "LICENSE file is out of date"
-                exit 1
-            fi
+            diff /tmp/correct_license ${GITHUB_WORKSPACE}/LICENSE
+      - name: Display a commit comment if the year is wrong
+        if: steps.license-check.outcome == 'failure'
+        uses: peter-evans/commit-comment@v2
+        with:
+          body: |
+            The year in your LICENSE file is out of date. Please update the file to:
+            ```
+            $(cat /tmp/correct_license)
+            ```
+        
