@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="5cm"
+   height="5cm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.0787879"
+     inkscape:cx="119.85236"
+     inkscape:cy="68.695866"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="1920"
+     inkscape:window-y="319"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="font-variation-settings:'wght' 700;display:none;fill:#001d6c;fill-opacity:1;stroke:none;stroke-width:1.18595"
+       id="rect302"
+       width="50"
+       height="50"
+       x="0"
+       y="0"
+       inkscape:label="BG - Squircle"
+       ry="4.4969168" />
+    <circle
+       style="font-variation-settings:'wght' 700;display:inline;fill:#001d6c;fill-opacity:1;stroke:none;stroke-width:0.10106;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="path5763"
+       cx="25"
+       cy="25"
+       r="24.949471"
+       inkscape:label="BG - Circle" />
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:2.646;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 15.573166,11.643031 C 0.50659246,22.07634 6.1881876,28.024075 14.654581,20.571776 3.8948119,29.02761 3.4591026,52.396791 18.163182,26.112733 l 5.401764,-14.412997 c -12.088297,26.722581 -2.342504,43.40403 6.647028,-0.0068 -11.345923,35.659963 1.047437,33.080266 5.688338,4.880123 2.6768,-11.4394954 17.520306,-0.422579 -1.976465,10.823514"
+       id="path3369"
+       sodipodi:nodetypes="ccccccc"
+       inkscape:label="Initials" />
+  </g>
+</svg>
