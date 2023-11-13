@@ -1,0 +1,54 @@
+# Personal website shortlinks
+/ https://ewpratten.com
+/blog https://ewpratten.com/blog
+/donate https://donate.stripe.com/14k9CRfNu83V1EsfYY
+/sponsor https://github.com/sponsors/ewpratten
+/music https://ewpratten.com/music/
+/contact https://ewpratten.com/contact
+/k https://keys.ewpratten.com
+
+# Profile photos
+/pfp.png https://branding.ewpratten.com/pfp/2022/460x460.png
+/pfp /pfp.png
+
+# Music streaming service profiles
+/spotify https://open.spotify.com/artist/1aLNEmgqBJkhfkEZvf8Vh5
+/apple-music https://music.apple.com/us/artist/evan-pratten/1611566708
+
+# General social media
+/github https://github.com/ewpratten
+/mastodon https://social.ewpratten.com/@evan
+/social https://social.ewpratten.com/@evan
+/youtube https://www.youtube.com/@ewpratten
+/instagram https://instagram.com/ewpratten
+/threads https://www.threads.net/@ewpratten
+/linkedin https://www.linkedin.com/in/ewpratten/
+/qrz https://qrz.com/db/va3zza
+/imdb https://www.imdb.com/name/nm13747554/
+/tildes https://tildes.net/user/ewpratten
+
+# Google Drive bundles
+/discord-emotes https://drive.google.com/drive/folders/1YpEBSflbo9mjvoWkt6o1wdRxEF49p-fG
+
+# Photos from Raider Robotics by season
+/5024/photos/2018 https://photos.app.goo.gl/yFSWssQMTstfTfX2A
+/5024/photos/2019 https://photos.app.goo.gl/gNYwQcqnouMciyXv7
+/5024/photos/2020 https://photos.app.goo.gl/qjLMePxYK5ecw7xX6
+
+# Misc Minecraft
+/client.mrpack https://github.com/ewpratten/mc.ewpratten.com/raw/master/modpack/mc.ewpratten.com%20client-2.0.0.mrpack
+/modpack https://modrinth.com/modpack/ewpratten
+
+# Minecraft Mods
+/client-ping https://modrinth.com/mod/client-ping
+/illuminated-shields https://modrinth.com/resourcepack/illuminated-shields
+
+# Projects
+/config https://github.com/ewpratten/ewconfig.git 301
+/config.zip https://github.com/ewpratten/ewconfig/archive/refs/heads/master.zip
+/tilde-tweaks https://github.com/ewpratten/tilde-tweaks
+/tilde-tweaks/* https://github.com/ewpratten/tilde-tweaks/raw/master/scripts/:splat
+/protomask https://github.com/ewpratten/protomask
+/protomask/v* https://github.com/ewpratten/protomask/releases/tag/v:splat
+/protomask/latest https://github.com/ewpratten/protomask/releases/latest
+/lra https://github.com/ewpratten/lra
