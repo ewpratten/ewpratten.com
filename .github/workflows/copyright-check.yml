@@ -7,6 +7,8 @@ jobs:
   check-copyright:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Fetch current year
         run: |
             YEAR=$(date +%Y)
@@ -17,16 +19,4 @@ jobs:
       - name: Check if LICENSE file has changed
         id: license-check
         run: |
-            ls /home/runner/work/ewpratten.com
-            ls /home/runner/work/ewpratten.com/ewpratten.com
             diff /tmp/correct_license ${GITHUB_WORKSPACE}/LICENSE
-      - name: Display a commit comment if the year is wrong
-        if: steps.license-check.outcome == 'failure'
-        uses: peter-evans/commit-comment@v2
-        with:
-          body: |
-            The year in your LICENSE file is out of date. Please update the file to:
-            ```
-            $(cat /tmp/correct_license)
-            ```
-        
