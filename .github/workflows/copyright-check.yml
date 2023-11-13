@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Generate expected LICENSE file
         run: |
-            echo -e "Copyright (c) 2017-$(date +%Y), Evan Pratten, All rights reserved.\n" > /tmp/correct_license
+            echo "Copyright (c) 2017-$(date +%Y), Evan Pratten, All rights reserved." > /tmp/correct_license
       - name: Check if LICENSE year is correct
         id: license-check
         run: |
