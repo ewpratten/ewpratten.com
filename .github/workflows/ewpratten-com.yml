@@ -3,6 +3,9 @@ name: ewpratten.com
 on:
   push:
 
+env:
+  ZOLA_VERSION: 0.15.3
+
 jobs:
   build:
     name: Build
@@ -12,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Download Zola
         run: |
-          wget https://github.com/getzola/zola/releases/download/v0.17.2/zola-v0.17.2-x86_64-unknown-linux-gnu.tar.gz -O /tmp/zola.tar.gz
+          wget https://github.com/getzola/zola/releases/download/v$ZOLA_VERSION/zola-v$ZOLA_VERSION-x86_64-unknown-linux-gnu.tar.gz -O /tmp/zola.tar.gz
           tar -xvf /tmp/zola.tar.gz -C /tmp
       - name: Build
         run: |
