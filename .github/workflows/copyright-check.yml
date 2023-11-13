@@ -11,11 +11,17 @@ jobs:
     steps:
       - name: Fetch current year
         run: |
-          YEAR=$(date +%Y)
-          echo "Current year is $YEAR"
+            YEAR=$(date +%Y)
+            echo "Current year is $YEAR"
       - name: Update LICENSE file
         run: |
-          echo "Copyright (c) ${YEAR}, Evan Pratten, All rights reserved." > LICENSE
+            echo "Copyright (c) ${YEAR}, Evan Pratten, All rights reserved." > /tmp/correct_license
       - name: Check if LICENSE file has changed
         run: |
-          git diff --quiet || git commit -am "Update LICENSE year to $YEAR" && git push
+            diff /tmp/correct_license LICENSE
+            if [ $? -eq 0 ]; then
+                echo "LICENSE file is up to date"
+            else
+                echo "LICENSE file is out of date"
+                exit 1
+            fi
