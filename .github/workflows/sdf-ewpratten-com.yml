@@ -1,0 +1,21 @@
+name: "Site: sdf.ewpratten.com"
+
+on:
+  push:
+    paths:
+      - ".github/workflows/sdf-ewpratten-com.yml"
+      - "sites/sdf.ewpratten.com/**"
+
+jobs:
+  deploy:
+    name: Deploy Cloudflare Worker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+      - name: Deploy worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: sites/sdf.ewpratten.com

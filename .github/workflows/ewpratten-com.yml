@@ -1,7 +1,10 @@
-name: ewpratten.com
+name: "Site: ewpratten.com"
 
 on:
   push:
+    paths:
+      - ".github/workflows/ewpratten-com.yml"
+      - "sites/ewpratten.com/**"
 
 env:
   ZOLA_VERSION: 0.15.3
@@ -20,4 +23,4 @@ jobs:
       - name: Build
         run: |
           cd sites/ewpratten.com
-          /tmp/zola build 
+          /tmp/zola build
