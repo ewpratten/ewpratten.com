@@ -4,19 +4,16 @@ on:
   push:
 
 jobs:
-  check-copyright:
+  check-copyright-year:
+    name: Check Copyright Year
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Fetch current year
+      - name: Generate expected LICENSE file
         run: |
-            YEAR=$(date +%Y)
-            echo "Current year is $YEAR"
-      - name: Update LICENSE file
-        run: |
-            echo "Copyright (c) 2017-${YEAR}, Evan Pratten, All rights reserved." > /tmp/correct_license
-      - name: Check if LICENSE file has changed
+            echo "Copyright (c) 2017-$(date +%Y), Evan Pratten, All rights reserved." > /tmp/correct_license
+      - name: Check if LICENSE year is correct
         id: license-check
         run: |
             diff /tmp/correct_license ${GITHUB_WORKSPACE}/LICENSE
