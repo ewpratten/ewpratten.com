@@ -1,8 +1,6 @@
 {
     "version": 1,
-    "include": [
-        "/v2/*"
-    ],
+    "include": [],
     "exclude": [
         "/.vscode"
     ]
