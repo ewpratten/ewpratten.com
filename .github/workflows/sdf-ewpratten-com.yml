@@ -1,4 +1,4 @@
-name: "Site: sdf.ewpratten.com"
+name: sdf.ewpratten.com
 
 on:
   push:
@@ -10,6 +10,9 @@ jobs:
   deploy:
     name: Deploy Cloudflare Worker
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    environment: production
     steps:
       - name: Git checkout
         uses: actions/checkout@v2
