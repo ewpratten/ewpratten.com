@@ -15,7 +15,7 @@ jobs:
           echo "Current year is $YEAR"
       - name: Update LICENSE file
         run: |
-          sed -i "s/$(date +%Y)/$YEAR/g" LICENSE
+          echo "Copyright (c) ${YEAR}, Evan Pratten, All rights reserved." > LICENSE
       - name: Check if LICENSE file has changed
         run: |
           git diff --quiet || git commit -am "Update LICENSE year to $YEAR" && git push
