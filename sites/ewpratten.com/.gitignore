@@ -1,0 +1,8 @@
+# Obsidian
+/content/.obsidian/themes
+/content/.obsidian/appearance.json
+/content/.obsidian/workspace.json
+/content/@
+
+# Zola
+/public/
