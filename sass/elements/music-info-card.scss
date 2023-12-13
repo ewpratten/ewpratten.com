@@ -1,0 +1,33 @@
+.music-info-card {
+  display: flex;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #f6f8fa;
+
+  @media screen and (max-width: 452px) {
+    flex-wrap: wrap;
+    border-radius: 0;
+  }
+
+  img {
+    max-width: 200px;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+  }
+
+  & > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1em;
+
+    h1.music-title {
+      // font-size: 2.5em;
+      // border-bottom: 1px solid gray;
+      margin-top: 0.25em !important;
+      margin-bottom: 0 !important;
+    }
+  }
+}

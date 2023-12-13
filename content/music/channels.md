@@ -1,11 +1,16 @@
 ---
 title: Channels
-description: "By: Evan Pratten. Released Nov 25 2022"
 extra:
+    no_auto_title: true
     og_image: https://ewpratten.com/images/music/channels/cover.jpg
+    og_description: "Single by Evan Pratten. Released Nov 25 2022"
 ---
 
-<img src="/images/music/channels/cover.jpg" style="width:80%">
+
+{% music_card(cover="/images/music/channels/cover.jpg") %}
+By: Evan Pratten<br>
+Released: Nov 25 2022
+{% end %}
 
 ## Track List
 

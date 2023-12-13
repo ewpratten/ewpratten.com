@@ -35,7 +35,11 @@
         <meta name="og:site_name" content="{{config.title}}" />
         {% set opengraph_image = extra.og_image | default(value=config.extra.profile_photo)%}
         <meta name="og:image" content="{{opengraph_image | safe}}" />
-        {% if page.description %}
+        {% if extra.og_description %}
+            <meta property="og:description" content="{{extra.og_description}}" />
+            <meta property="description" content="{{extra.og_description}}" />
+            <meta name="description" content="{{extra.og_description}}">
+        {% elif page.description %}
             <meta property="og:description" content="{{page.description}}" />
             <meta property="description" content="{{page.description}}" />
             <meta name="description" content="{{page.description}}">
@@ -118,7 +122,9 @@
     <main>
         {% block content %}
         <article>
+            {% if not extra.no_auto_title %}
             <h1 class="title">{{title}}</h1>
+            {% endif %}
             {% if page.description %}
             <em class="subtitle">{{page.description}}</em><br>
             {% endif %}

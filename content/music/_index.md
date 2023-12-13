@@ -15,47 +15,14 @@ I was originally in to (and performed) rock music, but found myself moving towar
 
 Since 2022 I have been publishing personal music projects of all kinds under my own name.
 
-<ul>
-    <li>
-        Single: <strong>Spring Tracks.</strong>
-        <em>ft. <a href="https://pratten.ca" target="_blank">Warren Pratten</a></em>
-        <em>& <a href="https://demilurii.art" target="_blank">Emilia Frias</a></em>
-        (<a href="https://open.spotify.com/album/4egrxAZmNgww1ocu8oYTqC" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://music.apple.com/us/album/spring-tracks-single/1690522416" target="_blank"><i class="fa-brands fa-apple"></i></a>)
-    </li>
-    <li>
-        Soundtrack: <strong>Raindrops</strong>
-        <em>with <a href="https://demilurii.art" target="_blank">Emilia Frias</a></em>
-        (<a href="https://www.youtube.com/watch?v=RqzLxaQ3abM" target="_blank"><i class="fa-brands fa-youtube"></i></a>)
-    </li>
-    <li>
-        Single: <strong>Channels</strong>
-        (<a href="https://open.spotify.com/album/25xzDOHs8fN5WQUSnww7kj" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://music.apple.com/us/album/channels-single/1656473075" target="_blank"><i class="fa-brands fa-apple"></i></a>)
-    </li>
-    <li>
-        Single: <strong>Summer Tracks.</strong>
-        <em>ft. <a href="https://pratten.ca" target="_blank">Warren Pratten</a></em>
-        (<a href="https://open.spotify.com/album/3bcakhzNwyK40K0TowcT0m" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://music.apple.com/us/album/summer-tracks-single/1644648783" target="_blank"><i class="fa-brands fa-apple"></i></a>)
-    </li>
-    <li>
-        EP: <strong>Space & Time, Vol. 1</strong>
-        <em>ft. <a href="https://pratten.ca" target="_blank">Warren Pratten</a> & <a href="http://nonsb.ca" target="_blank">Nihilist Spasm Band</a></em>
-        (<a href="https://open.spotify.com/album/718OAeNsyhO1znebsXVSdf" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://music.apple.com/us/album/space-time-vol-1-ep/1623507117" target="_blank"><i class="fa-brands fa-apple"></i></a>)
-    </li>
-    <li>
-        Single: <strong>Scale Hop</strong>
-        (<a href="https://open.spotify.com/album/6tpUJQlZ1I7bWK4X4pwiOj" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://music.apple.com/us/album/scale-hop-single/1611874192" target="_blank"><i class="fa-brands fa-apple"></i></a>)
-    </li>
-    <li>
-        Single: <strong>Radioactive</strong>
-        (<a href="https://open.spotify.com/album/44mayKI3HsGnNDr9A1yDgF" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://music.apple.com/us/album/radioactive-single/1626650101" target="_blank"><i class="fa-brands fa-apple"></i></a>)
-    </li>
-</ul>
+- [Single: **Spring Tracks.**](/music/spring-tracks)  *(ft. Warren Pratten & Emilia Frias)*
+- [Single: **Channels**](/music/channels)
+- [Single: **Summer Tracks.**](/music/summer-tracks) *(ft. Warren Pratten)*
+- [Single: **Space & Time, Vol. 1**](/music/space-time-v1) *(ft. Warren Pratten & Nihilist Spasm Band)*
+- [Single: **Scale Hop**](/music/scale-hop)
+- [Single: **Radioactive**](/music/radioactive)
+
+I've also produced the soundtrack for the short film [**Raindrops**](https://www.youtube.com/watch?v=RqzLxaQ3abM) by Emilia Frias.
 
 ## Music released as RetryLife
 
