@@ -10,11 +10,7 @@ I have been an amateur radio operator since 2020, and an electronics enthusiast 
 
 **VA3ZZA** is my primary callsign. If you hear me calling CQ, come say hi!
 
-I generally operate:
-
-- 7.030 MHz CW
-- 2M & 70CM FM
-- APRS
+I generally operate CW around 7030kHz.
 
 ## VA3UJF
 
