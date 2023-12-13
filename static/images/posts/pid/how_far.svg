@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="413.21954"
+   height="89.411865"
+   viewBox="0 0 109.331 23.656891"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="this_way.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   sodipodi:docname="here_there.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false">
+    <inkscape:grid
+       id="grid3"
+       units="px"
+       originx="-93.390232"
+       originy="6.2621491e-06"
+       spacingx="0.26458332"
+       spacingy="0.26458335"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-36.636952,-56.934384)">
+    <g
+       id="g3"
+       transform="translate(24.7095)">
+      <g
+         id="g2"
+         transform="translate(0,1.2906574)">
+        <circle
+           style="fill:#000000;fill-opacity:1;stroke-width:0.354894;stroke-dasharray:0.508247, 0.508247;paint-order:markers stroke fill"
+           id="path1"
+           cx="23.812496"
+           cy="69.914482"
+           r="3.6653111" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:Serif;-inkscape-font-specification:'Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="11.525287"
+           y="63.687035"
+           id="text1"><tspan
+             sodipodi:role="line"
+             id="tspan1"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;font-family:Serif;-inkscape-font-specification:'Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+             x="11.525287"
+             y="63.687035">Here</tspan></text>
+      </g>
+      <g
+         id="g1"
+         transform="translate(-5.2916667,19.321217)">
+        <circle
+           style="fill:#000000;fill-opacity:1;stroke-width:0.354894;stroke-dasharray:0.508247, 0.508247;paint-order:markers stroke fill"
+           id="path1-0"
+           cx="112.16212"
+           cy="51.883923"
+           r="3.6653111" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:Serif;-inkscape-font-specification:'Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="97.562447"
+           y="45.656475"
+           id="text1-9"><tspan
+             sodipodi:role="line"
+             id="tspan2"
+             x="97.562447"
+             y="45.656475">There</tspan></text>
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#585858;stroke-width:1.136;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 126.77617,71.311147 H 53.305576"
+       id="path4" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="71.572311"
+       y="80.534828"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Serif;-inkscape-font-specification:'Serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="71.572311"
+         y="80.534828">About This Far</tspan></text>
+  </g>
+</svg>
