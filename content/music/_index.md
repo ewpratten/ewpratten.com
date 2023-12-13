@@ -7,7 +7,7 @@ tags:
   - music
 ---
 
-I have been a musician since I was a small child, starting with the piano when I was 5, and progressing to drums and double bass a few years later.
+I have been a musician for most of my life, starting with the piano when I was 5, and progressing to drums and double bass a few years later.
 
 I was originally in to (and performed) rock music, but found myself moving towards heavier metal, and eventually electronic dance music. Alongside this progression, I was also a part of an orchestra and a choir for a few years. Now, I find myself doing everything electronically.
 
