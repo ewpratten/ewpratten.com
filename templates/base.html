@@ -33,7 +33,8 @@
         <meta name="twitter:card" content="summary" />
         <meta name="og:site" content="{{config.extra.domain_name}}" />
         <meta name="og:site_name" content="{{config.title}}" />
-        <meta name="og:image" content="{{config.extra.profile_photo | safe}}" />
+        {% set opengraph_image = extra.og_image | default(value=config.extra.profile_photo)%}
+        <meta name="og:image" content="{{opengraph_image | safe}}" />
         {% if page.description %}
             <meta property="og:description" content="{{page.description}}" />
             <meta property="description" content="{{page.description}}" />
