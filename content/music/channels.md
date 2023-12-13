@@ -2,7 +2,7 @@
 title: Channels
 description: "By: Evan Pratten. Released Nov 25 2022"
 extra:
-    og_image: /images/store/music/channels/cover.jpg
+    og_image: https://ewpratten.com/images/store/music/channels/cover.jpg
 ---
 
 <img src="/images/music/channels/cover.jpg" style="width:80%">
