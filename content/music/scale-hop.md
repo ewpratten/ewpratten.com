@@ -1,5 +1,6 @@
 ---
 title: Scale Hop
+date: 2022-01-06
 extra:
     no_auto_title: true
     og_image: https://ewpratten.com/images/music/scale-hop/cover.jpg

@@ -1,5 +1,6 @@
 ---
 title: Radioactive
+date: 2017-02-04
 extra:
     no_auto_title: true
     og_image: https://ewpratten.com/images/music/radioactive/cover.jpg

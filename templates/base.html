@@ -46,6 +46,7 @@
         {% endif %}
         <meta property="og:title" content="{{title}} - {{config.title}}" />
         {% if page.path %}<meta property="og:type" content="article" />{% endif %}
+        {% if page.date %}<meta property="article:published_time" content="{{page.date}}" />{% endif %}
 
         {# Fonts #}
         <link rel="preconnect" href="https://fonts.googleapis.com">

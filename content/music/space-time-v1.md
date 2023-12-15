@@ -1,5 +1,6 @@
 ---
 title: Space & Time, Vol. 1
+date: 2022-05-07
 extra:
     no_auto_title: true
     og_image: https://ewpratten.com/images/music/space-time-v1/cover.jpg

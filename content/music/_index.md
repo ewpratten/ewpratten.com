@@ -15,12 +15,16 @@ I was originally in to (and performed) rock music, but found myself moving towar
 
 Since 2022 I have been publishing personal music projects of all kinds under my own name.
 
-- [Single: **Spring Tracks.**](/music/spring-tracks)  *(ft. Warren Pratten & Emilia Frias)*
-- [Single: **Channels**](/music/channels)
-- [Single: **Summer Tracks.**](/music/summer-tracks) *(ft. Warren Pratten)*
-- [Single: **Space & Time, Vol. 1**](/music/space-time-v1) *(ft. Warren Pratten & Nihilist Spasm Band)*
-- [Single: **Scale Hop**](/music/scale-hop)
-- [Single: **Radioactive**](/music/radioactive)
+| Title                                            | Type   | Year | Featured Artists                    |
+|:-------------------------------------------------|:-------|:-----|:------------------------------------|
+| [**Spring Tracks**](/music/spring-tracks)        | Single | 2023 | Warren Pratten, Emilia Frias        |
+| [**Channels**](/music/channels)                  | Single | 2022 |                                     |
+| [**Summer Tracks**](/music/summer-tracks)        | Single | 2022 | Warren Pratten                      |
+| [**Space & Time, Vol. 1**](/music/space-time-v1) | EP     | 2022 | Warren Pratten, Nihilist Spasm Band |
+| [**Scale Hop**](/music/scale-hop)                | Single | 2022 |                                     |
+| [**Radioactive**](/music/radioactive)            | Single | 2017 |                                     |
+
+<br>
 
 I've also produced the soundtrack for the short film [**Raindrops**](https://www.youtube.com/watch?v=RqzLxaQ3abM) by Emilia Frias.
 
@@ -28,84 +32,21 @@ I've also produced the soundtrack for the short film [**Raindrops**](https://www
 
 Spanning 2015 to 2017, I was a part of an electronic music group named RetryLife. Our music was largely experimental. I was the primary producer, and also handled public facing things like website management, video production, and social media.
 
-<ul>
-    <li>
-        Album: <strong>X-MAS 02</strong>
-        (<a href="https://open.spotify.com/album/2iCVucaAGKEBYk8tf4DFnR" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/x-mas-02" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        Album: <strong>Sir Dankley's MLG Restaurant</strong>
-        (<a href="https://retrylife.bandcamp.com/album/sir-dankleys-mlg-restaurant" target="_blank"><i class="fa-brands fa-bandcamp"></i></a> exclusive)
-    </li>
-    <li>
-        Soundtrack: <strong>Imagined</strong>
-        (<a href="https://open.spotify.com/album/6do7NZe30VeSO22Bp0sXxX" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/imagined" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        Album: <strong>Lemons</strong>
-        (<a href="https://open.spotify.com/album/4oTrOPTDjsk0YGQ2445DUV" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/lemons" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        Album: <strong>Explosive Christmas</strong>
-        (<a href="https://open.spotify.com/album/2skpFmpTQmTRcCoOQk76O6" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/explosive-christmas" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        Single: <strong>Reborn</strong>
-        (<a href="https://open.spotify.com/album/5Nza88pbyLWeuSm2IHbVgN" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/reborn-ep" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        Album: <strong>Intergalactic Swirlz</strong>
-        (<a href="https://open.spotify.com/album/6aXnm2sZLLEVR1ob1Vbgiz" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/intergalactic-swirlz" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        EP: <strong>Flare</strong>
-        (<a href="https://open.spotify.com/album/5B3qcjQfxOvQGBBDdnbywk" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/flare" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        Album: <strong>Project 39</strong>
-        (<a href="https://open.spotify.com/album/4loaa0nWyDaxZWlZgHaIBQ" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/project-39" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        EP: <strong>Silent</strong>
-        (<a href="https://open.spotify.com/album/195fokmbfC9Hs62pOusDS3" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/silent" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        EP: <strong>Enlarging Elephants</strong>
-        (<a href="https://open.spotify.com/album/48Y20F41psQbkZzqW8S6HU" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/enlarging-elaphants" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        EP: <strong>Bring the Onslaught</strong>
-        (<a href="https://open.spotify.com/album/5hiVUR7IxKldHWZQch5B6A" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/bring-the-onslaught" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        EP: <strong>Insanitorium</strong>
-        (<a href="https://open.spotify.com/album/4V94dN0MecmER02pwUc092" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/insanitorium" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        EP: <strong>Hypernova</strong>
-        (<a href="https://open.spotify.com/album/35Nq5zIyBlwLnPuGGzcQcd" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/hypernova-2" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        EP: <strong>Hidden Forest</strong>
-        (<a href="https://open.spotify.com/album/2qrNBI4HkvUhOPj9Z4Hw2N" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/hidden-forest" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-    <li>
-        EP: <strong>Death Among Us</strong>
-        (<a href="https://open.spotify.com/album/55U8dXTlIt47CaudCOZRyT" target="_blank"><i class="fa-brands fa-spotify"></i></a> or
-        <a href="https://retrylife.bandcamp.com/album/death-amung-us" target="_blank"><i class="fa-brands fa-bandcamp"></i></a>)
-    </li>
-</ul>
+| Title                                                            | Type       | Year | Featured Artists             |
+|------------------------------------------------------------------|------------|------|------------------------------|
+| [**X-MAS 02**](/music/retrylife/xmas-02)                         | Album      | 2017 |                              |
+| [**Sir Dankley's MLG Restaurant**](/music/retrylife/sir-dankley) | Album      | 2017 | Name Unknown, Low-key Legend |
+| [**Imagined**](/music/retrylife/imagined)                        | Soundtrack | 2017 |                              |
+| [**Lemons**](/music/retrylife/lemons)                            | Album      | 2017 |                              |
+| [**Explosive Christmas**](/music/retrylife/explosive-xmas)       | Album      | 2016 |                              |
+| [**Reborn**](/music/retrylife/reborn)                            | Single     | 2016 |                              |
+| [**Intergalactic Swirlz**](/music/retrylife/intergalactic)       | Album      | 2016 |                              |
+| [**Flare**](/music/retrylife/flare)                              | EP         | 2016 |                              |
+| [**Project 39**](/music/retrylife/project-39)                    | Album      | 2015 |                              |
+| [**Silent**](/music/retrylife/silent)                            | EP         | 2015 |                              |
+| [**Enlarging Elaphants**](/music/retrylife/enlarging-elaphants)  | EP         | 2015 |                              |
+| [**Bring the Onslaught**](/music/retrylife/bring-the-onslaught)  | EP         | 2015 | Name Unknown                 |
+| [**Insanitorium**](/music/retrylife/insanitorium)                | EP         | 2015 |                              |
+| [**Hypernova**](/music/retrylife/hypernova)                      | EP         | 2015 |                              |
+| [**Hidden Forest**](/music/retrylife/hidden-forest)              | EP         | 2015 |                              |
+| [**Death Among Us**](/music/retrylife/death-among-us)            | EP         | 2015 |                              |

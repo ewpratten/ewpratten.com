@@ -1,5 +1,6 @@
 ---
 title: Channels
+date: 2022-11-25
 extra:
     no_auto_title: true
     og_image: https://ewpratten.com/images/music/channels/cover.jpg

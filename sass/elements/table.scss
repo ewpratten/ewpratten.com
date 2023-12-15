@@ -6,6 +6,9 @@ table {
   max-width: 100%;
   overflow: auto;
 
+  // NOTE: Things don't look great if you do this
+  // margin: auto;
+
   td,
   th {
     padding: 0;

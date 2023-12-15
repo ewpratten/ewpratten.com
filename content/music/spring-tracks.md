@@ -1,5 +1,6 @@
 ---
 title: Spring Tracks.
+date: 2023-05-31
 extra:
     no_auto_title: true
     og_image: https://ewpratten.com/images/music/spring-tracks/cover.jpg
