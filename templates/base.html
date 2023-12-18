@@ -45,7 +45,7 @@
             <meta name="description" content="{{page.description}}">
         {% endif %}
         <meta property="og:title" content="{{title}} - {{config.title}}" />
-        {% if page.path %}<meta property="og:type" content="article" />{% endif %}
+        {% if page.path %}<meta property="og:type" content="{{extra.og_type | default(value='article')}}" />{% endif %}
         {% if page.date %}<meta property="article:published_time" content="{{page.date}}" />{% endif %}
 
         {# Fonts #}
