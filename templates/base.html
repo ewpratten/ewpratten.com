@@ -58,6 +58,11 @@
         <link rel="stylesheet" href="{{url}}"> <!-- Requested by Page -->
         {% endfor %}
 
+        {# Allow pages to import custom Head JS if they need #}
+        {% for url in extra.head_js_import | default(value=[]) %}
+        <script src="{{url}}"></script> <!-- Requested by Page -->
+        {% endfor %}
+
         <link rel="stylesheet" href="/styles.css">
         <!--noformat-->
     {% endblock head %}
