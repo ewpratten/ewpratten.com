@@ -6,6 +6,10 @@ pre {
   overflow-x: scroll;
 
   // box-shadow: 0 3px 3px #717171;
+
+  span {
+    font-family: inherit !important;
+  }
 }
 
 del {
