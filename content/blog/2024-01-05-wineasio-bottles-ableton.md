@@ -6,7 +6,7 @@ tags:
   - linux
   - wine
   - music
-draft: true
+draft: false
 extra:
   auto_center_images: true
   excerpt: A post showing the process of installing WineASIO into a bottle
