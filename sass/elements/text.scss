@@ -9,11 +9,14 @@ p {
   margin-bottom: 16px;
   text-align: justify;
   hyphens: auto;
+  font-kerning: normal;
+  // font-variant-ligatures: common-ligatures contextual discretionary-ligatures historical-ligatures;
 }
 
 .no-justify {
   p {
     text-align: left !important;
+    hyphens: none;
   }
 }
 
