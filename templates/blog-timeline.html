@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{{super()}}
+
+{# Posts shall be broken down by year #}
+{% set title_year = "3000" %}
+{% for page in section.pages %}
+{% if not page.extra.hidden %}
+{% set page_year = page.date | date(format="%Y")%}
+{% if page_year != title_year %}
+{% set_global title_year = page_year %}
+
+</ul>
+<h2>{{title_year}}</h2>
+<ul class="blog-post-list">
+    {% endif %}
+    <li>
+        <span class="date" {% if page.draft %}data-draft="true" {% endif %}>{{page.date}}:</span>
+        <a href="{{page.path | safe}}">{{page.title}}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+{% endblock content %}

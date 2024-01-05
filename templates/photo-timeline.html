@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{{super()}}
+
+{% for page in section.pages %}
+{% if not page.extra.hidden %}
+
+<a href="{{page.path | safe}}" style="color:black !important;">
+    <img src="{{page.extra.cover_image | safe}}" alt="{{page.title}}" style="width:100%;" loading="lazy">
+    <div style="display:flex;justify-content:space-between;">
+        <span><strong>{{page.title}}</strong></span>
+        <span class="gray">{{page.date}}</span>
+    </div>
+</a>
+<br>
+
+{% endif %}
+{% endfor %}
+
+{% endblock content %}
