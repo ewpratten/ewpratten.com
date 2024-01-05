@@ -92,3 +92,7 @@ These last two are by far my most used, and simultaneously the most boring alias
 - `git c` is aliased to `git commit`
   
 :shrug: efficiency is efficiency.
+
+### Bonus: Why isn't `git push` aliased as `git p`?
+
+I wanted pushing my code upstream to remain a conscious decision, so I didn't want to make it *too* easy.
