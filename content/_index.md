@@ -12,9 +12,9 @@ In my free time, I bounce around between a large collection of interests, with t
 
 I am currently working on a few projects, including:
 
-- Maintaining [AS54041](https://as54041.peeringdb.com), a small computer network
-- Publishing music under my own name on [Spotify](https://open.spotify.com/artist/1aLNEmgqBJkhfkEZvf8Vh5) and [Apple Music](https://music.apple.com/us/artist/evan-pratten/1611566708)
-- Occasional <a href="https://instagram.com/evanpratten" target="_blank" rel="me">photography</a>
+- Maintaining AS54041, a small computer network
+- [Writing and publishing music](/music) under my own name
+- Occasional [photography](/photography)
 
 <!-- I am also working on an Internet-Draft:
 
