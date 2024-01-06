@@ -34,8 +34,8 @@ for IMAGE in $IMAGES; do
         # Create the preview. This should be a 2 fifths resolution version of the original image
         convert $IMAGE -resize 40% $PREVIEW
     elif [ $WIDTH -gt 720 ] || [ $HEIGHT -gt 720 ]; then
-        # Create the preview. This should be a half resolution version of the original image
-        convert $IMAGE -resize 50% $PREVIEW
+        # Create the preview. This should be a 3 quarters resolution version of the original image
+        convert $IMAGE -resize 75% $PREVIEW
     else
         # Create the preview. This should be the original image
         cp $IMAGE $PREVIEW
