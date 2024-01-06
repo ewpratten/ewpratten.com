@@ -2,7 +2,7 @@
 title: Halifax Port
 date: 2019-08-04
 extra:
-    cover_image: /photos/2019-08-04-halifax-port.jpeg
+    cover_image: /photos/2019-08-04-halifax-port.preview.jpeg
 ---
 
 ![Halifax Port](/photos/2019-08-04-halifax-port.jpeg)
