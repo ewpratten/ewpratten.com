@@ -8,6 +8,7 @@ generate_feed = true
 feed_filename = "rss.xml"
 minify_html = false # This breaks mermaid diagrams :(
 ignored_content = ["content/@/blog/*.md"]
+ignored_static = ["static/images/drawings/*/*.xcf"]
 
 [markdown]
 highlight_code = true
