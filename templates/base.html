@@ -5,12 +5,14 @@
 {% set content = page.content | default(value=section.content) %}
 {% set extra = page.extra | default(value=section.extra) %}
 {% set is_blog_post = path != "/blog/" and path is starting_with("/blog/") %}
+{% set is_photo_page = path != "/photography/" and path is starting_with("/photography/") %}
 {% else %}
 {# If here, we are on the 404 page #}
 {% set title = "NOT FOUND" %}
 {% set path = "/404" %}
 {% set extra = [] %}
 {% set is_blog_post = false %}
+{% set is_photo_page = false %}
 {% endif %}
 
 <!DOCTYPE html>
@@ -144,7 +146,7 @@
 
     {# Footer #}
     <footer>
-        {% if is_blog_post %}
+        {% if is_blog_post or is_photo_page %}
         <br>
         <p id="sponsor-notice">
             Consider making
