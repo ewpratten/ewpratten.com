@@ -1,10 +1,10 @@
 {# Some common data #}
 {%if page.path or section.path %}
-    {% set title = page.title | default(value=section.title) %}
-    {% set path = page.path | default(value=section.path) %}
-    {% set content = page.content | default(value=section.content) %}
-    {% set extra = page.extra | default(value=section.extra) %}
-    {% set is_blog_post = path != "/blog/" and path is starting_with("/blog/") %}
+{% set title = page.title | default(value=section.title) %}
+{% set path = page.path | default(value=section.path) %}
+{% set content = page.content | default(value=section.content) %}
+{% set extra = page.extra | default(value=section.extra) %}
+{% set is_blog_post = path != "/blog/" and path is starting_with("/blog/") %}
 {% else %}
 {# If here, we are on the 404 page #}
 {% set title = "NOT FOUND" %}
@@ -18,7 +18,7 @@
 
 <head>
     {% block head %}
-        <!--noformat-->
+    <!--noformat-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{title}} | {{config.title}}</title>
@@ -146,7 +146,11 @@
     <footer>
         {% if is_blog_post %}
         <br>
-        <p id="sponsor-notice">Consider <a href="https://ewp.fyi/sponsor">sponsoring my work</a>!</p>
+        <p id="sponsor-notice">
+            Consider making
+            <a href="https://ewp.fyi/donate" style="text-decoration:underline;" target="_blank">a small donation</a>
+            to support my work!
+        </p>
         {% endif %}
         <br>
         <hr>
