@@ -1,10 +1,10 @@
 ---
 title: Building QMK Keyboard Firmware Out of Tree
 description: Side-stepping the QMK monorepo for my own sanity
-date: 2024-01-06
+date: 2024-01-07
 tags:
   - keyboards
-draft: true
+draft: false
 extra:
   auto_center_images: true
 aliases:
