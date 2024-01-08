@@ -5,7 +5,7 @@ date: 2024-01-08
 tags:
   - git
   - workflow
-draft: true
+draft: false
 extra:
   auto_center_images: true
 aliases:
