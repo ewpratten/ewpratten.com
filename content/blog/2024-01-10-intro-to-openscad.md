@@ -4,7 +4,7 @@ description: Low-effort CAD like a programmer
 date: 2024-01-10
 tags:
   - cad
-draft: true
+draft: false
 extra:
   auto_center_images: true
 aliases:
