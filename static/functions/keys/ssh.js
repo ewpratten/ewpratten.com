@@ -33,7 +33,7 @@ export function onRequest(context) {
 
     // Add markers if needed
     if (add_markers) {
-        output = `\n# --- BEGIN EWPRATTEN SSH KEYS ---\n${output}\n# --- END EWPRATTEN SSH KEYS ---\n\n`;
+        output = `\n# --- BEGIN EWPRATTEN SSH KEYS ---\n${output}# --- END EWPRATTEN SSH KEYS ---\n\n`;
     }
 
     return new Response(output, {
