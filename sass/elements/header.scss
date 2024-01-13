@@ -1,4 +1,4 @@
-header {
+header.intro-card {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -9,6 +9,8 @@ header {
   max-width: 95vw;
 
   margin: 2em auto;
+
+  font-family: "IBM Plex Serif", serif;
 
   // Image Controls
   &[data-size="large"] {
@@ -78,5 +80,15 @@ header {
       width: 50px;
       height: 50px;
     }
+  }
+}
+
+header.page-header {
+  margin-bottom: 1em;
+
+  .subtitle {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 1.25em;
+    color: gray;
   }
 }

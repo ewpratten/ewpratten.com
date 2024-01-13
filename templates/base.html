@@ -73,7 +73,7 @@
 <body>
 
     {# Heading section (profile photo & name) #}
-    <header data-size="{% if path == '/' %}large{% else %}small{% endif %}">
+    <header data-size="{% if path == '/' %}large{% else %}small{% endif %}" class="intro-card">
         <img src="{{config.extra.profile_photo}}" alt="Evan Pratten">
         <div class="header-text">
             <span class="header-name">Evan Pratten</span><br>
@@ -131,13 +131,14 @@
     <main>
         {% block content %}
         <article>
-            {% if not extra.no_auto_title %}
-            <h1 class="title">{{title}}</h1>
-            {% endif %}
-            {% if page.description %}
-            <em class="subtitle">{{page.description}}</em><br>
-            {% endif %}
-            <br>
+            <header class="page-header">
+                {% if not extra.no_auto_title %}
+                <h1 class="title">{{title}}</h1>
+                {% endif %}
+                {% if page.description %}
+                <span class="subtitle">{{page.description}}</span>
+                {% endif %}
+            </header>
 
             {{ content | safe }}
         </article>

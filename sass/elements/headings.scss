@@ -1,3 +1,4 @@
+
 h1,
 h2,
 h3,
@@ -11,6 +12,10 @@ h6 {
   line-height: 1.25;
 
   border-bottom: 1px solid #d7dde3;
+
+  font-family: "IBM Plex Serif", serif;
+  font-kerning: normal;
+  font-variant-ligatures: normal;
 
   code {
     padding: 0 0.2em;
