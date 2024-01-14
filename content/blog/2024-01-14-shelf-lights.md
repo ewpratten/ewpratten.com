@@ -4,7 +4,7 @@ description: For when Ikea is slightly too much effort
 date: 2024-01-14
 tags:
   - electronics
-draft: true
+draft: false
 extra:
   auto_center_images: true
 aliases:
