@@ -4,7 +4,7 @@ async function handle_keys_request(context) {
 
     // If the domain is `keys.ewpratten.com`, redirect to `ewpratten.com/keys/...`
     if (url.hostname == 'keys.ewpratten.com') {
-        url.domain = 'ewpratten.com';
+        url.hostname = 'ewpratten.com';
 
         // If there was no path set, return the SSH keys
         if (url.pathname == '/') {
