@@ -14,7 +14,7 @@ async function handle_keys_request(context) {
         }
 
         // Transparent redirect
-        return fetch(url);
+        return Response.redirect(url, 302);
     }
 
     // Otherwise, continue the request chain
