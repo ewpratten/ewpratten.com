@@ -8,7 +8,7 @@ For me, the logical next step in my electronics obsession was to become an amate
 
 I'm 90% a CW operator, 9% an APRS user, and occasionally key up on VHF FM to make sure the band is still dead *(...lol)*.
 
-I like participating in the Summer & Winter Field Days, and also helped bring together the first ever [Meme Appreciation Month](/events/meme-month-2022) event.
+I like participating in the Summer & Winter Field Days, and also helped bring together the first ever [Meme Appreciation Month](/radio/meme-month-2022) event.
 
 ## The station
 

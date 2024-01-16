@@ -2,3 +2,6 @@
 /donate https://ewp.fyi/donate
 /ewpratten.repo https://dist.ewpratten.com/linux/fedora/ewpratten.repo
 /minecraft /games/minecraft
+
+# Things that have moved around on this site
+/events/meme-month-2022 /radio/meme-month-2022
