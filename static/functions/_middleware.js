@@ -13,8 +13,8 @@ async function handle_keys_request(context) {
             url.pathname = '/keys' + url.pathname;
         }
 
-        // Redirect
-        return Response.redirect(url, 302);
+        // Transparent redirect
+        return fetch(url);
     }
 
     // Otherwise, continue the request chain
