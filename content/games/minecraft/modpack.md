@@ -14,7 +14,8 @@ For questions or installation help, please [contact me](/contact).
 
 ### Minecraft Java Edition 1.20.4
 
-- [Evan's Pack **1.20.4r3**](https://cdn.modrinth.com/data/nKkJC7Iv/versions/hFy6iByf/Evan%27s%20Pack-1.20.4r3.mrpack) ***(latest)***
+- [Evan's Pack **1.20.4r4**](https://cdn.modrinth.com/data/nKkJC7Iv/versions/a3hrLpfo/Evan%27s%20Pack-1.20.4r4.mrpack) ***(latest)***
+- [Evan's Pack **1.20.4r3**](https://cdn.modrinth.com/data/nKkJC7Iv/versions/hFy6iByf/Evan%27s%20Pack-1.20.4r3.mrpack)
 - [Evan's Pack **1.20.4r2**](https://cdn.modrinth.com/data/nKkJC7Iv/versions/52mlbdUy/Evan%27s%20Pack-1.20.4r2.mrpack)
 - [Evan's Pack **1.20.4r1**](https://cdn.modrinth.com/data/nKkJC7Iv/versions/o8HTUQHL/Evan%27s%20Pack-1.20.4r1.mrpack)
 
