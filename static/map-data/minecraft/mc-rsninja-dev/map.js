@@ -65,8 +65,8 @@ chunked_layer.addTo(map);
 
 // Add a control to toggle the layers (allow both to be on at the same time)
 L.control.layers({}, {
-    "Base Layer": base_layer,
-    "Chunked Layer": chunked_layer
+    "Evan's Export": base_layer,
+    "James' Export": chunked_layer
 }).addTo(map);
 
 // Add a CSS rule to pixelate the image only when zoomed in 
