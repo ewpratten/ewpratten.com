@@ -40,15 +40,9 @@ TILES.forEach(tile => {
     var image = L.imageOverlay(`/map-data/minecraft/mc-sdf-org/tiles/${tile.image}`, bounds).addTo(map);
 });
 
-// Find the top left and bottom right of the map
-var min_x = Math.min.apply(null, TILES.map(tile => tile.x));
-var max_x = Math.max.apply(null, TILES.map(tile => tile.x));
-var min_z = Math.min.apply(null, TILES.map(tile => tile.z));
-var max_z = Math.max.apply(null, TILES.map(tile => tile.z));
-
 map.fitBounds([
-    [min_z, min_x],
-    [max_z + TILE_SIZE, max_x + TILE_SIZE]
+    [-1024, -1024],
+    [1024, 1024]
 ]);
 
 // Add a CSS rule to pixelate the image only when zoomed in 
