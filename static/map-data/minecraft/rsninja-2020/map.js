@@ -33,6 +33,30 @@ const TILES = [
     { "chunk_x": 25, "chunk_z": 993, "x": 10752, "z": 7168, "image": "25_993_x10752_z7168.png" },
     { "chunk_x": 28, "chunk_z": 986, "x": 13824, "z": 0, "image": "28_986_x13824_z0.png" }
 ]
+const WAYPOINTS = {
+    places: [
+        { x: -200, z: 160, name: "Spawn" },
+        { x: 687, z: 2547, name: "End Portal Base" },
+        { x: -994, z: -1305, name: "Carter's Base" },
+        { x: -327, z: 1801, name: "Percy's Base" },
+        { x: -450, z: 4368, name: "Cat's Snowy Base" },
+        { x: -1439, z: -59, name: "Sally's Base" },
+        { x: 1662, z: 384, name: "CommonOctopus" },
+        { x: -38, z: 1656, name: "Totem Farm" },
+        { x: -483, z: 338, name: "Will's Base" },
+        { x: 3298, z: -2820, name: "Tyson's Base" },
+        { x: -1748, z: 320, name: "Sydney's Base" },
+        { x: -1448, z: -830, name: "Ethan's Base" },
+        { x: 162, z: -125, name: "Ian's Base" },
+        { x: -278, z: -290, name: "Cat's Base" },
+        { x: 97, z: -2280, name: "Trident Farm" },
+        { x: -1304, z: -7, name: "Evan's Mountain Base" },
+        { x: -435, z: -851, name: "Jake's Base" },
+        { x: -501, z: -514, name: "James' Base" },
+        { x: -1712, z: -622, name: "End Portal" },
+        { x: -170, z: 1038, name: "Evan's Base" }
+    ]
+}
 
 // Set up the map
 var map = L.map('map', {
@@ -63,10 +87,20 @@ map.fitBounds(bounds);
 base_layer.addTo(map);
 chunked_layer.addTo(map);
 
+// Create waypoint groups
+var places = L.layerGroup().addTo(map);
+
+// Add each waypoint to the map
+WAYPOINTS.places.forEach(place => {
+    var marker = L.marker([place.z * -1, place.x]).addTo(places);
+    marker.bindPopup(place.name);
+});
+
 // Add a control to toggle the layers (allow both to be on at the same time)
 L.control.layers({}, {
     "Evan's Export": base_layer,
-    "James' Export": chunked_layer
+    "James' Export": chunked_layer,
+    "Places": places
 }).addTo(map);
 
 // Add a CSS rule to pixelate the image only when zoomed in 
