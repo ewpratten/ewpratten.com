@@ -10,7 +10,7 @@ For questions or installation help, please [contact me](/contact).
 
 ## Releases
 
-**NOTE:** All recent releases are backwards compatible with older Minecraft server versions.
+> **NOTE:** All recent releases are backwards compatible with older Minecraft server versions.
 
 ### Minecraft Java Edition 1.20.4
 
