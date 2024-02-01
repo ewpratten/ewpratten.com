@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--noformat-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page.title}} | {{config.title}}</title>
+    <link rel="shortcut icon" type="image/jpg" href="{{config.extra.profile_photo | safe}}" />
+
+    {% if current_url %}<link rel="canonical" href="{{current_url | safe}}" />{% endif %}
+
+    {# OpenGraph #}
+    <meta name="twitter:card" content="summary" />
+    <meta name="og:site" content="{{config.extra.domain_name}}" />
+    <meta name="og:site_name" content="{{config.title}}" />
+    <meta name="og:image" content="{{config.extra.profile_photo | safe}}" />
+    <meta property="og:title" content="{{page.title}} - {{config.title}}" />
+    <!--noformat-->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+</head>
+
+<body style="margin:0;padding:0;">
+
+
+    {# Page Content #}
+    <main>
+        <div id="map" style="width:100vw;height:100vh;"></div>
+
+        {{page.content | safe}}
+    </main>
+
+    {# A bit of a hack to get VSCode to format this document correctly #}
+    {% if page.extra.bg_color %}
+    <script>
+        document.head.insertAdjacentHTML('beforeend', '<style>.leaflet-container { background-color: {{page.extra.bg_color}} !important; }</style>');
+    </script>
+    {% endif %}
+
+    {# Goatcounter #}
+    <script data-goatcounter="https://analytics.ewpratten.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+
+</html>
