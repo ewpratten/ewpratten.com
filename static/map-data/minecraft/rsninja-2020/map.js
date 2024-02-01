@@ -49,13 +49,13 @@ var chunked_layer = L.layerGroup();
 // Add each tile to the map
 TILES.forEach(tile => {
     var bounds = [[tile.z * -1, tile.x], [(tile.z + TILE_SIZE) * -1, tile.x + TILE_SIZE]];
-    var image = L.imageOverlay(`/map-data/minecraft/mc-rsninja-dev/tiles/${tile.image}`, bounds).addTo(chunked_layer);
+    var image = L.imageOverlay(`/map-data/minecraft/rsninja-2020/tiles/${tile.image}`, bounds).addTo(chunked_layer);
 });
 
 // Add the old export to the base layer
 var base_offset = [-4887, -2651];
 var bounds = [[0 + base_offset[0], 0 + base_offset[1]], [8983 + base_offset[0], 6205 + base_offset[1]]];
-var image = L.imageOverlay(`/map-data/minecraft/mc-rsninja-dev/world.png`, bounds).addTo(base_layer);
+var image = L.imageOverlay(`/map-data/minecraft/rsninja-2020/world.png`, bounds).addTo(base_layer);
 
 map.fitBounds(bounds);
 

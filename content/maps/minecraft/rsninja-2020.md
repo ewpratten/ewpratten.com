@@ -5,4 +5,4 @@ extra:
     bg_color: black
 ---
 
-<script src="/map-data/minecraft/mc-rsninja-dev/map.js"></script>
+<script src="/map-data/minecraft/rsninja-2020/map.js"></script>
