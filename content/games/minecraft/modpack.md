@@ -49,3 +49,11 @@ For questions or installation help, please [contact me](/contact).
 ### Minecraft Java Edition 1.18.2
 
 - [Evan's Pack **1.18.2r1**](https://cdn.modrinth.com/data/nKkJC7Iv/versions/YEsaPWpv/Evan%27s%20Pack-1.18.2r1.mrpack)
+
+### Minecraft Java Edition 1.18
+
+- [Evan's Pack **1.18.0r1**](https://cdn.modrinth.com/data/nKkJC7Iv/versions/WNUmASYT/Evan%27s%20Pack-1.18.0r1.mrpack)
+
+### Minecraft Java Edition 1.16.4
+
+- [Evan's Pack **1.16.4r1**](https://cdn.modrinth.com/data/nKkJC7Iv/versions/4vs4F3HW/Evan%27s%20Pack-1.16.4r1.mrpack)
