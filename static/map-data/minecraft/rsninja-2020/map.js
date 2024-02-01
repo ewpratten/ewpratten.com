@@ -54,7 +54,18 @@ const WAYPOINTS = {
         { x: -435, z: -851, name: "Jake's Base" },
         { x: -501, z: -514, name: "James' Base" },
         { x: -1712, z: -622, name: "End Portal" },
-        { x: -170, z: 1038, name: "Evan's Base" }
+        { x: -170, z: 1038, name: "Evan's Base" },
+        { x: -350, z: 250, name: "Matt's Base" },
+    ],
+    subway_lines: [
+        { start: { x: -170, z: 1038 }, end: { x: -170, z: 160 } },
+        { start: { x: -483, z: 338 }, end: { x: -170, z: 338 } },
+        { start: { x: -483, z: 338 }, end: { x: -483, z: 60 } },
+        { start: { x: -483, z: 60 }, end: { x: -501, z: 60 } },
+        { start: { x: -501, z: 60 }, end: { x: -501, z: -851 } },
+        { start: { x: -501, z: -851 }, end: { x: -250, z: -851 } },
+        { start: { x: -278, z: -287 }, end: { x: -1712, z: -287 } },
+        { start: { x: -1712, z: -287 }, end: { x: -1712, z: -622 } },
     ]
 }
 
@@ -89,6 +100,7 @@ chunked_layer.addTo(map);
 
 // Create waypoint groups
 var places = L.layerGroup().addTo(map);
+var subway_lines = L.layerGroup();
 
 // Add each waypoint to the map
 WAYPOINTS.places.forEach(place => {
@@ -96,11 +108,20 @@ WAYPOINTS.places.forEach(place => {
     marker.bindPopup(place.name);
 });
 
+// Add each subway line to the map
+WAYPOINTS.subway_lines.forEach(line => {
+    var polyline = L.polyline([
+        [line.start.z * -1, line.start.x],
+        [line.end.z * -1, line.end.x]
+    ], { color: '#ff0000aa' }).addTo(subway_lines);
+});
+
 // Add a control to toggle the layers (allow both to be on at the same time)
 L.control.layers({}, {
     "Evan's Export": base_layer,
     "James' Export": chunked_layer,
-    "Places": places
+    "Places": places,
+    "Subway Lines": subway_lines
 }).addTo(map);
 
 // Add a CSS rule to pixelate the image only when zoomed in 
