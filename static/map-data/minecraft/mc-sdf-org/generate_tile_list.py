@@ -4,7 +4,7 @@ import argparse
 from pathlib import Path
 
 ap = argparse.ArgumentParser()
-ap.add_argument("type", type=str, help="Type of the map", choices=["surface", "caves"])
+ap.add_argument("type", type=str, help="Type of the map", choices=["surface", "caves", "draconic-surface"])
 args = ap.parse_args()
 
 TILES_DIR = Path(__file__).parent / "tiles" / args.type
