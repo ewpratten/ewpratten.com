@@ -53,30 +53,43 @@ fetch('/map-data/minecraft/mc-sdf-org/markers.json')
             marker.bindPopup(waypoint.name);
         });
 
-        // Subway Lines
-        markers.lines.subway_lines.forEach(line => {
-            // Iterate over each point pair
-            line.point_pairs.forEach(pair => {
-                var map_line_obj = L.polyline([
-                    [pair.from.z * -1, pair.from.x],
-                    [pair.to.z * -1, pair.to.x],
-                ], {
-                    color: line.color,
-                    opacity: 0.5,
-
-                }).addTo(overlayLayers["Subway Lines"]);
-                map_line_obj.bindPopup(line.name);
-            });
-        });
-
         // Areas
         markers.areas.forEach(area => {
             var bounds = [
                 [area.top_left.z * -1, area.top_left.x],
                 [area.bottom_right.z * -1, area.bottom_right.x],
             ];
-            var area_obj = L.rectangle(bounds, {color:"#00000000", fillOpacity: 0.2 }).addTo(clickable_areas);
+            var area_obj = L.rectangle(bounds, { color: "#00000000", fillOpacity: 0.2 }).addTo(clickable_areas);
             area_obj.bindPopup(area.name);
+        });
+    });
+fetch('/map-data/minecraft/mc-sdf-org/subway_lines.json')
+    .then(response => response.json())
+    .then(lines => {
+        lines.forEach(line => {
+            // // Iterate over each point pair
+            // line.point_pairs.forEach(pair => {
+            //     var map_line_obj = L.polyline([
+            //         [pair.from.z * -1, pair.from.x],
+            //         [pair.to.z * -1, pair.to.x],
+            //     ], {
+            //         color: line.color,
+            //         opacity: 0.5,
+
+            //     }).addTo(overlayLayers["Subway Lines"]);
+            //     map_line_obj.bindPopup(line.name);
+            // });
+
+            // Each line has a list of line segments
+            line.line_segments.forEach(segment => {
+                // Each line segment is a list of coordinates
+                var coords = segment.map(coord => [coord.z * -1, coord.x]);
+                var map_line_obj = L.polyline(coords, {
+                    color: line.color,
+                    opacity: 0.75,
+                }).addTo(overlayLayers["Subway Lines"]);
+                map_line_obj.bindPopup(line.name);
+            });
         });
     });
 
