@@ -154,26 +154,7 @@ const TILES = {
         { "chunk_x": 791, "chunk_z": 368, "x": 48128, "z": 47616, "image": "791_368_x48128_z47616.png" },
         { "chunk_x": 791, "chunk_z": 369, "x": 48128, "z": 48640, "image": "791_369_x48128_z48640.png" }
     ],
-    caves: [
-        { "chunk_x": 0, "chunk_z": 1, "x": -2560, "z": -3584, "image": "0_1_x-2560_z-3584.png" },
-        { "chunk_x": 0, "chunk_z": 2, "x": -2560, "z": -2560, "image": "0_2_x-2560_z-2560.png" },
-        { "chunk_x": 0, "chunk_z": 3, "x": -2560, "z": -1536, "image": "0_3_x-2560_z-1536.png" },
-        { "chunk_x": 0, "chunk_z": 4, "x": -2560, "z": -512, "image": "0_4_x-2560_z-512.png" },
-        { "chunk_x": 0, "chunk_z": 5, "x": -2560, "z": 512, "image": "0_5_x-2560_z512.png" },
-        { "chunk_x": 1, "chunk_z": 0, "x": -1536, "z": -4608, "image": "1_0_x-1536_z-4608.png" },
-        { "chunk_x": 1, "chunk_z": 1, "x": -1536, "z": -3584, "image": "1_1_x-1536_z-3584.png" },
-        { "chunk_x": 1, "chunk_z": 2, "x": -1536, "z": -2560, "image": "1_2_x-1536_z-2560.png" },
-        { "chunk_x": 1, "chunk_z": 3, "x": -1536, "z": -1536, "image": "1_3_x-1536_z-1536.png" },
-        { "chunk_x": 1, "chunk_z": 4, "x": -1536, "z": -512, "image": "1_4_x-1536_z-512.png" },
-        { "chunk_x": 1, "chunk_z": 5, "x": -1536, "z": 512, "image": "1_5_x-1536_z512.png" },
-        { "chunk_x": 2, "chunk_z": 1, "x": -512, "z": -3584, "image": "2_1_x-512_z-3584.png" },
-        { "chunk_x": 2, "chunk_z": 2, "x": -512, "z": -2560, "image": "2_2_x-512_z-2560.png" },
-        { "chunk_x": 2, "chunk_z": 3, "x": -512, "z": -1536, "image": "2_3_x-512_z-1536.png" },
-        { "chunk_x": 2, "chunk_z": 4, "x": -512, "z": -512, "image": "2_4_x-512_z-512.png" },
-        { "chunk_x": 2, "chunk_z": 5, "x": -512, "z": 512, "image": "2_5_x-512_z512.png" },
-        { "chunk_x": 3, "chunk_z": 4, "x": 512, "z": -512, "image": "3_4_x512_z-512.png" },
-        { "chunk_x": 3, "chunk_z": 5, "x": 512, "z": 512, "image": "3_5_x512_z512.png" }
-    ]
+   
 }
 
 const WAYPOINTS = {
@@ -274,15 +255,6 @@ const WAYPOINTS = {
     ]
 }
 
-// Configure Leaflet to handle Minecraft coordinates
-L.XaeroTileLayer = L.TileLayer.extend({
-    getTileUrl: function (coords) {
-        return `${this._url}/xaero_tile_${(coords.x * 1024) - 512}_${(coords.y * 1024) - 512}.png`;
-    }
-});
-L.xaeroTileLayer = function (url, options) {
-    return new L.XaeroTileLayer(url, options);
-}
 
 // Set up the map
 var map = L.map('map', {
@@ -292,43 +264,26 @@ var map = L.map('map', {
     backgroundColor: '#000000',
 });
 
-// Create the tile layers
-var caves = L.xaeroTileLayer("/map-data/minecraft/mc-sdf-org/tiles/caves", {
-    tileSize: 1024,
-}).addTo(map);
-var surface = L.layerGroup();
-map.attributionControl.addAttribution('With help from: DraconicNEO'); 
+// Create storage for the tile layers
+var layers = {
+    "Caves": L.layerGroup(),
+};
 
-// Add each tile to the map
-TILES.surface.forEach(tile => {
-    var bounds = [[tile.z * -1, tile.x], [(tile.z + TILE_SIZE) * -1, tile.x + TILE_SIZE]];
-    var image = L.imageOverlay(`/map-data/minecraft/mc-sdf-org/tiles/surface/${tile.image}`, bounds).addTo(surface);
-});
+// Make a request to discover cave tiles
+fetch('/map-data/minecraft/mc-sdf-org/tiles/caves/tiles.json')
+    .then(response => response.json())
+    .then(tiles => {
+        // Add each tile
+        tiles.forEach(tile => {
+            var bounds = [[tile.z * -1, tile.x], [(tile.z + 1024) * -1, tile.x + 1024]];
+            var image = L.imageOverlay(`/map-data/minecraft/mc-sdf-org/tiles/caves/${tile.image}`, bounds).addTo(layers.Caves);
+        });
+    });
 
-// TILES.caves.forEach(tile => {
-//     var bounds = [[tile.z * -1, tile.x], [(tile.z + TILE_SIZE) * -1, tile.x + TILE_SIZE]];
-//     var image = L.imageOverlay(`/map-data/minecraft/mc-sdf-org/tiles/caves/${tile.image}`, bounds).addTo(caves);
-// });
+// Add the layers to the map
+L.control.layers(layers).addTo(map);
 
-
-// Add waypoints
-var subway_stations = L.layerGroup();
-WAYPOINTS.subway_stations.forEach(waypoint => {
-    var marker = L.marker([waypoint.z * -1, waypoint.x]).addTo(subway_stations);
-    marker.bindPopup(waypoint.name);
-});
-
-// Ad a layer selector
-L.control.layers(
-    {
-        "Caves": caves,
-        "Surface": surface,
-    },
-    {
-        "Subway Stations": subway_stations
-    }
-).addTo(map);
-
+// Make the viewport look at the center of the map
 map.fitBounds([
     [-1024, -1024],
     [1024, 1024]
@@ -343,3 +298,46 @@ map.on('zoomend', function (e) {
         document.querySelector('#leaflet-pixelator').remove();
     }
 });
+
+// // Create the tile layers
+// var caves = L.xaeroTileLayer("/map-data/minecraft/mc-sdf-org/tiles/caves", {
+//     tileSize: 1024,
+// }).addTo(map);
+// var surface = L.layerGroup();
+// map.attributionControl.addAttribution('With help from: DraconicNEO'); 
+
+// // Add each tile to the map
+// TILES.surface.forEach(tile => {
+//     var bounds = [[tile.z * -1, tile.x], [(tile.z + TILE_SIZE) * -1, tile.x + TILE_SIZE]];
+//     var image = L.imageOverlay(`/map-data/minecraft/mc-sdf-org/tiles/surface/${tile.image}`, bounds).addTo(surface);
+// });
+
+// // TILES.caves.forEach(tile => {
+// //     var bounds = [[tile.z * -1, tile.x], [(tile.z + TILE_SIZE) * -1, tile.x + TILE_SIZE]];
+// //     var image = L.imageOverlay(`/map-data/minecraft/mc-sdf-org/tiles/caves/${tile.image}`, bounds).addTo(caves);
+// // });
+
+
+// // Add waypoints
+// var subway_stations = L.layerGroup();
+// WAYPOINTS.subway_stations.forEach(waypoint => {
+//     var marker = L.marker([waypoint.z * -1, waypoint.x]).addTo(subway_stations);
+//     marker.bindPopup(waypoint.name);
+// });
+
+// // Ad a layer selector
+// L.control.layers(
+//     {
+//         "Caves": caves,
+//         "Surface": surface,
+//     },
+//     {
+//         "Subway Stations": subway_stations
+//     }
+// ).addTo(map);
+
+// map.fitBounds([
+//     [-1024, -1024],
+//     [1024, 1024]
+// ]);
+
