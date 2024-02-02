@@ -1,0 +1,128 @@
+[
+    {
+        "x": -2560,
+        "z": -3584,
+        "chunk_x": 0,
+        "chunk_z": 1,
+        "image": "xaero_tile_-2560_-3584.png"
+    },
+    {
+        "x": -2560,
+        "z": -2560,
+        "chunk_x": 0,
+        "chunk_z": 2,
+        "image": "xaero_tile_-2560_-2560.png"
+    },
+    {
+        "x": -2560,
+        "z": -1536,
+        "chunk_x": 0,
+        "chunk_z": 3,
+        "image": "xaero_tile_-2560_-1536.png"
+    },
+    {
+        "x": -2560,
+        "z": -512,
+        "chunk_x": 0,
+        "chunk_z": 4,
+        "image": "xaero_tile_-2560_-512.png"
+    },
+    {
+        "x": -2560,
+        "z": 512,
+        "chunk_x": 0,
+        "chunk_z": 5,
+        "image": "xaero_tile_-2560_512.png"
+    },
+    {
+        "x": -1536,
+        "z": -4608,
+        "chunk_x": 1,
+        "chunk_z": 0,
+        "image": "xaero_tile_-1536_-4608.png"
+    },
+    {
+        "x": -1536,
+        "z": -3584,
+        "chunk_x": 1,
+        "chunk_z": 1,
+        "image": "xaero_tile_-1536_-3584.png"
+    },
+    {
+        "x": -1536,
+        "z": -2560,
+        "chunk_x": 1,
+        "chunk_z": 2,
+        "image": "xaero_tile_-1536_-2560.png"
+    },
+    {
+        "x": -1536,
+        "z": -1536,
+        "chunk_x": 1,
+        "chunk_z": 3,
+        "image": "xaero_tile_-1536_-1536.png"
+    },
+    {
+        "x": -1536,
+        "z": -512,
+        "chunk_x": 1,
+        "chunk_z": 4,
+        "image": "xaero_tile_-1536_-512.png"
+    },
+    {
+        "x": -1536,
+        "z": 512,
+        "chunk_x": 1,
+        "chunk_z": 5,
+        "image": "xaero_tile_-1536_512.png"
+    },
+    {
+        "x": -512,
+        "z": -3584,
+        "chunk_x": 2,
+        "chunk_z": 1,
+        "image": "xaero_tile_-512_-3584.png"
+    },
+    {
+        "x": -512,
+        "z": -2560,
+        "chunk_x": 2,
+        "chunk_z": 2,
+        "image": "xaero_tile_-512_-2560.png"
+    },
+    {
+        "x": -512,
+        "z": -1536,
+        "chunk_x": 2,
+        "chunk_z": 3,
+        "image": "xaero_tile_-512_-1536.png"
+    },
+    {
+        "x": -512,
+        "z": -512,
+        "chunk_x": 2,
+        "chunk_z": 4,
+        "image": "xaero_tile_-512_-512.png"
+    },
+    {
+        "x": -512,
+        "z": 512,
+        "chunk_x": 2,
+        "chunk_z": 5,
+        "image": "xaero_tile_-512_512.png"
+    },
+    {
+        "x": 512,
+        "z": -512,
+        "chunk_x": 3,
+        "chunk_z": 4,
+        "image": "xaero_tile_512_-512.png"
+    },
+    {
+        "x": 512,
+        "z": 512,
+        "chunk_x": 3,
+        "chunk_z": 5,
+        "image": "xaero_tile_512_512.png"
+    }
+]
