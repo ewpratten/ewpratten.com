@@ -1,8 +1,13 @@
 import re
 import json
+import argparse
 from pathlib import Path
 
-TILES_DIR = Path(__file__).parent / "tiles"
+ap = argparse.ArgumentParser()
+ap.add_argument("type", type=str, help="Type of the map", choices=["surface", "caves"])
+args = ap.parse_args()
+
+TILES_DIR = Path(__file__).parent / "tiles" / args.type
 tiles = list(TILES_DIR.glob("*.png"))
 
 TILE_PARTS_RE = re.compile(r"([\d\-]+)_([\d\-]+)_x([\d\-]+)_z([\d\-]+).png")
