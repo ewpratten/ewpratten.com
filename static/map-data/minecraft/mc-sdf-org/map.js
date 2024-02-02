@@ -12,6 +12,7 @@ map.attributionControl.addAttribution('With help from: DraconicNEO');
 
 // Create storage for the tile layers
 var layers = {
+    "Blank": L.layerGroup(),
     "Caves": L.layerGroup(),
     "Surface": L.layerGroup().addTo(map),
 };
