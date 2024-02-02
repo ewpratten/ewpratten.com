@@ -35,27 +35,27 @@ const TILES = [
 ]
 const WAYPOINTS = {
     places: [
-        { x: -200, z: 160, name: "Spawn" },
-        { x: 687, z: 2547, name: "End Portal Base" },
-        { x: -994, z: -1305, name: "Carter's Base" },
-        { x: -327, z: 1801, name: "Percy's Base" },
-        { x: -450, z: 4368, name: "Cat's Snowy Base" },
-        { x: -1439, z: -59, name: "Sally's Base" },
-        { x: 1662, z: 384, name: "CommonOctopus" },
+        { x: -200, z: 160, name: "Spawn", icon: "world.png" },
+        { x: 687, z: 2547, name: "End Portal Base", icon: "house.png" },
+        { x: -994, z: -1305, name: "Carter's Base", icon: "house.png" },
+        { x: -327, z: 1801, name: "Percy's Base", icon: "house.png" },
+        { x: -450, z: 4368, name: "Cat's Snowy Base", icon: "house.png" },
+        { x: -1439, z: -59, name: "Sally's Base", icon: "house.png" },
+        { x: 1662, z: 384, name: "CommonOctopus", icon: "house.png" },
         { x: -38, z: 1656, name: "Totem Farm" },
-        { x: -483, z: 338, name: "Will's Base" },
-        { x: 3298, z: -2820, name: "Tyson's Base" },
-        { x: -1748, z: 320, name: "Sydney's Base" },
-        { x: -1448, z: -830, name: "Ethan's Base" },
-        { x: 162, z: -125, name: "Ian's Base" },
-        { x: -278, z: -290, name: "Cat's Base" },
+        { x: -483, z: 338, name: "Will's Base", icon: "house.png" },
+        { x: 3298, z: -2820, name: "Tyson's Base", icon: "house.png" },
+        { x: -1748, z: 320, name: "Sydney's Base", icon: "house.png" },
+        { x: -1448, z: -830, name: "Ethan's Base", icon: "house.png" },
+        { x: 162, z: -125, name: "Ian's Base", icon: "house.png" },
+        { x: -278, z: -290, name: "Cat's Base", icon: "house.png" },
         { x: 97, z: -2280, name: "Trident Farm" },
-        { x: -1304, z: -7, name: "Evan's Mountain Base" },
-        { x: -435, z: -851, name: "Jake's Base" },
-        { x: -501, z: -514, name: "James' Base" },
+        { x: -1304, z: -7, name: "Evan's Mountain Base", icon: "house.png" },
+        { x: -435, z: -851, name: "Jake's Base", icon: "house.png" },
+        { x: -501, z: -514, name: "James' Base", icon: "house.png" },
         { x: -1712, z: -622, name: "End Portal" },
-        { x: -170, z: 1038, name: "Evan's Base" },
-        { x: -350, z: 250, name: "Matt's Base" },
+        { x: -170, z: 1038, name: "Evan's Base", icon: "house.png" },
+        { x: -350, z: 250, name: "Matt's Base", icon: "house.png" },
     ],
     subway_lines: [
         { start: { x: -170, z: 1038 }, end: { x: -170, z: 160 } },
@@ -104,7 +104,13 @@ var subway_lines = L.layerGroup();
 
 // Add each waypoint to the map
 WAYPOINTS.places.forEach(place => {
-    var marker = L.marker([place.z * -1, place.x]).addTo(places);
+    if (place.icon) {
+        var icon = L.icon({ iconUrl: `/map-data/icons/${place.icon}`, iconSize: [16, 16] });
+        var marker = L.marker([place.z * -1, place.x], { icon: icon }).addTo(places);
+    }
+    else {
+        var marker = L.marker([place.z * -1, place.x]).addTo(places);
+    }
     marker.bindPopup(place.name);
 });
 
