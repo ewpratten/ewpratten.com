@@ -274,6 +274,16 @@ const WAYPOINTS = {
     ]
 }
 
+// Configure Leaflet to handle Minecraft coordinates
+L.XaeroTileLayer = L.TileLayer.extend({
+    getTileUrl: function (coords) {
+        return `${this._url}/xaero_tile_${(coords.x * 1024) - 512}_${(coords.y * 1024) - 512}.png`;
+    }
+});
+L.xaeroTileLayer = function (url, options) {
+    return new L.XaeroTileLayer(url, options);
+}
+
 // Set up the map
 var map = L.map('map', {
     crs: L.CRS.Simple,
@@ -283,8 +293,10 @@ var map = L.map('map', {
 });
 
 // Create the tile layers
-var caves = L.layerGroup();
-var surface = L.layerGroup().addTo(map);
+var caves = L.xaeroTileLayer("/map-data/minecraft/mc-sdf-org/tiles/caves", {
+    tileSize: 1024,
+}).addTo(map);
+var surface = L.layerGroup();
 map.attributionControl.addAttribution('With help from: DraconicNEO'); 
 
 // Add each tile to the map
@@ -293,10 +305,10 @@ TILES.surface.forEach(tile => {
     var image = L.imageOverlay(`/map-data/minecraft/mc-sdf-org/tiles/surface/${tile.image}`, bounds).addTo(surface);
 });
 
-TILES.caves.forEach(tile => {
-    var bounds = [[tile.z * -1, tile.x], [(tile.z + TILE_SIZE) * -1, tile.x + TILE_SIZE]];
-    var image = L.imageOverlay(`/map-data/minecraft/mc-sdf-org/tiles/caves/${tile.image}`, bounds).addTo(caves);
-});
+// TILES.caves.forEach(tile => {
+//     var bounds = [[tile.z * -1, tile.x], [(tile.z + TILE_SIZE) * -1, tile.x + TILE_SIZE]];
+//     var image = L.imageOverlay(`/map-data/minecraft/mc-sdf-org/tiles/caves/${tile.image}`, bounds).addTo(caves);
+// });
 
 
 // Add waypoints
