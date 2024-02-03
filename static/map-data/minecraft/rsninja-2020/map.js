@@ -139,3 +139,24 @@ map.on('zoomend', function (e) {
         document.querySelector('#leaflet-pixelator').remove();
     }
 });
+
+// Create a mouse position display
+var mousePosition = L.control({ position: 'bottomleft' });
+mousePosition.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'mouse-position');
+    this._div.style.padding = '5px';
+    this._div.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+    this._div.style.border = '1px solid #000000';
+    this._div.style.borderRadius = '5px';
+    this._div.style.display = 'none';
+    return this._div;
+};
+mousePosition.addTo(map);
+
+// Update the mouse position display
+map.on('mousemove', function (e) {
+    var x = Math.floor(e.latlng.lng);
+    var z = Math.floor(e.latlng.lat * -1);
+    mousePosition._div.innerHTML = `X: ${x}, Z: ${z}`;
+    mousePosition._div.style.display = '';
+});
