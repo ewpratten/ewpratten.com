@@ -60,3 +60,7 @@ So, how does it look?
 Great actually!
 
 ![The lights on my bookshelf](/images/posts/shelf-lights/shelf-lights.jpg)
+
+## A note from later me
+
+Hi! It is currently February 2, 2024. I've recently re-written and open-sourced the software tha powers this shelf. Feel free to check it out [on GitHub](https://github.com/ewpratten/shelf-led-controller).
