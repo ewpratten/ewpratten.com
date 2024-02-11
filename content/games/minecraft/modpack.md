@@ -8,9 +8,12 @@ The modpack is currently distributed in `.mrpack` format, which allows you to di
 
 For questions or installation help, please [contact me](/contact).
 
+
 ## Releases
 
-> **NOTE:** All recent releases are backwards compatible with older Minecraft server versions.
+{% note(type="note") %}
+All recent releases are backwards compatible with older Minecraft server versions.
+{% end %}
 
 ### Minecraft Java Edition 1.20.4
 
