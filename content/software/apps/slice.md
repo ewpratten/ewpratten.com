@@ -2,13 +2,13 @@
 title: Slice (WearOS Watchface)
 description: The WearOS watchface that fuses a 24-hour clock with a digital display
 extra:
-    og_image: /images/apps/slice/slice.png
+    og_image: /images/software/apps/slice/slice.png
 ---
 
 It started from a simple question. *What would it be like to use a 24-hour analog clock?*
 
 <img
-    src="/images/apps/slice/slice.png"
+    src="/images/software/apps/slice/slice.png"
     style="border-radius: 100%; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); width: 100%; max-width: 300px; margin: 0 auto; display: block;"
     alt="Slice watchface"
 >
