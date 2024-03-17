@@ -30,6 +30,10 @@ Inspired by my practice key, I've occasionally used paperclips as straight keys 
 
 ## PCIe key
 
-Back when my only HF radio was a Pixie QRP kit, I built a simple straight key out of a PCIe slot cover and some scrap wood. I still occasionally use it, but I find the metal-on-metal clacking sound it makes to be a little annoying.
+Back when my only HF radio was a [Pixie QRP kit](/radio/pixie), I built a simple straight key out of a PCIe slot cover.
 
-![PCIe key](/images/hobbies/radio/keys/pcie-key.jpg)
+![PCIe key](/images/hobbies/radio/keys/pcie-key-v1.jpg)
+
+A little while later, I redesigned this key to use some scrap wood as its base. I still occasionally this key, but I find the metal-on-metal clacking sound it makes to be a little annoying.
+
+![PCIe key with wood](/images/hobbies/radio/keys/pcie-key.jpg)
