@@ -19,3 +19,8 @@ Before my current setup, my antenna was my bedframe.. No, seriously. It made me 
 ## APRS
 
 I find APRS to be a really interesting mode. I quite enjoy building programs that interact with APRS-IS (the radio equivalent of a Discord bot). For example, I was running a program that [tracked Canadian trains](https://github.com/ewpratten/aprs-trains) for a bit.
+
+## Related Pages
+
+- [My first HF transceiver](/radio/pixie)
+- [Morse Code Keys](/radio/keys)

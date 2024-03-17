@@ -18,6 +18,10 @@ Key features are:
 
 I later ended up modifying it to use two paperclips and wrote some software to turn it into an iambic keyer.
 
+Another variation of this existed for portable use. I also wrote out a little morse code cheat sheet on the back incase I got stuck on something while practicing.
+
+![Portable practice key](/images/hobbies/radio/keys/portable-practice-key.jpg)
+
 ## Paperclip straight key
 
 Inspired by my practice key, I've occasionally used paperclips as straight keys into my HF radio.
