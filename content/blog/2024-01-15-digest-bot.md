@@ -16,7 +16,6 @@ Each morning, shortly after I've woken up, I receive an email.
 <pre style="border-left:2px solid gray;border-radius:0;max-width:100%;overflow-x:scroll;">
 Subject: Your digest for Wednesday, January 03
 From: Digest Bot &lt;redacted@redacted.com&gt;
-
 Good morning, this is your daily digest for Wednesday January 03, 2024.
 
 Daytime weather is expected to be cloudy. 30 percent chance of flurries

@@ -14,7 +14,7 @@ aliases:
 
 A news article was written about a project I was involved in. It's even headed by a photo I took!
 
-![](https://smartcdn.gprod.postmedia.digital/v1/dynamic_resize/sws_path/suns-prod-images/1298003385469_ORIGINAL.jpg)
+![](/images/posts/weatherballoon/927942227749416960-DOC2hmHVwAI8aXW.jpg)
 
 From the **London Free Press**:
 
@@ -34,4 +34,4 @@ Once found on the American side of the border, a corresponding article was writt
 
 ## The balloon on the other side
 
-![](https://bloximages.chicago2.vip.townnews.com/tiogapublishing.com/content/tncms/assets/v3/editorial/1/38/1384aff6-d120-11e7-bd7f-e7d82bd3ef3c/5a1826bd8b199.image.jpg)
+![](/images/posts/weatherballoon/5a1826bd8b199.webp)

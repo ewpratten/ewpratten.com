@@ -14,7 +14,19 @@ table {
     padding: 0;
     padding: 6px 13px;
     border: 1px solid #d0d7de;
+
+    &:has(> audio) {
+      padding: 0;
+      margin: 0;
+    }
+
+    audio {
+      display: block;
+      width: 100%;
+      min-width: 120px;
+    }
   }
+
 
   th {
     font-weight: 600;

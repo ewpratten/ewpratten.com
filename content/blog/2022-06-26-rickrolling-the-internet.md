@@ -101,7 +101,7 @@ Generally, such a setup would involve daisy-chaining routers physically in your 
 
 Conveniently for my wallet, Linux machines provide something called [Tun/Tap Interfaces](https://en.wikipedia.org/wiki/TUN/TAP). These virtual network interfaces allow programs to pretend to be one of many other computers on the network and act as if they were real hosts. When a program registers one of these interfaces with the kernel, it gets raw access to either the 2<sup>nd</sup> or 3<sup>rd</sup> OSI layer of the network stack in the form of a raw stream.
 
-![Tun/Tap in the OSI stack](https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tun-tap-osilayers-diagram.png/400px-Tun-tap-osilayers-diagram.png)
+![Tun/Tap in the OSI stack](/images/posts/rickroll-ipv6/400px-Tun-tap-osilayers-diagram.png)
 
 I chose to register a Tun interface, and control things at the Internet Protocol level. This choice was mainly due to simplicity, as I really don't care about hardware addresses.
 
