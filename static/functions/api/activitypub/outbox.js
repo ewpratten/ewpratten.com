@@ -32,7 +32,7 @@ export async function onRequest(context) {
                         "to": [
                             "https://www.w3.org/ns/activitystreams#Public"
                         ],
-                        "published": new Date(item[2]).toISOString(),
+                        "published": item[2],
                     }
                 }
             })
