@@ -16,7 +16,6 @@ jobs:
       - name: Build only 
         uses: shalzz/zola-deploy-action@v0.18.0
         env:
-          BUILD_DIR: public
           BUILD_ONLY: true
           BUILD_FLAGS: --drafts
 
@@ -32,5 +31,4 @@ jobs:
       - name: Build only 
         uses: shalzz/zola-deploy-action@v0.18.0
         env:
-          BUILD_DIR: public
           BUILD_ONLY: true
