@@ -8,6 +8,7 @@ jobs:
     name: Development Build
     if: github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
+    environment: production
     permissions:
       contents: read
       deployments: write
@@ -36,6 +37,7 @@ jobs:
     name: Production Build
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    environment: production
     permissions:
       contents: read
       deployments: write
