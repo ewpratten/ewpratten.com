@@ -7,7 +7,7 @@ export async function onRequest(context) {
 
     // Parse the RSS feed
     let rss_data = await rss_feed.text();
-    let items = rss_data.match(RSS_ITEM_PATTERN);
+    let items = rss_data.matchAll(RSS_ITEM_PATTERN);
 
     // Generate the outbox content
     return new Response(
