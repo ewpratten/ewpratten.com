@@ -59,4 +59,4 @@ jobs:
           projectName: ewpratten
           directory: public
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          wranglerVersion: '3'
+          wranglerVersion: '2'
