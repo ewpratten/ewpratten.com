@@ -8,6 +8,9 @@ jobs:
     name: Development Build
     if: github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
 
     steps:
       - name: Checkout main
@@ -19,10 +22,23 @@ jobs:
           BUILD_ONLY: true
           BUILD_FLAGS: --drafts
 
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ewpratten
+          directory: public
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'
+
   build_prod:
     name: Production Build
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
 
     steps:
       - name: Checkout main
@@ -32,3 +48,13 @@ jobs:
         uses: shalzz/zola-deploy-action@v0.18.0
         env:
           BUILD_ONLY: true
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ewpratten
+          directory: public
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'
