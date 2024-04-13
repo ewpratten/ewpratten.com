@@ -1,0 +1,36 @@
+name: Build & Deploy Site
+
+on:
+  push:
+
+jobs:
+  build_dev:
+    name: Development Build
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+
+      - name: Build only 
+        uses: shalzz/zola-deploy-action@v0.18.0
+        env:
+          BUILD_DIR: public
+          BUILD_ONLY: true
+          BUILD_FLAGS: --drafts
+
+  build_prod:
+    name: Production Build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+
+      - name: Build only 
+        uses: shalzz/zola-deploy-action@v0.18.0
+        env:
+          BUILD_DIR: public
+          BUILD_ONLY: true
