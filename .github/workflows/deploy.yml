@@ -6,7 +6,7 @@ on:
 jobs:
   build_dev:
     name: Development Build
-    if: github.ref != 'refs/heads/main'
+    if: github.ref != 'refs/heads/master'
     runs-on: ubuntu-latest
     environment: production
     permissions:
@@ -14,7 +14,7 @@ jobs:
       deployments: write
 
     steps:
-      - name: Checkout main
+      - name: Checkout master
         uses: actions/checkout@v4
 
       - name: Build only 
@@ -35,7 +35,7 @@ jobs:
 
   build_prod:
     name: Production Build
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     environment: production
     permissions:
@@ -43,7 +43,7 @@ jobs:
       deployments: write
 
     steps:
-      - name: Checkout main
+      - name: Checkout master
         uses: actions/checkout@v4
 
       - name: Build only 
