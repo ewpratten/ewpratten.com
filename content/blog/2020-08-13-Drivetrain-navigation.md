@@ -85,7 +85,14 @@ For even more controllability, Raider Robotics passes $\Delta d$ through a [PD](
 
 For a real-world example of this method in use, check out 5024's robot (bottom right) and 1114's robot (bottom left). Both teams were running nearly the same implementation. We were both running autonomously for the first 15 seconds of the game:
 
-{{ youtube(id="5Q39LIVcXSQ" class="yt-embed") }}
+<iframe
+    src="https://www.youtube.com/embed/5Q39LIVcXSQ"
+    style="width: 100%; aspect-ratio: 16 / 9;"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+></iframe>
 
 ---
 
