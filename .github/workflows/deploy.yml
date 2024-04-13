@@ -31,7 +31,7 @@ jobs:
           projectName: ewpratten
           directory: public
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          wranglerVersion: '3'
+          wranglerVersion: '2'
 
   build_prod:
     name: Production Build
