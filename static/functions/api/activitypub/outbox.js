@@ -1,3 +1,5 @@
+const RSS_ITEM_PATTERN = /<item>\s+<title>([^<]+)<\/title>\s+<pubDate>([^<]+)<\/pubDate>\s+<author>([^<]+)<\/author>\s+<link>([^<]+)<\/link>\s+<guid>([^<]+)<\/guid>\s+<description[^>]+>([^<]+)<\/description>\s+<\/item>/gm;
+
 export async function onRequest(context) {
 
     // Request our own RSS feed
@@ -5,8 +7,7 @@ export async function onRequest(context) {
 
     // Parse the RSS feed
     let rss_data = await rss_feed.text();
-    let rss_parser = new DOMParser();
-    let rss_xml = rss_parser.parseFromString(rss_data, "text/xml");
+    let items = rss_data.match(RSS_ITEM_PATTERN);
 
     // Generate the outbox content
     return new Response(
@@ -15,23 +16,23 @@ export async function onRequest(context) {
             "id": "https://ewpratten.com/api/activitypub/outbox",
             "summary": "Evan Pratten",
             "type": "OrderedCollection",
-            "totalItems": rss_xml.getElementsByTagName("item").length,
-            "orderedItems": Array.from(rss_xml.getElementsByTagName("item")).map((item) => {
+            "totalItems": items.length,
+            "orderedItems": Array.from(items).map((item) => {
                 return {
                     "@context": "https://www.w3.org/ns/activitystreams",
-                    "id": item.querySelector("guid").textContent + "-create",
+                    "id": item[5] + "-create",
                     "type": "Create",
                     "actor": "https://ewpratten.com/api/activitypub/users/evan",
                     "object": {
-                        "id": item.querySelector("guid").textContent,
+                        "id": item[5],
                         "type": "Note",
-                        "content": item.querySelector("title").textContent,
-                        "url": item.querySelector("link").textContent,
+                        "content": item[1],
+                        "url": item[4],
                         "attributedTo": "https://ewpratten.com/api/activitypub/users/evan",
                         "to": [
                             "https://www.w3.org/ns/activitystreams#Public"
                         ],
-                        "published": new Date(item.querySelector("pubDate").textContent).toISOString(),
+                        "published": new Date(item[2]).toISOString(),
                     }
                 }
             })
