@@ -10,7 +10,7 @@ const SSH_PUBKEYS = {
             "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID8oqpyU3UW9nLzhTFO6AnDvG2Gf/UQGbB0xgtT8JMmr",
             "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGLF+C47EmbkSlGyJ71yqFy29om1Gs08GZyJN5w7tDRn"
         ],
-        "termius": [
+        "phone": [
             "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMbNW3x0Cx04MybxQo5FptZhdjiFJjKITtq67KqrDXAN+jepJwdIG6TUJzuJddztuYIsvPAoQPpiQVSPyC8y51Y=",
         ]
     },
