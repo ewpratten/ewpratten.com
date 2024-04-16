@@ -17,6 +17,9 @@ jobs:
       - name: Checkout master
         uses: actions/checkout@v4
 
+      - name: Write the commit hash into the config
+        run: echo "commit = \"$(git rev-parse HEAD | cut -c1-7)\"" >> config.toml
+
       - name: Build only 
         uses: shalzz/zola-deploy-action@v0.18.0
         env:
@@ -45,6 +48,9 @@ jobs:
     steps:
       - name: Checkout master
         uses: actions/checkout@v4
+
+      - name: Write the commit hash into the config
+        run: echo "commit = \"$(git rev-parse HEAD | cut -c1-7)\"" >> config.toml
 
       - name: Build only 
         uses: shalzz/zola-deploy-action@v0.18.0

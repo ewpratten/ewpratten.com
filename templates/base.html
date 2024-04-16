@@ -161,7 +161,9 @@
         <hr>
         <p id="copyright">
             Copyright &copy; 2017 - {{ now() | date(format="%Y") }}
-            <strong>Evan Warren Pratten</strong>
+            <strong {% if config.extra.commit %} title="Commit: {{config.extra.commit}}" {% endif %}>
+                Evan Warren Pratten
+            </strong>
         </p>
     </footer>
 
