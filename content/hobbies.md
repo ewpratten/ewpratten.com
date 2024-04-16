@@ -7,3 +7,4 @@ I spend my free time learning and making things. Check out the following pages f
 - [Music](/music)
 - [Amateur Radio](/radio)
 - [Photography](/photography)
+- [CAD & 3D Printing](/3dprint)
