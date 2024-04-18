@@ -14,4 +14,4 @@ I like modifying Minecraft almost as much as I enjoy playing it. The following a
 
 I also maintain a modpack that contains everything I consider "must-have" when playing. Any time I'm playing Minecraft, it can be assumed that I'm using my trusty quality-of-life pack. 
 
-Want to try my take on the game? Check out [Evan's Pack](https://modrinth.com/modpack/ewpratten) on Modrinth, or in your favourite Modrinth-compatible launcher (Prism, MultiMC, etc..).
+Want to try my take on the game? Check out [my personal modpack](/games/minecraft/modpack) (also available for download in your favorite Modrinth-compatible Minecraft launcher).
