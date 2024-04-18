@@ -38,7 +38,7 @@ Additionally, a thick tick and a thin tick slowly make their way around the oute
 
 Slice has been the one and only watchface on my smartwatch since 2022. 
 
-I quite like the "hour hand" on the outer ring, and use it as a quick visual indicator of my progress through the day. The "second hand" was a later addition to, allowing me to use my watchface as an impromptu timer.
+I quite like the "hour hand" on the outer ring, and use it as a quick visual indicator of my progress through the day. The "second hand" was a later addition, allowing me to use my watchface as an impromptu timer.
 
 In the future, I plan to add a Google Calendar integration to the watchface. I would like to display important calendar events as arcs across the 24-hour timeline, allowing me to quickly see how my day is structured.
 

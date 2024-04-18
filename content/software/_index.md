@@ -2,7 +2,7 @@
 title: Software
 ---
 
-This page contains a directory of my software projects.
+This page contains an (*extremely incomplete*) directory of my software projects.
 
 ## Applications
 
