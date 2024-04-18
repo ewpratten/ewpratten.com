@@ -1,6 +1,8 @@
 ---
 title: Deep Breath
 description: "A Ludum Dare game for the theme: Deeper and deeper"
+extra:
+    og_image: /images/software/games/deep-breath/game-banner.png
 ---
 
 ![](/images/software/games/deep-breath/game-banner.png)
