@@ -4,6 +4,21 @@ on:
   push:
 
 jobs:
+  workflow_note:
+    name: Workflow Note
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+
+      - name: Add a note with info about this workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin "refs/notes/*:refs/notes/*"
+          git notes append -m "GH-Actions-Workflow-Run: ${{github.server_url}}/${{github.repository}}/actions/runs/${{github.run_id}}"
+          git push origin "refs/notes/*:refs/notes/*"
+
   build_dev:
     name: Development Build
     if: github.ref != 'refs/heads/master'
@@ -14,7 +29,7 @@ jobs:
       deployments: write
 
     steps:
-      - name: Checkout master
+      - name: Checkout branch
         uses: actions/checkout@v4
 
       - name: Write the commit hash into the config
