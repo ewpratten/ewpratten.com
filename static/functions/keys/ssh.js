@@ -4,7 +4,7 @@ const SSH_PUBKEYS = {
             "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGBaSKoWYuR43fxRPy31P/X/2Ri2hYUZTjKiLBRDoa1F"
         ],
         laptop: [
-            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGEqeWe+pVp3rTsmHr9v5Qcb+niHXihJxwVKcc7p6EXz"
+            "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILt90zEOhrYqztE15630a8P3Q2sHZme3hYKRFNfXODBB"
         ],
         tablet: [
             "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID8oqpyU3UW9nLzhTFO6AnDvG2Gf/UQGbB0xgtT8JMmr",
