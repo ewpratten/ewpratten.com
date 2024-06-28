@@ -1,8 +1,5 @@
 ---
 title: FrostBucket
-tags:
-  - minecraft
-  - minecraft-plugin
 ---
 FrostBucket is a server-side plugin I built for for Minecraft [`~1.16.0`](https://jubianchi.github.io/semver-check/#/constraint/~1.16.0) that allows players to apply the `Frost Walker` enchantment to a bucket.
 

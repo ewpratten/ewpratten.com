@@ -2,10 +2,6 @@
 title: WineASIO, Bottles, and Ableton
 description: How to run Ableton in a bottle with minimal latency
 date: 2024-01-05
-tags:
-  - linux
-  - wine
-  - music
 draft: false
 extra:
   auto_center_images: true

@@ -6,9 +6,6 @@ aliases:
 extra:
     css_import:
       - https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.4.3/css/flag-icons.min.css
-tags:
-  - radio
-  - event
 ---
 
 ***This event has passed. Page preserved for nostalgia.***

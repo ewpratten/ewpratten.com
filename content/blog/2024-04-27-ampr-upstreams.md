@@ -2,8 +2,6 @@
 title: Who are the upstreams for AMPRNet?
 description: 
 date: 2024-04-27
-tags:
-  - networking
 draft: false
 extra:
   auto_center_images: true

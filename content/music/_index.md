@@ -3,8 +3,6 @@ title: My Music
 extra:
     css_import:
         - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css
-tags:
-  - music
 ---
 
 I have been a musician for most of my life, starting with the piano when I was 5, and progressing to drums and double bass a few years later.

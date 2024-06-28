@@ -1,7 +1,5 @@
 ---
 title: Darth Raider
-tags:
-  - frc
 ---
 
 **Darth Raider** was a 4-foot-tall 120lb robot that myself and a group of friends designed, built, and programmed at [*Raider Robotics*](https://raiderrobotics.org/?utm_source=ewpratten.com) back in 2020. I personally lead software development for the project, and also played a key part in guiding the physical design of the robot.

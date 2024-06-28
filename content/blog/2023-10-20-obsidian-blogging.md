@@ -2,10 +2,6 @@
 title: Authoring Blog Posts with Obsidian
 description: Trying a new way to write for this site
 date: 2023-10-20
-tags:
-  - meta
-  - random
-  - product
 draft: false
 extra:
   auto_center_images: true

@@ -1,7 +1,5 @@
 ---
 title: Amateur Radio
-tags:
-  - radio
 ---
 
 For me, the logical next step in my electronics obsession was to become an amateur radio operator. I got my license back in 2020, and if you listen carefully, you might catch me calling CQ on 7030kHz as **VA3ZZA**.

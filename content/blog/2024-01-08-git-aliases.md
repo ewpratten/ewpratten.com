@@ -2,9 +2,6 @@
 title: Git Aliases
 description: Using aliases to become a slightly faster Git user
 date: 2024-01-08
-tags:
-  - git
-  - workflow
 draft: false
 extra:
   auto_center_images: true

@@ -2,8 +2,6 @@
 title: Digest Bot
 description: My mornings start with a bit of reading
 date: 2024-01-15
-tags:
-  - random
 draft: false
 extra:
   auto_center_images: true

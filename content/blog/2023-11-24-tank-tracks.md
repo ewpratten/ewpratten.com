@@ -2,8 +2,6 @@
 title: Tank Tracks
 description: 
 date: 2023-11-24
-tags:
-  - math
 draft: true
 extra:
   auto_center_images: true

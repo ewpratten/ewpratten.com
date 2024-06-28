@@ -1,8 +1,5 @@
 ---
 title: Client Ping
-tags:
-  - minecraft
-  - minecraft-mod
 ---
 Client Ping is a Minecraft ([`^1.19.4`](https://jubianchi.github.io/semver-check/#/constraint/^1.19.4)) mod I wrote that implements multiplayer Point-of-Interest marking without the need for a server-side plugin/mod counterpart.
 

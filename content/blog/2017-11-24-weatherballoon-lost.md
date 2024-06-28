@@ -2,9 +2,6 @@
 title: We lost a weather balloon in another country
 description: ..and made the news because of it
 date: 2017-11-24
-tags:
-  - news
-  - school
 draft: false
 extra:
   excerpt: Beal science project succeeds - maybe too much - as weather balloon floats into U.S.

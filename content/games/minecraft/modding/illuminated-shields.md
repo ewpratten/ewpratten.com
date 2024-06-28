@@ -1,8 +1,5 @@
 ---
 title: Illuminated Shields
-tags:
-  - minecraft
-  - minecraft-resource-pack
 ---
 Illuminated Shields is a Minecraft resource pack that hooks in to the [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights) mod to cause shields to emit light.
 

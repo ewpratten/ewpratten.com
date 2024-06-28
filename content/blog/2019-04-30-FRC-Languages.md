@@ -1,8 +1,6 @@
 ---
 title: The language hunt
 date: 2019-04-30
-tags:
-  - frc
 aliases:
   - /blog/frc-languages
 ---
