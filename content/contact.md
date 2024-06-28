@@ -25,12 +25,9 @@ All other network information may be found via:
 
 - [LinkedIn](https://www.linkedin.com/in/ewpratten/)
 - [GitHub](https://github.com/ewpratten)
-- [Discord](https://ewp.fyi/discord)
 - [QRZ](https://qrz.com/db/va3zza)
 - [Spotify](https://open.spotify.com/artist/1aLNEmgqBJkhfkEZvf8Vh5)
 - [Apple Music](https://music.apple.com/us/artist/evan-pratten/1611566708)
 - [YouTube](https://www.youtube.com/@ewpratten)
-- [Modrinth](https://modrinth.com/user/ewpratten)
-- [IMDb](https://www.imdb.com/name/nm13747554/)
 
 </details>
