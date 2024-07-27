@@ -9,7 +9,7 @@ aliases:
   - /blog/camping-radio
 ---
 
-Recently, my father and I recently took a trip out to a local provincial park for a weekend of camping.
+Recently, my father and I took a trip out to a local provincial park for a weekend of camping.
 
 Last time I had been camping happened to coincide with the period of time that I was starting to gain curiosity about amateur radio. I vividly recall being out there wishing I had a radio that I could use to communicate from the campsite.
 
