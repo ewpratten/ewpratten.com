@@ -68,7 +68,7 @@ jobs:
         run: echo "commit = \"$(git rev-parse HEAD | cut -c1-7)\"" >> config.toml
 
       - name: Build only 
-        uses: shalzz/zola-deploy-action@v0.18.0
+        uses: shalzz/zola-deploy-action@v0.19.1
         env:
           BUILD_ONLY: true
 
