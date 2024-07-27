@@ -12,10 +12,10 @@ In my free time, I bounce around between a large collection of interests, with t
 
 I am currently:
 
-- Helping to keep the internet happy at Cloudflare
+- Performing technological wizardry at Cloudflare
 - Maintaining AS54041, a small computer network
-- [Writing and publishing music](/music) under my own name
-- Occasional [photography](/photography)
+- [Writing and publishing electronic music](/music)
+- Taking occasional [photos](/photography)
 
 ## Previous work
 
