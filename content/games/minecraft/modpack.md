@@ -23,9 +23,9 @@ All modpack versions can play on <em>any</em> server version.
 {% end %}
 
 <div style="padding:0 1em; border: 1px solid #d7dde3; border-radius: 5px;margin-bottom: 1em; background-color: #f0feff;">
-<h3>Minecraft Java Edition 1.20.6</h3>
+<h3>Minecraft Java Edition 1.21.1</h3>
 
-- [Evan's Pack **1.20.6r1**](https://cdn.modrinth.com/data/nKkJC7Iv/versions/Kj3ZzMMv/Evan%27s%20Pack-1.20.6r1.mrpack) ***(latest)***
+- [Evan's Pack **1.21.1r1**](https://cdn.modrinth.com/data/nKkJC7Iv/versions/jnZDqPrK/Evan%27s%20Pack-1.21.1r1.mrpack) ***(latest)***
 
 </div>
 
@@ -35,6 +35,10 @@ All modpack versions can play on <em>any</em> server version.
 These older modpack versions are provided if you are looking to run a specific version of Minecraft.
 
 Remember: **all modpack versions can play on any server version**. You do not need to match the modpack version with the server version like you would with a vanilla client.
+
+### Minecraft Java Edition 1.20.5
+
+- [Evan's Pack **1.20.6r1**](https://cdn.modrinth.com/data/nKkJC7Iv/versions/Kj3ZzMMv/Evan%27s%20Pack-1.20.6r1.mrpack)
 
 ### Minecraft Java Edition 1.20.4
 
