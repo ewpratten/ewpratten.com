@@ -13,3 +13,7 @@ compatibility_date = "2023-05-22"
 [env.production.vars]
 GOAT_COUNTER_SITE_CODE = "ewpratten"
 ZOLA_VERSION = "0.15.3"
+
+[[r2_buckets]]
+binding = "MC_MODPACK_BUCKET"
+bucket_name = "minecraft-modpack-builds"
