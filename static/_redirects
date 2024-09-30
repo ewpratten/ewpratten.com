@@ -11,3 +11,6 @@
 /rss /rss.xml
 /feed /rss.xml
 /feed.xml /rss.xml
+
+# Minecraft modpack downloads
+/download/minecraft-modpack/* minecraft-modpack.ewpratten.com/:splat
