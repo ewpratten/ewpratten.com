@@ -10,7 +10,7 @@ export async function onRequest(context) {
     }
 
     // Return the file
-    return new Response(object, {
+    return new Response(object.body, {
         headers: {
             "Content-Type": "application/octet-stream",
             "Content-Disposition": `attachment; filename="Evan's Pack-${version}.mrpack"`,
