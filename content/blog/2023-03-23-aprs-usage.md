@@ -6,7 +6,7 @@ tags:
 - radio
 - aprs
 - data-analysis
-draft: true
+draft: false
 extra:
   auto_center_images: true
   excerpt: This post looks in to what radio operators are actually doing with the
