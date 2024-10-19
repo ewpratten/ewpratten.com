@@ -11,7 +11,7 @@ const SSH_PUBKEYS = {
             "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGLF+C47EmbkSlGyJ71yqFy29om1Gs08GZyJN5w7tDRn"
         ],
         "phone": [
-            "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMbNW3x0Cx04MybxQo5FptZhdjiFJjKITtq67KqrDXAN+jepJwdIG6TUJzuJddztuYIsvPAoQPpiQVSPyC8y51Y=",
+            "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBACE4x+BqmRtai+I3TUmS//fcL1H/WoJkTRxtk7vX4VeFgmHUFDR93kTSz70RWht1BqhBSuCAv0xPzOeZF4Yg8k="
         ]
     },
     others: [
