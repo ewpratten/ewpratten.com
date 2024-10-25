@@ -1,23 +1,9 @@
-name: Build & Deploy Site
+name: Deploy ewpratten.com
 
 on:
   push:
 
 jobs:
-  workflow_note:
-    name: Workflow Note
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout branch
-        uses: actions/checkout@v4
-
-      - name: Add a note with info about this workflow
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin "refs/notes/*:refs/notes/*"
-          git notes append -m "GH-Actions-Workflow-Run: ${{github.server_url}}/${{github.repository}}/actions/runs/${{github.run_id}}"
-          git push origin "refs/notes/*:refs/notes/*"
 
   build_dev:
     name: Development Build
@@ -38,18 +24,9 @@ jobs:
       - name: Build only 
         uses: shalzz/zola-deploy-action@v0.19.1
         env:
+          BUILD_DIR: ./ewpratten.com
           BUILD_ONLY: true
           BUILD_FLAGS: --drafts
-
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ewpratten
-          directory: public
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          wranglerVersion: '2'
 
   build_prod:
     name: Production Build
@@ -70,6 +47,7 @@ jobs:
       - name: Build only 
         uses: shalzz/zola-deploy-action@v0.19.1
         env:
+          BUILD_DIR: ./ewpratten.com
           BUILD_ONLY: true
 
       - name: Publish to Cloudflare Pages
