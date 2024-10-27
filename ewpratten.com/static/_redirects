@@ -1,11 +1,12 @@
 /network https://as54041.peeringdb.com
 /donate https://ewp.fyi/donate
 /ewpratten.repo https://dist.ewpratten.com/linux/fedora/ewpratten.repo
-/minecraft /games/minecraft
 
 # Things that have moved around on this site
 /events/meme-month-2022 /radio/meme-month-2022
 /events/meme-month-2022/ /radio/meme-month-2022
+/minecraft /games/minecraft
+/maps/minecraft/* /games/minecraft/maps/:splat
 
 # Nobody can standardize on an RSS url
 /rss /rss.xml

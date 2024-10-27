@@ -1,5 +1,5 @@
 ---
-title: My Minecraft Modpack
+title: Evan's Minecraft Modpack
 ---
 
 For the past handful of years, I've been maintaining a personal collection of Minecraft mods that improve upon base gameplay and optimize the game's internals.
@@ -88,13 +88,3 @@ Remember: **all modpack versions can play on any server version**. You do not ne
 
 </div>
 </details>
-
-## Technical details
-
-This modpack is auto-generated using the files in [this git repository](https://github.com/ewpratten/modpack).
-
-Auto-generating releases allows me to cut down on time spent searching around the internet for the latest builds of things, and instead lets me focus on the polish of the overall experience.
-
-Looking to change something? Feel free to open a pull request on the repository linked above.
-
-Bug reports are also accepted. Either file an isssue on GitHub, or [contact me](/contact).
