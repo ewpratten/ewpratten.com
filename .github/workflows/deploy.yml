@@ -24,7 +24,6 @@ jobs:
       - name: Build only 
         uses: shalzz/zola-deploy-action@v0.19.1
         env:
-          BUILD_DIR: ./ewpratten.com
           BUILD_ONLY: true
           BUILD_FLAGS: --drafts
 
@@ -47,7 +46,6 @@ jobs:
       - name: Build only 
         uses: shalzz/zola-deploy-action@v0.19.1
         env:
-          BUILD_DIR: ./ewpratten.com
           BUILD_ONLY: true
 
       - name: Publish to Cloudflare Pages
@@ -56,6 +54,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: ewpratten
-          directory: ewpratten.com/public
+          directory: public
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: '2'
