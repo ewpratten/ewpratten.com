@@ -1,7 +1,0 @@
-collectors:
-  enabled: cpu,cs,net,service,logical_disk,os,thermalzone
-collector:
-  service:
-    services-where: "Name='windows_exporter'"
-log:
-  level: warn
