@@ -8,7 +8,7 @@ I am a **Software Developer**, specializing in *automation* and *computer networ
 
 In my free time, I bounce around between a large collection of interests, with the common focus of wanting to learn how things *really work*. I take deep dives into topics that I find interesting, and occasionally write about them on [my blog](/blog).
 
-## Whats in the works
+## What I'm up to
 
 I am currently:
 

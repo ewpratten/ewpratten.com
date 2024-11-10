@@ -6,16 +6,11 @@ title: Darth Raider
 
 <img src="/images/projects/darthraider.png" alt="Darth Raider" style="max-width:400px;">
 
-**Darth Raider** carried a 15-4-0 WLT record, and was ranked #1 at the [*FIRST Robotics Humber College ONT District Event*](https://www.thebluealliance.com/event/2020onto3). This success ranked Raider Robotics as the 8th best robotics team in all of Canada for the 2020 competition season.
+**Darth Raider** carried a 15-4-0 WLT record, and was ranked #1 at the *FIRST Robotics Humber College ONT District Event*. This success ranked Raider Robotics as the 8th best robotics team in all of Canada for the 2020 competition season.
 
 ## High-Level Features
 
 - On the fly autonomous path planning & following
-- Fully autonomous global positioning system
+- Real-time global position estimation
 - Environmentally reactive aim compensation
 - Highly coordinated intra-system game piece handling
-
-## External Links & Documentation
-
-- [Source Code](https://github.com/frc5024/InfiniteRecharge)
-- [High-Level Design Documentation](/downloads/darth_raider_tech_binder.pdf)

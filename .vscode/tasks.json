@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "zola",
             "options": {
-                "cwd": "${workspaceFolder}/ewpratten.com"
+                "cwd": "${workspaceFolder}"
             },
             "args": [
                 "serve",
