@@ -2,9 +2,6 @@ name: Deploy ewpratten.com
 
 on:
   push:
-    paths:
-      - '.github/workflows/ewpratten-com.yml'
-      - 'sites/ewpratten.com/**'
 
 jobs:
 
