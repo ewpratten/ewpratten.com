@@ -5,6 +5,7 @@ on:
     branches:
       - master
     paths:
+      - '.github/workflows/ewp-fyi.yml'
       - 'sites/ewp.fyi/**'
 
 jobs:
