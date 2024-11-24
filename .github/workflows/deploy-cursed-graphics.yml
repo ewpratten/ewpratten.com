@@ -12,7 +12,7 @@ jobs:
   deploy:
     name: Production Deployment
     runs-on: ubuntu-latest
-    environment: production
+    environment: "cursed.graphics"
     permissions:
       contents: read
       deployments: write
@@ -35,7 +35,7 @@ jobs:
       - name: Build Edge Worker
         uses: cloudflare/wrangler-action@v3
         with:
+          accountId: ddc0f8101374c7bf29ab528eefc435ec
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           workingDirectory: sites/cursed.graphics
