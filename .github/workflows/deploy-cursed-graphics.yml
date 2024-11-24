@@ -26,10 +26,11 @@ jobs:
         with:
           toolchain: stable
 
+      - name: Enable Rust Caching
+        uses: Swatinem/rust-cache@v2
+
       - name: Install worker-build
-        uses: dtolnay/install@master
-        with:
-          crate: worker-build
+        run: cargo install worker-build
 
       - name: Build Edge Worker
         uses: cloudflare/wrangler-action@v3
