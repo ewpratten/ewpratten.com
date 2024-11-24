@@ -3,11 +3,11 @@ title: Space & Time, Vol. 1
 date: 2022-05-07
 extra:
     no_auto_title: true
-    og_image: https://ewpratten.com/images/music/ewpratten/space-time-v1/cover.jpg
+    og_image: https://ewpratten.com/assets/music/space-time-v1/cover.jpg
     og_description: "EP by Evan Pratten and 2 others. Released May 7 2022"
 ---
 
-{% music_card(cover="/images/music/ewpratten/space-time-v1/cover.jpg") %}
+{% music_card(cover="/assets/music/space-time-v1/cover.jpg") %}
 By: Evan Pratten, Warren Pratten, and Nihilist Spasm Band<br>
 Released: May 7 2022
 {% end %}

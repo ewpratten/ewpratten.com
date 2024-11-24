@@ -4,12 +4,12 @@ date: 2022-11-25
 extra:
     no_auto_title: true
     og_type: music.album
-    og_image: https://ewpratten.com/images/music/ewpratten/channels/cover.jpg
+    og_image: https://ewpratten.com/assets/music/channels/cover.jpg
     og_description: "Single by Evan Pratten. Released Nov 25 2022"
 ---
 
 
-{% music_card(cover="/images/music/ewpratten/channels/cover.jpg") %}
+{% music_card(cover="/assets/music/channels/cover.jpg") %}
 By: Evan Pratten<br>
 Released: Nov 25 2022
 {% end %}

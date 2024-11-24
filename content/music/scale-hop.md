@@ -3,11 +3,11 @@ title: Scale Hop
 date: 2022-01-06
 extra:
     no_auto_title: true
-    og_image: https://ewpratten.com/images/music/ewpratten/scale-hop/cover.jpg
+    og_image: https://ewpratten.com/assets/music/scale-hop/cover.jpg
     og_description: "Single by Evan Pratten. Released Jan 6 2022"
 ---
 
-{% music_card(cover="/images/music/ewpratten/scale-hop/cover.jpg") %}
+{% music_card(cover="/assets/music/scale-hop/cover.jpg") %}
 By: Evan Pratten<br>
 Released: Jan 6 2022
 {% end %}

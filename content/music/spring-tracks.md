@@ -3,11 +3,11 @@ title: Spring Tracks.
 date: 2023-05-31
 extra:
     no_auto_title: true
-    og_image: https://ewpratten.com/images/music/ewpratten/spring-tracks/cover.jpg
+    og_image: https://ewpratten.com/assets/music/spring-tracks/cover.jpg
     og_description: "Single by Evan Pratten and 2 others. Released May 31 2023"
 ---
 
-{% music_card(cover="/images/music/ewpratten/spring-tracks/cover.jpg") %}
+{% music_card(cover="/assets/music/spring-tracks/cover.jpg") %}
 By: Evan Pratten, Warren Pratten, and Emilia Frias<br>
 Released: May 31 2023
 {% end %}

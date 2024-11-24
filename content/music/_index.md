@@ -9,7 +9,21 @@ I have been a musician for most of my life, starting with the piano when I was 5
 
 I was originally in to (and performed) rock music, but found myself moving towards heavier metal, and eventually electronic dance music. Alongside this progression, I was also a part of an orchestra and a choir for a few years. Now, I find myself doing everything electronically.
 
-## Self-released music
+## Releases
+
+<div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+<a href="/music/spring-tracks" style="margin: 1em;"><img alt="Spring Tracks."       src="/assets/music/spring-tracks/cover.jpg" style="max-width: 350px"></a>
+<a href="/music/channels"      style="margin: 1em;"><img alt="Channels"             src="/assets/music/channels/cover.jpg"      style="max-width: 350px"></a>
+<a href="/music/summer-tracks" style="margin: 1em;"><img alt="Summer Tracks."       src="/assets/music/summer-tracks/cover.jpg" style="max-width: 350px"></a>
+<a href="/music/space-time-v1" style="margin: 1em;"><img alt="Space & Time, Vol. 1" src="/assets/music/space-time-v1/cover.jpg" style="max-width: 350px"></a>
+<a href="/music/scale-hop"     style="margin: 1em;"><img alt="Scale Hop"            src="/assets/music/scale-hop/cover.jpg"     style="max-width: 350px"></a>
+<a href="/music/radioactive"   style="margin: 1em;"><img alt="Radioactive"          src="/assets/music/radioactive/cover.jpg"   style="max-width: 350px"></a>
+</div>
+<br>
+
+Looking for more? I also spent a few years producing music as a member of [RetryLife](https://retrylife.ca).
+
+<!-- ## Self-released music
 
 Since 2022 I have been publishing personal music projects of all kinds under my own name.
 
@@ -47,4 +61,4 @@ Spanning 2015 to 2017, I was a part of an electronic music group named RetryLife
 | [**Insanitorium**](/music/retrylife/insanitorium)                | EP         | 2015 |                              |
 | [**Hypernova**](/music/retrylife/hypernova)                      | EP         | 2015 |                              |
 | [**Hidden Forest**](/music/retrylife/hidden-forest)              | EP         | 2015 |                              |
-| [**Death Among Us**](/music/retrylife/death-among-us)            | EP         | 2015 |                              |
+| [**Death Among Us**](/music/retrylife/death-among-us)            | EP         | 2015 |                              | -->

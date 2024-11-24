@@ -3,11 +3,11 @@ title: Radioactive
 date: 2017-02-04
 extra:
     no_auto_title: true
-    og_image: https://ewpratten.com/images/music/ewpratten/radioactive/cover.jpg
+    og_image: https://ewpratten.com/assets/music/radioactive/cover.jpg
     og_description: "Single by Evan Pratten. Released Feb 4 2017"
 ---
 
-{% music_card(cover="/images/music/ewpratten/radioactive/cover.jpg") %}
+{% music_card(cover="/assets/music/radioactive/cover.jpg") %}
 By: Evan Pratten<br>
 Released: Feb 4 2017
 {% end %}
