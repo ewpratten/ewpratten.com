@@ -1,0 +1,35 @@
+name: Deploy cursed.graphics
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'sites/cursed.graphics/**'
+
+jobs:
+  deploy:
+    name: Production Deployment
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v4
+
+      - name: Ensure Cargo is installed
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+
+      - name: Build Edge Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          environment: production
+          workingDirectory: sites/cursed.graphics

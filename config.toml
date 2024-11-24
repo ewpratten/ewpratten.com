@@ -7,8 +7,8 @@ build_search_index = true
 generate_feeds = true
 feed_filenames = ["rss.xml"]
 minify_html = false # This breaks mermaid diagrams :(
-ignored_content = ["content/@/blog/*.md"]
-ignored_static = ["static/images/drawings/*/*.xcf"]
+ignored_content = ["content/@/blog/*.md", "sites/"]
+ignored_static = ["static/images/drawings/*/*.xcf", "sites/"]
 
 [markdown]
 highlight_code = true

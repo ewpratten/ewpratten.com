@@ -1,0 +1,11 @@
+name = "cursed-graphics"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-11-23"
+
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "cursed-graphics"
+preview_bucket_name = "cursed-graphics"
+
+[build]
+command = "cargo install worker-build && worker-build --release"
