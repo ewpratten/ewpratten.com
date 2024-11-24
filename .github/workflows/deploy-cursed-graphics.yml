@@ -27,7 +27,9 @@ jobs:
           toolchain: stable
 
       - name: Install worker-build
-        run: cargo install worker-build
+        uses: dtolnay/install@master
+        with:
+          crate: worker-build
 
       - name: Build Edge Worker
         uses: cloudflare/wrangler-action@v3
