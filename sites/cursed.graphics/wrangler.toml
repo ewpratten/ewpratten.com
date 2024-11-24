@@ -10,3 +10,4 @@ preview_bucket_name = "cursed-graphics"
 [build]
 # Install with: cargo install worker-build
 command = "worker-build --release"
+ 
