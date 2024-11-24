@@ -20,10 +20,13 @@ jobs:
       - name: Checkout master
         uses: actions/checkout@v4
 
-      - name: Ensure Cargo is installed
+      - name: Install Rust Toolchain
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
+
+      - name: Install worker-build
+        run: cargo install worker-build
 
       - name: Build Edge Worker
         uses: cloudflare/wrangler-action@v3
