@@ -5,6 +5,7 @@ on:
     branches:
       - master
     paths:
+      - '.github/workflows/deploy-cursed-graphics.yml'
       - 'sites/cursed.graphics/**'
 
 jobs:
