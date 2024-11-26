@@ -7,19 +7,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.override_title %}{{page.override_title}}{% else %}{{page.title}} | {{site.title}}{% endif %}
+    <title>
+        {% if page.override_title %}{{page.override_title}}{% else %}{{page.title}} | {{site.title}}{% endif %}
     </title>
+    <link rel="stylesheet" href="/assets/css/default_compiled.css">
 </head>
 
 <body>
     <header>
-        
+
     </header>
     <main>
         {{ content }}
     </main>
-    <hr>
     <footer>
+        <hr>
         <p>
             Copyright &copy; 2017 - {{ site.time | date: '%Y' }}
             <strong>
