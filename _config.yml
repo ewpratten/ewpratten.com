@@ -1,0 +1,43 @@
+# Site
+title: Evan Pratten
+description: Evan Pratten is a software developer, amateur radio operator, and more. This is his website.
+encoding: utf-8
+source: src
+
+# Development settings
+host: 0.0.0.0
+port: 4000
+livereload: true
+
+
+# URL
+baseurl: /
+url: https://ewpratten.com
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Plugins
+plugins:
+  - jekyll-feed
+
+# Exclusions
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+  # Zola migration
+  - content/
+  - static/
+  - templates/
+  - sass/

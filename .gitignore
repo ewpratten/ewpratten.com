@@ -30,3 +30,7 @@ Cargo.lock
 
 # MacOS
 .DS_Store
+
+# Jekyll
+.jekyll-cache/
+_site/
