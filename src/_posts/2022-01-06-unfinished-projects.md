@@ -51,7 +51,7 @@ This whole pipeline works flawlessly, but the tooling was never released due to 
 
 I actually published one of my failed projects as reference material for other developers.
 
-{{ github(repo="ewpratten/animal-loader") }}
+[https://github.com/ewpratten/animal-loader](https://github.com/ewpratten/animal-loader)
 
 <br>
 

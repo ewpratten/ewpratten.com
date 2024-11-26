@@ -57,7 +57,6 @@ I then delegated reverse DNS to the [Hurricane Electric DNS service](https://dns
 
 For this process, I ended up building a little Python tool called `lyrics2ptr` that generates copy-pastable Hurricane Electric settings from a text file full of lyrics.
 
-{{ github(repo="ewpratten/lyrics2ptr") }}
 <br>
 
 The specific command for this was:
@@ -123,10 +122,7 @@ Thus, when `mtr` looks for the third router in line, it'll get the address `2a06
 
 ## Profit!
 
-Well, thats about it. I skipped over some implementation details, but if you'd like to check out the source code for this project, head over to its GitHub page:
-
-{{ github(repo="ewpratten/imaginary-addrs") }}
-<br>
+Well, thats about it. I skipped over some implementation details, but if you'd like to check out the source code for this project, head over to [its GitHub page](https://github.com/ewpratten/imaginary-addrs).
 
 And for the end result:
 

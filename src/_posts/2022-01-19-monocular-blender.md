@@ -65,9 +65,6 @@ Essentially, this toolkit leverages an existing Docker Engine on a host, and pro
 
 Using the toolkit, I threw together a quick project called `midas-depth-solve` that provides a Docker container to run MiDaS through a little [batch-processing wrapper script](https://github.com/Ewpratten/midas-depth-solve/blob/master/solve.py) I wrote. Simply provide a directory full of images in whatever format you'd like along with some configuration flags, and it will spit out each image as a grayscale depth map.
 
-{{ github(repo="ewpratten/midas-depth-solve") }}
-<br>
-
 Information on how to use this container stand-alone yourself can be found in the project README.
 
 An example of an output from MiDaS is shown below. I have boosted the exposure a lot to make it easier to see the depth levels. Generally, depth maps are low-contrast.
