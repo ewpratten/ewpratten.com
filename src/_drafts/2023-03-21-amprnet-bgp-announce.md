@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Announcing your shiny new AMPRNet BGP allocation
 description: A crash course on BGP for radio people
 date: 2023-03-21

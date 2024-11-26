@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Rickrolling the internet
 description: Abusing ICMPv6 to inject lyrics into public routes
 date: 2022-06-26

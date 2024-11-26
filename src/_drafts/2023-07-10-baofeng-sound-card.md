@@ -1,4 +1,5 @@
 ---
+layout: default
 title: A homebrew sound card designed for the Baofeng UV-5R
 description: Using cheap parts to programmatically transmit audio
 date: 2023-07-10

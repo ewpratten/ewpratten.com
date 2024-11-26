@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Using KBFS as a makeshift maven server
 description: A free and secure way to host personal Java libraries and applications
 date: 2021-02-25

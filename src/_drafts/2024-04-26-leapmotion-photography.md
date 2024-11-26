@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Infra-red photography with a Leap Motion Controller
 description: 
 date: 2024-04-26

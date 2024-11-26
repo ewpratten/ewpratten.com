@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Compiling AVR-C code with a modern build system
 description: Bringing Bazel to 8-bit microcontrollers
 date: 2020-09-03

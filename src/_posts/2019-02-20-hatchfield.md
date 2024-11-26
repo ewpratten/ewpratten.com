@@ -1,4 +1,5 @@
 ---
+layout: default
 title: 'Robot reveal: HATCHField'
 description: What I have been working on for the past few months
 date: 2019-02-20

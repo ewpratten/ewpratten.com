@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Tank Tracks
 description: 
 date: 2023-11-24

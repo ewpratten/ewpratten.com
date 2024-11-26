@@ -1,4 +1,5 @@
 ---
+layout: default
 title: My weird piece of EDC
 description: Reasons why I always carry NFC cards with me
 date: 2019-08-10

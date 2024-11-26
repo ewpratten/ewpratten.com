@@ -1,4 +1,5 @@
 ---
+layout: default
 title: The project I will never finish
 description: Its probably better that way
 date: 2024-11-24

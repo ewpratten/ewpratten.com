@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Building images from binary data
 description: Simple, yet fun
 date: 2019-09-11

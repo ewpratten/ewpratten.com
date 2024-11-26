@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Some lesser known WireGuard settings
 description: Things I will probably forget in an important moment
 date: 2023-02-15

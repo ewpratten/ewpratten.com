@@ -1,4 +1,5 @@
 ---
+layout: default
 title: WineASIO, Bottles, and Ableton
 description: How to run Ableton in a bottle with minimal latency
 date: 2024-01-05

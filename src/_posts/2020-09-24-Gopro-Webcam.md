@@ -1,4 +1,5 @@
 ---
+layout: default
 title: 'My workflow: video conference edition'
 description: Turning some spare filmmaking equipment into a high-quality video conference
   setup

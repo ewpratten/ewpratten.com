@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Integrating GitHub Codespaces with FRC
 description: Robotics software development in your browser
 date: 2020-09-10

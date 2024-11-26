@@ -1,4 +1,5 @@
 ---
+layout: default
 title: How I have tweaked my Minecraft client to be 'just right'
 description: Pushing the boundaries of a vanilla game, while being able to play on
   un-modified servers

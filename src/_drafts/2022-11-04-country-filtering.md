@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Crudely geo-filtering internet routes
 description: How I make routers drop traffic for certain countries
 date: 2022-11-04

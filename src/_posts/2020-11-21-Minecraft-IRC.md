@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Connecting to a Minecraft server over IRC
 description: For server administration, or just chatting with friends
 date: 2020-11-21

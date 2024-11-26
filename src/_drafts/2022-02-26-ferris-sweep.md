@@ -1,4 +1,5 @@
 ---
+layout: default
 title: I built a slightly infuriating keyboard
 description: Re-learning how to type at 18
 date: 2022-02-26

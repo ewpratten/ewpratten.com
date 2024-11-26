@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Taking a radio camping
 description: The noise floor is a lot lower in the forest
 date: 2024-07-26

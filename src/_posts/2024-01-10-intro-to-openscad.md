@@ -1,4 +1,5 @@
 ---
+layout: default
 title: A quick introduction to OpenSCAD
 description: Low-effort CAD like a programmer
 date: 2024-01-10

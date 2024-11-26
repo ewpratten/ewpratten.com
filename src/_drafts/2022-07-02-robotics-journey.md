@@ -1,4 +1,5 @@
 ---
+layout: default
 title: My journey through robotics
 description: 5 years of self-taught robotics development, recapped
 date: 2022-07-02

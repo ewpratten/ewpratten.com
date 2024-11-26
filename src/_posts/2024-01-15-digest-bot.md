@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Digest Bot
 description: My mornings start with a bit of reading
 date: 2024-01-15

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: I performed a button swap on my mouse
 description: This had better not be my gateway drug into custom mice
 date: 2023-05-01

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: 'Notes from FRC: Converting joystick data to tank-drive outputs'
 description: and making a tank-based robot's movements look natural
 date: 2020-08-03

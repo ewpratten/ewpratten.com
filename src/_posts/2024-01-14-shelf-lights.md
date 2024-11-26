@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Custom lighting for my bookshelf
 description: For when Ikea is slightly too much effort
 date: 2024-01-14

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: A brief walk through my all-time favorite songs
 description: ..and crashing spotify clients in the process
 date: 2022-11-10

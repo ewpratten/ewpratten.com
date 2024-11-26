@@ -1,4 +1,5 @@
 ---
+layout: default
 title: 'Notes from FRC: Autonomous point-to-point navigation'
 description: The tale of some very curvy math
 date: 2020-08-13

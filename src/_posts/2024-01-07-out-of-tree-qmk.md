@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Building QMK Keyboard Firmware Out of Tree
 description: Side-stepping the QMK monorepo for my own sanity
 date: 2024-01-07

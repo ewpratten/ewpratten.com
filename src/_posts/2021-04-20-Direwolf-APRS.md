@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Building a cheap APRS digipeater
 description: How I set up my feature-packed APRS digipeater for under $100
 date: 2021-04-20

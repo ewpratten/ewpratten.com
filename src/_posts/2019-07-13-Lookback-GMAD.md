@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Taking a look back at GMAD
 description: Fun, Simple, and Quick
 date: 2019-07-13

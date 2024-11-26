@@ -1,4 +1,5 @@
 ---
+layout: default
 title: BashSmash
 description: A tool for driving people crazy
 date: 2019-06-26

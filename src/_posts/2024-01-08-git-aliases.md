@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Git Aliases
 description: Using aliases to become a slightly faster Git user
 date: 2024-01-08

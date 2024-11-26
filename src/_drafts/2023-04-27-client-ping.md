@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Purely client-side point-of-interest marking for multiplayer Minecraft
 description: 'A showcase of my latest Minecraft mod: Client Ping'
 date: 2023-04-27

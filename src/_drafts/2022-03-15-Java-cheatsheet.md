@@ -1,4 +1,5 @@
 ---
+layout: default
 title: A Java development cheatsheet for my classmates
 description: 'PROG10082: Reference Material'
 date: 2022-03-15

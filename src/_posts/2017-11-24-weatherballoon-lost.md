@@ -1,4 +1,5 @@
 ---
+layout: default
 title: We lost a weather balloon in another country
 description: ..and made the news because of it
 date: 2017-11-24

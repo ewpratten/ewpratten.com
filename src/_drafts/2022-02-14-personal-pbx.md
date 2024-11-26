@@ -1,4 +1,5 @@
 ---
+layout: default
 title: I built my own private telephone network
 description: Nobody makes phone calls anymore
 date: 2022-02-14

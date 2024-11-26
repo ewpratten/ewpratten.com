@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Programming a live robot
 description: Living on the edge is an understatement
 date: 2019-11-20

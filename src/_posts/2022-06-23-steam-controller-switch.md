@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Using a Steam Controller with the Nintendo Switch
 description: An unreasonably cursed setup for zero gain
 date: 2022-06-23

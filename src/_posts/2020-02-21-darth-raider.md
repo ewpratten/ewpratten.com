@@ -1,4 +1,5 @@
 ---
+layout: default
 title: 'Robot reveal: Darth Raider'
 description: What I have been working on for the past few months
 date: 2020-02-21

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: 'My first mechanical keyboard: The Vortex Core'
 description: Just the right amount of obscure
 date: 2020-11-06

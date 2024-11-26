@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Using a python script to create devRant posts based on the style and content
   of another user
 description: if/else ++

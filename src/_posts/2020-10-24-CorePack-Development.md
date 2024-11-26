@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Using Bazel to create Minecraft modpacks
 description: An overview of how I automated the build process for CorePack
 date: 2020-10-24

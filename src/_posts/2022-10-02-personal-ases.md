@@ -1,4 +1,5 @@
 ---
+layout: default
 title: An analysis of personal ASNs in the wild
 description: You can get a surprising amount of info from bulk whois
 date: 2022-10-02

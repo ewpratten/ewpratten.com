@@ -1,4 +1,5 @@
 ---
+layout: default
 title: The language hunt
 date: 2019-04-30
 aliases:

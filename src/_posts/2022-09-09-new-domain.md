@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Website updates
 description: Changing a few things in the background
 date: 2022-09-09

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Taking notes with Markdown and LaTeX
 description: Using a lot of tech to replace a piece of paper
 date: 2020-08-23

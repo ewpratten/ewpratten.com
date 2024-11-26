@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Using an RNN to generate Bill Wurtz notes
 description: Textgenrnn is fun
 date: 2019-10-05

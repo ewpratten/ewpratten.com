@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Commit syncing across hosted GIT instances
 description: How I keep my commit graph alive
 date: 2022-05-18

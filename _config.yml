@@ -23,7 +23,7 @@ plugins:
   - jekyll-feed
 
 # Per-collection settings
-collections_dir: _collections
+# collections_dir: _collections
 collections:
   posts:
     output: true
