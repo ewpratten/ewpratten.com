@@ -1,0 +1,23 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"{{page.title}}" by {{site.title}}</title>
+</head>
+
+<body>
+    <main>
+        <img src="/assets/photography/{{ page.file }}" alt="A photo titled: {{ page.title }}" style="width: 100%;">
+        <div style="display: flex; justify-content: space-between;">
+            <span>{{ page.title }}</span>
+            <span>{{ page.date | date: "%Y-%m-%d" }}</span>
+        </div>
+    </main>
+</body>
+
+</html>

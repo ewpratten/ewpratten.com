@@ -1,0 +1,19 @@
+---
+layout: default
+title: Photography
+---
+
+<div class="photo-feed">
+    {% assign photos_sorted = site.photos | sort: "date" | reverse %}
+    {% for photo in photos_sorted %}
+    <div class="photo-feed-entry">
+        <a href="{{ photo.url }}">
+            <img src="/assets/photography/{{ photo.file }}" alt="A photo titled: {{ photo.name }}" style="width: 100%;">
+        </a>
+        <div style="display: flex; justify-content: space-between;">
+            <span>{{ photo.name }}</span>
+            <span>{{ photo.date | date: "%Y-%m-%d" }}</span>
+        </div>
+    </div>
+    {% endfor %}
+</div>
