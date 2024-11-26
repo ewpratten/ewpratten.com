@@ -13,10 +13,99 @@ body {
   // Default background color
   background-color: #f0f0f0;
 
+  // Remove all link decoration
+  a {
+    text-decoration: none;
+    color: blue;
+  }
+
   header {
+    font-family: "IBM Plex Serif", serif;
+
+    .title-card {
+      margin: 1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      img {
+        width: 90px;
+        height: 90px;
+      }
+      div {
+        margin-left: 1em;
+        height: max-content;
+        .name {
+          margin: 0;
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+        hr {
+          margin: 0;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          li {
+            list-style: none;
+            a {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+
+              svg {
+                display: inline-block;
+                margin-right: 1px;
+                height: 1em;
+                width: 1em;
+                filter: invert(9%) sepia(97%) saturate(6581%) hue-rotate(247deg)
+                  brightness(94%) contrast(144%);
+              }
+            }
+          }
+        }
+      }
+    }
+    nav {
+      ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+          list-style-type: none;
+          font-weight: 500;
+          &:not(:first-child)::before {
+            content: " · ";
+            margin-left: 0.25em;
+          }
+        }
+      }
+    }
   }
 
   main {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "IBM Plex Serif", serif;
+      border-bottom: 1px solid #d7dde3;
+      padding-bottom: 0.3em;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 16px;
+      padding: 0 0.25em;
+      font-size: 1.25rem;
+    }
+
     img {
       border-radius: 5px;
     }
