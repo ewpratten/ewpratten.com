@@ -9,6 +9,6 @@
 /maps/minecraft/* /games/minecraft/maps/:splat
 
 # Nobody can standardize on an RSS url
-/rss /rss.xml
-/feed /rss.xml
-/feed.xml /rss.xml
+/rss /rss.xml 301
+/feed /rss.xml 301
+/feed.xml /rss.xml 301

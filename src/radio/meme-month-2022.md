@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Meme Appreciation Month
 description: Come chat with young hams, and join the meme madness!
 aliases:

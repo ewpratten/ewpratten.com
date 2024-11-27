@@ -1,8 +1,7 @@
 ---
+layout: default
 title: My work at Raider Robotics
 ---
-
-
 
 I was a member of [Raider Robotics](https://raiderrobotics.org) (a competitive robotics team) from 2017 through 2021.
 
@@ -26,7 +25,7 @@ By obtaining real-time position deltas in robot-space, I was able to build path 
 
 <div style="max-width:200px;margin:auto;">
     <video controls style="width:100%">
-        <source src="/videos/robotics/5024/vision_v1.mp4"  type="video/mp4">
+        <source src="/assets/robotics/5024/vision_v1.mp4"  type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
@@ -35,7 +34,7 @@ By obtaining real-time position deltas in robot-space, I was able to build path 
 
 <div style="max-width:200px;margin:auto;">
     <video controls style="width:100%">
-        <source src="/videos/robotics/5024/vision_v2.mp4"  type="video/mp4">
+        <source src="/assets/robotics/5024/vision_v2.mp4"  type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
@@ -44,7 +43,7 @@ By obtaining real-time position deltas in robot-space, I was able to build path 
 
 <div style="max-width:500px;margin:auto;">
     <video controls style="width:100%">
-        <source src="/videos/robotics/5024/vision_v3.mp4"  type="video/mp4">
+        <source src="/assets/robotics/5024/vision_v3.mp4"  type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>

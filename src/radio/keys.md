@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Morse Keys
 ---
 
@@ -14,26 +15,26 @@ Key features are:
 - A volume adjustment knob
 - A buzzer to make a sound when the key is pressed
 
-![My practice key](/images/hobbies/radio/keys/practice-key.jpg)
+![My practice key](/assets/radio/keys/practice-key.jpg)
 
 I later ended up modifying it to use two paperclips and wrote some software to turn it into an iambic keyer.
 
 Another variation of this existed for portable use. I also wrote out a little morse code cheat sheet on the back incase I got stuck on something while practicing.
 
-![Portable practice key](/images/hobbies/radio/keys/portable-practice-key.jpg)
+![Portable practice key](/assets/radio/keys/portable-practice-key.jpg)
 
 ## Paperclip straight key
 
 Inspired by my practice key, I've occasionally used paperclips as straight keys into my HF radio.
 
-![Paperclip straight key](/images/hobbies/radio/keys/paperclip-straight.jpg)
+![Paperclip straight key](/assets/radio/keys/paperclip-straight.jpg)
 
 ## PCIe key
 
 Back when my only HF radio was a [Pixie QRP kit](/radio/pixie), I built a simple straight key out of a PCIe slot cover.
 
-![PCIe key](/images/hobbies/radio/keys/pcie-key-v1.jpg)
+![PCIe key](/assets/radio/keys/pcie-key-v1.jpg)
 
 A little while later, I redesigned this key to use some scrap wood as its base. I still occasionally this key, but I find the metal-on-metal clacking sound it makes to be a little annoying.
 
-![PCIe key with wood](/images/hobbies/radio/keys/pcie-key.jpg)
+![PCIe key with wood](/assets/radio/keys/pcie-key.jpg)
