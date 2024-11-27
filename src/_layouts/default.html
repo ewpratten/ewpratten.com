@@ -10,13 +10,15 @@
     <title>
         {% if page.override_title %}{{page.override_title}}{% else %}{{page.title}} | {{site.title}}{% endif %}
     </title>
+    <link rel="shortcut icon" type="image/jpg" href="{{ site.profile_photo }}" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace: '.html', '' }}" />
     <link rel="stylesheet" href="/assets/css/default_compiled.css">
 </head>
 
 <body>
     <header>
         <div class="title-card">
-            <img src="/assets/profile-photos/2022/460x460.webp" alt="A photo of Evan Pratten">
+            <img src="{{ site.profile_photo }}" alt="A photo of Evan Pratten">
             <div>
                 <span class="name">Evan Pratten</span>
                 <hr>

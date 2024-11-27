@@ -1,6 +1,7 @@
 # Site
 title: Evan Pratten
 description: Evan Pratten is a software developer, amateur radio operator, and more. This is his website.
+profile_photo: &profile_photo /assets/profile-photos/2022/460x460.webp
 encoding: utf-8
 source: src
 
@@ -12,6 +13,11 @@ livereload: true
 # URL
 baseurl: /
 url: https://ewpratten.com
+
+# RSS
+feed:
+  icon: *profile_photo
+  path: rss.xml
 
 # Markdown
 markdown: kramdown
