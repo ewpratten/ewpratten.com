@@ -186,7 +186,7 @@ You now have a firmware-unlocked Vortex Core.
 
 ## Flashing QMK
 
-*Its time for the last step :tada:*
+*Its time for the last step 🎉*
 
 With the keyboard unlocked, you can technically load anything you want on to it, but lets stick with QMK. The following commands will do all the hard work for you:
 

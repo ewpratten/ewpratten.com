@@ -61,7 +61,7 @@ Generally, if you wanted a PSTN number, you have to go to a phone carrier and ge
 
 I am personally interested in their [SIP Trunking](https://www.twilio.com/sip-trunking) service. When renting a number from Twilio (which costs just a dollar a month), you can create a SIP trunk from your PBX to theirs, and they will route all inbound calls back to you, plus allow you to place outbound calls to the PSTN through them.
 
-*Hey students, you practically do all of the Twillio stuff in this post for **free** through [GitHub Student Pack](https://education.github.com/pack/offers)* :wink:
+*Hey students, you practically do all of the Twillio stuff in this post for **free** through [GitHub Student Pack](https://education.github.com/pack/offers)* 😉
 
 ## Software PBXes and Trunking
 

@@ -61,7 +61,7 @@ The top 10 packet sources (RF and internet) are:
 
 ![](/assets/blog/aprs-usage/top_10_sources.png)
 
-And look! I'm in there :laughing:. My `VA3UJF-1` station that injects canadian passenger train telemetry into the APRS network sits at position #8. The [WINLINK](https://aprs.fi/info/a/Winlink) station takes first place though. This is another automated station for bridging [WinLink](https://winlink.org/) and APRS traffic.
+And look! I'm in there 😆. My `VA3UJF-1` station that injects canadian passenger train telemetry into the APRS network sits at position #8. The [WINLINK](https://aprs.fi/info/a/Winlink) station takes first place though. This is another automated station for bridging [WinLink](https://winlink.org/) and APRS traffic.
 
 How about the destinations?
 

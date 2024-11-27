@@ -21,7 +21,7 @@ Ok, ok, I'm sure you are here for actual technical talk, and not a history lesso
 
 ## How do you even get IPv4 space? 
 
-These days, the minimum [BGP](https://en.wikipedia.org/wiki/Border_Gateway_Protocol)-routable IPv4 block is a `/24` subnet, coming in at 255 addresses. One of these blocks auctions for prices starting around 15 thousand dollars USD. I'd say that's slightly unachievable for a college student like me, but when I come to think about it, that's still about the same as a year of tuition and housing, so... :eyes:
+These days, the minimum [BGP](https://en.wikipedia.org/wiki/Border_Gateway_Protocol)-routable IPv4 block is a `/24` subnet, coming in at 255 addresses. One of these blocks auctions for prices starting around 15 thousand dollars USD. I'd say that's slightly unachievable for a college student like me, but when I come to think about it, that's still about the same as a year of tuition and housing, so... 👀
 
 Alright, enough getting side-tracked. I'd rather pay $0 for some IP space if possible, and luckily for me, it is! I am a licensed [Amateur Radio operator](https://en.wikipedia.org/wiki/Amateur_radio), and through this, I get to make use of a few cool license-restricted services run by and for other operators. One of such services is [AMPRNet](https://en.wikipedia.org/wiki/AMPRNet), a `/8` subnet of public IP space specifically assigned for Amateur Radio Digital Communications back in 1981, and self-administered by radio amateurs. The governing body of this subnet is the [Amateur Radio Digital Communications](https://www.ampr.org/) (ARDC) foundation. Through their web portal, with a manually-verified account, any amateur can request subnets or single addresses under the `44.0.0.0/8` subnet.
 
@@ -89,7 +89,7 @@ This means, for only $5USD per month (yes, $5) I get a gateway server, a private
 
 Now equipped with everything I needed to route my `/24` IP space, I was left with one last step: *actually doing it*. Back on the [Facebook BGP](https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/) issues, I really didn't want to screw this part up, so I once again went looking for help. Luckily after asking around my college, I was introduced to [Felix Carapaica](https://www.linkedin.com/in/felixgustavocarapaica/), Sheridan's resident BGP expert.
 
-My goal for this new network of mine was to have a single gateway server that exposes a [Wireguard](https://www.wireguard.com/) server, where each VPN client is assigned a *public* static IP address. Felix was very helpful and provided me with instructions on simulating my entire networking setup in [GNS3](https://www.gns3.com/). Once I was satisfied with my test environment, I proceeded to replicate everything in real life on the gateway server, and it worked first try! Seriously. I know that never happens, but :man_shrugging:
+My goal for this new network of mine was to have a single gateway server that exposes a [Wireguard](https://www.wireguard.com/) server, where each VPN client is assigned a *public* static IP address. Felix was very helpful and provided me with instructions on simulating my entire networking setup in [GNS3](https://www.gns3.com/). Once I was satisfied with my test environment, I proceeded to replicate everything in real life on the gateway server, and it worked first try! Seriously. I know that never happens, but 🤷‍♂️
 
 For anyone curious on what BGP routing on a Vultr VPS involves, check out [Vultr's Documentation](https://www.vultr.com/docs/configuring-bgp-on-vultr) on the matter.
 

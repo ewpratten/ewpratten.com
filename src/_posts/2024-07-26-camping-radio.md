@@ -34,7 +34,7 @@ Having already built one of these antennas before, I just set out to the local C
 
 So I began searching for *literally anything conductive*, and came across a pile of spools of 24-ft "lamp wire".
 
-Lamp wire looks like speaker wire, so I figured its probably fine. Although the **24ft** part was a bit more of a problem. You generally don't want to build your antennas *too short*, but :man_shrugging: thats what antenna tuners are for I guess.
+Lamp wire looks like speaker wire, so I figured its probably fine. Although the **24ft** part was a bit more of a problem. You generally don't want to build your antennas *too short*, but 🤷‍♂️ thats what antenna tuners are for I guess.
 
 Armed with a surprisingly large amount of wire, I began the process of splicing and measuring.
 
@@ -104,4 +104,4 @@ Pictured above, days 1 & 2, and below 3 & 4.
 
 ![](/assets/blog/camping-radio/IMG_0218.jpg)
 
-All on...*checks notes*.. 7 watts :slightly_smiling_face:
+All on...*checks notes*.. 7 watts 🙂

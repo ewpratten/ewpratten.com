@@ -20,7 +20,7 @@ After hearing of this, I opened up [NFC Tools](https://play.google.com/store/app
 ## Shenanigans 
 Upon figuring out how to write to @hyperliskdev's card, we started out simple. We sent bits of text to eachother, and I eventually sent him a copy of my contact information, and bitcoin address. Then, came the real fun..
 
-By setting the data type to `external link`, and the content to [this totally not suspicious URL](https://www.youtube.com/watch?v=dQw4w9WgXcQ), we now had the perfect tool for derailing a lesson. An automatic [Rick Roll](https://en.wikipedia.org/wiki/Rickrolling) card. Upon tapping this card to a phone, the youtube app would auto-play *Rick Astley's Never Gonna Give You Up*. After this discovery, people started asking to buy pre-configured cards from me :laughing:.
+By setting the data type to `external link`, and the content to [this totally not suspicious URL](https://www.youtube.com/watch?v=dQw4w9WgXcQ), we now had the perfect tool for derailing a lesson. An automatic [Rick Roll](https://en.wikipedia.org/wiki/Rickrolling) card. Upon tapping this card to a phone, the youtube app would auto-play *Rick Astley's Never Gonna Give You Up*. After this discovery, people started asking to buy pre-configured cards from me 😆.
 
 After this came even more fun ideas:
  - Enabling flashlights

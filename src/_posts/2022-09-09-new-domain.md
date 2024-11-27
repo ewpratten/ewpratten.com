@@ -19,4 +19,4 @@ Firstly, there is a new domain name! I should have done this a while ago, but no
 
 Secondly, this site is now anycasted and edge cached. Hopefully this change will make the browsing experience a little faster for viewers outside of North America. [HTTP/3](https://en.wikipedia.org/wiki/HTTP/3) is now supported too. In the future, I might even set up some older protocols (Gopher, FTP, ..telnet..?) for fun. Info on that will come in a later post.
 
-Anyways, thanks for reading. I'm always amazed to see my analytics data. A surprising number of people read these posts :smile:
+Anyways, thanks for reading. I'm always amazed to see my analytics data. A surprising number of people read these posts 🙂

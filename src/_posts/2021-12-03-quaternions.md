@@ -65,7 +65,7 @@ let line = LineSegment2D {
 > In mathematics, the quaternion number system extends the complex numbers. Quaternions were first described by Irish mathematician William Rowan Hamilton in 1843 and applied to mechanics in three-dimensional space.<br>
 > \[[Wikipedia](https://en.wikipedia.org/wiki/Quaternion)\]
 
-Quaternions are essentially 4-dimensional numbers consisting of one real, and three imaginary components. They are expressed with the components $w$, $i$, $j$, and $k$. So far, this sounds pretty scary, but it is a lot simpler to deal with when you remember mathematicians like overcomplicating their variable names :wink:
+Quaternions are essentially 4-dimensional numbers consisting of one real, and three imaginary components. They are expressed with the components $w$, $i$, $j$, and $k$. So far, this sounds pretty scary, but it is a lot simpler to deal with when you remember mathematicians like overcomplicating their variable names 😉
 
 The following is a slightly modified version of the quaternion expression, made to express the concept in a more computer-oriented manner:
 

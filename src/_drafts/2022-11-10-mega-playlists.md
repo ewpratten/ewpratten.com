@@ -46,7 +46,7 @@ I also realized it would be reasonably easy to extend the playlist *before* 2019
 
 ## The highlights
 
-With the context out of the way, why not share some of the highlights of this project. As of the time of writing, I have a total of 38 hours of music in *Intro* and *Journey*.. Thats 646 songs! Last year I decided to test myself and listen to them all in order to see what I remembered. Surprisingly, I could hum the melody of every single one of them despite not listening to some for a few years. The power of a good song I guess :man_shrugging:
+With the context out of the way, why not share some of the highlights of this project. As of the time of writing, I have a total of 38 hours of music in *Intro* and *Journey*.. Thats 646 songs! Last year I decided to test myself and listen to them all in order to see what I remembered. Surprisingly, I could hum the melody of every single one of them despite not listening to some for a few years. The power of a good song I guess 🤷‍♂️
 
 ### Where it *almost* all began
 

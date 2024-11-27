@@ -87,4 +87,4 @@ const BANNED_TERMS = [
 
 ## A side effect of doing this
 
-And now, after publishing this post, I am about to share it on Hacker News... where I will never be able to find it again because the title of *this post* contains the term `AI` as well :facepalm:
+And now, after publishing this post, I am about to share it on Hacker News... where I will never be able to find it again because the title of *this post* contains the term `AI` as well 🤦‍♂️

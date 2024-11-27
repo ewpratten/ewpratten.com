@@ -42,7 +42,7 @@ Of course, in real life, the wiring looks a.. um.. appropriate amount of sketchy
 
 ## A custom LED controller
 
-The LED controller that came with my LED strips isn't awesome... mainly because it doesn't even power on :laughing:. So, equipped with an Arduino and a soldering iron, I set out to make my own.
+The LED controller that came with my LED strips isn't awesome... mainly because it doesn't even power on 😆. So, equipped with an Arduino and a soldering iron, I set out to make my own.
 
 The software isn't really important here, since its basically the [NeoPixel](https://github.com/adafruit/Adafruit_NeoPixel) example code, but I did opt to make my program function with one button.
 

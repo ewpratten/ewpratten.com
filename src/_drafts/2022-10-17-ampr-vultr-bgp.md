@@ -49,7 +49,7 @@ Some benefits come with going through the extra work of obtaining an ASN:
 - Ability to freely jump between IP transit providers
 - Ability to announce your IPs from multiple locations at once
 - Ability to directly peer with other networks
-- *Clout* :laughing:
+- *Clout* 😆
 
 If you would like to get your own ASN, you have a few possible routes to take:
 
@@ -78,7 +78,7 @@ With a Vultr account created, head to the [deploy page](https://my.vultr.com/dep
 
 Once your server is up and running, head to `Products > Network > BGP` in the Vultr control panel, and request BGP to be set up for your account. You'll have to provide the LOA you got from ARDC in your prefix application process.
 
-At this point, you should get the option to choose between full routing tables and the default route. If you are single-homed, choose default route. If you have your own ASN, you should be able to decide for yourself weather you need full tables or not (I'm trusting you on this one :wink:).
+At this point, you should get the option to choose between full routing tables and the default route. If you are single-homed, choose default route. If you have your own ASN, you should be able to decide for yourself weather you need full tables or not (I'm trusting you on this one 😉).
 
 While you are getting stuff ready, I recommend logging in to the server, possibly setting up [Fail2Ban](https://www.fail2ban.org/wiki/index.php/Main_Page), and installing the following packages:
 
