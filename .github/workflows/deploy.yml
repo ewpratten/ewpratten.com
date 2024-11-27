@@ -2,6 +2,8 @@ name: Deploy ewpratten.com
 
 on:
   push:
+    branches:
+      - master
 
 jobs:
   deploy:
@@ -19,12 +21,12 @@ jobs:
       - name: Build website
         run: docker compose run jekyll build
 
-      # - name: Publish to Cloudflare Pages
-      #   uses: cloudflare/pages-action@v1
-      #   with:
-      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      #     projectName: ewpratten
-      #     directory: public
-      #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-      #     wranglerVersion: '2'
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ewpratten
+          directory: _site
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '2'
