@@ -4,32 +4,8 @@ on:
   push:
 
 jobs:
-
-  build_dev:
-    name: Development Build
-    if: github.ref != 'refs/heads/master'
-    runs-on: ubuntu-latest
-    environment: production
-    permissions:
-      contents: read
-      deployments: write
-
-    steps:
-      - name: Checkout branch
-        uses: actions/checkout@v4
-
-      - name: Write the commit hash into the config
-        run: echo "commit = \"$(git rev-parse HEAD | cut -c1-7)\"" >> config.toml
-
-      - name: Build only 
-        uses: shalzz/zola-deploy-action@v0.19.1
-        env:
-          BUILD_ONLY: true
-          BUILD_FLAGS: --drafts
-
-  build_prod:
-    name: Production Build
-    if: github.ref == 'refs/heads/master'
+  deploy:
+    name: Deploy to Production
     runs-on: ubuntu-latest
     environment: production
     permissions:
@@ -40,20 +16,15 @@ jobs:
       - name: Checkout master
         uses: actions/checkout@v4
 
-      - name: Write the commit hash into the config
-        run: echo "commit = \"$(git rev-parse HEAD | cut -c1-7)\"" >> config.toml
+      - name: Build website
+        run: docker compose exec jekyll build
 
-      - name: Build only 
-        uses: shalzz/zola-deploy-action@v0.19.1
-        env:
-          BUILD_ONLY: true
-
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ewpratten
-          directory: public
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          wranglerVersion: '2'
+      # - name: Publish to Cloudflare Pages
+      #   uses: cloudflare/pages-action@v1
+      #   with:
+      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      #     projectName: ewpratten
+      #     directory: public
+      #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      #     wranglerVersion: '2'
