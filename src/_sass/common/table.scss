@@ -1,0 +1,22 @@
+table {
+  border-collapse: collapse;
+
+  thead {
+    font-weight: bold;
+    background-color: #d8d8d8;
+  }
+
+  th,
+  td {
+    padding: 0.5em;
+    border: 1px solid gray;
+  }
+
+  th {
+    background-color: #f0f0f0;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+}

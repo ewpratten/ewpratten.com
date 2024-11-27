@@ -1,11 +1,11 @@
 ---
+layout: default
 title: "Micromanaged Mike"
 description: "A Ludum Dare game for the theme: Keep it alive"
-extra:
-    og_image: /images/software/games/micromanaged-mike/game-banner.jpg
+software_category: games
 ---
 
-![](/images/software/games/micromanaged-mike/game-banner.jpg)
+![](/assets/software/micromanaged-mike/game-banner.jpg)
 
 Truly put your multitasking skills to the test as you help Mike do daily tasks, hard parts is, Mike doesn’t have any autonomous body functions. You have to do everything for him, even making him blink.
 

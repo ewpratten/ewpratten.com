@@ -1,11 +1,11 @@
 ---
+layout: default
 title: Deep Breath
 description: "A Ludum Dare game for the theme: Deeper and deeper"
-extra:
-    og_image: /images/software/games/deep-breath/game-banner.png
+software_category: games
 ---
 
-![](/images/software/games/deep-breath/game-banner.png)
+![](/assets/software/deep-breath/game-banner.png)
 
 **Deep Breath** is an exploration game where you explore an underwater cave in hopes of finding your lost transponder. Items and upgrades can be acquired along the way to assist your search.
 

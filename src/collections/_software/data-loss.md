@@ -1,11 +1,11 @@
 ---
+layout: default
 title: "[data::loss]"
 description: "A Ludum Dare game for the theme: Unstable"
-extra:
-    og_image: /images/software/games/data-loss/game-banner.png
+software_category: games
 ---
 
-![](/images/software/games/data-loss/game-banner.png)
+![](/assets/software/data-loss/game-banner.png)
 
 **[data::loss]** is a fast-paced side-scroller platforming game where you navigate a world full of graphical inconsistencies that have a habit of causing physical consequences.
 

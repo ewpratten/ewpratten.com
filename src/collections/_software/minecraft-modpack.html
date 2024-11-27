@@ -34,7 +34,7 @@ software_category: minecraft
             {% for build in most_recent_release.builds %}
             <li>
                 <a
-                    href="/assets/software/minecraft-modpack/builds/Evan's Pack-{{ most_recent_release.version }}.mrpack">
+                    href="/assets/software/minecraft-modpack/builds/Evan's Pack-{{ build.version }}.mrpack">
                     Evan's Pack <strong>{{ build.version }}</strong>
                 </a>
                 {% if forloop.first %}<strong><em>(latest)</em></strong>{% endif %}
@@ -50,7 +50,7 @@ software_category: minecraft
             {% if build.version == most_recent_release.version %}{% continue %}{% endif %}
             {% for release in build.builds %}
             <li>
-                <a href="https://software-download.ewpratten.com/minecraft-modpack-{{ build.version }}.mrpack" style="color: gray;">
+                <a href="/assets/software/minecraft-modpack/builds/Evan's Pack-{{ release.version }}.mrpack" style="color: gray;">
                     Evan's Pack <strong>{{ release.version }}</strong>
                 </a>
             </li>
