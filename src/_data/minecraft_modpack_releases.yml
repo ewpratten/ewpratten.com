@@ -1,0 +1,54 @@
+game_versions:
+  - version: 1.16.4
+    builds:
+      - version: 1.16.4r1
+
+  - version: 1.18
+    builds:
+      - version: 1.18.0r1
+
+  - version: 1.18.2
+    builds:
+      - version: 1.18.2r1
+      
+  - version: 1.19
+    builds:
+      - version: 1.19.0r1
+
+  - version: 1.19.2
+    builds:
+      - version: 1.19.2r1
+
+  - version: 1.19.4
+    builds:
+      - version: 1.19.4r1
+      - version: 1.19.4r2
+      - version: 1.19.4r3
+      - version: 1.19.4r4
+      - version: 1.19.4r5
+
+  - version: 1.20
+    builds:
+      - version: 1.20.0r1
+
+  - version: 1.20.1
+    builds:
+      - version: 1.20.1r1
+      - version: 1.20.1r2
+      - version: 1.20.1r3
+      - version: 1.20.1r4
+
+  - version: 1.20.4
+    builds:
+      - version: 1.20.4r1
+      - version: 1.20.4r2
+      - version: 1.20.4r3
+      - version: 1.20.4r4
+
+  - version: 1.20.6
+    builds:
+      - version: 1.20.6r1
+
+  - version: 1.21.1
+    builds:
+      - version: 1.21.1r1

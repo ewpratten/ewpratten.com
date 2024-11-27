@@ -139,7 +139,8 @@ body {
     }
 
     p,
-    li {
+    li,
+    a {
       & > code {
         font-size: 0.9em;
         background-color: #f0f0f0;

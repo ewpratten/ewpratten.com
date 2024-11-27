@@ -1,0 +1,62 @@
+---
+layout: default
+title: Evan's Minecraft Modpack
+software_category: minecraft
+---
+
+{% assign most_recent_release = site.data.minecraft_modpack_releases.game_versions | last %}
+
+<p>
+    For the past handful of years, I've been maintaining a personal collection of Minecraft mods that improve upon base
+    gameplay and optimize the game's internals.
+</p>
+
+<section>
+    <h2>Installation</h2>
+    <p>
+        This modpack is distributed in <code>.mrpack</code> format. To use it, you'll need to install the
+        <a href="https://prismlauncher.org/"><strong>Prism Launcher</strong></a>.
+    </p>
+    <p>Once installed:</p>
+    <ol>
+        <li>Head to <strong>Add Instance</strong> in the top-left corner of the application</li>
+        <li>Select <strong>Import</strong></li>
+        <li>Choose one of the files from the <em>Releases</em> section below</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Releases</h2>
+    <div
+        style="padding:0 1em; border: 1px solid #d7dde3; border-radius: 5px;margin-bottom: 1em; background-color: #f0feff;">
+        <h3>Minecraft Java Edition {{ most_recent_release.version }}</h3>
+        <ul>
+            {% for build in most_recent_release.builds %}
+            <li>
+                <a
+                    href="/assets/software/minecraft-modpack/builds/Evan's Pack-{{ most_recent_release.version }}.mrpack">
+                    Evan's Pack <strong>{{ build.version }}</strong>
+                </a>
+                {% if forloop.first %}<strong><em>(latest)</em></strong>{% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <section>
+        <h3>Archive</h3>
+        <ul>
+            {% for build in site.data.minecraft_modpack_releases.game_versions %}
+            {% if build.version == most_recent_release.version %}{% continue %}{% endif %}
+            {% for release in build.builds %}
+            <li>
+                <a href="https://software-download.ewpratten.com/minecraft-modpack-{{ build.version }}.mrpack" style="color: gray;">
+                    Evan's Pack <strong>{{ release.version }}</strong>
+                </a>
+            </li>
+            {% endfor %}
+            {% endfor %}
+        </ul>
+        </div>
+    </section>
+</section>

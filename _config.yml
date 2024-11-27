@@ -41,6 +41,9 @@ collections:
   music:
     output: true
     permalink: /music/:title
+  software:
+    output: true
+    permalink: /software/:title
 
 # Force-include some files
 include:
