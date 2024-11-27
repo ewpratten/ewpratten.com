@@ -13,7 +13,7 @@ Not because I don't like it, I just have a constant urge to refine it.
 
 As I am once again sitting in front of my computer contemplating a major redesign, I figured I could dedicate a post to looking back at the various previous revisions of this website.
 
-&#xb7;
+<p style="text-align: center;">…</p>
 
 This site you are looking at right now, ewpratten.com, was originally the band webpage for RetryLife (a music collective I founded with some friends). The git repo backing the page just happened to eventually evolve into my personal site as time went on.
 

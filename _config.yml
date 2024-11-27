@@ -23,13 +23,14 @@ feed:
 markdown: kramdown
 kramdown:
   input: GFM
+  mathjax: true
 
 # Plugins
 plugins:
   - jekyll-feed
 
 # Per-collection settings
-# collections_dir: _collections
+collections_dir: collections
 collections:
   posts:
     output: true

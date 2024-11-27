@@ -13,6 +13,7 @@
     <link rel="shortcut icon" type="image/jpg" href="{{ site.profile_photo }}" />
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace: '.html', '' }}" />
     <link rel="stylesheet" href="/assets/css/default_compiled.css">
+    <link rel="stylesheet" href="/assets/css/highlight/vs.css">
 </head>
 
 <body>
@@ -56,6 +57,15 @@
         </nav>
     </header>
     <main>
+        {% if page.title %}
+        <div class="page-title">
+            <h1>{{ page.title }}</h1>
+            {% if page.description %}
+             <span>{{ page.description }}</span>
+            {% endif %}
+        </div>
+        {% endif %}
+
         {{ content }}
     </main>
     <footer>

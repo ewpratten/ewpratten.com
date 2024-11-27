@@ -1,6 +1,4 @@
-// Fonts
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@use "common/font.scss" as *;
 
 body {
   // Keep websites thin!
@@ -8,10 +6,10 @@ body {
   margin: auto;
 
   // Default font
-  font-family: "Overlock", sans-serif;
+  font-family: $body-font;
 
   // Default background color
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
 
   // Remove all link decoration
   a {
@@ -20,7 +18,7 @@ body {
   }
 
   header {
-    font-family: "IBM Plex Serif", serif;
+    font-family: $title-font;
 
     .title-card {
       margin: 1em;
@@ -94,12 +92,27 @@ body {
     h4,
     h5,
     h6 {
-      font-family: "IBM Plex Serif", serif;
+      font-family: $title-font;
       border-bottom: 1px solid #d7dde3;
       padding-bottom: 0.3em;
     }
 
-    p,li {
+    .page-title {
+      margin-bottom: 1em;
+
+      h1 {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      span {
+        font-family: $title-font;
+        font-size: 1.25em;
+        color: gray;
+      }
+    }
+
+    p,
+    li {
       font-size: 1.25rem;
     }
 
@@ -114,6 +127,14 @@ body {
       margin: auto;
       max-width: 100%;
       border-radius: 5px;
+    }
+
+    pre {
+      width: 100%;
+      overflow: scroll;
+      border: 1px solid gray;
+      border-radius: 5px;
+      padding: 1em;
     }
   }
 
