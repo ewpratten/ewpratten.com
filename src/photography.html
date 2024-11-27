@@ -1,12 +1,31 @@
 ---
 layout: default
 title: Photography
+custom_css: |
+    .photo-feed {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .photo-feed-entry {
+        margin: 1em;
+        max-width: calc(max(45%, 300px));
+    }
+
+    @media screen and (max-width: calc(((300px + 2em) * 2) + 2em)) {
+        .photo-feed-entry {
+            max-width: calc(100% - 2em);
+        }
+    }
 ---
 
 <div class="photo-feed">
     {% assign photos_sorted = site.photos | sort: "date" | reverse %}
     {% for photo in photos_sorted %}
-    <div class="photo-feed-entry" style="margin-bottom: 1em;">
+    <div class="photo-feed-entry">
         <a href="{{ photo.url }}">
             <img src="/assets/photography/{{ photo.file }}" alt="A photo titled: {{ photo.title }}" style="width: 100%;">
         </a>

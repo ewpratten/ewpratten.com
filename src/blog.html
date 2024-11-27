@@ -12,7 +12,7 @@ title: Blog
 <ul>
     {% for post in group.items %}
     <li>
-        <span>{{ post.date | date: "%Y-%m-%d" }}:</span>
+        <span style="color: gray;">{{ post.date | date: "%Y-%m-%d" }}:</span>
         <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
