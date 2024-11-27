@@ -46,6 +46,6 @@ I don't remember a ton about that night, aside from a group of confused students
 Fast-forward a few months to early February 2018, and I had figure out how to control a newly built testbed with a laptop sending control commands over a WLAN connection.
 
 <video  style="max-width:100%;" controls>
-  <source src="/videos/posts/robotics-journey/2018_drive.mp4">
+  <source src="/assets/blog/robotics-journey/2018_drive.mp4">
   Video not supported
 </video>

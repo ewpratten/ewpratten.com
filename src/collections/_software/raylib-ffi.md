@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Raylib FFI
 description: Raw Rust bindings for raylib
 ---
