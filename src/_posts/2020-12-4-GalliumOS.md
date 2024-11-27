@@ -32,7 +32,7 @@ This step will void your device's warranty. Chromebooks are able to handle anyth
 
 Luckily, on the Acer R11, this process is very simple. Firstly, unscrew the laptop's bottom plate to expose the motherboard (some screws are hidden under rubber feet). With the backplate off, you will find a screw that looks like this:
 
-![R11 write protect screw](/images/posts/galliumos/arcer_r11_screw.jpg)
+![R11 write protect screw](/assets/blog/galliumos/arcer_r11_screw.jpg)
 
 The screw is hard to miss, it is beside the WIFI card, an has an arrow pointing to it. Simply remove it, and put the laptop back together. You now have a fully unlocked device.
 
@@ -49,7 +49,7 @@ sudo firmware-util.sh
 
 This will open up the `firmware-util` settings screen.
 
-![firmware-util screen](/images/posts/galliumos/fwutil_cros_wp-on.png)
+![firmware-util screen](/assets/blog/galliumos/fwutil_cros_wp-on.png)
 
 You will want to select the `RW_LEGACY` option to load the `RW_LEGACY` / SEABIOS payload. The `UEFI` option is technically the better choice, but it will completely remove the device's ability to run ChromeOS again in the future.
 

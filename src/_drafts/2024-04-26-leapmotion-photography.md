@@ -14,13 +14,13 @@ Ah, Leap Motion...
 
 Back in 2013, a company called *~~OcuSpec~~.. ~~Leap Motion~~.. ~~Ultrahaptics~~.. Ultraleap* released their first motion tracking device, the Leap Motion Controller.
 
-![The Leap Motion Controller](/images/posts/leapmotion-photography/controller.jpg)
+![The Leap Motion Controller](/assets/blog/leapmotion-photography/controller.jpg)
 
 I recall first seeing one in elementary school. 
 
 Looking back, I have no memory of what it was being used for, but I remember being fascinated with the diagnostics tool that showed the raw hand tracking data streaming from the device.
 
-![A screenshot of the visualizer](/images/posts/leapmotion-photography/leap-visualizer.png)
+![A screenshot of the visualizer](/assets/blog/leapmotion-photography/leap-visualizer.png)
 
 ## What does one actually do with one of these devices?
 

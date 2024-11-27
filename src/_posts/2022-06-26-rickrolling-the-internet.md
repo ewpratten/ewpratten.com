@@ -21,7 +21,7 @@ aliases:
 
 The following is an example output of an `mtr` trace from this computer to a Hurricane Electric server:
 
-![MTR command output](/images/posts/rickroll-ipv6/he-mtr.png)
+![MTR command output](/assets/blog/rickroll-ipv6/he-mtr.png)
 
 ## Traceroute toys
 
@@ -81,7 +81,7 @@ c011::000d never.gonna.tell.a.lie.and.hurt.you
 
 While the output format may look weird, it directly corresponds to the input fields in the DNS control panel.
 
-![A screenshot of the HE control panel](/images/posts/rickroll-ipv6/he-dns-fields.png)
+![A screenshot of the HE control panel](/assets/blog/rickroll-ipv6/he-dns-fields.png)
 
 ## ICMPv6 trickery
 
@@ -101,7 +101,7 @@ Generally, such a setup would involve daisy-chaining routers physically in your 
 
 Conveniently for my wallet, Linux machines provide something called [Tun/Tap Interfaces](https://en.wikipedia.org/wiki/TUN/TAP). These virtual network interfaces allow programs to pretend to be one of many other computers on the network and act as if they were real hosts. When a program registers one of these interfaces with the kernel, it gets raw access to either the 2<sup>nd</sup> or 3<sup>rd</sup> OSI layer of the network stack in the form of a raw stream.
 
-![Tun/Tap in the OSI stack](/images/posts/rickroll-ipv6/400px-Tun-tap-osilayers-diagram.png)
+![Tun/Tap in the OSI stack](/assets/blog/rickroll-ipv6/400px-Tun-tap-osilayers-diagram.png)
 
 I chose to register a Tun interface, and control things at the Internet Protocol level. This choice was mainly due to simplicity, as I really don't care about hardware addresses.
 
@@ -115,7 +115,7 @@ When an ICMPv6 Echo Request packet (the type that `mtr` sends for queries) comes
 
 Quick sidenote: the way I had configured my RDNS records, each line of lyrics works out to the next host in line. 
 
-![The PTR record list](/images/posts/rickroll-ipv6/ptr-records.png)
+![The PTR record list](/assets/blog/rickroll-ipv6/ptr-records.png)
 
 With my RDNS setup, and the fact `mtr` will increment the TTL field for every router it wants to find, the process for mapping a "next router please" request to a "here is the next line of lyrics instead" response is simply to use the TTL itself as the host part of the IP address I pretend to respond from.
 
@@ -127,7 +127,7 @@ Well, thats about it. I skipped over some implementation details, but if you'd l
 
 And for the end result:
 
-![The result](/images/posts/rickroll-ipv6/result.png)
+![The result](/assets/blog/rickroll-ipv6/result.png)
 
 Try it yourself!
 

@@ -70,7 +70,7 @@ Information on how to use this container stand-alone yourself can be found in th
 
 An example of an output from MiDaS is shown below. I have boosted the exposure a lot to make it easier to see the depth levels. Generally, depth maps are low-contrast.
 
-![Example Depth Image](/images/posts/monocular-blender/exaggerated-depth.png)
+![Example Depth Image](/assets/blog/monocular-blender/exaggerated-depth.png)
 
 ### The Blender plugin
 
@@ -81,7 +81,7 @@ I decided to piggy-back off the pipeline infrastructure I have already set up th
 *For anyone curious, my Blender plugins use QT for maximum interoperability with the rest of my toolset.*
 
 <div style="text-align:center;">
-<img src="/images/posts/monocular-blender/blender-importer-window.png">
+<img src="/assets/blog/monocular-blender/blender-importer-window.png">
 <p>Plugin Dialog: <em>Import Monocular Image</em></p>
 </div>
 
@@ -96,7 +96,7 @@ The process for converting a depth map and texture to a 3D object is quite simpl
 The first time I tried this, I encountered a slight issue with depth mapping:
 
 <div style="text-align:center;">
-<img src="/images/posts/monocular-blender/ayo_bro.png">
+<img src="/assets/blog/monocular-blender/ayo_bro.png">
 <p>A failed attempt</p>
 </div>
 
@@ -106,13 +106,13 @@ But then, I quickly figured out how to set up the displacement modifier, and got
 <tr>
 <td>
 <div style="text-align:center;">
-<img src="/images/posts/monocular-blender/ayo_displaced.png">
+<img src="/assets/blog/monocular-blender/ayo_displaced.png">
 <p>Displaced, untextured</p>
 </div>
 </td>
 <td>
 <div style="text-align:center;">
-<img src="/images/posts/monocular-blender/ayo_textured.png">
+<img src="/assets/blog/monocular-blender/ayo_textured.png">
 <p>Textured, viewed from the original camera position</p>
 </div>
 </td>
@@ -128,6 +128,6 @@ If you are interested in experimenting with my depth mapping plugin yourself, fe
 And finally, a demo render:
 
 <video style="max-width:100%;" controls>
-<source src="/images/posts/monocular-blender/demo_render.mp4" type="video/mp4">
+<source src="/assets/blog/monocular-blender/demo_render.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>

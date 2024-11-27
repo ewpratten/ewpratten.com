@@ -39,7 +39,7 @@ This means that my personal firmware source files live in an external repository
 
 My keyboard source code is organized by board:
 
-![File tree](/images/posts/out-of-tree-qmk/file-tree.png)
+![File tree](/assets/blog/out-of-tree-qmk/file-tree.png)
 
 The contents of these files are exactly like a normal QMK keymap.
 

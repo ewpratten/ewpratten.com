@@ -26,7 +26,7 @@ After the initial step of figuring out where to place my Vault on disk, the inte
 
 Also, for anyone editing Markdown files with embedded YAML front matter, the "properties" editor is a godsend. I wish VSCode had something similar built-in.
 
-![A screenshot of the properties for this post](/images/posts/obsidian-blogging/Pasted%20image%2020231021155654.png)
+![A screenshot of the properties for this post](/assets/blog/obsidian-blogging/Pasted%20image%2020231021155654.png)
 
 So ya, I'd totally recommend Obsidian as a Markdown editor and note-taking app.
 
@@ -113,7 +113,7 @@ The surprisingly easy way to get the graph view to behave was to just loop throu
 
 And now, with my linking trickery in place, I can get a nice graph of this website:
 
-![This site's Obsidian graph](/images/posts/obsidian-blogging/Pasted%20image.png)
+![This site's Obsidian graph](/assets/blog/obsidian-blogging/Pasted%20image.png)
 
 The green nodes are tags that I've applied to every post. The largest of which being `projects`.
 

@@ -39,7 +39,7 @@ The year before I joined Raider Robotics, most of the members with substantial t
 
 I remember in mid December of 2017, this testbed was brought in to the software lab I was working in, thus marking my first hands-on experience with a fully programable machine at this level.
 
-![Testbed photo I took](/images/posts/robotics-journey/testbed.jpg)
+![Testbed photo I took](/assets/blog/robotics-journey/testbed.jpg)
 
 I don't remember a ton about that night, aside from a group of confused students trying to figure out how to load code onto the thing, and [@hyperliskdev](https://github.com/hyperliskdev) teaching me how to make a `class` in Python3 (its the weirdest things that stick in my memory..)
 

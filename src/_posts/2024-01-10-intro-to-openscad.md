@@ -18,7 +18,7 @@ I'm writing this post as a straight-to-the point guide to hand to people who nee
 
 OpenSCAD uses code to describe 3D objects. When you open a new project, you'll see a layout that looks roughly like this:
 
-![OpenSCAD](/images/posts/intro-to-openscad/scad-window.png)
+![OpenSCAD](/assets/blog/intro-to-openscad/scad-window.png)
 
 On the left is a text editor, and the yellow area is the viewport. Writing (valid) code in the editor will modify the contents of the viewport. The viewport is also interactive, so you can click and drag to rotate the view.
 
@@ -32,17 +32,17 @@ cube([10, 10, 10]);
 
 Save your file to see the result.
 
-![A cube with equal side lengths of 10mm](/images/posts/intro-to-openscad/cube-10mm.png)
+![A cube with equal side lengths of 10mm](/assets/blog/intro-to-openscad/cube-10mm.png)
 
 ### Rectangle
 
 As you may have noticed, we typed `10` three times in the cube definition above. These three entries correspond to the three dimensions of our cube.
 
-![](/images/posts/intro-to-openscad/axis-arguments.png)
+![](/assets/blog/intro-to-openscad/axis-arguments.png)
 
 Before we change these values, you should understand OpenSCAD's coordinate system. In OpenSCAD land, the X and Y axes make up the "ground plane", and the Z axis is the vertical axis. You can always reference the little axis gadget in the bottom left corner of the viewport to see which way is which.
 
-![](/images/posts/intro-to-openscad/gadget.png)
+![](/assets/blog/intro-to-openscad/gadget.png)
 
 Ok, with the coordinate system in mind, let's make a rectangle. We'll make it 20mm wide, 10mm deep, and 5mm tall:
 
@@ -50,7 +50,7 @@ Ok, with the coordinate system in mind, let's make a rectangle. We'll make it 20
 cube([20, 10, 5]);
 ```
 
-![A rectangle with dimensions 20mm x 10mm x 5mm](/images/posts/intro-to-openscad/rectangle.png)
+![A rectangle with dimensions 20mm x 10mm x 5mm](/assets/blog/intro-to-openscad/rectangle.png)
 
 ### Sphere
 
@@ -60,7 +60,7 @@ Spheres are pretty simple. We just need to specify the radius (in this case, 10m
 sphere(r = 10);
 ```
 
-![A sphere](/images/posts/intro-to-openscad/sphere.png)
+![A sphere](/assets/blog/intro-to-openscad/sphere.png)
 
 Notice how the sphere is a bit blocky? We can smooth it out by adding an `$fn` argument to the `sphere` function:
 
@@ -70,7 +70,7 @@ sphere(r = 10, $fn=100);
 
 The higher the `$fn` value, the smoother the sphere will be. I like to use 100 for most things. Heres the new result:
 
-![A sphere with a higher $fn value](/images/posts/intro-to-openscad/smooth-sphere.png)
+![A sphere with a higher $fn value](/assets/blog/intro-to-openscad/smooth-sphere.png)
 
 ### Cylinder
 
@@ -80,7 +80,7 @@ The final shape I'll show off is the cylinder. It works much like a sphere, but 
 cylinder(r = 10, h = 20);
 ```
 
-![A cylinder](/images/posts/intro-to-openscad/cylinder.png)
+![A cylinder](/assets/blog/intro-to-openscad/cylinder.png)
 
 Again (like the sphere), we can smooth out the cylinder by adding an `$fn` argument:
 
@@ -88,7 +88,7 @@ Again (like the sphere), we can smooth out the cylinder by adding an `$fn` argum
 cylinder(r = 10, h = 20, $fn=100);
 ```
 
-![A cylinder with a higher $fn value](/images/posts/intro-to-openscad/smooth-cylinder.png)
+![A cylinder with a higher $fn value](/assets/blog/intro-to-openscad/smooth-cylinder.png)
 
 ## Transformations
 
@@ -108,7 +108,7 @@ sphere(r = 10, $fn=100);
 cylinder(r = 10, h = 20, $fn=100);
 ```
 
-![All the shapes overlapping](/images/posts/intro-to-openscad/overlapping.png)
+![All the shapes overlapping](/assets/blog/intro-to-openscad/overlapping.png)
 
 ### Translation
 
@@ -120,7 +120,7 @@ translate([20, 0, 0]) {
 }
 ```
 
-![A cube translated 20mm in the X direction](/images/posts/intro-to-openscad/translated-cube-x.png)
+![A cube translated 20mm in the X direction](/assets/blog/intro-to-openscad/translated-cube-x.png)
 
 Notice what happens if we create two cubes, and translate them an equal distance in opposite directions:
 
@@ -136,13 +136,13 @@ translate([-20, 0, 0]) {
 }
 ```
 
-![Two cubes translated in opposite directions](/images/posts/intro-to-openscad/unequal-translated-cubes.png)
+![Two cubes translated in opposite directions](/assets/blog/intro-to-openscad/unequal-translated-cubes.png)
 
 They end up an unequal distance from the origin! This is because cubes (and rectangles) are not centered by default (see the cube or rectangle example above as a refresher). 
 
 This means that in order to move that left cube the expected distance away from the origin, we would need to translate it by the original 20mm *plus* the cube's width (10mm):
 
-![](/images/posts/intro-to-openscad/cube-distance.png)
+![](/assets/blog/intro-to-openscad/cube-distance.png)
 
 ```c
 // Right Cube
@@ -156,7 +156,7 @@ translate([-(20 + 10), 0, 0]) {
 }
 ```
 
-![Fixed cubes](/images/posts/intro-to-openscad/translated-cubes.png)
+![Fixed cubes](/assets/blog/intro-to-openscad/translated-cubes.png)
 
 *Much better.*
 
@@ -168,7 +168,7 @@ translate([5, 6, -15]) {
 }
 ```
 
-![A cube translated in all axes](/images/posts/intro-to-openscad/all-axis-translate.png)
+![A cube translated in all axes](/assets/blog/intro-to-openscad/all-axis-translate.png)
 
 ### Rotation
 
@@ -180,7 +180,7 @@ rotate([45, 0, 0]) {
 }
 ```
 
-![A cube rotated 45 degrees around the X axis](/images/posts/intro-to-openscad/cube-rotate-x-45.png)
+![A cube rotated 45 degrees around the X axis](/assets/blog/intro-to-openscad/cube-rotate-x-45.png)
 
 Heres an example where we center the cube at the origin, then rotate it 45 degrees in all axes:
 
@@ -192,7 +192,7 @@ rotate([45, 45, 45]) {
 }
 ```
 
-![A cube rotated 45 degrees in all axes](/images/posts/intro-to-openscad/cube-rotate-all.png)
+![A cube rotated 45 degrees in all axes](/assets/blog/intro-to-openscad/cube-rotate-all.png)
 
 As you can see, individual transformations can be nested together to create more complex transformations.
 
@@ -215,7 +215,7 @@ difference() {
 }
 ```
 
-![A sphere with a rectangular hole cut out of it](/images/posts/intro-to-openscad/sphere-cube-cut.png)
+![A sphere with a rectangular hole cut out of it](/assets/blog/intro-to-openscad/sphere-cube-cut.png)
 
 The `difference` function can operate on multiple shapes. The first shape will always be the displayed shape, and all subsequent shapes will be subtracted from it.
 
@@ -239,13 +239,13 @@ difference() {
 }
 ```
 
-![A complex shape](/images/posts/intro-to-openscad/broken-union.png)
+![A complex shape](/assets/blog/intro-to-openscad/broken-union.png)
 
 See that weird overhang? Its a render artifact and not actually there in the shape.
 
 To conserve on computation time, OpenSCAD doesn't do an awesome job of rendering really tight tolerances in the viewport. If we want to make it properly compute our shape, we'll have to press the <kbd>F6</kbd> key to render it.
 
-![A complex shape](/images/posts/intro-to-openscad/union.png)
+![A complex shape](/assets/blog/intro-to-openscad/union.png)
 
 Much better.
 

@@ -19,35 +19,35 @@ This site you are looking at right now, ewpratten.com, was originally the band w
 
 So, looking back to the first IA snapshot of the RetryLife website, we find a nice and simple landing page:
 
-![](/images/posts/the-project-i-wil-never-finish/retrylife-2018.png)
+![](/assets/blog/the-project-i-wil-never-finish/retrylife-2018.png)
 
 There were a few other revisions of this page that are sitting on an SD card somewhere. If I find those, I'll update this page with the relevant screenshots.
 
 Skipping ahead to the next IA snapshot, we have the first revision of my personal webpage:
 
-![](/images/posts/the-project-i-wil-never-finish/evan-2018.png)
+![](/assets/blog/the-project-i-wil-never-finish/evan-2018.png)
 
 About half a year later, I did another redesign:
 
-![](/images/posts/the-project-i-wil-never-finish/evan-2019.png)
+![](/assets/blog/the-project-i-wil-never-finish/evan-2019.png)
 
 A few months later, I came up with this *really* fussy design. While pretty cool, the double-overlap of the header was very annoying to build.
 
-![](/images/posts/the-project-i-wil-never-finish/evan-2019-2.png)
+![](/assets/blog/the-project-i-wil-never-finish/evan-2019-2.png)
 
 The next revision was one of my favorites. A simple front page that scrolls to reveal a list of things I was working on at the time:
 
-![](/images/posts/the-project-i-wil-never-finish/evan-2020-head.png)
+![](/assets/blog/the-project-i-wil-never-finish/evan-2020-head.png)
 
-![](/images/posts/the-project-i-wil-never-finish/evan-2020-body.png)
+![](/assets/blog/the-project-i-wil-never-finish/evan-2020-body.png)
 
 The info section of that page eventually got a bit of a refresh (IA seems to have issues with the borders on this one):
 
-![](/images/posts/the-project-i-wil-never-finish/evan-2020-2.png)
+![](/assets/blog/the-project-i-wil-never-finish/evan-2020-2.png)
 
 After a lot of tinkering, I eventually re-built the entire site (and switched backends) to produce this, an early version of the layout you are looking at right now:
 
-![](/images/posts/the-project-i-wil-never-finish/evan-2021.png)
+![](/assets/blog/the-project-i-wil-never-finish/evan-2021.png)
 
 ## Keep tinkering
 

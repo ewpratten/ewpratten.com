@@ -21,11 +21,11 @@ This is all coming from someone that has very little experience with the telepho
 
 As far as I have ever been concerned, the telephone network looks as follows:
 
-![The magical phone network](/images/posts/personal-pbx/magic_phones.png)
+![The magical phone network](/assets/blog/personal-pbx/magic_phones.png)
 
 But in reality, it looks a little more like the internet (I guess that makes sense, since dialup was a thing).
 
-![The magical phone network, with more phones](/images/posts/personal-pbx/phone_internet.png)
+![The magical phone network, with more phones](/assets/blog/personal-pbx/phone_internet.png)
 
 The *Dark Magic* still exists, and I am still not entirely sure whats going on there. Presumably some kind of routing protocols exists to handle country codes and such, but I have had no need (yet) to explore this further.
 
@@ -85,7 +85,7 @@ Trunking in the telephony world, is essentially the same as VLANs in the compute
 
 In my system, I have two trunks, one for Twilio (and by extension the whole PSTN), and one for Hamshack Hotline.
 
-![My trunking setup](/images/posts/personal-pbx/my_trunks.png)
+![My trunking setup](/assets/blog/personal-pbx/my_trunks.png)
 
 ## Provisioning an IAX2 Trunk through Hamshack Hotline
 

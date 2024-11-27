@@ -20,11 +20,11 @@ This post isn't much of a tutorial, just a showcase of the end result.
 
 ## Movement
 
-![](/images/posts/rainbow-keyboard/movement_layout.png)
+![](/assets/blog/rainbow-keyboard/movement_layout.png)
 
 ## Actions
 
-![](/images/posts/rainbow-keyboard/action_layout.png)
+![](/assets/blog/rainbow-keyboard/action_layout.png)
 
 ## The code
 

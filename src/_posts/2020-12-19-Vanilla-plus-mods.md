@@ -43,7 +43,7 @@ On the rendering side of the game, I run a few specialized mods to improve or re
 
 <div class="center" markdown="1">
 
-![Screenshot of Sodium settings](/images/posts/vanilla-plus/sodium_settings.jpeg)
+![Screenshot of Sodium settings](/assets/blog/vanilla-plus/sodium_settings.jpeg)
 
 </div>
 
@@ -72,7 +72,7 @@ In my inventory, I use [Roughly Enough Items](https://github.com/shedaniel/Rough
 
 <div class="center" markdown="1">
 
-![Screenshot of Roughly Enough Items](/images/posts/vanilla-plus/rei.png)
+![Screenshot of Roughly Enough Items](/assets/blog/vanilla-plus/rei.png)
 
 </div>
 
@@ -90,7 +90,7 @@ I hate writing down coordinates of various things, so I use Xaero's [Minimap](ht
 
 <div class="center" markdown="1">
 
-![Xaero's Minimap](/images/posts/vanilla-plus/minimap_2020.png)
+![Xaero's Minimap](/assets/blog/vanilla-plus/minimap_2020.png)
 
 </div>
 

@@ -37,13 +37,13 @@ Firstly, I want to know if anyone is actually using APRS proper.
 
 The APRS network is built in two halves: RF and Internet. Special devices called [IGates](http://www.aprs-is.net/IGating.aspx) exist on the network to bridge between the RF world and the Internet world, gating packets between the two. This allows an RF packet to take a path like:
 
-![](/images/posts/aprs-usage/igate_graphic.svg)
+![](/assets/blog/aprs-usage/igate_graphic.svg)
 
 The RF part of this path is generally referred to as "APRS", and the Internet part as "APRS-IS".
 
 I spent a night collecting data from a node that has a full view of the traffic crossing the APRS network, and the results were... predictable.
 
-![](/images/posts/aprs-usage/internet_vs_rf.png)
+![](/assets/blog/aprs-usage/internet_vs_rf.png)
 
 My thoughts on this visualization are as follows:
 
@@ -59,17 +59,17 @@ The next thing I wanted to know was: where are the packets going?
 
 The top 10 packet sources (RF and internet) are:
 
-![](/images/posts/aprs-usage/top_10_sources.png)
+![](/assets/blog/aprs-usage/top_10_sources.png)
 
 And look! I'm in there :laughing:. My `VA3UJF-1` station that injects canadian passenger train telemetry into the APRS network sits at position #8. The [WINLINK](https://aprs.fi/info/a/Winlink) station takes first place though. This is another automated station for bridging [WinLink](https://winlink.org/) and APRS traffic.
 
 How about the destinations?
 
-![](/images/posts/aprs-usage/top_10_destinations.png)
+![](/assets/blog/aprs-usage/top_10_destinations.png)
 
 Well thats interesting... None of these destinations are real callsigns. Instead, they are "APRS Software Version Numbers". The original APRS specification defines these as follows (more have been added over time):
 
-![](/images/posts/aprs-usage/aprs_version_numbers.png)
+![](/assets/blog/aprs-usage/aprs_version_numbers.png)
 
 These destination strings are used in scenarios where a station is broadcasting data, such as:
 
@@ -79,14 +79,14 @@ These destination strings are used in scenarios where a station is broadcasting 
 
 ...which leads me to another question. What percentage of packets are direction-less beacons?
 
-![](/images/posts/aprs-usage/beacon_vs_non_beacon.png)
+![](/assets/blog/aprs-usage/beacon_vs_non_beacon.png)
 
 Is this different between RF and internet users?
 
 <table>
     <tr>
-        <td><img src="/images/posts/aprs-usage/beacon_vs_non_beacon_inet.png"></td>
-        <td><img src="/images/posts/aprs-usage/beacon_vs_non_beacon_rf.png"></td>
+        <td><img src="/assets/blog/aprs-usage/beacon_vs_non_beacon_inet.png"></td>
+        <td><img src="/assets/blog/aprs-usage/beacon_vs_non_beacon_rf.png"></td>
     </tr>
 </table>
 <br>

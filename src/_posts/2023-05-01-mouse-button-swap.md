@@ -26,15 +26,15 @@ Instead of just heading out to Walmart and buying another mouse, I decided to tr
 Disassembling the mouse was nice and easy. Simply pop off the battery cover, remove the battery, and unscrew two screws. The top just pops off, revealing one of the simplest circuit boards I've seen in a while.
 
 <div style="display:flex;flex-wrap:wrap;">
-<img src="/images/posts/mouse-button-swap/PXL_20230501_193330518.jpg" style="max-width:210px;"></img>
-<img src="/images/posts/mouse-button-swap/PXL_20230501_193336150.jpg" style="max-width:250px;"></img>
+<img src="/assets/blog/mouse-button-swap/PXL_20230501_193330518.jpg" style="max-width:210px;"></img>
+<img src="/assets/blog/mouse-button-swap/PXL_20230501_193336150.jpg" style="max-width:250px;"></img>
 </div>
 
 <br>
 
 Located in the middle of the circuit is the momentary switch for the middle button. Conveniently the standard size you'd expect to find in a breadboard kit.
 
-<img src="/images/posts/mouse-button-swap/PXL_20230501_234325200.jpg"></img>
+<img src="/assets/blog/mouse-button-swap/PXL_20230501_234325200.jpg"></img>
 
 ## The swap
 
@@ -42,13 +42,13 @@ All that remained to do was to de-solder the old switch, and solder in a new one
 
 Below is an image of the underside of the stock middle button, a very easy solder job.
 
-<img src="/images/posts/mouse-button-swap/PXL_20230501_234350942.jpg"></img>
+<img src="/assets/blog/mouse-button-swap/PXL_20230501_234350942.jpg"></img>
 
 ## The results
 
 After de-soldering the existing button, and replacing it with a spare, I was left with a mouse circuit that looked no different than when I started.
 
-<img src="/images/posts/mouse-button-swap/PXL_20230502_000502685.jpg"></img>
+<img src="/assets/blog/mouse-button-swap/PXL_20230502_000502685.jpg"></img>
 
 After re-assembling the mouse, I am proud to say that the button click now registers 100% of the time (unlike the ~40% when I started).
 

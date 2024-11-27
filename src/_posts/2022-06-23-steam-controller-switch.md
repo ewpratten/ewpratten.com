@@ -17,7 +17,7 @@ aliases:
 
 Remember the [Steam Controller](https://store.steampowered.com/app/353370/Steam_Controller/)?
 
-![Image of the Steam Controller](/images/posts/steam-switch/sc.png)
+![Image of the Steam Controller](/assets/blog/steam-switch/sc.png)
 
 As it turns out, pretty much nobody does. I picked mine up back in elementary school at a good ol' [EB Games](https://en.wikipedia.org/wiki/EB_Games) shop, and remember being blown away by the extensible configurability of the thing. Shooting portals with gyro aim really *was* a cool thing to experience.
 
@@ -93,6 +93,6 @@ Finally, with a full-sized USB to USB-C adapter (like the one that comes with mo
 
 A known (and annoying) problem is that the trackpads are *wayy* too sensitive with this firmware so.. Good luck?
 
-![My steam controller plugged into a switch](/images/posts/steam-switch/sc-switch.jpg)
+![My steam controller plugged into a switch](/assets/blog/steam-switch/sc-switch.jpg)
 
 If you want to revert to factory firmware, just copy the saved `firmware.bin` file back to the controller in the same way you deployed the custom one.

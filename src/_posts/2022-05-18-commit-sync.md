@@ -17,7 +17,7 @@ aliases:
 
 Since September of 2018 (3 and a half years ago) I have been roughly holding a streak of going no more than three days without making a commit to some project on GitHub.
 
-![A screenshot of my commit history last year](/images/posts/commit-sync/commit_graph.png)
+![A screenshot of my commit history last year](/assets/blog/commit-sync/commit_graph.png)
 
 This is not entirely intentional, and I have broken it a few times:
 

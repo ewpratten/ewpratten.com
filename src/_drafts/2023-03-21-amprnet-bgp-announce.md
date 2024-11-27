@@ -25,4 +25,4 @@ A surprising number of people seem to request BGP allocations without understand
 
 The internet *inter-networks networks*. Or, in less confusing terms: the internet is a broad term for how network **A** can communicate with networks **B** and **C**.
 
-![](/images/posts/amprnet-bgp-announce/internet_1.svg)
+![](/assets/blog/amprnet-bgp-announce/internet_1.svg)

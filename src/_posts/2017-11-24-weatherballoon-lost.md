@@ -12,7 +12,7 @@ aliases:
 
 A news article was written about a project I was involved in. It's even headed by a photo I took!
 
-![](/images/posts/weatherballoon/927942227749416960-DOC2hmHVwAI8aXW.jpg)
+![](/assets/blog/weatherballoon/927942227749416960-DOC2hmHVwAI8aXW.jpg)
 
 From the **London Free Press**:
 
@@ -32,4 +32,4 @@ Once found on the American side of the border, a corresponding article was writt
 
 ## The balloon on the other side
 
-![](/images/posts/weatherballoon/5a1826bd8b199.webp)
+![](/assets/blog/weatherballoon/5a1826bd8b199.webp)

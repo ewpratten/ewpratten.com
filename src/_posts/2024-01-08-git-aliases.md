@@ -50,7 +50,7 @@ Ya.. thats a long one. Feel free to check out all the [formatting options](https
 
 Basically, this command displays an ASCII-art commit graph, complete with information about the commit and author. Heres a screenshot of it in action in that same Raider Robotics codebase:
 
-![Git Tree in action](/images/posts/git-aliases/tree.png)
+![Git Tree in action](/assets/blog/git-aliases/tree.png)
 
 ## Branch Overview
 
@@ -64,7 +64,7 @@ git branch -a -l -vv
 
 Continuing to use robotics codebases as an example, here is the output of this command:
 
-![Git Branches in action](/images/posts/git-aliases/branches.png)
+![Git Branches in action](/assets/blog/git-aliases/branches.png)
 
 ## Hot Files
 
@@ -80,7 +80,7 @@ See that exclamation mark at the start? Git aliases can actually be bound to arb
 
 Switching up my example repository, heres the output of this command in the [bird](https://gitlab.nic.cz/labs/bird) repository:
 
-![Git lscommits in action](/images/posts/git-aliases/lscommits.png)
+![Git lscommits in action](/assets/blog/git-aliases/lscommits.png)
 
 ## Small but Mighty
 

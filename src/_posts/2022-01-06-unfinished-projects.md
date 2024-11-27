@@ -16,7 +16,7 @@ aliases:
 My [GitHub profile](https://github.com/Ewpratten) is a bit like an iceberg. At the time of writing, I have made nearly 8 and a half thousand commits to nearly a thousand repositories. Since July 2018, I have made an effort to go no more than 3 consecutive days without writing code, and I have only broken that streak 6 times (each of those being a 4-day break).
 
 
-![My 2021 commit history](/images/posts/unfinished-projects/commit_history.png)
+![My 2021 commit history](/assets/blog/unfinished-projects/commit_history.png)
 
 I remember making myself a GitHub account back in 8th grade (August 16, 2016 to be exact). Ever since then, I have published *every single* personal project I have made to GitHub.
 
@@ -518,4 +518,4 @@ Wow! You made it to the end of the list!
 
 As a reward, here are some language statistics for the project list above. This does not include all languages, just the first few I queried from GitHub off the top of my head.
 
-![Language stats](/images/posts/unfinished-projects/lang_stats.svg)
+![Language stats](/assets/blog/unfinished-projects/lang_stats.svg)

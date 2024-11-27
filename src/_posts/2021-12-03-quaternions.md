@@ -21,7 +21,7 @@ The running joke in the graphics programming world is that nobody understands qu
 - Don't suffer from [Gimbal Lock](https://en.wikipedia.org/wiki/Gimbal_lock)
 - Are extremely efficient to work with computationally
 
-![Quaternion Meme](/images/posts/quaternions/quaternion_meme.png)
+![Quaternion Meme](/assets/blog/quaternions/quaternion_meme.png)
 
 > Gimbal lock is the loss of one degree of freedom in a three-dimensional, three-gimbal mechanism that occurs when the axes of two of the three gimbals are driven into a parallel configuration, "locking" the system into rotation in a degenerate two-dimensional space.<br>
 > \[[Wikipedia](https://en.wikipedia.org/wiki/Gimbal_lock)\]
@@ -95,7 +95,7 @@ struct Quaternion {
 An important fact to keep in mind is that quaternions can <em>and will</em> be found in their normalized form, where all the coefficients (real and vector) are values between $-1$ and $1$.
 
 <div style="text-align:center;">
-<img src="/images/posts/quaternions/quat_vec3.png" style="max-width:300px;">
+<img src="/assets/blog/quaternions/quat_vec3.png" style="max-width:300px;">
 </div>
 
 ## Quaternions are transformations
@@ -139,7 +139,7 @@ $$
 <strong>NOTE:</strong> Quaternion multiplicaiton is [noncommutative](https://en.wikipedia.org/wiki/Commutative_property), meaning that the order you multiply things <em>matters</em>. This is not normal multiplication.
 
 <div style="text-align:center;">
-<img src="/images/posts/quaternions/quat_mul.jpg">
+<img src="/assets/blog/quaternions/quat_mul.jpg">
 </div>
 
 ### Expressing a rotation with a quaternion

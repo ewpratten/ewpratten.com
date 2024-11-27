@@ -26,7 +26,7 @@ As a little side project, I decided to take my turn at scraping the internet for
 
 To get a pretty good sense of personal ASN usage, I looked to the [Regional Internet Registries](https://en.wikipedia.org/wiki/Regional_Internet_registry) that are in charge of handing out numbers to new networks.
 
-![Pie chart of personal ASN registration by RIR](/images/posts/personal-ases/rirs.png)
+![Pie chart of personal ASN registration by RIR](/assets/blog/personal-ases/rirs.png)
 
 Unsurprisingly, the vast majority (~750) of personal ASNs are registered under [RIPE NCC](https://ripe.net), the (mainly) European RIR.
 
@@ -65,7 +65,7 @@ Along with myself, there are currently 9 other ASNs announcing their own instanc
 
 Finally, I have built the following chart to break down the adoption of IPv6 by personal ASNs:
 
-![Chart of IPv6 adoption by personal ASNs](/images/posts/personal-ases/ip_stack.png)
+![Chart of IPv6 adoption by personal ASNs](/assets/blog/personal-ases/ip_stack.png)
 
 ## Want to see more?
 

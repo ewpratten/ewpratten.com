@@ -31,7 +31,7 @@ Firstly, you must be a licensed [amateur radio](https://en.wikipedia.org/wiki/Am
 
 Once logged in, head to `Networks > 44.0.0.0/8`, and request a `/24` netmask. If you need more addresses, you can also request a *smaller* number than this, but you must have good reason. Be sure to also check the `Direct (BGP)` box.
 
-![A screenshot of the prefix request page](/images/posts/ampr-vultr-bgp/request-page.png)
+![A screenshot of the prefix request page](/assets/blog/ampr-vultr-bgp/request-page.png)
 
 After filing the application, a member of the ARDC will review your request, and should follow up with more questions and information for you. Once its all done, you have yourself at least 255 IPv4 addresses for radio use for the next couple years (yes, you have to occasionally renew your prefix).
 
