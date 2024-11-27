@@ -3,17 +3,7 @@ layout: default
 title: A rusty guide to quaternions
 description: Fast and efficient 3D object manipulation
 date: 2021-12-03
-tags:
-- reference
-- math
-draft: false
-extra:
-  uses:
-  - katex
-  excerpt: This post is an overview of Quaternions for Rust programmers, and anyone
-    willing to learn.
-aliases:
-- /blog/quaternions
+enable_katex: true
 ---
 
 The running joke in the graphics programming world is that nobody understands quaternions. These big scary math-filled types are always <em>someone else's problem</em>. While quaternions <del>are</del> may be scary, they serve an important purpose in the world of computing as they
@@ -121,19 +111,19 @@ $$
 
 As you can see, a pure quaternion is a quaternion with a real part of $0$ and a vector part equal to the vector it is being made of. 
 
-Next, you need the conjugate of the quaternion (which is called $q^\*$). The following are both the expressions for a quaternion, and a conjugate quaternion:
+Next, you need the conjugate of the quaternion (which is called $q^*$). The following are both the expressions for a quaternion, and a conjugate quaternion:
 
 $$
 \begin{aligned}
 q &= w + x \mathbf{i} + y \mathbf{j} + z \mathbf{k} \\\\
-q^\* &= w - x \mathbf{i} - y \mathbf{j} - z \mathbf{k}
+q^* &= w - x \mathbf{i} - y \mathbf{j} - z \mathbf{k}
 \end{aligned}
 $$
 
 With all the required parts, the transformed vector ($p$) is equal to:
 
 $$
-p = q^\*kq
+p = q^*kq
 $$
 
 <strong>NOTE:</strong> Quaternion multiplicaiton is [noncommutative](https://en.wikipedia.org/wiki/Commutative_property), meaning that the order you multiply things <em>matters</em>. This is not normal multiplication.

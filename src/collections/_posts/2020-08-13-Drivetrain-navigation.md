@@ -3,18 +3,7 @@ layout: default
 title: 'Notes from FRC: Autonomous point-to-point navigation'
 description: The tale of some very curvy math
 date: 2020-08-13
-tags:
-- frc
-- math
-extra:
-  excerpt: This post is a continuation on my "Notes from FRC" series. This time,  I
-    cover an extremely simple, yet very effective way to get a  tank-drive robot from
-    A to B autonomously.
-  uses:
-  - katex
-aliases:
-- /blog/2020/08/13/drivetrain-navigation
-- /blog/drivetrain-navigation
+enable_katex: true
 ---
 
 This post is a continuation on my "Notes from FRC" series. If you haven't already, I recommend reading my post on [Converting joystick data to tank-drive outputs](@/blog/2020-08-03-Joystick-to-Voltage.md). Some concepts in this post were introduced there. Like last time, to see the production code behind this post, check [here](https://github.com/frc5024/lib5k/blob/ab90994b2a0c769abfdde9a834133725c3ce3a38/common_drive/src/main/java/io/github/frc5024/common_drive/DriveTrainBase.java) and [here](https://github.com/frc5024/lib5k/tree/master/purepursuit/src/main/java/io/github/frc5024/purepursuit/pathgen).
