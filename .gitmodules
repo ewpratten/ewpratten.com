@@ -1,3 +1,0 @@
-[submodule "static/map-data"]
-	path = static/map-data
-	url = git@github.com:ewpratten/ewpratten-com-map-data.git
