@@ -1,10 +1,11 @@
 ---
 title: Radioactive
+layout: music
 date: 2017-02-04
-cover_image: /assets/music/ewpratten/radioactive/cover.jpg
+cover_image: /assets/music/radioactive/cover.jpg
 links:
-  spotify: https://open.spotify.com/album/44mayKI3HsGnNDr9A1yDgF
-  apple_music: https://music.apple.com/us/album/radioactive-single/1626650101
+  "Spotify": https://open.spotify.com/album/44mayKI3HsGnNDr9A1yDgF
+  "Apple Music": https://music.apple.com/us/album/radioactive-single/1626650101
 tracks:
   - title: Crackle
     artists: [Evan Pratten]

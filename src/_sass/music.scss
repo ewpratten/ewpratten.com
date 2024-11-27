@@ -1,0 +1,64 @@
+@use "common/font.scss" as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  font-family: $body-font;
+  background-color: #f0f0f0;
+
+  main {
+    max-width: 600px;
+    margin: 1em;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
+
+    &>div {
+      padding: 1em;
+      padding-top: 0;
+
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+
+        thead {
+          font-weight: bold;
+          background-color: #d8d8d8;
+        }
+
+        th, td {
+          padding: 0.5em;
+          border: 1px solid gray;
+        }
+
+        th {
+          background-color: #f0f0f0;
+        }
+
+        tr:nth-child(even) {
+          background-color: #f8f8f8;
+        }
+      }
+    }
+  }
+}

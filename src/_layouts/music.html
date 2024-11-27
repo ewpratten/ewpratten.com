@@ -1,0 +1,71 @@
+---
+---
+
+<!--noformat-->
+{% assign track_count = page.tracks | size%}
+{% if track_count <= 2 %}
+ {% assign release_type = "single" %}
+{% else if track_count <= 4 %}
+ {% assign release_type = "ep" %}
+{% else %}
+ {% assign release_type = "album" %}
+{% endif %}
+<!--noformat-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="shortcut icon" type="image/jpg" href="{{ site.profile_photo }}" />
+    <link rel="canonical" href="{{ site.url | downcase }}{{ page.url | replace: '.html', '' | downcase }}" />
+    <link rel="stylesheet" href="/assets/css/music_compiled.css">
+
+</head>
+
+<body>
+    <main>
+        <img src="{{ page.cover_image }}" alt="Cover art for {{ page.title }}">
+        <div>
+            <h1>{{ page.title }}</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>Name</td>
+                        <td>Artist(s)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for track in page.tracks %}
+                    <tr>
+                        <td>{{ forloop.index }}</td>
+                        <td>{{ track.title }}</td>
+                        <td>
+                            {% for artist in track.artists %}
+                            <a href="{{ site.data.musicians[artist].url | downcase }}">{{ artist }}</a>{% unless forloop.last %},
+                            {% endunless %}
+                            {% endfor %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h2>Listen On</h2>
+            <ul>
+                {% for link in page.links %}
+                <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+    <p style="text-align: center; margin: 0.5em; margin-bottom: 1em;">
+        <a href="/music" style="color: gray;">See more of Evan's work here.</a>
+    </p>
+
+    {% include goatcounter.html %}
+</body>
+
+</html>

@@ -26,7 +26,7 @@ custom_css: |
     {% assign photos_sorted = site.photos | sort: "date" | reverse %}
     {% for photo in photos_sorted %}
     <div class="photo-feed-entry">
-        <a href="{{ photo.url }}">
+        <a href="{{ photo.url | downcase }}">
             <img src="/assets/photography/{{ photo.file }}" alt="A photo titled: {{ photo.title }}" style="width: 100%;">
         </a>
         <div style="display: flex; justify-content: space-between; font-size: 1.25em;">

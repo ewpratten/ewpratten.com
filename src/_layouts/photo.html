@@ -9,18 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>"{{page.title}}" by {{site.title}}</title>
     <link rel="shortcut icon" type="image/jpg" href="{{ site.profile_photo }}" />
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace: '.html', '' }}" />
+    <link rel="canonical" href="{{ site.url | downcase }}{{ page.url | replace: '.html', '' | downcase }}" />
     <link rel="stylesheet" href="/assets/css/photo_compiled.css">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ site.title }}: {{ page.title }}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url | replace: '.html', '' }}">
-    <meta property="og:image" content="{{ site.url }}/assets/photography/{{ page.file }}">
+    <meta property="og:url" content="{{ site.url | downcase }}{{ page.url | replace: '.html', '' }}">
+    <meta property="og:image" content="{{ site.url | downcase }}/assets/photography/{{ page.file }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="{{ site.url | split: '://' | last }}">
-    <meta property="twitter:url" content="{{ site.url }}{{ page.url | replace: '.html', '' }}">
+    <meta property="twitter:url" content="{{ site.url | downcase }}{{ page.url | replace: '.html', '' }}">
     <meta name="twitter:title" content="{{ site.title }}: {{ page.title }}">
-    <meta name="twitter:image" content="{{ site.url }}/assets/photography/{{ page.file }}">
+    <meta name="twitter:image" content="{{ site.url | downcase }}/assets/photography/{{ page.file }}">
 
 </head>
 
@@ -35,6 +35,8 @@
             </p>
         </div>
     </main>
+
+    {% include goatcounter.html %}
 </body>
 
 </html>

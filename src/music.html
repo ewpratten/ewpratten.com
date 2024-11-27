@@ -1,0 +1,49 @@
+---
+layout: default
+title: Music
+custom_css: |
+    .discography {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .discography-entry {
+        margin: 1em;
+        max-width: calc(max(45%, 300px));
+    }
+
+    @media screen and (max-width: calc(((300px + 2em) * 2) + 2em)) {
+        .discography-entry {
+            max-width: calc(100% - 2em);
+        }
+    }
+---
+
+<p>
+    I have been a musician for most of my life, starting with the piano when I was 5, and progressing to drums and
+    double bass a few years later.
+</p>
+<p>
+    I was originally in to (and performed) rock music, but found myself moving towards heavier metal, and eventually
+    electronic dance music. Alongside this progression, I was also a part of an orchestra and a choir for a few years.
+    Now, I find myself doing everything electronically.
+</p>
+<hr>
+
+<div class="discography">
+    {% assign music_sorted = site.music | sort: "date" | reverse %}
+    {% for release in music_sorted %}
+    <div class="discography-entry">
+        <a href="{{ release.url | downcase }}">
+            <img src="{{ release.cover_image }}" alt="Cover art for {{ release.title }}" style="width: 100%;">
+        </a>
+        <div style="display: flex; justify-content: space-between; font-size: 1.25em;">
+            <span>{{ release.title }}</span>
+            <span style="color: gray;">{{ release.date | date: "%Y-%m-%d" }}</span>
+        </div>
+    </div>
+    {% endfor %}
+</div>

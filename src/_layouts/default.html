@@ -11,7 +11,7 @@
         {% if page.override_title %}{{page.override_title}}{% else %}{{page.title}} | {{site.title}}{% endif %}
     </title>
     <link rel="shortcut icon" type="image/jpg" href="{{ site.profile_photo }}" />
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace: '.html', '' }}" />
+    <link rel="canonical" href="{{ site.url | downcase }}{{ page.url | replace: '.html', '' | downcase }}" />
     <link rel="stylesheet" href="/assets/css/default_compiled.css">
     <link rel="stylesheet" href="/assets/css/highlight/vs.css">
     {% if page.custom_css %}
@@ -82,6 +82,8 @@
             </strong>
         </p>
     </footer>
+
+    {% include goatcounter.html %}
 </body>
 
 </html>
