@@ -37,7 +37,19 @@ collections:
     permalink: /blog/:title
   photos:
     output: true
+    layout: photo
     permalink: /photography/:title
+  music:
+    output: true
+    layout: music
+    permalink: /music/:title
+
+# Force-include some files
+include:
+  # Cloudflare "magic" files
+  - functions/
+  - _routes.json
+  - _redirects
 
 # Exclusions
 exclude:
