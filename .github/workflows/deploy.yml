@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build website
-        run: docker compose exec jekyll build
+        run: docker compose run jekyll build
 
       # - name: Publish to Cloudflare Pages
       #   uses: cloudflare/pages-action@v1
