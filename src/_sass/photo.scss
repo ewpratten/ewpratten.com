@@ -24,9 +24,10 @@ body {
     }
 
     img {
-      max-width: 800px;
+      max-width: calc(min(800px, 100vw - 2em));
       border: 5px solid black;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: black;
     }
 
     div.description {
