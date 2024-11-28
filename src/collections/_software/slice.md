@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Slice (WearOS Watchface)
-description: The WearOS watchface that fuses a 24-hour clock with a digital display
+title: Slice
+description: A WearOS watchface that fuses a 24-hour clock with a digital display
 ---
 
 It started from a simple question. *What would it be like to use a 24-hour analog clock?*

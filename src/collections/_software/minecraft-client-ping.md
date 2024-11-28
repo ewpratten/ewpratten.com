@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Client Ping
+description: A Minecraft mod that implements multiplayer Point-of-Interest marking
 software_category: minecraft
 ---
 

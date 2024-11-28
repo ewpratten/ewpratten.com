@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Raylib FFI
-description: Raw Rust bindings for raylib
+description: Direct FFI bindings for calling raylib from Rust code
 ---
 
 Any time someone new to game and graphics programming asks me how to get started, I point them to [raylib](https://www.raylib.com/). It's a simple, yet powerful, game development library that is perfect for beginners and experts alike.

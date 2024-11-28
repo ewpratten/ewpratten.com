@@ -1,6 +1,7 @@
 ---
 layout: default
 title: FrostBucket
+description: A Minecraft server-side plugin that allows players to apply the Frost Walker enchantment to a bucket
 software_category: minecraft
 ---
 
