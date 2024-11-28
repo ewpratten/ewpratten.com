@@ -7,7 +7,7 @@ title: Software
     I like to build things. Here are some of the more interesting bits of software I've built:
 </p>
 
-{% assign projects_sorted = site.software | sort: "title" %}
+{% assign projects_sorted = site.software | sort_natural: "title" %}
 {% assign projects_uncategorized = projects_sorted | where: "software_category", nill %}
 {% assign projects_grouped = projects_sorted | group_by: "software_category" | sort_by: "name" | reverse %}
 
