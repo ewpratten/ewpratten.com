@@ -18,11 +18,24 @@ jobs:
       - name: Checkout master
         uses: actions/checkout@v4
 
-      - name: Build builder image
-        run: docker compose build
+      # - name: Build builder image
+      #   run: docker compose build
+
+      # - name: Build website
+      #   run: docker compose run jekyll build
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+        
+      - name: Install Jekyll
+        run: gem install jekyll bundler
+
+      - name: Install dependencies
+        run: bundle install
 
       - name: Build website
-        run: docker compose run jekyll build
+        run: bundle exec jekyll build
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
