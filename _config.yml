@@ -28,6 +28,7 @@ kramdown:
 # Plugins
 plugins:
   - jekyll-feed
+  - jekyll-target-blank
 
 # Per-collection settings
 collections_dir: collections
