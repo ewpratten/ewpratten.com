@@ -5,7 +5,7 @@ description: A Minecraft mod that implements multiplayer Point-of-Interest marki
 software_category: minecraft
 ---
 
-Client Ping is a Minecraft ([`^1.19.4`](https://jubianchi.github.io/semver-check/#/constraint/^1.19.4)) mod I wrote that implements multiplayer Point-of-Interest marking without the need for a server-side plugin/mod counterpart.
+Client Ping is a Minecraft `^1.19.4` mod I wrote that implements multiplayer Point-of-Interest marking without the need for a server-side plugin/mod counterpart.
 
 ![A screenshot of a ping](/assets/software/minecraft-client-ping/9a704ff99abe67ee711f5fae6008ef7e42f641a7.png)
 
