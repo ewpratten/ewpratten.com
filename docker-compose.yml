@@ -9,5 +9,6 @@ services:
     tty: true
     volumes:
       - .:/srv/jekyll:Z
+      - ./Gemfile:/srv/jekyll/Gemfile
     ports:
       - "127.0.0.1:4000:4000"
