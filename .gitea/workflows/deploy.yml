@@ -18,6 +18,9 @@ jobs:
       - name: Checkout master
         uses: actions/checkout@v4
 
+      - name: Build builder image
+        run: docker compose build
+
       - name: Build website
         run: docker compose run jekyll build
 
