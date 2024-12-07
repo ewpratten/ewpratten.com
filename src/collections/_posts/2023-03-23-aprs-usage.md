@@ -18,7 +18,7 @@ aliases:
 
 Sometimes I wonder how many people really use the amateur radio services I hear about.
 
-In particular, I quite enjoy working with the [Automated Packet Reporting System](https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System) (APRS), but have a few observations:
+In particular, I quite enjoy working with the [Automated Packet Reporting System](https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System){:target="_blank"} (APRS), but have a few observations:
 
 - The standard feels like a bit of a mess. Many features don't seem to actually be used IRL
 - APRS can do world-wide radio-based text messaging, yet nobody ever responds to my messages
@@ -35,7 +35,7 @@ So. Its time for a bit of a deep dive.
 
 Firstly, I want to know if anyone is actually using APRS proper. 
 
-The APRS network is built in two halves: RF and Internet. Special devices called [IGates](http://www.aprs-is.net/IGating.aspx) exist on the network to bridge between the RF world and the Internet world, gating packets between the two. This allows an RF packet to take a path like:
+The APRS network is built in two halves: RF and Internet. Special devices called [IGates](http://www.aprs-is.net/IGating.aspx){:target="_blank"} exist on the network to bridge between the RF world and the Internet world, gating packets between the two. This allows an RF packet to take a path like:
 
 ![](/assets/blog/aprs-usage/igate_graphic.svg)
 
@@ -48,8 +48,8 @@ I spent a night collecting data from a node that has a full view of the traffic 
 My thoughts on this visualization are as follows:
 
 - The lack of good in-radio support for APRS makes it a bit of a challenge for the average user to use.
-  - For most people, the best way to send an APRS packet is by using the [APRSDroid app](https://aprsdroid.org/) to generate and play the packet into their radio while holding PTT.
-  - The only other alternative to a janky setup using an Android app is to use a dedicated [Terminal Node Controller](https://en.wikipedia.org/wiki/Terminal_node_controller) (TNC), which can be expensive. Many TNCs are also not compatible with modern radios and computers without extra adapters.
+  - For most people, the best way to send an APRS packet is by using the [APRSDroid app](https://aprsdroid.org/){:target="_blank"} to generate and play the packet into their radio while holding PTT.
+  - The only other alternative to a janky setup using an Android app is to use a dedicated [Terminal Node Controller](https://en.wikipedia.org/wiki/Terminal_node_controller){:target="_blank"} (TNC), which can be expensive. Many TNCs are also not compatible with modern radios and computers without extra adapters.
 - The barrier to entry for APRS-IS is *super low*
   - All it takes is an HTTP POST request, and you have sent an APRS-IS packet to the world
 
@@ -61,7 +61,7 @@ The top 10 packet sources (RF and internet) are:
 
 ![](/assets/blog/aprs-usage/top_10_sources.png)
 
-And look! I'm in there 😆. My `VA3UJF-1` station that injects canadian passenger train telemetry into the APRS network sits at position #8. The [WINLINK](https://aprs.fi/info/a/Winlink) station takes first place though. This is another automated station for bridging [WinLink](https://winlink.org/) and APRS traffic.
+And look! I'm in there 😆. My `VA3UJF-1` station that injects canadian passenger train telemetry into the APRS network sits at position #8. The [WINLINK](https://aprs.fi/info/a/Winlink){:target="_blank"} station takes first place though. This is another automated station for bridging [WinLink](https://winlink.org/){:target="_blank"} and APRS traffic.
 
 How about the destinations?
 

@@ -44,7 +44,7 @@ Of course, in real life, the wiring looks a.. um.. appropriate amount of sketchy
 
 The LED controller that came with my LED strips isn't awesome... mainly because it doesn't even power on 😆. So, equipped with an Arduino and a soldering iron, I set out to make my own.
 
-The software isn't really important here, since its basically the [NeoPixel](https://github.com/adafruit/Adafruit_NeoPixel) example code, but I did opt to make my program function with one button.
+The software isn't really important here, since its basically the [NeoPixel](https://github.com/adafruit/Adafruit_NeoPixel){:target="_blank"} example code, but I did opt to make my program function with one button.
 
 I can tap the button to cycle through a few different preset colours, and I can also hold it for a few seconds to turn the whole thing on and off.
 
@@ -62,4 +62,4 @@ Great actually!
 
 ## A note from later me
 
-Hi! It is currently February 2, 2024. I've recently re-written and open-sourced the software tha powers this shelf. Feel free to check it out [on GitHub](https://github.com/ewpratten/shelf-led-controller).
+Hi! It is currently February 2, 2024. I've recently re-written and open-sourced the software tha powers this shelf. Feel free to check it out [on GitHub](https://github.com/ewpratten/shelf-led-controller){:target="_blank"}.

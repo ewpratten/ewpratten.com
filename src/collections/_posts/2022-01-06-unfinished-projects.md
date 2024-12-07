@@ -13,7 +13,7 @@ aliases:
 - /blog/unfinished-projects
 ---
 
-My [GitHub profile](https://github.com/Ewpratten) is a bit like an iceberg. At the time of writing, I have made nearly 8 and a half thousand commits to nearly a thousand repositories. Since July 2018, I have made an effort to go no more than 3 consecutive days without writing code, and I have only broken that streak 6 times (each of those being a 4-day break).
+My [GitHub profile](https://github.com/Ewpratten){:target="_blank"} is a bit like an iceberg. At the time of writing, I have made nearly 8 and a half thousand commits to nearly a thousand repositories. Since July 2018, I have made an effort to go no more than 3 consecutive days without writing code, and I have only broken that streak 6 times (each of those being a 4-day break).
 
 
 ![My 2021 commit history](/assets/blog/unfinished-projects/commit_history.png)
@@ -40,11 +40,11 @@ My goal for this post is to showcase some of the interesting failed ideas I have
 
 This is a project that may actually be finished some day, considering how its nearly production ready.
 
-In mid-late 2021, I was building a custom graphics pipeline for some friends. After finishing work on [**\[data::loss\]**](https://github.com/Ewpratten/ludum-dare-49), a group of us started prototyping various concepts for future games. Continuing off of this, [@demilurii](https://demilurii.art) and I began looking at integrating 3D layout and rigging tools into our 2D asset pipeline.
+In mid-late 2021, I was building a custom graphics pipeline for some friends. After finishing work on [**\[data::loss\]**](https://github.com/Ewpratten/ludum-dare-49){:target="_blank"}, a group of us started prototyping various concepts for future games. Continuing off of this, [@demilurii](https://demilurii.art){:target="_blank"} and I began looking at integrating 3D layout and rigging tools into our 2D asset pipeline.
 
-Thus, `strangle` was born. Strangle is a little tool that allows super easy project and asset management through various tools using Pixar's [USD](https://graphics.pixar.com/usd/release/index.html) as a data interchange format.
+Thus, `strangle` was born. Strangle is a little tool that allows super easy project and asset management through various tools using Pixar's [USD](https://graphics.pixar.com/usd/release/index.html){:target="_blank"} as a data interchange format.
 
-`strangle` can handle the [MagicaVoxel](https://ephtracy.github.io/), [Blender](https://www.blender.org/), [Maya 2022](https://www.autodesk.ca/en/products/maya/overview), and [Houdini](https://www.sidefx.com/) DCCs in a layering approach, where each DCC is used to add their specialty to an asset. This means that magica could be used for modeling, blender for texturing and shading, maya for layout, rigging and animation, and houdini for lighting and FX.
+`strangle` can handle the [MagicaVoxel](https://ephtracy.github.io/){:target="_blank"}, [Blender](https://www.blender.org/){:target="_blank"}, [Maya 2022](https://www.autodesk.ca/en/products/maya/overview){:target="_blank"}, and [Houdini](https://www.sidefx.com/){:target="_blank"} DCCs in a layering approach, where each DCC is used to add their specialty to an asset. This means that magica could be used for modeling, blender for texturing and shading, maya for layout, rigging and animation, and houdini for lighting and FX.
 
 This whole pipeline works flawlessly, but the tooling was never released due to some less-than-ideal design choices in how the tools interface with each other across OSes.
 
@@ -52,11 +52,11 @@ This whole pipeline works flawlessly, but the tooling was never released due to 
 
 I actually published one of my failed projects as reference material for other developers.
 
-[https://github.com/ewpratten/animal-loader](https://github.com/ewpratten/animal-loader)
+[https://github.com/ewpratten/animal-loader](https://github.com/ewpratten/animal-loader){:target="_blank"}
 
 <br>
 
-> `animal-loader` (A not-so-acronym for "A Native Mod Loader") is an experimental, unfinished project to allow the [@kleientertainment](https://github.com/kleientertainment/) games [Don't Starve](https://www.klei.com/games/dont-starve) and [Don't Starve Together](https://www.klei.com/games/dont-starve-together) to load native mods written in rust, and support WebAssembly plugins.
+> `animal-loader` (A not-so-acronym for "A Native Mod Loader") is an experimental, unfinished project to allow the [@kleientertainment](https://github.com/kleientertainment/){:target="_blank"} games [Don't Starve](https://www.klei.com/games/dont-starve){:target="_blank"} and [Don't Starve Together](https://www.klei.com/games/dont-starve-together){:target="_blank"} to load native mods written in rust, and support WebAssembly plugins.
 
 After starting work on this project, I learned that the game I was attempting to mod was never compiled with support for dynamic library loading through its LUA interface, so I was unable to continue without considerable effort.
 

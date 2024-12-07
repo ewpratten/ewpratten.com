@@ -17,7 +17,7 @@ aliases:
 
 **NOTICE: The service mentioned in this post is currently unavailable due to ongoing network upgrades.**
 
-`mtr` (a modern version of [`traceroute`](https://en.wikipedia.org/wiki/Traceroute)) is a network debugging tool commonly used by network engineers to trace the physical (and sometimes virtual) paths their packets take between two computers over a network. Both `mtr` and `traceroute` will list the addresses or names of as many routers along the path as they can.
+`mtr` (a modern version of [`traceroute`](https://en.wikipedia.org/wiki/Traceroute){:target="_blank"}) is a network debugging tool commonly used by network engineers to trace the physical (and sometimes virtual) paths their packets take between two computers over a network. Both `mtr` and `traceroute` will list the addresses or names of as many routers along the path as they can.
 
 The following is an example output of an `mtr` trace from this computer to a Hurricane Electric server:
 
@@ -29,30 +29,30 @@ Over time, a few exceptionally bored network engineers have created some fun ser
 
 For example, there is:
 
-- `mtr cv6.poinsignon.org`: Displays a brief version of [Louis Poinsignon](https://www.mygb.eu/)'s resume
-- `mtr bad.horse`: Displays the lyrics to [Bad Horse](https://www.youtube.com/watch?v=rN2U5wkhRWc)
-- [Ben Cox](https://benjojo.co.uk)'s old [Traceroute Haiku](https://blog.benjojo.co.uk/post/traceroute-haikus) service
+- `mtr cv6.poinsignon.org`: Displays a brief version of [Louis Poinsignon](https://www.mygb.eu/){:target="_blank"}'s resume
+- `mtr bad.horse`: Displays the lyrics to [Bad Horse](https://www.youtube.com/watch?v=rN2U5wkhRWc){:target="_blank"}
+- [Ben Cox](https://benjojo.co.uk){:target="_blank"}'s old [Traceroute Haiku](https://blog.benjojo.co.uk/post/traceroute-haikus){:target="_blank"} service
 
 That last one was the inspiration for this project, and I will likely reference Ben's post a fair bit in this one. If you are interested in the lower level technical aspects of what I have set up, go read his post, as I am running a nearly identical setup to him.
 
 ## The game plan
 
-My intent for this project was rather simple: [rickroll](https://www.youtube.com/watch?v=dQw4w9WgXcQ) people when they traceroute my website. Now, I technically failed at most of that, and the result is really: rickroll people when they `mtr` *part of* my website. This change of scope was simply due to the fact I'd rather not introduce unwanted latency into the regular viewing experience of this site.
+My intent for this project was rather simple: [rickroll](https://www.youtube.com/watch?v=dQw4w9WgXcQ){:target="_blank"} people when they traceroute my website. Now, I technically failed at most of that, and the result is really: rickroll people when they `mtr` *part of* my website. This change of scope was simply due to the fact I'd rather not introduce unwanted latency into the regular viewing experience of this site.
 
 The steps were as follows:
 
 1) Allocate an IPv6 address block for the project
-2) Set up [Reverse DNS](https://en.wikipedia.org/wiki/Reverse_DNS_lookup) 
-   1) Convert the lyrics of *Never Gonna Give You Up* to [FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) format
+2) Set up [Reverse DNS](https://en.wikipedia.org/wiki/Reverse_DNS_lookup){:target="_blank"} 
+   1) Convert the lyrics of *Never Gonna Give You Up* to [FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name){:target="_blank"} format
    2) Register the appropriate `PTR` records
 3) *Dark magic*
-4) [Profit!](https://knowyourmeme.com/memes/profit)
+4) [Profit!](https://knowyourmeme.com/memes/profit){:target="_blank"}
 
 ## IP addresses and RDNS
 
-For this project, I ended up using the public address block `2a06:a005:d2b:c011::/64`, as I already own and control the routing for its [parent block](https://bgp.tools/prefix/2a06:a005:d2b::/48).
+For this project, I ended up using the public address block `2a06:a005:d2b:c011::/64`, as I already own and control the routing for its [parent block](https://bgp.tools/prefix/2a06:a005:d2b::/48){:target="_blank"}.
 
-I then delegated reverse DNS to the [Hurricane Electric DNS service](https://dns.he.net/) for easy management. I'll get back to this in a second.
+I then delegated reverse DNS to the [Hurricane Electric DNS service](https://dns.he.net/){:target="_blank"} for easy management. I'll get back to this in a second.
 
 ### Converting lyrics to FQDNs
 
@@ -87,9 +87,9 @@ While the output format may look weird, it directly corresponds to the input fie
 
 Now, for the ~~fun~~ complicated part of this project.
 
-When you run an `mtr` or `traceroute` against a remote host, your computer will send out arbitrary packets to that host, but slowly increment the [Time to live](https://en.wikipedia.org/wiki/Time_to_live) (TTL) field in such packets. 
+When you run an `mtr` or `traceroute` against a remote host, your computer will send out arbitrary packets to that host, but slowly increment the [Time to live](https://en.wikipedia.org/wiki/Time_to_live){:target="_blank"} (TTL) field in such packets. 
 
-As a refresher, the TTL field is a number that is decremented every time a packet is passed through a router. If this number ever hits zero, the packet is discarded and an [ICMPv6 Time Exceeded](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Time_exceeded) packet is returned to the sender indicating that their packet spent too long in transit. This mechanism exists to help prevent [routing loops](https://en.wikipedia.org/wiki/Routing_loop). 
+As a refresher, the TTL field is a number that is decremented every time a packet is passed through a router. If this number ever hits zero, the packet is discarded and an [ICMPv6 Time Exceeded](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Time_exceeded){:target="_blank"} packet is returned to the sender indicating that their packet spent too long in transit. This mechanism exists to help prevent [routing loops](https://en.wikipedia.org/wiki/Routing_loop){:target="_blank"}. 
 
 Generally, this field is set to a value of `64`, but tracing programs will make it low numbers to attempt to get otherwise hidden routers to announce their presence via a Time Exceeded packet.
 
@@ -99,7 +99,7 @@ For a router to show up with a *name* in the `mtr` output, it must both send a T
 
 Generally, such a setup would involve daisy-chaining routers physically in your network, and setting each of their hostnames, so clients would physically have their packets routed between each of the routers, and get an ICMP response from each of them. This is a lot of work.
 
-Conveniently for my wallet, Linux machines provide something called [Tun/Tap Interfaces](https://en.wikipedia.org/wiki/TUN/TAP). These virtual network interfaces allow programs to pretend to be one of many other computers on the network and act as if they were real hosts. When a program registers one of these interfaces with the kernel, it gets raw access to either the 2<sup>nd</sup> or 3<sup>rd</sup> OSI layer of the network stack in the form of a raw stream.
+Conveniently for my wallet, Linux machines provide something called [Tun/Tap Interfaces](https://en.wikipedia.org/wiki/TUN/TAP){:target="_blank"}. These virtual network interfaces allow programs to pretend to be one of many other computers on the network and act as if they were real hosts. When a program registers one of these interfaces with the kernel, it gets raw access to either the 2<sup>nd</sup> or 3<sup>rd</sup> OSI layer of the network stack in the form of a raw stream.
 
 ![Tun/Tap in the OSI stack](/assets/blog/rickroll-ipv6/400px-Tun-tap-osilayers-diagram.png)
 
@@ -123,7 +123,7 @@ Thus, when `mtr` looks for the third router in line, it'll get the address `2a06
 
 ## Profit!
 
-Well, thats about it. I skipped over some implementation details, but if you'd like to check out the source code for this project, head over to [its GitHub page](https://github.com/ewpratten/imaginary-addrs).
+Well, thats about it. I skipped over some implementation details, but if you'd like to check out the source code for this project, head over to [its GitHub page](https://github.com/ewpratten/imaginary-addrs){:target="_blank"}.
 
 And for the end result:
 

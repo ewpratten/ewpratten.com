@@ -3,7 +3,7 @@ layout: default
 title: Darth Raider
 ---
 
-**Darth Raider** was a 4-foot-tall 120lb robot that myself and a group of friends designed, built, and programmed at [*Raider Robotics*](https://raiderrobotics.org/?utm_source=ewpratten.com) back in 2020. I personally lead software development for the project, and also played a key part in guiding the physical design of the robot.
+**Darth Raider** was a 4-foot-tall 120lb robot that myself and a group of friends designed, built, and programmed at [*Raider Robotics*](https://raiderrobotics.org/?utm_source=ewpratten.com){:target="_blank"} back in 2020. I personally lead software development for the project, and also played a key part in guiding the physical design of the robot.
 
 <img src="/assets/robotics/5024/darthraider.png" alt="Darth Raider" style="max-width:400px;">
 

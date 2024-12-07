@@ -17,9 +17,9 @@ aliases:
 - /blog/codespaces-for-frc
 ---
 
-I was recently accepted into the [GitHub Codespaces](https://github.com/features/codespaces) beta test program. After reading through the documentation, I wanted to find a good use for this new tool, and decided to try it out on the largest open source project I am currently involved with. At *Raider Robotics* (@frc5024), we maintain a fairly large robotics software library called [Lib5K](https://github.com/frc5024/lib5k). The goal of this library is to provide an easy-to-use framework for new programmers to use when writing control systems code. As this library has become more complex, we have recently forked it into its own GitHub repository, and completely reworked our dependency system to match that of any other large OSS project. I figured that setting this repository up to use Codespaces might make it easier for other developers at Raider Robotics to make small changes to the library without needing to pull in the nearly 5GB of dependencies needed just to compile the codebase.
+I was recently accepted into the [GitHub Codespaces](https://github.com/features/codespaces){:target="_blank"} beta test program. After reading through the documentation, I wanted to find a good use for this new tool, and decided to try it out on the largest open source project I am currently involved with. At *Raider Robotics* (@frc5024), we maintain a fairly large robotics software library called [Lib5K](https://github.com/frc5024/lib5k){:target="_blank"}. The goal of this library is to provide an easy-to-use framework for new programmers to use when writing control systems code. As this library has become more complex, we have recently forked it into its own GitHub repository, and completely reworked our dependency system to match that of any other large OSS project. I figured that setting this repository up to use Codespaces might make it easier for other developers at Raider Robotics to make small changes to the library without needing to pull in the nearly 5GB of dependencies needed just to compile the codebase.
 
-I am quite impressed at how easy it is to set up a Codespace environment. All you need to do is, load a pre-made docker image, and write some JSON to configure the environment. I decided to write a custom Dockerfile that extends the [`mcr.microsoft.com/vscode/devcontainers/base:ubuntu`](https://hub.docker.com/_/microsoft-vscode-devcontainers) base image. 
+I am quite impressed at how easy it is to set up a Codespace environment. All you need to do is, load a pre-made docker image, and write some JSON to configure the environment. I decided to write a custom Dockerfile that extends the [`mcr.microsoft.com/vscode/devcontainers/base:ubuntu`](https://hub.docker.com/_/microsoft-vscode-devcontainers){:target="_blank"} base image. 
 
 ```dockerfile
 FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu
@@ -52,12 +52,12 @@ RUN tar -zxvf wpilib.tar.gz -C /root/wpilib/2020
 All that is being done in this container is:
 
  - Installing Python
- - Installing [sdkman](https://sdkman.io)
+ - Installing [sdkman](https://sdkman.io){:target="_blank"}
  - Installing OpenJDK 11
  - Installing Gradle
- - Installing [WPILib](https://github.com/wpilibsuite/allwpilib/)
+ - Installing [WPILib](https://github.com/wpilibsuite/allwpilib/){:target="_blank"}
 
-In the world of FRC development, almost all codebases depend on a library and toolset called WPILib. The tar file that is downloaded contains a copy of the library, all JNI libraries depended on by WPILib itself, some extra tooling, and a custom JVM built specifically to run on the [NI RoboRIO](https://www.ni.com/en-ca/support/model.roborio.html).
+In the world of FRC development, almost all codebases depend on a library and toolset called WPILib. The tar file that is downloaded contains a copy of the library, all JNI libraries depended on by WPILib itself, some extra tooling, and a custom JVM built specifically to run on the [NI RoboRIO](https://www.ni.com/en-ca/support/model.roborio.html){:target="_blank"}.
 
 With this docker container, all we need to do is tell GitHub how to set up a Codespace for the repo. This is done by placing a file in `.devcontainer/devcontainer.json`:
 
@@ -96,7 +96,7 @@ With this docker container, all we need to do is tell GitHub how to set up a Cod
 }
 ```
 
-Notice the line `"image":"ewpratten/frc_devcontainer:2020.3.2",`. This is telling VSCode and Codespaces to pull a docker image from my docker hub account. Instead of making Codespaces build a docker image for itself when it loads, I have pre-built the image, and published it [here](https://hub.docker.com/r/ewpratten/frc_devcontainer). The reason for this is quite simple. Codespaces will flat out crash if it tries to build my dockerfile due to WPILib just being too big.
+Notice the line `"image":"ewpratten/frc_devcontainer:2020.3.2",`. This is telling VSCode and Codespaces to pull a docker image from my docker hub account. Instead of making Codespaces build a docker image for itself when it loads, I have pre-built the image, and published it [here](https://hub.docker.com/r/ewpratten/frc_devcontainer){:target="_blank"}. The reason for this is quite simple. Codespaces will flat out crash if it tries to build my dockerfile due to WPILib just being too big.
 
 With a minimal amount of work, I got everything needed to develop and test FRC robotics code running in the browser via Codespaces.
 

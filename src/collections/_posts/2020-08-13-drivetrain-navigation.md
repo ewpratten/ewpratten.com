@@ -6,7 +6,7 @@ date: 2020-08-13
 enable_katex: true
 ---
 
-This post is a continuation on my "Notes from FRC" series. If you haven't already, I recommend reading my post on [Converting joystick data to tank-drive outputs](@/blog/2020-08-03-Joystick-to-Voltage.md). Some concepts in this post were introduced there. Like last time, to see the production code behind this post, check [here](https://github.com/frc5024/lib5k/blob/ab90994b2a0c769abfdde9a834133725c3ce3a38/common_drive/src/main/java/io/github/frc5024/common_drive/DriveTrainBase.java) and [here](https://github.com/frc5024/lib5k/tree/master/purepursuit/src/main/java/io/github/frc5024/purepursuit/pathgen).
+This post is a continuation on my "Notes from FRC" series. If you haven't already, I recommend reading my post on [Converting joystick data to tank-drive outputs](@/blog/2020-08-03-Joystick-to-Voltage.md). Some concepts in this post were introduced there. Like last time, to see the production code behind this post, check [here](https://github.com/frc5024/lib5k/blob/ab90994b2a0c769abfdde9a834133725c3ce3a38/common_drive/src/main/java/io/github/frc5024/common_drive/DriveTrainBase.java){:target="_blank"} and [here](https://github.com/frc5024/lib5k/tree/master/purepursuit/src/main/java/io/github/frc5024/purepursuit/pathgen){:target="_blank"}.
 
 At *Raider Robotics*, most of my work has been spent on these three subjects:
  - Productivity infrastructure
@@ -23,7 +23,7 @@ $$
 
 With a robot sitting at $\big[\begin{smallmatrix}0 \\ 0 \\ 0\end{smallmatrix}\big]$, it would be facing positive in the $x$ axis.
 
-**Localization**. When navigating the real world, the first challenge is: knowing where the robot is. At Raider Robotics, we use an [Unscented Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter#Unscented_Kalman_filter) (UKF) that fuses high-accuracy encoder and gyroscope data with medium-accuracy VI-SLAM data fed off our robot's computer vision system. Our encoders are attached to the robot's tank track motor output shafts, counting the distance traveled by each track. Although this sounds extremely complicated, this algorithm can be boiled down to a simple (and low-accuracy) equation that originated from marine navigation called [Dead Reckoning](https://en.wikipedia.org/wiki/Dead_reckoning):
+**Localization**. When navigating the real world, the first challenge is: knowing where the robot is. At Raider Robotics, we use an [Unscented Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter#Unscented_Kalman_filter){:target="_blank"} (UKF) that fuses high-accuracy encoder and gyroscope data with medium-accuracy VI-SLAM data fed off our robot's computer vision system. Our encoders are attached to the robot's tank track motor output shafts, counting the distance traveled by each track. Although this sounds extremely complicated, this algorithm can be boiled down to a simple (and low-accuracy) equation that originated from marine navigation called [Dead Reckoning](https://en.wikipedia.org/wiki/Dead_reckoning){:target="_blank"}:
 
 $$
 \Delta P = \begin{bmatrix}(\Delta L - \Delta R) \cdot \sin(\theta\cdot\frac{\pi}{180})  \\  (\Delta L - \Delta R) \cdot \cos(\theta\cdot\frac{\pi}{180})  \\  \Delta \theta \end{bmatrix}
@@ -51,7 +51,7 @@ $$
 \Delta\theta = \arctan(\Delta y, \Delta x) \cdot \frac{180}{\pi}
 $$
 
-Notice how a polar coordinate containing these values: $\big[\begin{smallmatrix}\Delta d  \\  \Delta\theta\end{smallmatrix}\big]$ is very similar to our joystick input vector from the [previous post](@/blog/2020-08-03-Joystick-to-Voltage.md): $\big[\begin{smallmatrix}T \\ S\end{smallmatrix}\big]$. Converting our positional error into a polar coordinate makes the process of navigating to any point very simple. All we need to do is take the [Hadamard product](https://en.wikipedia.org/wiki/Hadamard_product_(matrices)) of the coordinate matrix with a gain matrix to make small adjustments to the output based on the physical characteristics of your robot, like the amount of voltage required to overcome static friction. This is a very simple P-gain controller.
+Notice how a polar coordinate containing these values: $\big[\begin{smallmatrix}\Delta d  \\  \Delta\theta\end{smallmatrix}\big]$ is very similar to our joystick input vector from the [previous post](@/blog/2020-08-03-Joystick-to-Voltage.md): $\big[\begin{smallmatrix}T \\ S\end{smallmatrix}\big]$. Converting our positional error into a polar coordinate makes the process of navigating to any point very simple. All we need to do is take the [Hadamard product](https://en.wikipedia.org/wiki/Hadamard_product_(matrices){:target="_blank"}) of the coordinate matrix with a gain matrix to make small adjustments to the output based on the physical characteristics of your robot, like the amount of voltage required to overcome static friction. This is a very simple P-gain controller.
 
 $$
 input = \begin{bmatrix}\Delta d  \\  \Delta\theta\end{bmatrix}\circ\begin{bmatrix}K_t  \\  K_s \end{bmatrix}
@@ -71,7 +71,7 @@ $$
 input = \begin{bmatrix}\Delta d  \\  \Delta\theta\end{bmatrix}\circ\begin{bmatrix}K_t  \\  K_s \end{bmatrix} \circ \begin{bmatrix}m  \\  1 \end{bmatrix}
 $$
 
-For even more controllability, Raider Robotics passes $\Delta d$ through a [PD](https://en.wikipedia.org/wiki/PID_controller#Selective_use_of_control_terms) controller, and $\Delta\theta$ through a [PI](https://en.wikipedia.org/wiki/PID_controller#PI_controller) controller before converting them to motor values... and that is it! With just a couple formulæ, we have a fully functional autonomous point-to-point locomotion system. 
+For even more controllability, Raider Robotics passes $\Delta d$ through a [PD](https://en.wikipedia.org/wiki/PID_controller#Selective_use_of_control_terms){:target="_blank"} controller, and $\Delta\theta$ through a [PI](https://en.wikipedia.org/wiki/PID_controller#PI_controller){:target="_blank"} controller before converting them to motor values... and that is it! With just a couple formulæ, we have a fully functional autonomous point-to-point locomotion system. 
 
 For a real-world example of this method in use, check out 5024's robot (bottom right) and 1114's robot (bottom left). Both teams were running nearly the same implementation. We were both running autonomously for the first 15 seconds of the game:
 

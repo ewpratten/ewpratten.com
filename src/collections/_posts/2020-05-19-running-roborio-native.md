@@ -14,28 +14,28 @@ extra:
   excerpt: This post covers how to run a RoboRIO's operating system in Docker
 ---
 
-It has now been 11 weeks since the last time I have had access to a [RoboRIO](https://www.ni.com/en-ca/support/model.roborio.html) to use for debugging code, and there are limits to my simulation software. So, I really only have one choice: *emulate my entire robot*.
+It has now been 11 weeks since the last time I have had access to a [RoboRIO](https://www.ni.com/en-ca/support/model.roborio.html){:target="_blank"} to use for debugging code, and there are limits to my simulation software. So, I really only have one choice: *emulate my entire robot*.
 
-My goal is to eventually have every bit of hardware on [5024](https://www.thebluealliance.com/team/5024)'s [Darth Raider](https://cs.5024.ca/webdocs/docs/robots/darthRaider) emulated, and running on my docker swarm. Conveniently, everything uses (mostly) the same CPU architecture. In this post, I will go over how to build a RoboRIO docker container.
+My goal is to eventually have every bit of hardware on [5024](https://www.thebluealliance.com/team/5024){:target="_blank"}'s [Darth Raider](https://cs.5024.ca/webdocs/docs/robots/darthRaider){:target="_blank"} emulated, and running on my docker swarm. Conveniently, everything uses (mostly) the same CPU architecture. In this post, I will go over how to build a RoboRIO docker container.
 
 ## Host system requirements
 
 This process requires a host computer with:
  - An x86_64 CPU
  - A decent amount of RAM
- - [Ubuntu 18.04](https://mirrors.lug.mtu.edu/ubuntu-releases/18.04/) or later
- - [Docker CE](https://docs.docker.com/engine/install/debian/) installed
- - [docker-compose](https://docs.docker.com/compose/install/) installed
+ - [Ubuntu 18.04](https://mirrors.lug.mtu.edu/ubuntu-releases/18.04/){:target="_blank"} or later
+ - [Docker CE](https://docs.docker.com/engine/install/debian/){:target="_blank"} installed
+ - [docker-compose](https://docs.docker.com/compose/install/){:target="_blank"} installed
 
 ## Getting a system image
 
 This is the hardest step. To get a RoboRIO docker container running, you will need:
  - A copy of the latest RoboRIO firmware package
- - A copy of `libfakearmv7l.so` ([download](https://github.com/robotpy/fakearmv7l/releases/download/v1/libfakearmv7l.so))
+ - A copy of `libfakearmv7l.so` ([download](https://github.com/robotpy/fakearmv7l/releases/download/v1/libfakearmv7l.so){:target="_blank"})
 
 ### RoboRIO Firmware
 
-To acquire a copy of the latest RoboRIO Firmware package, you will need to install the [FRC Game Tools](https://www.ni.com/en-ca/support/downloads/drivers/download.frc-game-tools.html) on a **Windows** machine (not wine).
+To acquire a copy of the latest RoboRIO Firmware package, you will need to install the [FRC Game Tools](https://www.ni.com/en-ca/support/downloads/drivers/download.frc-game-tools.html){:target="_blank"} on a **Windows** machine (not wine).
 
 After installing the toolsuite, and activating it with your FRC team's activation key (provided in Kit of Parts), you can grab the latest `FRC_roboRIO_XXXX_vXX.zip` file from the installation directory of the *FRC Imaging Tool* (This will vary depending on how, and where the Game Tools are installed).
 
@@ -51,7 +51,7 @@ The bootstrap process is made up of a few parts:
 
 ### Enabling Docker-ARM support
 
-Since the RoboRIO system image and libraries are compiled to run on ARMv7l hardware, they will refuse to run on an x86_64 system. This is where [QEMU](https://www.qemu.org/) comes in to play. We can use QEMU as an emulation layer between out docker containers and our CPU. To get QEMU set up, we must first install support for ARM->x86 emulation by running:
+Since the RoboRIO system image and libraries are compiled to run on ARMv7l hardware, they will refuse to run on an x86_64 system. This is where [QEMU](https://www.qemu.org/){:target="_blank"} comes in to play. We can use QEMU as an emulation layer between out docker containers and our CPU. To get QEMU set up, we must first install support for ARM->x86 emulation by running:
 
 ```sh
 sudo apt install qemu binfmt-support qemu-user-static -y
@@ -69,7 +69,7 @@ We have a system image filesystem, but need Docker to view it as a Docker image.
 
 #### Using my pre-built image
 
-Feel free to skip the following step, and just use my [pre-built](https://hub.docker.com/r/ewpratten/roborio) RoboRIO base image. It is already set up with hacked auth, and is (at the time of writing) based on firmware version `2020_v10`.
+Feel free to skip the following step, and just use my [pre-built](https://hub.docker.com/r/ewpratten/roborio){:target="_blank"} RoboRIO base image. It is already set up with hacked auth, and is (at the time of writing) based on firmware version `2020_v10`.
 
 To use it, replace `roborio:latest` with `ewpratten/roborio:2020_v10` in the `docker-compose.yml` config below.
 
@@ -81,7 +81,7 @@ Make a folder, and put both the system image, and `libfakearmv7l.so` files in it
 docker import ./systemimage.tar.gz roborio:tmp
 ```
 
-This will build a docker base image out of the system image, and name it `roborio:tmp`. You can use this on it's own, but if you want to deploy code to the container with [GradleRIO](https://github.com/wpilibsuite/GradleRIO), or SSH into the container, you will need to strip the NI Auth.
+This will build a docker base image out of the system image, and name it `roborio:tmp`. You can use this on it's own, but if you want to deploy code to the container with [GradleRIO](https://github.com/wpilibsuite/GradleRIO){:target="_blank"}, or SSH into the container, you will need to strip the NI Auth.
 
 ### Stripping National Instruments Auth
 

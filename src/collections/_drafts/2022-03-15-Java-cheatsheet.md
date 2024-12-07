@@ -18,7 +18,7 @@ This document is written for my PROG10082 classmates as a quick reference for so
 
 ## VSCode Tips
 
-*Remember*, you can open [intelisense](https://code.visualstudio.com/docs/editor/intellisense) by pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd>. This is a super handy tool for auto-complete in your code no matter the language you are working in.
+*Remember*, you can open [intelisense](https://code.visualstudio.com/docs/editor/intellisense){:target="_blank"} by pressing <kbd>Ctrl</kbd> + <kbd>Space</kbd>. This is a super handy tool for auto-complete in your code no matter the language you are working in.
 
 Typing the following then opening intelisense will give you some shorthand options for quickly typing common code. Just select the option you want with arrow keys, and press <kbd>Enter</kbd> to apply it.
 

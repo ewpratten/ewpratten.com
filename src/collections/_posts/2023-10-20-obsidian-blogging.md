@@ -12,7 +12,7 @@ extra:
 aliases:
   - /blog/obsidian-blogging
 ---
-It recently occurred to me that [Obsidian](https://obsidian.md) is capable of editing *any* type of markdown document store, not just its own note "Vaults". So, as a test I've been using it to interface with the source files that make up this website.
+It recently occurred to me that [Obsidian](https://obsidian.md){:target="_blank"} is capable of editing *any* type of markdown document store, not just its own note "Vaults". So, as a test I've been using it to interface with the source files that make up this website.
 
 This post largely exists for the sake of figuring out how Obsidian behaves when forced into an environment that doesn't entirely agree with the "obsidian way of doing things". 
 
@@ -22,7 +22,7 @@ This post largely exists for the sake of figuring out how Obsidian behaves when 
 
 I think the learning curve is pretty small as long as you already know some Markdown basics, which most people do weather they know it or not (cough, discord). 
 
-After the initial step of figuring out where to place my Vault on disk, the interface is quite welcoming. Things render nicely, and basically every [GFM](https://github.github.com/gfm/) feature I use exists and functions properly.
+After the initial step of figuring out where to place my Vault on disk, the interface is quite welcoming. Things render nicely, and basically every [GFM](https://github.github.com/gfm/){:target="_blank"} feature I use exists and functions properly.
 
 Also, for anyone editing Markdown files with embedded YAML front matter, the "properties" editor is a godsend. I wish VSCode had something similar built-in.
 
@@ -34,7 +34,7 @@ So ya, I'd totally recommend Obsidian as a Markdown editor and note-taking app.
 
 Here's where the story changes a bit.
 
-My website (the one you are looking at right now) is a nearly-thousand-commit GIT repository full of hundreds of Markdown, HTML, and half-Markdown-half-HTML files, all tied together by [Zola](https://www.getzola.org/), some Python scripts, and CI tooling.
+My website (the one you are looking at right now) is a nearly-thousand-commit GIT repository full of hundreds of Markdown, HTML, and half-Markdown-half-HTML files, all tied together by [Zola](https://www.getzola.org/){:target="_blank"}, some Python scripts, and CI tooling.
 
 This is not at all something Obsidian can handle out of the box, although it did do a surprisingly good job trying.
 

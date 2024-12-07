@@ -21,5 +21,5 @@ I am currently:
 
 Some of the more notable things I've worked on in the past are:
 
-- The animated TV series [PAW Patrol](https://www.imdb.com/title/tt3121722/) and [Daniel Spellbound](https://www.imdb.com/title/tt13983670/)
+- The animated TV series [PAW Patrol](https://www.imdb.com/title/tt3121722/){:target="_blank"}{:target="_blank"} and [Daniel Spellbound](https://www.imdb.com/title/tt13983670/){:target="_blank"}{:target="_blank"}
 - A [fleet of robots](/robotics/5024) at Raider Robotics

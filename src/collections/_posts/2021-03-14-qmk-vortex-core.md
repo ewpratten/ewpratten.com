@@ -20,9 +20,9 @@ aliases:
 - /blog/qmk-vortex-core
 ---
 
-Last fall, I [purchased my first mechanical keyboard](@/blog/2020-11-06-Vortex-Core.md), the [Vortex Core](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3550), and have been loving it ever since. Well, almost loving it. There are a few "quirks" of the keyboard that I wasn't super fond of, like: occasionally not sending `KEY_UP` commands back to the computer, or the badly documented and maintained system for building custom layouts.
+Last fall, I [purchased my first mechanical keyboard](@/blog/2020-11-06-Vortex-Core.md), the [Vortex Core](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3550){:target="_blank"}, and have been loving it ever since. Well, almost loving it. There are a few "quirks" of the keyboard that I wasn't super fond of, like: occasionally not sending `KEY_UP` commands back to the computer, or the badly documented and maintained system for building custom layouts.
 
-In my previous post on this keyboard, I had mentioned @ChaoticEnigma's fork of [QMK](https://github.com/qmk/qmk_firmware) for the core. This custom firmware had been sitting on my mind for a while, and I finally decided to try it out on my keyboard. This post will cover the process of loading QMK on to a non-supported Vortex Core keyboard.
+In my previous post on this keyboard, I had mentioned @ChaoticEnigma's fork of [QMK](https://github.com/qmk/qmk_firmware){:target="_blank"} for the core. This custom firmware had been sitting on my mind for a while, and I finally decided to try it out on my keyboard. This post will cover the process of loading QMK on to a non-supported Vortex Core keyboard.
 
 The following are all the steps required to complete this process. Make sure to **read them all before getting started**. As per usual when I am outlining ways to modify hardware, you might brick your keyboard doing this so: *be careful*.
 
@@ -41,19 +41,19 @@ The following are all the steps required to complete this process. Make sure to 
 
 Firstly, you'll need all the software tools required to interface with the keyboard. The following list contains GitHub links to everything needed (this is all for Linux of course):
 
- - [OpenOCD patched with HT32 support](https://github.com/ChaoticConundrum/openocd-ht32)
- - [Commandline interface tool](https://github.com/pok3r-custom/pok3rtool)
- - [Unlocked core firmware](https://github.com/pok3r-custom/pok3r_re_firmware)
+ - [OpenOCD patched with HT32 support](https://github.com/ChaoticConundrum/openocd-ht32){:target="_blank"}
+ - [Commandline interface tool](https://github.com/pok3r-custom/pok3rtool){:target="_blank"}
+ - [Unlocked core firmware](https://github.com/pok3r-custom/pok3r_re_firmware){:target="_blank"}
 
 ### OpenOCD
 
-What is [OpenOCD](http://openocd.org/)?
+What is [OpenOCD](http://openocd.org/){:target="_blank"}?
 
- > OpenOCD is a free-software tool mainly used for on-chip debugging, in-system. programming and boundary-scan testing. OpenOCD supports flashing and. debugging a wide variety of platforms such as: ARMv5 through latest ARMv8. [source: [Debian WIKI](https://wiki.debian.org/OpenOCD)]
+ > OpenOCD is a free-software tool mainly used for on-chip debugging, in-system. programming and boundary-scan testing. OpenOCD supports flashing and. debugging a wide variety of platforms such as: ARMv5 through latest ARMv8. [source: [Debian WIKI](https://wiki.debian.org/OpenOCD){:target="_blank"}]
 
 OpenOCD is a standard tool / interface that allows you to use many different types of hardware debuggers interchangeably. It is a very useful project for tasks like this, where we will need to connect directly into an embedded chip via its debugging ports.
 
-The link provided above for OpenOCD is actually a fork of the main project that specifically adds support for the [Holtek HT32F165x](https://www.keil.com/dd2/holtek/ht32f1655/) MCU (the chip that powers the keyboard).
+The link provided above for OpenOCD is actually a fork of the main project that specifically adds support for the [Holtek HT32F165x](https://www.keil.com/dd2/holtek/ht32f1655/){:target="_blank"} MCU (the chip that powers the keyboard).
 
 After cloning the GitHub repo, the build process is fairly simple:
 
@@ -102,7 +102,7 @@ Building this is as simple as cloning the repo, then running `make`.
 
 ## Compiling the firmware
 
-When it comes to the final firmware, I have [my own fork](https://github.com/Ewpratten/qmk_core/) of @ChaoticEnigma's fork of QMK. You could use @ChaoticEnigma's fork, but I would recommend my own, since I am specifically maintaining it for the Vortex Core, and my fork has a few more features (like a proper layout for the core).
+When it comes to the final firmware, I have [my own fork](https://github.com/Ewpratten/qmk_core/){:target="_blank"} of @ChaoticEnigma's fork of QMK. You could use @ChaoticEnigma's fork, but I would recommend my own, since I am specifically maintaining it for the Vortex Core, and my fork has a few more features (like a proper layout for the core).
 
 You have the option between four QMK keyboard layouts for the Vortex Core:
 
@@ -130,7 +130,7 @@ make vortex/core:<layout_name>
 
 ## Finding debugging hardware
 
-As mentioned in the [OpenOCD](#openocd) section, I am using a clone of the [ST-Link/V2](https://www.st.com/en/development-tools/st-link-v2.html), which I picked up for a few dollars [from ebay](https://www.ebay.com/itm/ST-Link-V2-OpenOCD-On-Chip-Debugger-STM8-STM32-JTAG-SWIM-Linux-OSX-Arduino/254315946241?hash=item3b36696101:g:Uq0AAOSwYRJdQWxj). You can use any OpenOCD-supported debugger though.
+As mentioned in the [OpenOCD](#openocd) section, I am using a clone of the [ST-Link/V2](https://www.st.com/en/development-tools/st-link-v2.html){:target="_blank"}, which I picked up for a few dollars [from ebay](https://www.ebay.com/itm/ST-Link-V2-OpenOCD-On-Chip-Debugger-STM8-STM32-JTAG-SWIM-Linux-OSX-Arduino/254315946241?hash=item3b36696101:g:Uq0AAOSwYRJdQWxj){:target="_blank"}. You can use any OpenOCD-supported debugger though.
 
 The next section will assume you have an ST-Link when I talk about I/O pin names.
 

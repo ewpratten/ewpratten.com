@@ -12,7 +12,7 @@ aliases:
 
 I use Git a lot. I use it for work, I use it for personal projects, I use it for this website, *etc.* I like it.
 
-Through my time using Git, I've collected a small set of [aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) that I use pretty much daily. This post is a little overview of those aliases with the hope that whoever stumbles across this page finds them useful in the future.
+Through my time using Git, I've collected a small set of [aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases){:target="_blank"} that I use pretty much daily. This post is a little overview of those aliases with the hope that whoever stumbles across this page finds them useful in the future.
 
 ## Author Ranking
 
@@ -36,7 +36,7 @@ An example output from an old [Raider Robotics](/robotics/5024) codebase:
 
 ## Commit Graph
 
-One day, I noticed that the only reason I used [GitKraken](https://www.gitkraken.com/) was to see the commit graph, so I decided to make an alias to display it in the terminal instead, removing my reliance on GitKraken all together.
+One day, I noticed that the only reason I used [GitKraken](https://www.gitkraken.com/){:target="_blank"} was to see the commit graph, so I decided to make an alias to display it in the terminal instead, removing my reliance on GitKraken all together.
 
 I keep tweaking this one over time, but as of writing, I have the following command aliased as `git tree`:
 
@@ -46,7 +46,7 @@ git log --graph --decorate --abbrev-commit --all \
   --date=format:'%b %d %Y %H:%M:%S %z'
 ```
 
-Ya.. thats a long one. Feel free to check out all the [formatting options](https://git-scm.com/docs/pretty-formats) Git provides.
+Ya.. thats a long one. Feel free to check out all the [formatting options](https://git-scm.com/docs/pretty-formats){:target="_blank"} Git provides.
 
 Basically, this command displays an ASCII-art commit graph, complete with information about the commit and author. Heres a screenshot of it in action in that same Raider Robotics codebase:
 
@@ -78,7 +78,7 @@ I have this command aliased as `git lscommits`:
 
 See that exclamation mark at the start? Git aliases can actually be bound to arbitrary shell commands, not just other Git commands. This is a great way to make a command that does something Git can't do on its own.
 
-Switching up my example repository, heres the output of this command in the [bird](https://gitlab.nic.cz/labs/bird) repository:
+Switching up my example repository, heres the output of this command in the [bird](https://gitlab.nic.cz/labs/bird){:target="_blank"} repository:
 
 ![Git lscommits in action](/assets/blog/git-aliases/lscommits.png)
 

@@ -11,7 +11,7 @@ aliases:
 - /blog/graphing-w2a
 ---
 
-I was scrolling through reddit the other day, and came across [this great post](https://www.reddit.com/r/FRC/comments/byzv5q/i_know_what_im_doing/) by u/[MasterQuacks](https://www.reddit.com/user/MasterQuacks/).
+I was scrolling through reddit the other day, and came across [this great post](https://www.reddit.com/r/FRC/comments/byzv5q/i_know_what_im_doing/){:target="_blank"} by u/[MasterQuacks](https://www.reddit.com/user/MasterQuacks/){:target="_blank"}.
 
 ![My insporation](/assets/blog/wheels-to-awards/w2ainspo.jpg)
 

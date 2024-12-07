@@ -14,7 +14,7 @@ I was curious about the most used languages for FRC, so I build a Python script 
 ## Some basic data
 Before we get to the heavy work done by my script, let's start with some general data.
 
-Thanks to the [TBA API](https://www.thebluealliance.com/apidocs/v3), I know that there are 6917 registered teams. 492 of them have registered at least one account on GitHub.
+Thanks to the [TBA API](https://www.thebluealliance.com/apidocs/v3){:target="_blank"}, I know that there are 6917 registered teams. 492 of them have registered at least one account on GitHub.
 
 ## How the script works
 The script is split into steps:
@@ -27,10 +27,10 @@ The script is split into steps:
  - Compile data and sort
 
 ### Getting a list of accounts
-This is probably the simplest step in the whole process. I used the auto-generated [tbaapiv3client](https://github.com/TBA-API/tba-api-client-python) python library's `get_teams_keys(key)` function, and kept incrementing `key` until I got an empty array. All returned data was then added together into a big list of team keys.
+This is probably the simplest step in the whole process. I used the auto-generated [tbaapiv3client](https://github.com/TBA-API/tba-api-client-python){:target="_blank"} python library's `get_teams_keys(key)` function, and kept incrementing `key` until I got an empty array. All returned data was then added together into a big list of team keys.
 
 ### Checking for a team's github account
-The [TBA API](https://www.thebluealliance.com/apidocs/v3) helpfully provides a `/api/v3/team/<number>/social_media` API endpoint that will give the GitHub username for any team you request. (or nothing if they don't use github)
+The [TBA API](https://www.thebluealliance.com/apidocs/v3){:target="_blank"} helpfully provides a `/api/v3/team/<number>/social_media` API endpoint that will give the GitHub username for any team you request. (or nothing if they don't use github)
 
 A `for` loop on this with a list of every team number did the trick for finding accounts.
 
@@ -100,6 +100,6 @@ I have removed markup and shell languages from that list because most of them ar
 In terms of github account names, 133 teams follow FRC convention and use a username starting with `frc`, followed by their team number, 95 teams use `team` then their number, and 264 teams use something else.
 
 ## Using the script
-This script is not on PYPI this time. You can obtain a copy from my GitHub repo: [https://github.com/Ewpratten/frc-code-stats](https://github.com/Ewpratten/frc-code-stats)
+This script is not on PYPI this time. You can obtain a copy from my GitHub repo: [https://github.com/Ewpratten/frc-code-stats](https://github.com/Ewpratten/frc-code-stats){:target="_blank"}
 
 First, make sure both `python3.7` and `python3-pip` are installed on your computer. Next, delete the `data.json` file. Then, install the requirements with `pip3 install -r requirements.txt`. Finally, run with `python3 main.py` to start the script. Now, go outside and enjoy nature for about an hour, and your data should be loaded!.

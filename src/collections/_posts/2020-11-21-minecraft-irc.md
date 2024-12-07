@@ -16,9 +16,9 @@ aliases:
 - /blog/minecraft-irc
 ---
 
-As I talked about in my post [about Minecraft modpack development](@/blog/2020-10-24-CorePack-Development.md), I got back in to playing Minecraft earlier this year. I primairly play on a server full of friends, where the server owner has [dynmap](https://github.com/webbukkit/dynmap) installed. Dynmap is a handy tool that provides a near-real-time overview of the minecraft world in the form of a webapp. I always keep Dynmap open on my laptop so I can chat with whoever is online, and see whats being worked on.
+As I talked about in my post [about Minecraft modpack development](@/blog/2020-10-24-CorePack-Development.md), I got back in to playing Minecraft earlier this year. I primairly play on a server full of friends, where the server owner has [dynmap](https://github.com/webbukkit/dynmap){:target="_blank"} installed. Dynmap is a handy tool that provides a near-real-time overview of the minecraft world in the form of a webapp. I always keep Dynmap open on my laptop so I can chat with whoever is online, and see whats being worked on.
 
-While dynmap has a built-in chat log, and the ability to send chats, the incoming chat messages do not persist, and the outgoing chat messages don't always show your in-game username (but instead, your public IP address). Since I always have an IRC client open, I figured that making use of my IRC client to generate a persistent chat log in the background would be a good solution. Unfortunately, I could not find anyone who has ever built a `Minecraft <-> IRC` bridge. Thus my project, [chatster](https://github.com/Ewpratten/chatster), was born. 
+While dynmap has a built-in chat log, and the ability to send chats, the incoming chat messages do not persist, and the outgoing chat messages don't always show your in-game username (but instead, your public IP address). Since I always have an IRC client open, I figured that making use of my IRC client to generate a persistent chat log in the background would be a good solution. Unfortunately, I could not find anyone who has ever built a `Minecraft <-> IRC` bridge. Thus my project, [chatster](https://github.com/Ewpratten/chatster){:target="_blank"}, was born. 
 
 The most basic IRC server consists of a TCP socket, and only 7 message handlers:
 
@@ -32,14 +32,14 @@ The most basic IRC server consists of a TCP socket, and only 7 message handlers:
 | `QUIT`       | Handles a user leaving a channel                 |
 | `PRIVMSG`    | Handles a user sending a message                 |
 
-On the Minecraft side, the following subset of the [in-game protocol](https://wiki.vg/Protocol) must be implemented (I just used the [`pyCraft`](https://github.com/ammaraskar/pyCraft) library for this):
+On the Minecraft side, the following subset of the [in-game protocol](https://wiki.vg/Protocol){:target="_blank"} must be implemented (I just used the [`pyCraft`](https://github.com/ammaraskar/pyCraft){:target="_blank"} library for this):
 
  - User authentication
- - Receiving [`clientbound.play.ChatMessage`](https://wiki.vg/Protocol#Chat_Message_.28clientbound.29) packets
- - Sending [`serverbound.play.ChatMessage`](https://wiki.vg/Protocol#Chat_Message_.28serverbound.29) packets
+ - Receiving [`clientbound.play.ChatMessage`](https://wiki.vg/Protocol#Chat_Message_.28clientbound.29){:target="_blank"} packets
+ - Sending [`serverbound.play.ChatMessage`](https://wiki.vg/Protocol#Chat_Message_.28serverbound.29){:target="_blank"} packets
 
 
-The whole idea of chatster is that a user connects to the IRC server using their [Mojang account](https://account.mojang.com/) email and password at their IRC nickname, and server password. The server temporarily stores these values in memory.
+The whole idea of chatster is that a user connects to the IRC server using their [Mojang account](https://account.mojang.com/){:target="_blank"} email and password at their IRC nickname, and server password. The server temporarily stores these values in memory.
 
 Connecting to a server is done via specific IRC channel names. If you wanted to connect to `mc.example.com` on port `12345`, you would issue the following IRC command:
 

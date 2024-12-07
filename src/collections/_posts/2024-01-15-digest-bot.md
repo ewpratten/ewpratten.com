@@ -56,7 +56,7 @@ Digest Bot is a Python script triggered by a Cron job every morning.
 
 Once triggered, it downloads a copy of the RSS file for each blog I'm "following", and checks for new articles against an SQLite database of previously seen ones.
 
-It then makes a quick query to [weather.gc.ca](https://weather.gc.ca) to get the weather for the day, constructs a plaintext email with the weather and new articles, then logs into my SMTP server and sends me an email.
+It then makes a quick query to [weather.gc.ca](https://weather.gc.ca){:target="_blank"} to get the weather for the day, constructs a plaintext email with the weather and new articles, then logs into my SMTP server and sends me an email.
 
 All subscription management is handled in an SQLite database that I can easily back up and hand-edit if needed.
 

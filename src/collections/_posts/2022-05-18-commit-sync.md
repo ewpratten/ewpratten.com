@@ -32,7 +32,7 @@ In reality, that couldn't be farther from the truth. I have been writing quite a
 
 ## Time for some trickery
 
-I happened to remember a little trick I used in a CI pipeline for [Raider Robotics](https://github.com/frc5024/) where you can backdate empty commits with arbitrary authors. I recall using this for some kind of version tagging system at some point.. idk.. the important part being it is possible to make "fake" commits with the right command-line flags.
+I happened to remember a little trick I used in a CI pipeline for [Raider Robotics](https://github.com/frc5024/){:target="_blank"} where you can backdate empty commits with arbitrary authors. I recall using this for some kind of version tagging system at some point.. idk.. the important part being it is possible to make "fake" commits with the right command-line flags.
 
 ### The game plan
 

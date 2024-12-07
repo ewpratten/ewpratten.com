@@ -253,4 +253,4 @@ Much better.
 
 At this point, you know everything you need in order to create most things you'd want to 3D print.
 
-If you'd like to learn some more complex functions, check out the [OpenSCAD documentation](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual).
+If you'd like to learn some more complex functions, check out the [OpenSCAD documentation](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual){:target="_blank"}.

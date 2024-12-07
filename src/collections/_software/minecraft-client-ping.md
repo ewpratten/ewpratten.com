@@ -19,4 +19,4 @@ Due to the fact this mod uses server chat, you can use it to share coordinates w
 
 ## Get Client Ping
 
-To use this mod, download it from [Modrinth](https://modrinth.com/mod/client-ping). Make sure you also have [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap) installed too.
+To use this mod, download it from [Modrinth](https://modrinth.com/mod/client-ping){:target="_blank"}. Make sure you also have [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap){:target="_blank"} installed too.

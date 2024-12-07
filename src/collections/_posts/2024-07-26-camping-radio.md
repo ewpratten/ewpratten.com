@@ -20,7 +20,7 @@ So, to appease my past self, the present-tense radio-license-having version of m
 
 A glaring problem in this plan was that I didn't actually have an antenna to bring. So a week in advance, I set out to build one for the trip.
 
-I opted to build a duplicate of my current fixed-in-place at-home antenna, a slightly more sketchy variant of [WB3GCK's speaker wire end-fed half-wave](https://wb3gck.com/tag/speaker-wire-antennas/).
+I opted to build a duplicate of my current fixed-in-place at-home antenna, a slightly more sketchy variant of [WB3GCK's speaker wire end-fed half-wave](https://wb3gck.com/tag/speaker-wire-antennas/){:target="_blank"}.
 
 ![](/assets/blog/camping-radio/spkr-wire-efhw-lengths.png)
 
@@ -64,7 +64,7 @@ I headed across the street, and set up in a grocery store parking lot.
 
 ![](/assets/blog/camping-radio/PXL_20240714_162523877.jpg)
 
-Feeling rather *in the open*, I sat down, watched out for people, and spun up [iFTx](https://apps.apple.com/ca/app/iftx/id6446093115) to see what kind of reach I could get with my new antenna.
+Feeling rather *in the open*, I sat down, watched out for people, and spun up [iFTx](https://apps.apple.com/ca/app/iftx/id6446093115){:target="_blank"} to see what kind of reach I could get with my new antenna.
 
 ![](/assets/blog/camping-radio/Screenshot_20240714-124916.png)
 
@@ -82,9 +82,9 @@ I had learned from my earlier trial run that its a good idea to keep some rope w
 
 I ended up effectively wrapping the campsite in wire. One end was tied to a tree using some rope, and the other end was tent-pegged into the ground so I could adjust the tension as my brand new wire inevitably stretched over the weekend.
 
-In terms of operation, this setup was *awesome*. The worst noise I had to deal with was barely pushing an [S2](https://en.wikipedia.org/wiki/S_meter), and I was able to make far more (and better) contacts than I had expected.
+In terms of operation, this setup was *awesome*. The worst noise I had to deal with was barely pushing an [S2](https://en.wikipedia.org/wiki/S_meter){:target="_blank"}, and I was able to make far more (and better) contacts than I had expected.
 
-I had originally intended to spend this trip operating [FT8](https://en.wikipedia.org/wiki/FT8) and [CW](https://en.wikipedia.org/wiki/Continuous_wave), but for some reason I found myself really enjoying [FT4](https://wsjt.sourceforge.io/FT4_Protocol.pdf) (a mode I had never used before), so I spent most of my day camped out on 14080[Kc](https://en.wikipedia.org/wiki/Cycle_per_second), and then shifted to [10136](https://en.wikipedia.org/wiki/WARC_bands) and [7074](https://en.wikipedia.org/wiki/40-meter_band) in the evening.
+I had originally intended to spend this trip operating [FT8](https://en.wikipedia.org/wiki/FT8){:target="_blank"} and [CW](https://en.wikipedia.org/wiki/Continuous_wave){:target="_blank"}, but for some reason I found myself really enjoying [FT4](https://wsjt.sourceforge.io/FT4_Protocol.pdf){:target="_blank"} (a mode I had never used before), so I spent most of my day camped out on 14080[Kc](https://en.wikipedia.org/wiki/Cycle_per_second){:target="_blank"}, and then shifted to [10136](https://en.wikipedia.org/wiki/WARC_bands){:target="_blank"} and [7074](https://en.wikipedia.org/wiki/40-meter_band){:target="_blank"} in the evening.
 
 ![](/assets/blog/camping-radio/PXL_20240720_200504715.jpg)
 

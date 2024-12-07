@@ -17,7 +17,7 @@ aliases:
 - /blog/wireguard-options
 ---
 
-I extensively use [WireGuard](https://www.wireguard.com/) to keep various devices connected across foreign and unstable networks. Over the past few years of doing this, I've discovered a few handy configuration tricks that can help in weirdly specific situations. The following is a short overview to be used as reference in the future.
+I extensively use [WireGuard](https://www.wireguard.com/){:target="_blank"} to keep various devices connected across foreign and unstable networks. Over the past few years of doing this, I've discovered a few handy configuration tricks that can help in weirdly specific situations. The following is a short overview to be used as reference in the future.
 
 ## DNS
 

@@ -11,7 +11,7 @@ aliases:
 - /blog/bashsmash
 ---
 
-I was watching this great [Liveoverflow video](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiOhNze_4fjAhUiB50JHR12D8AQwqsBMAB6BAgJEAQ&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6D1LnMj0Yt0&usg=AOvVaw2nOgft0SoPZujc9js9Vxhx) yesterday, and really liked the idea of building escape sequences with strings. So, I built a new tool, [BashSmash](https://pypi.org/project/bashsmash/). 
+I was watching this great [Liveoverflow video](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiOhNze_4fjAhUiB50JHR12D8AQwqsBMAB6BAgJEAQ&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D6D1LnMj0Yt0&usg=AOvVaw2nOgft0SoPZujc9js9Vxhx){:target="_blank"} yesterday, and really liked the idea of building escape sequences with strings. So, I built a new tool, [BashSmash](https://pypi.org/project/bashsmash/){:target="_blank"}. 
 
 ## The goal
 The goal of BashSmash is very similar to that described in Liveoverflow's video. Do anything in bash without using any letters or numbers except `n` and `f` (he used `i` instead of `f`). This can both bypass shell injection filters, and generally mess with people.
@@ -132,7 +132,7 @@ To use BashSmash, simply make sure both `python3.7` and `python3-pip` are instal
 pip3 install bashsmash
 ```
 
-For more info, see the [PYPI Page](https://pypi.org/project/bashsmash/).
+For more info, see the [PYPI Page](https://pypi.org/project/bashsmash/){:target="_blank"}.
 
 ## Why do you have a desire to break things with python
 Because it is fun. Give it a try! 

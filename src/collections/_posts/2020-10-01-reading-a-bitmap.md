@@ -18,20 +18,20 @@ aliases:
 - /blog/reading-a-bitmap
 ---
 
-Recently, @rsninja722 was telling me about [a project](https://github.com/rsninja722/file2bmp) he was working on. The basic idea is that you pass a file into his program, and it generates a bitmap of the binary data. This was inspired by [an old post of mine](@/blog/2019-09-11-Buildingimgfrombin.md) where I did the same thing with a horribly written Python script and the library [`pillow`](https://github.com/python-pillow/Pillow). 
+Recently, @rsninja722 was telling me about [a project](https://github.com/rsninja722/file2bmp){:target="_blank"} he was working on. The basic idea is that you pass a file into his program, and it generates a bitmap of the binary data. This was inspired by [an old post of mine](@/blog/2019-09-11-Buildingimgfrombin.md) where I did the same thing with a horribly written Python script and the library [`pillow`](https://github.com/python-pillow/Pillow){:target="_blank"}. 
 
-Both of us are currently teaching ourselves the **C** programming language. Him, for a break from JavaScript. Me, for no particular reason. As somebody who mostly lives in the world of high-level C-family languages (C++ and Python), learning C has been a challenging, fun, and rewarding experience. I enjoy immersing myself in *"the old way of doing things"*. This means sitting down with my Father's old [*ANSI Standard C Programmer's Reference*](https://archive.org/search.php?query=external-identifier%3A%22urn%3Aoclc%3Arecord%3A1028045558%22) book, and looking up what I need to know through a good old appendix full of libc headers and their function lists.
+Both of us are currently teaching ourselves the **C** programming language. Him, for a break from JavaScript. Me, for no particular reason. As somebody who mostly lives in the world of high-level C-family languages (C++ and Python), learning C has been a challenging, fun, and rewarding experience. I enjoy immersing myself in *"the old way of doing things"*. This means sitting down with my Father's old [*ANSI Standard C Programmer's Reference*](https://archive.org/search.php?query=external-identifier%3A%22urn%3Aoclc%3Arecord%3A1028045558%22){:target="_blank"} book, and looking up what I need to know through a good old appendix full of libc headers and their function lists.
 
-While @rsninja722 was working on his project, I found myself using `xxd` and `python3` a lot to debug small issues he encountered. This is fairly tedious, so I set out to write myself a tool to help. I have a small GitHub repository called [smalltools](https://github.com/Ewpratten/smalltools) where I keep the source code to a few small programs I write for fun. I added a new tool file to the repo (called `bmpinfo`) and got to work.
+While @rsninja722 was working on his project, I found myself using `xxd` and `python3` a lot to debug small issues he encountered. This is fairly tedious, so I set out to write myself a tool to help. I have a small GitHub repository called [smalltools](https://github.com/Ewpratten/smalltools){:target="_blank"} where I keep the source code to a few small programs I write for fun. I added a new tool file to the repo (called `bmpinfo`) and got to work.
 
 ## How does a bitmap work?
 
-This was the first big question. I had learned a while ago when working on another project that the image data stored in a bitmap is just raw pixel values, but aside from that, I had no clue how this file format works. Luckily, Wikipedia came to the rescue (as per usual) with [this great article](https://en.wikipedia.org/wiki/BMP_file_format). It turns out that the file metadata, like the pixel values, is stupidly simple to work with**<sup>1, 2</sup>**. 
+This was the first big question. I had learned a while ago when working on another project that the image data stored in a bitmap is just raw pixel values, but aside from that, I had no clue how this file format works. Luckily, Wikipedia came to the rescue (as per usual) with [this great article](https://en.wikipedia.org/wiki/BMP_file_format){:target="_blank"}. It turns out that the file metadata, like the pixel values, is stupidly simple to work with**<sup>1, 2</sup>**. 
 
 <div style="color:gray;" markdown="1">
 
 ***1.** I am going to cover only images with `24-bit` color, with no compression*<br>
-***2.** All integers in a bitmap are little-[endian](https://en.wikipedia.org/wiki/Endianness). These must be converted to the host's endianness*
+***2.** All integers in a bitmap are little-[endian](https://en.wikipedia.org/wiki/Endianness){:target="_blank"}. These must be converted to the host's endianness*
 
 </div>
 
@@ -57,7 +57,7 @@ Like any other standard binary file format, bitmaps start with a file header. Th
 | **PT**     | OS/2 pointer                   |
 
 
-The rest of the data is fairly standard. Since I am working in **C**, I have defined this data as a [`struct`](https://en.wikipedia.org/wiki/Struct_(C_programming_language)). Here is the header:
+The rest of the data is fairly standard. Since I am working in **C**, I have defined this data as a [`struct`](https://en.wikipedia.org/wiki/Struct_(C_programming_language){:target="_blank"}). Here is the header:
 
 ```c
 typedef struct {
@@ -120,7 +120,7 @@ After the file headers comes the pixel data. This is written pixel-by-pixel, and
 
 ## Loading a bitmap file into a C program
 
-For simplicity, I am going to write this for a computer that is based on a little-endian architecture. In reality, most computers are big-endian, and require that you [reverse the endian](https://codereview.stackexchange.com/a/151070) of everything read in.
+For simplicity, I am going to write this for a computer that is based on a little-endian architecture. In reality, most computers are big-endian, and require that you [reverse the endian](https://codereview.stackexchange.com/a/151070){:target="_blank"} of everything read in.
 
 ```c
 #include <stdlib.h>
@@ -169,4 +169,4 @@ int main(){
 
 Reading bitmap data is really quite simple. Of course, there are many sub-standards and formats that require more code, and sometimes decompression algorithms, but this is just an overview.
 
-If you would like to see the small library I built for myself for doing this, take a look [here](https://github.com/Ewpratten/smalltools/tree/master/utils/img). (it includes endianness handling)
+If you would like to see the small library I built for myself for doing this, take a look [here](https://github.com/Ewpratten/smalltools/tree/master/utils/img){:target="_blank"}. (it includes endianness handling)

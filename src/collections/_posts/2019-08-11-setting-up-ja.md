@@ -13,7 +13,7 @@ aliases:
 draft: false
 ---
 
-I am currently working with [Hiragana](https://en.wikipedia.org/wiki/Hiragana), [Katakana](https://en.wikipedia.org/wiki/Katakana), and, [Kanji](https://en.wikipedia.org/wiki/Kanji) in some projects, and needed a more reliable way to write than running some [romaji](https://en.wikipedia.org/wiki/Romanization_of_Japanese) through an online translator. So, this post will detail what I did to enable native inputs on my laptop. This guide is specifically for [i3wm](https://i3wm.org/), because it does not obey system settings for languages and inputs.
+I am currently working with [Hiragana](https://en.wikipedia.org/wiki/Hiragana){:target="_blank"}, [Katakana](https://en.wikipedia.org/wiki/Katakana){:target="_blank"}, and, [Kanji](https://en.wikipedia.org/wiki/Kanji){:target="_blank"} in some projects, and needed a more reliable way to write than running some [romaji](https://en.wikipedia.org/wiki/Romanization_of_Japanese){:target="_blank"} through an online translator. So, this post will detail what I did to enable native inputs on my laptop. This guide is specifically for [i3wm](https://i3wm.org/){:target="_blank"}, because it does not obey system settings for languages and inputs.
 
 ## Adding font support to Linux
 Firstly, we need fonts. Depending on your system, these may already be installed. For Japanese, I only used `vlgothic`, so here in the package for it:
@@ -24,7 +24,7 @@ sudo apt install fonts-vlgothic
 ## Language support
 Im not sure if this matters, but I have seen other people do it, so why not be safe?
 
-I am currently running a stock Ubuntu [18.04](https://releases.ubuntu.com/18.04.5/) base, which means that everything is pre-configured for Gnome. To set language support in Gnome, pull up the settings panel:
+I am currently running a stock Ubuntu [18.04](https://releases.ubuntu.com/18.04.5/){:target="_blank"} base, which means that everything is pre-configured for Gnome. To set language support in Gnome, pull up the settings panel:
 ```bash
 # This line fixes some compatibility issues between 
 # Gnome and I3 when launching the settings menu. 
@@ -48,7 +48,7 @@ Gnome's language settings are now configured. If you are using Gnome (not I3), y
 ## Configuring ibus
 Don't get me wrong, I love I3wm, but sometimes it's configurability drives me crazy. 
 
-After searching through various forums and wikis looking for an elegant way to switch languages in I3, I found a link to an [ArchWiki page](https://wiki.archlinux.org/index.php/IBus) at the bottom of a mailing list (I blame Google for not showing this sooner). It turns out that a program called `ibus` is exactly what I needed. Here is how to set it up:
+After searching through various forums and wikis looking for an elegant way to switch languages in I3, I found a link to an [ArchWiki page](https://wiki.archlinux.org/index.php/IBus){:target="_blank"} at the bottom of a mailing list (I blame Google for not showing this sooner). It turns out that a program called `ibus` is exactly what I needed. Here is how to set it up:
 
 Remember `mozc` from above? If you are not using it, this package may not work. Search for the appropriate `ibus-` package for your selected language(s).
 ```bash
@@ -81,7 +81,7 @@ export QT_IM_MODULE=ibus
 ibus-daemon -d -x
 ```
 
-It turns out that this [causes issues with some browsers](https://github.com/ibus/ibus/issues/2020), so I actually put *this* in my `~/.profile` instead:
+It turns out that this [causes issues with some browsers](https://github.com/ibus/ibus/issues/2020){:target="_blank"}, so I actually put *this* in my `~/.profile` instead:
 ```bash
 # Language support
 export GTK_IM_MODULE=xim

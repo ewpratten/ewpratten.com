@@ -4,9 +4,9 @@ title: Raylib FFI
 description: Direct FFI bindings for calling raylib from Rust code
 ---
 
-Any time someone new to game and graphics programming asks me how to get started, I point them to [raylib](https://www.raylib.com/). It's a simple, yet powerful, game development library that is perfect for beginners and experts alike.
+Any time someone new to game and graphics programming asks me how to get started, I point them to [raylib](https://www.raylib.com/){:target="_blank"}. It's a simple, yet powerful, game development library that is perfect for beginners and experts alike.
 
-`raylib-ffi` is a raw binding from Rust to raylib. The library is 100% [`unsafe`](https://doc.rust-lang.org/std/keyword.unsafe.html) code, and thats the point!
+`raylib-ffi` is a raw binding from Rust to raylib. The library is 100% [`unsafe`](https://doc.rust-lang.org/std/keyword.unsafe.html){:target="_blank"} code, and thats the point!
 
 I wanted to build a bindings library that can always track the very latest version of raylib without worrying about hand-wrapping every function into a safe Rust equivalent. This raw library is designed to be built *on top of* by other libraries that want to provide a safe interface to raylib through my wrapper.
 
@@ -16,4 +16,4 @@ Raylib helpfully exposes a function signatures list for binding authors to refer
 
 ## Learn more
 
-You can find the source code for `raylib-ffi` on [GitHub](https://github.com/ewpratten/raylib-ffi). Additionally, documentation is available on [docs.rs](https://docs.rs/raylib-ffi).
+You can find the source code for `raylib-ffi` on [GitHub](https://github.com/ewpratten/raylib-ffi){:target="_blank"}. Additionally, documentation is available on [docs.rs](https://docs.rs/raylib-ffi){:target="_blank"}.

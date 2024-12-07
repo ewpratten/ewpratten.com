@@ -20,7 +20,7 @@ From the **London Free Press**:
 >
 > Theirs — part of a high-flying experiment they thought would travel about 100 kilometres, 150 km tops — drifted twice as far, crossing the Canada-U.S. border and coming down in a mountain valley in Pennsylvania, 300 kilometres away.
 
-[*Read the full article here*](https://lfpress.com/2017/11/09/beal-science-project-succeeds--maybe-too-much--as-weather-balloon-floats-into-us)
+[*Read the full article here*](https://lfpress.com/2017/11/09/beal-science-project-succeeds--maybe-too-much--as-weather-balloon-floats-into-us){:target="_blank"}
 
 Once found on the American side of the border, a corresponding article was written by the **Potter Leader-Enterprise**:
 
@@ -28,7 +28,7 @@ Once found on the American side of the border, a corresponding article was writt
 >
 > They had found that the balloon was part an experiment, launched more than a week ago from a football field in London, Ontario, Canada,  by H.B. Beal Secondary school teacher Dung Tiet and 10 eager ninth-graders.
 
-[*Read the full article here*](https://www.tiogapublishing.com/potter_leader_enterprise/news/local/around-the-great-lakes-in-two-days-canadian-balloon-makes-extraordinary-journey-to-port-allegany/article_935ddffa-d11f-11e7-9783-03ac5a7e7efb.html)
+[*Read the full article here*](https://www.tiogapublishing.com/potter_leader_enterprise/news/local/around-the-great-lakes-in-two-days-canadian-balloon-makes-extraordinary-journey-to-port-allegany/article_935ddffa-d11f-11e7-9783-03ac5a7e7efb.html){:target="_blank"}
 
 ## The balloon on the other side
 

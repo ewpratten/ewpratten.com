@@ -21,13 +21,13 @@ aliases:
 
 About a month ago, I decided to buy myself a mechanical keyboard. I have always been a huge fan of membrane / laptop keyboards. My current laptop (the Lenovo T480) has a very nice feel to its keyboard, and my previous laptop (the Acer R11) had the best keyboard I have ever used. The switch to mechanical wasn't my first choice, although I was open to trying something new, so didn't see it as a negative. Ever since adding another monitor to my setup, I haven't had enough room on my desk to fit a keyboard. This generally is not a problem since I mainly use my laptop, but I occasionally need to use my desktop for rendering work, which requires a separate keyboard.
 
-I began to look for keyboards that could fit in the little space in front of my laptop, and stumbled across [a video](https://www.youtube.com/watch?v=ofXOu7zK9IY) from one of my favorite YouTube creators, [Wolfgang](https://www.youtube.com/c/WolfgangsChannel/featured) on the [Niu Mini](https://kbdfans.com/products/niu-mini-40-diy-kit), which is a 40% keyboard (meaning it has 40% of the keys of a full size layout). The heavy use of keybindings to get work done on such a small keyboard interested me a lot, and I almost picked up a Niu Mini for myself, although ended up not getting it because I decided I wasn't quite ready to learn how to type on an [ortholinear](https://blog.roastpotatoes.co/review/2015/09/20/ortholinear-experience-atomic/) layout, while needing to learn keybindings at the same time.
+I began to look for keyboards that could fit in the little space in front of my laptop, and stumbled across [a video](https://www.youtube.com/watch?v=ofXOu7zK9IY){:target="_blank"} from one of my favorite YouTube creators, [Wolfgang](https://www.youtube.com/c/WolfgangsChannel/featured){:target="_blank"} on the [Niu Mini](https://kbdfans.com/products/niu-mini-40-diy-kit){:target="_blank"}, which is a 40% keyboard (meaning it has 40% of the keys of a full size layout). The heavy use of keybindings to get work done on such a small keyboard interested me a lot, and I almost picked up a Niu Mini for myself, although ended up not getting it because I decided I wasn't quite ready to learn how to type on an [ortholinear](https://blog.roastpotatoes.co/review/2015/09/20/ortholinear-experience-atomic/){:target="_blank"} layout, while needing to learn keybindings at the same time.
 
-Instead of the Niu Mini, I ended up getting myself the cheaper [Vortex Core](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3550). The core, made by the same company that produces the well-known [POK3R](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3527), is a programmable 40% with a staggered layout.
+Instead of the Niu Mini, I ended up getting myself the cheaper [Vortex Core](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3550){:target="_blank"}. The core, made by the same company that produces the well-known [POK3R](https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3527){:target="_blank"}, is a programmable 40% with a staggered layout.
 
 ## Overall build
 
-The Vortex Core is built very nicely, I chose mine with the [Cherry MX Brown](https://www.cherrymx.de/en/mx-original/mx-brown.html) switches, since I dislike overly clicky keyboards, and I have had no problems with noise. The keys also feel very nice, and are effortless to type with. Interestingly, my keyboard shipped with an extra "Windows" key in place of a function key, which on a keyboard that makes heavy use of function keys, was a bit annoying. Not a huge deal though, since I just know what the key does, and I don't spend much time looking at the keycaps anyways.
+The Vortex Core is built very nicely, I chose mine with the [Cherry MX Brown](https://www.cherrymx.de/en/mx-original/mx-brown.html){:target="_blank"} switches, since I dislike overly clicky keyboards, and I have had no problems with noise. The keys also feel very nice, and are effortless to type with. Interestingly, my keyboard shipped with an extra "Windows" key in place of a function key, which on a keyboard that makes heavy use of function keys, was a bit annoying. Not a huge deal though, since I just know what the key does, and I don't spend much time looking at the keycaps anyways.
 
 That being said, since the keyboard has so many shortcuts and combinations to get things done, I really like the fact that the core comes with color-coded keycaps that tell you what they do.
 
@@ -35,7 +35,7 @@ The keyboard's baseplate is made of aluminum, and is CNC-cut, so it both looks a
 
 ![The keyboard](/assets/blog/vortex-core/core.jpg)
 
-One downside though, in terms of connectivity, the keyboard unfortunately uses USB micro connector instead of the newer (and nicer) USB type C connector. As someone who connects his life with USB-C, I am not the biggest fan of this choice, but at least I had a right-angle USB-micro cable lying around that I can use with it. Alongside the USB-micro connection, removing the backplate will reveal a [JTAG](https://en.wikipedia.org/wiki/JTAG) connector that allows you to flash custom firmware to the keyboard if you want. @ChaoticEnigma has forked the popular [QMK](https://github.com/qmk/qmk_firmware) keyboard firmware as [`qmk_pok3r`](https://github.com/pok3r-custom/qmk_pok3r), and added support for many Vortex boards including the Core, if you are looking to load something more custom.
+One downside though, in terms of connectivity, the keyboard unfortunately uses USB micro connector instead of the newer (and nicer) USB type C connector. As someone who connects his life with USB-C, I am not the biggest fan of this choice, but at least I had a right-angle USB-micro cable lying around that I can use with it. Alongside the USB-micro connection, removing the backplate will reveal a [JTAG](https://en.wikipedia.org/wiki/JTAG){:target="_blank"} connector that allows you to flash custom firmware to the keyboard if you want. @ChaoticEnigma has forked the popular [QMK](https://github.com/qmk/qmk_firmware){:target="_blank"} keyboard firmware as [`qmk_pok3r`](https://github.com/pok3r-custom/qmk_pok3r){:target="_blank"}, and added support for many Vortex boards including the Core, if you are looking to load something more custom.
 
 ## Keybindings
 
@@ -52,17 +52,17 @@ There are three main things I wanted to do immediately after getting my core:
 
  - Remap <kbd>Caps Lock</kbd> to <kbd>Tab</kbd>
  - Switch the <kbd>Win</kbd> and <kbd>Alt</kbd> keys to match the layout of my Thinkpad
- - Remap the arrow keys to [vim keys](https://hea-www.harvard.edu/~fine/Tech/vi.html)
+ - Remap the arrow keys to [vim keys](https://hea-www.harvard.edu/~fine/Tech/vi.html){:target="_blank"}
 
 The first could be done simply by performing a firmware upgrade to the latest version for the core. Setting custom keybindings on the other hand, requires switching the core's firmware to the `MPC` version. 
 
-This process unfortunately requires access to a computer that runs Windows (or VirtualBox). On windows, the setup process is really quite easy. You go to [this link](http://www.vortexgear.tw/db/upload/webdata4/6vortex_201861271445393.exe), which will download the firmware upgrade tool. Running the tool, and plugging in the keyboard will provide you with some options.
+This process unfortunately requires access to a computer that runs Windows (or VirtualBox). On windows, the setup process is really quite easy. You go to [this link](http://www.vortexgear.tw/db/upload/webdata4/6vortex_201861271445393.exe){:target="_blank"}, which will download the firmware upgrade tool. Running the tool, and plugging in the keyboard will provide you with some options.
 
 ![Vortex Core firmware upgrade tool](/assets/blog/vortex-core/core-mpc-tool.png)
 
 The "bin group" selection provides two options. Selecting `Core by MPC` will flash the re-programmable firmware to the keyboard, and the other option will restore the keyboard to factory firmware.
 
-Vortex provides a programming tool, but I am not a huge fan of it. I plan to write a Java app that can program the keyboard (and load saved profiles from it), but for now, I am using a great tool made by @tsfreddie called [Much Programming Core](https://tsfreddie.github.io/much-programming-core/). This tool allows you to configure keybindings and remap keys through his website, and there are easy-to-follow instructions on how to download the correct file, and flash your keyboard.
+Vortex provides a programming tool, but I am not a huge fan of it. I plan to write a Java app that can program the keyboard (and load saved profiles from it), but for now, I am using a great tool made by @tsfreddie called [Much Programming Core](https://tsfreddie.github.io/much-programming-core/){:target="_blank"}. This tool allows you to configure keybindings and remap keys through his website, and there are easy-to-follow instructions on how to download the correct file, and flash your keyboard.
 
 ![Much Programming Core website](/assets/blog/vortex-core/core-mpc-webapp.png)
 

@@ -3,7 +3,7 @@ layout: default
 title: My work at Raider Robotics
 ---
 
-I was a member of [Raider Robotics](https://raiderrobotics.org) (a competitive robotics team) from 2017 through 2021.
+I was a member of [Raider Robotics](https://raiderrobotics.org){:target="_blank"} (a competitive robotics team) from 2017 through 2021.
 
 During my time on the team, I was the lead software developer. This role involved devising and giving lessons on embedded programming to other students, creating high-level system designs, coordinating a team of other developers, and writing code (*lots* of code).
 
@@ -55,7 +55,7 @@ I also developed a deep fascination of robot locomotion. I spent a great deal of
 Some systems I developed as a result of my learnings were:
 
 - Predictive anti-tip software (used an array of sensors to predict when robots were likely to tip over, and automatically correct for it)
-- [VISLAM](https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping)-based spacial navigation (as seen above)
+- [VISLAM](https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping){:target="_blank"}-based spacial navigation (as seen above)
 - A robot simulator that was used to sanity-check software changes before deployment
 
 ## Robots I've worked on
@@ -63,10 +63,10 @@ Some systems I developed as a result of my learnings were:
 The following are robots I've worked on at Raider Robotics:
 
 - [Darth Raider](/robotics/5024/darth-raider)
-- [HATCHField](https://github.com/frc5024/deepspace)
-- [MiniBot](https://github.com/frc5024/uBase)
-- [Q*bert](https://github.com/frc5024/powerup) ([offseason re-write](https://github.com/frc5024/PowerUp-Offseason))
+- [HATCHField](https://github.com/frc5024/deepspace){:target="_blank"}
+- [MiniBot](https://github.com/frc5024/uBase){:target="_blank"}
+- [Q*bert](https://github.com/frc5024/powerup){:target="_blank"} ([offseason re-write](https://github.com/frc5024/PowerUp-Offseason){:target="_blank"})
 
 ## Lib5K
 
-My final large project at Raider Robotics was [Lib5K](https://github.com/frc5024/lib5k), a software library that was designed to make everything I learned over my time at Raider Robotics available to and easy to use for future students.
+My final large project at Raider Robotics was [Lib5K](https://github.com/frc5024/lib5k){:target="_blank"}, a software library that was designed to make everything I learned over my time at Raider Robotics available to and easy to use for future students.

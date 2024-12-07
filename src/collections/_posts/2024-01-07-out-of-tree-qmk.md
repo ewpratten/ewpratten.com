@@ -10,7 +10,7 @@ aliases:
   - /blog/out-of-tree-qmk
 ---
 
-Like many builders and users of custom mechanical keyboards, I make heavy use of the [QMK](https://qmk.fm) keyboard firmware project. It provides functions for doing everything you'd expect a keyboard to be able to do, and is the de-facto standard for [AVR](https://en.wikipedia.org/wiki/AVR_microcontrollers)-based custom keyboards.
+Like many builders and users of custom mechanical keyboards, I make heavy use of the [QMK](https://qmk.fm){:target="_blank"} keyboard firmware project. It provides functions for doing everything you'd expect a keyboard to be able to do, and is the de-facto standard for [AVR](https://en.wikipedia.org/wiki/AVR_microcontrollers){:target="_blank"}-based custom keyboards.
 
 For anyone unfamilliar with QMK, it is a *huge* monorepo containing:
 

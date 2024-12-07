@@ -17,7 +17,7 @@ aliases:
 - /blog/mouse-button-swap
 ---
 
-Recently, my mouse (a [Logitech M310](https://www.logitech.com/en-us/products/mice/m310-wireless-mouse.910-001917.html)) has been starting to give out on me, which I suppose is to be expected considering how much use my peripherals get, but is nevertheless annoying, considering that the failing component was the middle button, which I use a lot.
+Recently, my mouse (a [Logitech M310](https://www.logitech.com/en-us/products/mice/m310-wireless-mouse.910-001917.html){:target="_blank"}) has been starting to give out on me, which I suppose is to be expected considering how much use my peripherals get, but is nevertheless annoying, considering that the failing component was the middle button, which I use a lot.
 
 Instead of just heading out to Walmart and buying another mouse, I decided to try repairing this one with some spare parts I had lying around.
 

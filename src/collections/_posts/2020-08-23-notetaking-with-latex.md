@@ -13,26 +13,26 @@ aliases:
   - /blog/notetaking-with-latex
 ---
 
-*You can view my public demo for this post [here](https://github.com/Ewpratten/school-notes-demo)*
+*You can view my public demo for this post [here](https://github.com/Ewpratten/school-notes-demo){:target="_blank"}*
 
-Recently, I have been on a bit of a mission to improve my school workflow with software. Over the past month, I have built a cleaner [student portal](https://github.com/Ewpratten/student_portal#unofficial-tvdsb-student-portal-webapp) for my school and [written a tool](https://github.com/Ewpratten/timeandplace-api#timeandplace-api--cli-application) for automating in-class attendance. Alongside working on these projects, I have also been refining my notetaking system for school.
+Recently, I have been on a bit of a mission to improve my school workflow with software. Over the past month, I have built a cleaner [student portal](https://github.com/Ewpratten/student_portal#unofficial-tvdsb-student-portal-webapp){:target="_blank"} for my school and [written a tool](https://github.com/Ewpratten/timeandplace-api#timeandplace-api--cli-application){:target="_blank"} for automating in-class attendance. Alongside working on these projects, I have also been refining my notetaking system for school.
 
 Since 9th grade, I have been taking notes in a private GitHub repository in markdown, and have been compiling them to HTML using a makefile for each course. While this system has worked ok, It has been far from perfect. Recently, I have been working very hard to give this system a much-needed upgrade. Here is the new tech stack:
 
- - The [Bazel buildsystem](https://bazel.build)
- - [Markdown](https://en.wikipedia.org/wiki/Markdown)
- - [LaTeX](https://en.wikipedia.org/wiki/LaTeX)
- - [MathJax](https://www.mathjax.org/)
- - [Beamer](https://ctan.org/pkg/beamer)
- - [Tikz & PGF](https://ctan.org/pkg/pgf)
- - [Pandoc](https://pandoc.org/)
- - [Zathura](https://pwmt.org/projects/zathura/)
- - [Starlark](https://docs.bazel.build/versions/master/skylark/language.html)
- - [Github Actions](https://github.com/features/actions) CI
+ - The [Bazel buildsystem](https://bazel.build){:target="_blank"}
+ - [Markdown](https://en.wikipedia.org/wiki/Markdown){:target="_blank"}
+ - [LaTeX](https://en.wikipedia.org/wiki/LaTeX){:target="_blank"}
+ - [MathJax](https://www.mathjax.org/){:target="_blank"}
+ - [Beamer](https://ctan.org/pkg/beamer){:target="_blank"}
+ - [Tikz & PGF](https://ctan.org/pkg/pgf){:target="_blank"}
+ - [Pandoc](https://pandoc.org/){:target="_blank"}
+ - [Zathura](https://pwmt.org/projects/zathura/){:target="_blank"}
+ - [Starlark](https://docs.bazel.build/versions/master/skylark/language.html){:target="_blank"}
+ - [Github Actions](https://github.com/features/actions){:target="_blank"} CI
 
-The idea is that every course I take becomes its own Bazel package, with subpackages for things like assignments, papers, notes, and presentations. I can compile everything just by running the command `bazel build //:all`. All builds are cached using Bazel's build caching system, so when I run the command to compile my notes (I love saying that), I only end up compiling things that have changed since the last run. The setup for all of this is quite simple. All that is really needed is a Bazel workspace with the [`bazel_pandoc`](https://github.com/ProdriveTechnologies/bazel-pandoc) rules loaded (although I have opted to use some custom [genrules](https://docs.bazel.build/versions/master/be/general.html#genrule) instead). Using these rules, markdown files can be concatenated, and compiled into a PDF. I also use a modified version of the [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) Pandoc template to make all my documents look a little neater.
+The idea is that every course I take becomes its own Bazel package, with subpackages for things like assignments, papers, notes, and presentations. I can compile everything just by running the command `bazel build //:all`. All builds are cached using Bazel's build caching system, so when I run the command to compile my notes (I love saying that), I only end up compiling things that have changed since the last run. The setup for all of this is quite simple. All that is really needed is a Bazel workspace with the [`bazel_pandoc`](https://github.com/ProdriveTechnologies/bazel-pandoc){:target="_blank"} rules loaded (although I have opted to use some custom [genrules](https://docs.bazel.build/versions/master/be/general.html#genrule){:target="_blank"} instead). Using these rules, markdown files can be concatenated, and compiled into a PDF. I also use a modified version of the [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template){:target="_blank"} Pandoc template to make all my documents look a little neater.
 
-In terms of workflow, I write all my notes as markdown files with [embedded LaTeX](https://pandoc.org/MANUAL.html#math) for any equations and charts I may need. All of this is done inside of VSCode, and I have a custom `tasks.json` file that lets me press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>b</kbd> to re-compile whatever I am currently working on. I also keep Zathura open in a window to the side for a nearly-live preview system.
+In terms of workflow, I write all my notes as markdown files with [embedded LaTeX](https://pandoc.org/MANUAL.html#math){:target="_blank"} for any equations and charts I may need. All of this is done inside of VSCode, and I have a custom `tasks.json` file that lets me press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>b</kbd> to re-compile whatever I am currently working on. I also keep Zathura open in a window to the side for a nearly-live preview system.
 
 <script src="https://gist.github.com/Ewpratten/163aa9c9cb4e8c20e732e3713c95c915.js" ></script>
 
@@ -44,7 +44,7 @@ Now, the question came up of *"how do you easily distribute notes and assignment
  1. I write an assignment
  2. I push it to the private GitHub repository
  3. GitHub Actions picks up the deployment with a custom build script
- 4. Every document is built into a PDF, and packaged with a directory listing generated by [`tree -H`](http://mama.indstate.edu/users/ice/tree/tree.1.html#XML/JSON/HTML%20OPTIONS)
+ 4. Every document is built into a PDF, and packaged with a directory listing generated by [`tree -H`](http://mama.indstate.edu/users/ice/tree/tree.1.html#XML/JSON/HTML%20OPTIONS){:target="_blank"}
  5. Everything is pushed to a subdomain on my website via GitHub pages
  6. I can share documents via URL to anyone
 

@@ -10,7 +10,7 @@ aliases:
   - /blog/ampr-upstreams
 ---
 
-I happened to be poking through the [AMPRNet](https://ampr.org) gateway list today, and pretty much out of nowhere came up with the question: *I wonder what networks most commonly house AMPR gateways?*
+I happened to be poking through the [AMPRNet](https://ampr.org){:target="_blank"} gateway list today, and pretty much out of nowhere came up with the question: *I wonder what networks most commonly house AMPR gateways?*
 
 So, in this short post, I shall set out to answer that question.
 
@@ -43,7 +43,7 @@ This returns a nicely sorted list of approximately 650 unique gateways.
 
 ## Where are they?
 
-Now that I have a list of IPs, I just put them into a file (`/tmp/ips` in my case) and asked the [BGP.tools API](https://bgp.tools/kb/api) for info about them.
+Now that I have a list of IPs, I just put them into a file (`/tmp/ips` in my case) and asked the [BGP.tools API](https://bgp.tools/kb/api){:target="_blank"} for info about them.
 
 ```bash
 echo "begin\n$(cat /tmp/ips)\nend" | nc bgp.tools 43 | tee /tmp/bgp-tools-result

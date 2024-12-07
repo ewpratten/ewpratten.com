@@ -21,14 +21,14 @@ extra:
 
 During a computer science class today, we were talking about embedding code and metadata in *jpg* and *bmp* files. @exvacuum was showing off a program he wrote that watched a directory for new image files, and would display them on a canvas. He then showed us a special image. In this image, he had injected some metadata into the last few pixels, which were not rendered, but told his program where to position the image on the canvas, and it's size.
 
-This demo got @hyperliskdev and I thinking about what else we can do with image data. After some talk, the idea of converting application binaries to images came up. I had seen a blog post about visually decoding [OOK data](https://en.wikipedia.org/wiki/On%E2%80%93off_keying) by converting an [IQ capture](http://www.ni.com/tutorial/4805/en/) to an image. With a little adaptation, I did the same for a few binaries on my laptop.
+This demo got @hyperliskdev and I thinking about what else we can do with image data. After some talk, the idea of converting application binaries to images came up. I had seen a blog post about visually decoding [OOK data](https://en.wikipedia.org/wiki/On%E2%80%93off_keying){:target="_blank"} by converting an [IQ capture](http://www.ni.com/tutorial/4805/en/){:target="_blank"} to an image. With a little adaptation, I did the same for a few binaries on my laptop.
 
 
 <!-- Tweet embed -->
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I present: &quot;Parts of <a href="https://twitter.com/GIMP_Official?ref_src=twsrc%5Etfw">@GIMP_Official</a>&#39;s binary, represented as a bitmap&quot; <a href="https://t.co/iLljdE4nlK">pic.twitter.com/iLljdE4nlK</a></p>&mdash; Evan Pratten (@ewpratten) <a href="https://twitter.com/ewpratten/status/1171801959197794304?ref_src=twsrc%5Etfw">September 11, 2019</a></blockquote> 
 
 ## Program design
-Like all ideas I have, I wrote some code to test this idea out. Above is a small sample of the interesting designs found in the [gimp](https://www.gimp.org/) binary. The goals for this script were to:
+Like all ideas I have, I wrote some code to test this idea out. Above is a small sample of the interesting designs found in the [gimp](https://www.gimp.org/){:target="_blank"} binary. The goals for this script were to:
 
  - Accept any file of any type or size
  - Allow the user to select the file dimensions
@@ -38,7 +38,7 @@ Like all ideas I have, I wrote some code to test this idea out. Above is a small
 If you would like to see how the code works, read "*check out the script*".
 
 ## A note on data wrapping
-By using a [generator](https://wiki.python.org/moin/Generators), and the [range function](https://docs.python.org/3/library/functions.html#func-range)'s 3rd argument, any list can be easily split into a 2d list at a set interval.
+By using a [generator](https://wiki.python.org/moin/Generators){:target="_blank"}, and the [range function](https://docs.python.org/3/library/functions.html#func-range){:target="_blank"}'s 3rd argument, any list can be easily split into a 2d list at a set interval.
 
 ```python
 # Assuming l is a list of data, and n is an int that denotes the desired split location
@@ -61,7 +61,7 @@ Back to executable data, these are small segments of a `dll` file:
 ![Segment 2](/assets/blog/bin-images/dll2.png)
 
 ## Check out the script
-This script is hosted [on my GitHub account](https://github.com/Ewpratten/binmap) as a standalone file. Any version of python3 should work, but the following libraries are needed:
+This script is hosted [on my GitHub account](https://github.com/Ewpratten/binmap){:target="_blank"} as a standalone file. Any version of python3 should work, but the following libraries are needed:
 
  - Pillow
  - Numpy

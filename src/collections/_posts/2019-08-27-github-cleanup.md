@@ -18,15 +18,15 @@ As I am continuing to check items off my TODO list before school starts, I have 
 I could have automated this, but I prefer a little control. To get the list, start by opening up a new Firefox window with a single tab. In this tab, open your GitHub profile to the list of repos.
 Starting from the top, scroll through, and middle click on anything you want to delete. This opens it in a new tab.
 
-Once you have a bunch of tabs open with repos to remove, use [this Firefox plugin](https://addons.mozilla.org/en-US/firefox/addon/urls-list/) to create a plaintext list of every link you opened, and paste the list of links into VS-code.
+Once you have a bunch of tabs open with repos to remove, use [this Firefox plugin](https://addons.mozilla.org/en-US/firefox/addon/urls-list/){:target="_blank"} to create a plaintext list of every link you opened, and paste the list of links into VS-code.
 
 ## Getting an API token
-Next, an API token is needed. Go to GitHub's [token settings](https://github.com/settings/tokens), and generate a new one (make sure to enable repository deletion).
+Next, an API token is needed. Go to GitHub's [token settings](https://github.com/settings/tokens){:target="_blank"}, and generate a new one (make sure to enable repository deletion).
 
 ## "Parsing" the links
 With our new token, and out VS-code file, we can start "parsing" the data. 
 
-Pressing `CTRL + F` brings up the Find/Search toolbar. In the text box, there are a few icons. Pressing the one farthest to the right will enable [Regex](https://en.wikipedia.org/wiki/Regular_expression) mode. With this set, paste the following:
+Pressing `CTRL + F` brings up the Find/Search toolbar. In the text box, there are a few icons. Pressing the one farthest to the right will enable [Regex](https://en.wikipedia.org/wiki/Regular_expression){:target="_blank"} mode. With this set, paste the following:
 ```
 https://github.com/
 ```

@@ -9,7 +9,7 @@ aliases:
 - /blog/wrong-python
 ---
 
-If you know me, you probably know of the many weird things I do with python. Most recent of which being this [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz) implementation in one line of python code:
+If you know me, you probably know of the many weird things I do with python. Most recent of which being this [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz){:target="_blank"} implementation in one line of python code:
 ```python
 _=[print("FizzBuzz"[_*_%3*4:8--_**4%5] or _) for _ in range(101)]
 ```
@@ -17,7 +17,7 @@ _=[print("FizzBuzz"[_*_%3*4:8--_**4%5] or _) for _ in range(101)]
 This installment of "weird things I do with python" will not focus on one-liners (that's going on my todo list though). But instead, playing with Python's classes and object system.
 
 ## A quick introduction to classes
-Im going to assume that you, the reader, have some reasonable knowledge of how computers work, and OOP concepts. If you do not, there are [many great online resources](https://medium.com/swlh/5-free-object-oriented-programming-online-courses-for-programmers-156afd0a3a73) to help you out.
+Im going to assume that you, the reader, have some reasonable knowledge of how computers work, and OOP concepts. If you do not, there are [many great online resources](https://medium.com/swlh/5-free-object-oriented-programming-online-courses-for-programmers-156afd0a3a73){:target="_blank"} to help you out.
 
 As a quick refresher, this is the Python syntax for a basic class:
 ```python
@@ -60,7 +60,7 @@ public class MyClass {
 Notice the fact that there is no `self`? Yet Java methods can still access class data.
 
 ## Implementing objects in a non-object oriented language
-In a non-OOP language (like C), objects can be faked by creating [structures](https://en.wikipedia.org/wiki/Struct_(C_programming_language)) and some standard functions. These functions then take a pointer to their "parent" structure. Confusing? yes. But it works, and I see it used all over the place. Here a pseudocode example:
+In a non-OOP language (like C), objects can be faked by creating [structures](https://en.wikipedia.org/wiki/Struct_(C_programming_language){:target="_blank"}) and some standard functions. These functions then take a pointer to their "parent" structure. Confusing? yes. But it works, and I see it used all over the place. Here a pseudocode example:
 ```
 struct MyClass {
     int my_int; // Scpoed int
@@ -99,4 +99,4 @@ This code will still function like a normal class. Unlike a regular class defini
 ## Why?
 I have absolutely no idea why this would ever be useful. If you think you should start doing this in your code, **don't**. It leads to very messy and confusing code, and is bad practice in just about every way. 
 
-The point of this post is to show yet another instance of the Python interpreter saying "[idgaf](https://www.urbandictionary.com/define.php?term=idgaf)", and letting us have a little fun.
+The point of this post is to show yet another instance of the Python interpreter saying "[idgaf](https://www.urbandictionary.com/define.php?term=idgaf){:target="_blank"}", and letting us have a little fun.

@@ -14,7 +14,7 @@ aliases:
 - /blog/rainbow-keyboard
 ---
 
-In my ever-continuing quest to do interesting things with custom keyboards, I recently had the idea to take the left half of my [Ferris sweep](https://github.com/davidphilipbarr/Sweep) and configure it specifically for use in the game [Rainbow Six Siege](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six).
+In my ever-continuing quest to do interesting things with custom keyboards, I recently had the idea to take the left half of my [Ferris sweep](https://github.com/davidphilipbarr/Sweep){:target="_blank"} and configure it specifically for use in the game [Rainbow Six Siege](https://en.wikipedia.org/wiki/Tom_Clancy%27s_Rainbow_Six){:target="_blank"}.
 
 This post isn't much of a tutorial, just a showcase of the end result.
 
@@ -28,7 +28,7 @@ This post isn't much of a tutorial, just a showcase of the end result.
 
 ## The code
 
-The actual firmware file lives [here](https://github.com/ewpratten/qmk_firmware/blob/d6eda8f6a96b2f1753cd59cbb161763500a8afb5/keyboards/ferris/keymaps/ewpratten/keymap.c#L82-L87). In short, the QMK layout definition behind this is as follows:
+The actual firmware file lives [here](https://github.com/ewpratten/qmk_firmware/blob/d6eda8f6a96b2f1753cd59cbb161763500a8afb5/keyboards/ferris/keymaps/ewpratten/keymap.c#L82-L87){:target="_blank"}. In short, the QMK layout definition behind this is as follows:
 
 ```c
 [_RAINBOW] = LAYOUT(

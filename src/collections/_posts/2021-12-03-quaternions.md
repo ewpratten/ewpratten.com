@@ -8,13 +8,13 @@ enable_katex: true
 
 The running joke in the graphics programming world is that nobody understands quaternions. These big scary math-filled types are always <em>someone else's problem</em>. While quaternions <del>are</del> may be scary, they serve an important purpose in the world of computing as they
 
-- Don't suffer from [Gimbal Lock](https://en.wikipedia.org/wiki/Gimbal_lock)
+- Don't suffer from [Gimbal Lock](https://en.wikipedia.org/wiki/Gimbal_lock){:target="_blank"}
 - Are extremely efficient to work with computationally
 
 ![Quaternion Meme](/assets/blog/quaternions/quaternion_meme.png)
 
 > Gimbal lock is the loss of one degree of freedom in a three-dimensional, three-gimbal mechanism that occurs when the axes of two of the three gimbals are driven into a parallel configuration, "locking" the system into rotation in a degenerate two-dimensional space.<br>
-> \[[Wikipedia](https://en.wikipedia.org/wiki/Gimbal_lock)\]
+> \[[Wikipedia](https://en.wikipedia.org/wiki/Gimbal_lock){:target="_blank"}\]
 
 Over the past few years, I have made it my personal goal to work with quaternions in my code as much as possible whenever applicable. This choice was partly to help me better understand quaternions, and partly to simply set my code apart from others due to the use of <em>"fancy math stuff"</em>.
 
@@ -24,7 +24,7 @@ My goal here in writing about quaternions is to help explain the concept to othe
 
 This post will prefer code snippets over complicated math, and will leave out some details not relavant to the normal use of quaternions in code. For a more in-depth look at quaternions, there are many complicated papers to be read on the topic, and they are all one easy Google search away. 
 
-As a final note before I get started, all code snippets will be centered around the Rust programming language (although easily translatable to anything else). I'll also be making heavy use of [Nalgebra](https://nalgebra.org/) by [Dimforge](https://dimforge.com/) for the actual mathematical implementations.
+As a final note before I get started, all code snippets will be centered around the Rust programming language (although easily translatable to anything else). I'll also be making heavy use of [Nalgebra](https://nalgebra.org/){:target="_blank"} by [Dimforge](https://dimforge.com/){:target="_blank"} for the actual mathematical implementations.
 
 ## Prerequisite knowledge: Vectors
 
@@ -53,7 +53,7 @@ let line = LineSegment2D {
 ## An intro to quaternions
 
 > In mathematics, the quaternion number system extends the complex numbers. Quaternions were first described by Irish mathematician William Rowan Hamilton in 1843 and applied to mechanics in three-dimensional space.<br>
-> \[[Wikipedia](https://en.wikipedia.org/wiki/Quaternion)\]
+> \[[Wikipedia](https://en.wikipedia.org/wiki/Quaternion){:target="_blank"}\]
 
 Quaternions are essentially 4-dimensional numbers consisting of one real, and three imaginary components. They are expressed with the components $w$, $i$, $j$, and $k$. So far, this sounds pretty scary, but it is a lot simpler to deal with when you remember mathematicians like overcomplicating their variable names 😉
 
@@ -126,7 +126,7 @@ $$
 p = q^*kq
 $$
 
-<strong>NOTE:</strong> Quaternion multiplicaiton is [noncommutative](https://en.wikipedia.org/wiki/Commutative_property), meaning that the order you multiply things <em>matters</em>. This is not normal multiplication.
+<strong>NOTE:</strong> Quaternion multiplicaiton is [noncommutative](https://en.wikipedia.org/wiki/Commutative_property){:target="_blank"}, meaning that the order you multiply things <em>matters</em>. This is not normal multiplication.
 
 <div style="text-align:center;">
 <img src="/assets/blog/quaternions/quat_mul.jpg">
@@ -163,7 +163,7 @@ So, do you know what you are doing when it comes to quaternions now?
 
 <em>No?</em>
 
-Well, I can't say I'm surprised. Now that you have learned the basics of quaternions, I recommend working through [Grant Sanderson](https://www.3blue1brown.com/)'s videos on the topic:
+Well, I can't say I'm surprised. Now that you have learned the basics of quaternions, I recommend working through [Grant Sanderson](https://www.3blue1brown.com/){:target="_blank"}'s videos on the topic:
 
 <iframe width="100%" height="426" src="https://www.youtube.com/embed/zjMuIxRvygQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

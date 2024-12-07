@@ -16,13 +16,13 @@ aliases:
 - /blog/galliumos
 ---
 
-My previous development laptop was an [Acer R11](https://www.acer.com/ac/en/CA/content/series/acerchromebookr11) chromebook. I always ran it in [developer mode](https://chromium.googlesource.com/chromiumos/docs/+/master/developer_mode.md) with all the Linux packages I needed installed via [chromebrew](https://github.com/skycocker/chromebrew). This setup worked great except for GUI programs, as (at the time), the built-in [Wayland](https://en.wikipedia.org/wiki/Wayland_(display_server_protocol)) server on the chromebook was not exposed to the user in a meaningful way. I relied on an internal tool from Google called [sommelier](https://chromium.googlesource.com/chromiumos/platform2/+/HEAD/vm_tools/sommelier/) to translate X11 calls to the internal Wayland server. None of this was ideal, but with a lot of scripts and aliases, I made it work.
+My previous development laptop was an [Acer R11](https://www.acer.com/ac/en/CA/content/series/acerchromebookr11){:target="_blank"} chromebook. I always ran it in [developer mode](https://chromium.googlesource.com/chromiumos/docs/+/master/developer_mode.md){:target="_blank"} with all the Linux packages I needed installed via [chromebrew](https://github.com/skycocker/chromebrew){:target="_blank"}. This setup worked great except for GUI programs, as (at the time), the built-in [Wayland](https://en.wikipedia.org/wiki/Wayland_(display_server_protocol){:target="_blank"}) server on the chromebook was not exposed to the user in a meaningful way. I relied on an internal tool from Google called [sommelier](https://chromium.googlesource.com/chromiumos/platform2/+/HEAD/vm_tools/sommelier/){:target="_blank"} to translate X11 calls to the internal Wayland server. None of this was ideal, but with a lot of scripts and aliases, I made it work.
 
-Recently, I decided to remove the locked-down ChromeOS all together, and set the laptop up with [GalliumOS](https://galliumos.org) so it can be used as a lightweight code-review machine with access to some useful tools like [VSCode](https://code.visualstudio.com/) and [GitKraken](https://www.gitkraken.com/). This whole process is actually fairly easy, and a good way to breathe new life in to an old chromebook. This guide will be R11-specific, but the process doesn't vary too wildly between models.
+Recently, I decided to remove the locked-down ChromeOS all together, and set the laptop up with [GalliumOS](https://galliumos.org){:target="_blank"} so it can be used as a lightweight code-review machine with access to some useful tools like [VSCode](https://code.visualstudio.com/){:target="_blank"} and [GitKraken](https://www.gitkraken.com/){:target="_blank"}. This whole process is actually fairly easy, and a good way to breathe new life in to an old chromebook. This guide will be R11-specific, but the process doesn't vary too wildly between models.
 
 ## Developer mode
 
-A standard feature on chromebooks is "developer mode". This is a hidden boot mode that is designed to give [ChromiumOS](https://www.chromium.org/chromium-os) contributors and Google developers access to debug tools when testing new OS builds. Along with debug tools, this mode also exposes a Linux terminal with root access to the user via <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>-></kbd>. On an extremely locked down system like a chromebook, this terminal access exposes a lot of new capability. For this use case, we will only use it to modify the system bootloader.
+A standard feature on chromebooks is "developer mode". This is a hidden boot mode that is designed to give [ChromiumOS](https://www.chromium.org/chromium-os){:target="_blank"} contributors and Google developers access to debug tools when testing new OS builds. Along with debug tools, this mode also exposes a Linux terminal with root access to the user via <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>-></kbd>. On an extremely locked down system like a chromebook, this terminal access exposes a lot of new capability. For this use case, we will only use it to modify the system bootloader.
 
 To enable developer mode, simply press <kbd>Esc</kbd> + <kbd>Refresh</kbd> + <kbd>Power</kbd>, and let the chromebook reboot. Once the recovery screen pops up, press <kbd>Ctrl</kbd> + <kbd>D</kbd>, and the device is now in developer mode.
 
@@ -38,7 +38,7 @@ The screw is hard to miss, it is beside the WIFI card, an has an arrow pointing 
 
 ## Flashing a custom bootloader
 
-[Mr Chromebox](https://mrchromebox.tech), a well known person in the world of Chromebook modification, provides and maintains a very easy to use shell script that handles bootloader modifications automatically. To use this tool, open up the ChromeOS terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>-></kbd>), log in with the username `chronos` (you must already be logged in to your personal Google account. This will not work from the login screen), and run:
+[Mr Chromebox](https://mrchromebox.tech){:target="_blank"}, a well known person in the world of Chromebook modification, provides and maintains a very easy to use shell script that handles bootloader modifications automatically. To use this tool, open up the ChromeOS terminal (<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>-></kbd>), log in with the username `chronos` (you must already be logged in to your personal Google account. This will not work from the login screen), and run:
 
 ```sh
 crossystem dev_boot_usb=1 dev_boot_legacy=1
@@ -55,11 +55,11 @@ You will want to select the `RW_LEGACY` option to load the `RW_LEGACY` / SEABIOS
 
 ### Setting fuses
 
-The `RW_LEGACY` payload only works if the laptop always has power. Once the device completely runs out of power, the boot settings are wiped from the device (not something we want). The solution is to modify the [system `gbb` fuses](https://chromium.googlesource.com/chromiumos/platform/vboot/+/master/_vboot_reference/firmware/include/gbb_header.h). This sounds complicated (and it is), but Mr Chromebox comes to the rescue again with the `GBB Flags` option in his script. *After* the `RW_LEGACY` payload has been configured, run his script again, and select `GBB Flags`.
+The `RW_LEGACY` payload only works if the laptop always has power. Once the device completely runs out of power, the boot settings are wiped from the device (not something we want). The solution is to modify the [system `gbb` fuses](https://chromium.googlesource.com/chromiumos/platform/vboot/+/master/_vboot_reference/firmware/include/gbb_header.h){:target="_blank"}. This sounds complicated (and it is), but Mr Chromebox comes to the rescue again with the `GBB Flags` option in his script. *After* the `RW_LEGACY` payload has been configured, run his script again, and select `GBB Flags`.
 
 ## Installing GalliumOS
 
-On another computer, [download GalliumOS](https://galliumos.org/download) (make sure to select the `Braswell` option), and [create a bootable USB](https://wiki.galliumos.org/Installing/Creating_Bootable_USB). Plug this USB into the Chromebook, reboot, and press <kbd>Ctrl</kbd> + <kbd>L</kbd> as the warning screen pops up. This will begin the GalliumOS setup process (which is identical to that of Ubuntu).
+On another computer, [download GalliumOS](https://galliumos.org/download){:target="_blank"} (make sure to select the `Braswell` option), and [create a bootable USB](https://wiki.galliumos.org/Installing/Creating_Bootable_USB){:target="_blank"}. Plug this USB into the Chromebook, reboot, and press <kbd>Ctrl</kbd> + <kbd>L</kbd> as the warning screen pops up. This will begin the GalliumOS setup process (which is identical to that of Ubuntu).
 
 ### Enabling verbose boot
 

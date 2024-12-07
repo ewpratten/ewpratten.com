@@ -15,7 +15,7 @@ aliases:
 - /blog/billwurtz
 ---
 
-[Bill Wurtz](https://billwurtz.com/) is an American musician who became [reasonably famous](https://socialblade.com/youtube/user/billwurtz/realtime) through short musical videos posted to Vine and YouTube. I was searching through his website the other day, and stumbled upon a page labeled [*notebook*](https://billwurtz.com/notebook.html), and thought I should check it out.
+[Bill Wurtz](https://billwurtz.com/){:target="_blank"} is an American musician who became [reasonably famous](https://socialblade.com/youtube/user/billwurtz/realtime){:target="_blank"} through short musical videos posted to Vine and YouTube. I was searching through his website the other day, and stumbled upon a page labeled [*notebook*](https://billwurtz.com/notebook.html){:target="_blank"}, and thought I should check it out.
 
 Bill's notebook is a large (about 580 posts) collection of random thoughts, ideas, and sometimes just collections of words. A prime source of entertainment, and neural network inputs..
 
@@ -24,7 +24,7 @@ Bill's notebook is a large (about 580 posts) collection of random thoughts, idea
 ## Choosing the right tool for the job
 If you haven't noticed yet, Im building a neural net to generate notes based on his writing style and content. Anyone who has read [my first post](@/blog/2018-06-27-BecomeRanter.md) will know that I have already done a similar project in the past. This means *time to reuse come code*!
 
-For this project, I decided to use an amazing library by @minimaxir called [textgenrnn](https://github.com/minimaxir/textgenrnn). This Python library will handle all of the heavy (and light) work of training an RNN on a text dataset, then generating new text. 
+For this project, I decided to use an amazing library by @minimaxir called [textgenrnn](https://github.com/minimaxir/textgenrnn){:target="_blank"}. This Python library will handle all of the heavy (and light) work of training an RNN on a text dataset, then generating new text. 
 
 ## Building a dataset
 This project was a joke, so I didn't bother with properly grabbing each post, categorizing them, and parsing them. Instead, I build a little script to pull every HTML file from Bill's website, and regex out the body. This ended up leaving some artifacts in the output, but I don't really mind.
@@ -69,7 +69,7 @@ python3 scrape.py > posts.txt
 ```
 
 ## Training
-To train the RNN, I just used some of textgenrnn's example code to read the posts file, and build an [HDF5](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) file to store the RNN's neurons.
+To train the RNN, I just used some of textgenrnn's example code to read the posts file, and build an [HDF5](https://en.wikipedia.org/wiki/Hierarchical_Data_Format){:target="_blank"} file to store the RNN's neurons.
 
 ```python
 from textgenrnn import textgenrnn
@@ -78,7 +78,7 @@ generator = textgenrnn()
 generator.train_from_file("/path/to/posts.txt", num_epochs=100)
 ```
 
-This takes quite a while to run, so I offloaded it to a [Droplet](https://www.digitalocean.com/products/droplets/), and left it running overnight.
+This takes quite a while to run, so I offloaded it to a [Droplet](https://www.digitalocean.com/products/droplets/){:target="_blank"}, and left it running overnight.
 
 ## The results
 Here are some of my favorite generated notes:
@@ -94,4 +94,4 @@ Here are some of my favorite generated notes:
 Not perfect, but it is readable english, so i call it a win!
 
 ## Play with the code
-I have uploaded the basic code, the scraped posts, and a partial hdf5 file [to GitHub](https://github.com/Ewpratten/be-bill) for anyone to play with. Maybe make a twitter bot out of this?
+I have uploaded the basic code, the scraped posts, and a partial hdf5 file [to GitHub](https://github.com/Ewpratten/be-bill){:target="_blank"} for anyone to play with. Maybe make a twitter bot out of this?

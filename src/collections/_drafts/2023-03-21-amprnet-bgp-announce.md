@@ -15,7 +15,7 @@ aliases:
 - /blog/amprnet-bgp-announce
 ---
 
-So, you got yourself a shiny new [AMPRNet](https://ampr.org) BGP allocation. What's next?
+So, you got yourself a shiny new [AMPRNet](https://ampr.org){:target="_blank"} BGP allocation. What's next?
 
 Well, from experience, many people choose to email me next asking for advice. This post is that advice, now in *:sparkles:easily Google-able form!:sparkles:*
 

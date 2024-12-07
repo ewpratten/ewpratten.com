@@ -24,15 +24,15 @@ In order to implement any of this, I first needed a way to quantify which countr
 
 While working on this system for myself, I came up with a few possible ways to programmatically determine a route's country of origin:
 
-- Parse the route's [geofeed](https://datatracker.ietf.org/doc/html/rfc9092) file
+- Parse the route's [geofeed](https://datatracker.ietf.org/doc/html/rfc9092){:target="_blank"} file
   - **Pro:** If the geofeed is implemented correctly, this is highly accurate
   - **Con:** This requires the prefix to have a covering geofeed in the first place
   - **Con:** Its really easy for a network to lie in their geofeed
-- Assume that [autonomous systems](https://en.wikipedia.org/wiki/Autonomous_system_(Internet)) operate in the country they are registered
+- Assume that [autonomous systems](https://en.wikipedia.org/wiki/Autonomous_system_(Internet){:target="_blank"}) operate in the country they are registered
   - **Pro:** Very easy to obtain the country of origin for an AS
   - **Con:** Global anycast exists
   - **Con:** Hobbynets like to lie about their country of operation
-- Infer geographical information from [BGP communities](https://www.rfc-editor.org/rfc/rfc1997)
+- Infer geographical information from [BGP communities](https://www.rfc-editor.org/rfc/rfc1997){:target="_blank"}
   - **Pro:** If done right, this is very accurate
   - **Pro:** Sounds awesome, would be good talk material
   - **Con:** Documenting communities used by transit providers is a lot of work
@@ -43,6 +43,6 @@ After pondering my options, I ended up choosing to just filter on the country of
 
 ## Getting a list of ASNs registered to a country
 
-If I were to update this filter regularly, I would try pulling [WHOIS](https://en.wikipedia.org/wiki/WHOIS) database dumps, parsing through the data, and creating a lookup table for this purpose.
+If I were to update this filter regularly, I would try pulling [WHOIS](https://en.wikipedia.org/wiki/WHOIS){:target="_blank"} database dumps, parsing through the data, and creating a lookup table for this purpose.
 
 However, I really don't need to instantly catch networks as they are registered, and feel perfectly fine updating this filter every few months. Thus, the easy route.

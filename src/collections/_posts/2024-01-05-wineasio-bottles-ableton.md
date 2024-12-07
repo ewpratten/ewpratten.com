@@ -21,11 +21,11 @@ Generally, when you encounter audio latency issues on Windows, the go-to solutio
 
 Well, you read the title of this post, so I kinda already gave the answer to that question away.
 
-[WineASIO](https://github.com/wineasio/wineasio) is a project that implements the ASIO API inside Wine, and pipes the audio to the Jack Audio Connection Kit (JACK) on the host system instead of a physical sound card.
+[WineASIO](https://github.com/wineasio/wineasio){:target="_blank"} is a project that implements the ASIO API inside Wine, and pipes the audio to the Jack Audio Connection Kit (JACK) on the host system instead of a physical sound card.
 
 While you could just follow the instructions in the WineASIO project README and skip over the rest of this post, the WineASIO project is mainly designed to work with a standard Wine install and JACK running on the host system. Being a Fedora user, I have neither of these things.
 
-I instead use [Bottles](https://usebottles.com/) to manage multiple wineprefixes (*wineprefixi?*) and [PipeWire](https://www.pipewire.org/) to manage audio on my system. So, I had to do a bit of extra work to get WineASIO working.
+I instead use [Bottles](https://usebottles.com/){:target="_blank"} to manage multiple wineprefixes (*wineprefixi?*) and [PipeWire](https://www.pipewire.org/){:target="_blank"} to manage audio on my system. So, I had to do a bit of extra work to get WineASIO working.
 
 ### Compiling
 
@@ -80,8 +80,8 @@ cp /tmp/wineasio/build64/wineasio.dll.so $WINEPREFIX/drive_c/windows/system/wine
 
 ## Using WineASIO
 
-Now that WineASIO is installed, Ableton will automatically detect it and list it in your audio drivers list. Simply select it, and you're good to go. (You even get [Ableton Link](https://www.ableton.com/en/link/) support when using WineASIO!)
+Now that WineASIO is installed, Ableton will automatically detect it and list it in your audio drivers list. Simply select it, and you're good to go. (You even get [Ableton Link](https://www.ableton.com/en/link/){:target="_blank"} support when using WineASIO!)
 
-I personally have [a script](https://git.ewpratten.com/ewconfig/tree/scripts/ableton-linux) that handles this whole process for me automatically.
+I personally have [a script](https://git.ewpratten.com/ewconfig/tree/scripts/ableton-linux){:target="_blank"} that handles this whole process for me automatically.
 
 *Oh, ya. Happy New Year btw.*

@@ -20,7 +20,7 @@ aliases:
 
 It has been quite some fun writing about my workflows for various day-to-day things on this blog recently, and since I have been getting a lot of positive feedback from my last few workflow-related posts, I am planning to continue writing them.
 
-As my courses and work have moved mostly online, I have looked to improve my home setup. This started out with investing in another monitor to be dedicated to displaying server and network status info for my recent summer internship at [Industrial Brothers](https://industrialbrothers.com/). After that, I started looking in to purchasing a high-end condenser microphone and another audio interface to drive it, but quickly discovered that Lenovo did such a good job on the internal mic in my [ThinkPad T480](https://www.lenovo.com/ca/en/laptops/thinkpad/thinkpad-t-series/ThinkPad-T480/p/22TP2TT4800) that it is hard to buy a better microphone without spending a large chunk of money.
+As my courses and work have moved mostly online, I have looked to improve my home setup. This started out with investing in another monitor to be dedicated to displaying server and network status info for my recent summer internship at [Industrial Brothers](https://industrialbrothers.com/){:target="_blank"}. After that, I started looking in to purchasing a high-end condenser microphone and another audio interface to drive it, but quickly discovered that Lenovo did such a good job on the internal mic in my [ThinkPad T480](https://www.lenovo.com/ca/en/laptops/thinkpad/thinkpad-t-series/ThinkPad-T480/p/22TP2TT4800){:target="_blank"} that it is hard to buy a better microphone without spending a large chunk of money.
 
 So, I can keep video conferences on their own screen, while still doing work on the other two, plus I have a pretty good mic. There is only one thing left to upgrade. The webcam!
 
@@ -36,23 +36,23 @@ Another nice thing about the card I got, since it isn't made by some company tha
 
 ## Alright. Enough about cheap capture cards, and on to my setup.
 
-For the actual camera, I opted for the *GoPro Hero 5 Black edition* that has been sitting on my desk unused for the past year. Unfortunately, this camera is no longer sold by GoPro. If you are looking to replicate this setup, I can strongly recommend picking up the [Hero 7 Black edition](https://gopro.com/en/us/shop/cameras/hero7-black/CHDHX-701-master.html), which is the most recent GoPro camera to support live HDMI video without needing a bunch of accessories.
+For the actual camera, I opted for the *GoPro Hero 5 Black edition* that has been sitting on my desk unused for the past year. Unfortunately, this camera is no longer sold by GoPro. If you are looking to replicate this setup, I can strongly recommend picking up the [Hero 7 Black edition](https://gopro.com/en/us/shop/cameras/hero7-black/CHDHX-701-master.html){:target="_blank"}, which is the most recent GoPro camera to support live HDMI video without needing a bunch of accessories.
 
-Speaking of HDMI video, I also picked up a Micro HDMI to HDMI cable to connect from the camera's output to the capture card. [This one here](https://www.ebay.ca/itm/Micro-HDMI-to-HDMI-Cable-Supports-Ethernet-3D-1080P-Audio-Return-3-6-10-15FT/193637232780?hash=item2d15adb08c:g:KDMAAOSwNGNfRdnR) should do the trick, and is only $8.
+Speaking of HDMI video, I also picked up a Micro HDMI to HDMI cable to connect from the camera's output to the capture card. [This one here](https://www.ebay.ca/itm/Micro-HDMI-to-HDMI-Cable-Supports-Ethernet-3D-1080P-Audio-Return-3-6-10-15FT/193637232780?hash=item2d15adb08c:g:KDMAAOSwNGNfRdnR){:target="_blank"} should do the trick, and is only $8.
 
-For mounting, I went with a [Jolby GorillaPod](https://joby.com/global/gorillapod/), but let's be honest. These are GoPros. There is no shortage of mounting solutions for them. You could do a first-person-view conference call if you really wanted. (New project idea..?)
+For mounting, I went with a [Jolby GorillaPod](https://joby.com/global/gorillapod/){:target="_blank"}, but let's be honest. These are GoPros. There is no shortage of mounting solutions for them. You could do a first-person-view conference call if you really wanted. (New project idea..?)
 
 ## Software Setup
 
 The software setup process is quite simple, and fairly painless. First, near the end of every GoPro's settings menu is a mode selector for how HDMI output should behave. Setting this to `live` will cause the camera to output exactly what it sees, without any status icons or timestamps, to the capture card.
 
-On the computer end, these cheap capture cards identify themselves as webcams. So there isn't really much setup needed. That being said, many people I know like to send their capture card output into [Open Broadcaster Software](https://obsproject.com/), process the feed, then export it as a [virtual webcam](https://obsproject.com/forum/resources/obs-virtualcam.949/).
+On the computer end, these cheap capture cards identify themselves as webcams. So there isn't really much setup needed. That being said, many people I know like to send their capture card output into [Open Broadcaster Software](https://obsproject.com/){:target="_blank"}, process the feed, then export it as a [virtual webcam](https://obsproject.com/forum/resources/obs-virtualcam.949/){:target="_blank"}.
 
 ## Some neat things to try
 
 Experimenting with my camera's many video cropping / scaling modes has been quite fun. I have discovered that keeping the camera in `linear` mode is good for general usage and presenting, and switching to `superwide` is great if I need to physically demonstrate or show something.
 
-I recently remembered that GoPros also have [voice commands](https://www.captureguide.com/gopro-voice-commands/). I have been using this to switch between `timelapse`, `video`, and `photo` modes, where I have saved a video preset in each. This is a very cheaty way to change my camera settings on the fly without needing to use the GoPro app on my phone. Here is what each of these modes is set to do on my camera:
+I recently remembered that GoPros also have [voice commands](https://www.captureguide.com/gopro-voice-commands/){:target="_blank"}. I have been using this to switch between `timelapse`, `video`, and `photo` modes, where I have saved a video preset in each. This is a very cheaty way to change my camera settings on the fly without needing to use the GoPro app on my phone. Here is what each of these modes is set to do on my camera:
 
 | Mode      | Action                                                                                            |
 |-----------|---------------------------------------------------------------------------------------------------|

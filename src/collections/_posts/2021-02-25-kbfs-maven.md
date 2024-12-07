@@ -22,9 +22,9 @@ aliases:
 As I continue to write more and more Java libraries for personal and public use, I keep finding myself limited by my library hosting solutions. Maven servers are currently my go-to way of storing and organizing all things Java. I have gone through a solid handful of servers over the past few years, here are my comments on each:
 
  - GitHub Releases
-   - No [dependabot](https://dependabot.com/) integration
+   - No [dependabot](https://dependabot.com/){:target="_blank"} integration
    - No easy way to get Gradle to load files directly from GitHub
- - [JitPack](https://jitpack.io/)
+ - [JitPack](https://jitpack.io/){:target="_blank"}
    - Slow builds
    - No easy way to publish custom artifacts or use custom groups
    - Sometimes unusably long cache policy
@@ -32,12 +32,12 @@ As I continue to write more and more Java libraries for personal and public use,
    - Has a file transfer limit
    - Uses my personal API keys to interact with GitHub
    - No way to automate package updates
- - [GitHub Packages](https://github.com/features/packages)
+ - [GitHub Packages](https://github.com/features/packages){:target="_blank"}
    - Requires users to authenticate even for public assets
    - Has a file transfer limit
    - Uses a separate maven url per project
 
-As a student, I prefer not to do the sensible solution--*spin up an [Artifactory](https://jfrog.com/artifactory/) server*--as that costs money I could be spending on coffee.
+As a student, I prefer not to do the sensible solution--*spin up an [Artifactory](https://jfrog.com/artifactory/){:target="_blank"} server*--as that costs money I could be spending on coffee.
 
 ## What makes a maven server special?
 
@@ -70,13 +70,13 @@ The resulting directory structure would end up looking like:
 
 <div class="center" markdown="1">
 
-*Generated with [tree.nathanfriend.io](https://tree.nathanfriend.io)*
+*Generated with [tree.nathanfriend.io](https://tree.nathanfriend.io){:target="_blank"}*
 
 </div>
 
 In this example. I chose to use the `sha1` hashing algorithm, but maven clients support pretty much any algorithm I can think of. 
 
-As you can see, the files are layed out very logically. Packages are organized similarly to how you organize your source code; each artifact is accompanied by a [Project Object Model](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) describing it, `maven-metadata` files keep track of versioning, and every file also has a hash alongside it.
+As you can see, the files are layed out very logically. Packages are organized similarly to how you organize your source code; each artifact is accompanied by a [Project Object Model](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html){:target="_blank"} describing it, `maven-metadata` files keep track of versioning, and every file also has a hash alongside it.
 
 For reference, the `maven-metadata.xml` in this example would look something like this:
 
@@ -96,19 +96,19 @@ For reference, the `maven-metadata.xml` in this example would look something lik
 </metadata>
 ```
 
-As far as I know, `maven-metadata` is not actually required, but I always include them so that I can make use of [dynamic versions](https://docs.gradle.org/current/userguide/dynamic_versions.html) in Gradle.
+As far as I know, `maven-metadata` is not actually required, but I always include them so that I can make use of [dynamic versions](https://docs.gradle.org/current/userguide/dynamic_versions.html){:target="_blank"} in Gradle.
 
 ## Using a static CDN as a maven server
 
-Since there is nothing special about a maven server aside from its directory structure, anywhere that can host files can become a server. My choice for now is [Keybase](https://keybase.io/)'s [KBFS](https://book.keybase.io/docs/files). KBFS is a pgp-signed file store that allows every user 250GB of free storage. This web filesystem is mounted to the user's device using [FUSE](https://www.kernel.org/doc/html/latest/filesystems/fuse.html) in a similar way to [rclone](https://rclone.org/).
+Since there is nothing special about a maven server aside from its directory structure, anywhere that can host files can become a server. My choice for now is [Keybase](https://keybase.io/){:target="_blank"}'s [KBFS](https://book.keybase.io/docs/files){:target="_blank"}. KBFS is a pgp-signed file store that allows every user 250GB of free storage. This web filesystem is mounted to the user's device using [FUSE](https://www.kernel.org/doc/html/latest/filesystems/fuse.html){:target="_blank"} in a similar way to [rclone](https://rclone.org/){:target="_blank"}.
 
 This local mount & sync setup allows me to interact with my `/keybase` mountpoint like any other directory, while having all its contents automatically backed up and published.
 
 ### Taking advantage of this
 
-Gradle's [`maven-publish`](https://docs.gradle.org/current/userguide/publishing_maven.html) plugin is designed to publish packages to remote servers, but will also work with local URIs. Simply pointing a [`MavenPublication`](https://docs.gradle.org/current/dsl/org.gradle.api.publish.maven.MavenPublication.html) to `/keybase/public/ewpratten/maven/release` (my directory of choice for now) will automatically generate everything mentioned in the section about file structure above.
+Gradle's [`maven-publish`](https://docs.gradle.org/current/userguide/publishing_maven.html){:target="_blank"} plugin is designed to publish packages to remote servers, but will also work with local URIs. Simply pointing a [`MavenPublication`](https://docs.gradle.org/current/dsl/org.gradle.api.publish.maven.MavenPublication.html){:target="_blank"} to `/keybase/public/ewpratten/maven/release` (my directory of choice for now) will automatically generate everything mentioned in the section about file structure above.
 
-My exact configuration for doing this in gradle is as follows ([source](https://github.com/Ewpratten/gradle_scripts/blob/master/keybase_publishing.gradle)):
+My exact configuration for doing this in gradle is as follows ([source](https://github.com/Ewpratten/gradle_scripts/blob/master/keybase_publishing.gradle){:target="_blank"}):
 
 ```groovy
 apply plugin: "maven-publish"
@@ -161,7 +161,7 @@ With the solution outlined in this post, the end user would end up specifying on
 
 While that is perfectly fine, I prefer to keep all of my projects / services / etc under my personal domain (`retrylife.ca`). Unlike the rest of this post, this step does cost some money.
 
-I already rent two servers for various other projects, and one of them is running the [Caddy](https://caddyserver.com/) webserver and acting as a reverse proxy. I have pointed two domains (`release.maven.retrylife.ca` and `snapshot.maven.retrylife.ca`) at this server and am using the following rules to route them:
+I already rent two servers for various other projects, and one of them is running the [Caddy](https://caddyserver.com/){:target="_blank"} webserver and acting as a reverse proxy. I have pointed two domains (`release.maven.retrylife.ca` and `snapshot.maven.retrylife.ca`) at this server and am using the following rules to route them:
 
 ```text
 release.maven.retrylife.ca {
@@ -192,4 +192,4 @@ I am also now able to switch out backend servers / services whenever I want, and
 
 ## Future improvements
 
-Some time in the future, I plan to move from KBFS to the S3-based [DigitalOcean Spaces](https://www.digitalocean.com/products/spaces/) so I can speed up the download time for packages, and have better global distribution of files.
+Some time in the future, I plan to move from KBFS to the S3-based [DigitalOcean Spaces](https://www.digitalocean.com/products/spaces/){:target="_blank"} so I can speed up the download time for packages, and have better global distribution of files.

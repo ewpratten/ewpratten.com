@@ -19,7 +19,7 @@ Between work, school, and just helping various people out with things, I end up 
 
 ## Enabling the OpenSSH service
 
-Just like many Linux machines, Windows uses the [OpenSSH](https://www.openssh.com/) server internally. This used to be controlled by a feature flag in the *"Turn Windows features on or off"* dialog, but this can now be done through [PowerShell](https://en.wikipedia.org/wiki/PowerShell) (as a local administrator).
+Just like many Linux machines, Windows uses the [OpenSSH](https://www.openssh.com/){:target="_blank"} server internally. This used to be controlled by a feature flag in the *"Turn Windows features on or off"* dialog, but this can now be done through [PowerShell](https://en.wikipedia.org/wiki/PowerShell){:target="_blank"} (as a local administrator).
 
 First, we need to add the OpenSSH capability to Windows, and enable the service:
 
@@ -44,7 +44,7 @@ New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled Tru
 
 ## Setting up key-based authentication
 
-While we are on the Windows side, it is a good idea to install Git and Git Bash from [here](https://git-scm.com/downloads). Then, inside Git Bash, run the following to generate SSH keys on the Windows server:
+While we are on the Windows side, it is a good idea to install Git and Git Bash from [here](https://git-scm.com/downloads){:target="_blank"}. Then, inside Git Bash, run the following to generate SSH keys on the Windows server:
 
 ```sh
 # Generate
@@ -64,7 +64,7 @@ icacls.exe "C:\ProgramData\ssh\administrators_authorized_keys" /inheritance:r /g
 
 ## Configuring SSH clients to automatically launch bash
 
-By default, incoming SSH connections spawn a `cmd.exe` shell. I much prefer being dropped straight into [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
+By default, incoming SSH connections spawn a `cmd.exe` shell. I much prefer being dropped straight into [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell){:target="_blank"}).
 
 To do this, you must modify your client's `~/.ssh/config` file to add a `RemoteCommand`. An example for one of my machines looks similar to:
 

@@ -30,9 +30,9 @@ Luckily, with a little bit of server-side tinkering, this process can be cut dow
 
 ## A bit of background
 
-Most (notable) decentralized social media services are built on a web standard called [ActivityPub](https://www.w3.org/TR/activitypub/). ActivityPub handles all aspects of cross-instance communication, including the process of looking up users on another instance.
+Most (notable) decentralized social media services are built on a web standard called [ActivityPub](https://www.w3.org/TR/activitypub/){:target="_blank"}. ActivityPub handles all aspects of cross-instance communication, including the process of looking up users on another instance.
 
-This cross-instance user lookup system utilizes [RFC7033: WebFinger](https://www.rfc-editor.org/rfc/rfc7033), a modern replacement / reimplementation of the old [RFC742: Name/Finger](https://www.rfc-editor.org/rfc/rfc742) protocol.
+This cross-instance user lookup system utilizes [RFC7033: WebFinger](https://www.rfc-editor.org/rfc/rfc7033){:target="_blank"}, a modern replacement / reimplementation of the old [RFC742: Name/Finger](https://www.rfc-editor.org/rfc/rfc742){:target="_blank"} protocol.
 
 For example, if you wanted some information about my personal `@evan@ewpratten.com` account, you can send an HTTP GET request to the following URL:
 
@@ -72,7 +72,7 @@ Notice the `links[0].href` field above? This is exactly the URL for my profile p
 
 ## Plan of action
 
-Now that we know how to get a profile's "home" URL via WebFinger, we can write a little script to convert an account handle query into a [302 redirect](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302) to that account's URL.
+Now that we know how to get a profile's "home" URL via WebFinger, we can write a little script to convert an account handle query into a [302 redirect](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302){:target="_blank"} to that account's URL.
 
 The plan is to make a query like:
 
@@ -89,7 +89,7 @@ Location: https://social.ewpratten.com/@evan
 
 ## Implementing the redirect script
 
-I chose to do this with a [Cloudflare Worker](https://workers.cloudflare.com/), since my domains are already managed by them, and I have free credits to use.
+I chose to do this with a [Cloudflare Worker](https://workers.cloudflare.com/){:target="_blank"}, since my domains are already managed by them, and I have free credits to use.
 
 The script to get this working is pretty simple:
 

@@ -18,7 +18,7 @@ aliases:
 - /blog/hackernews-block-ai
 ---
 
-Ok. AI-backed tools are cool, but sometimes I just want to read about something else on the [Hacker News](https://news.ycombinator.com/news) website.
+Ok. AI-backed tools are cool, but sometimes I just want to read about something else on the [Hacker News](https://news.ycombinator.com/news){:target="_blank"} website.
 
 To tame the sea of AI-related posts on the site, I have built a Tapermonkey user script that will automatically hide all posts containing AI keywords.
 

@@ -18,17 +18,17 @@ This is exactly the kind of question I randomly ask while sitting in the middle 
 
 ## Geting started
 
-To get started, I needed a few things. Firstly, I have a laptop running Linux. This allows me to use [SSH](https://en.wikipedia.org/wiki/Secure_Shell) and [SCP](https://en.wikipedia.org/wiki/Secure_copy). There are Windows versions of both of these programs, but I find the "linux experience" easier to use. Secondly, I have grabbed one of [5024](https://www.thebluealliance.com/team/5024)'s [robots](https://cs.5024.ca/webdocs/docs/robots) to be subjected to my experiment. The components I care about are: 
+To get started, I needed a few things. Firstly, I have a laptop running Linux. This allows me to use [SSH](https://en.wikipedia.org/wiki/Secure_Shell){:target="_blank"} and [SCP](https://en.wikipedia.org/wiki/Secure_copy){:target="_blank"}. There are Windows versions of both of these programs, but I find the "linux experience" easier to use. Secondly, I have grabbed one of [5024](https://www.thebluealliance.com/team/5024){:target="_blank"}'s [robots](https://cs.5024.ca/webdocs/docs/robots){:target="_blank"} to be subjected to my experiment. The components I care about are: 
 
  - A RoboRIO running 2019v12 firmware
- - 2 [TalonSRX](https://www.ctr-electronics.com/talon-srx.html) motor controllers 
+ - 2 [TalonSRX](https://www.ctr-electronics.com/talon-srx.html){:target="_blank"} motor controllers 
  - An FRC router
 
-Most importantly, the RoboRIO has [RobotPy](https://robotpy.readthedocs.io/en/stable/install/robot.html#install-robotpy) and the [CTRE Libraries](https://robotpy.readthedocs.io/en/stable/install/ctre.html) installed.
+Most importantly, the RoboRIO has [RobotPy](https://robotpy.readthedocs.io/en/stable/install/robot.html#install-robotpy){:target="_blank"} and the [CTRE Libraries](https://robotpy.readthedocs.io/en/stable/install/ctre.html){:target="_blank"} installed.
 
 ### SSH connection
 
-To get some code running on the robot, we must first connect to it via SSH. Depending on your connection to the RoboRIO, this step may be different. Generally, the following command will work just fine to connect (assuming your computer has an [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS) service):
+To get some code running on the robot, we must first connect to it via SSH. Depending on your connection to the RoboRIO, this step may be different. Generally, the following command will work just fine to connect (assuming your computer has an [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS){:target="_blank"} service):
 
 ```sh
 ssh admin@roborio-<team>-frc.local
@@ -48,7 +48,7 @@ If you are asked for a password, and have not set one, press <kbd>Enter</kbd> 3 
 
 ## REPL-based control
 
-If you have seen my work before, you'll know that I use Python for basically everything. This project is no exception. Conveniently, the RoboRIO is a linux-based device, and can run a Python3 [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop). This allows real-time robot programming using a REPL via SSH. 
+If you have seen my work before, you'll know that I use Python for basically everything. This project is no exception. Conveniently, the RoboRIO is a linux-based device, and can run a Python3 [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop){:target="_blank"}. This allows real-time robot programming using a REPL via SSH. 
 
 WPILib requires a robot class to act as a "callback" for robot actions. My idea was to build a special robot class with static methods to allow me to start it, then use the REPL to interact with some control methods (like `setSpeed` and `stop`).
 

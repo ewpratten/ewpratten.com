@@ -15,7 +15,7 @@ aliases:
 
 Ok... The title is slightly wrong. There are actually 2 scripts.. Sorry about that.
 
-This is a guide on installing and using the [BecomeRanter](https://github.com/Ewpratten/BecomeRanter) script.
+This is a guide on installing and using the [BecomeRanter](https://github.com/Ewpratten/BecomeRanter){:target="_blank"} script.
 
 ## Getting dependancies
 

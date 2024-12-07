@@ -10,7 +10,7 @@ aliases:
 - /blog/styiling-github
 ---
 
-I have been using GitHub since 2017, and have been getting tired of GitHub's theme. I didn't need a huge change, just a small refresh. So, to solve this, I whipped out [Stylus](https://addons.mozilla.org/en-CA/firefox/addon/styl-us/) and made a nice little CSS file for it.
+I have been using GitHub since 2017, and have been getting tired of GitHub's theme. I didn't need a huge change, just a small refresh. So, to solve this, I whipped out [Stylus](https://addons.mozilla.org/en-CA/firefox/addon/styl-us/){:target="_blank"} and made a nice little CSS file for it.
 
 ## The CSS
 Here is the CSS. Feel free to play with it.
@@ -49,4 +49,4 @@ Here is the CSS. Feel free to play with it.
 ```
 
 ## Use it yourself
-I put this theme on userstyles.org. You can download and install it by going to [my userstyles page](https://userstyles.org/styles/172679/ewpratten-s-githubtheme).
+I put this theme on userstyles.org. You can download and install it by going to [my userstyles page](https://userstyles.org/styles/172679/ewpratten-s-githubtheme){:target="_blank"}.
