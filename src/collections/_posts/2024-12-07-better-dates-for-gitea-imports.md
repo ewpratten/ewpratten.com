@@ -75,6 +75,8 @@ So, to tie everything together and to save my future self some work, I've built 
 
 ```python
 #! /usr/bin/env python3
+# Source: https://ewpratten.com/blog/better-dates-for-gitea-imports
+
 import argparse
 import sqlite3 
 import subprocess
