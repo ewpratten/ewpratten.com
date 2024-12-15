@@ -55,4 +55,4 @@ I tweak things on this website nearly weekly. If you pay very close attention, y
 
 Its good to keep poking away at a personal website. It is my primary representation of myself online after all, and its not like I haven't changed over these years.
 
-..And for the readers who are considering building their own websites (I know you are out there), Do it! Its super fun! Your first revision doesn't have to be your "forever design", as you learn things about web development, you'll get better at tinkering :)
+..And for the readers who are considering building their own websites (I know you are out there), Do it! It's super fun! Your first revision doesn't have to be your "forever design", as you learn things about web development, you'll get better at tinkering :)
