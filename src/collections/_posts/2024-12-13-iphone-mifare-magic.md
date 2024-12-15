@@ -14,7 +14,7 @@ Being *that person* with the custom NFC badge at an event is generally a great w
 
 Unfortunately, my pile of spares has a few cards that I could never get to work on iPhones for some reason. I'd never bothered to really investigate why, but I recently made the mental connection that I had mixed in some "Magic" MIFARE cards with my regular generic ISO14443-A stock.
 
-While absolutely magical in ability, the Magic MIFARE cards "can't be read" by iPhones for reasons that nobody online seems to quite agree with eachother about.
+While absolutely magical in ability, the Magic MIFARE cards "can't be read" by iPhones for reasons that nobody online seems to quite agree with each other about.
 
 So.. here I am to teach you how to get a Magic MIFARE card to be read by an iPhone.
 
