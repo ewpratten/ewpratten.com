@@ -12,7 +12,7 @@ I program these cards to open portfolio websites or directly share contact infor
 
 Being *that person* with the custom NFC badge at an event is generally a great way to be remembered and has a habit of starting interesting conversations too.
 
-Unfortunately, my pile of spares has a few cards that I could never get to work on iPhones for some reason. I'd never bothered to really investigate why, but I recently made the metal connection that I had mixed in some "Magic" MIFARE cards with my regular generic ISO14443-A stock.
+Unfortunately, my pile of spares has a few cards that I could never get to work on iPhones for some reason. I'd never bothered to really investigate why, but I recently made the mental connection that I had mixed in some "Magic" MIFARE cards with my regular generic ISO14443-A stock.
 
 While absolutely magical in ability, the Magic MIFARE cards "can't be read" by iPhones for reasons that nobody online seems to quite agree with eachother about.
 
