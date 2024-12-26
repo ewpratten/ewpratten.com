@@ -1,6 +1,7 @@
 <script>
-    if (goatcounter.get_query("cr")) {
-        window.goatcounter = { referrer: `Custom: ${goatcounter.get_query("cr")}` };
+    let query_params = new URLSearchParams(window.location.search);
+    if (query_params.has("cr")) {
+        window.goatcounter = { referrer: `Custom: ${query_params.get("cr")}` };
         history.replaceState({}, document.title, window.location.pathname);
     }
 </script>
