@@ -1,6 +1,7 @@
 <script>
     if (goatcounter.get_query("cr")) {
         window.goatcounter = { referrer: `Custom: ${goatcounter.get_query("cr")}` };
+        history.replaceState({}, document.title, window.location.pathname);
     }
 </script>
 <script async data-goatcounter="https://analytics.ewpratten.com/count" src="//gc.zgo.at/count.js"
