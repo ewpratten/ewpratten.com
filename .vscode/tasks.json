@@ -12,6 +12,19 @@
             },
             "args": [
                 "compose",
+                "up"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Launch development webserver (with build) (ewpratten.com)",
+            "type": "shell",
+            "command": "docker",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "args": [
+                "compose",
                 "up",
                 "--build"
             ],

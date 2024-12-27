@@ -9,10 +9,10 @@ title: Blog
 
 {% for group in grouped_posts %}
 <h2>{{ group.name }}</h2>
-<ul>
+<ul id="blog-post-list">
     {% for post in group.items %}
     <li>
-        <span style="color: gray;">{{ post.date | date: "%Y-%m-%d" }}:</span>
+        <span style="color: gray;">{{ post.date | date: "%Y-%m-%d" }}</span>
         <a href="{{ post.url | downcase }}">{{ post.title }}</a>
     </li>
     {% endfor %}

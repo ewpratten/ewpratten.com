@@ -154,3 +154,29 @@ body {
     text-align: center;
   }
 }
+
+// Mobile-friendly dynamic formatting for the blog post list
+ul#blog-post-list {
+  li {
+    span::after {
+      content: ":";
+    }
+  }
+  @media screen and (max-width: 535px) {
+    padding: 0 0.5em;
+    list-style: none;
+
+    li {
+      span {
+        display: block;
+        &::after {
+          content: "";
+        }
+      }
+      a {
+        display: block;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
