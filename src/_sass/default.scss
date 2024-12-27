@@ -169,6 +169,7 @@ ul#blog-post-list {
     li {
       span {
         display: block;
+        font-size: 0.8em;
         &::after {
           content: "";
         }
