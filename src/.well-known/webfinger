@@ -1,0 +1,9 @@
+{
+  "subject": "acct:evan@ewpratten.com",
+  "links": [
+    {
+      "rel": "http://openid.net/specs/connect/1.0/issuer",
+      "href": "https://git.ewpratten.com/.well-known/openid-configuration"
+    }
+  ]
+}
