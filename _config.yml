@@ -53,6 +53,9 @@ include:
   - _routes.json
   - _redirects
 
+  # Webfinger
+  - .well-known/webfinger
+
 # Exclusions
 exclude:
   - .sass-cache/
