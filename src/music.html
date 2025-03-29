@@ -33,12 +33,20 @@ custom_css: |
 </p>
 <hr>
 
+{% assign grouped_releases = site.music | group_by_exp: "release", "release.group" %}
+{% for group in grouped_releases %}
+<h2 style="border: none; text-align: center;">
+    {% if group.name == "personal" %}
+    Music released as <span style="display: inline-block;">Evan Pratten</span></h2>
+    {% else if group.name == "retrylife" %}
+    Music released as a member of RetryLife
+    {% endif %}
 <div class="discography">
-    {% assign music_sorted = site.music | sort: "date" | reverse %}
-    {% for release in music_sorted %}
+    {% assign items_sorted = group.items | sort: "date" | reverse %}
+    {% for release in items_sorted %}
     <div class="discography-entry">
         <a href="{{ release.url | downcase }}">
-            <img src="{{ release.cover_image }}" alt="Cover art for {{ release.title }}" style="width: 100%;">
+            <img src="{{ release.cover_image }}" alt="Cover art for {{ release.title }}" style="width: 100%;" loading="lazy">
         </a>
         <div style="display: flex; justify-content: space-between; font-size: 1.25em;">
             <span>{{ release.title }}</span>
@@ -47,3 +55,4 @@ custom_css: |
     </div>
     {% endfor %}
 </div>
+{% endfor %}

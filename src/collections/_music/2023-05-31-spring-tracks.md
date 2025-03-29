@@ -2,6 +2,7 @@
 title: Spring Tracks.
 layout: music
 date: 2023-05-31
+group: personal
 cover_image: /assets/music/spring-tracks/cover.jpg
 links:
   "Spotify": https://open.spotify.com/album/4egrxAZmNgww1ocu8oYTqC

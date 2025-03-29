@@ -2,6 +2,7 @@
 title: Space & Time, Vol. 1
 layout: music
 date: 2022-05-07
+group: personal
 cover_image: /assets/music/space-time-v1/cover.jpg
 links:
   "Spotify": https://open.spotify.com/album/718OAeNsyhO1znebsXVSdf

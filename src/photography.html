@@ -27,7 +27,8 @@ custom_css: |
     {% for photo in photos_sorted %}
     <div class="photo-feed-entry">
         <a href="{{ photo.url | downcase }}">
-            <img src="/assets/photography/{{ photo.file }}" alt="A photo titled: {{ photo.title }}" style="width: 100%;">
+            <img src="/assets/photography/{{ photo.file }}" alt="A photo titled: {{ photo.title }}" style="width: 100%;"
+                loading="lazy">
         </a>
         <div style="display: flex; justify-content: space-between; font-size: 1.25em;">
             <span>{{ photo.title }}</span>

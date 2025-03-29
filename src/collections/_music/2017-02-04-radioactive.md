@@ -2,6 +2,7 @@
 title: Radioactive
 layout: music
 date: 2017-02-04
+group: personal
 cover_image: /assets/music/radioactive/cover.jpg
 links:
   "Spotify": https://open.spotify.com/album/44mayKI3HsGnNDr9A1yDgF

@@ -2,6 +2,7 @@
 title: Summer Tracks.
 layout: music
 date: 2022-09-10
+group: personal
 cover_image: /assets/music/summer-tracks/cover.jpg
 links:
   "Spotify": https://open.spotify.com/album/3bcakhzNwyK40K0TowcT0m
